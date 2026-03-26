@@ -1,0 +1,32 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# build
+dist/
+build/
+
+# env
+.env
+.env.local
+.env.production.local
+
+# misc
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+*.log
+
+# backup (remove after migration)
+_backup/
+
+# vercel
+.vercel
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+.idea

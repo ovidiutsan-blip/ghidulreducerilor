@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p _backup)",
+      "Bash(cp -r src scripts dist index.html package.json tailwind.config.js tsconfig.json _backup/)",
+      "Bash(npm install:*)",
+      "Bash(npx next:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx kill-port:*)",
+      "Bash(netstat -ano)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}

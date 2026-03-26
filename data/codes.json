@@ -1,0 +1,68 @@
+[
+  {
+    "id": "code-emag-001",
+    "magazin": "emag",
+    "cod": "EMAG10SPRING",
+    "descriere": "10% reducere la electrocasnice mari",
+    "valoare": "10%",
+    "tip": "procent",
+    "data_expirare": "2026-04-15",
+    "link_afiliat": "https://www.profitshare.ro/l/1010?affiliate_id=YOUR_ID",
+    "verificat": true
+  },
+  {
+    "id": "code-emag-002",
+    "magazin": "emag",
+    "cod": "FREEDELIVERY",
+    "descriere": "Transport gratuit la comenzi peste 200 lei",
+    "valoare": "Transport gratuit",
+    "tip": "transport",
+    "data_expirare": "2026-04-30",
+    "link_afiliat": "https://www.profitshare.ro/l/1011?affiliate_id=YOUR_ID",
+    "verificat": true
+  },
+  {
+    "id": "code-altex-001",
+    "magazin": "altex",
+    "cod": "ALTEX15OFF",
+    "descriere": "15% reducere la televizoare selectate",
+    "valoare": "15%",
+    "tip": "procent",
+    "data_expirare": "2026-04-10",
+    "link_afiliat": "https://www.profitshare.ro/l/2010?affiliate_id=YOUR_ID",
+    "verificat": true
+  },
+  {
+    "id": "code-altex-002",
+    "magazin": "altex",
+    "cod": "WELCOME50",
+    "descriere": "50 lei reducere la prima comandă peste 500 lei",
+    "valoare": "50 lei",
+    "tip": "fix",
+    "data_expirare": "2026-05-01",
+    "link_afiliat": "https://www.profitshare.ro/l/2011?affiliate_id=YOUR_ID",
+    "verificat": true
+  },
+  {
+    "id": "code-fd-001",
+    "magazin": "fashion-days",
+    "cod": "STYLE25",
+    "descriere": "25% extra reducere la articolele deja reduse",
+    "valoare": "25%",
+    "tip": "procent",
+    "data_expirare": "2026-04-05",
+    "link_afiliat": "https://www.profitshare.ro/l/3010?affiliate_id=YOUR_ID",
+    "verificat": true
+  },
+  {
+    "id": "code-fd-002",
+    "magazin": "fashion-days",
+    "cod": "NEWSEASON30",
+    "descriere": "30% reducere la noua colecție de primăvară",
+    "valoare": "30%",
+    "tip": "procent",
+    "data_expirare": "2026-03-20",
+    "link_afiliat": "https://www.profitshare.ro/l/3011?affiliate_id=YOUR_ID",
+    "verificat": false
+  }
+]

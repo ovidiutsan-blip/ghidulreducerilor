@@ -1,0 +1,35 @@
+[
+  {
+    "id": "emag",
+    "nume": "eMAG",
+    "slug": "emag",
+    "descriere": "eMAG este cel mai mare retailer online din România, cu o gamă variată de produse: electronice, electrocasnice, IT, fashion, jucării și multe altele. Fondat în 2001, eMAG oferă livrare rapidă prin easybox și retur gratuit în 30 de zile.",
+    "logo_emoji": "🛒",
+    "culoare": "#F7E636",
+    "categorie_principala": "electronice",
+    "url_site": "https://www.emag.ro",
+    "comision_mediu": "3-8%"
+  },
+  {
+    "id": "altex",
+    "nume": "Altex",
+    "slug": "altex",
+    "descriere": "Altex este unul dintre cele mai mari lanțuri de electronice și electrocasnice din România. Cu peste 130 de magazine fizice și un magazin online puternic, Altex oferă produse de calitate la prețuri competitive, cu servicii de instalare și garanție extinsă.",
+    "logo_emoji": "⚡",
+    "culoare": "#E31E24",
+    "categorie_principala": "electronice",
+    "url_site": "https://www.altex.ro",
+    "comision_mediu": "2-6%"
+  },
+  {
+    "id": "fashion-days",
+    "nume": "Fashion Days",
+    "slug": "fashion-days",
+    "descriere": "Fashion Days este platforma #1 de modă online din România. Cu peste 1000 de branduri internaționale și românești, Fashion Days oferă reduceri permanente de până la 70% la îmbrăcăminte, încălțăminte și accesorii pentru femei, bărbați și copii.",
+    "logo_emoji": "👗",
+    "culoare": "#FF69B4",
+    "categorie_principala": "fashion",
+    "url_site": "https://www.fashiondays.ro",
+    "comision_mediu": "5-15%"
+  }
+]
