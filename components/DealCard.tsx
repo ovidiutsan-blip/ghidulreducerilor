@@ -17,6 +17,9 @@ export default function DealCard({ deal }: { deal: Deal }) {
         />
         <span className="badge-discount">-{deal.procent_reducere}%</span>
       </div>
+      {/* Schema: image + description pentru Google Merchant Listings */}
+      <meta itemProp="image" content={deal.imagine_url} />
+      <meta itemProp="description" content={`${deal.titlu} — reducere ${deal.procent_reducere}% de la ${formatPrice(deal.pret_original)} la ${formatPrice(deal.pret_redus)}`} />
 
       {/* Conținut */}
       <div className="p-4 flex flex-col flex-1">
@@ -34,6 +37,18 @@ export default function DealCard({ deal }: { deal: Deal }) {
           </div>
           <meta itemProp="priceCurrency" content="RON" />
           <meta itemProp="availability" content="https://schema.org/InStock" />
+          <meta itemProp="url" content={deal.link_afiliat} />
+          {/* Shipping + Return policy pentru Google Merchant Listings */}
+          <div itemProp="shippingDetails" itemScope itemType="https://schema.org/OfferShippingDetails" className="hidden">
+            <div itemProp="shippingDestination" itemScope itemType="https://schema.org/DefinedRegion">
+              <meta itemProp="addressCountry" content="RO" />
+            </div>
+          </div>
+          <div itemProp="hasMerchantReturnPolicy" itemScope itemType="https://schema.org/MerchantReturnPolicy" className="hidden">
+            <meta itemProp="applicableCountry" content="RO" />
+            <meta itemProp="returnPolicyCategory" content="https://schema.org/MerchantReturnFiniteReturnWindow" />
+            <meta itemProp="merchantReturnDays" content="14" />
+          </div>
 
           <a
             href={deal.link_afiliat}
