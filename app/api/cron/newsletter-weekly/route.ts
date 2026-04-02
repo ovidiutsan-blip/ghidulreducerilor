@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
     const scriptPath = path.join(ROOT, 'scripts', 'newsletter.py')
     const { stdout } = await execAsync(
       `python "${scriptPath}" --type weekly`,
-      { cwd: ROOL, timeout: 60000, env: { ...process.env } }
+      { cwd: ROOT, timeout: 60000, env: { ...process.env } }
     )
 
     const success = stdout.includes('trimis cu succes')
