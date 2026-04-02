@@ -24,6 +24,8 @@ export default function EmailForm() {
           nume: formData.get('nume'),
           email: formData.get('email'),
           magazin: formData.get('magazin'),
+          gdpr_consent: true,
+          consented_at: new Date().toISOString(),
         }),
       })
 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}GhidulReducerilor.ro{% endblock %}</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    body { margin: 0; padding: 0; background-color: #F8F9FA; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .wrapper { max-width: 600px; margin: 0 auto; background: #ffffff; }
+    .header { background: #1D3557; padding: 24px 32px; text-align: center; }
+    .header-logo { color: #ffffff; font-size: 22px; font-weight: 800; text-decoration: none; }
+    .header-logo span { color: #E63946; }
+    .content { padding: 32px; }
+    .footer { background: #F8F9FA; padding: 24px 32px; text-align: center; border-top: 1px solid #E9ECEF; }
+    .footer p { margin: 4px 0; font-size: 12px; color: #6C757D; line-height: 1.6; }
+    .footer a { color: #E63946; text-decoration: underline; }
+    .btn-cta { display: inline-block; background: #E63946; color: #ffffff !important; padding: 14px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 15px; }
+    .btn-cta:hover { background: #C62828; }
+    .btn-secondary { display: inline-block; border: 2px solid #E63946; color: #E63946 !important; padding: 12px 28px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 14px; }
+    h1, h2, h3 { color: #1D3557; margin: 0; }
+    p { color: #495057; line-height: 1.7; margin: 12px 0; font-size: 15px; }
+    @media only screen and (max-width: 620px) {
+      .wrapper { width: 100% !important; }
+      .content { padding: 20px 16px !important; }
+      .header { padding: 16px !important; }
+      .footer { padding: 16px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background-color:#F8F9FA;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F8F9FA;">
+    <tr>
+      <td align="center" style="padding: 20px 0;">
+        <table role="presentation" class="wrapper" width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+          <!-- Header -->
+          <tr>
+            <td class="header" style="background:#1D3557;padding:24px 32px;text-align:center;">
+              <a href="https://ghidulreducerilor.ro" class="header-logo" style="color:#ffffff;font-size:22px;font-weight:800;text-decoration:none;">
+                Ghidul<span style="color:#E63946;">Reducerilor</span>.ro
+              </a>
+            </td>
+          </tr>
+          <!-- Content -->
+          <tr>
+            <td class="content" style="padding:32px;">
+              {% block content %}{% endblock %}
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td class="footer" style="background:#F8F9FA;padding:24px 32px;text-align:center;border-top:1px solid #E9ECEF;">
+              <p style="margin:4px 0;font-size:12px;color:#6C757D;">
+                Primesti acest email pentru ca te-ai abonat pe <a href="https://ghidulreducerilor.ro" style="color:#E63946;">ghidulreducerilor.ro</a>
+              </p>
+              <p style="margin:4px 0;font-size:12px;color:#6C757D;">
+                <a href="{{ unsubscribe_url | default('https://ghidulreducerilor.ro/dezabonare') }}" style="color:#E63946;">Dezaboneaza-te</a> |
+                <a href="https://ghidulreducerilor.ro/despre#confidentialitate" style="color:#E63946;">Politica de confidentialitate</a>
+              </p>
+              <p style="margin:8px 0 0;font-size:11px;color:#ADB5BD;">
+                GhidulReducerilor.ro — Reduceri verificate zilnic din Romania
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

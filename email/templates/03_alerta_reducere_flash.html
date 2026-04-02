@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}ALERTA: {{ offer.titlu }} cu -{{ offer.procent_reducere }}%{% endblock %}
+{% block content %}
+<div style="background:#E63946;border-radius:12px;padding:16px;text-align:center;margin-bottom:24px;">
+  <p style="color:#ffffff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin:0;">&#9889; Reducere flash &#9889;</p>
+</div>
+
+<div style="text-align:center;margin-bottom:24px;">
+  <h1 style="color:#1D3557;font-size:22px;margin:0 0 8px;">{{ offer.titlu }}</h1>
+  <p style="color:#6C757D;font-size:13px;margin:0;">de la <strong>{{ offer.magazin | upper }}</strong></p>
+</div>
+
+<!-- Product Image -->
+<div style="text-align:center;margin:20px 0;">
+  <img src="{{ offer.imagine_url }}" alt="{{ offer.titlu }}" width="280" height="280" style="display:block;margin:0 auto;border-radius:12px;object-fit:cover;">
+</div>
+
+<!-- Price Section -->
+<div style="text-align:center;margin:24px 0;">
+  <div style="display:inline-block;background:#FFEBEE;border-radius:12px;padding:20px 32px;">
+    <p style="margin:0 0 4px;font-size:14px;color:#6C757D;text-decoration:line-through;">{{ offer.pret_original }} lei</p>
+    <p style="margin:0;font-size:36px;font-weight:800;color:#E63946;">{{ offer.pret_redus }} lei</p>
+    <div style="margin-top:8px;">
+      <span style="background:#E63946;color:#fff;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:700;">-{{ offer.procent_reducere }}%</span>
+    </div>
+  </div>
+</div>
+
+<!-- Savings Badge -->
+<div style="text-align:center;margin:16px 0;">
+  <div style="display:inline-block;background:#E8F5E9;border-radius:8px;padding:10px 20px;">
+    <p style="margin:0;font-size:15px;color:#2E7D32;font-weight:600;">
+      Economisesti {{ (offer.pret_original - offer.pret_redus) | round | int }} lei
+    </p>
+  </div>
+</div>
+
+{% if ore_ramase %}
+<!-- Urgency -->
+<div style="text-align:center;margin:20px 0;">
+  <p style="color:#E63946;font-weight:700;font-size:14px;margin:0;">
+    &#9200; Oferta expira in {{ ore_ramase }} ore
+  </p>
+</div>
+{% endif %}
+
+<!-- CTA -->
+<div style="text-align:center;margin:24px 0;">
+  <a href="{{ offer.link_afiliat }}" style="display:inline-block;background:#E63946;color:#ffffff;padding:16px 40px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;">
+    Profita acum &#8594;
+  </a>
+</div>
+
+<p style="text-align:center;font-size:12px;color:#ADB5BD;margin-top:16px;">
+  Preturile se pot modifica fara notificare. Verifica pretul final pe site-ul magazinului.
+</p>
+{% endblock %}

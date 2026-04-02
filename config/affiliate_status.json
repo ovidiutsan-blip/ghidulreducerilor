@@ -1,0 +1,66 @@
+{
+  "_instructiuni": "Actualizează statusul după fiecare pas. Valori: neaplicat / aplicat / aprobat / respins",
+  "_ultima_actualizare": "2026-03-29",
+
+  "notino": {
+    "status": "neaplicat",
+    "platform": "2performant",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": "~8%",
+    "note": ""
+  },
+  "answear": {
+    "status": "neaplicat",
+    "platform": "2performant",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": "~8-10%",
+    "note": ""
+  },
+  "decathlon": {
+    "status": "neaplicat",
+    "platform": "2performant",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": "~3-5%",
+    "note": "Necesită conținut sportiv vizibil pe site înainte de aplicare"
+  },
+  "cel": {
+    "status": "neaplicat",
+    "platform": "2performant",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": "~2-4%",
+    "note": ""
+  },
+  "pcgarage": {
+    "status": "neaplicat",
+    "platform": "profitshare",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": "1%",
+    "cookie_zile": 30,
+    "note": "Cookie 24h de Black Friday"
+  },
+  "dr_max": {
+    "status": "neaplicat",
+    "platform": "2performant",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": "~5-8%",
+    "note": "Alternativa pentru Catena — farmacie"
+  }
+}

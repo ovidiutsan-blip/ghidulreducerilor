@@ -1,0 +1,71 @@
+{
+  "sender": {
+    "name": "GhidulReducerilor.ro",
+    "email": "hello@ghidulreducerilor.ro",
+    "reply_to": "hello@ghidulreducerilor.ro"
+  },
+  "brevo_list_id": 2,
+  "templates": {
+    "newsletter_zilnic": {
+      "subject_templates": [
+        "🛍️ Top {numar} reduceri azi - {data}",
+        "💸 Reduceri până la {procent_max}% - {data}",
+        "🔥 Ofertele zilei de {zi_saptamana} | GhidulReducerilor",
+        "⚡ {numar} deals pe care nu le poți rata azi",
+        "🎯 Cele mai bune prețuri de {data}"
+      ],
+      "preheader_templates": [
+        "Reduceri verificate de la {magazine_list}",
+        "Economisești până la {economie_max} RON azi",
+        "Oferte limitate - {numar} produse în reducere"
+      ],
+      "sectiuni": [
+        "header_cu_logo",
+        "salut_personalizat",
+        "deal_of_the_day",
+        "top_10_reduceri",
+        "reduceri_pe_categorii",
+        "cod_promo_exclusiv",
+        "footer_cu_dezabonare"
+      ]
+    },
+    "newsletter_saptamanal": {
+      "subject_templates": [
+        "📊 Rezumatul reducerilor - Săptămâna {numar_saptamana}",
+        "🏆 Top reduceri ale săptămânii {data_inceput} - {data_sfarsit}",
+        "💡 Ce ai ratat săptămâna asta (și ce vine!) | GhidulReducerilor"
+      ]
+    },
+    "alerta_pret": {
+      "subject_templates": [
+        "🔔 {produs} a scăzut cu {procent}%!",
+        "⬇️ Prețul la {produs} tocmai a scăzut - {pret_nou} RON",
+        "🎯 Alerta ta pentru {produs}: reducere de {procent}%!"
+      ],
+      "corp": "Bună {prenume},\n\nProdusul pe care îl urmărești a intrat în reducere!\n\n📦 {produs}\n💰 Preț vechi: {pret_vechi} RON\n🔥 Preț nou: {pret_nou} RON\n📉 Reducere: -{procent}%\n🏪 Magazin: {magazin}\n\n👉 [Cumpără acum]({link_afiliat})\n\n⏰ Oferta este limitată!\n\nSpor la cumpărături,\nEchipa GhidulReducerilor.ro 🛍️"
+    },
+    "welcome": {
+      "subject": "👋 Bine ai venit la GhidulReducerilor.ro!",
+      "corp": "Bună {prenume},\n\nEști acum abonat la cele mai bune reduceri din România! 🎉\n\nCe primești:\n✅ Newsletter zilnic cu Top 10 reduceri\n✅ Alerte instant când prețurile scad\n✅ Coduri promoționale exclusive\n✅ Ghiduri de cumpărare inteligentă\n\n🎁 CA BUN VENIT, iată 3 oferte de azi:\n{lista_oferte_welcome}\n\nPoți configura preferințele tale de notificări oricând:\n👉 {link_preferinte}\n\nCu drag,\nEchipa GhidulReducerilor.ro 🛍️"
+    },
+    "reactivare": {
+      "subject_templates": [
+        "Îți lipsești! 3 reduceri pe care le-ai ratat 😢",
+        "Suntem curioși... ești în regulă? 🤔 | GhidulReducerilor",
+        "⚡ Oferta de revenire: reduceri de până la {procent_max}% te așteaptă"
+      ]
+    },
+    "black_friday_teaser": {
+      "subject_templates": [
+        "🖤 Black Friday {an}: Suntem pregătiți. Tu?",
+        "⏰ {zile_ramase} zile până la Black Friday {an}",
+        "🔍 Primele oferte Black Friday {an} - Preview exclusiv"
+      ]
+    }
+  },
+  "kpi_target": {
+    "open_rate_procent": 25,
+    "ctr_procent": 4,
+    "unsubscribe_maxim_procent": 0.3
+  }
+}

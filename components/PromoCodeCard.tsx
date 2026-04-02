@@ -10,13 +10,11 @@ export default function PromoCodeCard({ code }: { code: PromoCode }) {
   const expired = isExpired(code.data_expirare)
 
   const handleCopy = async () => {
-    const success = await copyToClipboard(code.cod)
-    if (success) {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-      // Deschide link-ul afiliat în tab nou
-      window.open(code.link_afiliat, '_blank', 'noopener,noreferrer')
-    }
+    // Deschide link INAINTE de await — altfel mobilul blocheaza popup-ul
+    window.open(`/out/${code.id}`, '_blank', 'noopener,noreferrer')
+    await copyToClipboard(code.cod)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
   }
 
   return (

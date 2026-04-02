@@ -1,0 +1,70 @@
+{
+  "platforme": {
+    "tiktok": {
+      "activ": true,
+      "cont": "@catalinovidiu",
+      "url": "https://www.tiktok.com/@catalinovidiu",
+      "frecventa_posturi_zi": 2,
+      "sesiuni": ["morning", "evening"],
+      "formate": ["video_30s", "video_60s"],
+      "template_titluri": [
+        "Reducerea zilei în 30 secunde 🛍️",
+        "Am găsit reduceri NEBUNE la {magazin}!",
+        "Verificăm dacă reducerea e REALĂ sau înșelătorie 🧐",
+        "Cum economisești {suma} RON azi 💸",
+        "Nu cumpăra {produs} fără să vezi asta!",
+        "{produs} de la {pret_vechi} RON la {pret_nou} RON 🔥"
+      ],
+      "hashtag_sets": {
+        "general": ["#reduceri", "#oferte", "#ghidulreducerilor", "#cumparaturi", "#romania"],
+        "fashion": ["#fashion", "#outfit", "#moda", "#haine", "#ootd"],
+        "tech": ["#tech", "#electronice", "#smartphone", "#laptop", "#gadget"],
+        "beauty": ["#beauty", "#makeup", "#skincare", "#parfum", "#cosmetice"],
+        "sport": ["#sport", "#fitness", "#antrenament", "#decathlon", "#echipament"]
+      }
+    },
+    "instagram": {
+      "activ": true,
+      "frecventa_posturi_zi": 3,
+      "sesiuni": ["morning", "afternoon", "evening"],
+      "formate": ["carousel", "stories", "reels"],
+      "hashtag_uri_per_post": 20,
+      "hashtag_sets": {
+        "general": ["#reduceri", "#oferte", "#ghidulreducerilor", "#cumparaturi", "#romania", "#shoppingonline", "#dealsromania", "#promotii", "#economii"]
+      }
+    },
+    "facebook": {
+      "activ": true,
+      "frecventa_posturi_zi": 4,
+      "sesiuni": ["early_morning", "morning", "afternoon", "evening"],
+      "formate": ["link", "foto", "carousel"],
+      "template_posturi": {
+        "deal_simplu": "🔥 REDUCERE {procent}% la {produs}!\n\n💰 Preț vechi: {pret_vechi} RON\n✅ Preț nou: {pret_nou} RON\n🏪 La {magazin}\n\n👉 Link în comentarii sau bio!\n\n#reduceri #{magazin_hashtag} #oferte #ghidulreducerilor",
+        "top_deals": "🛍️ TOP {numar} REDUCERI AZI - {data}\n\n{lista_deals}\n\nTOATE linkurile pe 👉 ghidulreducerilor.ro\n\n#reduceriazi #oferte #romania"
+      }
+    },
+    "telegram": {
+      "activ": false,
+      "canal": "@GhidulReducerilor",
+      "threshold_reducere": 40,
+      "frecventa_maxima_zi": 10,
+      "nota": "De activat când canalul are 500+ abonați"
+    },
+    "pinterest": {
+      "activ": false,
+      "nota": "De activat în luna 2-3"
+    }
+  },
+  "ton_voce": {
+    "general": "Entuziastă dar credibilă. Fără exagerări. Bazat pe fapte (prețuri reale).",
+    "emoji_moderate": true,
+    "max_emoji_per_post": 5,
+    "evita": ["GRATIS", "SUPER MEGA ULTRA", "Nu rata NICIODATĂ", "O șansă unică în viață"],
+    "foloseste": ["Verificat", "Preț real", "Reducere autentică", "Stoc limitat (dacă e adevărat)"]
+  },
+  "ore_optime_postare": {
+    "tiktok": ["07:00", "12:00", "19:00", "21:00"],
+    "instagram": ["08:00", "12:00", "17:00", "20:00"],
+    "facebook": ["07:00", "10:00", "13:00", "19:00"]
+  }
+}

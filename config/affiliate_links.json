@@ -1,0 +1,60 @@
+{
+  "notino": {
+    "platform": "2performant",
+    "base_url": "https://event.2performant.com/events/click",
+    "affiliate_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "campaign_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "subcategories": {
+      "chanel": "https://www.notino.ro/chanel/?LINK_AFILIERE",
+      "la_roche_posay": "https://www.notino.ro/la-roche-posay/?LINK_AFILIERE",
+      "dior": "https://www.notino.ro/dior/?LINK_AFILIERE"
+    }
+  },
+  "answear": {
+    "platform": "2performant",
+    "base_url": "https://event.2performant.com/events/click",
+    "affiliate_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "campaign_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "subcategories": {
+      "nike": "https://www.answear.ro/nike/?LINK_AFILIERE",
+      "calvin_klein": "https://www.answear.ro/calvin-klein/?LINK_AFILIERE"
+    }
+  },
+  "decathlon": {
+    "platform": "2performant",
+    "base_url": "https://event.2performant.com/events/click",
+    "affiliate_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "campaign_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "subcategories": {
+      "biciclete_electrice": "LINK_AFILIERE",
+      "corturi": "LINK_AFILIERE",
+      "incaltaminte_alergare": "LINK_AFILIERE"
+    }
+  },
+  "cel": {
+    "platform": "2performant",
+    "base_url": "https://event.2performant.com/events/click",
+    "affiliate_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "campaign_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "subcategories": {
+      "apple": "LINK_AFILIERE",
+      "samsung": "LINK_AFILIERE"
+    }
+  },
+  "pcgarage": {
+    "platform": "profitshare",
+    "affiliate_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "comision_procent": 1,
+    "cookie_zile": 30,
+    "subcategories": {
+      "placi_video": "LINK_AFILIERE",
+      "monitoare": "LINK_AFILIERE"
+    }
+  },
+  "dr_max": {
+    "platform": "2performant",
+    "affiliate_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "campaign_id": "COMPLETEAZĂ_DUPĂ_APROBARE",
+    "nota": "Alternativa pentru Catena — farmacie"
+  }
+}

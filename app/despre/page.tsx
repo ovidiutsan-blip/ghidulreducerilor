@@ -26,8 +26,8 @@ export default function DesprePage() {
 
         <h2>Cum funcționează?</h2>
         <p>
-          Căutăm și verificăm manual cele mai bune oferte de la magazine precum eMAG, Altex,
-          Fashion Days și altele. Când găsim o reducere bună, o adăugăm pe site cu toate
+          Căutăm și verificăm manual cele mai bune oferte de la magazine precum eMAG,
+          Fashion Days, Vexio, Libris, Fornello, ForIT și altele. Când găsim o reducere bună, o adăugăm pe site cu toate
           detaliile: preț original, preț redus și link direct către ofertă.
         </p>
 

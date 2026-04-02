@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Bun venit pe GhidulReducerilor.ro{% endblock %}
+{% block content %}
+<div style="text-align:center;margin-bottom:24px;">
+  <div style="width:64px;height:64px;background:#E8F5E9;border-radius:50%;margin:0 auto 16px;line-height:64px;font-size:28px;">&#10003;</div>
+  <h1 style="color:#1D3557;font-size:24px;margin:0;">Bun venit, {{ prenume | default('prietene') }}!</h1>
+</div>
+
+<p style="color:#495057;font-size:15px;line-height:1.7;">
+  Te-ai abonat cu succes la alertele de reduceri de pe <strong>GhidulReducerilor.ro</strong>.
+  De acum vei primi cele mai bune oferte direct in inbox.
+</p>
+
+<div style="background:#F8F9FA;border-radius:12px;padding:20px;margin:24px 0;">
+  <h3 style="color:#1D3557;font-size:16px;margin:0 0 12px;">Ce vei primi:</h3>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td style="padding:6px 0;font-size:14px;color:#495057;">&#128293; <strong>Alerte flash</strong> — reduceri de peste 50%, instant</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 0;font-size:14px;color:#495057;">&#128231; <strong>Newsletter saptamanal</strong> — top oferte in fiecare vineri</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 0;font-size:14px;color:#495057;">&#127991;&#65039; <strong>Coduri promo exclusive</strong> — economii extra la magazinele tale preferate</td>
+    </tr>
+  </table>
+</div>
+
+{% if categorii %}
+<p style="font-size:14px;color:#6C757D;">
+  Categorii selectate: <strong>{{ categorii | join(', ') }}</strong>
+</p>
+{% endif %}
+
+<div style="text-align:center;margin:32px 0 16px;">
+  <a href="https://ghidulreducerilor.ro/#reduceri" style="display:inline-block;background:#E63946;color:#ffffff;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:15px;">
+    Vezi ofertele de azi &#8594;
+  </a>
+</div>
+
+<div style="text-align:center;margin:16px 0;">
+  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+    <tr>
+      <td style="padding:0 8px;">
+        <a href="https://ghidulreducerilor.ro/reduceri/emag" style="display:inline-block;background:#F7E636;color:#1D3557;padding:8px 16px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;">eMAG</a>
+      </td>
+      <td style="padding:0 8px;">
+        <a href="https://ghidulreducerilor.ro/reduceri/fashion-days" style="display:inline-block;background:#FF69B4;color:#ffffff;padding:8px 16px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;">Fashion Days</a>
+      </td>
+      <td style="padding:0 8px;">
+        <a href="https://ghidulreducerilor.ro/reduceri/vexio" style="display:inline-block;background:#6C63FF;color:#ffffff;padding:8px 16px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;">Vexio</a>
+      </td>
+    </tr>
+  </table>
+</div>
+{% endblock %}

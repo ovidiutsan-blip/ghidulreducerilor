@@ -23,6 +23,15 @@ next-env.d.ts
 # backup (remove after migration)
 _backup/
 
+# Python agents data (raw/processed are regenerated daily)
+data/raw/
+data/processed/
+data/deals_backup_*.json
+logs/
+__pycache__/
+*.pyc
+EMAIL_SETUP/02_env_template.env
+
 # vercel
 .vercel
 
@@ -30,3 +39,5 @@ _backup/
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+.vercel
