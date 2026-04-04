@@ -1,0 +1,260 @@
+{
+  "_doc": "Configuratie magazine pentru agentii de scraping. Fiecare magazin are categorii, selectori CSS, retea afiliata si status.",
+
+  "emag": {
+    "name": "eMAG",
+    "slug": "emag",
+    "affiliate_network": "profitshare",
+    "status": "activ",
+    "base_url": "https://www.emag.ro",
+    "categories": [
+      {"name": "electronice", "url": "https://www.emag.ro/telefoane-mobile/sort-discountdesc/c"},
+      {"name": "laptopuri", "url": "https://www.emag.ro/laptopuri/sort-discountdesc/c"},
+      {"name": "televizoare", "url": "https://www.emag.ro/televizoare/sort-discountdesc/c"},
+      {"name": "tablete", "url": "https://www.emag.ro/tablete/sort-discountdesc/c"},
+      {"name": "casti", "url": "https://www.emag.ro/casti-audio/sort-discountdesc/c"},
+      {"name": "smartwatch", "url": "https://www.emag.ro/smartwatch/sort-discountdesc/c"},
+      {"name": "aparate-foto", "url": "https://www.emag.ro/aparate-foto-dslr/sort-discountdesc/c"},
+      {"name": "electrocasnice", "url": "https://www.emag.ro/masini-de-spalat-rufe/sort-discountdesc/c"},
+      {"name": "aer-conditionat", "url": "https://www.emag.ro/aparate-de-aer-conditionat/sort-discountdesc/c"},
+      {"name": "aspiratoare", "url": "https://www.emag.ro/aspiratoare-robot/sort-discountdesc/c"}
+    ],
+    "selectors": {
+      "card": ".card-item.card-standard",
+      "name_attr": "data-name",
+      "url_attr": "data-url",
+      "price_data": "[data-product]",
+      "discount_badge": ".badge-discount",
+      "title_link": "a.card-v2-title, [data-name], a[title]",
+      "product_link": "a.card-v2-title, a[href*='/pd/'], a.product-title",
+      "image": "img[src*='emagst'], img[data-src*='emagst'], img.lozad",
+      "price_new": ".product-new-price, .price .money-int",
+      "price_old": ".product-old-price, [class*='old-price'], s"
+    },
+    "image_strategy": "og_image",
+    "max_products_per_category": 6,
+    "max_pages": 2,
+    "rate_limit_seconds": 0.5,
+    "min_discount": 15,
+    "comision": 5
+  },
+
+  "fashiondays": {
+    "name": "FashionDays",
+    "slug": "fashiondays",
+    "affiliate_network": "profitshare",
+    "status": "activ",
+    "base_url": "https://www.fashiondays.ro",
+    "categories": [
+      {"name": "femei-imbracaminte", "url": "https://www.fashiondays.ro/t/femei-imbracaminte/"},
+      {"name": "femei-incaltaminte", "url": "https://www.fashiondays.ro/t/femei-incaltaminte/"},
+      {"name": "barbati-imbracaminte", "url": "https://www.fashiondays.ro/t/barbati-imbracaminte/"},
+      {"name": "barbati-incaltaminte", "url": "https://www.fashiondays.ro/t/barbati-incaltaminte/"}
+    ],
+    "selectors": {
+      "card": "[class*='product-card'], [class*='ProductCard'], article.product",
+      "title": "[class*='product-name'], [class*='title'], h3, h4",
+      "product_link": "a[href*='fashiondays.ro'], a",
+      "image": "img[src*='http'], img[data-src*='http']",
+      "price_elements": "[class*='price'], [class*='Price'], span"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 1.0,
+    "min_discount": 15,
+    "comision": 3
+  },
+
+  "elefant": {
+    "name": "Elefant.ro",
+    "slug": "elefant",
+    "affiliate_network": "profitshare",
+    "status": "activ",
+    "base_url": "https://www.elefant.ro",
+    "categories": [
+      {"name": "carti", "url": "https://www.elefant.ro/carti/reduceri"},
+      {"name": "electronice", "url": "https://www.elefant.ro/electronice-si-it/reduceri"},
+      {"name": "jucarii", "url": "https://www.elefant.ro/jucarii-si-jocuri/reduceri"}
+    ],
+    "selectors": {
+      "card": ".product-card, .product-item, [class*='ProductCard']",
+      "title": "a[title], .product-title, h3 a",
+      "product_link": "a[title], h3 a",
+      "image": "img[src*='http']",
+      "price_elements": "[class*='price'], .money"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 1.0,
+    "min_discount": 15,
+    "comision": 5
+  },
+
+  "evomag": {
+    "name": "evoMAG",
+    "slug": "evomag",
+    "affiliate_network": "profitshare",
+    "status": "activ",
+    "base_url": "https://www.evomag.ro",
+    "categories": [
+      {"name": "telefoane", "url": "https://www.evomag.ro/telefoane-mobile-smartphone/filtru/stare-produs-nou,oferta-da/"},
+      {"name": "laptopuri", "url": "https://www.evomag.ro/componente-laptop-notebook/filtru/stare-produs-nou,oferta-da/"},
+      {"name": "televizoare", "url": "https://www.evomag.ro/tv-audio-video-televizoare/filtru/stare-produs-nou,oferta-da/"}
+    ],
+    "selectors": {
+      "card": ".product_grid--item, .npi_product, [class*='product-card']",
+      "title": "a.npi_name, .product_grid--name a, a[title]",
+      "product_link": "a.npi_name, .product_grid--name a, a[title]",
+      "image": "img[src*='http']",
+      "price_elements": "[class*='price'], .money, .pret"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 1.0,
+    "min_discount": 15,
+    "comision": 2
+  },
+
+  "notino": {
+    "name": "Notino",
+    "slug": "notino",
+    "affiliate_network": "2performant",
+    "status": "pending",
+    "base_url": "https://www.notino.ro",
+    "twoperformant": {
+      "campaign_id": "",
+      "aff_code": "d8b71657a"
+    },
+    "categories": [
+      {"name": "parfumuri-barbati", "url": "https://www.notino.ro/parfumuri-barbati/"},
+      {"name": "parfumuri-femei", "url": "https://www.notino.ro/parfumuri-femei/"}
+    ],
+    "selectors": {
+      "card": "[data-testid='product-container'], .product-item",
+      "title": "[data-testid='product-name'], .product-name",
+      "product_link": "a[href*='/p/']",
+      "image": "img[src*='notino']",
+      "price_elements": "[data-testid='price'], .price-current, [data-testid='original-price'], .price-original"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 2.0,
+    "min_discount": 20,
+    "comision": 8
+  },
+
+  "answear": {
+    "name": "Answear",
+    "slug": "answear",
+    "affiliate_network": "2performant",
+    "status": "pending",
+    "base_url": "https://www.answear.ro",
+    "twoperformant": {
+      "campaign_id": "",
+      "aff_code": "d8b71657a"
+    },
+    "categories": [
+      {"name": "femei", "url": "https://www.answear.ro/k/femei-promotii.html"},
+      {"name": "barbati", "url": "https://www.answear.ro/k/barbati-promotii.html"}
+    ],
+    "selectors": {
+      "card": ".product-card, [class*='ProductCard']",
+      "title": ".product-card__name, [class*='product-name']",
+      "product_link": "a[href*='answear.ro']",
+      "image": "img[src*='http']",
+      "price_elements": "[class*='price'], [class*='Price']"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 2.0,
+    "min_discount": 20,
+    "comision": 9
+  },
+
+  "decathlon": {
+    "name": "Decathlon",
+    "slug": "decathlon",
+    "affiliate_network": "2performant",
+    "status": "pending",
+    "base_url": "https://www.decathlon.ro",
+    "twoperformant": {
+      "campaign_id": "",
+      "aff_code": "d8b71657a"
+    },
+    "categories": [
+      {"name": "sport", "url": "https://www.decathlon.ro/browse/c0-toate-sporturile/c1-toate-produsele/_/N-cfnz13?Nf=price_discountPercentage%7CGTEQ+20"}
+    ],
+    "selectors": {
+      "card": "[class*='product-card'], .vtmn-product-card",
+      "title": "[class*='product-title'], h2",
+      "product_link": "a[href*='decathlon.ro']",
+      "image": "img[src*='http']",
+      "price_elements": "[class*='price'], [class*='Price']"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 2.0,
+    "min_discount": 20,
+    "comision": 4
+  },
+
+  "drmax": {
+    "name": "Dr.Max",
+    "slug": "drmax",
+    "affiliate_network": "2performant",
+    "status": "pending",
+    "base_url": "https://www.drmax.ro",
+    "twoperformant": {
+      "campaign_id": "",
+      "aff_code": "d8b71657a"
+    },
+    "categories": [
+      {"name": "promotii", "url": "https://www.drmax.ro/promotii"}
+    ],
+    "selectors": {
+      "card": ".product-card, [class*='product-item']",
+      "title": ".product-name, h3 a",
+      "product_link": "a[href*='drmax.ro']",
+      "image": "img[src*='http']",
+      "price_elements": "[class*='price'], .price"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 1,
+    "rate_limit_seconds": 2.0,
+    "min_discount": 15,
+    "comision": 6
+  },
+
+  "pcgarage": {
+    "name": "PC Garage",
+    "slug": "pcgarage",
+    "affiliate_network": "profitshare",
+    "status": "neaplicat",
+    "base_url": "https://www.pcgarage.ro",
+    "categories": [
+      {"name": "laptopuri", "url": "https://www.pcgarage.ro/notebook-laptop/"},
+      {"name": "monitoare", "url": "https://www.pcgarage.ro/monitoare/"},
+      {"name": "componente", "url": "https://www.pcgarage.ro/placi-video/"}
+    ],
+    "selectors": {
+      "card": ".product_grid--item, [class*='product-card']",
+      "title": "a[title], .product-name",
+      "product_link": "a[href*='pcgarage.ro']",
+      "image": "img[src*='http']",
+      "price_elements": "[class*='price'], .money"
+    },
+    "image_strategy": "og_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 1.0,
+    "min_discount": 15,
+    "comision": 1
+  }
+}

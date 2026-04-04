@@ -12,8 +12,27 @@ const nextConfig = {
       // Profitshare product feed images
       { protocol: 'http', hostname: 'profitsmart.ro' },
       { protocol: 'https', hostname: 'profitsmart.ro' },
-      // Other stores
+      // FashionDays
+      { protocol: 'https', hostname: '**.fashiondays.ro' },
+      { protocol: 'https', hostname: '**.fashioncdn.ro' },
+      // Elefant.ro
+      { protocol: 'https', hostname: '**.elefant.ro' },
+      { protocol: 'https', hostname: '**.elefant.cdn' },
+      // evoMAG
+      { protocol: 'https', hostname: '**.evomag.ro' },
+      // Notino (when approved)
+      { protocol: 'https', hostname: '**.notino.ro' },
+      { protocol: 'https', hostname: '**.notinoimg.com' },
+      // Answear (when approved)
+      { protocol: 'https', hostname: '**.answear.ro' },
+      // Decathlon (when approved)
+      { protocol: 'https', hostname: '**.decathlon.ro' },
+      { protocol: 'https', hostname: '**.decathloncoach.com' },
+      // Dr.Max (when approved)
+      { protocol: 'https', hostname: '**.drmax.ro' },
+      // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
+      { protocol: 'https', hostname: '**.shopify.com' },
     ],
   },
   typescript: {

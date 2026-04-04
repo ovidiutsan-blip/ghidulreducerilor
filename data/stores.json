@@ -9,5 +9,38 @@
     "categorie_principala": "electronice",
     "url_site": "https://www.emag.ro",
     "comision_mediu": "1-20%"
+  },
+  {
+    "id": "fashiondays",
+    "nume": "FashionDays",
+    "slug": "fashiondays",
+    "descriere": "FashionDays este unul dintre cele mai populare magazine online de fashion din Romania. Ofera branduri premium la preturi reduse, cu promotii zilnice la imbracaminte, incaltaminte si accesorii pentru femei, barbati si copii.",
+    "logo_emoji": "👗",
+    "culoare": "#E91E63",
+    "categorie_principala": "fashion",
+    "url_site": "https://www.fashiondays.ro",
+    "comision_mediu": "3-8%"
+  },
+  {
+    "id": "elefant",
+    "nume": "Elefant.ro",
+    "slug": "elefant",
+    "descriere": "Elefant.ro este cel mai mare magazin online de carti din Romania, cu o oferta extinsa de carti, jucarii, electronice si produse pentru casa. Livrare rapida si reduceri frecvente.",
+    "logo_emoji": "📚",
+    "culoare": "#FF6B00",
+    "categorie_principala": "carti",
+    "url_site": "https://www.elefant.ro",
+    "comision_mediu": "3-10%"
+  },
+  {
+    "id": "evomag",
+    "nume": "evoMAG",
+    "slug": "evomag",
+    "descriere": "evoMAG este un magazin online de electronice si IT din Romania, cu preturi competitive la telefoane, laptopuri, televizoare si componente PC. Livrare nationala si garantie extinsa.",
+    "logo_emoji": "💻",
+    "culoare": "#00BCD4",
+    "categorie_principala": "electronice",
+    "url_site": "https://www.evomag.ro",
+    "comision_mediu": "1-5%"
   }
 ]
