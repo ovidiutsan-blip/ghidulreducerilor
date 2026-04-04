@@ -2,29 +2,14 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Tag, Menu, X, Bell, ChevronDown } from 'lucide-react'
+import { Tag, Menu, X, Bell } from 'lucide-react'
 
 const MAGAZINE_DESKTOP = [
   { href: '/reduceri/emag', label: 'eMAG' },
-  { href: '/reduceri/notino', label: 'Notino' },
-  { href: '/reduceri/fashion-days', label: 'Fashion Days' },
-  { href: '/reduceri/catena', label: 'Catena' },
-  { href: '/reduceri/decathlon', label: 'Decathlon' },
 ]
 
 const MAGAZINE_MOBILE = [
   { href: '/reduceri/emag', emoji: '🛒', label: 'eMAG' },
-  { href: '/reduceri/notino', emoji: '🌸', label: 'Notino' },
-  { href: '/reduceri/fashion-days', emoji: '👗', label: 'Fashion Days' },
-  { href: '/reduceri/answear', emoji: '👟', label: 'Answear' },
-  { href: '/reduceri/catena', emoji: '💊', label: 'Catena' },
-  { href: '/reduceri/decathlon', emoji: '🏃', label: 'Decathlon' },
-  { href: '/reduceri/vexio', emoji: '💻', label: 'Vexio' },
-  { href: '/reduceri/cel', emoji: '📱', label: 'Cel.ro' },
-  { href: '/reduceri/pcgarage', emoji: '🎮', label: 'PC Garage' },
-  { href: '/reduceri/libris', emoji: '📚', label: 'Libris' },
-  { href: '/reduceri/forit', emoji: '🖥️', label: 'ForIT' },
-  { href: '/reduceri/fornello', emoji: '🔥', label: 'Fornello' },
 ]
 
 export default function Navbar() {
@@ -51,8 +36,8 @@ export default function Navbar() {
                 {label}
               </Link>
             ))}
-            <Link href="/#magazine" className="text-sm font-medium text-neutral-400 hover:text-brand-red transition-colors flex items-center gap-0.5">
-              Mai multe <ChevronDown className="w-3.5 h-3.5" />
+            <Link href="/coduri-promo/emag" className="text-sm font-medium text-neutral-400 hover:text-brand-red transition-colors">
+              Coduri Promo
             </Link>
           </div>
 

@@ -2,38 +2,13 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      // Placeholder images (development)
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: 'via.placeholder.com' },
       // eMAG CDN
       { protocol: 'https', hostname: 's13emagst.akamaized.net' },
       { protocol: 'https', hostname: 's1emagst.akamaized.net' },
       { protocol: 'https', hostname: '**.emag.ro' },
-      // Fashion Days
-      { protocol: 'https', hostname: '**.fashiondays.ro' },
-      { protocol: 'https', hostname: 'cdn.fashiondays.ro' },
-      // Notino
-      { protocol: 'https', hostname: '**.notino.ro' },
-      { protocol: 'https', hostname: 'cdn.notinoimg.com' },
-      // Answear
-      { protocol: 'https', hostname: '**.answear.ro' },
-      { protocol: 'https', hostname: 'img.answear.com' },
-      // Decathlon
-      { protocol: 'https', hostname: '**.decathlon.ro' },
-      { protocol: 'https', hostname: 'contents.mediadecathlon.com' },
-      // Catena
-      { protocol: 'https', hostname: '**.catena.ro' },
-      // Cel.ro / PC Garage
-      { protocol: 'https', hostname: '**.cel.ro' },
-      { protocol: 'https', hostname: '**.pcgarage.ro' },
-      // Vexio / Libris / Fornello / ForIT
-      { protocol: 'https', hostname: '**.vexio.ro' },
-      { protocol: 'https', hostname: '**.libris.ro' },
-      { protocol: 'https', hostname: '**.fornello.ro' },
-      { protocol: 'https', hostname: '**.forit.ro' },
-      // Generic CDN patterns
-      { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.akamaized.net' },
+      // Profitshare campaign images
+      { protocol: 'https', hostname: 'app.profitshare.ro' },
     ],
   },
 
