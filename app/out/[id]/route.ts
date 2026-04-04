@@ -14,8 +14,8 @@ export async function GET(
     return NextResponse.redirect(`https://l.profitshare.ro/l/${id}`, { status: 302 })
   }
 
-  // Cauta in deals
-  const deal = (deals as any[]).find((d) => d.id === id)
+  // Cauta in deals (by id sau slug)
+  const deal = (deals as any[]).find((d) => d.id === id || d.slug === id)
   if (deal?.link_afiliat) {
     // Daca link_afiliat e tot /out/ (self-referencing), extrage numarul si du la Profitshare
     const selfRef = deal.link_afiliat.match(/\/out\/(\d+)/)

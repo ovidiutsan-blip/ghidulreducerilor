@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:profitshare": "node scripts/sync-profitshare.js",
+    "sync:feed": "node scripts/parse-feed.js",
+    "sync:all": "npm run sync:profitshare && npm run sync:feed"
   },
   "dependencies": {
     "next": "^14.2.21",

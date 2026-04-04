@@ -4,6 +4,7 @@ import stores from '@/data/stores.json'
 
 export type Deal = {
   id: string
+  slug?: string
   magazin: string
   titlu: string
   imagine_url: string
@@ -11,6 +12,7 @@ export type Deal = {
   pret_redus: number
   procent_reducere: number
   link_afiliat: string
+  product_url?: string
   categorie: string
   data_adaugare: string
   activ: boolean
@@ -68,4 +70,15 @@ export function getStoreBySlug(slug: string): Store | undefined {
 // Returnează toate slug-urile de magazine (pentru generateStaticParams)
 export function getAllStoreSlugs(): string[] {
   return (stores as Store[]).map(s => s.slug)
+}
+
+// Returnează lista unică de magazine din deals (pentru filtrare)
+export function getUniqueMagazine(): string[] {
+  const magazineSet = new Set((deals as Deal[]).filter(d => d.activ).map(d => d.magazin))
+  return Array.from(magazineSet).sort()
+}
+
+// Caută un deal după slug
+export function getDealBySlug(slug: string): Deal | undefined {
+  return (deals as Deal[]).find(d => d.slug === slug)
 }

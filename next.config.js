@@ -9,6 +9,9 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.akamaized.net' },
       // Profitshare campaign images
       { protocol: 'https', hostname: 'app.profitshare.ro' },
+      // Profitshare product feed images
+      { protocol: 'http', hostname: 'profitsmart.ro' },
+      { protocol: 'https', hostname: 'profitsmart.ro' },
     ],
   },
 
