@@ -31,5 +31,16 @@
     "categorie_principala": "electronice",
     "url_site": "https://www.forit.ro",
     "comision_mediu": "2-5%"
+  },
+  {
+    "id": "fornello",
+    "nume": "Fornello",
+    "slug": "fornello",
+    "descriere": "Fornello.ro este un magazin online specializat in instalatii termice, sanitare si de incalzire. Ofera boilere, calorifere, centrale termice, panouri solare si accesorii la preturi competitive.",
+    "logo_emoji": "🔥",
+    "culoare": "#FF5722",
+    "categorie_principala": "casa-gradina",
+    "url_site": "https://www.fornello.ro",
+    "comision_mediu": "2-5%"
   }
 ]

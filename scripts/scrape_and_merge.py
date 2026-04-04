@@ -300,12 +300,113 @@ def scrape_forit():
     return deals
 
 
+# ─── FORNELLO SCRAPER ─────────────────────────────────────────────────
+def scrape_fornello():
+    """Scrape Fornello.ro promotions — SSR, Profitshare approved."""
+    print("\n=== Scraping Fornello.ro ===")
+    deals = []
+    today = time.strftime("%Y-%m-%d")
+
+    for page_url in ["https://www.fornello.ro/promotii/", "https://www.fornello.ro/"]:
+        try:
+            r = requests.get(page_url, headers=HEADERS, timeout=15)
+            if r.status_code != 200:
+                continue
+
+            soup = BeautifulSoup(r.text, "html.parser")
+            cards = soup.select(".p-product-card")
+
+            for card in cards:
+                try:
+                    # Title from img alt or title element
+                    img_el = card.select_one("img[alt]")
+                    title = img_el.get("alt", "") if img_el else ""
+                    if not title or len(title) < 5:
+                        title_el = card.select_one("[class*='title'], [class*='name']")
+                        title = title_el.get_text(strip=True) if title_el else ""
+                    if not title or len(title) < 5:
+                        continue
+
+                    # Link
+                    link_el = card.select_one("a[href]")
+                    if not link_el:
+                        continue
+                    product_url = link_el.get("href", "")
+                    if product_url.startswith("/"):
+                        product_url = "https://www.fornello.ro" + product_url
+
+                    # Image — get the promo image or product image
+                    img_url = ""
+                    for img_sel in ["img[src*='cs-photos/products']", "img[src*='cs-content']", "img[alt]"]:
+                        ie = card.select_one(img_sel)
+                        if ie:
+                            img_url = ie.get("src", "")
+                            if img_url:
+                                break
+
+                    # New price from .price-html
+                    new_el = card.select_one(".price-html, .p-product-card__prices--final .price-html")
+                    price_new = 0
+                    if new_el:
+                        price_new = extract_price(new_el.get_text())
+
+                    # Old price from discount section
+                    old_el = card.select_one(".p-product-card__prices--discount-price")
+                    price_old = 0
+                    if old_el:
+                        price_old = extract_price(old_el.get_text())
+
+                    if price_new <= 0:
+                        continue
+
+                    if price_old <= price_new:
+                        price_old = price_new  # No discount, show at regular price
+
+                    discount = 0
+                    if price_old > price_new:
+                        discount = round((price_old - price_new) / price_old * 100)
+
+                    deals.append({
+                        "id": deal_id("fornello", product_url),
+                        "slug": slugify(title),
+                        "magazin": "fornello",
+                        "titlu": title[:150],
+                        "pret_original": price_old,
+                        "pret_redus": price_new,
+                        "procent_reducere": discount,
+                        "imagine_url": img_url,
+                        "product_url": product_url,
+                        "link_afiliat": "",
+                        "categorie": "casa-gradina",
+                        "data_adaugare": today,
+                        "activ": True,
+                    })
+                except Exception:
+                    continue
+
+            print(f"  {page_url[-30:]}: {len(cards)} cards")
+        except Exception as e:
+            print(f"  Error: {e}")
+
+    # Deduplicate
+    seen = set()
+    unique = []
+    for d in deals:
+        if d["id"] not in seen:
+            seen.add(d["id"])
+            unique.append(d)
+
+    print(f"  Fornello total: {len(unique)}")
+    return unique
+
+
 def main():
     all_new = []
 
-    # Scrape stores with SSR pages
+    # Scrape all Profitshare-approved stores with SSR pages
     all_new.extend(scrape_watch24())
     all_new.extend(scrape_forit())
+    all_new.extend(scrape_fornello())
 
     if not all_new:
         print("\nNo new deals. Exiting.")
