@@ -41,6 +41,13 @@ const nextConfig = {
   async headers() {
     return [
       {
+        // Profitshare validation file - serve as text/plain
+        source: '/2fbe74572bd296845e920501e42623f6',
+        headers: [
+          { key: 'Content-Type', value: 'text/plain' },
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
