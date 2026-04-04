@@ -1,0 +1,74 @@
+name: 🔄 Auto-Update Saptamanal
+
+on:
+  schedule:
+    # Duminica 02:00 UTC = 04:00 Romania (dupa audit la 01:00)
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Update mode'
+        required: false
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - audit-only
+          - dry-run
+
+concurrency:
+  group: data-updates
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  auto-update:
+    name: Weekly Auto-Update
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create directories
+        run: mkdir -p logs data data/raw data/processed data/backups
+
+      - name: Run auto-update
+        env:
+          SITE_URL: https://ghidulreducerilor.ro
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ vars.BREVO_LIST_ID }}
+          PROFITSHARE_API_USER: ${{ secrets.PROFITSHARE_API_USER }}
+          PROFITSHARE_API_KEY: ${{ secrets.PROFITSHARE_API_KEY }}
+          PROFITSHARE_AFFILIATE_ID: ${{ vars.PROFITSHARE_AFFILIATE_ID }}
+        run: |
+          MODE="${{ github.event.inputs.mode || 'full' }}"
+          case "$MODE" in
+            audit-only) python scripts/auto_update.py --audit-only ;;
+            dry-run)    python scripts/auto_update.py --dry-run ;;
+            *)          python scripts/auto_update.py ;;
+          esac
+
+      - name: Commit changes
+        run: |
+          git config user.name "GhidulReducerilor Bot"
+          git config user.email "bot@ghidulreducerilor.ro"
+          git add data/deals.json data/codes.json data/update_status.json logs/audit_full_latest.json AUDIT_LOG.md
+          git diff --staged --quiet || git commit -m "🔄 Weekly auto-update $(date +%Y-%m-%d)"
+
+      - name: Push changes (triggers Vercel redeploy)
+        run: git push

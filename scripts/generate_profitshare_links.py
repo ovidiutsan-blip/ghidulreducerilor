@@ -113,10 +113,16 @@ def process_deals():
 
         links_data = []
         for deal in batch:
-            # Folosim URL-ul curent (search URL pe magazin) ca destinație
+            # Folosim product_url (URL real al produsului pe magazin) ca destinatie
+            # Fallback la link_afiliat doar daca product_url nu exista
+            dest_url = deal.get("product_url") or deal.get("link_afiliat", "")
+            # Nu trimite linkuri Profitshare ca destinatie (ar crea loop)
+            if "profitshare.ro" in dest_url or "/out/" in dest_url:
+                print(f"  SKIP {deal['id']}: no product_url, link is self-referencing")
+                continue
             links_data.append({
                 "name": f"deal-{deal['id']}",
-                "url": deal["link_afiliat"]
+                "url": dest_url
             })
 
         print(f"  Batch {batch_start // batch_size + 1}: {len(batch)} linkuri...")

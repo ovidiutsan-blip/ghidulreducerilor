@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { isApiAuthorized } from '@/lib/admin-auth'
 import { exec } from 'child_process'
 import { promisify } from 'util'
 import path from 'path'
@@ -6,17 +7,12 @@ import path from 'path'
 const execAsync = promisify(exec)
 const ROOT = path.join(process.cwd())
 
-function isAuthorized(req: NextRequest): boolean {
-  const token = req.headers.get('x-admin-token')
-  return token === process.env.ADMIN_SECRET_TOKEN
-}
-
 /**
  * GET /api/admin/link-check
  * Returnează ultimul raport de verificare linkuri
  */
 export async function GET(req: NextRequest) {
-  if (!isAuthorized(req)) {
+  if (!isApiAuthorized(req)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
@@ -58,7 +54,7 @@ export async function GET(req: NextRequest) {
  * Body: { mode: 'full' | 'quick', deal_id?: string, dry_run?: boolean }
  */
 export async function POST(req: NextRequest) {
-  if (!isAuthorized(req)) {
+  if (!isApiAuthorized(req)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 

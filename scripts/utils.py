@@ -65,19 +65,21 @@ def normalize_deal(deal: dict) -> dict:
 
 def fix_profitshare_link(link: str) -> str:
     """
-    Convertește linkurile Profitshare directe în format /out/[id].
-    l.profitshare.ro/l/15487990 → ghidulreducerilor.ro/out/15487990
+    Pastreaza linkurile Profitshare asa cum sunt in deals.json.
+    Frontend-ul foloseste /out/[deal-id] care apoi redirecteaza la l.profitshare.ro.
 
-    Linkurile l.profitshare.ro directe sunt blocate pe mobile!
+    IMPORTANT: Nu convertim l.profitshare.ro -> /out/ in deals.json!
+    Conversia se face in frontend (DealCard href="/out/{deal.id}").
+    deals.json trebuie sa contina URL-ul FINAL (l.profitshare.ro/l/NNNNN).
     """
     if not link:
         return link
 
-    # Pattern: l.profitshare.ro/l/NNNNNNN
-    match = re.match(r'https?://l\.profitshare\.ro/l/(\d+)', link)
+    # Daca link_afiliat e un self-reference /out/NNNNN, converteste inapoi la Profitshare
+    match = re.match(r'https?://ghidulreducerilor\.ro/out/(\d+)', link)
     if match:
         link_id = match.group(1)
-        return f'https://ghidulreducerilor.ro/out/{link_id}'
+        return f'https://l.profitshare.ro/l/{link_id}'
 
     return link
 

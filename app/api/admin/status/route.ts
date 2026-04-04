@@ -1,20 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { isApiAuthorized } from '@/lib/admin-auth'
 import path from 'path'
 import fs from 'fs/promises'
 
 const ROOT = path.join(process.cwd())
-
-function isAuthorized(req: NextRequest): boolean {
-  const token = req.headers.get('x-admin-token')
-  return token === process.env.ADMIN_SECRET_TOKEN
-}
 
 /**
  * GET /api/admin/status
  * Dashboard status complet al sistemului
  */
 export async function GET(req: NextRequest) {
-  if (!isAuthorized(req)) {
+  if (!isApiAuthorized(req)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
@@ -100,7 +96,7 @@ export async function GET(req: NextRequest) {
   status.config = configStatus
 
   // ===== Scripts Status =====
-  const scriptFiles = ['scraper.py', 'daily_pipeline.py', 'newsletter.py', 'social_media_poster.py', 'link_checker.py', 'report_daily.py', 'email_support.py', 'seo_audit.py']
+  const scriptFiles = ['scraper.py', 'daily_pipeline.py', 'newsletter.py', 'social_media_poster.py', 'link_checker.py', 'report_daily.py', 'email_support.py', 'seo_audit.py', 'audit_full.py', 'auto_repair.py', 'auto_update.py']
   const scriptsStatus: Record<string, boolean> = {}
 
   for (const script of scriptFiles) {
@@ -115,14 +111,22 @@ export async function GET(req: NextRequest) {
   status.scripts = scriptsStatus
 
   // ===== ENV Variables Check =====
+  // Env vars: required = must have, optional = nice to have (social media)
   status.env = {
-    BREVO_API_KEY: !!process.env.BREVO_API_KEY,
-    BREVO_LIST_ID: !!process.env.BREVO_LIST_ID,
-    FB_PAGE_ID: !!process.env.FB_PAGE_ID,
-    FB_ACCESS_TOKEN: !!process.env.FB_ACCESS_TOKEN,
-    IG_USER_ID: !!process.env.IG_USER_ID,
-    IG_ACCESS_TOKEN: !!process.env.IG_ACCESS_TOKEN,
-    ADMIN_SECRET_TOKEN: !!process.env.ADMIN_SECRET_TOKEN
+    required: {
+      BREVO_API_KEY: !!process.env.BREVO_API_KEY,
+      BREVO_LIST_ID: !!process.env.BREVO_LIST_ID,
+      ADMIN_SECRET_TOKEN: !!process.env.ADMIN_SECRET_TOKEN,
+      PROFITSHARE_API_USER: !!process.env.PROFITSHARE_API_USER,
+      PROFITSHARE_API_KEY: !!process.env.PROFITSHARE_API_KEY,
+      CRON_SECRET: !!process.env.CRON_SECRET,
+    },
+    optional: {
+      FB_PAGE_ID: !!process.env.FB_PAGE_ID,
+      FB_ACCESS_TOKEN: !!process.env.FB_ACCESS_TOKEN,
+      IG_USER_ID: !!process.env.IG_USER_ID,
+      IG_ACCESS_TOKEN: !!process.env.IG_ACCESS_TOKEN,
+    }
   }
 
   return NextResponse.json(status)

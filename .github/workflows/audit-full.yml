@@ -1,0 +1,64 @@
+name: 🔍 Audit Complet Saptamanal
+
+on:
+  schedule:
+    # Duminica 01:00 UTC = 03:00 Romania
+    - cron: '0 1 * * 0'
+  workflow_dispatch:
+    inputs:
+      skip_links:
+        description: 'Skip link checking (faster)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    name: Full Site Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create directories
+        run: mkdir -p logs data
+
+      - name: Run full audit
+        env:
+          SITE_URL: https://ghidulreducerilor.ro
+        run: |
+          SKIP_LINKS="${{ github.event.inputs.skip_links || 'false' }}"
+          if [ "$SKIP_LINKS" = "true" ]; then
+            python scripts/audit_full.py --skip-links || true
+          else
+            python scripts/audit_full.py || true
+          fi
+
+      - name: Commit audit results
+        run: |
+          git config user.name "GhidulReducerilor Bot"
+          git config user.email "bot@ghidulreducerilor.ro"
+          git add logs/audit_full_latest.json AUDIT_LOG.md
+          git diff --staged --quiet || git commit -m "🔍 Audit report $(date +%Y-%m-%d)"
+
+      - name: Push results
+        run: git push
