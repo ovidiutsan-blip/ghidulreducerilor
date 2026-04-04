@@ -10,11 +10,11 @@ import { getActiveDeals, getAllStores } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'GhidulReducerilor.ro — Cele Mai Bune Reduceri și Coduri Promo România 2026',
-  description: 'Descoperă cele mai bune reduceri si coduri promotionale din Romania. eMAG, Notino, Fashion Days, Catena, Decathlon — oferte verificate zilnic, economii reale.',
+  description: 'Descoperă cele mai bune reduceri si coduri promotionale eMAG din Romania. Oferte verificate zilnic, prețuri reale, economii garantate.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'GhidulReducerilor.ro — Reduceri și Coduri Promoționale România 2026',
-    description: 'Cele mai bune reduceri din Romania verificate zilnic. eMAG, Notino, Catena, Decathlon si multe altele.',
+    description: 'Cele mai bune reduceri eMAG din Romania verificate zilnic. Oferte reale, prețuri scăzute, economii garantate.',
     images: [{ url: 'https://ghidulreducerilor.ro/api/og', width: 1200, height: 630 }],
   },
 }
@@ -74,7 +74,7 @@ export default function HomePage() {
             din România, într-un singur loc
           </h1>
           <p className="text-lg sm:text-xl text-neutral-300 max-w-2xl mx-auto mb-4">
-            eMAG, Notino, Fashion Days, Catena, Decathlon și altele —
+            Cele mai bune reduceri eMAG —
             oferte verificate zilnic, economii reale.
           </p>
 

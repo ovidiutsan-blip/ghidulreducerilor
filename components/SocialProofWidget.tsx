@@ -5,13 +5,13 @@ import { ShoppingBag } from 'lucide-react'
 
 const NOTIFICATIONS = [
   { nume: 'Andrei din Cluj', economie: '89', magazin: 'eMAG' },
-  { nume: 'Maria din București', economie: '124', magazin: 'Notino' },
-  { nume: 'Ion din Timișoara', economie: '67', magazin: 'Fashion Days' },
+  { nume: 'Maria din București', economie: '124', magazin: 'eMAG' },
+  { nume: 'Ion din Timișoara', economie: '67', magazin: 'eMAG' },
   { nume: 'Elena din Iași', economie: '203', magazin: 'eMAG' },
-  { nume: 'Mihai din Brașov', economie: '45', magazin: 'Catena' },
-  { nume: 'Alina din Constanța', economie: '156', magazin: 'Decathlon' },
-  { nume: 'Bogdan din Ploiești', economie: '78', magazin: 'Cel.ro' },
-  { nume: 'Roxana din Craiova', economie: '92', magazin: 'Answear' },
+  { nume: 'Mihai din Brașov', economie: '45', magazin: 'eMAG' },
+  { nume: 'Alina din Constanța', economie: '156', magazin: 'eMAG' },
+  { nume: 'Bogdan din Ploiești', economie: '78', magazin: 'eMAG' },
+  { nume: 'Roxana din Craiova', economie: '92', magazin: 'eMAG' },
 ]
 
 export default function SocialProofWidget() {

@@ -127,7 +127,7 @@ export async function GET() {
             flexWrap: 'nowrap',
           }}
         >
-          {['🛒 eMAG', '🌸 Notino', '👗 Fashion Days', '💊 Catena', '🏃 Decathlon'].map((store) => (
+          {['🛒 eMAG', '📱 Telefoane', '💻 Laptopuri', '📺 TV & Audio', '🏠 Casa'].map((store) => (
             <div
               key={store}
               style={{

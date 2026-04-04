@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: 'GhidulReducerilor.ro — Reduceri și Coduri Promoționale România',
     template: '%s | GhidulReducerilor.ro',
   },
-  description: 'Cele mai bune reduceri, oferte si coduri promotionale din Romania. eMAG, Fashion Days, Notino, Catena, Decathlon — verificate zilnic.',
+  description: 'Cele mai bune reduceri si coduri promotionale eMAG din Romania. Oferte verificate zilnic, prețuri reale, economii garantate.',
   openGraph: {
     type: 'website',
     locale: 'ro_RO',
