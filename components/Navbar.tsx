@@ -3,14 +3,11 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Tag, Menu, X, Bell } from 'lucide-react'
+import SearchBar from '@/components/SearchBar'
+import dealsData from '@/data/deals.json'
+import type { Deal } from '@/lib/data'
 
-const MAGAZINE_DESKTOP = [
-  { href: '/reduceri/emag', label: 'eMAG' },
-]
-
-const MAGAZINE_MOBILE = [
-  { href: '/reduceri/emag', emoji: '🛒', label: 'eMAG' },
-]
+const allDeals = (dealsData as Deal[]).filter(d => d.activ)
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -20,7 +17,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group shrink-0">
             <div className="w-9 h-9 bg-brand-red rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform">
               <Tag className="w-5 h-5 text-white" />
             </div>
@@ -29,26 +26,17 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Navigare desktop */}
-          <div className="hidden md:flex items-center gap-5">
-            {MAGAZINE_DESKTOP.map(({ href, label }) => (
-              <Link key={href} href={href} className="text-sm font-medium text-neutral-600 hover:text-brand-red transition-colors">
-                {label}
-              </Link>
-            ))}
-            <Link href="/coduri-promo/emag" className="text-sm font-medium text-neutral-400 hover:text-brand-red transition-colors">
-              Coduri Promo
-            </Link>
-          </div>
+          {/* Search bar - desktop */}
+          <SearchBar deals={allDeals} />
 
           {/* CTA + Mobile menu */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <Link
               href="/abonare-alerte"
               className="hidden sm:inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all"
             >
               <Bell className="w-4 h-4" />
-              Alerte Reduceri
+              Alerte
             </Link>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -61,24 +49,25 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Meniu mobil */}
+      {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden border-t border-neutral-200 bg-white">
-          <div className="px-4 py-4">
-            <p className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-3">Magazine</p>
-            <div className="grid grid-cols-2 gap-2 mb-4">
-              {MAGAZINE_MOBILE.map(({ href, emoji, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-red py-1"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  <span>{emoji}</span> {label}
-                </Link>
-              ))}
-            </div>
-            <hr className="border-neutral-200 mb-4" />
+          <div className="px-4 py-4 space-y-3">
+            <Link
+              href="/reduceri/emag"
+              className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-red py-1"
+              onClick={() => setMenuOpen(false)}
+            >
+              🛒 eMAG Reduceri
+            </Link>
+            <Link
+              href="/coduri-promo/emag"
+              className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-red py-1"
+              onClick={() => setMenuOpen(false)}
+            >
+              🏷️ Coduri Promo
+            </Link>
+            <hr className="border-neutral-200" />
             <Link
               href="/abonare-alerte"
               className="btn-cta w-full text-sm"

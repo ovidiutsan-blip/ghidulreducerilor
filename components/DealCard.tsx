@@ -2,11 +2,19 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { ExternalLink, ImageOff } from 'lucide-react'
+import { ExternalLink, ImageOff, Star, Truck } from 'lucide-react'
 import { formatPrice } from '@/lib/utils'
+import { addRecentlyViewed } from '@/lib/recently-viewed'
+import { FAST_DELIVERY_STORES } from '@/lib/categories'
 import type { Deal } from '@/lib/data'
 
-// Fallback placeholder cand imaginea originala e 404/broken
+const STORE_INFO: Record<string, { emoji: string; name: string }> = {
+  emag: { emoji: '🛒', name: 'eMAG' },
+  watch24: { emoji: '⌚', name: 'Watch24' },
+  forit: { emoji: '🖥️', name: 'ForIT' },
+  fornello: { emoji: '🔥', name: 'Fornello' },
+}
+
 function FallbackImage({ title }: { title: string }) {
   return (
     <div className="absolute inset-0 bg-gradient-to-br from-neutral-100 to-neutral-200 flex flex-col items-center justify-center p-4 text-center">
@@ -19,6 +27,12 @@ function FallbackImage({ title }: { title: string }) {
 export default function DealCard({ deal }: { deal: Deal }) {
   const [imgError, setImgError] = useState(false)
   const economie = deal.pret_original - deal.pret_redus
+  const store = STORE_INFO[deal.magazin]
+  const hasFastDelivery = FAST_DELIVERY_STORES.includes(deal.magazin)
+
+  function handleClick() {
+    addRecentlyViewed(deal.id)
+  }
 
   return (
     <a
@@ -28,8 +42,9 @@ export default function DealCard({ deal }: { deal: Deal }) {
       className="card-hover overflow-hidden flex flex-col block group"
       itemScope
       itemType="https://schema.org/Product"
+      onClick={handleClick}
     >
-      {/* Imagine + Badge reducere */}
+      {/* Image + badges */}
       <div className="relative aspect-square bg-neutral-100 overflow-hidden">
         {imgError ? (
           <FallbackImage title={deal.titlu} />
@@ -39,24 +54,46 @@ export default function DealCard({ deal }: { deal: Deal }) {
             alt={`${deal.titlu} — reducere ${deal.procent_reducere}% de la ${formatPrice(deal.pret_original)} la ${formatPrice(deal.pret_redus)}`}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             onError={() => setImgError(true)}
           />
         )}
         <span className="badge-discount">-{deal.procent_reducere}%</span>
+
+        {/* Store badge */}
+        {store && (
+          <span className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-xs font-medium text-neutral-700 px-2 py-1 rounded-lg shadow-sm">
+            {store.emoji} {store.name}
+          </span>
+        )}
       </div>
 
       {/* Schema microdata */}
       <meta itemProp="image" content={deal.imagine_url} />
       <meta itemProp="description" content={`${deal.titlu} — reducere ${deal.procent_reducere}% de la ${formatPrice(deal.pret_original)} la ${formatPrice(deal.pret_redus)}`} />
 
-      {/* Conținut */}
-      <div className="p-4 flex flex-col flex-1">
-        <h3 className="font-display font-semibold text-neutral-900 text-sm leading-snug mb-3 line-clamp-2" itemProp="name">
+      {/* Content */}
+      <div className="p-3 sm:p-4 flex flex-col flex-1">
+        <h3 className="font-display font-semibold text-neutral-900 text-sm leading-snug mb-2 line-clamp-2" itemProp="name">
           {deal.titlu}
         </h3>
 
-        {/* Prețuri + Economie */}
+        {/* Rating placeholder + delivery */}
+        <div className="flex items-center gap-2 mb-2 flex-wrap">
+          <div className="flex items-center gap-0.5">
+            {[1, 2, 3, 4, 5].map(i => (
+              <Star key={i} className={`w-3 h-3 ${i <= 4 ? 'text-amber-400 fill-amber-400' : 'text-neutral-200'}`} />
+            ))}
+          </div>
+          {hasFastDelivery && (
+            <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+              <Truck className="w-3 h-3" />
+              Livrare rapida
+            </span>
+          )}
+        </div>
+
+        {/* Prices */}
         <div className="mt-auto" itemProp="offers" itemScope itemType="https://schema.org/Offer">
           <div className="flex items-baseline gap-2 mb-1">
             <span className="price-new" itemProp="price" content={String(deal.pret_redus)}>
@@ -64,9 +101,8 @@ export default function DealCard({ deal }: { deal: Deal }) {
             </span>
             <span className="price-old">{formatPrice(deal.pret_original)}</span>
           </div>
-          {/* Economie afișată */}
           <p className="text-xs text-emerald-600 font-medium mb-3">
-            Economisești {formatPrice(economie)}
+            Economisesti {formatPrice(economie)}
           </p>
           <meta itemProp="priceCurrency" content="RON" />
           <meta itemProp="availability" content="https://schema.org/InStock" />

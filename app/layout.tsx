@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
+import CategoryBar from '@/components/CategoryBar'
+import MobileBottomNav from '@/components/MobileBottomNav'
 import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
 import SocialProofWidget from '@/components/SocialProofWidget'
@@ -44,7 +46,6 @@ const organizationSchema = {
 }
 
 // Google Analytics 4 — loaded with consent mode default denied
-// GA4 se incarca cu consent denied by default, CookieConsent updateaza la granted
 function Analytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
   if (!gaId || gaId === 'G-XXXXXXXXXX') return null
@@ -79,10 +80,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <CategoryBar />
+        <main className="flex-1 pb-16 md:pb-0">{children}</main>
         <Footer />
         <CookieConsent />
         <SocialProofWidget />
+        <MobileBottomNav />
       </body>
     </html>
   )

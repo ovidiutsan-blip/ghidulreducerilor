@@ -30,6 +30,14 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.decathloncoach.com' },
       // Dr.Max (when approved)
       { protocol: 'https', hostname: '**.drmax.ro' },
+      // Watch24
+      { protocol: 'https', hostname: '**.watch24.ro' },
+      { protocol: 'https', hostname: 'cdn.watch24.ro' },
+      // ForIT
+      { protocol: 'https', hostname: '**.forit.ro' },
+      // Fornello
+      { protocol: 'https', hostname: '**.fornello.ro' },
+      { protocol: 'https', hostname: 'cdn.contentspeed.ro' },
       // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.shopify.com' },

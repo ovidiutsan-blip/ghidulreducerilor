@@ -82,3 +82,36 @@ export function getUniqueMagazine(): string[] {
 export function getDealBySlug(slug: string): Deal | undefined {
   return (deals as Deal[]).find(d => d.slug === slug)
 }
+
+// Returnează deals filtrate pe categorie
+export function getDealsByCategory(category: string): Deal[] {
+  return (deals as Deal[]).filter(d => d.categorie === category && d.activ)
+}
+
+// Returnează toate categoriile unice din deals active
+export function getAllCategories(): string[] {
+  const catSet = new Set((deals as Deal[]).filter(d => d.activ).map(d => d.categorie))
+  return Array.from(catSet).sort()
+}
+
+// Returnează "deal of the day" — cel mai mare discount, rotatie zilnica
+export function getDealOfTheDay(): Deal {
+  const active = getActiveDeals()
+  const today = new Date()
+  const dayIndex = today.getFullYear() * 366 + today.getMonth() * 31 + today.getDate()
+  // Sorteaza dupa discount descrescator, apoi rotatie pe baza zilei
+  const sorted = [...active].sort((a, b) => b.procent_reducere - a.procent_reducere)
+  const topDeals = sorted.slice(0, 10)
+  return topDeals[dayIndex % topDeals.length]
+}
+
+// Returnează top N deals dupa discount (pt flash deals)
+export function getFlashDeals(count: number = 8): Deal[] {
+  const active = getActiveDeals()
+  return [...active].sort((a, b) => b.procent_reducere - a.procent_reducere).slice(0, count)
+}
+
+// Returnează info magazin pentru un deal
+export function getStoreForDeal(deal: Deal): Store | undefined {
+  return (stores as Store[]).find(s => s.slug === deal.magazin)
+}
