@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 """
-Scrape Elefant.ro products and merge into deals.json with Profitshare links.
+Scrape produse de la magazinele aprobate pe Profitshare, genereaza linkuri afiliate,
+si merge in deals.json.
+
+REGULA: Doar magazine aprobate pe Profitshare cu linkuri afiliate valide!
+Magazine aprobate: eMAG (agent separat), FashionDays, Libris, Vexio, ForIT, Fornello, Watch24, ITGalaxy
+
+Usage:
+  python scripts/scrape_and_merge.py
 """
 import requests, re, hashlib, json, time, hmac, os, http.client, sys
 from urllib.parse import urlencode
@@ -31,7 +38,8 @@ HEADERS = {
 
 
 def extract_price(text):
-    text = text.replace(".", "").replace(",", ".").replace("\xa0", "").replace("lei", "").strip()
+    text = text.replace(".", "").replace(",", ".").replace("\xa0", "")
+    text = re.sub(r"[a-zA-Z%]+", "", text).strip()
     m = re.search(r"(\d+\.?\d*)", text)
     return float(m.group(1)) if m else 0
 
@@ -43,8 +51,12 @@ def slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:80]
 
 
+def deal_id(store, url):
+    return f"{store}-{hashlib.md5(url.encode()).hexdigest()[:8]}"
+
+
 def generate_ps_links(links_data):
-    """Generate Profitshare affiliate links."""
+    """Generate Profitshare affiliate links in batches of 20."""
     if not API_USER or not API_KEY:
         print("  WARN: No Profitshare credentials")
         return {}
@@ -78,236 +90,256 @@ def generate_ps_links(links_data):
                     ps_url = r.get("ps_url", "").replace("http://profitshare.ro", "https://profitshare.ro")
                     if ps_url:
                         ps_map[r["name"]] = ps_url
-                print(f"  PS batch: {len(ps_map)} links generated")
+                print(f"  PS batch {i // 20 + 1}: {len(batch)} sent -> {len(ps_map)} total links")
             else:
                 print(f"  PS API error: {resp.status}")
         except Exception as e:
             print(f"  PS error: {e}")
         finally:
             conn.close()
+        time.sleep(0.3)
 
     return ps_map
 
 
-def scrape_elefant():
-    """Scrape Elefant.ro products from product pages."""
-    print("=== Scraping Elefant.ro ===")
+# ─── WATCH24 SCRAPER ─────────────────────────────────────────────────
+def scrape_watch24():
+    """Scrape Watch24.ro promotions — SSR, data OK."""
+    print("=== Scraping Watch24.ro ===")
     deals = []
-    categories = [
-        ("carti", "https://www.elefant.ro/carti"),
-        ("jucarii", "https://www.elefant.ro/list/jucarii-copii-bebe/jucarii"),
-    ]
+    today = time.strftime("%Y-%m-%d")
 
-    for cat_name, cat_url in categories:
-        print(f"  Categorie: {cat_name}")
+    for page in range(1, 4):
+        url = f"https://www.watch24.ro/promotii?page={page}"
         try:
-            r = requests.get(cat_url, headers=HEADERS, timeout=15)
+            r = requests.get(url, headers=HEADERS, timeout=15)
             if r.status_code != 200:
-                print(f"    HTTP {r.status_code}")
-                continue
+                break
+
             soup = BeautifulSoup(r.text, "html.parser")
-            cards = soup.select(".product-list-item")
+            cards = soup.select("article.product-box")
+            if not cards:
+                break
 
-            product_links = []
             for card in cards:
-                a = card.select_one('a[href*="elefant.ro"]')
-                if a:
-                    href = a.get("href", "")
-                    if href and "/INTERSHOP" not in href and href.startswith("http"):
-                        product_links.append(href)
-
-            print(f"    {len(product_links)} product links, fetching top 10...")
-
-            for url in product_links[:10]:
                 try:
-                    pr = requests.get(url, headers=HEADERS, timeout=10)
-                    ps = BeautifulSoup(pr.text, "html.parser")
+                    # Title + link from JS data
+                    script = card.select_one("script")
+                    if script and script.string:
+                        name_m = re.search(r"item_name:\s*'([^']+)'", script.string)
+                        title = name_m.group(1) if name_m else ""
+                    else:
+                        title = ""
 
-                    title_el = ps.select_one("h1")
-                    if not title_el:
+                    link_el = card.select_one("a[href*='watch24.ro']")
+                    if not link_el:
                         continue
-                    title = title_el.get_text(strip=True)
+                    product_url = link_el.get("href", "")
 
-                    old_el = ps.select_one(".old-price")
-                    new_el = ps.select_one(".current-price")
-                    if not new_el:
+                    if not title:
+                        title_el = card.select_one("img[alt]")
+                        title = title_el.get("alt", "") if title_el else ""
+
+                    if not title or len(title) < 5:
                         continue
 
-                    price_new = extract_price(new_el.get_text())
-                    price_old = extract_price(old_el.get_text()) if old_el else 0
+                    # Image
+                    img_el = card.select_one("img[src*='cdn.watch24']")
+                    img_url = img_el.get("src", "") if img_el else ""
 
-                    if price_old <= price_new or price_new <= 0:
+                    # Price block: "500,00 lei199,00 lei-60%"
+                    price_el = card.select_one(".price")
+                    if not price_el:
+                        continue
+
+                    old_el = price_el.select_one("del, s, .price-old")
+                    new_els = price_el.select("span")
+
+                    price_old = 0
+                    price_new = 0
+
+                    if old_el:
+                        price_old = extract_price(old_el.get_text())
+
+                    # Get all price numbers from the block
+                    all_prices = re.findall(r"(\d[\d.,]*)\s*lei", price_el.get_text())
+                    if len(all_prices) >= 2:
+                        p1 = extract_price(all_prices[0])
+                        p2 = extract_price(all_prices[1])
+                        price_old = max(p1, p2)
+                        price_new = min(p1, p2)
+                    elif len(all_prices) == 1:
+                        price_new = extract_price(all_prices[0])
+
+                    if price_new <= 0 or price_old <= price_new:
                         continue
 
                     discount = round((price_old - price_new) / price_old * 100)
                     if discount < 15:
                         continue
 
-                    img_el = ps.select_one('img[src*="media.elefant"]')
-                    img_url = img_el.get("src", "") if img_el else ""
-
-                    deal_id = f"elefant-{hashlib.md5(url.encode()).hexdigest()[:8]}"
                     deals.append({
-                        "id": deal_id,
+                        "id": deal_id("watch24", product_url),
                         "slug": slugify(title),
-                        "magazin": "elefant",
+                        "magazin": "watch24",
                         "titlu": title[:150],
                         "pret_original": price_old,
                         "pret_redus": price_new,
                         "procent_reducere": discount,
                         "imagine_url": img_url,
-                        "product_url": url,
+                        "product_url": product_url,
                         "link_afiliat": "",
-                        "categorie": cat_name,
-                        "data_adaugare": "2026-04-04",
+                        "categorie": "ceasuri",
+                        "data_adaugare": today,
                         "activ": True,
                     })
-                    print(f"    + {title[:50]} ({discount}% off, {price_new} lei)")
-                    time.sleep(0.5)
                 except Exception:
                     continue
-        except Exception as e:
-            print(f"    Error: {e}")
 
-    print(f"  Elefant total: {len(deals)}")
+            print(f"  Pagina {page}: {len(cards)} carduri, total {len(deals)} deals")
+            time.sleep(0.5)
+        except Exception as e:
+            print(f"  Error page {page}: {e}")
+            break
+
+    print(f"  Watch24 total: {len(deals)}")
     return deals
 
 
-def scrape_evomag():
-    """Scrape evoMAG products."""
-    print("\n=== Scraping evoMAG.ro ===")
+# ─── FORIT SCRAPER ───────────────────────────────────────────────────
+def scrape_forit():
+    """Scrape ForIT.ro promotions."""
+    print("\n=== Scraping ForIT.ro ===")
     deals = []
-    categories = [
-        ("laptopuri", "https://www.evomag.ro/portabile-laptopuri-notebook/"),
-        ("telefoane", "https://www.evomag.ro/telefoane-tablete-702-702-smartphone/"),
-        ("monitoare", "https://www.evomag.ro/monitoare-monitoare-led/"),
-    ]
+    today = time.strftime("%Y-%m-%d")
 
-    for cat_name, cat_url in categories:
-        print(f"  Categorie: {cat_name}")
-        try:
-            r = requests.get(cat_url, headers=HEADERS, timeout=15)
-            if r.status_code != 200:
-                print(f"    HTTP {r.status_code}")
+    url = "https://www.forit.ro/promotii/"
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=15)
+        if r.status_code != 200:
+            print(f"  HTTP {r.status_code}")
+            return []
+
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        # ForIT uses similar OpenCart structure
+        cards = soup.select("article.product-box, .product-layout, .product-thumb")
+        if not cards:
+            # Try broader
+            cards = soup.select("[class*='product-box'], [class*='product-item']")
+
+        for card in cards[:20]:
+            try:
+                link_el = card.select_one("a[href*='forit.ro']")
+                if not link_el:
+                    continue
+                product_url = link_el.get("href", "")
+
+                # Title
+                title = ""
+                script = card.select_one("script")
+                if script and script.string:
+                    name_m = re.search(r"item_name:\s*'([^']+)'", script.string)
+                    if name_m:
+                        title = name_m.group(1)
+
+                if not title:
+                    img_el = card.select_one("img[alt]")
+                    title = img_el.get("alt", "") if img_el else ""
+
+                if not title or len(title) < 5:
+                    continue
+
+                # Image
+                img_el = card.select_one("img[src*='http']")
+                img_url = img_el.get("src", "") if img_el else ""
+
+                # Prices
+                price_el = card.select_one("[class*='price']")
+                if not price_el:
+                    continue
+
+                all_prices = re.findall(r"(\d[\d.,]*)\s*lei", price_el.get_text())
+                if len(all_prices) < 2:
+                    continue
+
+                p1 = extract_price(all_prices[0])
+                p2 = extract_price(all_prices[1])
+                price_old = max(p1, p2)
+                price_new = min(p1, p2)
+
+                if price_new <= 0 or price_old <= price_new:
+                    continue
+
+                discount = round((price_old - price_new) / price_old * 100)
+                if discount < 15:
+                    continue
+
+                deals.append({
+                    "id": deal_id("forit", product_url),
+                    "slug": slugify(title),
+                    "magazin": "forit",
+                    "titlu": title[:150],
+                    "pret_original": price_old,
+                    "pret_redus": price_new,
+                    "procent_reducere": discount,
+                    "imagine_url": img_url,
+                    "product_url": product_url,
+                    "link_afiliat": "",
+                    "categorie": "electronice",
+                    "data_adaugare": today,
+                    "activ": True,
+                })
+            except Exception:
                 continue
 
-            soup = BeautifulSoup(r.text, "html.parser")
-            items = soup.select(".nice_product_item")
-            print(f"    {len(items)} product items")
+        print(f"  ForIT total: {len(deals)}")
+    except Exception as e:
+        print(f"  Error: {e}")
 
-            # evoMAG cards have title, image, price but no old price in listing
-            # We need to fetch product pages for old price
-            for item in items[:8]:
-                try:
-                    link_el = item.select_one("a[href][title]")
-                    if not link_el:
-                        continue
-                    title = link_el.get("title", "").strip()
-                    href = link_el.get("href", "")
-                    if href.startswith("/"):
-                        href = "https://www.evomag.ro" + href
-
-                    # Get image from listing
-                    img_el = item.select_one("img[src*='static']")
-                    img_url = img_el.get("src", "") if img_el else ""
-
-                    # Get price from listing
-                    price_el = item.select_one(".real_price, .npi_price")
-                    if not price_el:
-                        continue
-                    price_new = extract_price(price_el.get_text())
-                    if price_new <= 0:
-                        continue
-
-                    # Fetch product page for old price
-                    pr = requests.get(href, headers=HEADERS, timeout=10)
-                    ps = BeautifulSoup(pr.text, "html.parser")
-
-                    # Look for old/original price on product page
-                    old_el = ps.select_one('[class*="old_price"], [class*="oldprice"], del, s')
-                    if not old_el:
-                        # Try promozone prices
-                        promos = ps.select('[class*="promozone_price"]')
-                        if len(promos) >= 2:
-                            prices = [extract_price(p.get_text()) for p in promos]
-                            prices = [p for p in prices if p > 0]
-                            if prices:
-                                price_old = max(prices)
-                                if price_old > price_new:
-                                    old_el = True  # flag
-
-                    if old_el and not isinstance(old_el, bool):
-                        price_old = extract_price(old_el.get_text())
-                    elif not isinstance(old_el, bool):
-                        continue
-
-                    if price_old <= price_new:
-                        continue
-
-                    discount = round((price_old - price_new) / price_old * 100)
-                    if discount < 10:
-                        continue
-
-                    deal_id = f"evomag-{hashlib.md5(href.encode()).hexdigest()[:8]}"
-                    deals.append({
-                        "id": deal_id,
-                        "slug": slugify(title),
-                        "magazin": "evomag",
-                        "titlu": title[:150],
-                        "pret_original": price_old,
-                        "pret_redus": price_new,
-                        "procent_reducere": discount,
-                        "imagine_url": img_url,
-                        "product_url": href,
-                        "link_afiliat": "",
-                        "categorie": cat_name,
-                        "data_adaugare": "2026-04-04",
-                        "activ": True,
-                    })
-                    print(f"    + {title[:50]} ({discount}% off)")
-                    time.sleep(0.5)
-                except Exception:
-                    continue
-        except Exception as e:
-            print(f"    Error: {e}")
-
-    print(f"  evoMAG total: {len(deals)}")
     return deals
 
 
 def main():
-    # Scrape stores
-    elefant_deals = scrape_elefant()
-    evomag_deals = scrape_evomag()
+    all_new = []
 
-    new_deals = elefant_deals + evomag_deals
+    # Scrape stores with SSR pages
+    all_new.extend(scrape_watch24())
+    all_new.extend(scrape_forit())
 
-    if not new_deals:
-        print("\nNo new deals scraped. Exiting.")
+    if not all_new:
+        print("\nNo new deals. Exiting.")
         return
 
+    # Filter: must have image
+    all_new = [d for d in all_new if d.get("imagine_url")]
+
     # Generate Profitshare links
-    print(f"\n=== Generating Profitshare links for {len(new_deals)} deals ===")
-    links_to_gen = [{"name": d["id"], "url": d["product_url"]} for d in new_deals]
+    print(f"\n=== Generating Profitshare links for {len(all_new)} deals ===")
+    links_to_gen = [{"name": d["id"], "url": d["product_url"]} for d in all_new]
     ps_map = generate_ps_links(links_to_gen)
 
-    for d in new_deals:
+    # CRITICAL: Only keep deals that got Profitshare links
+    valid_deals = []
+    for d in all_new:
         if d["id"] in ps_map:
             d["link_afiliat"] = ps_map[d["id"]]
-        elif not d["link_afiliat"]:
-            d["link_afiliat"] = d["product_url"]
+            valid_deals.append(d)
 
-    # Filter: must have image
-    new_deals = [d for d in new_deals if d.get("imagine_url")]
+    print(f"  {len(valid_deals)}/{len(all_new)} deals with valid Profitshare links")
 
-    # Merge into deals.json
+    if not valid_deals:
+        print("No deals with affiliate links. Exiting.")
+        return
+
+    # Merge into deals.json — keep eMAG deals, replace others
     deals_path = ROOT / "data" / "deals.json"
     existing = json.loads(deals_path.read_text(encoding="utf-8"))
 
-    # Keep existing non-scraped deals (eMAG stays)
-    prefixes_to_replace = ("elefant-", "evomag-")
-    kept = [d for d in existing if not any(d["id"].startswith(p) for p in prefixes_to_replace)]
-    final = kept + new_deals
+    # Keep eMAG (from agent_emag), remove old scraped from other stores
+    emag_deals = [d for d in existing if d["magazin"] == "emag"]
+
+    final = emag_deals + valid_deals
     final.sort(key=lambda d: d.get("procent_reducere", 0), reverse=True)
 
     deals_path.write_text(json.dumps(final, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -318,11 +350,11 @@ def main():
         s = d["magazin"]
         stores[s] = stores.get(s, 0) + 1
 
-    print(f"\n{'='*50}")
+    print(f"\n{'=' * 50}")
     print(f"Total deals.json: {len(final)}")
     for s in sorted(stores):
         print(f"  {s}: {stores[s]}")
-    print(f"{'='*50}")
+    print(f"{'=' * 50}")
 
 
 if __name__ == "__main__":
