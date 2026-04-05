@@ -1932,7 +1932,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.709987+00:00",
     "pret_minim_30z": 299.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:49.136578+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-f9b7ad41",
@@ -1967,7 +1970,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.710147+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:49.136852+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-cb29b4d3",
@@ -2002,7 +2008,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.710304+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:49.137282+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-d6c8ec02",
@@ -2037,7 +2046,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.710521+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:49.137627+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-83ec6b91",
@@ -2072,7 +2084,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.710679+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:49.137833+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-2d6ab071",
@@ -2107,7 +2122,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.710841+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:49.138317+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-f08c7552",
@@ -2142,7 +2160,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.710999+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:49.138521+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "forit-a735f1f3",
@@ -2177,7 +2198,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.711156+00:00",
     "pret_minim_30z": 4585.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:49.140587+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "forit-9d6da033",
@@ -2212,7 +2236,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.711348+00:00",
     "pret_minim_30z": 4585.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:49.143006+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-d5037f93",
@@ -2247,7 +2274,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.711514+00:00",
     "pret_minim_30z": 428.86,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:49.148419+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "forit-7806629a",
@@ -2282,7 +2312,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.711673+00:00",
     "pret_minim_30z": 2996.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.195518+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-6ac88b9c",
@@ -2317,7 +2350,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.711834+00:00",
     "pret_minim_30z": 349.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.220153+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-e184d9af",
@@ -2352,7 +2388,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.711994+00:00",
     "pret_minim_30z": 499.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.235933+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-fa9d254c",
@@ -2387,7 +2426,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.712152+00:00",
     "pret_minim_30z": 129.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.270773+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "forit-2f77d6e3",
@@ -2422,7 +2464,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.712345+00:00",
     "pret_minim_30z": 2695.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.279664+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "forit-3fe8d539",
@@ -2457,7 +2502,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.712514+00:00",
     "pret_minim_30z": 1885.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.289434+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-c7b39dc6",
@@ -2492,7 +2540,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.712671+00:00",
     "pret_minim_30z": 299.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.299116+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-7b55ae2c",
@@ -2527,7 +2578,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.712829+00:00",
     "pret_minim_30z": 199.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.301446+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "watch24-155a2188",
@@ -2562,7 +2616,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.712986+00:00",
     "pret_minim_30z": 199.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.302409+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "forit-ed3e7c1a",
@@ -2597,7 +2654,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.713215+00:00",
     "pret_minim_30z": 606.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.304426+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-c642cae7",
@@ -2632,7 +2692,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.713400+00:00",
     "pret_minim_30z": 14517.11,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.347693+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-18bb0e56",
@@ -2667,7 +2730,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.713568+00:00",
     "pret_minim_30z": 149.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.373151+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-f24306b1",
@@ -2702,7 +2768,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.713726+00:00",
     "pret_minim_30z": 699.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.389682+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-7ae0f84b",
@@ -2737,7 +2806,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.713883+00:00",
     "pret_minim_30z": 247.7,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.429432+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-a8677e85",
@@ -2772,7 +2844,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.714041+00:00",
     "pret_minim_30z": 255.77,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.441396+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-5b457cf5",
@@ -2807,7 +2882,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.714198+00:00",
     "pret_minim_30z": 191.7,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.449805+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-7cee34fd",
@@ -2842,7 +2920,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.714407+00:00",
     "pret_minim_30z": 119.73,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.451427+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-4adb4b7f",
@@ -2877,7 +2958,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.714577+00:00",
     "pret_minim_30z": 119.77,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.455617+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-8fd94489",
@@ -2912,7 +2996,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.714736+00:00",
     "pret_minim_30z": 191.98,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.457132+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "forit-df8f4cd8",
@@ -2947,7 +3034,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.714902+00:00",
     "pret_minim_30z": 1166.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.463706+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-19e783fe",
@@ -2982,7 +3072,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.715067+00:00",
     "pret_minim_30z": 1299.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.506592+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-e1131959",
@@ -3017,7 +3110,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.715228+00:00",
     "pret_minim_30z": 5302.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.528281+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "forit-440149e2",
@@ -3052,7 +3148,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.715412+00:00",
     "pret_minim_30z": 4838.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.550128+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "forit-c9bdad22",
@@ -3087,7 +3186,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.715574+00:00",
     "pret_minim_30z": 4838.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.590512+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "forit-44504745",
@@ -3122,7 +3224,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.715735+00:00",
     "pret_minim_30z": 2848.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.600985+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-5aa9dd6d",
@@ -3157,7 +3262,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.715896+00:00",
     "pret_minim_30z": 169.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.602712+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-132671d5",
@@ -3192,7 +3300,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.716056+00:00",
     "pret_minim_30z": 186.7,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.604259+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-df39552d",
@@ -3227,7 +3338,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.716229+00:00",
     "pret_minim_30z": 178.2,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.606862+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-de32886a",
@@ -3262,7 +3376,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.716415+00:00",
     "pret_minim_30z": 2590.45,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.609867+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-bc54bdbf",
@@ -3297,7 +3414,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.716578+00:00",
     "pret_minim_30z": 1399.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.621303+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-b28d764a",
@@ -3332,7 +3452,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.716737+00:00",
     "pret_minim_30z": 1999.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.664924+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-e31fa25f",
@@ -3367,7 +3490,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.716899+00:00",
     "pret_minim_30z": 699.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.684063+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-5060645e",
@@ -3402,7 +3528,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.717059+00:00",
     "pret_minim_30z": 749.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.709013+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-c122a9b3",
@@ -3437,7 +3566,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.717293+00:00",
     "pret_minim_30z": 2199.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.744855+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-4c4edf32",
@@ -3472,7 +3604,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.717481+00:00",
     "pret_minim_30z": 139.15,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.753759+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-304859af",
@@ -3507,7 +3642,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.717643+00:00",
     "pret_minim_30z": 97.79,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.756081+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-3a970803",
@@ -3542,7 +3680,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.717804+00:00",
     "pret_minim_30z": 1249.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.758083+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-c7a6303f",
@@ -3577,7 +3718,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.717965+00:00",
     "pret_minim_30z": 89.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.759696+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-1d0e4e3a",
@@ -3612,7 +3756,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.718126+00:00",
     "pret_minim_30z": 4639.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.761090+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-4a3f5b14",
@@ -3647,7 +3794,10 @@
     "omnibus_checked_at": "2026-04-05T07:41:10.718287+00:00",
     "pret_minim_30z": 1299.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-04-05T21:03:50.775666+00:00",
+    "link_warning": "profitshare_direct_blocked_mobile"
   },
   {
     "id": "emag-6e3b8c2f",
