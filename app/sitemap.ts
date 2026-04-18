@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getAllStoreSlugs, getDealsByStore, getCodesByStore } from '@/lib/data'
+import { getAllArticles } from '@/lib/blog'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ghidulreducerilor.ro'
 
@@ -9,9 +10,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages = [
     { url: BASE_URL, lastModified: now, changeFrequency: 'daily' as const, priority: 1 },
+    { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${BASE_URL}/abonare-alerte`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.5 },
     { url: `${BASE_URL}/despre`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.3 },
   ]
+
+  // Blog articles
+  const blogPages: MetadataRoute.Sitemap = getAllArticles().map(({ meta }) => ({
+    url: `${BASE_URL}/blog/${meta.slug}`,
+    lastModified: new Date(meta.updatedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
 
   // Include doar paginile cu conținut — pagini goale au noindex și nu aparțin în sitemap
   const storePages = stores.flatMap(slug => {
@@ -38,5 +48,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return entries
   })
 
-  return [...staticPages, ...storePages]
+  return [...staticPages, ...blogPages, ...storePages]
 }
