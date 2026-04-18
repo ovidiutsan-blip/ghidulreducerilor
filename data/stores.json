@@ -8,7 +8,8 @@
     "culoare": "#F7E636",
     "categorie_principala": "electronice",
     "url_site": "https://www.emag.ro",
-    "comision_mediu": "1-20%"
+    "comision_mediu": "1-20%",
+    "retea": "profitshare"
   },
   {
     "id": "watch24",
@@ -19,7 +20,8 @@
     "culoare": "#1a237e",
     "categorie_principala": "ceasuri",
     "url_site": "https://www.watch24.ro",
-    "comision_mediu": "5-15%"
+    "comision_mediu": "5-15%",
+    "retea": "profitshare"
   },
   {
     "id": "forit",
@@ -30,7 +32,8 @@
     "culoare": "#2196F3",
     "categorie_principala": "electronice",
     "url_site": "https://www.forit.ro",
-    "comision_mediu": "2-5%"
+    "comision_mediu": "2-5%",
+    "retea": "profitshare"
   },
   {
     "id": "fornello",
@@ -41,6 +44,103 @@
     "culoare": "#FF5722",
     "categorie_principala": "casa-gradina",
     "url_site": "https://www.fornello.ro",
-    "comision_mediu": "2-5%"
+    "comision_mediu": "2-5%",
+    "retea": "profitshare"
+  },
+  {
+    "id": "fashiondays",
+    "nume": "Fashion Days",
+    "slug": "fashiondays",
+    "descriere": "Fashion Days este cel mai mare retailer de fashion online din Romania, parte din grupul eMAG. Oferta sa cuprinde imbracaminte, incaltaminte, accesorii si produse beauty de la peste 2.000 de branduri internationale, cu livrare rapida si retur gratuit 30 zile.",
+    "logo_emoji": "👗",
+    "culoare": "#EC407A",
+    "categorie_principala": "fashion",
+    "url_site": "https://www.fashiondays.ro",
+    "comision_mediu": "3-8%",
+    "retea": "profitshare"
+  },
+  {
+    "id": "libris",
+    "nume": "Libris",
+    "slug": "libris",
+    "descriere": "Libris.ro este cel mai mare retailer online de carti din Romania, cu un catalog de peste 1 milion de titluri in limba romana si engleza. Oferta include carti pentru toate varstele, papetarie, cadouri, jucarii educative si produse tehnice, cu livrare rapida prin curier sau easybox.",
+    "logo_emoji": "📚",
+    "culoare": "#5D4037",
+    "categorie_principala": "carti",
+    "url_site": "https://www.libris.ro",
+    "comision_mediu": "5-10%",
+    "retea": "profitshare"
+  },
+  {
+    "id": "elefant",
+    "nume": "Elefant",
+    "slug": "elefant",
+    "descriere": "Elefant.ro este unul dintre cei mai mari retaileri online de carti, filme, jocuri, muzica si produse pentru copii din Romania. Fondat in 2010, ofera un catalog diversificat cu peste 500.000 de produse, livrare rapida prin curier, easybox sau lockere, si retur gratuit in 30 de zile.",
+    "logo_emoji": "🐘",
+    "culoare": "#7B1FA2",
+    "categorie_principala": "carti",
+    "url_site": "https://www.elefant.ro",
+    "comision_mediu": "4-7%",
+    "retea": "profitshare"
+  },
+  {
+    "id": "vegis",
+    "nume": "Vegis",
+    "slug": "vegis",
+    "descriere": "Vegis.ro este un magazin online specializat in produse naturiste, suplimente alimentare, cosmetice bio si alimente sanatoase. Ofera peste 20.000 de produse certificate de la branduri precum Secom, Solgar, Herbagetica, Weleda, cu livrare rapida si sfat expert de la farmacisti si nutritionisti.",
+    "logo_emoji": "🌿",
+    "culoare": "#2E7D32",
+    "categorie_principala": "sanatate",
+    "url_site": "https://www.vegis.ro",
+    "comision_mediu": "4-8%",
+    "retea": "profitshare"
+  },
+  {
+    "id": "mathaus",
+    "nume": "MatHaus",
+    "slug": "mathaus",
+    "descriere": "MatHaus.ro este un magazin online specializat in materiale de constructii, amenajari interioare si exterioare, gradinarit si bricolaj. Ofera produse de la branduri consacrate pentru proiecte DIY si profesionale, cu livrare nationala si consultanta tehnica.",
+    "logo_emoji": "🔨",
+    "culoare": "#F57C00",
+    "categorie_principala": "casa-gradina",
+    "url_site": "https://www.mathaus.ro",
+    "comision_mediu": "3-6%",
+    "retea": "profitshare"
+  },
+  {
+    "id": "notino",
+    "nume": "Notino",
+    "slug": "notino",
+    "descriere": "Notino este cel mai mare magazin online de parfumuri si cosmetice din Europa Centrala si de Est, cu peste 85.000 de produse de la branduri de lux: Chanel, Dior, Lancome, Yves Saint Laurent, Paco Rabanne. Garanteaza autenticitatea produselor, livrare rapida si retur gratuit 14 zile.",
+    "logo_emoji": "💄",
+    "culoare": "#D81B60",
+    "categorie_principala": "beauty",
+    "url_site": "https://www.notino.ro",
+    "comision_mediu": "6-10%",
+    "retea": "2performant"
+  },
+  {
+    "id": "answear",
+    "nume": "Answear",
+    "slug": "answear",
+    "descriere": "Answear.ro este un retailer online de fashion premium cu peste 400 de branduri internationale: Tommy Hilfiger, Calvin Klein, Guess, Lacoste, Levi's, Armani. Oferta include imbracaminte, incaltaminte, genti si accesorii pentru femei, barbati si copii, cu livrare gratuita la comenzi peste 300 lei si retur 30 zile.",
+    "logo_emoji": "👔",
+    "culoare": "#000000",
+    "categorie_principala": "fashion",
+    "url_site": "https://answear.ro",
+    "comision_mediu": "5-9%",
+    "retea": "2performant"
+  },
+  {
+    "id": "drmax",
+    "nume": "Dr.Max",
+    "slug": "drmax",
+    "descriere": "Dr.Max este cea mai mare retea de farmacii din Europa Centrala si de Est, cu prezenta in peste 15 tari. Magazinul online Dr.Max.ro ofera medicamente fara prescriptie, suplimente alimentare, cosmetica dermato, produse pentru ingrijire personala si echipamente medicale, cu ridicare rapida din farmacie sau livrare la domiciliu.",
+    "logo_emoji": "💊",
+    "culoare": "#0277BD",
+    "categorie_principala": "sanatate",
+    "url_site": "https://www.drmax.ro",
+    "comision_mediu": "4-7%",
+    "retea": "2performant"
   }
 ]

@@ -15,11 +15,17 @@ export function generateMetadata({ params }: Props): Metadata {
   const store = getStoreBySlug(params.magazin)
   if (!store) return {}
   const monthYear = getCurrentMonthYear()
+  const deals = getDealsByStore(params.magazin)
+  const isEmpty = deals.length === 0
 
   return {
     title: `Reduceri ${store.nume} – Oferte și Promoții ${monthYear}`,
     description: `Cele mai bune reduceri ${store.nume} din ${monthYear}. Oferte verificate, prețuri reduse și promoții exclusive. Economisește la fiecare comandă!`,
     alternates: { canonical: `/reduceri/${store.slug}` },
+    // Pagini fără oferte active = thin content → noindex (previne penalizare SEO)
+    robots: isEmpty
+      ? { index: false, follow: true }
+      : { index: true, follow: true },
     openGraph: {
       title: `Reduceri ${store.nume} – Oferte ${monthYear}`,
       description: `Descoperă reducerile ${store.nume}. Oferte verificate zilnic.`,

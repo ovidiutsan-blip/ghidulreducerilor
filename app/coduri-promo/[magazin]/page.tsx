@@ -15,11 +15,17 @@ export function generateMetadata({ params }: Props): Metadata {
   const store = getStoreBySlug(params.magazin)
   if (!store) return {}
   const monthYear = getCurrentMonthYear()
+  const codes = getCodesByStore(params.magazin)
+  const isEmpty = codes.length === 0
 
   return {
     title: `Coduri Promoționale ${store.nume} – ${monthYear}`,
     description: `Coduri promoționale și cupoane ${store.nume} active în ${monthYear}. Copiază codul, aplică-l la checkout și economisește instant!`,
     alternates: { canonical: `/coduri-promo/${store.slug}` },
+    // Pagini fără coduri active = thin content → noindex (previne penalizare SEO)
+    robots: isEmpty
+      ? { index: false, follow: true }
+      : { index: true, follow: true },
     openGraph: {
       title: `Coduri Promo ${store.nume} – ${monthYear}`,
       description: `Cupoane și coduri de reducere ${store.nume} verificate.`,

@@ -40,6 +40,7 @@ export type Store = {
   categorie_principala: string
   url_site: string
   comision_mediu: string
+  retea?: 'profitshare' | '2performant'
 }
 
 // Returnează toate ofertele active
