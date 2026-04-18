@@ -45,6 +45,7 @@ export default function Footer() {
             <h3 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-4">Informatii</h3>
             <ul className="space-y-2">
               <li><Link href="/blog" className="text-sm hover:text-white transition-colors">Blog & Ghiduri</Link></li>
+              <li><Link href="/cum-functioneaza" className="text-sm hover:text-white transition-colors">Cum funcționează</Link></li>
               <li><Link href="/despre" className="text-sm hover:text-white transition-colors">Despre noi</Link></li>
               <li><Link href="/abonare-alerte" className="text-sm hover:text-white transition-colors">Alerte Reduceri</Link></li>
               <li><Link href="/despre#confidentialitate" className="text-sm hover:text-white transition-colors">Confidentialitate</Link></li>
