@@ -52,6 +52,17 @@ jobs:
           MODE="${{ github.event.inputs.mode || 'full' }}"
           python scripts/daily_pipeline.py --mode $MODE
 
+      - name: 🕸️ Scrape alte magazine (FashionDays, Elefant, Libris, Vegis, MatHaus, Notino, Answear, DrMax, evoMAG)
+        if: github.event.inputs.mode != 'cleanup'
+        env:
+          PROFITSHARE_API_USER: ${{ vars.PROFITSHARE_API_USER }}
+          PROFITSHARE_API_KEY: ${{ secrets.PROFITSHARE_API_KEY }}
+        run: python agents/agent_altemagazine.py || echo "agent_altemagazine finished with errors; continuing"
+
+      - name: 🔀 Merge alte magazine în deals.json
+        if: github.event.inputs.mode != 'cleanup'
+        run: python scripts/merge_altemagazine.py
+
       - name: 🔍 Validare prețuri Omnibus
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
