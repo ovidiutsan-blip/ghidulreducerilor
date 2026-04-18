@@ -180,7 +180,8 @@
     "name": "Decathlon",
     "slug": "decathlon",
     "affiliate_network": "2performant",
-    "status": "pending",
+    "status": "past",
+    "_note": "Pe 2Performant e 'past' — trebuie reaplicare pentru a activa",
     "base_url": "https://www.decathlon.ro",
     "twoperformant": {
       "campaign_id": "",
@@ -230,6 +231,84 @@
     "rate_limit_seconds": 2.0,
     "min_discount": 15,
     "comision": 6
+  },
+
+  "libris": {
+    "name": "Libris",
+    "slug": "libris",
+    "affiliate_network": "profitshare",
+    "status": "activ",
+    "base_url": "https://www.libris.ro",
+    "categories": [
+      {"name": "carti-reduceri", "url": "https://www.libris.ro/promotii/"},
+      {"name": "carti-engleza", "url": "https://www.libris.ro/carti-in-limba-engleza/"},
+      {"name": "carti-copii", "url": "https://www.libris.ro/carti/carti-pentru-copii/"}
+    ],
+    "selectors": {
+      "card": ".product-card, [class*='ProductCard'], .product-item, .product",
+      "title": ".product-name, .product-title, h3 a, a[title]",
+      "product_link": "a[href*='libris.ro']",
+      "image": "img[src*='http']",
+      "price_elements": "[class*='price'], [class*='Price'], .money"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 1.0,
+    "min_discount": 10,
+    "comision": 5
+  },
+
+  "vegis": {
+    "name": "Vegis",
+    "slug": "vegis",
+    "affiliate_network": "profitshare",
+    "status": "activ",
+    "base_url": "https://www.vegis.ro",
+    "categories": [
+      {"name": "suplimente", "url": "https://www.vegis.ro/suplimente-alimentare.html"},
+      {"name": "cosmetice-bio", "url": "https://www.vegis.ro/cosmetice-bio.html"},
+      {"name": "alimentatie-sanatoasa", "url": "https://www.vegis.ro/alimentatie-sanatoasa.html"}
+    ],
+    "selectors": {
+      "card": ".product-item, [class*='ProductCard'], .product",
+      "title": ".product-name, .product-title, h2, h3, a[title]",
+      "product_link": "a[href*='vegis.ro']",
+      "image": "img[src*='http']",
+      "price_elements": "[class*='price'], [class*='Price'], .money"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 1.5,
+    "min_discount": 10,
+    "comision": 5
+  },
+
+  "mathaus": {
+    "name": "MatHaus",
+    "slug": "mathaus",
+    "affiliate_network": "profitshare",
+    "status": "activ",
+    "base_url": "https://www.mathaus.ro",
+    "categories": [
+      {"name": "amenajari-interioare", "url": "https://www.mathaus.ro/amenajari-interioare-c1"},
+      {"name": "instalatii", "url": "https://www.mathaus.ro/instalatii-c4"},
+      {"name": "gradina", "url": "https://www.mathaus.ro/gradina-c3"}
+    ],
+    "selectors": {
+      "card": ".product-card, .product-item, [class*='ProductCard']",
+      "title": ".product-name, .product-title, h3 a, a[title]",
+      "product_link": "a[href*='mathaus.ro']",
+      "image": "img[src*='http']",
+      "price_elements": "[class*='price'], [class*='Price']"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 1.5,
+    "min_discount": 10,
+    "comision": 4
   },
 
   "pcgarage": {
