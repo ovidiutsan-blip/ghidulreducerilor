@@ -122,10 +122,10 @@
     "name": "Notino",
     "slug": "notino",
     "affiliate_network": "2performant",
-    "status": "pending",
+    "status": "activ",
     "base_url": "https://www.notino.ro",
     "twoperformant": {
-      "campaign_id": "",
+      "campaign_id": "c6dae5faa",
       "aff_code": "d8b71657a"
     },
     "categories": [
@@ -151,10 +151,10 @@
     "name": "Answear",
     "slug": "answear",
     "affiliate_network": "2performant",
-    "status": "pending",
+    "status": "activ",
     "base_url": "https://www.answear.ro",
     "twoperformant": {
-      "campaign_id": "",
+      "campaign_id": "a5e9e1225",
       "aff_code": "d8b71657a"
     },
     "categories": [
@@ -209,10 +209,10 @@
     "name": "Dr.Max",
     "slug": "drmax",
     "affiliate_network": "2performant",
-    "status": "pending",
+    "status": "activ",
     "base_url": "https://www.drmax.ro",
     "twoperformant": {
-      "campaign_id": "",
+      "campaign_id": "6390e3cfb",
       "aff_code": "d8b71657a"
     },
     "categories": [
