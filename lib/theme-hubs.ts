@@ -112,7 +112,7 @@ export const THEME_HUBS: ThemeHub[] = [
     heroIntro:
       'Farmacia online a devenit una dintre cele mai rapide modalități de a accesa suplimente, cosmetice dermato și produse OTC la prețuri semnificativ mai mici decât în farmacia din colț. Dr.Max — cea mai mare rețea de farmacii din Europa Centrală și de Est — și Vegis — specializat în produse naturiste și bio — sunt cei doi parteneri principali cu care lucrăm la GhidulReducerilor.ro.\n\nOfertele pe care le afișăm sunt verificate zilnic și au procent real de reducere — unele suplimente ajung la -40% față de prețul de listă, iar campaniile lunare (ex. "Luna Imunității" sau "Ziua Vitaminei C") cumulează reduceri până la -50% pe categorii întregi. Toate produsele sunt autentice, provin din stocul farmaceutic oficial și sunt însoțite de factură — fără riscuri de contrafaceri, cum se pot întâmpla pe marketplace-uri necontrolate.',
     storeSlugs: ['drmax', 'vegis', 'emag'],
-    dealCategories: [],
+    dealCategories: ['suplimente-bio'],
     faq: [
       {
         q: 'Se pot cumpăra medicamente cu prescripție online?',
