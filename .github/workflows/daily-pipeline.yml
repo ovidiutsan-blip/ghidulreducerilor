@@ -17,12 +17,13 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   pipeline:
     name: Daily Pipeline
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: 📥 Checkout repo
@@ -42,7 +43,9 @@ jobs:
       - name: 📁 Creare directoare necesare
         run: mkdir -p logs data/raw data/processed data/backups data/price_history
 
-      - name: 🚀 Rulare pipeline
+      - name: 🚀 Rulare pipeline principal
+        id: main_pipeline
+        continue-on-error: true
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           BREVO_LIST_ID: ${{ vars.BREVO_LIST_ID }}
@@ -53,34 +56,90 @@ jobs:
           python scripts/daily_pipeline.py --mode $MODE
 
       - name: 🕸️ Scrape alte magazine (FashionDays, Elefant, Libris, Vegis, MatHaus, Notino, Answear, DrMax, evoMAG)
+        id: scrape_altemagazine
         if: github.event.inputs.mode != 'cleanup'
+        continue-on-error: true
         env:
           PROFITSHARE_API_USER: ${{ vars.PROFITSHARE_API_USER }}
           PROFITSHARE_API_KEY: ${{ secrets.PROFITSHARE_API_KEY }}
-        run: python agents/agent_altemagazine.py || echo "agent_altemagazine finished with errors; continuing"
+        run: python agents/agent_altemagazine.py
 
       - name: 🔀 Merge alte magazine în deals.json
+        id: merge_altemagazine
         if: github.event.inputs.mode != 'cleanup'
+        continue-on-error: true
         run: python scripts/merge_altemagazine.py
 
-      - name: 🛒 Profitshare feed import (vegis + mathaus)
+      - name: 🛒 Profitshare feed import (9 merchanti — vegis, mathaus, hiris, case-smart, novodoors, techstar, hotpick, alecoair, streamstore)
+        id: ps_feed
         if: github.event.inputs.mode != 'cleanup'
+        continue-on-error: true
         env:
           PROFITSHARE_API_USER: ${{ vars.PROFITSHARE_API_USER }}
           PROFITSHARE_API_KEY: ${{ secrets.PROFITSHARE_API_KEY }}
-        run: python agents/ps_feed_to_deals.py || echo "ps_feed_to_deals finished with errors; continuing"
+        run: python agents/ps_feed_to_deals.py
 
       - name: 🔍 Validare prețuri Omnibus
+        id: price_validator
+        continue-on-error: true
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: python scripts/price_validator.py --mode update
 
-      - name: 💾 Commit modificări deals.json
+      - name: 🎯 Sync theme hubs (auto-populare storeSlugs din deal categories)
+        id: sync_hubs
+        if: github.event.inputs.mode != 'cleanup'
+        continue-on-error: true
+        run: python scripts/sync_theme_hubs.py
+
+      - name: 💾 Commit modificări deals + codes + theme-hubs
         run: |
           git config user.name "GhidulReducerilor Bot"
           git config user.email "bot@ghidulreducerilor.ro"
-          git add data/deals.json data/codes.json
+          git add data/deals.json data/codes.json lib/theme-hubs.ts
           git diff --staged --quiet || git commit -m "🤖 Auto-update deals $(date +%Y-%m-%d)"
 
       - name: 📤 Push la GitHub (trigger Vercel redeploy)
         run: git push
+
+      - name: 🚨 Creare issue la eșec pipeline
+        if: failure() || steps.main_pipeline.outcome == 'failure' || steps.scrape_altemagazine.outcome == 'failure' || steps.merge_altemagazine.outcome == 'failure' || steps.ps_feed.outcome == 'failure' || steps.price_validator.outcome == 'failure' || steps.sync_hubs.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const outcomes = {
+              'Main pipeline (daily_pipeline.py)': '${{ steps.main_pipeline.outcome }}',
+              'Scrape altemagazine (agent_altemagazine.py)': '${{ steps.scrape_altemagazine.outcome }}',
+              'Merge altemagazine': '${{ steps.merge_altemagazine.outcome }}',
+              'Profitshare feed (ps_feed_to_deals.py)': '${{ steps.ps_feed.outcome }}',
+              'Price validator': '${{ steps.price_validator.outcome }}',
+              'Sync theme hubs': '${{ steps.sync_hubs.outcome }}'
+            };
+            const failed = Object.entries(outcomes)
+              .filter(([, outcome]) => outcome === 'failure')
+              .map(([step]) => `- \`${step}\``)
+              .join('\n');
+            const date = new Date().toISOString().split('T')[0];
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const body = [
+              `## 🔴 Daily Pipeline Failure — ${date}`,
+              '',
+              '**Steps care au eșuat:**',
+              failed || '- (unknown — check logs)',
+              '',
+              `**Run URL:** ${runUrl}`,
+              '',
+              '**Next steps:**',
+              '1. Deschide run-ul de mai sus și verifică log-urile pașilor eșuați',
+              '2. Dacă eșecul e legat de un scraper specific, rulează local `python agents/agent_altemagazine.py` pentru debug',
+              '3. Dacă eșecul e legat de Profitshare, verifică că `PROFITSHARE_API_KEY` și `PROFITSHARE_API_USER` sunt configurate în secrets/vars',
+              '',
+              '_Auto-created by daily-pipeline workflow._'
+            ].join('\n');
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🔴 Pipeline failure ${date}`,
+              body: body,
+              labels: ['automation', 'pipeline-failure']
+            });

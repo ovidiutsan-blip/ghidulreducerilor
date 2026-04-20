@@ -29,7 +29,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#EC407A',
     heroIntro:
       'Moda online din România este dominată de câteva platforme mari care lansează campanii de reduceri aproape săptămânal. Dacă știi unde să te uiți și când, poți găsi haine de firmă la jumătate de preț sau accesorii premium cu 60-70% discount, fără să cobori din calitate.\n\nPe GhidulReducerilor.ro adunăm cele mai bune oferte fashion de la magazinele partenere — Fashion Days (parte din grupul eMAG, peste 2.000 de branduri), Answear (peste 400 de branduri premium ca Tommy Hilfiger, Calvin Klein, Guess) și eMAG (colecții sezoniere și branduri proprii). Fiecare ofertă este verificată de echipă, are procentul real de reducere afișat clar și link afiliat direct către produs — așa că plătești exact prețul de pe site, fără comisioane ascunse.',
-    storeSlugs: ['fashiondays', 'answear', 'watch24', 'emag'],
+    storeSlugs: ['emag', 'watch24'],
     dealCategories: ['ceasuri', 'smartwatch'],
     faq: [
       {
@@ -70,7 +70,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#D81B60',
     heroIntro:
       'Piața de beauty și cosmetice din România a explodat în ultimii ani datorită magazinelor specializate care aduc parfumuri și produse premium la prețuri cu 30-50% sub cele din duty-free sau magazinele fizice de brand. Notino este liderul incontestabil — peste 85.000 de produse, inclusiv branduri de lux precum Chanel, Dior, Lancôme, YSL și Paco Rabanne, cu garanție de autenticitate 100%.\n\nPe GhidulReducerilor.ro monitorizăm zilnic campaniile Notino și alte surse de beauty, selectăm doar ofertele cu discount real (nu "reduceri" pe prețuri umflate artificial) și afișăm procentul exact de economisit. Majoritatea ofertelor vin însoțite și de coduri promoționale suplimentare care se aplică la checkout — uneori ajungi la -65% față de prețul de listă.',
-    storeSlugs: ['notino', 'hiris', 'emag'],
+    storeSlugs: ['hiris'],
     dealCategories: ['beauty'],
     faq: [
       {
@@ -111,7 +111,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#0277BD',
     heroIntro:
       'Farmacia online a devenit una dintre cele mai rapide modalități de a accesa suplimente, cosmetice dermato și produse OTC la prețuri semnificativ mai mici decât în farmacia din colț. Dr.Max — cea mai mare rețea de farmacii din Europa Centrală și de Est — și Vegis — specializat în produse naturiste și bio — sunt cei doi parteneri principali cu care lucrăm la GhidulReducerilor.ro.\n\nOfertele pe care le afișăm sunt verificate zilnic și au procent real de reducere — unele suplimente ajung la -40% față de prețul de listă, iar campaniile lunare (ex. "Luna Imunității" sau "Ziua Vitaminei C") cumulează reduceri până la -50% pe categorii întregi. Toate produsele sunt autentice, provin din stocul farmaceutic oficial și sunt însoțite de factură — fără riscuri de contrafaceri, cum se pot întâmpla pe marketplace-uri necontrolate.',
-    storeSlugs: ['drmax', 'vegis', 'emag'],
+    storeSlugs: ['vegis'],
     dealCategories: ['suplimente-bio'],
     faq: [
       {
@@ -152,7 +152,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#5D4037',
     heroIntro:
       'Cumpărarea de cărți online a depășit de mult magazinele fizice — Libris, Elefant și eMAG dețin împreună peste 80% din piață, cu cataloage ce depășesc 1,5 milioane de titluri. Prețurile sunt de regulă cu 20-40% mai mici decât în librăriile tradiționale, iar campaniile periodice (Târgul Gaudeamus, Bookfest online, Back to School) scad prețurile suplimentar cu 30-50%.\n\nLa GhidulReducerilor.ro monitorizăm constant cele trei platforme și afișăm ofertele cu discount real — nu "reduceri" calculate de la prețuri umflate. Libris are cel mai mare catalog (peste 1 milion de titluri), Elefant are cele mai bune prețuri pe beletristică și cărți străine, iar eMAG combină cărți cu bundle-uri de ebook readers și accesorii. Toate au retur gratuit 30 de zile și livrare prin easybox sau curier.',
-    storeSlugs: ['libris', 'elefant', 'emag'],
+    storeSlugs: [],
     dealCategories: [],
     faq: [
       {
@@ -193,7 +193,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#F57C00',
     heroIntro:
       'Renovarea casei sau amenajarea grădinii pot costa un salariu întreg — sau pot costa cu 30% mai puțin dacă știi când și de unde să cumperi. MatHaus (specializat în materiale de construcții și amenajări DIY), Fornello (instalații termice, sanitare, calorifere, centrale, panouri solare) și eMAG (mobilier, unelte, electrocasnice) acoperă împreună toată gama de nevoi.\n\nLa GhidulReducerilor.ro urmărim campaniile sezoniere (primăvară-vară pentru grădină, toamnă-iarnă pentru instalații termice) și identificăm ofertele cu discount real. MatHaus are reduceri cumulate la cantități mari (ex. -10% la comenzi peste 2.000 lei pe lânga reducerile individuale), iar Fornello oferă adesea pachete centrală + calorifere + montaj cu discount de 15-20%. Livrarea e gratuită la multe produse voluminoase (centrale termice, panouri solare) și toate produsele au garanție legală + garanție de producător.',
-    storeSlugs: ['mathaus', 'fornello', 'case-smart', 'novodoors', 'techstar', 'hotpick', 'alecoair', 'emag'],
+    storeSlugs: ['alecoair', 'case-smart', 'fornello', 'hotpick', 'mathaus', 'novodoors', 'techstar'],
     dealCategories: ['casa-gradina'],
     faq: [
       {
@@ -222,6 +222,47 @@ export const THEME_HUBS: ThemeHub[] = [
       'Vopselele albe standard (alb gresie, alb mat) au rotație rapidă și prețuri mai mici decât culorile speciale',
       'La gresie/faianță verifică nuanța (cod lot) — plăcile din loturi diferite pot avea diferențe ușoare de culoare',
       'Uneltele cu baterii — cumpără platforma (ex. Bosch 18V) și apoi doar acumulatorii; economisești 300-500 lei pe scule',
+    ],
+  },
+  {
+    slug: 'electronice',
+    label: 'Electronice & Software',
+    title: 'Reduceri Electronice și Software — Licențe Adobe, Autodesk, Microsoft',
+    description:
+      'Reduceri verificate la licențe software profesional (Adobe Creative Cloud, Autodesk AutoCAD, Microsoft Office, Rhino) și electronice de consum. Prețuri reale sub MSRP.',
+    emoji: '💻',
+    color: '#512DA8',
+    heroIntro:
+      'Software-ul profesional e una dintre categoriile cele mai scumpe pentru freelanceri, arhitecți, designeri și studenți — o licență Adobe Creative Cloud poate costa 2.500+ lei/an la preț întreg, iar Autodesk AutoCAD trece de 7.000 lei. Dar există alternative legale la prețuri dramatic mai mici: reselleri autorizați precum StreamStore distribuie licențe originale (perpetue sau anuale) cu discount-uri structurale de 10-67% față de MSRP — nu oferte flash, ci prețuri permanente justificate prin volum de distribuție.\n\nPe GhidulReducerilor.ro selectăm doar reselleri verificați cu parteneriat oficial cu producătorii (Adobe, Autodesk, Microsoft, McNeel Rhino, V-Ray, Parallels). Fiecare licență vine cu cheie de activare directă de la producător, factură fiscală românească și suport oficial. Categoria include și electronice de consum (eMAG) pentru laptop-uri, periferice și componente IT cu reduceri în campanii.',
+    storeSlugs: ['emag', 'forit', 'streamstore'],
+    dealCategories: ['electronice'],
+    faq: [
+      {
+        q: 'Licențele software de la reselleri sunt legale și originale?',
+        a: 'Da, dacă magazinul e reseller autorizat. StreamStore, de exemplu, distribuie licențe directe de la Adobe, Autodesk, Microsoft — primești cheie originală care se activează oficial pe site-ul producătorului. Suportul, update-urile și cloud storage sunt incluse exact ca la licența cumpărată direct. Evită reseller-i necunoscuți din afara UE care vând la prețuri "too good to be true" — adesea sunt licențe de volum furate sau chei revocate.',
+      },
+      {
+        q: 'Ce diferență e între licență perpetuă și abonament?',
+        a: 'Licența perpetuă (ex. Autodesk AutoCAD LT perpetual) o cumperi o dată și o folosești pe viață, dar nu primești update-uri majore gratuite. Abonamentul (Creative Cloud, Microsoft 365) te costă lunar/anual dar ai mereu cea mai nouă versiune plus cloud storage și suport. Pentru uz profesional continuu, abonamentul e mai avantajos. Pentru utilizare ocazională sau proiecte specifice, licența perpetuă economisește mai mult pe termen lung.',
+      },
+      {
+        q: 'Pot folosi licența pe mai multe calculatoare?',
+        a: 'Depinde de tip. Licențele Adobe Creative Cloud permit instalare pe 2 dispozitive ale aceluiași utilizator (nu concomitent). Autodesk oferă licențe single-user (1 user, multiple PC-uri) sau network (multi-user, servere de licențe). Microsoft 365 Personal permite până la 5 dispozitive. Citește mereu termenii de licențiere la cumpărare — transferul pe un alt calculator se face prin dezactivare + reactivare, nu copiere simplă.',
+      },
+      {
+        q: 'Software-ul educațional (student / academic) e cu reducere?',
+        a: 'Da, toate marile companii (Adobe, Autodesk, Microsoft, JetBrains) oferă versiuni educaționale cu 60-80% reducere față de preț comercial, dacă dovedești statutul de student sau profesor. Licențele educaționale nu pot fi folosite comercial (pentru proiecte plătite). La terminarea studiilor, trebuie să migrezi la licență comercială. StreamStore și alți reselleri distribuie și licențe educaționale autorizate.',
+      },
+      {
+        q: 'Merită să cumpăr componente PC individuale sau laptop gata făcut?',
+        a: 'Pentru gaming și workstation profesional, construirea unui PC custom oferă +20-40% performanță la același buget comparativ cu laptop-uri pre-built. Pentru mobilitate și simplitate, laptopurile din campanii eMAG/Altex au prețuri bune, mai ales la sfârșit de an când se destochează modelele vechi. Compară mereu prețul individual al CPU+GPU+RAM+SSD vs laptop înainte să decizi.',
+      },
+    ],
+    tips: [
+      'Pentru licențe software mari (Adobe, Autodesk), abonamentul anual e cu 20% mai ieftin decât lunar cumulat',
+      'Verifică programul de upgrade: unele licențe perpetue primesc upgrade la versiunea nouă cu -50% timp de 12 luni',
+      'Licențele educaționale necesită verificare identitate — pregătește legitimația de student înainte de comandă',
+      'La componente PC, urmărește prețul pe PCPartPicker România — arată istoricul și alertează când scade sub pragul tău',
     ],
   },
 ]
