@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages = [
     { url: BASE_URL, lastModified: now, changeFrequency: 'daily' as const, priority: 1 },
+    { url: `${BASE_URL}/black-friday`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${BASE_URL}/categorii`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${BASE_URL}/ghiduri`, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.7 },

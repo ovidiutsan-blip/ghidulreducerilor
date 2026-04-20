@@ -28,6 +28,7 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-4">Categorii</h3>
             <ul className="space-y-2">
+              <li><Link href="/black-friday" className="text-sm text-brand-red hover:text-white transition-colors font-semibold">🔥 Black Friday 2026</Link></li>
               <li><Link href="/categorii/fashion" className="text-sm hover:text-white transition-colors">👗 Fashion</Link></li>
               <li><Link href="/categorii/beauty" className="text-sm hover:text-white transition-colors">💄 Beauty</Link></li>
               <li><Link href="/categorii/farmacie-sanatate" className="text-sm hover:text-white transition-colors">💊 Farmacie & Sănătate</Link></li>

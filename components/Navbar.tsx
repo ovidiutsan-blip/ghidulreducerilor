@@ -32,6 +32,12 @@ export default function Navbar() {
           {/* CTA + Mobile menu */}
           <div className="flex items-center gap-2">
             <Link
+              href="/black-friday"
+              className="hidden md:inline-flex items-center gap-1.5 bg-neutral-900 hover:bg-black text-white text-sm font-semibold px-3 py-2 rounded-xl transition-all"
+            >
+              🔥 Black Friday
+            </Link>
+            <Link
               href="/abonare-alerte"
               className="hidden sm:inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all"
             >
@@ -53,6 +59,13 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden border-t border-neutral-200 bg-white">
           <div className="px-4 py-4 space-y-3">
+            <Link
+              href="/black-friday"
+              className="flex items-center gap-2 text-sm font-semibold text-neutral-900 hover:text-brand-red py-1"
+              onClick={() => setMenuOpen(false)}
+            >
+              🔥 Black Friday 2026
+            </Link>
             <Link
               href="/reduceri/emag"
               className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-red py-1"
