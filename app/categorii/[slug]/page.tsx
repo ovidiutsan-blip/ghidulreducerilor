@@ -39,8 +39,12 @@ export default function ThemeHubPage({ params }: Props) {
     .map(slug => getStoreBySlug(slug))
     .filter((s): s is NonNullable<typeof s> => Boolean(s))
 
-  // Aggregate deals from all stores in this theme, sort by discount desc, take top 8
-  const allDeals = hub.storeSlugs.flatMap(slug => getDealsByStore(slug))
+  // Aggregate deals from all stores in this theme, filter strictly by hub's own dealCategories
+  // (prevents cross-taxonomy leakage — e.g., eMAG electronics appearing on the Fashion hub)
+  const storeDeals = hub.storeSlugs.flatMap(slug => getDealsByStore(slug))
+  const allDeals = hub.dealCategories.length > 0
+    ? storeDeals.filter(d => hub.dealCategories.includes(d.categorie))
+    : []
   const topDeals = [...allDeals]
     .sort((a, b) => b.procent_reducere - a.procent_reducere)
     .slice(0, 8)
@@ -108,7 +112,7 @@ export default function ThemeHubPage({ params }: Props) {
                 {hub.title}
               </h1>
               <p className="text-sm text-neutral-500 mt-1">
-                {stores.length} magazine verificate · {allDeals.length} oferte active
+                {stores.length} magazine verificate{allDeals.length > 0 ? ` · ${allDeals.length} oferte active` : ''}
               </p>
             </div>
           </div>
@@ -147,6 +151,20 @@ export default function ThemeHubPage({ params }: Props) {
         </section>
 
         {/* Top deals */}
+        {topDeals.length === 0 && (
+          <section className="mb-14">
+            <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 sm:p-8 text-center">
+              <div className="text-4xl mb-3">🔎</div>
+              <h2 className="font-display font-bold text-lg text-neutral-900 mb-2">
+                Ofertele {hub.label.toLowerCase()} sunt în curs de validare
+              </h2>
+              <p className="text-neutral-600 max-w-xl mx-auto leading-relaxed">
+                Monitorizăm zilnic campaniile din magazinele partenere de mai sus. Dealurile apar aici imediat după ce sunt verificate de echipă — fără reduceri false sau prețuri umflate.
+                Până atunci, folosește cardurile de magazin pentru a vizita direct ofertele curente.
+              </p>
+            </div>
+          </section>
+        )}
         {topDeals.length > 0 && (
           <section className="mb-14">
             <div className="flex items-center justify-between gap-3 mb-6 flex-wrap">

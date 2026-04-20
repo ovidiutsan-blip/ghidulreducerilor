@@ -13,6 +13,7 @@ export type ThemeHub = {
   color: string // hex, for accent
   heroIntro: string // 1-2 paragraph editorial intro (~150-200 words)
   storeSlugs: string[] // stores to feature (must match stores.json slug)
+  dealCategories: string[] // deal.categorie values that legitimately belong to this hub; used to filter topDeals grid. Empty array = no topDeals (empty state shown).
   faq: ThemeFaqItem[]
   tips: string[] // bullet tips for savvy shoppers
 }
@@ -28,7 +29,8 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#EC407A',
     heroIntro:
       'Moda online din România este dominată de câteva platforme mari care lansează campanii de reduceri aproape săptămânal. Dacă știi unde să te uiți și când, poți găsi haine de firmă la jumătate de preț sau accesorii premium cu 60-70% discount, fără să cobori din calitate.\n\nPe GhidulReducerilor.ro adunăm cele mai bune oferte fashion de la magazinele partenere — Fashion Days (parte din grupul eMAG, peste 2.000 de branduri), Answear (peste 400 de branduri premium ca Tommy Hilfiger, Calvin Klein, Guess) și eMAG (colecții sezoniere și branduri proprii). Fiecare ofertă este verificată de echipă, are procentul real de reducere afișat clar și link afiliat direct către produs — așa că plătești exact prețul de pe site, fără comisioane ascunse.',
-    storeSlugs: ['fashiondays', 'answear', 'emag'],
+    storeSlugs: ['fashiondays', 'answear', 'watch24', 'emag'],
+    dealCategories: ['ceasuri', 'smartwatch'],
     faq: [
       {
         q: 'Când apar cele mai mari reduceri la haine online?',
@@ -69,6 +71,7 @@ export const THEME_HUBS: ThemeHub[] = [
     heroIntro:
       'Piața de beauty și cosmetice din România a explodat în ultimii ani datorită magazinelor specializate care aduc parfumuri și produse premium la prețuri cu 30-50% sub cele din duty-free sau magazinele fizice de brand. Notino este liderul incontestabil — peste 85.000 de produse, inclusiv branduri de lux precum Chanel, Dior, Lancôme, YSL și Paco Rabanne, cu garanție de autenticitate 100%.\n\nPe GhidulReducerilor.ro monitorizăm zilnic campaniile Notino și alte surse de beauty, selectăm doar ofertele cu discount real (nu "reduceri" pe prețuri umflate artificial) și afișăm procentul exact de economisit. Majoritatea ofertelor vin însoțite și de coduri promoționale suplimentare care se aplică la checkout — uneori ajungi la -65% față de prețul de listă.',
     storeSlugs: ['notino', 'emag'],
+    dealCategories: [],
     faq: [
       {
         q: 'Parfumurile de pe Notino sunt originale?',
@@ -109,6 +112,7 @@ export const THEME_HUBS: ThemeHub[] = [
     heroIntro:
       'Farmacia online a devenit una dintre cele mai rapide modalități de a accesa suplimente, cosmetice dermato și produse OTC la prețuri semnificativ mai mici decât în farmacia din colț. Dr.Max — cea mai mare rețea de farmacii din Europa Centrală și de Est — și Vegis — specializat în produse naturiste și bio — sunt cei doi parteneri principali cu care lucrăm la GhidulReducerilor.ro.\n\nOfertele pe care le afișăm sunt verificate zilnic și au procent real de reducere — unele suplimente ajung la -40% față de prețul de listă, iar campaniile lunare (ex. "Luna Imunității" sau "Ziua Vitaminei C") cumulează reduceri până la -50% pe categorii întregi. Toate produsele sunt autentice, provin din stocul farmaceutic oficial și sunt însoțite de factură — fără riscuri de contrafaceri, cum se pot întâmpla pe marketplace-uri necontrolate.',
     storeSlugs: ['drmax', 'vegis', 'emag'],
+    dealCategories: [],
     faq: [
       {
         q: 'Se pot cumpăra medicamente cu prescripție online?',
@@ -149,6 +153,7 @@ export const THEME_HUBS: ThemeHub[] = [
     heroIntro:
       'Cumpărarea de cărți online a depășit de mult magazinele fizice — Libris, Elefant și eMAG dețin împreună peste 80% din piață, cu cataloage ce depășesc 1,5 milioane de titluri. Prețurile sunt de regulă cu 20-40% mai mici decât în librăriile tradiționale, iar campaniile periodice (Târgul Gaudeamus, Bookfest online, Back to School) scad prețurile suplimentar cu 30-50%.\n\nLa GhidulReducerilor.ro monitorizăm constant cele trei platforme și afișăm ofertele cu discount real — nu "reduceri" calculate de la prețuri umflate. Libris are cel mai mare catalog (peste 1 milion de titluri), Elefant are cele mai bune prețuri pe beletristică și cărți străine, iar eMAG combină cărți cu bundle-uri de ebook readers și accesorii. Toate au retur gratuit 30 de zile și livrare prin easybox sau curier.',
     storeSlugs: ['libris', 'elefant', 'emag'],
+    dealCategories: [],
     faq: [
       {
         q: 'Care magazin are cele mai ieftine cărți?',
@@ -189,6 +194,7 @@ export const THEME_HUBS: ThemeHub[] = [
     heroIntro:
       'Renovarea casei sau amenajarea grădinii pot costa un salariu întreg — sau pot costa cu 30% mai puțin dacă știi când și de unde să cumperi. MatHaus (specializat în materiale de construcții și amenajări DIY), Fornello (instalații termice, sanitare, calorifere, centrale, panouri solare) și eMAG (mobilier, unelte, electrocasnice) acoperă împreună toată gama de nevoi.\n\nLa GhidulReducerilor.ro urmărim campaniile sezoniere (primăvară-vară pentru grădină, toamnă-iarnă pentru instalații termice) și identificăm ofertele cu discount real. MatHaus are reduceri cumulate la cantități mari (ex. -10% la comenzi peste 2.000 lei pe lânga reducerile individuale), iar Fornello oferă adesea pachete centrală + calorifere + montaj cu discount de 15-20%. Livrarea e gratuită la multe produse voluminoase (centrale termice, panouri solare) și toate produsele au garanție legală + garanție de producător.',
     storeSlugs: ['mathaus', 'fornello', 'emag'],
+    dealCategories: ['casa-gradina'],
     faq: [
       {
         q: 'Când sunt cele mai mari reduceri la materiale de construcții?',
