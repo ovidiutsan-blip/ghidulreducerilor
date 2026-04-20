@@ -36,12 +36,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Coduri Promo */}
+          {/* Ghiduri magazine */}
           <div>
-            <h3 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-4">Coduri Promo</h3>
+            <h3 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-4">Ghiduri magazine</h3>
             <ul className="space-y-2">
-              <li><Link href="/coduri-promo/emag" className="text-sm hover:text-white transition-colors">Coduri eMAG</Link></li>
-              <li><Link href="/reduceri/emag" className="text-sm hover:text-white transition-colors">Reduceri eMAG</Link></li>
+              <li><Link href="/ghiduri/notino" className="text-sm hover:text-white transition-colors">Ghid Notino</Link></li>
+              <li><Link href="/ghiduri/answear" className="text-sm hover:text-white transition-colors">Ghid Answear</Link></li>
+              <li><Link href="/ghiduri/drmax" className="text-sm hover:text-white transition-colors">Ghid Dr.Max</Link></li>
+              <li><Link href="/ghiduri/fashiondays" className="text-sm hover:text-white transition-colors">Ghid Fashion Days</Link></li>
+              <li><Link href="/ghiduri" className="text-sm hover:text-white transition-colors font-semibold">Toate ghidurile →</Link></li>
             </ul>
           </div>
 
@@ -49,8 +52,9 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-4">Informatii</h3>
             <ul className="space-y-2">
-              <li><Link href="/blog" className="text-sm hover:text-white transition-colors">Blog & Ghiduri</Link></li>
+              <li><Link href="/blog" className="text-sm hover:text-white transition-colors">Blog & Articole</Link></li>
               <li><Link href="/categorii" className="text-sm hover:text-white transition-colors">Toate categoriile</Link></li>
+              <li><Link href="/coduri-promo/emag" className="text-sm hover:text-white transition-colors">Coduri eMAG</Link></li>
               <li><Link href="/cum-functioneaza" className="text-sm hover:text-white transition-colors">Cum funcționează</Link></li>
               <li><Link href="/despre" className="text-sm hover:text-white transition-colors">Despre noi</Link></li>
               <li><Link href="/abonare-alerte" className="text-sm hover:text-white transition-colors">Alerte Reduceri</Link></li>

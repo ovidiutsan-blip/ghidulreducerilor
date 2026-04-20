@@ -75,11 +75,18 @@ export default function Navbar() {
               🗂️ Categorii
             </Link>
             <Link
+              href="/ghiduri"
+              className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-red py-1"
+              onClick={() => setMenuOpen(false)}
+            >
+              📖 Ghiduri magazine
+            </Link>
+            <Link
               href="/blog"
               className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-red py-1"
               onClick={() => setMenuOpen(false)}
             >
-              📝 Blog & Ghiduri
+              📝 Blog
             </Link>
             <hr className="border-neutral-200" />
             <Link
