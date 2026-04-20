@@ -1,5 +1,29 @@
 ﻿[
   {
+    "id": "alecoair",
+    "nume": "AlecoAir",
+    "slug": "alecoair",
+    "descriere": "AlecoAir.ro este un magazin online specializat in aparate pentru aerul din interior: purificatoare, dezumidificatoare, umidificatoare, aparate de aer conditionat si incalzire. Produse de brand (AlecoAir, Trotec, Duux) cu discounturi mari pe resigilate functionale.",
+    "logo_emoji": "",
+    "culoare": "#00ACC1",
+    "categorie_principala": "casa-gradina",
+    "url_site": "https://alecoair.ro",
+    "comision_mediu": "3-8%",
+    "retea": "profitshare"
+  },
+  {
+    "id": "streamstore",
+    "nume": "StreamStore",
+    "slug": "streamstore",
+    "descriere": "StreamStore.ro este un magazin online specializat in licente software oficiale: Adobe Creative Cloud, Autodesk (AutoCAD, Revit, 3ds Max), SketchUp, Microsoft Office, antivirus si produse digitale cu livrare instanta prin email.",
+    "logo_emoji": "",
+    "culoare": "#512DA8",
+    "categorie_principala": "electronice",
+    "url_site": "https://www.streamstore.ro",
+    "comision_mediu": "5-15%",
+    "retea": "profitshare"
+  },
+  {
     "id": "techstar",
     "nume": "Techstar",
     "slug": "techstar",
