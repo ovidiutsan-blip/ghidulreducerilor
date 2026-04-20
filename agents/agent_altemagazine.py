@@ -518,11 +518,9 @@ def scrape_generic(store_slug: str, config: dict) -> list:
 
 
 # ─── Store dispatcher ────────────────────────────────────────────────
-STORE_SCRAPERS = {
-    "fashiondays": scrape_fashiondays,
-    "elefant": scrape_elefant,
-    "evomag": scrape_evomag,
-}
+# Toate magazinele sunt scraped prin scrape_generic (selectori din config)
+# Scraperele dedicate (scrape_fashiondays/elefant/evomag) sunt pastrate doar pentru referinta.
+STORE_SCRAPERS = {}
 
 
 def scrape_store(store_slug: str, config: dict) -> list:

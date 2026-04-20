@@ -1,5 +1,5 @@
 {
-  "_doc": "Configuratie magazine pentru agentii de scraping. Fiecare magazin are categorii, selectori CSS, retea afiliata si status.",
+  "_doc": "Configuratie magazine pentru agentii de scraping. Statuses: activ = scraping direct funcționează, blocked_cf = blocat de Cloudflare/Tencent (necesită headless browser sau feed), js_rendered = produse randate client-side (necesită Playwright), past = expirat afiliere, neaplicat = nu aplicat încă la program.",
 
   "emag": {
     "name": "eMAG",
@@ -43,20 +43,19 @@
     "name": "FashionDays",
     "slug": "fashiondays",
     "affiliate_network": "profitshare",
-    "status": "activ",
+    "status": "blocked_cf",
+    "_note": "FashionDays e protejat de Tencent EdgeOne CAPTCHA — requests primește 'Security Verification' page. Necesită headless browser (Playwright) sau trecere pe Profitshare product feed.",
     "base_url": "https://www.fashiondays.ro",
     "categories": [
       {"name": "femei-imbracaminte", "url": "https://www.fashiondays.ro/t/femei-imbracaminte/"},
-      {"name": "femei-incaltaminte", "url": "https://www.fashiondays.ro/t/femei-incaltaminte/"},
-      {"name": "barbati-imbracaminte", "url": "https://www.fashiondays.ro/t/barbati-imbracaminte/"},
-      {"name": "barbati-incaltaminte", "url": "https://www.fashiondays.ro/t/barbati-incaltaminte/"}
+      {"name": "barbati-imbracaminte", "url": "https://www.fashiondays.ro/t/barbati-imbracaminte/"}
     ],
     "selectors": {
-      "card": "[class*='product-card'], [class*='ProductCard'], article.product",
+      "card": "[class*='product-card']",
       "title": "[class*='product-name'], [class*='title'], h3, h4",
       "product_link": "a[href*='fashiondays.ro'], a",
       "image": "img[src*='http'], img[data-src*='http']",
-      "price_elements": "[class*='price'], [class*='Price'], span"
+      "price_elements": "[class*='price'], [class*='Price']"
     },
     "image_strategy": "card_image",
     "max_products_per_category": 8,
@@ -70,25 +69,26 @@
     "name": "Elefant.ro",
     "slug": "elefant",
     "affiliate_network": "profitshare",
-    "status": "activ",
+    "status": "js_rendered",
+    "_note": "Elefant foloseste Intershop cu ViewProductTileAsync - HTML-ul initial contine 60 skeletoane .product-list-item fara titlu/pret (data-action='...ViewProductTileAsync?ProductID=...'). Fiecare card este fetched async individual post-render. Necesita Playwright sau fetcher batch prin URL-urile ViewProductTileAsync.",
     "base_url": "https://www.elefant.ro",
     "categories": [
-      {"name": "carti", "url": "https://www.elefant.ro/carti/reduceri"},
-      {"name": "electronice", "url": "https://www.elefant.ro/electronice-si-it/reduceri"},
-      {"name": "jucarii", "url": "https://www.elefant.ro/jucarii-si-jocuri/reduceri"}
+      {"name": "carti", "url": "https://www.elefant.ro/list/carti/carte"},
+      {"name": "fictiune", "url": "https://www.elefant.ro/list/carti/carte/fictiune"},
+      {"name": "carti-copii", "url": "https://www.elefant.ro/list/carti/carte/carti-pentru-copii"}
     ],
     "selectors": {
-      "card": ".product-card, .product-item, [class*='ProductCard']",
-      "title": "a[title], .product-title, h3 a",
-      "product_link": "a[title], h3 a",
-      "image": "img[src*='http']",
-      "price_elements": "[class*='price'], .money"
+      "card": "[class*='product-list-item'][class*='grid-view']",
+      "title": "a[title], .product-name, h2 a, h3 a",
+      "product_link": "a[href*='/carte/'], a[href*='elefant.ro'], a[title]",
+      "image": "img.lazy, img[data-src], img[src*='http']",
+      "price_elements": ".product-price, [class*='price'], .money, [class*='Price']"
     },
     "image_strategy": "card_image",
     "max_products_per_category": 8,
     "max_pages": 2,
     "rate_limit_seconds": 1.0,
-    "min_discount": 15,
+    "min_discount": 10,
     "comision": 5
   },
 
@@ -97,24 +97,23 @@
     "slug": "evomag",
     "affiliate_network": "profitshare",
     "status": "activ",
+    "_note": "URL-ul funcțional este /resigilate-produse-resigilate/ (are produse cu reducere reală vs. prețul nou). Selectorul .nice_product_container returnează ~128 carduri curate.",
     "base_url": "https://www.evomag.ro",
     "categories": [
-      {"name": "telefoane", "url": "https://www.evomag.ro/telefoane-mobile-smartphone/filtru/stare-produs-nou,oferta-da/"},
-      {"name": "laptopuri", "url": "https://www.evomag.ro/componente-laptop-notebook/filtru/stare-produs-nou,oferta-da/"},
-      {"name": "televizoare", "url": "https://www.evomag.ro/tv-audio-video-televizoare/filtru/stare-produs-nou,oferta-da/"}
+      {"name": "resigilate", "url": "https://www.evomag.ro/resigilate-produse-resigilate/"}
     ],
     "selectors": {
-      "card": ".product_grid--item, .npi_product, [class*='product-card']",
-      "title": "a.npi_name, .product_grid--name a, a[title]",
-      "product_link": "a.npi_name, .product_grid--name a, a[title]",
-      "image": "img[src*='http']",
-      "price_elements": "[class*='price'], .money, .pret"
+      "card": ".nice_product_container",
+      "title": ".npi_name h2 a, .npi_name a",
+      "product_link": ".npi_name a, .npi_image a",
+      "image": ".npi_image img, img[src*='evomag'], img[src*='static']",
+      "price_elements": ".real_price, .price_block_list span, [class*='price']"
     },
     "image_strategy": "card_image",
     "max_products_per_category": 8,
     "max_pages": 2,
     "rate_limit_seconds": 1.0,
-    "min_discount": 15,
+    "min_discount": 10,
     "comision": 2
   },
 
@@ -122,7 +121,8 @@
     "name": "Notino",
     "slug": "notino",
     "affiliate_network": "2performant",
-    "status": "activ",
+    "status": "blocked_cf",
+    "_note": "Notino e protejat de Cloudflare Challenge ('Just a moment...') — returnează 403 fără JS client. Necesită Playwright sau 2Performant product feed XML.",
     "base_url": "https://www.notino.ro",
     "twoperformant": {
       "campaign_id": "c6dae5faa",
@@ -151,7 +151,8 @@
     "name": "Answear",
     "slug": "answear",
     "affiliate_network": "2performant",
-    "status": "activ",
+    "status": "blocked_cf",
+    "_note": "Answear returnează 403 Forbidden (bot detection custom, fără markeri Cloudflare vizibili). Necesită Playwright sau 2Performant product feed.",
     "base_url": "https://www.answear.ro",
     "twoperformant": {
       "campaign_id": "a5e9e1225",
@@ -209,7 +210,8 @@
     "name": "Dr.Max",
     "slug": "drmax",
     "affiliate_network": "2performant",
-    "status": "activ",
+    "status": "blocked_cf",
+    "_note": "Dr.Max e protejat de Cloudflare ('Just a moment...') — 403 fără JS. Necesită Playwright sau 2Performant product feed.",
     "base_url": "https://www.drmax.ro",
     "twoperformant": {
       "campaign_id": "6390e3cfb",
@@ -237,12 +239,12 @@
     "name": "Libris",
     "slug": "libris",
     "affiliate_network": "profitshare",
-    "status": "activ",
+    "status": "js_rendered",
+    "_note": "Libris folosește carusele client-side (loadCarousel/loadCarouselFooter) pentru lista de produse — HTML-ul inițial conține doar wrapper-ul, produsele sunt încărcate via AJAX după onload. Necesită Playwright sau Profitshare product feed.",
     "base_url": "https://www.libris.ro",
     "categories": [
-      {"name": "carti-reduceri", "url": "https://www.libris.ro/promotii/"},
-      {"name": "carti-engleza", "url": "https://www.libris.ro/carti-in-limba-engleza/"},
-      {"name": "carti-copii", "url": "https://www.libris.ro/carti/carti-pentru-copii/"}
+      {"name": "carti-reduceri", "url": "https://www.libris.ro/selectii/carti-cu-reduceri-mari"},
+      {"name": "carti", "url": "https://www.libris.ro/carti"}
     ],
     "selectors": {
       "card": ".product-card, [class*='ProductCard'], .product-item, .product",
@@ -264,24 +266,25 @@
     "slug": "vegis",
     "affiliate_network": "profitshare",
     "status": "activ",
-    "base_url": "https://www.vegis.ro",
+    "_note": "Vegis foloseste structura .product-box cu JSON inline ecListedProducts care conține item_name+price+discount — extrem de curat pentru scraping. URL-urile corecte sunt fără sufix .html și fără www (redirect).",
+    "base_url": "https://vegis.ro",
     "categories": [
-      {"name": "suplimente", "url": "https://www.vegis.ro/suplimente-alimentare.html"},
-      {"name": "cosmetice-bio", "url": "https://www.vegis.ro/cosmetice-bio.html"},
-      {"name": "alimentatie-sanatoasa", "url": "https://www.vegis.ro/alimentatie-sanatoasa.html"}
+      {"name": "promotii", "url": "https://vegis.ro/promotii/"},
+      {"name": "pachete-speciale", "url": "https://vegis.ro/pachete-speciale/"},
+      {"name": "cele-mai-vandute", "url": "https://vegis.ro/cele-mai-vandute/"}
     ],
     "selectors": {
-      "card": ".product-item, [class*='ProductCard'], .product",
-      "title": ".product-name, .product-title, h2, h3, a[title]",
-      "product_link": "a[href*='vegis.ro']",
-      "image": "img[src*='http']",
-      "price_elements": "[class*='price'], [class*='Price'], .money"
+      "card": "article.product-box",
+      "title": "a[title]",
+      "product_link": "a[href*='vegis.ro'][title][data-ecproduct]",
+      "image": "img.lazy[data-src], img[data-src*='vegis'], img[src*='vegis']",
+      "price_elements": "del.small, div.h6.text-bold.inline-block"
     },
     "image_strategy": "card_image",
     "max_products_per_category": 8,
     "max_pages": 2,
     "rate_limit_seconds": 1.5,
-    "min_discount": 10,
+    "min_discount": 5,
     "comision": 5
   },
 
@@ -289,7 +292,8 @@
     "name": "MatHaus",
     "slug": "mathaus",
     "affiliate_network": "profitshare",
-    "status": "activ",
+    "status": "blocked_cf",
+    "_note": "MatHaus e protejat de Cloudflare Challenge — 403 fără JS. Necesită Playwright sau Profitshare product feed.",
     "base_url": "https://www.mathaus.ro",
     "categories": [
       {"name": "amenajari-interioare", "url": "https://www.mathaus.ro/amenajari-interioare-c1"},
