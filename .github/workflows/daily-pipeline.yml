@@ -63,6 +63,13 @@ jobs:
         if: github.event.inputs.mode != 'cleanup'
         run: python scripts/merge_altemagazine.py
 
+      - name: 🛒 Profitshare feed import (vegis + mathaus)
+        if: github.event.inputs.mode != 'cleanup'
+        env:
+          PROFITSHARE_API_USER: ${{ vars.PROFITSHARE_API_USER }}
+          PROFITSHARE_API_KEY: ${{ secrets.PROFITSHARE_API_KEY }}
+        run: python agents/ps_feed_to_deals.py || echo "ps_feed_to_deals finished with errors; continuing"
+
       - name: 🔍 Validare prețuri Omnibus
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
