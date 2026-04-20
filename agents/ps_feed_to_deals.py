@@ -42,7 +42,12 @@ def fix_affiliate_link(link: str) -> str:
     return link
 
 
-def product_to_deal(p: dict, magazin: str, categorie: str) -> dict:
+def product_to_deal(p: dict, magazin: str, categorie: str, allowed_cats: list | None = None) -> dict:
+    # Filter by Profitshare category_name when whitelist provided (ex: vegis -> only supplements, not food)
+    if allowed_cats is not None:
+        feed_cat = (p.get("category_name") or "").strip()
+        if feed_cat not in allowed_cats:
+            return None
     price_vat = float(p.get("price_vat") or 0)
     price_disc_raw = p.get("price_discounted")
     try:
@@ -76,7 +81,7 @@ def product_to_deal(p: dict, magazin: str, categorie: str) -> dict:
     }
 
 
-def fetch_deals(magazin: str, adv_id: int, categorie: str, max_pages: int = 20, min_pct: int = 10):
+def fetch_deals(magazin: str, adv_id: int, categorie: str, max_pages: int = 20, min_pct: int = 10, allowed_cats: list | None = None):
     deals = []
     for page in range(1, max_pages + 1):
         resp = call("GET", "affiliate-products", f"filters[advertiser]={adv_id}&page={page}")
@@ -87,7 +92,7 @@ def fetch_deals(magazin: str, adv_id: int, categorie: str, max_pages: int = 20, 
         if not products:
             break
         for p in products:
-            d = product_to_deal(p, magazin, categorie)
+            d = product_to_deal(p, magazin, categorie, allowed_cats=allowed_cats)
             if d and d["procent_reducere"] >= min_pct:
                 deals.append(d)
         time.sleep(0.3)
@@ -104,15 +109,18 @@ def main():
     existing_urls = set(d.get("product_url") or d.get("link_afiliat") for d in existing)
     print(f"Existing deals: {len(existing)}")
 
+    # Per-merchant targets: (slug, ps_id, categorie, max_pages, min_pct, category_whitelist)
+    # category_whitelist=None => all products; list => filter by feed's category_name
+    VEGIS_FARMACIE = ["Produse Naturiste si Tratamente", "Cosmetice", "Ceaiuri"]
     targets = [
-        ("vegis", 58221, "suplimente-bio", 25, 15),   # ~27.5% hit, pull 25 pages
-        ("mathaus", 124829, "casa-gradina", 50, 10),  # ~2% hit, pull 50 pages
+        ("vegis", 58221, "suplimente-bio", 25, 15, VEGIS_FARMACIE),
+        ("mathaus", 124829, "casa-gradina", 50, 10, None),
     ]
 
     all_new = []
-    for magazin, adv_id, categorie, max_pages, min_pct in targets:
-        print(f"\n[{magazin}] fetching {max_pages}p (min {min_pct}% reducere), cat='{categorie}'")
-        new_deals = fetch_deals(magazin, adv_id, categorie, max_pages=max_pages, min_pct=min_pct)
+    for magazin, adv_id, categorie, max_pages, min_pct, allowed_cats in targets:
+        print(f"\n[{magazin}] fetching {max_pages}p (min {min_pct}% reducere), cat='{categorie}', whitelist={allowed_cats is not None}")
+        new_deals = fetch_deals(magazin, adv_id, categorie, max_pages=max_pages, min_pct=min_pct, allowed_cats=allowed_cats)
         print(f"  extracted: {len(new_deals)} deals w/ real discount")
         # Dedupe vs existing
         added = 0
