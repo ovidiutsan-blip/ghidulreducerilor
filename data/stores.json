@@ -1,5 +1,41 @@
 [
   {
+    "id": "hiris",
+    "nume": "Hiris",
+    "slug": "hiris",
+    "descriere": "Hiris.ro este un magazin online specializat in parfumuri si cosmetice de lux. Oferta cuprinde parfumuri de nisa si comerciale, creme, produse de ingrijire si machiaj de la branduri premium, cu livrare rapida si garantie de autenticitate.",
+    "logo_emoji": "🌸",
+    "culoare": "#C2185B",
+    "categorie_principala": "beauty",
+    "url_site": "https://www.hiris.ro",
+    "comision_mediu": "5-10%",
+    "retea": "profitshare"
+  },
+  {
+    "id": "case-smart",
+    "nume": "Case Smart",
+    "slug": "case-smart",
+    "descriere": "Case-smart.ro este un magazin online specializat in solutii smart home, automatizari, prize si intrerupatoare inteligente, sisteme de protectie si efractie. Produse de brand (LIVOLO, etc.) pentru casa moderna, cu livrare rapida.",
+    "logo_emoji": "🏡",
+    "culoare": "#37474F",
+    "categorie_principala": "casa-gradina",
+    "url_site": "https://case-smart.ro",
+    "comision_mediu": "5-10%",
+    "retea": "profitshare"
+  },
+  {
+    "id": "novodoors",
+    "nume": "Novodoors",
+    "slug": "novodoors",
+    "descriere": "Novodoors.ro este un magazin online specializat in usi metalice de apartament si casa, usi de interior si accesorii. Produse proprii cu izolatie termica si fonica, garantie extinsa si livrare la nivel national.",
+    "logo_emoji": "🚪",
+    "culoare": "#6D4C41",
+    "categorie_principala": "casa-gradina",
+    "url_site": "https://www.novodoors.ro",
+    "comision_mediu": "3-7%",
+    "retea": "profitshare"
+  },
+  {
     "id": "emag",
     "nume": "eMAG",
     "slug": "emag",

@@ -70,8 +70,8 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#D81B60',
     heroIntro:
       'Piața de beauty și cosmetice din România a explodat în ultimii ani datorită magazinelor specializate care aduc parfumuri și produse premium la prețuri cu 30-50% sub cele din duty-free sau magazinele fizice de brand. Notino este liderul incontestabil — peste 85.000 de produse, inclusiv branduri de lux precum Chanel, Dior, Lancôme, YSL și Paco Rabanne, cu garanție de autenticitate 100%.\n\nPe GhidulReducerilor.ro monitorizăm zilnic campaniile Notino și alte surse de beauty, selectăm doar ofertele cu discount real (nu "reduceri" pe prețuri umflate artificial) și afișăm procentul exact de economisit. Majoritatea ofertelor vin însoțite și de coduri promoționale suplimentare care se aplică la checkout — uneori ajungi la -65% față de prețul de listă.',
-    storeSlugs: ['notino', 'emag'],
-    dealCategories: [],
+    storeSlugs: ['notino', 'hiris', 'emag'],
+    dealCategories: ['beauty'],
     faq: [
       {
         q: 'Parfumurile de pe Notino sunt originale?',
@@ -193,7 +193,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#F57C00',
     heroIntro:
       'Renovarea casei sau amenajarea grădinii pot costa un salariu întreg — sau pot costa cu 30% mai puțin dacă știi când și de unde să cumperi. MatHaus (specializat în materiale de construcții și amenajări DIY), Fornello (instalații termice, sanitare, calorifere, centrale, panouri solare) și eMAG (mobilier, unelte, electrocasnice) acoperă împreună toată gama de nevoi.\n\nLa GhidulReducerilor.ro urmărim campaniile sezoniere (primăvară-vară pentru grădină, toamnă-iarnă pentru instalații termice) și identificăm ofertele cu discount real. MatHaus are reduceri cumulate la cantități mari (ex. -10% la comenzi peste 2.000 lei pe lânga reducerile individuale), iar Fornello oferă adesea pachete centrală + calorifere + montaj cu discount de 15-20%. Livrarea e gratuită la multe produse voluminoase (centrale termice, panouri solare) și toate produsele au garanție legală + garanție de producător.',
-    storeSlugs: ['mathaus', 'fornello', 'emag'],
+    storeSlugs: ['mathaus', 'fornello', 'case-smart', 'novodoors', 'emag'],
     dealCategories: ['casa-gradina'],
     faq: [
       {

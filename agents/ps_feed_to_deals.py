@@ -84,9 +84,21 @@ def product_to_deal(p: dict, magazin: str, categorie: str, allowed_cats: list | 
 def fetch_deals(magazin: str, adv_id: int, categorie: str, max_pages: int = 20, min_pct: int = 10, allowed_cats: list | None = None):
     deals = []
     for page in range(1, max_pages + 1):
-        resp = call("GET", "affiliate-products", f"filters[advertiser]={adv_id}&page={page}")
-        if not resp.ok:
-            print(f"  {magazin} page {page}: fail {resp.status_code}")
+        resp = None
+        # Retry with exponential backoff on 429
+        for attempt in range(4):
+            resp = call("GET", "affiliate-products", f"filters[advertiser]={adv_id}&page={page}")
+            if resp.ok:
+                break
+            if resp.status_code == 429:
+                wait = 2 ** attempt  # 1, 2, 4, 8 seconds
+                print(f"  {magazin} page {page}: 429 backoff {wait}s (attempt {attempt+1}/4)")
+                time.sleep(wait)
+                continue
+            # Non-429 error: stop
+            break
+        if resp is None or not resp.ok:
+            print(f"  {magazin} page {page}: fail {resp.status_code if resp else 'no-response'}")
             break
         products = resp.json().get("result", {}).get("products", [])
         if not products:
@@ -112,9 +124,14 @@ def main():
     # Per-merchant targets: (slug, ps_id, categorie, max_pages, min_pct, category_whitelist)
     # category_whitelist=None => all products; list => filter by feed's category_name
     VEGIS_FARMACIE = ["Produse Naturiste si Tratamente", "Cosmetice", "Ceaiuri"]
+    HIRIS_BEAUTY = ["Parfumuri & Deodorante", "Cosmetice"]
     targets = [
         ("vegis", 58221, "suplimente-bio", 25, 15, VEGIS_FARMACIE),
         ("mathaus", 124829, "casa-gradina", 50, 10, None),
+        # Sprint #37 additions (scan confirmed real discounts):
+        ("hiris", 71041, "beauty", 5, 15, HIRIS_BEAUTY),          # 55% hit rate, closes beauty gap
+        ("case-smart", 111470, "casa-gradina", 3, 10, None),       # 100% hit rate, smart home
+        ("novodoors", 166234, "casa-gradina", 3, 15, None),        # 100% hit rate, usi metalice
     ]
 
     all_new = []
