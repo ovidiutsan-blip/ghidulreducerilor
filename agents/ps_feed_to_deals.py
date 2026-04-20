@@ -1,4 +1,4 @@
-"""Profitshare feed -> data/deals.json transformer.
+﻿"""Profitshare feed -> data/deals.json transformer.
 For each target merchant, fetch N pages, filter for real discounts (price_discounted < price_vat),
 map to Deal schema, merge into existing deals.json (dedupe by product_url).
 """
@@ -125,6 +125,8 @@ def main():
     # category_whitelist=None => all products; list => filter by feed's category_name
     VEGIS_FARMACIE = ["Produse Naturiste si Tratamente", "Cosmetice", "Ceaiuri"]
     HIRIS_BEAUTY = ["Parfumuri & Deodorante", "Cosmetice"]
+    TECHSTAR_CASA = ["Electrice & Iluminat", "Electrocasnice Mici", "Ustensile bucatarie", "Scule si unelte", "Iluminat"]
+    HOTPICK_CASA = ["Bucatarie si servire", "Blendere & Tocatoare", "Electrocasnice Mici", "Sandwich-maker & Waffe", "Aspiratoare"]
     targets = [
         ("vegis", 58221, "suplimente-bio", 25, 15, VEGIS_FARMACIE),
         ("mathaus", 124829, "casa-gradina", 50, 10, None),
@@ -132,6 +134,9 @@ def main():
         ("hiris", 71041, "beauty", 5, 15, HIRIS_BEAUTY),          # 55% hit rate, closes beauty gap
         ("case-smart", 111470, "casa-gradina", 3, 10, None),       # 100% hit rate, smart home
         ("novodoors", 166234, "casa-gradina", 3, 15, None),        # 100% hit rate, usi metalice
+        # Sprint #38 additions (v2 scan):
+        ("techstar", 88017, "casa-gradina", 4, 15, TECHSTAR_CASA),  # 65% hit rate, mixed retail (whitelist casa-fit)
+        ("hotpick", 142963, "casa-gradina", 4, 15, HOTPICK_CASA),   # 35% hit rate, resigilate kitchen
     ]
 
     all_new = []
