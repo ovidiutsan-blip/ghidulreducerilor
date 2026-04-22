@@ -1,0 +1,77 @@
+name: 📝 Blog Săptămânal — Top Reduceri
+
+on:
+  schedule:
+    # Monday 07:00 UTC = 09:00 România
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  generate:
+    name: Generate Weekly Blog Post
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📦 Install dependencies (minimal — script uses only stdlib)
+        run: echo "no-op, stdlib only"
+
+      - name: ✍️ Generate weekly blog post
+        id: generate
+        continue-on-error: true
+        run: python scripts/generate_weekly_blog.py
+
+      - name: 💾 Commit generated article
+        if: steps.generate.outcome == 'success'
+        run: |
+          git config user.name "GhidulReducerilor Bot"
+          git config user.email "bot@ghidulreducerilor.ro"
+          git add app/blog/articles/top-reduceri-saptamana-*.tsx lib/blog.ts
+          git diff --staged --quiet || git commit -m "🤖 Auto-blog: Top reduceri săptămâna $(date +%Y-W%V)"
+
+      - name: 📤 Push la GitHub (trigger Vercel redeploy)
+        if: steps.generate.outcome == 'success'
+        run: git push
+
+      - name: 🚨 Creare issue la eșec
+        if: steps.generate.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const date = new Date().toISOString().split('T')[0];
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const body = [
+              `## 🔴 Weekly Blog Generator Failure — ${date}`,
+              '',
+              '**Workflow:** `.github/workflows/weekly-blog.yml`',
+              `**Run URL:** ${runUrl}`,
+              '',
+              '**Next steps:**',
+              '1. Deschide run-ul pentru log-uri detaliate',
+              '2. Verifică local `python scripts/generate_weekly_blog.py`',
+              '3. Cauze frecvente: insufficient deals cu discount ≥25%, format JSON corupt, import TS stricat',
+              '',
+              '_Auto-created by weekly-blog workflow._'
+            ].join('\n');
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🔴 Weekly blog failed ${date}`,
+              body: body,
+              labels: ['automation', 'blog-failure']
+            });
