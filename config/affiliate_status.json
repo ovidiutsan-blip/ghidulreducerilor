@@ -1,37 +1,110 @@
 {
-  "_instructiuni": "Actualizează statusul după fiecare pas. Valori: neaplicat / aplicat / aprobat / respins",
-  "_ultima_actualizare": "2026-03-29",
+  "_instructiuni": "Actualizeaza statusul dupa fiecare pas. Valori: neaplicat / aplicat / aprobat / respins / past",
+  "_ultima_actualizare": "2026-04-22",
+  "_sursa_verificare": "Verificat live pe app.profitshare.ro + businessleague.2performant.com in sesiunea Cowork din 2026-04-22",
 
   "notino": {
-    "status": "neaplicat",
+    "status": "aprobat",
     "platform": "2performant",
-    "data_aplicare": null,
-    "data_aprobare": null,
-    "affiliate_id": null,
-    "campaign_id": null,
+    "data_aplicare": "2026-04-14",
+    "data_aprobare": "2026-04-14",
+    "affiliate_id": "d8b71657a",
+    "campaign_id": "c6dae5faa",
     "comision": "~8%",
-    "note": ""
+    "note": "LIVE pe site. Feed activ via 2P quicklink."
   },
   "answear": {
-    "status": "neaplicat",
+    "status": "aprobat",
     "platform": "2performant",
-    "data_aplicare": null,
-    "data_aprobare": null,
-    "affiliate_id": null,
-    "campaign_id": null,
+    "data_aplicare": "2026-04-14",
+    "data_aprobare": "2026-04-14",
+    "affiliate_id": "d8b71657a",
+    "campaign_id": "a5e9e1225",
     "comision": "~8-10%",
-    "note": ""
+    "note": "LIVE pe site."
   },
+  "dr_max": {
+    "status": "aprobat",
+    "platform": "2performant",
+    "data_aplicare": "2026-04-14",
+    "data_aprobare": "2026-04-14",
+    "affiliate_id": "d8b71657a",
+    "campaign_id": "6390e3cfb",
+    "comision": "~5-8%",
+    "note": "LIVE pe site. Alternativa farmacie (vs catena)."
+  },
+  "ginissima": {
+    "status": "aprobat",
+    "platform": "2performant",
+    "data_aplicare": "2026-04-04",
+    "data_aprobare": "2026-04-04",
+    "affiliate_id": "d8b71657a",
+    "campaign_id": null,
+    "comision": null,
+    "note": "2P approved. Nu e inca pe site. Nisa: haute-couture/rochii premium."
+  },
+  "lumaro": {
+    "status": "aprobat",
+    "platform": "2performant",
+    "data_aplicare": "2026-04-04",
+    "data_aprobare": "2026-04-04",
+    "affiliate_id": "d8b71657a",
+    "campaign_id": null,
+    "comision": null,
+    "note": "2P approved. Nu e inca pe site. Nisa: lumanari parfumate premium."
+  },
+  "bonami": {
+    "status": "aprobat",
+    "platform": "2performant",
+    "data_aplicare": "2026-04-20",
+    "data_aprobare": "2026-04-20",
+    "affiliate_id": "d8b71657a",
+    "campaign_id": null,
+    "comision": null,
+    "note": "2P approved 2026-04-20 (era pending in memoria 2026-04-18). Nisa: decor casa/mobila designer."
+  },
+
   "decathlon": {
-    "status": "neaplicat",
+    "status": "past",
     "platform": "2performant",
     "data_aplicare": null,
     "data_aprobare": null,
     "affiliate_id": null,
     "campaign_id": null,
     "comision": "~3-5%",
-    "note": "Necesită conținut sportiv vizibil pe site înainte de aplicare"
+    "note": "Past pe 2P. Necesita reaplicare cu content sportiv vizibil."
   },
+  "fashiondays": {
+    "status": "aprobat",
+    "platform": "profitshare",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": null,
+    "note": "LIVE pe site via Profitshare (past pe 2P; NU reaplica pe 2P). Feed 0 produse la 2026-04-18, triaj ramane."
+  },
+  "elefant": {
+    "status": "aprobat",
+    "platform": "profitshare",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": null,
+    "note": "LIVE pe site via Profitshare. Past pe 2P dar reaparent in Recommendation Engine 2P (2026-04-22) - POT reaplica pe 2P pentru comision mai bun daca este cazul."
+  },
+  "thecope_ie": {
+    "status": "past",
+    "platform": "2performant",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": null,
+    "note": "Past pe 2P. .ie domain, audienta Irish - nu este relevant pentru RO."
+  },
+
   "cel": {
     "status": "neaplicat",
     "platform": "2performant",
@@ -40,7 +113,7 @@
     "affiliate_id": null,
     "campaign_id": null,
     "comision": "~2-4%",
-    "note": ""
+    "note": "Retail mare. De evaluat vs emag (already PS approved)."
   },
   "pcgarage": {
     "status": "neaplicat",
@@ -51,16 +124,83 @@
     "campaign_id": null,
     "comision": "1%",
     "cookie_zile": 30,
-    "note": "Cookie 24h de Black Friday"
+    "note": "Cookie 24h de Black Friday. Low commission - priority LOW."
   },
-  "dr_max": {
+
+  "bestkids": {
+    "status": "neaplicat",
+    "platform": "profitshare",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": null,
+    "note": "CANDIDAT PS - categoria Copii si Jucarii. Unfollowed pe app.profitshare.ro la 2026-04-22. Niche copii nu e acoperit. Apply: https://app.profitshare.ro/affiliate/program/bestkids"
+  },
+  "transilvaniamag": {
+    "status": "neaplicat",
+    "platform": "profitshare",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": null,
+    "note": "CANDIDAT PS - categoria Retail. Unfollowed pe app.profitshare.ro la 2026-04-22. De evaluat overlap cu emag."
+  },
+
+  "springfarma": {
     "status": "neaplicat",
     "platform": "2performant",
     "data_aplicare": null,
     "data_aprobare": null,
     "affiliate_id": null,
     "campaign_id": null,
-    "comision": "~5-8%",
-    "note": "Alternativa pentru Catena — farmacie"
+    "comision": "variable",
+    "cookie_zile": 15,
+    "note": "CANDIDAT 2P - Pharma. Top by Sales (9146 sales). Complementar drmax pentru hub farmacie-sanatate. Apply via Recommendation Engine."
+  },
+  "petmart": {
+    "status": "neaplicat",
+    "platform": "2performant",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": "percent",
+    "cookie_zile": 30,
+    "note": "CANDIDAT 2P - Pet supplies. 2067 sales. Categoria Pet NOUA - nu exista pe site. Apply via Recommendation Engine."
+  },
+  "petmax": {
+    "status": "neaplicat",
+    "platform": "2performant",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": "percent",
+    "cookie_zile": 30,
+    "note": "CANDIDAT 2P - Pet supplies. 4383 sales. Alternativa/complement petmart. De ales unul singur initial."
+  },
+  "scule365": {
+    "status": "neaplicat",
+    "platform": "2performant",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": "percent",
+    "cookie_zile": 60,
+    "note": "CANDIDAT 2P - Home & Garden / bricolaj. 3757 sales. Cookie 60 zile = cea mai buna atributie. Complementar mathaus pentru hub casa-gradina."
+  },
+  "bookzone": {
+    "status": "neaplicat",
+    "platform": "2performant",
+    "data_aplicare": null,
+    "data_aprobare": null,
+    "affiliate_id": null,
+    "campaign_id": null,
+    "comision": "percent",
+    "cookie_zile": 30,
+    "note": "CANDIDAT 2P - Books. 18409 sales (cel mai mare volum). Complementar libris pentru hub carti. PRIORITATE MAXIMA."
   }
 }
