@@ -216,6 +216,18 @@
     "retea": "2performant"
   },
   {
+    "id": "scule365",
+    "nume": "Scule365",
+    "slug": "scule365",
+    "descriere": "Scule365.ro este un magazin online specializat in scule electrice, scule de mana si echipamente pentru gradinarit, bricolaj si constructii. Ofera branduri consacrate (Bosch, Makita, Einhell, Stanley) cu garantie, livrare rapida si cookie de atributie 60 zile pentru campanii afiliate.",
+    "logo_emoji": "",
+    "culoare": "#E65100",
+    "categorie_principala": "casa-gradina",
+    "url_site": "https://www.scule365.ro",
+    "comision_mediu": "7%",
+    "retea": "2performant"
+  },
+  {
     "id": "drmax",
     "nume": "Dr.Max",
     "slug": "drmax",

@@ -149,26 +149,26 @@
   },
 
   "springfarma": {
-    "status": "neaplicat",
+    "status": "aplicat",
     "platform": "2performant",
-    "data_aplicare": null,
+    "data_aplicare": "2026-04-22",
     "data_aprobare": null,
     "affiliate_id": null,
     "campaign_id": null,
     "comision": "variable",
     "cookie_zile": 15,
-    "note": "CANDIDAT 2P - Pharma. Top by Sales (9146 sales). Complementar drmax pentru hub farmacie-sanatate. Apply via Recommendation Engine."
+    "note": "2P pending. Auto-approve in 15 zile daca nu e respins. Pharma, 9146 sales. Complementar drmax pentru hub farmacie-sanatate."
   },
   "petmart": {
-    "status": "neaplicat",
+    "status": "aplicat",
     "platform": "2performant",
-    "data_aplicare": null,
+    "data_aplicare": "2026-04-22",
     "data_aprobare": null,
     "affiliate_id": null,
     "campaign_id": null,
     "comision": "percent",
     "cookie_zile": 30,
-    "note": "CANDIDAT 2P - Pet supplies. 2067 sales. Categoria Pet NOUA - nu exista pe site. Apply via Recommendation Engine."
+    "note": "2P pending. Auto-approve in 15 zile daca nu e respins. Pet supplies, 2067 sales. Categoria Pet NOUA - nu exista inca pe site."
   },
   "petmax": {
     "status": "neaplicat",
@@ -182,25 +182,25 @@
     "note": "CANDIDAT 2P - Pet supplies. 4383 sales. Alternativa/complement petmart. De ales unul singur initial."
   },
   "scule365": {
-    "status": "neaplicat",
+    "status": "aprobat",
     "platform": "2performant",
-    "data_aplicare": null,
-    "data_aprobare": null,
-    "affiliate_id": null,
-    "campaign_id": null,
-    "comision": "percent",
+    "data_aplicare": "2026-04-22",
+    "data_aprobare": "2026-04-22",
+    "affiliate_id": "d8b71657a",
+    "campaign_id": "8e59c17b0",
+    "comision": "7%",
     "cookie_zile": 60,
-    "note": "CANDIDAT 2P - Home & Garden / bricolaj. 3757 sales. Cookie 60 zile = cea mai buna atributie. Complementar mathaus pentru hub casa-gradina."
+    "note": "2P approved 2026-04-22. Home & Garden / bricolaj. 2680 sales, CR 5.21%, EPC 20.66€. Complementar mathaus pentru hub casa-gradina. Feed disponibil (1 feed, 37 banners)."
   },
   "bookzone": {
-    "status": "neaplicat",
+    "status": "aplicat",
     "platform": "2performant",
-    "data_aplicare": null,
+    "data_aplicare": "2026-04-22",
     "data_aprobare": null,
     "affiliate_id": null,
     "campaign_id": null,
     "comision": "percent",
     "cookie_zile": 30,
-    "note": "CANDIDAT 2P - Books. 18409 sales (cel mai mare volum). Complementar libris pentru hub carti. PRIORITATE MAXIMA."
+    "note": "2P pending. Auto-approve in 15 zile daca nu e respins. Books, 18409 sales (cel mai mare volum). Complementar libris pentru hub carti."
   }
 }

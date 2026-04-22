@@ -339,5 +339,36 @@
     "rate_limit_seconds": 1.0,
     "min_discount": 15,
     "comision": 1
+  },
+
+  "scule365": {
+    "name": "Scule365",
+    "slug": "scule365",
+    "affiliate_network": "2performant",
+    "status": "feed_only",
+    "_note": "Scule365 aprobat pe 2Performant 2026-04-22. Categoria Home & Garden / bricolaj. Feed 2P disponibil (1 feed updated daily). Cookie 60 zile = cea mai buna atributie. Complementar mathaus pentru hub casa-gradina. Populare prin ps_feed_to_deals.py pattern (adaptat pentru 2P feed).",
+    "base_url": "https://www.scule365.ro",
+    "twoperformant": {
+      "campaign_id": "8e59c17b0",
+      "aff_code": "d8b71657a"
+    },
+    "categories": [
+      {"name": "scule-electrice", "url": "https://www.scule365.ro/scule-electrice"},
+      {"name": "scule-mana", "url": "https://www.scule365.ro/scule-mana"},
+      {"name": "gradina", "url": "https://www.scule365.ro/gradina"}
+    ],
+    "selectors": {
+      "card": ".product-card, .product-item, [class*='ProductCard']",
+      "title": ".product-name, .product-title, h3 a, a[title]",
+      "product_link": "a[href*='scule365.ro']",
+      "image": "img[src*='http']",
+      "price_elements": "[class*='price'], [class*='Price']"
+    },
+    "image_strategy": "card_image",
+    "max_products_per_category": 8,
+    "max_pages": 2,
+    "rate_limit_seconds": 1.5,
+    "min_discount": 10,
+    "comision": 7
   }
 }
