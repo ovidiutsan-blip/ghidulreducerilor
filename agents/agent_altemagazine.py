@@ -378,13 +378,32 @@ def scrape_evomag(config: dict) -> list:
                         if link.startswith("/"):
                             link = "https://www.evomag.ro" + link
 
-                        img_el = card.select_one("img[src*='http']")
-                        img_url = img_el.get("src", "") if img_el else ""
+                        img_el = card.select_one("img")
+                        img_url = ""
+                        if img_el:
+                            img_url = (
+                                img_el.get("src")
+                                or img_el.get("data-src")
+                                or img_el.get("data-original")
+                                or ""
+                            )
+                            if img_url.startswith("//"):
+                                img_url = "https:" + img_url
+                            elif img_url.startswith("/"):
+                                img_url = "https://www.evomag.ro" + img_url
+
+                        # evoMAG foloseste <sup>XX</sup> pentru bani (ex: 432<sup>99</sup>)
+                        # Inserez virgula inainte ca get_text() sa lipeasca cifrele.
+                        for sup in card.find_all("sup"):
+                            sup_text = sup.get_text(strip=True)
+                            if sup_text.isdigit() and len(sup_text) <= 2:
+                                sup.string = "," + sup_text
 
                         prices = []
-                        for p_el in card.select("[class*='price'], .money, .pret"):
+                        # Selectori stricti pt evoMAG, evit <sup> orfane
+                        for p_el in card.select(".product_pret, .npi_pret, .price, .pret, [class*='product_pret']"):
                             val = extract_price(p_el.get_text(strip=True))
-                            if val > 0:
+                            if val >= 1:  # ignor fragmente sub 1 leu
                                 prices.append(val)
 
                         if len(prices) < 2:
@@ -392,6 +411,9 @@ def scrape_evomag(config: dict) -> list:
 
                         price_new = min(prices)
                         price_old = max(prices)
+                        # Sanity: daca price_new e sub 1/5 din price_old, skip (probabil parsing greșit)
+                        if price_new * 5 < price_old:
+                            continue
                         disc = discount_pct(price_old, price_new)
 
                         if disc < min_discount or price_new <= 0:
