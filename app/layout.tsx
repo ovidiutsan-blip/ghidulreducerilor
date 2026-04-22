@@ -30,7 +30,12 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/api/og`],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: '/' },
+  alternates: {
+    canonical: '/',
+    types: {
+      'application/rss+xml': [{ url: '/rss.xml', title: 'GhidulReducerilor.ro — Feed RSS' }],
+    },
+  },
 }
 
 // Organization Schema JSON-LD
@@ -69,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="alternate" type="application/rss+xml" title="GhidulReducerilor.ro — Feed RSS" href="/rss.xml" />
         <meta name="theme-color" content="#E8262A" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="profitshareid" content="2fbe74572bd296845e920501e42623f6" />
