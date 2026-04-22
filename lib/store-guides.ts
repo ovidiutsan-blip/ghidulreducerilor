@@ -30,7 +30,7 @@ export const STORE_GUIDES: StoreGuide[] = [
     slug: 'notino',
     storeSlug: 'notino',
     title: 'Ghid Notino — Cum cumperi parfumuri originale cu reducere',
-    metaTitle: 'Ghid Notino 2026 — Reduceri, Coduri Promo si Tips | GhidulReducerilor.ro',
+    metaTitle: 'Ghid Notino 2026 — Reduceri, Coduri Promo si Tips',
     metaDescription: 'Ghid complet Notino 2026: când sunt cele mai mari reduceri, cum folosești codurile promo, livrare, retur 14 zile și autenticitate 100%.',
     intro: 'Notino este cel mai mare retailer online de parfumuri și cosmetice din Europa Centrală și de Est, cu peste 85.000 de produse de la branduri de lux precum Chanel, Dior, Lancôme, Yves Saint Laurent, Paco Rabanne sau Versace. Pentru cumpărători din România, Notino combină garanția autenticității cu prețuri care deseori bat piața locală cu 20-40%, mai ales la parfumuri tester și la edițiile limitate. În acest ghid găsești tot ce trebuie să știi ca să cumperi inteligent de pe Notino în 2026: când se fac cele mai bune reduceri, cum folosești un cod promo fără să pierzi alte discount-uri, ce să verifici înainte să plasezi comanda, cum funcționează returul și de ce preocuparea legitimă legată de autenticitate nu e o problemă reală la Notino.',
     sections: [
@@ -66,7 +66,7 @@ export const STORE_GUIDES: StoreGuide[] = [
     slug: 'answear',
     storeSlug: 'answear',
     title: 'Ghid Answear — Cum cumperi haine branded cu reducere',
-    metaTitle: 'Ghid Answear 2026 — Reduceri, Campanii si Tips | GhidulReducerilor.ro',
+    metaTitle: 'Ghid Answear 2026 — Reduceri, Campanii si Tips',
     metaDescription: 'Ghid Answear 2026: când sunt reducerile mari pe Tommy Hilfiger, Calvin Klein, Guess. Cum aplici codurile, livrare gratuită, retur 30 zile.',
     intro: 'Answear.ro este unul dintre puținele magazine online din România care aduce constant branduri internaționale premium și le menține la prețuri competitive. Cu peste 400 de mărci în catalog — de la Tommy Hilfiger, Calvin Klein și Guess, până la Lacoste, Armani și Levi\'s — Answear acoperă aproape toată piața de fashion branded pentru adulți și copii. Pentru cumpărătorul din România, avantajul principal e că poți găsi articole oficiale cu 30-60% mai ieftin decât în magazinele fizice, mai ales în timpul campaniilor sezoniere. Acest ghid îți arată când să cumperi de pe Answear, cum să combini reducerile cu codurile promo pentru prețul minim, și la ce să fii atent înainte să plasezi comanda — în special la mărimi, care diferă vizibil între brandurile europene și americane.',
     sections: [
@@ -102,7 +102,7 @@ export const STORE_GUIDES: StoreGuide[] = [
     slug: 'drmax',
     storeSlug: 'drmax',
     title: 'Ghid Dr.Max — Cum cumperi suplimente și cosmetică dermato cu reducere',
-    metaTitle: 'Ghid Dr.Max 2026 — Reduceri Farmacie Online | GhidulReducerilor.ro',
+    metaTitle: 'Ghid Dr.Max 2026 — Reduceri Farmacie Online',
     metaDescription: 'Ghid Dr.Max 2026: când sunt cele mai mari reduceri pe suplimente, cosmetică dermato, medicamente OTC. Coduri promo, livrare, ridicare din farmacie.',
     intro: 'Dr.Max este cea mai mare rețea de farmacii din Europa Centrală și de Est, cu peste 2.000 de puncte fizice și un magazin online dezvoltat care servește și România. Pentru cumpărătorul român, Dr.Max combină trei avantaje greu de găsit în altă parte: prețuri competitive la medicamentele fără prescripție (OTC), o selecție solidă de cosmetică dermato (La Roche-Posay, Vichy, Avène, Bioderma) și opțiunea de ridicare gratuită din farmacia fizică. Acest ghid explică cum să profiți de campaniile Dr.Max, cum să combini un cod promo cu reducerile existente (unde se permite), și când merită să comanzi online vs. să mergi fizic în farmacie.',
     sections: [
@@ -138,7 +138,7 @@ export const STORE_GUIDES: StoreGuide[] = [
     slug: 'fashiondays',
     storeSlug: 'fashiondays',
     title: 'Ghid Fashion Days — Cum profiți de reducerile flash',
-    metaTitle: 'Ghid Fashion Days 2026 — Campanii Flash si Tips | GhidulReducerilor.ro',
+    metaTitle: 'Ghid Fashion Days 2026 — Campanii Flash si Tips',
     metaDescription: 'Ghid Fashion Days 2026: cum funcționează campaniile flash, când sunt reducerile până la -80%, livrare gratuită easybox, retur 30 zile.',
     intro: 'Fashion Days este cel mai mare retailer fashion online din România, parte din grupul eMAG. Modelul de business e diferit de al competitorilor clasici: Fashion Days rulează "campanii flash" pe durate scurte (3-7 zile) cu reduceri agresive de 50-80%, pe branduri selectate. Stocurile sunt limitate, iar produsele dispar în câteva ore la mărimile populare. Acest ghid îți explică cum funcționează calendarul de campanii, cum să nu ratezi oferte bune, cum folosești integrarea cu Genius și avantajele livrării prin easybox-urile eMAG.',
     sections: [
@@ -174,7 +174,7 @@ export const STORE_GUIDES: StoreGuide[] = [
     slug: 'libris',
     storeSlug: 'libris',
     title: 'Ghid Libris — Cum cumperi cărți cu reducere',
-    metaTitle: 'Ghid Libris 2026 — Reduceri, Campanii si Newsletter | GhidulReducerilor.ro',
+    metaTitle: 'Ghid Libris 2026 — Reduceri, Campanii si Newsletter',
     metaDescription: 'Ghid Libris 2026: calendar reduceri, cum folosești codurile promo, livrare easybox gratuită, retur 30 zile, secțiunea de cărți la 5 lei.',
     intro: 'Libris.ro este cel mai mare retailer online de cărți din România, cu peste 1 milion de titluri în română și engleză. Pentru cititori, Libris e o resursă zilnică datorită politicii agresive de reduceri — aproape niciun titlu nu se vinde la "preț de copertă", iar discount-urile medii sunt 25-45%. Catalogul include nu doar ficțiune și non-ficțiune, ci și manuale școlare, cărți pentru copii, jocuri educative și papetărie. Acest ghid îți arată cum să profiți de campaniile Libris, cum găsești "chilipirurile" la 5-15 lei, și cum abonamentul la newsletter îți aduce cele mai bune coduri promo.',
     sections: [
@@ -210,7 +210,7 @@ export const STORE_GUIDES: StoreGuide[] = [
     slug: 'elefant',
     storeSlug: 'elefant',
     title: 'Ghid Elefant — Cum cumperi cărți și produse pentru copii cu reducere',
-    metaTitle: 'Ghid Elefant 2026 — Reduceri, Carti, Jucarii | GhidulReducerilor.ro',
+    metaTitle: 'Ghid Elefant 2026 — Reduceri, Carti, Jucarii',
     metaDescription: 'Ghid Elefant 2026: când sunt reducerile, cum folosești codurile promo, livrare rapidă, retur 30 zile, secțiunea Outlet cu prețuri de stock.',
     intro: 'Elefant.ro este printre cei mai mari retaileri online din România pentru cărți, filme, jocuri, produse pentru copii și muzică, cu peste 500.000 de articole în catalog. Poziționarea sa diferă de Libris: Elefant pune accent pe diversitate (nu doar cărți, ci și jucării educative, DVD-uri, discuri vinil, produse pentru bebeluși) și pe reducerile agresive din "Outlet". Pentru familii cu copii mici și pentru colecționari (filme și muzică), Elefant e aproape imbatabil la raportul preț-diversitate. Acest ghid îți arată când sunt cele mai bune reduceri, cum folosești cupoanele, și de ce merită să verifici regulat secțiunea Outlet.',
     sections: [
@@ -246,7 +246,7 @@ export const STORE_GUIDES: StoreGuide[] = [
     slug: 'vegis',
     storeSlug: 'vegis',
     title: 'Ghid Vegis — Cum cumperi suplimente și produse bio cu reducere',
-    metaTitle: 'Ghid Vegis 2026 — Suplimente si Cosmetice Bio | GhidulReducerilor.ro',
+    metaTitle: 'Ghid Vegis 2026 — Suplimente si Cosmetice Bio',
     metaDescription: 'Ghid Vegis 2026: campanii sezoniere pe suplimente (Secom, Solgar), cosmetica bio (Weleda), livrare rapidă, consultanță farmaciști.',
     intro: 'Vegis.ro este cea mai mare platformă online specializată în produse naturiste, suplimente alimentare și cosmetică bio din România. Catalogul cu peste 20.000 de produse include branduri premium ca Solgar, Secom, Herbagetica, Weleda, Lavera și Dr. Hauschka. Ceea ce diferențiază Vegis de Dr.Max sau eMAG este expertiza: multe pagini produs au recomandări scrise de farmaciști și nutriționiști, iar suportul pe chat oferă consiliere gratuită. Acest ghid îți arată când sunt reducerile, cum să combini produse în pachete la preț mai mic, și de ce merită să compari cu Dr.Max înainte de comandă.',
     sections: [
@@ -282,7 +282,7 @@ export const STORE_GUIDES: StoreGuide[] = [
     slug: 'mathaus',
     storeSlug: 'mathaus',
     title: 'Ghid MatHaus — Cum cumperi materiale de construcții și bricolaj cu reducere',
-    metaTitle: 'Ghid MatHaus 2026 — Materiale Constructii si Bricolaj | GhidulReducerilor.ro',
+    metaTitle: 'Ghid MatHaus 2026 — Materiale Constructii si Bricolaj',
     metaDescription: 'Ghid MatHaus 2026: când sunt reducerile pe materiale de construcții, livrare mare volum, tips pentru renovări la preț mic.',
     intro: 'MatHaus.ro este unul dintre cele mai mari magazine online de materiale de construcții, amenajări interioare și bricolaj din România. Catalogul acoperă tot ce îți trebuie pentru un proiect DIY sau renovare completă: vopsele, gresie, faianță, instalații sanitare, scule electrice, iluminat, mobilier de grădină. Pentru cumpărătorul atent la buget, MatHaus poate aduce economii semnificative față de Dedeman sau Leroy Merlin, mai ales la campaniile majore. Acest ghid îți explică calendarul reducerilor, cum funcționează livrarea de volume mari, și ce să verifici înainte de o comandă mare pentru renovare.',
     sections: [
