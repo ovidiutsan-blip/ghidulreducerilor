@@ -290,7 +290,12 @@ def audit_images(deals: list) -> dict:
         }
     }
 
-    placeholder_patterns = ['unsplash.com', 'placeholder.com', 'placehold.co', 'placekitten.com']
+    # Generic placeholder hosts + CDN-side lazy-load placeholders
+    placeholder_patterns = [
+        'unsplash.com', 'placeholder.com', 'placehold.co', 'placekitten.com',
+        'lazy-loader', 'lazy_loader', 'lazyload', '/loader.gif', 'no-image', 'noimage',
+        'coming-soon', 'default.jpg', 'default.png'
+    ]
 
     for deal in deals:
         img = deal.get('image') or deal.get('imagine_url', '')
@@ -330,6 +335,65 @@ def audit_images(deals: list) -> dict:
     logger.info(
         f"  Images: {result['details']['real_count']} real, "
         f"{placeholders} placeholder, {missing} missing"
+    )
+    return result
+
+
+# ============================================================
+# CHECK 4b: Image Hosts Whitelist (Next/Image)
+# ============================================================
+def audit_image_hosts(deals: list) -> dict:
+    """Verify every image host is in next.config.js remotePatterns, else Next/Image returns 400."""
+    import re as _re
+    logger.info("=== CHECK 4b: Image Hosts Whitelist ===")
+    result = {
+        'check': 'image_hosts',
+        'status': 'pass',
+        'issues': [],
+        'details': {'hosts': {}, 'blocked': []}
+    }
+
+    # Parse whitelist from next.config.js
+    cfg_path = ROOT / 'next.config.js'
+    whitelist = []
+    if cfg_path.exists():
+        text = cfg_path.read_text(encoding='utf-8')
+        whitelist = _re.findall(r"hostname:\s*['\"]([^'\"]+)['\"]", text)
+
+    def matches(host: str) -> bool:
+        for pat in whitelist:
+            if pat.startswith('**.'):
+                if host.endswith(pat[2:]) or host == pat[3:]:
+                    return True
+            elif host == pat:
+                return True
+        return False
+
+    counts = {}
+    blocked_deals = []
+    for d in deals:
+        img = d.get('image') or d.get('imagine_url', '')
+        if not img: continue
+        m = _re.match(r'https?://([^/]+)/', img)
+        if not m: continue
+        host = m.group(1)
+        counts[host] = counts.get(host, 0) + 1
+        if not matches(host):
+            blocked_deals.append(d.get('id', '<no-id>'))
+
+    result['details']['hosts'] = counts
+    result['details']['blocked'] = blocked_deals[:20]
+
+    if blocked_deals:
+        bad_hosts = {h for h in counts if not matches(h)}
+        result['issues'].append(
+            f"{len(blocked_deals)} deals have image hosts NOT in next.config.js whitelist: {sorted(bad_hosts)}"
+        )
+        result['status'] = 'fail'
+
+    logger.info(
+        f"  Image hosts: {len(counts)} unique, "
+        f"{len(blocked_deals)} deals blocked by Next/Image"
     )
     return result
 
@@ -550,6 +614,9 @@ def run_audit(skip_links: bool = False) -> dict:
 
     # 4. Images
     checks.append(audit_images(deals))
+
+    # 4b. Image hosts whitelist (Next/Image remotePatterns)
+    checks.append(audit_image_hosts(deals))
 
     # 5. Data quality
     checks.append(audit_data_quality(deals, codes))
