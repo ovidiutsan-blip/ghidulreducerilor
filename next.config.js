@@ -60,6 +60,14 @@ const nextConfig = {
       // Streamstore domain fallback
       { protocol: 'https', hostname: '**.streamstore.ro' },
       { protocol: 'https', hostname: 'streamstore.ro' },
+      // Case-smart (WordPress/WooCommerce, wp-content/uploads)
+      { protocol: 'https', hostname: 'case-smart.ro' },
+      { protocol: 'https', hostname: '**.case-smart.ro' },
+      // Novodoors, Techstar, Forit (PS-imported merchants — check if on own domain)
+      { protocol: 'https', hostname: '**.novodoors.ro' },
+      { protocol: 'https', hostname: 'novodoors.ro' },
+      { protocol: 'https', hostname: '**.techstar.ro' },
+      { protocol: 'https', hostname: 'techstar.ro' },
       // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.shopify.com' },
