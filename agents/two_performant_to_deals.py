@@ -41,29 +41,32 @@ CLIENT_ID    = _clean_env("TWO_PERFORMANT_CLIENT_ID")
 UID          = _clean_env("TWO_PERFORMANT_UID", "ovidiutsan@yahoo.com")
 AFF_CODE     = _clean_env("TWO_PERFORMANT_MARKETER_CODE", "d8b71657a")
 
-BASE       = Path(__file__).resolve().parent.parent
-DEALS_PATH = BASE / "data" / "deals.json"
-LOG_PATH   = BASE / "logs" / "two_performant_import.log"
+BASE            = Path(__file__).resolve().parent.parent
+DEALS_PATH      = BASE / "data" / "deals.json"
+LOG_PATH        = BASE / "logs" / "two_performant_import.log"
+MERCHANTS_PATH  = Path(__file__).resolve().parent / "2p_merchants.json"
 LOG_PATH.parent.mkdir(exist_ok=True)
 
-# ─── Programe aprobate (unique_code din /affiliate/programs?state=accepted) ──
-# Adauga noi randuri cand primesti aprobare de la un program nou.
-# Status la 2026-04-23:
-#   answear.ro    → aff=accepted  ✅
-#   drmax.ro      → aff=accepted  ✅
-#   springfarma   → aff=accepted  ✅ (adaugat 2026-04-23)
-#   scule365.ro   → aff=accepted  ✅ (adaugat 2026-04-23)
-#   elefant.ro    → aff=deleted   ❌ (afiliere revocata)
-#   fashiondays   → aff=deleted   ❌ (afiliere revocata)
-#   notino        → nu e pe 2P    ❌ (cauta pe alt network)
-#   bookzone.ro   → aff=pending   ⏳ (in asteptare aprobare)
-TARGETS = [
-    # slug,          unique_code,   categorie site,       max_pages, min_pct, cat_whitelist
-    ("answear",      "a5e9e1225",  "fashion",             20,  10, None),
-    ("drmax",        "6390e3cfb",  "farmacie-sanatate",   20,  10, None),
-    ("springfarma",  "1ec3596e6",  "farmacie-sanatate",   20,  10, None),
-    ("scule365",     "8e59c17b0",  "casa-gradina",        20,  10, None),
-]
+# ─── Programe aprobate — citite din agents/2p_merchants.json ─────────────────
+# Pentru a adauga un program nou: editeaza agents/2p_merchants.json (nu acest fisier).
+# Format entry: {"slug", "unique_code", "categorie", "max_pages", "min_pct",
+#                "cat_whitelist": null|[...], "activ": true}
+def _load_targets() -> list:
+    with open(MERCHANTS_PATH, encoding="utf-8") as f:
+        merchants = json.load(f)
+    return [
+        (m["slug"], m["unique_code"], m["categorie"],
+         m.get("max_pages", 20), m.get("min_pct", 10), m.get("cat_whitelist"))
+        for m in merchants if m.get("activ", True)
+    ]
+
+TARGETS = _load_targets()
+# TARGETS = [  # (kept for reference, now loaded from 2p_merchants.json)
+#     ("answear",      "a5e9e1225",  "fashion",             20,  10, None),
+#     ("drmax",        "6390e3cfb",  "farmacie-sanatate",   20,  10, None),
+#     ("springfarma",  "1ec3596e6",  "farmacie-sanatate",   20,  10, None),
+#     ("scule365",     "8e59c17b0",  "casa-gradina",        20,  10, None),
+# ]
 
 # ─── Auth (DeviseTokenAuth) ───────────────────────────────────────────────────
 def auth_headers() -> dict:

@@ -115,12 +115,17 @@ def run_auto_update(audit_only=False, dry_run=False):
 
 
     # === Step 3b: 2Performant Import ===
-    if not dry_run and os.getenv('TWO_PERFORMANT_USER_KEY'):
+    if not dry_run and os.getenv('TWO_PERFORMANT_ACCESS_TOKEN') and os.getenv('TWO_PERFORMANT_CLIENT_ID'):
         try:
             import subprocess, sys as _sys
             script = str(ROOT / 'agents' / 'two_performant_to_deals.py')
-            r2p = subprocess.run([_sys.executable, script], capture_output=True, text=True, timeout=120)
-            logger.info(r2p.stdout[-2000:] if r2p.stdout else '(no output)')
+            env2p = {**os.environ, 'PYTHONIOENCODING': 'utf-8'}
+            r2p = subprocess.run(
+                [_sys.executable, script],
+                capture_output=True, text=True, encoding='utf-8', errors='replace',
+                timeout=300, env=env2p
+            )
+            logger.info(r2p.stdout[-3000:] if r2p.stdout else '(no output)')
             if r2p.returncode != 0:
                 logger.warning(f"2Performant import exit {r2p.returncode}: {r2p.stderr[-500:]}")
             steps_results['two_performant'] = {'success': r2p.returncode == 0}
@@ -128,7 +133,7 @@ def run_auto_update(audit_only=False, dry_run=False):
             logger.warning(f"2Performant import skipped: {e}")
             steps_results['two_performant'] = {'success': False, 'skipped': True, 'reason': str(e)}
     else:
-        reason = 'dry_run' if dry_run else 'TWO_PERFORMANT_USER_KEY not set'
+        reason = 'dry_run' if dry_run else 'TWO_PERFORMANT_ACCESS_TOKEN/CLIENT_ID not set'
         logger.info(f"2Performant import skipped: {reason}")
         steps_results['two_performant'] = {'success': True, 'skipped': True, 'reason': reason}
 

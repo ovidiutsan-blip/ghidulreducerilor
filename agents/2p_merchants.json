@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "answear",
+    "unique_code": "a5e9e1225",
+    "categorie": "fashion",
+    "max_pages": 20,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Aprobat; 2Performant aff=accepted"
+  },
+  {
+    "slug": "drmax",
+    "unique_code": "6390e3cfb",
+    "categorie": "farmacie-sanatate",
+    "max_pages": 20,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Aprobat; 2Performant aff=accepted"
+  },
+  {
+    "slug": "springfarma",
+    "unique_code": "1ec3596e6",
+    "categorie": "farmacie-sanatate",
+    "max_pages": 20,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Aprobat 2026-04-23; 2Performant aff=accepted"
+  },
+  {
+    "slug": "scule365",
+    "unique_code": "8e59c17b0",
+    "categorie": "casa-gradina",
+    "max_pages": 20,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Aprobat 2026-04-23; 2Performant aff=accepted"
+  }
+]
