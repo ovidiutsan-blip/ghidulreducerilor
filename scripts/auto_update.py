@@ -113,6 +113,25 @@ def run_auto_update(audit_only=False, dry_run=False):
         logger.info(f"Profitshare link refresh skipped: {reason}")
         steps_results['profitshare'] = {'success': True, 'skipped': True, 'reason': reason}
 
+
+    # === Step 3b: 2Performant Import ===
+    if not dry_run and os.getenv('TWO_PERFORMANT_USER_KEY'):
+        try:
+            import subprocess, sys as _sys
+            script = str(ROOT / 'agents' / 'two_performant_to_deals.py')
+            r2p = subprocess.run([_sys.executable, script], capture_output=True, text=True, timeout=120)
+            logger.info(r2p.stdout[-2000:] if r2p.stdout else '(no output)')
+            if r2p.returncode != 0:
+                logger.warning(f"2Performant import exit {r2p.returncode}: {r2p.stderr[-500:]}")
+            steps_results['two_performant'] = {'success': r2p.returncode == 0}
+        except Exception as e:
+            logger.warning(f"2Performant import skipped: {e}")
+            steps_results['two_performant'] = {'success': False, 'skipped': True, 'reason': str(e)}
+    else:
+        reason = 'dry_run' if dry_run else 'TWO_PERFORMANT_USER_KEY not set'
+        logger.info(f"2Performant import skipped: {reason}")
+        steps_results['two_performant'] = {'success': True, 'skipped': True, 'reason': reason}
+
     # ═══ Step 4: Link Checker (verify) ═══
     if not dry_run:
         try:
