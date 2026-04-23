@@ -54,6 +54,12 @@ const nextConfig = {
       // Mathaus (CDN)
       { protocol: 'https', hostname: '**.mathaus.ro' },
       { protocol: 'https', hostname: 'mathaus.ro' },
+      // Gomag CDN (platforma comuna pentru streamstore + alte Gomag merchants)
+      { protocol: 'https', hostname: 'gomagcdn.ro' },
+      { protocol: 'https', hostname: '**.gomagcdn.ro' },
+      // Streamstore domain fallback
+      { protocol: 'https', hostname: '**.streamstore.ro' },
+      { protocol: 'https', hostname: 'streamstore.ro' },
       // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.shopify.com' },
