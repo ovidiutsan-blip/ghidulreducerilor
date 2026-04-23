@@ -249,22 +249,64 @@ def merge_deals(new_deals: list[dict], dry_run: bool = False) -> dict:
 
 # ─── Probe mode ──────────────────────────────────────────────────────────────
 def probe():
-    log("=== PROBE MODE ===")
-    for magazin, unique_code, categorie, _, _, _ in TARGETS:
-        log(f"\n--- {magazin} (unique_code={unique_code}) ---")
+    """Probe mode: descoperire endpoint-uri produse + structura program."""
+    log("=== PROBE MODE: endpoint discovery ===")
+
+    # Step 1: Get program list with full details incl. integer IDs
+    log("\n=== Step 1: Lista programe (primele 50) ===")
+    try:
+        r = requests.get(f"{API_BASE}/affiliate/programs", headers=auth_headers(),
+                         params={"per_page": 50}, timeout=30)
+        r.raise_for_status()
+        data = _safe_json(r)
+        programs = data.get("programs") or (data if isinstance(data, list) else [])
+        log(f"Total programe: {len(programs)}")
+        targets_map = {}
+        target_codes = {t[1] for t in TARGETS}
+        for p in programs:
+            uc = p.get("unique_code") or ""
+            if uc in target_codes:
+                targets_map[uc] = p
+                log(f"  {p.get('name')} | unique_code={uc} | id={p.get('id')}")
+                log(f"    keys: {list(p.keys())}")
+                # Look for product-feed related fields
+                for k in p:
+                    if "product" in k.lower() or "feed" in k.lower() or "catalog" in k.lower():
+                        log(f"    ** {k}: {str(p[k])[:100]}")
+    except Exception as e:
+        log(f"ERROR programs: {e}")
+        targets_map = {t[1]: {"unique_code": t[1], "id": None} for t in TARGETS}
+
+    # Step 2: Try multiple endpoint patterns for first target
+    if not targets_map:
+        log("Nu s-au gasit programele target in lista.")
+        return
+
+    first_uc, first_prog = next(iter(targets_map.items()))
+    first_id = first_prog.get("id")
+    log(f"\n=== Step 2: Probe endpoints pentru {first_prog.get('name','?')} "
+        f"(unique={first_uc}, id={first_id}) ===")
+
+    endpoints = [
+        f"/affiliate/programs/{first_uc}/products",
+        f"/affiliate/programs/{first_id}/products",
+        f"/affiliate/programs/{first_uc}/product_feeds",
+        f"/affiliate/programs/{first_id}/product_feeds",
+        f"/affiliate/product_feeds?program_id={first_id}",
+        f"/affiliate/product_feeds?unique_code={first_uc}",
+        f"/affiliate/programs/{first_uc}/product_feed",
+        f"/affiliate/programs/{first_id}/product_feed",
+        f"/affiliate/programs/{first_id}",  # single program detail
+    ]
+    for ep in endpoints:
+        url = f"{API_BASE}{ep}"
         try:
-            data = get_products_page(unique_code, page=1, per_page=3)
-            log(f"Response keys: {list(data.keys())}")
-            products = (data.get("products") or data.get("items") or
-                        data.get("data") or (data if isinstance(data, list) else []))
-            log(f"Products count in page: {len(products)}")
-            if products:
-                p = products[0]
-                log(f"First product keys: {list(p.keys())}")
-                for k, v in list(p.items())[:15]:
-                    log(f"  {k}: {str(v)[:80]}")
+            resp = requests.get(url, headers=auth_headers(),
+                                params={"page": 1, "per_page": 3}, timeout=15)
+            preview = resp.content[:200].decode("utf-8-sig", errors="replace").replace("\n", " ")
+            log(f"  {ep} → {resp.status_code} | {preview[:120]}")
         except Exception as e:
-            log(f"ERROR: {e}")
+            log(f"  {ep} → ERROR: {e}")
 
 
 def list_programs():

@@ -23,8 +23,13 @@ import http.client
 
 # --- Config ---
 API_HOST = "api.profitshare.ro"
-API_USER = os.environ.get("PROFITSHARE_API_USER", "")
-API_KEY = os.environ.get("PROFITSHARE_API_KEY", "")
+
+def _clean_env(key: str, default: str = "") -> str:
+    """Get env var, stripping BOM and whitespace (gh secret set via echo can prepend BOM)."""
+    return os.environ.get(key, default).lstrip("\ufeff").strip()
+
+API_USER = _clean_env("PROFITSHARE_API_USER")
+API_KEY  = _clean_env("PROFITSHARE_API_KEY")
 
 # Magazine pe Profitshare (restul sunt pe 2Performant)
 PROFITSHARE_STORES = {"emag", "fashion-days", "vexio", "libris", "fornello", "forit", "pcgarage"}

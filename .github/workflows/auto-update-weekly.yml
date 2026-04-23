@@ -16,6 +16,7 @@ on:
           - audit-only
           - dry-run
           - list-2p-programs
+          - probe-2p
 
 concurrency:
   group: data-updates
@@ -67,6 +68,7 @@ jobs:
             audit-only)        python scripts/auto_update.py --audit-only ;;
             dry-run)           python scripts/auto_update.py --dry-run ;;
             list-2p-programs)  python agents/two_performant_to_deals.py --list-programs ;;
+            probe-2p)          python agents/two_performant_to_deals.py --probe ;;
             *)                 python scripts/auto_update.py ;;
           esac
 
