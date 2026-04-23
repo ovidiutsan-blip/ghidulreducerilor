@@ -1,17 +1,26 @@
 """2Performant feed -> data/deals.json transformer.
 
-Pentru fiecare program aprobat, fetch paginated /affiliate/programs/{unique}/products,
+Pentru fiecare program aprobat, fetch paginated /affiliate/programs/{unique_code}/products,
 filtreaza produsele cu reducere reala (sale_price < price), mapeaza la Deal schema,
-merge in deals.json (dedupe by product_url).
+merge in deals.json (dedupe by product_url + id).
 
+Auth: DeviseTokenAuth (access-token / client / uid headers).
 Credentials (din env / .env):
-  TWO_PERFORMANT_USER_KEY    = 60-char hex, X-User-Auth-Token header
-  TWO_PERFORMANT_MARKETER_CODE = aff_code (d8b71657a)
+  TWO_PERFORMANT_ACCESS_TOKEN  = access-token din cookie auth_headers
+  TWO_PERFORMANT_CLIENT_ID     = client din cookie auth_headers
+  TWO_PERFORMANT_UID           = uid (email) din cookie auth_headers
+  TWO_PERFORMANT_MARKETER_CODE = aff_code pentru quicklinks (d8b71657a)
+
+Reimprospatare credentials: expira dupa ~14 zile. Extrage din browser:
+  1. Mergi la businessleague.2performant.com (logat)
+  2. DevTools > Application > Cookies > auth_headers
+  3. Actualizeaza secretele GitHub: TWO_PERFORMANT_ACCESS_TOKEN, TWO_PERFORMANT_CLIENT_ID
 
 Rulare:
   python agents/two_performant_to_deals.py           # full import
   python agents/two_performant_to_deals.py --probe   # test API + afiseaza structura
   python agents/two_performant_to_deals.py --dry-run # fetch + filter, fara write
+  python agents/two_performant_to_deals.py --list-programs  # listeaza programe aprobate
 """
 from __future__ import annotations
 import os, sys, json, re, time
@@ -22,39 +31,57 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_BASE = "https://api.2performant.com"
-USER_KEY  = os.getenv("TWO_PERFORMANT_USER_KEY", "")
-AFF_CODE  = os.getenv("TWO_PERFORMANT_MARKETER_CODE", "d8b71657a")
+API_BASE     = "https://api.2performant.com"
+ACCESS_TOKEN = os.getenv("TWO_PERFORMANT_ACCESS_TOKEN", "")
+CLIENT_ID    = os.getenv("TWO_PERFORMANT_CLIENT_ID", "")
+UID          = os.getenv("TWO_PERFORMANT_UID", "ovidiutsan@yahoo.com")
+AFF_CODE     = os.getenv("TWO_PERFORMANT_MARKETER_CODE", "d8b71657a")
 
-BASE      = Path(__file__).resolve().parent.parent
+BASE       = Path(__file__).resolve().parent.parent
 DEALS_PATH = BASE / "data" / "deals.json"
 LOG_PATH   = BASE / "logs" / "two_performant_import.log"
 LOG_PATH.parent.mkdir(exist_ok=True)
 
-# ─── Programe aprobate ───────────────────────────────────────────────────────
-# campaign_unique e din URL: businessleague.2performant.com/affiliate/program/{slug}
-# -> link afiliat quicklink contine `unique=<campaign_unique>`
+# ─── Programe aprobate (unique_code din /affiliate/programs?state=accepted) ──
+# Adauga noi randuri cand primesti aprobare de la un program nou.
+# Status la 2026-04-23:
+#   answear.ro    → aff=accepted  ✅
+#   drmax.ro      → aff=accepted  ✅
+#   springfarma   → aff=accepted  ✅ (adaugat 2026-04-23)
+#   scule365.ro   → aff=accepted  ✅ (adaugat 2026-04-23)
+#   elefant.ro    → aff=deleted   ❌ (afiliere revocata)
+#   fashiondays   → aff=deleted   ❌ (afiliere revocata)
+#   notino        → nu e pe 2P    ❌ (cauta pe alt network)
+#   bookzone.ro   → aff=pending   ⏳ (in asteptare aprobare)
 TARGETS = [
-    # slug,       campaign_unique,  categorie site,  max_pages, min_pct, cat_whitelist
-    ("answear",  "a5e9e1225",  "fashion",           20,  10, None),
-    ("drmax",    "6390e3cfb",  "farmacie-sanatate", 20,  10, None),
-    ("notino",   "c6dae5faa",  "beauty",            20,  10, None),
+    # slug,          unique_code,   categorie site,       max_pages, min_pct, cat_whitelist
+    ("answear",      "a5e9e1225",  "fashion",             20,  10, None),
+    ("drmax",        "6390e3cfb",  "farmacie-sanatate",   20,  10, None),
+    ("springfarma",  "1ec3596e6",  "farmacie-sanatate",   20,  10, None),
+    ("scule365",     "8e59c17b0",  "casa-gradina",        20,  10, None),
 ]
 
-# ─── Auth header ─────────────────────────────────────────────────────────────
+# ─── Auth (DeviseTokenAuth) ───────────────────────────────────────────────────
 def auth_headers() -> dict:
-    if not USER_KEY:
-        raise ValueError("TWO_PERFORMANT_USER_KEY not set in env")
+    if not ACCESS_TOKEN or not CLIENT_ID:
+        raise ValueError(
+            "TWO_PERFORMANT_ACCESS_TOKEN / TWO_PERFORMANT_CLIENT_ID nu sunt setate. "
+            "Extrage din cookie auth_headers pe businessleague.2performant.com si "
+            "seteaza ca GitHub Secrets."
+        )
     return {
-        "X-User-Auth-Token": USER_KEY,
-        "Accept": "application/json",
+        "access-token": ACCESS_TOKEN,
+        "token-type":   "Bearer",
+        "client":       CLIENT_ID,
+        "uid":          UID,
+        "Accept":       "application/json",
         "Content-Type": "application/json",
     }
 
 
-def get_products_page(campaign_unique: str, page: int = 1, per_page: int = 50) -> dict:
+def get_products_page(unique_code: str, page: int = 1, per_page: int = 50) -> dict:
     """Fetch one page of products for a 2P program."""
-    url = f"{API_BASE}/affiliate/programs/{campaign_unique}/products"
+    url = f"{API_BASE}/affiliate/programs/{unique_code}/products"
     params = {"page": page, "per_page": per_page}
     r = requests.get(url, headers=auth_headers(), params=params, timeout=30)
     r.raise_for_status()
@@ -62,11 +89,12 @@ def get_products_page(campaign_unique: str, page: int = 1, per_page: int = 50) -
 
 
 def get_programs() -> list:
-    """Fetch lista de programe aprobate (pentru probe)."""
+    """Fetch lista de programe (state=accepted) — pentru diagnosticare."""
     url = f"{API_BASE}/affiliate/programs"
-    r = requests.get(url, headers=auth_headers(), timeout=30)
+    r = requests.get(url, headers=auth_headers(), params={"per_page": 100}, timeout=30)
     r.raise_for_status()
-    return r.json()
+    data = r.json()
+    return data.get("programs") or (data if isinstance(data, list) else [])
 
 
 # ─── Mapping & Filtering ─────────────────────────────────────────────────────
@@ -76,18 +104,17 @@ def slugify(s: str) -> str:
     return s.strip("-")[:80]
 
 
-def build_affiliate_link(campaign_unique: str, product_id) -> str:
+def build_affiliate_link(unique_code: str, product_id) -> str:
     """Construieste link afiliat 2Performant pentru un produs."""
     return (
         f"https://event.2performant.com/events/click"
-        f"?ad_type=product&unique={campaign_unique}&aff_code={AFF_CODE}&product_id={product_id}"
+        f"?ad_type=product&unique={unique_code}&aff_code={AFF_CODE}&product_id={product_id}"
     )
 
 
-def product_to_deal(p: dict, magazin: str, campaign_unique: str, categorie: str,
+def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
                     allowed_cats: list | None = None) -> dict | None:
     """Mapeaza un product dict 2P la schema deals.json. Returneaza None daca nu e eligibil."""
-    # Suport multiple key names (API poate folosi price/sale_price sau price_vat/price_discounted)
     price_orig = float(p.get("price") or p.get("original_price") or p.get("price_vat") or 0)
     price_sale_raw = p.get("sale_price") or p.get("discounted_price") or p.get("price_discounted")
     try:
@@ -95,13 +122,11 @@ def product_to_deal(p: dict, magazin: str, campaign_unique: str, categorie: str,
     except (ValueError, TypeError):
         price_sale = None
 
-    # Filtru: reducere reala
     if price_sale is None or price_orig <= 0 or price_sale >= price_orig:
         return None
 
     pct = round((1 - price_sale / price_orig) * 100)
 
-    # Filtru categorie (whitelist)
     if allowed_cats is not None:
         feed_cat = (p.get("category") or p.get("category_name") or "").strip()
         if feed_cat not in allowed_cats:
@@ -115,11 +140,10 @@ def product_to_deal(p: dict, magazin: str, campaign_unique: str, categorie: str,
     if not name or not url:
         return None
 
-    # Normalize http -> https
     if img.startswith("http://"):
         img = "https://" + img[7:]
 
-    aff_link = p.get("affiliate_url") or build_affiliate_link(campaign_unique, prod_id)
+    aff_link = p.get("affiliate_url") or build_affiliate_link(unique_code, prod_id)
 
     return {
         "id": f"2p-{magazin}-{slugify(name)[:40]}-{str(prod_id)[-8:]}",
@@ -142,14 +166,14 @@ def product_to_deal(p: dict, magazin: str, campaign_unique: str, categorie: str,
 
 
 # ─── Import per merchant ──────────────────────────────────────────────────────
-def fetch_merchant(magazin: str, campaign_unique: str, categorie: str,
+def fetch_merchant(magazin: str, unique_code: str, categorie: str,
                    max_pages: int, min_pct: int, allowed_cats: list | None) -> list[dict]:
     """Fetch toate paginile si returneaza deal-urile eligibile."""
     deals = []
-    log(f"  Fetching {magazin} (campaign={campaign_unique})...")
+    log(f"  Fetching {magazin} (unique_code={unique_code})...")
     for page in range(1, max_pages + 1):
         try:
-            data = get_products_page(campaign_unique, page=page)
+            data = get_products_page(unique_code, page=page)
         except requests.HTTPError as e:
             log(f"    HTTP error pagina {page}: {e}")
             break
@@ -157,7 +181,6 @@ def fetch_merchant(magazin: str, campaign_unique: str, categorie: str,
             log(f"    Eroare pagina {page}: {e}")
             break
 
-        # Suport multiple response shapes
         products = (data.get("products") or data.get("items") or
                     data.get("data") or (data if isinstance(data, list) else []))
 
@@ -165,14 +188,13 @@ def fetch_merchant(magazin: str, campaign_unique: str, categorie: str,
             log(f"    Pagina {page}: 0 produse — stop")
             break
 
-        # Metadata pentru total pages
         meta = data.get("metadata") or data.get("meta") or {}
         total_pages = (meta.get("total_pages") or meta.get("pages") or
                        meta.get("last_page") or max_pages)
 
         hits = 0
         for p in products:
-            deal = product_to_deal(p, magazin, campaign_unique, categorie, allowed_cats)
+            deal = product_to_deal(p, magazin, unique_code, categorie, allowed_cats)
             if deal and deal["procent_reducere"] >= min_pct:
                 deals.append(deal)
                 hits += 1
@@ -192,15 +214,17 @@ def merge_deals(new_deals: list[dict], dry_run: bool = False) -> dict:
     with open(DEALS_PATH, encoding="utf-8") as f:
         existing = json.load(f)
 
-    existing_urls = {d.get("product_url") for d in existing}
+    existing_urls = {d.get("product_url") or d.get("link_afiliat") for d in existing}
+    existing_ids  = {d.get("id") for d in existing}
     added = 0
     for d in new_deals:
-        if d["product_url"] not in existing_urls:
-            existing.append(d)
-            existing_urls.add(d["product_url"])
-            added += 1
+        if d["product_url"] in existing_urls or d["id"] in existing_ids:
+            continue
+        existing.append(d)
+        existing_urls.add(d["product_url"])
+        existing_ids.add(d["id"])
+        added += 1
 
-    # Sort: activ first, procent_reducere desc
     existing.sort(key=lambda x: (not x.get("activ", True), -x.get("procent_reducere", 0)))
 
     if not dry_run:
@@ -212,13 +236,11 @@ def merge_deals(new_deals: list[dict], dry_run: bool = False) -> dict:
 
 # ─── Probe mode ──────────────────────────────────────────────────────────────
 def probe():
-    """Testeaza API-ul si afiseaza structura raspunsului."""
     log("=== PROBE MODE ===")
-    # Test auth cu programele
-    for magazin, campaign_unique, categorie, _, _, _ in TARGETS:
-        log(f"\n--- {magazin} (campaign={campaign_unique}) ---")
+    for magazin, unique_code, categorie, _, _, _ in TARGETS:
+        log(f"\n--- {magazin} (unique_code={unique_code}) ---")
         try:
-            data = get_products_page(campaign_unique, page=1, per_page=3)
+            data = get_products_page(unique_code, page=1, per_page=3)
             log(f"Response keys: {list(data.keys())}")
             products = (data.get("products") or data.get("items") or
                         data.get("data") or (data if isinstance(data, list) else []))
@@ -226,57 +248,47 @@ def probe():
             if products:
                 p = products[0]
                 log(f"First product keys: {list(p.keys())}")
-                log(f"First product sample:")
-                for k, v in p.items():
+                for k, v in list(p.items())[:15]:
                     log(f"  {k}: {str(v)[:80]}")
         except Exception as e:
             log(f"ERROR: {e}")
 
 
 def list_programs():
-    """Listeaza toate programele aprobate cu campaign_unique — pentru a gasi IDs noi."""
-    log("=== LIST APPROVED PROGRAMS ===")
+    """Listeaza toate programele disponibile cu unique_code si status afiliere."""
+    log("=== LIST PROGRAMS (state=accepted) ===")
     try:
-        # Incearca pagination: page 1, 2, ...
         all_programs = []
-        for page in range(1, 10):
-            url = f"{API_BASE}/affiliate/programs"
-            params = {"filter": "accepted", "page": page, "per_page": 100}
-            r = requests.get(url, headers=auth_headers(), params=params, timeout=30)
+        for page in range(1, 5):
+            r = requests.get(
+                f"{API_BASE}/affiliate/programs",
+                headers=auth_headers(),
+                params={"per_page": 100, "page": page},
+                timeout=30
+            )
             if not r.ok:
                 log(f"  Page {page}: HTTP {r.status_code} — {r.text[:200]}")
                 break
             data = r.json()
-            # Detecteaza structura raspunsului
-            if isinstance(data, list):
-                programs = data
-            elif isinstance(data, dict):
-                programs = (data.get("programs") or data.get("data") or
-                            data.get("results") or data.get("items") or [])
-            else:
-                programs = []
-
+            programs = data.get("programs") or (data if isinstance(data, list) else [])
             if not programs:
-                if page == 1:
-                    log(f"  Structura raspuns brut: {json.dumps(data)[:500]}")
                 break
             all_programs.extend(programs)
             log(f"  Page {page}: {len(programs)} programs")
-            if len(programs) < 50:
-                break  # ultima pagina
+            if len(programs) < 100:
+                break
 
-        log(f"\nTotal programe aprobate: {len(all_programs)}")
-        log("\n{:<30} {:<15} {:<40}".format("Advertiser", "Unique", "Domain/URL"))
-        log("-" * 90)
+        log(f"\nTotal programe: {len(all_programs)}")
+        log("{:<30} {:<12} {:<10} {:<45}".format("Advertiser", "Unique", "AffStatus", "URL"))
+        log("-" * 100)
         for p in all_programs:
-            name = (p.get("name") or p.get("advertiser_name") or p.get("program_name") or
-                    p.get("title") or str(p.get("id", "")))
-            unique = (p.get("unique") or p.get("campaign_unique") or p.get("slug") or
-                      p.get("id") or "?")
-            domain = (p.get("domain") or p.get("url") or p.get("website") or
-                      p.get("advertiser_domain") or "")
-            log("{:<30} {:<15} {:<40}".format(str(name)[:30], str(unique)[:15], str(domain)[:40]))
-
+            name    = (p.get("name") or "").strip()
+            unique  = p.get("unique_code") or p.get("slug") or str(p.get("id", "?"))
+            url     = p.get("main_url") or p.get("base_url") or ""
+            aff_st  = (p.get("affrequest") or {}).get("status") or "—"
+            log("{:<30} {:<12} {:<10} {:<45}".format(
+                str(name)[:30], str(unique)[:12], str(aff_st)[:10], str(url)[:45]
+            ))
     except Exception as e:
         log(f"ERROR: {e}")
 
@@ -293,17 +305,20 @@ def log(msg: str):
 # ─── Main ─────────────────────────────────────────────────────────────────────
 def main():
     args = sys.argv[1:]
-    dry_run = "--dry-run" in args
+    dry_run    = "--dry-run" in args
     probe_mode = "--probe" in args
-    list_mode = "--list-programs" in args
+    list_mode  = "--list-programs" in args
 
     mode_str = "[LIST-PROGRAMS]" if list_mode else "[PROBE]" if probe_mode else "[DRY-RUN]" if dry_run else ""
     log(f"=== 2Performant Import {mode_str} ===")
-    log(f"USER_KEY: {'set (' + str(len(USER_KEY)) + ' chars)' if USER_KEY else 'NOT SET'}")
-    log(f"AFF_CODE: {AFF_CODE}")
+    log(f"ACCESS_TOKEN: {'set (' + str(len(ACCESS_TOKEN)) + ' chars)' if ACCESS_TOKEN else 'NOT SET ⚠️'}")
+    log(f"CLIENT_ID:    {'set (' + str(len(CLIENT_ID)) + ' chars)' if CLIENT_ID else 'NOT SET ⚠️'}")
+    log(f"UID:          {UID}")
+    log(f"AFF_CODE:     {AFF_CODE}")
 
-    if not USER_KEY:
-        log("ABORT: TWO_PERFORMANT_USER_KEY not set. Set in .env or GitHub Secrets.")
+    if not ACCESS_TOKEN or not CLIENT_ID:
+        log("ABORT: Seteaza TWO_PERFORMANT_ACCESS_TOKEN si TWO_PERFORMANT_CLIENT_ID.")
+        log("Extrage din: businessleague.2performant.com > DevTools > Cookies > auth_headers")
         sys.exit(1)
 
     if list_mode:
@@ -315,8 +330,8 @@ def main():
         return
 
     all_new_deals = []
-    for magazin, campaign_unique, categorie, max_pages, min_pct, allowed_cats in TARGETS:
-        deals = fetch_merchant(magazin, campaign_unique, categorie, max_pages, min_pct, allowed_cats)
+    for magazin, unique_code, categorie, max_pages, min_pct, allowed_cats in TARGETS:
+        deals = fetch_merchant(magazin, unique_code, categorie, max_pages, min_pct, allowed_cats)
         all_new_deals.extend(deals)
 
     log(f"\nTotal deal-uri noi eligibile: {len(all_new_deals)}")

@@ -56,7 +56,9 @@ jobs:
           PROFITSHARE_API_USER: ${{ secrets.PROFITSHARE_API_USER }}
           PROFITSHARE_API_KEY: ${{ secrets.PROFITSHARE_API_KEY }}
           PROFITSHARE_AFFILIATE_ID: ${{ vars.PROFITSHARE_AFFILIATE_ID }}
-          TWO_PERFORMANT_USER_KEY: ${{ secrets.TWO_PERFORMANT_USER_KEY }}
+          TWO_PERFORMANT_ACCESS_TOKEN: ${{ secrets.TWO_PERFORMANT_ACCESS_TOKEN }}
+          TWO_PERFORMANT_CLIENT_ID: ${{ secrets.TWO_PERFORMANT_CLIENT_ID }}
+          TWO_PERFORMANT_UID: ${{ secrets.TWO_PERFORMANT_UID }}
           TWO_PERFORMANT_MARKETER_CODE: ${{ secrets.TWO_PERFORMANT_MARKETER_CODE }}
         run: |
           MODE="${{ github.event.inputs.mode || 'full' }}"
@@ -71,7 +73,10 @@ jobs:
         run: |
           git config user.name "GhidulReducerilor Bot"
           git config user.email "bot@ghidulreducerilor.ro"
-          git add data/deals.json data/codes.json data/update_status.json AUDIT_LOG.md
+          # Add files that exist (some may not be present in all modes)
+          for f in data/deals.json data/codes.json data/update_status.json AUDIT_LOG.md; do
+            [ -f "$f" ] && git add "$f" || true
+          done
           git diff --staged --quiet || git commit -m "🔄 Weekly auto-update $(date +%Y-%m-%d)"
 
       - name: Push changes (triggers Vercel redeploy)
