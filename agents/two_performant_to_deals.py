@@ -92,9 +92,23 @@ def _safe_json(r) -> any:
     return _json.loads(r.content.decode("utf-8-sig"))
 
 
-def get_products_page(unique_code: str, page: int = 1, per_page: int = 50) -> dict:
-    """Fetch one page of products for a 2P program."""
-    url = f"{API_BASE}/affiliate/programs/{unique_code}/products"
+def get_all_feeds() -> list[dict]:
+    """Fetch toate feed-urile de produse disponibile pentru acest afiliat.
+    Endpoint: GET /affiliate/product_feeds (nu se filtreaza per program; returneaza toate).
+    Fiecare feed are: id, name, products_count, updated_at, program:{id,name,unique_code}
+    """
+    url = f"{API_BASE}/affiliate/product_feeds"
+    r = requests.get(url, headers=auth_headers(), timeout=30)
+    r.raise_for_status()
+    data = _safe_json(r)
+    return data.get("product_feeds") or (data if isinstance(data, list) else [])
+
+
+def get_feed_products_page(feed_id: int, page: int = 1, per_page: int = 50) -> dict:
+    """Fetch o pagina de produse dintr-un feed specific.
+    Endpoint: GET /affiliate/product_feeds/{feed_id}/products
+    """
+    url = f"{API_BASE}/affiliate/product_feeds/{feed_id}/products"
     params = {"page": page, "per_page": per_page}
     r = requests.get(url, headers=auth_headers(), params=params, timeout=30)
     r.raise_for_status()
@@ -179,44 +193,68 @@ def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
 
 
 # ─── Import per merchant ──────────────────────────────────────────────────────
+_feeds_cache: list[dict] | None = None  # cached in-process so we only fetch once per run
+
+def _get_feeds_for_program(unique_code: str) -> list[dict]:
+    """Returneaza feed-urile asociate unui program, dupa unique_code."""
+    global _feeds_cache
+    if _feeds_cache is None:
+        log("  Fetching all product feeds...")
+        _feeds_cache = get_all_feeds()
+        log(f"  Total feeds disponibile: {len(_feeds_cache)}")
+    return [f for f in _feeds_cache
+            if (f.get("program") or {}).get("unique_code") == unique_code]
+
+
 def fetch_merchant(magazin: str, unique_code: str, categorie: str,
                    max_pages: int, min_pct: int, allowed_cats: list | None) -> list[dict]:
-    """Fetch toate paginile si returneaza deal-urile eligibile."""
+    """Fetch toate paginile din feed-urile programului si returneaza deal-urile eligibile."""
     deals = []
     log(f"  Fetching {magazin} (unique_code={unique_code})...")
-    for page in range(1, max_pages + 1):
-        try:
-            data = get_products_page(unique_code, page=page)
-        except requests.HTTPError as e:
-            log(f"    HTTP error pagina {page}: {e}")
-            break
-        except Exception as e:
-            log(f"    Eroare pagina {page}: {e}")
-            break
 
-        products = (data.get("products") or data.get("items") or
-                    data.get("data") or (data if isinstance(data, list) else []))
+    feeds = _get_feeds_for_program(unique_code)
+    if not feeds:
+        log(f"  {magazin}: niciun feed gasit pentru unique_code={unique_code}")
+        return deals
 
-        if not products:
-            log(f"    Pagina {page}: 0 produse — stop")
-            break
+    for feed in feeds:
+        feed_id = feed["id"]
+        feed_name = feed.get("name", f"feed-{feed_id}")
+        log(f"    Feed: {feed_name} (id={feed_id}, products_count={feed.get('products_count',0)})")
 
-        meta = data.get("metadata") or data.get("meta") or {}
-        total_pages = (meta.get("total_pages") or meta.get("pages") or
-                       meta.get("last_page") or max_pages)
+        for page in range(1, max_pages + 1):
+            try:
+                data = get_feed_products_page(feed_id, page=page)
+            except requests.HTTPError as e:
+                log(f"      HTTP error pagina {page}: {e}")
+                break
+            except Exception as e:
+                log(f"      Eroare pagina {page}: {e}")
+                break
 
-        hits = 0
-        for p in products:
-            deal = product_to_deal(p, magazin, unique_code, categorie, allowed_cats)
-            if deal and deal["procent_reducere"] >= min_pct:
-                deals.append(deal)
-                hits += 1
+            products = (data.get("products") or data.get("items") or
+                        data.get("data") or (data if isinstance(data, list) else []))
 
-        log(f"    Pagina {page}/{total_pages}: {len(products)} produse, {hits} eligibile")
+            if not products:
+                log(f"      Pagina {page}: 0 produse — stop")
+                break
 
-        if page >= int(total_pages):
-            break
-        time.sleep(0.3)
+            meta = data.get("metadata") or data.get("meta") or {}
+            total_pages = (meta.get("total_pages") or meta.get("pages") or
+                           meta.get("last_page") or max_pages)
+
+            hits = 0
+            for p in products:
+                deal = product_to_deal(p, magazin, unique_code, categorie, allowed_cats)
+                if deal and deal["procent_reducere"] >= min_pct:
+                    deals.append(deal)
+                    hits += 1
+
+            log(f"      Pagina {page}/{total_pages}: {len(products)} produse, {hits} eligibile")
+
+            if page >= int(total_pages):
+                break
+            time.sleep(0.3)
 
     log(f"  {magazin}: {len(deals)} deals eligibile total")
     return deals
@@ -318,6 +356,36 @@ def probe():
                     log(f"    [parse error] {pe}")
         except Exception as e:
             log(f"  {ep} → ERROR: {e}")
+
+    # Step 3: Find actual feeds for each target program and test /product_feeds/{id}/products
+    log("\n=== Step 3: Feeds per target program + products endpoint test ===")
+    try:
+        all_feeds = get_all_feeds()
+        log(f"Total feeds: {len(all_feeds)}")
+        for t_slug, t_uc, t_cat, _, _, _ in TARGETS:
+            matching = [f for f in all_feeds
+                        if (f.get("program") or {}).get("unique_code") == t_uc]
+            log(f"\n  {t_slug} (unique={t_uc}): {len(matching)} feed(s)")
+            for feed in matching[:2]:  # test max 2 feeds per program
+                fid = feed["id"]
+                log(f"    Feed id={fid}, name={feed.get('name')}, "
+                    f"products_count={feed.get('products_count')}")
+                try:
+                    fp = get_feed_products_page(fid, page=1, per_page=3)
+                    prods = (fp.get("products") or fp.get("items") or
+                             fp.get("data") or (fp if isinstance(fp, list) else []))
+                    log(f"    → /product_feeds/{fid}/products → {len(prods)} products, "
+                        f"keys: {list(prods[0].keys()) if prods else 'EMPTY'}")
+                    if prods:
+                        p0 = prods[0]
+                        for k in ("name", "price", "sale_price", "image_url", "url", "id",
+                                  "category", "original_price", "discounted_price"):
+                            if k in p0:
+                                log(f"      {k}: {str(p0[k])[:100]}")
+                except Exception as fe:
+                    log(f"    → ERROR: {fe}")
+    except Exception as e:
+        log(f"ERROR Step 3: {e}")
 
 
 def list_programs():
