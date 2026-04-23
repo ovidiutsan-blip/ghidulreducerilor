@@ -38,6 +38,9 @@ const nextConfig = {
       // Fornello
       { protocol: 'https', hostname: '**.fornello.ro' },
       { protocol: 'https', hostname: 'cdn.contentspeed.ro' },
+      // Vegis (PS feed — cdn.vegis.ro + lazy-loader)
+      { protocol: 'https', hostname: 'cdn.vegis.ro' },
+      { protocol: 'https', hostname: '**.vegis.ro' },
       // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.shopify.com' },
