@@ -79,13 +79,19 @@ def auth_headers() -> dict:
     }
 
 
+def _safe_json(r) -> any:
+    """Parse JSON response, stripping UTF-8 BOM if present."""
+    import json as _json
+    return _json.loads(r.content.decode("utf-8-sig"))
+
+
 def get_products_page(unique_code: str, page: int = 1, per_page: int = 50) -> dict:
     """Fetch one page of products for a 2P program."""
     url = f"{API_BASE}/affiliate/programs/{unique_code}/products"
     params = {"page": page, "per_page": per_page}
     r = requests.get(url, headers=auth_headers(), params=params, timeout=30)
     r.raise_for_status()
-    return r.json()
+    return _safe_json(r)
 
 
 def get_programs() -> list:
@@ -93,7 +99,7 @@ def get_programs() -> list:
     url = f"{API_BASE}/affiliate/programs"
     r = requests.get(url, headers=auth_headers(), params={"per_page": 100}, timeout=30)
     r.raise_for_status()
-    data = r.json()
+    data = _safe_json(r)
     return data.get("programs") or (data if isinstance(data, list) else [])
 
 
@@ -267,9 +273,9 @@ def list_programs():
                 timeout=30
             )
             if not r.ok:
-                log(f"  Page {page}: HTTP {r.status_code} — {r.text[:200]}")
+                log(f"  Page {page}: HTTP {r.status_code}")
                 break
-            data = r.json()
+            data = _safe_json(r)
             programs = data.get("programs") or (data if isinstance(data, list) else [])
             if not programs:
                 break
@@ -304,6 +310,10 @@ def log(msg: str):
 
 # ─── Main ─────────────────────────────────────────────────────────────────────
 def main():
+    # Ensure stdout uses UTF-8 in CI environments (avoids latin-1 BOM encoding errors)
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     args = sys.argv[1:]
     dry_run    = "--dry-run" in args
     probe_mode = "--probe" in args

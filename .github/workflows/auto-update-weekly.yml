@@ -50,6 +50,7 @@ jobs:
 
       - name: Run auto-update
         env:
+          PYTHONIOENCODING: utf-8
           SITE_URL: https://ghidulreducerilor.ro
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           BREVO_LIST_ID: ${{ vars.BREVO_LIST_ID }}
