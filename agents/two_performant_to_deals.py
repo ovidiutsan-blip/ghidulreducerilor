@@ -141,15 +141,30 @@ def build_affiliate_link(unique_code: str, product_id) -> str:
 
 def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
                     allowed_cats: list | None = None) -> dict | None:
-    """Mapeaza un product dict 2P la schema deals.json. Returneaza None daca nu e eligibil."""
-    price_orig = float(p.get("price") or p.get("original_price") or p.get("price_vat") or 0)
-    price_sale_raw = p.get("sale_price") or p.get("discounted_price") or p.get("price_discounted")
-    try:
-        price_sale = float(price_sale_raw) if price_sale_raw not in (None, "", 0, "0") else None
-    except (ValueError, TypeError):
-        price_sale = None
+    """Mapeaza un product dict 2P la schema deals.json. Returneaza None daca nu e eligibil.
 
-    if price_sale is None or price_orig <= 0 or price_sale >= price_orig:
+    Structura campuri in feed 2P:
+      price          = pretul CURENT (redus)
+      old_price      = pretul ORIGINAL (inainte de reducere)
+      title          = numele produsului
+      url            = link produs
+      structured_image_urls = lista de imagini (list of str sau list of dict)
+      unique_code    = codul unic AL PRODUSULUI (folosit in link afiliat)
+      id / prid      = ID numeric produs
+    """
+    # In feed-ul 2P: price = pret curent/redus, old_price = pret original
+    try:
+        price_sale = float(p.get("price") or 0)
+    except (ValueError, TypeError):
+        price_sale = 0.0
+
+    price_orig_raw = p.get("old_price")
+    try:
+        price_orig = float(price_orig_raw) if price_orig_raw not in (None, "", 0, "0") else None
+    except (ValueError, TypeError):
+        price_orig = None
+
+    if price_orig is None or price_orig <= 0 or price_sale <= 0 or price_sale >= price_orig:
         return None
 
     pct = round((1 - price_sale / price_orig) * 100)
@@ -159,10 +174,25 @@ def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
         if feed_cat not in allowed_cats:
             return None
 
-    name    = (p.get("name") or p.get("title") or "").strip()
+    name    = (p.get("title") or p.get("name") or "").strip()
     url     = p.get("url") or p.get("product_url") or p.get("link") or ""
-    img     = p.get("image_url") or p.get("image") or p.get("image_original") or ""
-    prod_id = p.get("id") or p.get("unique") or ""
+
+    # structured_image_urls poate fi lista de stringuri sau lista de dict-uri
+    img_raw = p.get("structured_image_urls") or p.get("image_url") or p.get("image") or ""
+    if isinstance(img_raw, list) and img_raw:
+        first = img_raw[0]
+        if isinstance(first, dict):
+            img = (first.get("url") or first.get("src") or first.get("original") or
+                   next(iter(first.values()), ""))
+        else:
+            img = str(first)
+    else:
+        img = str(img_raw) if img_raw else ""
+
+    # ID numeric produs
+    prod_id = p.get("id") or p.get("prid") or ""
+    # unique_code al produsului (diferit de unique_code al programului) — pentru link afiliat
+    prod_unique = p.get("unique_code") or ""
 
     if not name or not url:
         return None
@@ -170,7 +200,8 @@ def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
     if img.startswith("http://"):
         img = "https://" + img[7:]
 
-    aff_link = p.get("affiliate_url") or build_affiliate_link(unique_code, prod_id)
+    # Link afiliat: folosim unique_code al produsului daca e disponibil
+    aff_link = p.get("affiliate_url") or build_affiliate_link(prod_unique or unique_code, prod_id)
 
     return {
         "id": f"2p-{magazin}-{slugify(name)[:40]}-{str(prod_id)[-8:]}",
