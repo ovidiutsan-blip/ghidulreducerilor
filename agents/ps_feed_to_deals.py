@@ -119,6 +119,7 @@ def main():
     with open(DEALS_PATH, "r", encoding="utf-8") as f:
         existing = json.load(f)
     existing_urls = set(d.get("product_url") or d.get("link_afiliat") for d in existing)
+    existing_ids = set(d.get("id") for d in existing)
     print(f"Existing deals: {len(existing)}")
 
     # Per-merchant targets: (slug, ps_id, categorie, max_pages, min_pct, category_whitelist)
@@ -151,9 +152,10 @@ def main():
         # Dedupe vs existing
         added = 0
         for d in new_deals:
-            if d["product_url"] in existing_urls:
+            if d["product_url"] in existing_urls or d["id"] in existing_ids:
                 continue
             existing_urls.add(d["product_url"])
+            existing_ids.add(d["id"])
             all_new.append(d)
             added += 1
         print(f"  after dedupe: +{added} new")
