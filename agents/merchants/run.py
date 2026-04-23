@@ -1,8 +1,9 @@
 """CLI to run one or more merchant agents.
 
 Usage:
-  python agents/merchants/run.py streamstore --fix-images
-  python agents/merchants/run.py all --fix-images
+  python -m agents.merchants.run streamstore --fix-images
+  python -m agents.merchants.run alecoair --fix-images
+  python -m agents.merchants.run all --fix-images
 
 Writes changes to data/deals.json and a run summary to logs/agents-{date}.log.
 """
@@ -18,18 +19,31 @@ DEALS = BASE / "data" / "deals.json"
 LOGS = BASE / "logs"
 LOGS.mkdir(exist_ok=True)
 
-# Registry of agents (add new ones here)
+
 def get_registry():
-    from . import streamstore
+    from . import streamstore, case_smart, vegis, hiris, alecoair, hotpick
     return {
         "streamstore": streamstore.StreamStoreAgent(),
-        # placeholders for next agents:
-        # "vegis": vegis.VegisAgent(),
-        # "hiris": hiris.HirisAgent(),
-        # "alecoair": alecoair.AlecoAirAgent(),
-        # "hotpick": hotpick.HotpickAgent(),
-        # "mathaus": mathaus.MathausAgent(),   # Playwright
+        "case-smart":  case_smart.CaseSmartAgent(),
+        "vegis":       vegis.VegisAgent(),
+        "hiris":       hiris.HirisAgent(),
+        "alecoair":    alecoair.AlecoAirAgent(),
+        "hotpick":     hotpick.HotpickAgent(),
+        # "mathaus":   mathaus.MathausAgent(),  # TODO: Playwright CloudFlare
     }
+
+
+def _is_broken(deal: dict, agent_slug: str) -> bool:
+    """Detecteaza imagini broken pentru un agent dat."""
+    img = deal.get("image") or ""
+    if not img:
+        return True
+    if "profitsmart.ro" in img:
+        return True
+    # Placeholder-uri generice
+    placeholders = ("lazy-loader", "lazy_loader", "no-image", "default.", "placeholder",
+                    "coming-soon", "assets/category/")
+    return any(p in img.lower() for p in placeholders)
 
 
 def run_agent(agent, deals: list[dict], mode: str) -> dict:
@@ -39,15 +53,20 @@ def run_agent(agent, deals: list[dict], mode: str) -> dict:
         "deals_added": 0, "images_fixed": 0,
         "deals_disabled": 0, "errors": []
     }
+
     if mode == "fix-images":
-        # Find broken: image is HTTP 404 or empty or on un-whitelisted host
-        # For streamstore, "broken" = current image is profitsmart.ro or gomagcdn 404
-        broken = [d for d in deals if d.get("magazin") == agent.slug
-                  and ("profitsmart.ro" in (d.get("image") or "")
-                       or not d.get("image"))]
+        # Suport get_broken_deals custom (ex: AlecoAirAgent)
+        if hasattr(agent, "get_broken_deals"):
+            broken = agent.get_broken_deals(deals)
+        else:
+            broken = [d for d in deals
+                      if d.get("magazin") == agent.slug and _is_broken(d, agent.slug)]
+
         if not broken:
             result["note"] = "no broken images for this merchant"
+            print(f"  [{agent.slug}] no broken images")
         else:
+            print(f"  [{agent.slug}] fixing {len(broken)} broken images...")
             fixes = agent.fix_broken_images(broken)
             now = now_iso_fn()
             for d in deals:
@@ -58,6 +77,10 @@ def run_agent(agent, deals: list[dict], mode: str) -> dict:
                     d["image_fixed_at"] = now
                     d["image_fix_source"] = f"agent:{agent.slug}"
                     result["images_fixed"] += 1
+            unfixed = len(broken) - result["images_fixed"]
+            if unfixed:
+                result["errors"].append(f"{unfixed} images could not be fixed")
+
     result["duration_s"] = round(time.time() - start, 1)
     return result
 
@@ -70,6 +93,7 @@ def main():
     args = sys.argv[1:] or ["--help"]
     if args[0] in ("--help", "-h"):
         print(__doc__); return
+
     target = args[0]
     mode = "fix-images" if "--fix-images" in args else "fetch"
 
@@ -99,7 +123,7 @@ def main():
     with open(log_file, "a", encoding="utf-8") as f:
         for r in results:
             f.write(json.dumps({"ts": now_iso_fn(), **r}, ensure_ascii=False) + "\n")
-    print(f"log: {log_file}")
+    print(f"saved deals.json | log: {log_file}")
 
 
 if __name__ == "__main__":
