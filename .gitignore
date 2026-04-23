@@ -41,3 +41,11 @@ EMAIL_SETUP/02_env_template.env
 .idea
 
 .vercel
+ 
+# Temp files from Claude sessions 
+_*.cmd 
+_*.log 
+_*.js 
+_*.py 
+_*.json 
+_*.txt 
