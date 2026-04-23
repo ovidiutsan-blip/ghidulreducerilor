@@ -32,10 +32,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_BASE     = "https://api.2performant.com"
-ACCESS_TOKEN = os.getenv("TWO_PERFORMANT_ACCESS_TOKEN", "")
-CLIENT_ID    = os.getenv("TWO_PERFORMANT_CLIENT_ID", "")
-UID          = os.getenv("TWO_PERFORMANT_UID", "ovidiutsan@yahoo.com")
-AFF_CODE     = os.getenv("TWO_PERFORMANT_MARKETER_CODE", "d8b71657a")
+def _clean_env(key: str, default: str = "") -> str:
+    """Get env var, stripping BOM and whitespace (gh secret set via echo can prepend BOM)."""
+    return os.getenv(key, default).lstrip("\ufeff").strip()
+
+ACCESS_TOKEN = _clean_env("TWO_PERFORMANT_ACCESS_TOKEN")
+CLIENT_ID    = _clean_env("TWO_PERFORMANT_CLIENT_ID")
+UID          = _clean_env("TWO_PERFORMANT_UID", "ovidiutsan@yahoo.com")
+AFF_CODE     = _clean_env("TWO_PERFORMANT_MARKETER_CODE", "d8b71657a")
 
 BASE       = Path(__file__).resolve().parent.parent
 DEALS_PATH = BASE / "data" / "deals.json"
