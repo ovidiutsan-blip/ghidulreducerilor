@@ -6862,7 +6862,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "hiris",
     "image_fixed_at": "2026-04-23T17:15:21.626754Z",
-    "image_fix_source": "generic-extract"
+    "image_fix_source": "generic-extract",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:58.619094+00:00"
   },
   {
     "id": "ps-hiris-giorgio-armani-stronger-with-you-powerfu-00004032",
@@ -6895,7 +6897,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "hiris",
     "image_fixed_at": "2026-04-23T17:15:21.626754Z",
-    "image_fix_source": "generic-extract"
+    "image_fix_source": "generic-extract",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:58.619449+00:00"
   },
   {
     "id": "ps-hiris-yves-saint-laurent-libre-flowers-flames--00004041",
@@ -6928,7 +6932,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "hiris",
     "image_fixed_at": "2026-04-23T17:15:21.626754Z",
-    "image_fix_source": "generic-extract"
+    "image_fix_source": "generic-extract",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:58.619676+00:00"
   },
   {
     "id": "ps-techstar-tester-diagnoza-auto-obd2-techstar-v529--4309",
@@ -6961,7 +6967,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "techstar",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:58.619893+00:00"
   },
   {
     "id": "ps-hotpick-resigilat-aparat-de-sandwich-2-in-1-domo- DO1106C",
@@ -6998,7 +7006,9 @@
     "description": "Aparat de sandwich Domo DO1106C 2 în 1 cu plăci interschimbabile pentru sandwich sau waffles, 750W, resigilat, reducere 36% pe Hotpick 2026 la 128 lei.",
     "seo_rewritten_at": "2026-04-22T17:16:06.460Z",
     "image_fixed_at": "2026-04-23T17:15:21.626754Z",
-    "image_fix_source": "generic-extract"
+    "image_fix_source": "generic-extract",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:58.620076+00:00"
   },
   {
     "id": "ps-alecoair-umidificator-mini-alecoair-u05-atom-pent-5ATOMNEW",
@@ -7031,7 +7041,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "alecoair",
     "image_fixed_at": "2026-04-23T17:11:19Z",
-    "image_fix_source": "agent:alecoair"
+    "image_fix_source": "agent:alecoair",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:58.620478+00:00"
   },
   {
     "id": "2p-scule365-motopompa-apa-8-5cp-58cc-2-timpi-racire--36668542",
@@ -7063,7 +7075,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-23",
-    "magazine_key": "scule365"
+    "magazine_key": "scule365",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:58.620737+00:00"
   },
   {
     "id": "ps-hiris-byredo-animalique-apa-de-parfum-unisex-g-00004066",
@@ -7096,7 +7110,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "hiris",
     "image_fixed_at": "2026-04-23T17:15:21.626754Z",
-    "image_fix_source": "generic-extract"
+    "image_fix_source": "generic-extract",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:58.621060+00:00"
   },
   {
     "id": "ps-hiris-byredo-alto-astral-apa-de-parfum-unisex--00004065",
@@ -7129,7 +7145,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "hiris",
     "image_fixed_at": "2026-04-23T17:15:21.626754Z",
-    "image_fix_source": "generic-extract"
+    "image_fix_source": "generic-extract",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:58.621754+00:00"
   },
   {
     "id": "ps-hiris-viktor-rolf-flowerbomb-pretty-peony-apa--00004040",
@@ -7162,7 +7180,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "hiris",
     "image_fixed_at": "2026-04-23T17:15:21.626754Z",
-    "image_fix_source": "generic-extract"
+    "image_fix_source": "generic-extract",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:58.621955+00:00"
   },
   {
     "id": "ps-hiris-set-cadou-paco-rabanne-invictus-apa-de-t-46665",
@@ -7195,7 +7215,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "hiris",
     "image_fixed_at": "2026-04-23T17:15:21.626754Z",
-    "image_fix_source": "generic-extract"
+    "image_fix_source": "generic-extract",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:59.756270+00:00"
   },
   {
     "id": "ps-hiris-carolina-herrera-bad-boy-cobalt-absolute-00004029",
@@ -7228,7 +7250,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "hiris",
     "image_fixed_at": "2026-04-23T17:15:21.626754Z",
-    "image_fix_source": "generic-extract"
+    "image_fix_source": "generic-extract",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:59.787681+00:00"
   },
   {
     "id": "ps-techstar-cheie-auto-completa-programabila-techsta-4214",
@@ -7261,7 +7285,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "techstar",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:59.817849+00:00"
   },
   {
     "id": "ps-hotpick-resigilat-semineu-electric-adler-ad7755--R AD7755",
@@ -7294,7 +7320,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "hotpick",
     "image_fixed_at": "2026-04-23T17:15:21.626754Z",
-    "image_fix_source": "generic-extract"
+    "image_fix_source": "generic-extract",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:59.824146+00:00"
   },
   {
     "id": "vegis-d1cd9cfa",
@@ -7327,7 +7355,9 @@
     "scraped_at": "2026-04-23",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-23T16:20:09.353192Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:59.826703+00:00"
   },
   {
     "id": "vegis-6aabd914",
@@ -7360,7 +7390,9 @@
     "scraped_at": "2026-04-23",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-23T16:20:09.353192Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:59.830829+00:00"
   },
   {
     "id": "vegis-c7f4702c",
@@ -7393,7 +7425,9 @@
     "scraped_at": "2026-04-23",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-23T16:20:09.353192Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:59.840708+00:00"
   },
   {
     "id": "vegis-9fb7ed12",
@@ -7426,7 +7460,9 @@
     "scraped_at": "2026-04-23",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-23T16:20:09.353192Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:59.844071+00:00"
   },
   {
     "id": "vegis-c7b3501f",
@@ -7459,7 +7495,9 @@
     "scraped_at": "2026-04-23",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-23T16:20:09.353192Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:59.847600+00:00"
   },
   {
     "id": "vegis-59068e20",
@@ -7492,7 +7530,9 @@
     "scraped_at": "2026-04-23",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-23T16:20:09.353192Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:10:59.898942+00:00"
   },
   {
     "id": "vegis-30cf5afe",
@@ -7525,7 +7565,9 @@
     "scraped_at": "2026-04-23",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-23T16:20:09.353192Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:00.159744+00:00"
   },
   {
     "id": "vegis-99c1a2bf",
@@ -7558,7 +7600,9 @@
     "scraped_at": "2026-04-23",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-23T16:20:09.353192Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:00.189626+00:00"
   },
   {
     "id": "vegis-9f82d7fd",
@@ -7591,7 +7635,9 @@
     "scraped_at": "2026-04-23",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-23T16:20:09.353192Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:00.244363+00:00"
   },
   {
     "id": "watch24-5266ac44",
@@ -8122,7 +8168,9 @@
     "description": "Ușă metalică apartament Novo Doors First Class NDS31 cu izolație și vizor, 200×88 cm, finisaj wenge, reducere 34% pe Novodoors 2026 — 1486 lei, kit complet.",
     "seo_rewritten_at": "2026-04-22T17:16:06.460Z",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:00.248010+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-ID88ORDR",
@@ -8159,7 +8207,9 @@
     "description": "Ușă metalică Novo Doors First Class NDS32 cu izolație și vizor, 200×88 cm, gri deschis, reducere 34% pe Novodoors 2026 — 1486 lei, kit complet inclus.",
     "seo_rewritten_at": "2026-04-22T17:16:06.460Z",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:00.667371+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-ID88ORST",
@@ -8192,7 +8242,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:00.859077+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-GA88ORDR",
@@ -8225,7 +8277,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:00.926662+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-GA88ORST",
@@ -8258,7 +8312,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.035027+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-EN88ORST",
@@ -8291,7 +8347,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.084796+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-RI88ORDR",
@@ -8324,7 +8382,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.086996+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-8WENORST",
@@ -8357,7 +8417,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.253096+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-RI88ORST",
@@ -8390,7 +8452,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.269641+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-AN88ORDR",
@@ -8423,7 +8487,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.287788+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-AN88ORST",
@@ -8456,7 +8522,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.296638+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-apartament-cu-izolatie-s-8WENORDR",
@@ -8489,7 +8557,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.327981+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--UC98ORST",
@@ -8522,7 +8592,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.441165+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--UC98ORDR",
@@ -8555,7 +8627,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.497583+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--UC88ORDR",
@@ -8588,7 +8662,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.509081+00:00"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--UC88ORST",
@@ -8621,7 +8697,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T16:47:14.826268Z",
-    "image_fix_source": "og-image-scrape"
+    "image_fix_source": "og-image-scrape",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.532437+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd19-lux-MPAMTR30",
@@ -8654,7 +8732,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.678182+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd19-lux-MPAMTR10",
@@ -8687,7 +8767,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.679860+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd18-lux-MPAMTR10",
@@ -8720,7 +8802,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.703408+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd18-lux-MPAMTR30",
@@ -8753,7 +8837,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.716652+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd170-lu-MPAMTR30",
@@ -8786,7 +8872,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.732031+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd170-lu-MPAMTR10",
@@ -8819,7 +8907,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.848994+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd15-lux-MPAMTR10",
@@ -8852,7 +8942,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.913996+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd15-lux-MPAMTR30",
@@ -8885,7 +8977,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.930710+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd16-lux-MPAMTR30",
@@ -8918,7 +9012,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:01.943385+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd16-lux-MPAMTR10",
@@ -8951,7 +9047,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:02.082283+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd06-lux-MPAMTR10",
@@ -8984,7 +9082,9 @@
     "scraped_at": "2026-04-20",
     "magazine_key": "novodoors",
     "image_fixed_at": "2026-04-23T17:00:12.257666Z",
-    "image_fix_source": "og-image-retry"
+    "image_fix_source": "og-image-retry",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-23T22:11:02.095001+00:00"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-nd06-lux-MPAMTR30",
