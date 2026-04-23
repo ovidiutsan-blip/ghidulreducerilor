@@ -27,19 +27,19 @@
 
 ## Automated Audit Results
 
-**Last run:** 2026-04-23T19:01:16.921671+00:00
-**Score:** 90/100
-**Checks:** 5 pass, 0 fail, 2 warn, 1 skip
-**Total issues:** 130
+**Last run:** 2026-04-23T14:35:09.356212+00:00
+**Score:** 80/100
+**Checks:** 4 pass, 1 fail, 1 warn, 2 skip
+**Total issues:** 36
 
 | Check | Status | Issues |
 |-------|--------|--------|
 | homepage | PASS | 0 (—) |
-| affiliate_links | WARN | 126 (Direct Profitshare link (blocked on mobile): watch24-6f8ca26) |
+| affiliate_links | SKIP | 0 (—) |
 | store_coverage | WARN | 3 (Active store 'FashionDays' has 0 deals) |
 | images | PASS | 0 (—) |
 | image_hosts | PASS | 0 (—) |
-| data_quality | PASS | 0 (—) |
+| data_quality | FAIL | 32 (Duplicate deal ID: ps-novodoors-usa-interior-din-mdf-novo-do) |
 | security_headers | PASS | 0 (—) |
 | pages | SKIP | 1 (monitor_agent not available, skipping page checks) |
 

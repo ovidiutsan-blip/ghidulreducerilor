@@ -305,6 +305,17 @@ def probe():
                                 params={"page": 1, "per_page": 3}, timeout=15)
             preview = resp.content[:200].decode("utf-8-sig", errors="replace").replace("\n", " ")
             log(f"  {ep} → {resp.status_code} | {preview[:120]}")
+            # For successful product_feeds, print full first feed object
+            if resp.status_code == 200 and "product_feeds" in ep.lower():
+                try:
+                    pf_data = _safe_json(resp)
+                    feeds = pf_data.get("product_feeds") or []
+                    if feeds:
+                        log(f"    [product_feeds] count={len(feeds)}, first feed keys:")
+                        for k, v in feeds[0].items():
+                            log(f"      {k}: {str(v)[:150]}")
+                except Exception as pe:
+                    log(f"    [parse error] {pe}")
         except Exception as e:
             log(f"  {ep} → ERROR: {e}")
 

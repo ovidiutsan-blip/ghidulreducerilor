@@ -49,3 +49,6 @@ _*.js
 _*.py 
 _*.json 
 _*.txt 
+
+# Allow python packages__init__.py
+!__init__.py
