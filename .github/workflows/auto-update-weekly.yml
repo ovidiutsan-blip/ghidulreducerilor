@@ -15,6 +15,7 @@ on:
           - full
           - audit-only
           - dry-run
+          - list-2p-programs
 
 concurrency:
   group: data-updates
@@ -60,9 +61,10 @@ jobs:
         run: |
           MODE="${{ github.event.inputs.mode || 'full' }}"
           case "$MODE" in
-            audit-only) python scripts/auto_update.py --audit-only ;;
-            dry-run)    python scripts/auto_update.py --dry-run ;;
-            *)          python scripts/auto_update.py ;;
+            audit-only)        python scripts/auto_update.py --audit-only ;;
+            dry-run)           python scripts/auto_update.py --dry-run ;;
+            list-2p-programs)  python agents/two_performant_to_deals.py --list-programs ;;
+            *)                 python scripts/auto_update.py ;;
           esac
 
       - name: Commit changes

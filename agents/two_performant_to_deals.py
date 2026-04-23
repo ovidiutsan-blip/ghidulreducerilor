@@ -233,6 +233,54 @@ def probe():
             log(f"ERROR: {e}")
 
 
+def list_programs():
+    """Listeaza toate programele aprobate cu campaign_unique — pentru a gasi IDs noi."""
+    log("=== LIST APPROVED PROGRAMS ===")
+    try:
+        # Incearca pagination: page 1, 2, ...
+        all_programs = []
+        for page in range(1, 10):
+            url = f"{API_BASE}/affiliate/programs"
+            params = {"filter": "accepted", "page": page, "per_page": 100}
+            r = requests.get(url, headers=auth_headers(), params=params, timeout=30)
+            if not r.ok:
+                log(f"  Page {page}: HTTP {r.status_code} — {r.text[:200]}")
+                break
+            data = r.json()
+            # Detecteaza structura raspunsului
+            if isinstance(data, list):
+                programs = data
+            elif isinstance(data, dict):
+                programs = (data.get("programs") or data.get("data") or
+                            data.get("results") or data.get("items") or [])
+            else:
+                programs = []
+
+            if not programs:
+                if page == 1:
+                    log(f"  Structura raspuns brut: {json.dumps(data)[:500]}")
+                break
+            all_programs.extend(programs)
+            log(f"  Page {page}: {len(programs)} programs")
+            if len(programs) < 50:
+                break  # ultima pagina
+
+        log(f"\nTotal programe aprobate: {len(all_programs)}")
+        log("\n{:<30} {:<15} {:<40}".format("Advertiser", "Unique", "Domain/URL"))
+        log("-" * 90)
+        for p in all_programs:
+            name = (p.get("name") or p.get("advertiser_name") or p.get("program_name") or
+                    p.get("title") or str(p.get("id", "")))
+            unique = (p.get("unique") or p.get("campaign_unique") or p.get("slug") or
+                      p.get("id") or "?")
+            domain = (p.get("domain") or p.get("url") or p.get("website") or
+                      p.get("advertiser_domain") or "")
+            log("{:<30} {:<15} {:<40}".format(str(name)[:30], str(unique)[:15], str(domain)[:40]))
+
+    except Exception as e:
+        log(f"ERROR: {e}")
+
+
 # ─── Logging ─────────────────────────────────────────────────────────────────
 def log(msg: str):
     ts = datetime.utcnow().strftime("%H:%M:%S")
@@ -247,14 +295,20 @@ def main():
     args = sys.argv[1:]
     dry_run = "--dry-run" in args
     probe_mode = "--probe" in args
+    list_mode = "--list-programs" in args
 
-    log(f"=== 2Performant Import {'[PROBE]' if probe_mode else '[DRY-RUN]' if dry_run else ''} ===")
+    mode_str = "[LIST-PROGRAMS]" if list_mode else "[PROBE]" if probe_mode else "[DRY-RUN]" if dry_run else ""
+    log(f"=== 2Performant Import {mode_str} ===")
     log(f"USER_KEY: {'set (' + str(len(USER_KEY)) + ' chars)' if USER_KEY else 'NOT SET'}")
     log(f"AFF_CODE: {AFF_CODE}")
 
     if not USER_KEY:
         log("ABORT: TWO_PERFORMANT_USER_KEY not set. Set in .env or GitHub Secrets.")
         sys.exit(1)
+
+    if list_mode:
+        list_programs()
+        return
 
     if probe_mode:
         probe()
