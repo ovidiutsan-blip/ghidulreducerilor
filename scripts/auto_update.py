@@ -68,6 +68,23 @@ def run_auto_update(audit_only=False, dry_run=False):
 
     steps_results = {}
 
+    # ═══ Step 0: 2Performant Token Pre-Flight Check ═══
+    try:
+        import subprocess, sys as _sys
+        rtoken = subprocess.run(
+            [_sys.executable, str(ROOT / 'scripts' / 'check_token_expiry.py'), '--quiet'],
+            capture_output=True, text=True, timeout=15
+        )
+        if rtoken.returncode != 0:
+            logger.warning("🔴 2P TOKEN CHECK FAILED — credentials may be expired!")
+            logger.warning(rtoken.stdout.strip() or rtoken.stderr.strip())
+            steps_results['token_check'] = {'success': False, 'note': '2P token expired/invalid'}
+        else:
+            steps_results['token_check'] = {'success': True}
+    except Exception as e:
+        logger.info(f"Token pre-flight skipped: {e}")
+        steps_results['token_check'] = {'success': True, 'skipped': True}
+
     # ═══ Step 1: Full Audit ═══
     from audit_full import run_audit
     success, audit_report = run_step("Full Audit", run_audit, skip_links=False)
@@ -94,27 +111,26 @@ def run_auto_update(audit_only=False, dry_run=False):
         'dry_run': not apply
     }
 
-    # ═══ Step 3: Refresh Profitshare Links ═══
-    if not dry_run and os.getenv('PROFITSHARE_API_USER') and os.getenv('PROFITSHARE_API_KEY'):
+    # ═══ Step 2b: Fix Broken Images (merchant scraper agents) ═══
+    if not dry_run:
         try:
-            from generate_profitshare_links import process_deals, process_codes
-            success_deals, _ = run_step("Profitshare Links (deals)", process_deals)
-            success_codes, _ = run_step("Profitshare Links (codes)", process_codes)
-            steps_results['profitshare'] = {
-                'success': success_deals and success_codes,
-                'deals_processed': success_deals,
-                'codes_processed': success_codes
-            }
+            import subprocess, sys as _sys
+            rfix = subprocess.run(
+                [_sys.executable, '-m', 'agents.merchants.run', 'all', '--fix-images'],
+                capture_output=True, text=True, encoding='utf-8', errors='replace',
+                timeout=300, cwd=str(ROOT)
+            )
+            logger.info(rfix.stdout[-2000:] if rfix.stdout else '(no output)')
+            if rfix.returncode != 0:
+                logger.warning(f"Image fix exit {rfix.returncode}: {rfix.stderr[-300:]}")
+            steps_results['image_fix'] = {'success': rfix.returncode == 0}
         except Exception as e:
-            logger.warning(f"Profitshare link refresh skipped: {e}")
-            steps_results['profitshare'] = {'success': False, 'skipped': True, 'reason': str(e)}
+            logger.warning(f"Image fix skipped: {e}")
+            steps_results['image_fix'] = {'success': False, 'skipped': True, 'reason': str(e)}
     else:
-        reason = 'dry_run' if dry_run else 'missing API credentials'
-        logger.info(f"Profitshare link refresh skipped: {reason}")
-        steps_results['profitshare'] = {'success': True, 'skipped': True, 'reason': reason}
+        steps_results['image_fix'] = {'success': True, 'skipped': True, 'reason': 'dry_run'}
 
-
-    # === Step 3b: Profitshare Feed Import ===
+    # ═══ Step 3: Profitshare Feed Import (add new + expire stale) ═══
     if not dry_run and os.getenv('PROFITSHARE_API_USER') and os.getenv('PROFITSHARE_API_KEY'):
         try:
             import subprocess, sys as _sys
@@ -134,10 +150,10 @@ def run_auto_update(audit_only=False, dry_run=False):
             steps_results['profitshare_import'] = {'success': False, 'skipped': True, 'reason': str(e)}
     else:
         reason = 'dry_run' if dry_run else 'PROFITSHARE credentials not set'
-        logger.info(f"Profitshare feed import skipped: {reason}")
+        logger.info(f"Profitshare import skipped: {reason}")
         steps_results['profitshare_import'] = {'success': True, 'skipped': True, 'reason': reason}
 
-    # === Step 3c: 2Performant Import ===
+    # ═══ Step 3b: 2Performant Import (add new + expire stale) ═══
     if not dry_run and os.getenv('TWO_PERFORMANT_ACCESS_TOKEN') and os.getenv('TWO_PERFORMANT_CLIENT_ID'):
         try:
             import subprocess, sys as _sys
@@ -159,6 +175,26 @@ def run_auto_update(audit_only=False, dry_run=False):
         reason = 'dry_run' if dry_run else 'TWO_PERFORMANT_ACCESS_TOKEN/CLIENT_ID not set'
         logger.info(f"2Performant import skipped: {reason}")
         steps_results['two_performant_import'] = {'success': True, 'skipped': True, 'reason': reason}
+
+    # ═══ Step 3c: Refresh Profitshare Affiliate Links ═══
+    # Runs AFTER imports so newly imported deals get their links refreshed too.
+    if not dry_run and os.getenv('PROFITSHARE_API_USER') and os.getenv('PROFITSHARE_API_KEY'):
+        try:
+            from generate_profitshare_links import process_deals, process_codes
+            success_deals, _ = run_step("Profitshare Links (deals)", process_deals)
+            success_codes, _ = run_step("Profitshare Links (codes)", process_codes)
+            steps_results['profitshare_links'] = {
+                'success': success_deals and success_codes,
+                'deals_processed': success_deals,
+                'codes_processed': success_codes
+            }
+        except Exception as e:
+            logger.warning(f"Profitshare link refresh skipped: {e}")
+            steps_results['profitshare_links'] = {'success': False, 'skipped': True, 'reason': str(e)}
+    else:
+        reason = 'dry_run' if dry_run else 'missing API credentials'
+        logger.info(f"Profitshare link refresh skipped: {reason}")
+        steps_results['profitshare_links'] = {'success': True, 'skipped': True, 'reason': reason}
 
     # ═══ Step 4: Link Checker (verify) ═══
     if not dry_run:

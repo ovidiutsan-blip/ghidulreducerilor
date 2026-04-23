@@ -78,11 +78,19 @@ def product_to_deal(p: dict, magazin: str, categorie: str, allowed_cats: list | 
         "categorie": categorie,
         "data_adaugare": datetime.utcnow().strftime("%Y-%m-%d"),
         "activ": True,
+        "is_active": True,
+        "sursa": "profitshare",
     }
 
 
 def fetch_deals(magazin: str, adv_id: int, categorie: str, max_pages: int = 20, min_pct: int = 10, allowed_cats: list | None = None):
+    """Returns (deals, valid_urls, fetch_success).
+    valid_urls = set of product_url for ALL products with a valid discount this run.
+    fetch_success = True if at least one raw product was returned by the API (not API error).
+    """
     deals = []
+    valid_urls = set()
+    total_raw = 0
     for page in range(1, max_pages + 1):
         resp = None
         # Retry with exponential backoff on 429
@@ -103,12 +111,14 @@ def fetch_deals(magazin: str, adv_id: int, categorie: str, max_pages: int = 20, 
         products = resp.json().get("result", {}).get("products", [])
         if not products:
             break
+        total_raw += len(products)
         for p in products:
             d = product_to_deal(p, magazin, categorie, allowed_cats=allowed_cats)
             if d and d["procent_reducere"] >= min_pct:
                 deals.append(d)
+                valid_urls.add(d["product_url"])
         time.sleep(0.3)
-    return deals
+    return deals, valid_urls, total_raw > 0
 
 
 def main():
@@ -134,10 +144,16 @@ def main():
     print(f"Loaded {len(targets)} active merchants from ps_merchants.json")
 
     all_new = []
+    all_seen_urls: set = set()   # valid product_urls across all merchants this run
+    successful_slugs: set = set()  # merchants where API call returned data (not error)
+
     for magazin, adv_id, categorie, max_pages, min_pct, allowed_cats in targets:
         print(f"\n[{magazin}] fetching {max_pages}p (min {min_pct}% reducere), cat='{categorie}', whitelist={allowed_cats is not None}")
-        new_deals = fetch_deals(magazin, adv_id, categorie, max_pages=max_pages, min_pct=min_pct, allowed_cats=allowed_cats)
+        new_deals, valid_urls, success = fetch_deals(magazin, adv_id, categorie, max_pages=max_pages, min_pct=min_pct, allowed_cats=allowed_cats)
         print(f"  extracted: {len(new_deals)} deals w/ real discount")
+        if success:
+            all_seen_urls |= valid_urls
+            successful_slugs.add(magazin)
         # Dedupe vs existing
         added = 0
         for d in new_deals:
@@ -148,6 +164,22 @@ def main():
             all_new.append(d)
             added += 1
         print(f"  after dedupe: +{added} new")
+
+    # ─── Expire PS deals no longer in feed ───────────────────────────────────
+    # Only expire deals from merchants we successfully fetched (not API errors).
+    expired_count = 0
+    now_date = datetime.utcnow().strftime("%Y-%m-%d")
+    for d in existing:
+        if (d.get("activ") and
+                d.get("magazin") in successful_slugs and
+                d.get("id", "").startswith("ps-") and
+                d.get("product_url") not in all_seen_urls):
+            d["activ"] = False
+            d["is_active"] = False
+            d["expired_at"] = now_date
+            expired_count += 1
+    if expired_count:
+        print(f"  Expired: {expired_count} PS deals no longer in feed (reducere incheiata)")
 
     print(f"\nTOTAL new deals: {len(all_new)}")
     merged = existing + all_new

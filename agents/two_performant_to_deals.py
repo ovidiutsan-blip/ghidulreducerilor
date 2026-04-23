@@ -238,9 +238,14 @@ def _get_feeds_for_program(unique_code: str) -> list[dict]:
 
 
 def fetch_merchant(magazin: str, unique_code: str, categorie: str,
-                   max_pages: int, min_pct: int, allowed_cats: list | None) -> list[dict]:
-    """Fetch toate paginile din feed-urile programului si returneaza deal-urile eligibile."""
+                   max_pages: int, min_pct: int, allowed_cats: list | None) -> tuple[list[dict], set[str], bool]:
+    """Fetch toate paginile din feed-urile programului si returneaza (deals, valid_urls, fetch_success).
+    valid_urls = set de product_url pentru toate produsele cu reducere valida.
+    fetch_success = True daca am primit cel putin un produs brut de la API (nu eroare).
+    """
     deals = []
+    valid_urls: set[str] = set()
+    total_raw = 0
     log(f"  Fetching {magazin} (unique_code={unique_code})...")
 
     feeds = _get_feeds_for_program(unique_code)
@@ -275,10 +280,12 @@ def fetch_merchant(magazin: str, unique_code: str, categorie: str,
                            meta.get("last_page") or max_pages)
 
             hits = 0
+            total_raw += len(products)
             for p in products:
                 deal = product_to_deal(p, magazin, unique_code, categorie, allowed_cats)
                 if deal and deal["procent_reducere"] >= min_pct:
                     deals.append(deal)
+                    valid_urls.add(deal["product_url"])
                     hits += 1
 
             log(f"      Pagina {page}/{total_pages}: {len(products)} produse, {hits} eligibile")
@@ -288,13 +295,31 @@ def fetch_merchant(magazin: str, unique_code: str, categorie: str,
             time.sleep(0.3)
 
     log(f"  {magazin}: {len(deals)} deals eligibile total")
-    return deals
+    return deals, valid_urls, total_raw > 0
 
 
 # ─── Merge in deals.json ──────────────────────────────────────────────────────
-def merge_deals(new_deals: list[dict], dry_run: bool = False) -> dict:
+def merge_deals(new_deals: list[dict], dry_run: bool = False,
+                expire_slugs: set | None = None, valid_urls: set | None = None) -> dict:
     with open(DEALS_PATH, encoding="utf-8") as f:
         existing = json.load(f)
+
+    # ─── Expire 2P deals no longer in feed ───────────────────────────────────
+    # Only expire for merchants where fetch succeeded (expire_slugs populated).
+    expired = 0
+    if expire_slugs and valid_urls is not None:
+        now_date = datetime.utcnow().strftime("%Y-%m-%d")
+        for d in existing:
+            if (d.get("activ") and
+                    d.get("magazin") in expire_slugs and
+                    (d.get("id", "").startswith("2p-") or d.get("sursa") == "2performant") and
+                    d.get("product_url") not in valid_urls):
+                d["activ"] = False
+                d["is_active"] = False
+                d["expired_at"] = now_date
+                expired += 1
+        if expired:
+            log(f"  Expired: {expired} 2P deals no longer in feed (reducere incheiata)")
 
     existing_urls = {d.get("product_url") or d.get("link_afiliat") for d in existing}
     existing_ids  = {d.get("id") for d in existing}
@@ -313,7 +338,7 @@ def merge_deals(new_deals: list[dict], dry_run: bool = False) -> dict:
         with open(DEALS_PATH, "w", encoding="utf-8") as f:
             json.dump(existing, f, indent=2, ensure_ascii=False)
 
-    return {"added": added, "total": len(existing)}
+    return {"added": added, "expired": expired, "total": len(existing)}
 
 
 # ─── Probe mode ──────────────────────────────────────────────────────────────
@@ -498,20 +523,28 @@ def main():
         probe()
         return
 
-    all_new_deals = []
+    all_new_deals: list[dict] = []
+    all_seen_urls: set[str]   = set()
+    successful_slugs: set[str] = set()
+
     for magazin, unique_code, categorie, max_pages, min_pct, allowed_cats in TARGETS:
-        deals = fetch_merchant(magazin, unique_code, categorie, max_pages, min_pct, allowed_cats)
+        deals, valid_urls, success = fetch_merchant(
+            magazin, unique_code, categorie, max_pages, min_pct, allowed_cats)
         all_new_deals.extend(deals)
+        if success:
+            all_seen_urls |= valid_urls
+            successful_slugs.add(magazin)
 
     log(f"\nTotal deal-uri noi eligibile: {len(all_new_deals)}")
 
-    if all_new_deals:
-        result = merge_deals(all_new_deals, dry_run=dry_run)
-        log(f"Merge: +{result['added']} adaugate, {result['total']} total in deals.json")
-        if dry_run:
-            log("[DRY-RUN] deals.json NU a fost modificat")
-    else:
-        log("Niciun deal nou de adaugat.")
+    result = merge_deals(
+        all_new_deals, dry_run=dry_run,
+        expire_slugs=successful_slugs if not dry_run else None,
+        valid_urls=all_seen_urls if not dry_run else None,
+    )
+    log(f"Merge: +{result['added']} adaugate, -{result['expired']} expirate, {result['total']} total in deals.json")
+    if dry_run:
+        log("[DRY-RUN] deals.json NU a fost modificat")
 
 
 if __name__ == "__main__":
