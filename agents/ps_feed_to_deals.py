@@ -122,27 +122,16 @@ def main():
     existing_ids = set(d.get("id") for d in existing)
     print(f"Existing deals: {len(existing)}")
 
-    # Per-merchant targets: (slug, ps_id, categorie, max_pages, min_pct, category_whitelist)
-    # category_whitelist=None => all products; list => filter by feed's category_name
-    VEGIS_FARMACIE = ["Produse Naturiste si Tratamente", "Cosmetice", "Ceaiuri"]
-    HIRIS_BEAUTY = ["Parfumuri & Deodorante", "Cosmetice"]
-    TECHSTAR_CASA = ["Electrice & Iluminat", "Electrocasnice Mici", "Ustensile bucatarie", "Scule si unelte", "Iluminat"]
-    HOTPICK_CASA = ["Bucatarie si servire", "Blendere & Tocatoare", "Electrocasnice Mici", "Sandwich-maker & Waffe", "Aspiratoare"]
-    ALECOAIR_CASA = ["Dezumidificatoare", "Purificatoare de Aer", "Umidificatoare", "Aparate de Aer Conditionat", "Aparate de Incalzire"]
+    # Per-merchant targets: loaded from ps_merchants.json (mirrors 2p_merchants.json pattern)
+    ps_merchants_path = BASE / "agents" / "ps_merchants.json"
+    with open(ps_merchants_path, encoding="utf-8") as _mf:
+        _merchants = json.load(_mf)
     targets = [
-        ("vegis", 58221, "suplimente-bio", 25, 15, VEGIS_FARMACIE),
-        ("mathaus", 124829, "casa-gradina", 50, 10, None),
-        # Sprint #37 additions (scan confirmed real discounts):
-        ("hiris", 71041, "beauty", 5, 15, HIRIS_BEAUTY),          # 55% hit rate, closes beauty gap
-        ("case-smart", 111470, "casa-gradina", 3, 10, None),       # 100% hit rate, smart home
-        ("novodoors", 166234, "casa-gradina", 3, 15, None),        # 100% hit rate, usi metalice
-        # Sprint #38 additions (v2 scan):
-        ("techstar", 88017, "casa-gradina", 4, 15, TECHSTAR_CASA),  # 65% hit rate, mixed retail (whitelist casa-fit)
-        ("hotpick", 142963, "casa-gradina", 4, 15, HOTPICK_CASA),   # 35% hit rate, resigilate kitchen
-        # Sprint #39 additions (v3 scan):
-        ("alecoair", 96348, "casa-gradina", 4, 15, ALECOAIR_CASA),   # 70% hit rate, climate control (dezumidif/purificatoare)
-        ("streamstore", 166230, "electronice", 4, 10, None),         # 100% hit rate, software licenses (Adobe/Autodesk/MS)
+        (m["slug"], m["adv_id"], m["categorie"],
+         m.get("max_pages", 20), m.get("min_pct", 10), m.get("cat_whitelist"))
+        for m in _merchants if m.get("activ", True)
     ]
+    print(f"Loaded {len(targets)} active merchants from ps_merchants.json")
 
     all_new = []
     for magazin, adv_id, categorie, max_pages, min_pct, allowed_cats in targets:

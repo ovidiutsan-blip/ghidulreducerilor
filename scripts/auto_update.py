@@ -114,7 +114,30 @@ def run_auto_update(audit_only=False, dry_run=False):
         steps_results['profitshare'] = {'success': True, 'skipped': True, 'reason': reason}
 
 
-    # === Step 3b: 2Performant Import ===
+    # === Step 3b: Profitshare Feed Import ===
+    if not dry_run and os.getenv('PROFITSHARE_API_USER') and os.getenv('PROFITSHARE_API_KEY'):
+        try:
+            import subprocess, sys as _sys
+            script_ps = str(ROOT / 'agents' / 'ps_feed_to_deals.py')
+            envps = {**os.environ, 'PYTHONIOENCODING': 'utf-8'}
+            rps = subprocess.run(
+                [_sys.executable, script_ps],
+                capture_output=True, text=True, encoding='utf-8', errors='replace',
+                timeout=600, env=envps
+            )
+            logger.info(rps.stdout[-3000:] if rps.stdout else '(no output)')
+            if rps.returncode != 0:
+                logger.warning(f"Profitshare import exit {rps.returncode}: {rps.stderr[-500:]}")
+            steps_results['profitshare_import'] = {'success': rps.returncode == 0}
+        except Exception as e:
+            logger.warning(f"Profitshare import skipped: {e}")
+            steps_results['profitshare_import'] = {'success': False, 'skipped': True, 'reason': str(e)}
+    else:
+        reason = 'dry_run' if dry_run else 'PROFITSHARE credentials not set'
+        logger.info(f"Profitshare feed import skipped: {reason}")
+        steps_results['profitshare_import'] = {'success': True, 'skipped': True, 'reason': reason}
+
+    # === Step 3c: 2Performant Import ===
     if not dry_run and os.getenv('TWO_PERFORMANT_ACCESS_TOKEN') and os.getenv('TWO_PERFORMANT_CLIENT_ID'):
         try:
             import subprocess, sys as _sys
@@ -128,14 +151,14 @@ def run_auto_update(audit_only=False, dry_run=False):
             logger.info(r2p.stdout[-3000:] if r2p.stdout else '(no output)')
             if r2p.returncode != 0:
                 logger.warning(f"2Performant import exit {r2p.returncode}: {r2p.stderr[-500:]}")
-            steps_results['two_performant'] = {'success': r2p.returncode == 0}
+            steps_results['two_performant_import'] = {'success': r2p.returncode == 0}
         except Exception as e:
             logger.warning(f"2Performant import skipped: {e}")
-            steps_results['two_performant'] = {'success': False, 'skipped': True, 'reason': str(e)}
+            steps_results['two_performant_import'] = {'success': False, 'skipped': True, 'reason': str(e)}
     else:
         reason = 'dry_run' if dry_run else 'TWO_PERFORMANT_ACCESS_TOKEN/CLIENT_ID not set'
         logger.info(f"2Performant import skipped: {reason}")
-        steps_results['two_performant'] = {'success': True, 'skipped': True, 'reason': reason}
+        steps_results['two_performant_import'] = {'success': True, 'skipped': True, 'reason': reason}
 
     # ═══ Step 4: Link Checker (verify) ═══
     if not dry_run:

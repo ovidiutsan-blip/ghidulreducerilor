@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "vegis",
+    "adv_id": 58221,
+    "categorie": "suplimente-bio",
+    "max_pages": 25,
+    "min_pct": 15,
+    "cat_whitelist": ["Produse Naturiste si Tratamente", "Cosmetice", "Ceaiuri"],
+    "activ": true
+  },
+  {
+    "slug": "mathaus",
+    "adv_id": 124829,
+    "categorie": "casa-gradina",
+    "max_pages": 50,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true
+  },
+  {
+    "slug": "hiris",
+    "adv_id": 71041,
+    "categorie": "beauty",
+    "max_pages": 5,
+    "min_pct": 15,
+    "cat_whitelist": ["Parfumuri & Deodorante", "Cosmetice"],
+    "activ": true,
+    "nota": "Sprint #37; 55% hit rate; closes beauty gap"
+  },
+  {
+    "slug": "case-smart",
+    "adv_id": 111470,
+    "categorie": "casa-gradina",
+    "max_pages": 3,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Sprint #37; 100% hit rate; smart home"
+  },
+  {
+    "slug": "novodoors",
+    "adv_id": 166234,
+    "categorie": "casa-gradina",
+    "max_pages": 3,
+    "min_pct": 15,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Sprint #37; 100% hit rate; usi metalice"
+  },
+  {
+    "slug": "techstar",
+    "adv_id": 88017,
+    "categorie": "casa-gradina",
+    "max_pages": 4,
+    "min_pct": 15,
+    "cat_whitelist": ["Electrice & Iluminat", "Electrocasnice Mici", "Ustensile bucatarie", "Scule si unelte", "Iluminat"],
+    "activ": true,
+    "nota": "Sprint #38; 65% hit rate; mixed retail (whitelist casa-fit)"
+  },
+  {
+    "slug": "hotpick",
+    "adv_id": 142963,
+    "categorie": "casa-gradina",
+    "max_pages": 4,
+    "min_pct": 15,
+    "cat_whitelist": ["Bucatarie si servire", "Blendere & Tocatoare", "Electrocasnice Mici", "Sandwich-maker & Waffe", "Aspiratoare"],
+    "activ": true,
+    "nota": "Sprint #38; 35% hit rate; resigilate kitchen"
+  },
+  {
+    "slug": "alecoair",
+    "adv_id": 96348,
+    "categorie": "casa-gradina",
+    "max_pages": 4,
+    "min_pct": 15,
+    "cat_whitelist": ["Dezumidificatoare", "Purificatoare de Aer", "Umidificatoare", "Aparate de Aer Conditionat", "Aparate de Incalzire"],
+    "activ": true,
+    "nota": "Sprint #39; 70% hit rate; climate control (dezumidif/purificatoare)"
+  },
+  {
+    "slug": "streamstore",
+    "adv_id": 166230,
+    "categorie": "electronice",
+    "max_pages": 4,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Sprint #39; 100% hit rate; software licenses (Adobe/Autodesk/MS)"
+  }
+]
