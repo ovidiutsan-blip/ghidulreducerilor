@@ -3,6 +3,7 @@
 Usage:
   python -m agents.merchants.run streamstore --fix-images
   python -m agents.merchants.run alecoair --fix-images
+  python -m agents.merchants.run mathaus --fix-images
   python -m agents.merchants.run all --fix-images
 
 Writes changes to data/deals.json and a run summary to logs/agents-{date}.log.
@@ -21,7 +22,7 @@ LOGS.mkdir(exist_ok=True)
 
 
 def get_registry():
-    from . import streamstore, case_smart, vegis, hiris, alecoair, hotpick
+    from . import streamstore, case_smart, vegis, hiris, alecoair, hotpick, mathaus
     return {
         "streamstore": streamstore.StreamStoreAgent(),
         "case-smart":  case_smart.CaseSmartAgent(),
@@ -29,7 +30,7 @@ def get_registry():
         "hiris":       hiris.HirisAgent(),
         "alecoair":    alecoair.AlecoAirAgent(),
         "hotpick":     hotpick.HotpickAgent(),
-        # "mathaus":   mathaus.MathausAgent(),  # TODO: Playwright CloudFlare
+        "mathaus":     mathaus.MathausAgent(),
     }
 
 
@@ -40,7 +41,6 @@ def _is_broken(deal: dict, agent_slug: str) -> bool:
         return True
     if "profitsmart.ro" in img:
         return True
-    # Placeholder-uri generice
     placeholders = ("lazy-loader", "lazy_loader", "no-image", "default.", "placeholder",
                     "coming-soon", "assets/category/")
     return any(p in img.lower() for p in placeholders)
@@ -55,7 +55,6 @@ def run_agent(agent, deals: list[dict], mode: str) -> dict:
     }
 
     if mode == "fix-images":
-        # Suport get_broken_deals custom (ex: AlecoAirAgent)
         if hasattr(agent, "get_broken_deals"):
             broken = agent.get_broken_deals(deals)
         else:
@@ -77,6 +76,8 @@ def run_agent(agent, deals: list[dict], mode: str) -> dict:
                     d["image_fixed_at"] = now
                     d["image_fix_source"] = f"agent:{agent.slug}"
                     result["images_fixed"] += 1
+                    d["activ"] = True
+                    d["is_active"] = True
             unfixed = len(broken) - result["images_fixed"]
             if unfixed:
                 result["errors"].append(f"{unfixed} images could not be fixed")
@@ -86,7 +87,7 @@ def run_agent(agent, deals: list[dict], mode: str) -> dict:
 
 
 def now_iso_fn() -> str:
-    return datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def main():
@@ -119,7 +120,7 @@ def main():
     with open(DEALS, "w", encoding="utf-8") as f:
         json.dump(deals, f, indent=2, ensure_ascii=False)
 
-    log_file = LOGS / f"agents-{datetime.utcnow().strftime('%Y-%m-%d')}.log"
+    log_file = LOGS / f"agents-{datetime.now().strftime('%Y-%m-%d')}.log"
     with open(log_file, "a", encoding="utf-8") as f:
         for r in results:
             f.write(json.dumps({"ts": now_iso_fn(), **r}, ensure_ascii=False) + "\n")
