@@ -41,6 +41,19 @@ const nextConfig = {
       // Vegis (PS feed — cdn.vegis.ro + lazy-loader)
       { protocol: 'https', hostname: 'cdn.vegis.ro' },
       { protocol: 'https', hostname: '**.vegis.ro' },
+      // Hiris (CDN cdnmp.net — Gomag/Magento platform)
+      { protocol: 'https', hostname: 'c.cdnmp.net' },
+      { protocol: 'https', hostname: '**.cdnmp.net' },
+      { protocol: 'https', hostname: '**.hiris.ro' },
+      // Alecoair (direct)
+      { protocol: 'https', hostname: '**.alecoair.ro' },
+      { protocol: 'https', hostname: 'alecoair.ro' },
+      // Hotpick (direct)
+      { protocol: 'https', hostname: '**.hotpick.ro' },
+      { protocol: 'https', hostname: 'hotpick.ro' },
+      // Mathaus (CDN)
+      { protocol: 'https', hostname: '**.mathaus.ro' },
+      { protocol: 'https', hostname: 'mathaus.ro' },
       // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.shopify.com' },
