@@ -104,7 +104,7 @@ jobs:
         run: |
           git config user.name "GhidulReducerilor Bot"
           git config user.email "bot@ghidulreducerilor.ro"
-          git add data/deals.json data/codes.json lib/theme-hubs.ts
+          git add data/deals.json data/codes.json lib/theme-hubs.ts public/images/
           git diff --staged --quiet || git commit -m "🤖 Auto-update deals $(date +%Y-%m-%d)"
 
       - name: 📤 Push la GitHub (trigger Vercel redeploy)
