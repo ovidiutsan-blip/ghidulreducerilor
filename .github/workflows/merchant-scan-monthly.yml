@@ -1,0 +1,52 @@
+name: Merchant Scan (Monthly)
+
+on:
+  schedule:
+    # Prima zi a lunii, ora 06:00 UTC
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Mod scan (ps-only / 2p-only / full)'
+        required: false
+        default: 'full'
+
+jobs:
+  merchant-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests python-dotenv
+
+      - name: Run Merchant Scan
+        env:
+          PROFITSHARE_API_USER: ${{ secrets.PROFITSHARE_API_USER }}
+          PROFITSHARE_API_KEY:  ${{ secrets.PROFITSHARE_API_KEY }}
+          TWO_PERFORMANT_ACCESS_TOKEN: ${{ secrets.TWO_PERFORMANT_ACCESS_TOKEN }}
+          TWO_PERFORMANT_CLIENT_ID:    ${{ secrets.TWO_PERFORMANT_CLIENT_ID }}
+          TWO_PERFORMANT_UID:          ${{ secrets.TWO_PERFORMANT_UID }}
+        run: |
+          MODE="${{ github.event.inputs.mode || 'full' }}"
+          if [ "$MODE" = "ps-only" ]; then
+            python scripts/merchant_scan.py --ps-only
+          elif [ "$MODE" = "2p-only" ]; then
+            python scripts/merchant_scan.py --2p-only
+          else
+            python scripts/merchant_scan.py
+          fi
+
+      - name: Upload scan report
+        uses: actions/upload-artifact@v4
+        with:
+          name: merchant-scan-report
+          path: logs/merchant_scan_*.json
+          retention-days: 90
