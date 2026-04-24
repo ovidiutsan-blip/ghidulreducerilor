@@ -45,18 +45,20 @@ export default function DealCard({ deal }: { deal: Deal }) {
       onClick={handleClick}
     >
       {/* Image + badges */}
-      <div className="relative aspect-square bg-neutral-100 overflow-hidden">
+      <div className="relative aspect-square bg-white overflow-hidden">
         {imgError ? (
           <FallbackImage title={deal.titlu} />
         ) : (
-          <Image
-            src={deal.imagine_url}
-            alt={`${deal.titlu} — reducere ${deal.procent_reducere}% de la ${formatPrice(deal.pret_original)} la ${formatPrice(deal.pret_redus)}`}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            onError={() => setImgError(true)}
-          />
+          <div className="absolute inset-2">
+            <Image
+              src={deal.imagine_url}
+              alt={`${deal.titlu} — reducere ${deal.procent_reducere}% de la ${formatPrice(deal.pret_original)} la ${formatPrice(deal.pret_redus)}`}
+              fill
+              className="object-contain group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              onError={() => setImgError(true)}
+            />
+          </div>
         )}
         <span className="badge-discount">-{deal.procent_reducere}%</span>
 

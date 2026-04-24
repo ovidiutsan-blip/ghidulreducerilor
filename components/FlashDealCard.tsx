@@ -16,20 +16,22 @@ export default function FlashDealCard({ deal }: { deal: Deal }) {
       rel="noopener noreferrer nofollow"
       className="flex-shrink-0 w-40 sm:w-48 snap-start bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-md transition-shadow group"
     >
-      <div className="relative aspect-square bg-neutral-100 overflow-hidden">
+      <div className="relative aspect-square bg-white overflow-hidden">
         {imgError ? (
           <div className="absolute inset-0 flex items-center justify-center">
             <ImageOff className="w-8 h-8 text-neutral-300" />
           </div>
         ) : (
-          <Image
-            src={deal.imagine_url}
-            alt={deal.titlu}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-            sizes="192px"
-            onError={() => setImgError(true)}
-          />
+          <div className="absolute inset-1.5">
+            <Image
+              src={deal.imagine_url}
+              alt={deal.titlu}
+              fill
+              className="object-contain group-hover:scale-105 transition-transform duration-300"
+              sizes="192px"
+              onError={() => setImgError(true)}
+            />
+          </div>
         )}
         <span className="absolute top-2 left-2 bg-brand-red text-white text-xs font-bold px-2 py-0.5 rounded-lg">
           -{deal.procent_reducere}%
