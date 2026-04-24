@@ -9,7 +9,8 @@
     "categorie_principala": "casa-gradina",
     "url_site": "https://alecoair.ro",
     "comision_mediu": "3-8%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/alecoair.png"
   },
   {
     "id": "streamstore",
@@ -21,7 +22,8 @@
     "categorie_principala": "electronice",
     "url_site": "https://www.streamstore.ro",
     "comision_mediu": "5-15%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/streamstore.png"
   },
   {
     "id": "techstar",
@@ -33,7 +35,8 @@
     "categorie_principala": "casa-gradina",
     "url_site": "https://www.techstar.ro",
     "comision_mediu": "5-10%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/techstar.png"
   },
   {
     "id": "hotpick",
@@ -45,7 +48,8 @@
     "categorie_principala": "casa-gradina",
     "url_site": "https://www.hotpick.ro",
     "comision_mediu": "3-8%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/hotpick.png"
   },
   {
     "id": "hiris",
@@ -57,7 +61,8 @@
     "categorie_principala": "beauty",
     "url_site": "https://www.hiris.ro",
     "comision_mediu": "5-10%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/hiris.png"
   },
   {
     "id": "case-smart",
@@ -69,7 +74,8 @@
     "categorie_principala": "casa-gradina",
     "url_site": "https://case-smart.ro",
     "comision_mediu": "5-10%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/case-smart.png"
   },
   {
     "id": "novodoors",
@@ -81,7 +87,8 @@
     "categorie_principala": "casa-gradina",
     "url_site": "https://www.novodoors.ro",
     "comision_mediu": "3-7%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/novodoors.png"
   },
   {
     "id": "emag",
@@ -93,7 +100,8 @@
     "categorie_principala": "electronice",
     "url_site": "https://www.emag.ro",
     "comision_mediu": "1-20%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/emag.png"
   },
   {
     "id": "watch24",
@@ -105,7 +113,8 @@
     "categorie_principala": "ceasuri",
     "url_site": "https://www.watch24.ro",
     "comision_mediu": "5-15%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/watch24.png"
   },
   {
     "id": "forit",
@@ -117,7 +126,8 @@
     "categorie_principala": "electronice",
     "url_site": "https://www.forit.ro",
     "comision_mediu": "2-5%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/forit.png"
   },
   {
     "id": "fornello",
@@ -129,7 +139,8 @@
     "categorie_principala": "casa-gradina",
     "url_site": "https://www.fornello.ro",
     "comision_mediu": "2-5%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/fornello.png"
   },
   {
     "id": "fashiondays",
@@ -141,7 +152,8 @@
     "categorie_principala": "fashion",
     "url_site": "https://www.fashiondays.ro",
     "comision_mediu": "3-8%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/fashiondays.png"
   },
   {
     "id": "libris",
@@ -153,7 +165,8 @@
     "categorie_principala": "carti",
     "url_site": "https://www.libris.ro",
     "comision_mediu": "5-10%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/libris.png"
   },
   {
     "id": "elefant",
@@ -165,7 +178,8 @@
     "categorie_principala": "carti",
     "url_site": "https://www.elefant.ro",
     "comision_mediu": "4-7%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/elefant.png"
   },
   {
     "id": "vegis",
@@ -177,7 +191,8 @@
     "categorie_principala": "sanatate",
     "url_site": "https://www.vegis.ro",
     "comision_mediu": "4-8%",
-    "retea": "profitshare"
+    "retea": "profitshare",
+    "logo_url": "/logos/vegis.png"
   },
   {
     "id": "mathaus",
@@ -201,7 +216,8 @@
     "categorie_principala": "beauty",
     "url_site": "https://www.notino.ro",
     "comision_mediu": "6-10%",
-    "retea": "2performant"
+    "retea": "2performant",
+    "logo_url": "/logos/notino.png"
   },
   {
     "id": "answear",
@@ -213,7 +229,8 @@
     "categorie_principala": "fashion",
     "url_site": "https://answear.ro",
     "comision_mediu": "5-9%",
-    "retea": "2performant"
+    "retea": "2performant",
+    "logo_url": "/logos/answear.png"
   },
   {
     "id": "scule365",
@@ -225,7 +242,8 @@
     "categorie_principala": "casa-gradina",
     "url_site": "https://www.scule365.ro",
     "comision_mediu": "7%",
-    "retea": "2performant"
+    "retea": "2performant",
+    "logo_url": "/logos/scule365.png"
   },
   {
     "id": "drmax",
@@ -237,6 +255,7 @@
     "categorie_principala": "sanatate",
     "url_site": "https://www.drmax.ro",
     "comision_mediu": "4-7%",
-    "retea": "2performant"
+    "retea": "2performant",
+    "logo_url": "/logos/drmax.png"
   }
 ]

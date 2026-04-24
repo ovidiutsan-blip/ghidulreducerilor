@@ -36,6 +36,7 @@ export type Store = {
   slug: string
   descriere: string
   logo_emoji: string
+  logo_url?: string
   culoare: string
   categorie_principala: string
   url_site: string
