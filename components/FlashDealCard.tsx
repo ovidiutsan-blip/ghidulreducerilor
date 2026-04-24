@@ -6,8 +6,13 @@ import { ImageOff } from 'lucide-react'
 import { formatPrice } from '@/lib/utils'
 import type { Deal } from '@/lib/data'
 
+function isBadImageUrl(url: string | null | undefined): boolean {
+  if (!url) return true
+  return url.includes('lazy-loader') || url.endsWith('.gif')
+}
+
 export default function FlashDealCard({ deal }: { deal: Deal }) {
-  const [imgError, setImgError] = useState(false)
+  const [imgError, setImgError] = useState(() => isBadImageUrl(deal.imagine_url))
 
   return (
     <a

@@ -24,8 +24,13 @@ function FallbackImage({ title }: { title: string }) {
   )
 }
 
+function isBadImageUrl(url: string | null | undefined): boolean {
+  if (!url) return true
+  return url.includes('lazy-loader') || url.endsWith('.gif')
+}
+
 export default function DealCard({ deal }: { deal: Deal }) {
-  const [imgError, setImgError] = useState(false)
+  const [imgError, setImgError] = useState(() => isBadImageUrl(deal.imagine_url))
   const economie = deal.pret_original - deal.pret_redus
   const store = STORE_INFO[deal.magazin]
   const hasFastDelivery = FAST_DELIVERY_STORES.includes(deal.magazin)
