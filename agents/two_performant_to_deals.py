@@ -321,7 +321,8 @@ def merge_deals(new_deals: list[dict], dry_run: bool = False,
         if expired:
             log(f"  Expired: {expired} 2P deals no longer in feed (reducere incheiata)")
 
-    existing_urls = {d.get("product_url") or d.get("link_afiliat") for d in existing}
+    # Only block re-import on ACTIVE deals — expired deals allow re-import from another source.
+    existing_urls = {d.get("product_url") or d.get("link_afiliat") for d in existing if d.get("activ", True)}
     existing_ids  = {d.get("id") for d in existing}
     added = 0
     for d in new_deals:

@@ -128,7 +128,8 @@ def main():
     # Load existing deals
     with open(DEALS_PATH, "r", encoding="utf-8") as f:
         existing = json.load(f)
-    existing_urls = set(d.get("product_url") or d.get("link_afiliat") for d in existing)
+    # Only block re-import on ACTIVE deals — expired deals allow re-import from another source.
+    existing_urls = set(d.get("product_url") or d.get("link_afiliat") for d in existing if d.get("activ", True))
     existing_ids = set(d.get("id") for d in existing)
     print(f"Existing deals: {len(existing)}")
 

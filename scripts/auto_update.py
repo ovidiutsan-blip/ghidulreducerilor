@@ -176,6 +176,25 @@ def run_auto_update(audit_only=False, dry_run=False):
         logger.info(f"2Performant import skipped: {reason}")
         steps_results['two_performant_import'] = {'success': True, 'skipped': True, 'reason': reason}
 
+    # ═══ Step 3d: Cross-Platform Dedup (PS + 2P) ═══
+    if not dry_run:
+        try:
+            import subprocess, sys as _sys
+            rdedup = subprocess.run(
+                [_sys.executable, str(ROOT / 'scripts' / 'dedup_cross_platform.py')],
+                capture_output=True, text=True, encoding='utf-8', errors='replace',
+                timeout=60, cwd=str(ROOT)
+            )
+            logger.info(rdedup.stdout.strip() or '(no output)')
+            if rdedup.returncode != 0:
+                logger.warning(f"Dedup exit {rdedup.returncode}: {rdedup.stderr[-300:]}")
+            steps_results['dedup_cross_platform'] = {'success': rdedup.returncode == 0}
+        except Exception as e:
+            logger.warning(f"Cross-platform dedup skipped: {e}")
+            steps_results['dedup_cross_platform'] = {'success': False, 'skipped': True, 'reason': str(e)}
+    else:
+        steps_results['dedup_cross_platform'] = {'success': True, 'skipped': True, 'reason': 'dry_run'}
+
     # ═══ Step 3c: Refresh Profitshare Affiliate Links ═══
     # Runs AFTER imports so newly imported deals get their links refreshed too.
     if not dry_run and os.getenv('PROFITSHARE_API_USER') and os.getenv('PROFITSHARE_API_KEY'):
