@@ -68,6 +68,9 @@ const nextConfig = {
       { protocol: 'https', hostname: 'novodoors.ro' },
       { protocol: 'https', hostname: '**.techstar.ro' },
       { protocol: 'https', hostname: 'techstar.ro' },
+      // SpringFarma (2Performant feed — Magento CDN)
+      { protocol: 'https', hostname: 'www.springfarma.com' },
+      { protocol: 'https', hostname: '**.springfarma.com' },
       // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.shopify.com' },
