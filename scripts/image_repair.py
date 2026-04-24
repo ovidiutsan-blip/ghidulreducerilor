@@ -5,12 +5,16 @@ image_repair.py — Reparare automata imagini lipsa/invalide din deals.json
 Detecteaza produse cu imagine_url invalida (placeholder, GIF, CDN blocat, lipsa)
 si incarca imaginea reala via OG scraping de pe pagina produsului.
 
+Strategii:
+  - urllib (default): fast, pentru magazine fara protectie CloudFlare
+  - Playwright (fallback): pentru magazine cu CloudFlare WAF (mathaus, etc.)
+
 Ruleaza dupa ps_feed_to_deals.py si agent_altemagazine.py in pipeline-ul zilnic.
 
 Utilizare:
   python scripts/image_repair.py                  # fix all, salveaza
   python scripts/image_repair.py --dry-run         # raporteaza fara a salva
-  python scripts/image_repair.py --store vegis     # doar un magazin
+  python scripts/image_repair.py --store mathaus   # doar un magazin
   python scripts/image_repair.py --workers 4       # controleaza paralelismul
 """
 import sys
@@ -66,6 +70,9 @@ BAD_PATTERNS = ("lazy-loader", "/layout/", "placeholder", "no-image", "noimage",
 # CDN-uri care blocheaza hotlinking (trebuie re-scraped mereu)
 BLOCKED_CDN = ("cdn.mathaus.ro",)
 
+# Magazine cu CloudFlare WAF — necesita Playwright in loc de urllib
+CLOUDFLARE_STORES = {"mathaus"}
+
 OG_RE = re.compile(
     r'<meta[^>]*property=["\']og:image["\'][^>]*content=["\']([^"\']+)["\']'
     r'|<meta[^>]*content=["\']([^"\']+)["\'][^>]*property=["\']og:image["\']',
@@ -98,7 +105,7 @@ def needs_repair(deal: dict) -> bool:
 
 
 def fetch_og_image(product_url: str, referer: str = "") -> str | None:
-    """Fetch og:image de pe pagina produsului. Returneaza URL sau None."""
+    """Fetch og:image de pe pagina produsului via urllib. Returneaza URL sau None."""
     if not product_url or not product_url.startswith("http"):
         return None
     try:
@@ -118,6 +125,51 @@ def fetch_og_image(product_url: str, referer: str = "") -> str | None:
         return None
 
 
+def fetch_og_image_playwright(product_url: str) -> str | None:
+    """Fetch og:image via Playwright headless Chromium — bypass CloudFlare WAF.
+    Folosit pentru magazine cu protectie CF (mathaus, etc.).
+    Returneaza URL sau None daca Playwright nu e instalat sau fetch esueaza.
+    """
+    if not product_url or not product_url.startswith("http"):
+        return None
+    try:
+        from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
+    except ImportError:
+        log.warning("Playwright nu e instalat — fallback la urllib pentru %s", product_url)
+        return fetch_og_image(product_url)
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--no-sandbox", "--disable-blink-features=AutomationControlled"],
+            )
+            ctx = browser.new_context(
+                user_agent=HEADERS["User-Agent"],
+                viewport={"width": 1280, "height": 800},
+                locale="ro-RO",
+            )
+            page = ctx.new_page()
+            # Blocheaza resurse inutile pentru viteza
+            page.route("**/*.{woff,woff2,ttf,mp4,svg,ico}", lambda r: r.abort())
+            try:
+                page.goto(product_url, timeout=25000, wait_until="domcontentloaded")
+                page.wait_for_timeout(1500)  # CF challenge poate dura ~1s
+            except PWTimeout:
+                browser.close()
+                return None
+            html = page.content()
+            browser.close()
+        m = OG_RE.search(html)
+        if m:
+            img = (m.group(1) or m.group(2) or "").strip()
+            if img and img.startswith("http") and not is_bad_image(img):
+                return img
+        return None
+    except Exception as e:
+        log.debug("Playwright error pentru %s: %s", product_url, e)
+        return None
+
+
 # ─── Core ────────────────────────────────────────────────────────────────────
 
 def _fix_one(deal: dict) -> tuple[str, str | None]:
@@ -127,24 +179,47 @@ def _fix_one(deal: dict) -> tuple[str, str | None]:
         or deal.get("url")
         or ""
     )
-    referer = STORE_REFERER.get(deal.get("magazin", ""), "")
-    img = fetch_og_image(product_url, referer=referer)
+    magazin = deal.get("magazin", "")
+    if magazin in CLOUDFLARE_STORES:
+        # Magazine cu CloudFlare WAF necesita Playwright
+        img = fetch_og_image_playwright(product_url)
+    else:
+        referer = STORE_REFERER.get(magazin, "")
+        img = fetch_og_image(product_url, referer=referer)
     return deal["id"], img
 
 
 def fix_batch(deals: list[dict], workers: int = 8) -> dict[str, str]:
-    """Repara toate deal-urile in paralel. Returneaza {deal_id: new_url}."""
+    """Repara toate deal-urile in paralel. Returneaza {deal_id: new_url}.
+    Magazine CloudFlare (Playwright) sunt procesate cu max 3 workers simultan
+    pentru a evita detectia bot si a reduce incarcarea browserelor headless.
+    """
     results: dict[str, str] = {}
-    with ThreadPoolExecutor(max_workers=workers) as ex:
-        futures = {ex.submit(_fix_one, d): d["id"] for d in deals}
-        done = 0
-        for fut in as_completed(futures):
-            did, img = fut.result()
-            done += 1
-            if img:
-                results[did] = img
-            if done % 20 == 0:
-                log.info(f"  Progres: {done}/{len(deals)} ({len(results)} fixate)")
+    # Separa deals CF de cele normale
+    cf_deals = [d for d in deals if d.get("magazin", "") in CLOUDFLARE_STORES]
+    normal_deals = [d for d in deals if d.get("magazin", "") not in CLOUDFLARE_STORES]
+
+    def _process_batch(batch, max_w):
+        with ThreadPoolExecutor(max_workers=max_w) as ex:
+            futures = {ex.submit(_fix_one, d): d["id"] for d in batch}
+            done = 0
+            for fut in as_completed(futures):
+                did, img = fut.result()
+                done += 1
+                if img:
+                    results[did] = img
+                if done % 10 == 0:
+                    log.info(f"  Progres: {done}/{len(batch)} ({len(results)} fixate)")
+
+    if normal_deals:
+        log.info(f"  urllib: {len(normal_deals)} produse cu {workers} workers")
+        _process_batch(normal_deals, workers)
+
+    if cf_deals:
+        cf_workers = min(3, workers)  # max 3 browsere Playwright simultan
+        log.info(f"  Playwright (CloudFlare): {len(cf_deals)} produse cu {cf_workers} workers")
+        _process_batch(cf_deals, cf_workers)
+
     return results
 
 

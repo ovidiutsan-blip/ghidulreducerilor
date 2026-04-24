@@ -6451,8 +6451,8 @@
     "magazine_key": "mathaus",
     "image_disabled_reason": "cloudflare_403",
     "image_disabled_at": "2026-04-23T17:15:21.626754Z",
-    "image_fixed_at": "2026-04-23T19:17:11Z",
-    "image_fix_source": "agent:mathaus",
+    "image_fixed_at": "2026-04-24T17:51:13.039398+00:00",
+    "image_fix_source": "image_repair",
     "link_status": "ok",
     "link_checked_at": "2026-04-23T19:26:05.479046+00:00"
   },
@@ -11652,8 +11652,8 @@
     "magazine_key": "mathaus",
     "image_disabled_reason": "cloudflare_403",
     "image_disabled_at": "2026-04-23T17:15:21.626754Z",
-    "image_fixed_at": "2026-04-23T19:18:43Z",
-    "image_fix_source": "agent:mathaus:retry"
+    "image_fixed_at": "2026-04-24T17:51:13.039398+00:00",
+    "image_fix_source": "image_repair"
   },
   {
     "id": "ps-case-smart-senzor-usi-si-ferestre-luxion-cu-wi-fi-n--BG-LH01",
@@ -16265,8 +16265,8 @@
     "magazine_key": "mathaus",
     "image_disabled_reason": "cloudflare_403",
     "image_disabled_at": "2026-04-23T17:15:21.626754Z",
-    "image_fixed_at": "2026-04-23T19:17:11Z",
-    "image_fix_source": "agent:mathaus"
+    "image_fixed_at": "2026-04-24T17:51:13.039398+00:00",
+    "image_fix_source": "image_repair"
   },
   {
     "id": "ps-streamstore-microsoft-office-2019-professional-plus--47037445",
@@ -16371,8 +16371,8 @@
     "magazine_key": "mathaus",
     "image_disabled_reason": "cloudflare_403",
     "image_disabled_at": "2026-04-23T17:15:21.626754Z",
-    "image_fixed_at": "2026-04-23T19:17:11Z",
-    "image_fix_source": "agent:mathaus"
+    "image_fixed_at": "2026-04-24T17:51:13.039398+00:00",
+    "image_fix_source": "image_repair"
   },
   {
     "id": "ps-mathaus-set-glisiere-cu-bile-fgv-otel-zincat-sof-10222237",
@@ -16476,8 +16476,8 @@
     "magazine_key": "mathaus",
     "image_disabled_reason": "cloudflare_403",
     "image_disabled_at": "2026-04-23T17:15:21.626754Z",
-    "image_fixed_at": "2026-04-23T19:19:39Z",
-    "image_fix_source": "agent:mathaus:retry"
+    "image_fixed_at": "2026-04-24T17:51:13.039398+00:00",
+    "image_fix_source": "image_repair"
   },
   {
     "id": "ps-mathaus-profil-inaltator-new-t-pvc-cu-folie-hg-a-10219259",
@@ -16546,8 +16546,8 @@
     "magazine_key": "mathaus",
     "image_disabled_reason": "cloudflare_403",
     "image_disabled_at": "2026-04-23T17:15:21.626754Z",
-    "image_fixed_at": "2026-04-23T19:17:11Z",
-    "image_fix_source": "agent:mathaus"
+    "image_fixed_at": "2026-04-24T17:51:13.039398+00:00",
+    "image_fix_source": "image_repair"
   },
   {
     "id": "ps-mathaus-capse-tapiterie-otel-5-2-x-40-mm-4000-bu-10221973",
@@ -16581,8 +16581,8 @@
     "magazine_key": "mathaus",
     "image_disabled_reason": "cloudflare_403",
     "image_disabled_at": "2026-04-23T17:15:21.626754Z",
-    "image_fixed_at": "2026-04-23T19:19:52Z",
-    "image_fix_source": "agent:mathaus:retry"
+    "image_fixed_at": "2026-04-24T17:51:13.039398+00:00",
+    "image_fix_source": "image_repair"
   },
   {
     "id": "ps-mathaus-profil-inalt-plat-aluminiu-lucios-4-m-10219264",
