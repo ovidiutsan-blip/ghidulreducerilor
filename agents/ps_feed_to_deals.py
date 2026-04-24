@@ -42,6 +42,18 @@ def fix_affiliate_link(link: str) -> str:
     return link
 
 
+_BAD_IMG_PATTERNS = ("lazy-loader", "/layout/", "placeholder", "no-image", "noimage")
+
+def is_bad_image(url: str) -> bool:
+    """Return True if url is a known placeholder/bad image that must be replaced."""
+    if not url or not url.startswith("http"):
+        return True
+    u = url.lower()
+    if u.endswith(".gif"):
+        return True
+    return any(p in u for p in _BAD_IMG_PATTERNS)
+
+
 def product_to_deal(p: dict, magazin: str, categorie: str, allowed_cats: list | None = None) -> dict:
     # Filter by Profitshare category_name when whitelist provided (ex: vegis -> only supplements, not food)
     if allowed_cats is not None:
@@ -64,6 +76,9 @@ def product_to_deal(p: dict, magazin: str, categorie: str, allowed_cats: list | 
     # Normalize http -> https for https:// URLs
     if img.startswith("http://"):
         img = "https://" + img[7:]
+    # Elimina placeholder-uri cunoscute — image_repair.py va incarca imaginea reala
+    if is_bad_image(img):
+        img = ""
     return {
         "id": f"ps-{magazin}-{slugify(name)[:40]}-{p.get('part_number', '')[-8:]}",
         "slug": slugify(name),

@@ -79,6 +79,12 @@ jobs:
           PROFITSHARE_API_KEY: ${{ secrets.PROFITSHARE_API_KEY }}
         run: python agents/ps_feed_to_deals.py
 
+      - name: 🖼️ Reparare automata imagini invalide
+        id: image_repair
+        if: github.event.inputs.mode != 'cleanup'
+        continue-on-error: true
+        run: python scripts/image_repair.py --workers 6
+
       - name: 🔍 Validare prețuri Omnibus
         id: price_validator
         continue-on-error: true
