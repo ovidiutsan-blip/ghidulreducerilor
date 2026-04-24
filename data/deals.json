@@ -1492,7 +1492,7 @@
     "pret_original": 93.0,
     "pret_redus": 44.64,
     "procent_reducere": 52,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/141923/full/sanovita-pachet-crema-de-fistic-20-fara-gluten-180g-plus-180g-313285.png",
     "product_url": "https://vegis.ro/creme-tartinabile/sanovita/141923-pachet-crema-de-fistic-20-fara-gluten-180g-plus-180g/",
     "link_afiliat": "https://vegis.ro/creme-tartinabile/sanovita/141923-pachet-crema-de-fistic-20-fara-gluten-180g-plus-180g/",
     "categorie": "promotii",
@@ -1505,7 +1505,7 @@
     "discount_percent": 52,
     "affiliate_url": "https://vegis.ro/creme-tartinabile/sanovita/141923-pachet-crema-de-fistic-20-fara-gluten-180g-plus-180g/",
     "url": "https://vegis.ro/creme-tartinabile/sanovita/141923-pachet-crema-de-fistic-20-fara-gluten-180g-plus-180g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/141923/full/sanovita-pachet-crema-de-fistic-20-fara-gluten-180g-plus-180g-313285.png",
     "categories": [
       "promotii"
     ],
@@ -1513,7 +1513,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:26.699435+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "watch24-97823547",
@@ -1780,7 +1782,7 @@
     "pret_original": 13.88,
     "pret_redus": 6.94,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/4532/full/sanovita-bere-cu-ghimbir-si-scortisoara-fara-alcool-375ml-143941.png",
     "product_url": "https://vegis.ro/alimentare-sucuri-siropuri/bundaberg/4532-bere-cu-ghimbir-si-scortisoara-fara-alcool-bundaberg-375ml/",
     "link_afiliat": "https://vegis.ro/alimentare-sucuri-siropuri/bundaberg/4532-bere-cu-ghimbir-si-scortisoara-fara-alcool-bundaberg-375ml/",
     "categorie": "promotii",
@@ -1793,7 +1795,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/alimentare-sucuri-siropuri/bundaberg/4532-bere-cu-ghimbir-si-scortisoara-fara-alcool-bundaberg-375ml/",
     "url": "https://vegis.ro/alimentare-sucuri-siropuri/bundaberg/4532-bere-cu-ghimbir-si-scortisoara-fara-alcool-bundaberg-375ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/4532/full/sanovita-bere-cu-ghimbir-si-scortisoara-fara-alcool-375ml-143941.png",
     "categories": [
       "promotii"
     ],
@@ -1801,7 +1803,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:27.591337+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-abc302d5",
@@ -1811,7 +1815,7 @@
     "pret_original": 46.5,
     "pret_redus": 23.25,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/4602/full/sanovita-crema-de-fistic-20-180g-159651.jpg",
     "product_url": "https://vegis.ro/creme-tartinabile/sanovita/4602-crema-de-fistic-20-fara-gluten-180g/",
     "link_afiliat": "https://vegis.ro/creme-tartinabile/sanovita/4602-crema-de-fistic-20-fara-gluten-180g/",
     "categorie": "promotii",
@@ -1824,7 +1828,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/creme-tartinabile/sanovita/4602-crema-de-fistic-20-fara-gluten-180g/",
     "url": "https://vegis.ro/creme-tartinabile/sanovita/4602-crema-de-fistic-20-fara-gluten-180g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/4602/full/sanovita-crema-de-fistic-20-180g-159651.jpg",
     "categories": [
       "promotii"
     ],
@@ -1832,7 +1836,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:28.166094+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-cb92fc62",
@@ -1842,7 +1848,7 @@
     "pret_original": 67.8,
     "pret_redus": 33.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/9957/full/quantum-pharm-echinacea-30cps-pachet-1-plus1-65353.jpg",
     "product_url": "https://vegis.ro/suplimente-imunitate/quantum-pharm/9957-pachet-echinacea-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/suplimente-imunitate/quantum-pharm/9957-pachet-echinacea-30cps-plus30cps/",
     "categorie": "promotii",
@@ -1855,7 +1861,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/suplimente-imunitate/quantum-pharm/9957-pachet-echinacea-30cps-plus30cps/",
     "url": "https://vegis.ro/suplimente-imunitate/quantum-pharm/9957-pachet-echinacea-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/9957/full/quantum-pharm-echinacea-30cps-pachet-1-plus1-65353.jpg",
     "categories": [
       "promotii"
     ],
@@ -1863,7 +1869,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:28.876863+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-64a44bd6",
@@ -1873,7 +1881,7 @@
     "pret_original": 67.8,
     "pret_redus": 33.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img1/9958/full/quantum-pharm-pachet-echinacea-pluszinc-plusvitamina-c-30cps-1-plus1-gratis-23928.jpeg",
     "product_url": "https://vegis.ro/gripa-si-raceala/quantum-pharm/9958-pachet-echinacea-plus-zinc-plus-vitamina-c-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/gripa-si-raceala/quantum-pharm/9958-pachet-echinacea-plus-zinc-plus-vitamina-c-30cps-plus30cps/",
     "categorie": "promotii",
@@ -1886,7 +1894,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/gripa-si-raceala/quantum-pharm/9958-pachet-echinacea-plus-zinc-plus-vitamina-c-30cps-plus30cps/",
     "url": "https://vegis.ro/gripa-si-raceala/quantum-pharm/9958-pachet-echinacea-plus-zinc-plus-vitamina-c-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img1/9958/full/quantum-pharm-pachet-echinacea-pluszinc-plusvitamina-c-30cps-1-plus1-gratis-23928.jpeg",
     "categories": [
       "promotii"
     ],
@@ -1894,7 +1902,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:29.621348+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-a1d05ce5",
@@ -1904,7 +1914,7 @@
     "pret_original": 45.52,
     "pret_redus": 22.76,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/9959/full/quantum-pharm-influlit-30cpr-pachet-1-plus1-65351.jpg",
     "product_url": "https://vegis.ro/pachete-speciale/quantum-pharm/9959-pachet-influlit-30tb-plus30tb/",
     "link_afiliat": "https://vegis.ro/pachete-speciale/quantum-pharm/9959-pachet-influlit-30tb-plus30tb/",
     "categorie": "promotii",
@@ -1917,7 +1927,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/pachete-speciale/quantum-pharm/9959-pachet-influlit-30tb-plus30tb/",
     "url": "https://vegis.ro/pachete-speciale/quantum-pharm/9959-pachet-influlit-30tb-plus30tb/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/9959/full/quantum-pharm-influlit-30cpr-pachet-1-plus1-65351.jpg",
     "categories": [
       "promotii"
     ],
@@ -1925,7 +1935,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:30.528606+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-bf3b7674",
@@ -1935,7 +1947,7 @@
     "pret_original": 45.0,
     "pret_redus": 22.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img1/9960/full/quantum-pharm-pachet-propolis-plus-vitamina-c-30cps-1-plus1-gratis-23930.jpeg",
     "product_url": "https://vegis.ro/gripa-si-raceala/quantum-pharm/9960-pachet-propolis-plus-vitamina-c-30tb-plus30tb/",
     "link_afiliat": "https://vegis.ro/gripa-si-raceala/quantum-pharm/9960-pachet-propolis-plus-vitamina-c-30tb-plus30tb/",
     "categorie": "promotii",
@@ -1948,7 +1960,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/gripa-si-raceala/quantum-pharm/9960-pachet-propolis-plus-vitamina-c-30tb-plus30tb/",
     "url": "https://vegis.ro/gripa-si-raceala/quantum-pharm/9960-pachet-propolis-plus-vitamina-c-30tb-plus30tb/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img1/9960/full/quantum-pharm-pachet-propolis-plus-vitamina-c-30cps-1-plus1-gratis-23930.jpeg",
     "categories": [
       "promotii"
     ],
@@ -1956,7 +1968,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:31.339723+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-1c7d5f42",
@@ -1966,7 +1980,7 @@
     "pret_original": 65.0,
     "pret_redus": 32.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img1/9962/full/quantum-pharm-pachet-vitamina-c-600mg-entero-30-cps-1-plus1-gratis-23932.jpeg",
     "product_url": "https://vegis.ro/pachete-speciale/quantum-pharm/9962-pachet-vitamina-c-600mg-entero-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/pachete-speciale/quantum-pharm/9962-pachet-vitamina-c-600mg-entero-30cps-plus30cps/",
     "categorie": "promotii",
@@ -1979,7 +1993,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/pachete-speciale/quantum-pharm/9962-pachet-vitamina-c-600mg-entero-30cps-plus30cps/",
     "url": "https://vegis.ro/pachete-speciale/quantum-pharm/9962-pachet-vitamina-c-600mg-entero-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img1/9962/full/quantum-pharm-pachet-vitamina-c-600mg-entero-30-cps-1-plus1-gratis-23932.jpeg",
     "categories": [
       "promotii"
     ],
@@ -1987,7 +2001,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:32.143154+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-8296c3d7",
@@ -1997,7 +2013,7 @@
     "pret_original": 35.8,
     "pret_redus": 17.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img1/9963/full/quantum-pharm-pachet-vitamina-c-plus-pulpa-de-macese-30-cps-1-plus1-gratis-23933.jpeg",
     "product_url": "https://vegis.ro/suplimente-imunitate/quantum-pharm/9963-pachet-vitamina-c-cu-pulpa-de-macese-30tb-plus30tb/",
     "link_afiliat": "https://vegis.ro/suplimente-imunitate/quantum-pharm/9963-pachet-vitamina-c-cu-pulpa-de-macese-30tb-plus30tb/",
     "categorie": "promotii",
@@ -2010,7 +2026,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/suplimente-imunitate/quantum-pharm/9963-pachet-vitamina-c-cu-pulpa-de-macese-30tb-plus30tb/",
     "url": "https://vegis.ro/suplimente-imunitate/quantum-pharm/9963-pachet-vitamina-c-cu-pulpa-de-macese-30tb-plus30tb/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img1/9963/full/quantum-pharm-pachet-vitamina-c-plus-pulpa-de-macese-30-cps-1-plus1-gratis-23933.jpeg",
     "categories": [
       "promotii"
     ],
@@ -2018,7 +2034,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:32.780745+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-141dcf3b",
@@ -2028,7 +2046,7 @@
     "pret_original": 45.0,
     "pret_redus": 22.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/24288/full/quantum-pharm-pachet-lecitina-forte-30cps-plus30cps-296961.png",
     "product_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/24288-pachet-lecitina-forte-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/pachete-suplimente/quantum-pharm/24288-pachet-lecitina-forte-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2041,7 +2059,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/24288-pachet-lecitina-forte-30cps-plus30cps/",
     "url": "https://vegis.ro/pachete-suplimente/quantum-pharm/24288-pachet-lecitina-forte-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/24288/full/quantum-pharm-pachet-lecitina-forte-30cps-plus30cps-296961.png",
     "categories": [
       "promotii"
     ],
@@ -2049,7 +2067,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:33.372012+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-9548e394",
@@ -2059,7 +2079,7 @@
     "pret_original": 83.01,
     "pret_redus": 41.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/31979/full/quantum-pharm-pachet-1-plus1-gratis-curcuma-500-30cps-54641.jpeg",
     "product_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/31979-pachet-curcuma-500-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/pachete-suplimente/quantum-pharm/31979-pachet-curcuma-500-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2072,7 +2092,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/31979-pachet-curcuma-500-30cps-plus30cps/",
     "url": "https://vegis.ro/pachete-suplimente/quantum-pharm/31979-pachet-curcuma-500-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/31979/full/quantum-pharm-pachet-1-plus1-gratis-curcuma-500-30cps-54641.jpeg",
     "categories": [
       "promotii"
     ],
@@ -2080,7 +2100,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:34.134064+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-6f4365ce",
@@ -2090,7 +2112,7 @@
     "pret_original": 84.0,
     "pret_redus": 42.0,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/33831/full/quantum-pharm-pachet-1-plus1-super-complex-b-30cps-65349.jpg",
     "product_url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/33831-pachet-super-complex-b-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/33831-pachet-super-complex-b-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2103,7 +2125,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/33831-pachet-super-complex-b-30cps-plus30cps/",
     "url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/33831-pachet-super-complex-b-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/33831/full/quantum-pharm-pachet-1-plus1-super-complex-b-30cps-65349.jpg",
     "categories": [
       "promotii"
     ],
@@ -2111,7 +2133,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:34.906843+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-3c3d2a67",
@@ -2121,7 +2145,7 @@
     "pret_original": 74.34,
     "pret_redus": 37.17,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/122877/full/pureborn-scutecele-chilotel-marime-7-xxl-16buc-275453.png",
     "product_url": "https://vegis.ro/mamici-si-gravide/pureborn/122877-scutece-chilotel-nr-7-marimea-xxl-17kg-16buc/",
     "link_afiliat": "https://vegis.ro/mamici-si-gravide/pureborn/122877-scutece-chilotel-nr-7-marimea-xxl-17kg-16buc/",
     "categorie": "promotii",
@@ -2134,7 +2158,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/mamici-si-gravide/pureborn/122877-scutece-chilotel-nr-7-marimea-xxl-17kg-16buc/",
     "url": "https://vegis.ro/mamici-si-gravide/pureborn/122877-scutece-chilotel-nr-7-marimea-xxl-17kg-16buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/122877/full/pureborn-scutecele-chilotel-marime-7-xxl-16buc-275453.png",
     "categories": [
       "promotii"
     ],
@@ -2142,7 +2166,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:35.461864+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-dee1100c",
@@ -2152,7 +2178,7 @@
     "pret_original": 67.8,
     "pret_redus": 33.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/155363/full/quantum-pharm-pachet-ulei-de-catina-plus-coenzima-q10-30cps-plus-30cps-338210.png",
     "product_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155363-pachet-ulei-de-catina-plus-coenzima-q10-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/pachete-suplimente/quantum-pharm/155363-pachet-ulei-de-catina-plus-coenzima-q10-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2165,7 +2191,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155363-pachet-ulei-de-catina-plus-coenzima-q10-30cps-plus-30cps/",
     "url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155363-pachet-ulei-de-catina-plus-coenzima-q10-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/155363/full/quantum-pharm-pachet-ulei-de-catina-plus-coenzima-q10-30cps-plus-30cps-338210.png",
     "categories": [
       "promotii"
     ],
@@ -2173,7 +2199,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:36.180872+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-462ae136",
@@ -2183,7 +2211,7 @@
     "pret_original": 54.99,
     "pret_redus": 27.49,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/155366/full/quantum-pharm-pachet-omega-3-ulei-de-peste-30cps-plus-30cps-338204.png",
     "product_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155366-pachet-omega-3-ulei-de-peste-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/pachete-suplimente/quantum-pharm/155366-pachet-omega-3-ulei-de-peste-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2196,7 +2224,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155366-pachet-omega-3-ulei-de-peste-30cps-plus-30cps/",
     "url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155366-pachet-omega-3-ulei-de-peste-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/155366/full/quantum-pharm-pachet-omega-3-ulei-de-peste-30cps-plus-30cps-338204.png",
     "categories": [
       "promotii"
     ],
@@ -2204,7 +2232,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:36.896837+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-4cb98872",
@@ -2214,7 +2244,7 @@
     "pret_original": 109.0,
     "pret_redus": 54.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/155369/full/quantum-pharm-pachet-biocolagen-forte-30cps-plus-30cps-338195.png",
     "product_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155369-pachet-biocolagen-forte-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/pachete-suplimente/quantum-pharm/155369-pachet-biocolagen-forte-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2227,7 +2257,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155369-pachet-biocolagen-forte-30cps-plus-30cps/",
     "url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155369-pachet-biocolagen-forte-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/155369/full/quantum-pharm-pachet-biocolagen-forte-30cps-plus-30cps-338195.png",
     "categories": [
       "promotii"
     ],
@@ -2235,7 +2265,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:37.581330+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-f4e9e1c1",
@@ -2245,7 +2277,7 @@
     "pret_original": 71.0,
     "pret_redus": 35.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/155372/full/quantum-pharm-pachet-lipostop-cu-otet-de-mere-si-bio-crom-60cps-plus-60cps-338201.png",
     "product_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155372-pachet-lipostop-cu-otet-de-mere-si-bio-crom-60cps-plus-60cps/",
     "link_afiliat": "https://vegis.ro/pachete-suplimente/quantum-pharm/155372-pachet-lipostop-cu-otet-de-mere-si-bio-crom-60cps-plus-60cps/",
     "categorie": "promotii",
@@ -2258,7 +2290,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155372-pachet-lipostop-cu-otet-de-mere-si-bio-crom-60cps-plus-60cps/",
     "url": "https://vegis.ro/pachete-suplimente/quantum-pharm/155372-pachet-lipostop-cu-otet-de-mere-si-bio-crom-60cps-plus-60cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/155372/full/quantum-pharm-pachet-lipostop-cu-otet-de-mere-si-bio-crom-60cps-plus-60cps-338201.png",
     "categories": [
       "promotii"
     ],
@@ -2266,7 +2298,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:38.401659+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-0fafb3a2",
@@ -2276,7 +2310,7 @@
     "pret_original": 106.36,
     "pret_redus": 53.18,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160283/full/quantum-pharm-pachet-super-omega-3-6-9-krill-oil-30cps-plus30cps-349895.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160283-pachet-super-omega-3-6-9-krill-oil-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160283-pachet-super-omega-3-6-9-krill-oil-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2289,7 +2323,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160283-pachet-super-omega-3-6-9-krill-oil-30cps-plus30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160283-pachet-super-omega-3-6-9-krill-oil-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160283/full/quantum-pharm-pachet-super-omega-3-6-9-krill-oil-30cps-plus30cps-349895.png",
     "categories": [
       "promotii"
     ],
@@ -2297,7 +2331,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:39.101496+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-9dc4f684",
@@ -2307,7 +2343,7 @@
     "pret_original": 65.0,
     "pret_redus": 32.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160286/full/quantum-pharm-pachet-vitamina-e-100-30cps-plus30cps-349898.png",
     "product_url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160286-pachet-vitamina-e-100-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160286-pachet-vitamina-e-100-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2320,7 +2356,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160286-pachet-vitamina-e-100-30cps-plus30cps/",
     "url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160286-pachet-vitamina-e-100-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160286/full/quantum-pharm-pachet-vitamina-e-100-30cps-plus30cps-349898.png",
     "categories": [
       "promotii"
     ],
@@ -2328,7 +2364,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:39.832802+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-fb327186",
@@ -2338,7 +2376,7 @@
     "pret_original": 71.05,
     "pret_redus": 35.52,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160289/full/quantum-pharm-pachet-vitamina-k-30cps-plus-30cps-349904.png",
     "product_url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160289-pachet-vitamina-k-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160289-pachet-vitamina-k-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2351,7 +2389,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160289-pachet-vitamina-k-30cps-plus30cps/",
     "url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160289-pachet-vitamina-k-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160289/full/quantum-pharm-pachet-vitamina-k-30cps-plus-30cps-349904.png",
     "categories": [
       "promotii"
     ],
@@ -2359,7 +2397,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:40.616638+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-510fc300",
@@ -2369,7 +2409,7 @@
     "pret_original": 65.0,
     "pret_redus": 32.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160292/full/quantum-pharm-pachet-alkalin-c-600mg-vitamina-c-alcalina-30cps-plus30cps-349859.png",
     "product_url": "https://vegis.ro/vitamina-c/quantum-pharm/160292-pachet-alkalin-c-600mg-vitamina-c-alcalina-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/vitamina-c/quantum-pharm/160292-pachet-alkalin-c-600mg-vitamina-c-alcalina-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2382,7 +2422,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/vitamina-c/quantum-pharm/160292-pachet-alkalin-c-600mg-vitamina-c-alcalina-30cps-plus30cps/",
     "url": "https://vegis.ro/vitamina-c/quantum-pharm/160292-pachet-alkalin-c-600mg-vitamina-c-alcalina-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160292/full/quantum-pharm-pachet-alkalin-c-600mg-vitamina-c-alcalina-30cps-plus30cps-349859.png",
     "categories": [
       "promotii"
     ],
@@ -2390,7 +2430,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:41.298102+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-d72eaca2",
@@ -2400,7 +2442,7 @@
     "pret_original": 83.01,
     "pret_redus": 41.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160295/full/quantum-pharm-pachet-biozinc-forte-30cps-plus30cps-349862.png",
     "product_url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160295-pachet-biozinc-forte-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160295-pachet-biozinc-forte-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2413,7 +2455,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160295-pachet-biozinc-forte-30cps-plus30cps/",
     "url": "https://vegis.ro/suplimente-capsule-comprimate/quantum-pharm/160295-pachet-biozinc-forte-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160295/full/quantum-pharm-pachet-biozinc-forte-30cps-plus30cps-349862.png",
     "categories": [
       "promotii"
     ],
@@ -2421,7 +2463,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:41.990851+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-9ea90055",
@@ -2431,7 +2475,7 @@
     "pret_original": 71.8,
     "pret_redus": 35.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160298/full/quantum-pharm-pachet-calciu-din-corali-plussi-plusd3-30cps-plus30cps-349865.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160298-pachet-calciu-din-corali-plussi-plusd3-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160298-pachet-calciu-din-corali-plussi-plusd3-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2444,7 +2488,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160298-pachet-calciu-din-corali-plussi-plusd3-30cps-plus30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160298-pachet-calciu-din-corali-plussi-plusd3-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160298/full/quantum-pharm-pachet-calciu-din-corali-plussi-plusd3-30cps-plus30cps-349865.png",
     "categories": [
       "promotii"
     ],
@@ -2452,7 +2496,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:42.532806+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-73172725",
@@ -2462,7 +2508,7 @@
     "pret_original": 81.0,
     "pret_redus": 40.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160301/full/quantum-pharm-pachet-capsule-cu-extract-de-usturoi-paducel-vasc-30cps-plus30cps-349907.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160301-pachet-capsule-cu-extract-de-usturoi-paducel-vasc-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160301-pachet-capsule-cu-extract-de-usturoi-paducel-vasc-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2475,7 +2521,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160301-pachet-capsule-cu-extract-de-usturoi-paducel-vasc-30cps-plus30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160301-pachet-capsule-cu-extract-de-usturoi-paducel-vasc-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160301/full/quantum-pharm-pachet-capsule-cu-extract-de-usturoi-paducel-vasc-30cps-plus30cps-349907.png",
     "categories": [
       "promotii"
     ],
@@ -2483,7 +2529,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:43.381371+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-f0dd29ab",
@@ -2493,7 +2541,7 @@
     "pret_original": 54.99,
     "pret_redus": 27.49,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160304/full/quantum-pharm-pachet-quantum-pharm-ceai-verde-30cps-plus30cps-349892.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160304-pachet-ceai-verde-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160304-pachet-ceai-verde-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2506,7 +2554,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160304-pachet-ceai-verde-30cps-plus30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160304-pachet-ceai-verde-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160304/full/quantum-pharm-pachet-quantum-pharm-ceai-verde-30cps-plus30cps-349892.png",
     "categories": [
       "promotii"
     ],
@@ -2514,7 +2562,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:44.094685+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-d5ce6ecb",
@@ -2524,7 +2574,7 @@
     "pret_original": 75.0,
     "pret_redus": 37.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160307/full/quantum-pharm-pachet-eudigest-30cps-plus30cps-349871.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160307-pachet-eudigest-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160307-pachet-eudigest-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2537,7 +2587,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160307-pachet-eudigest-30cps-plus30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160307-pachet-eudigest-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160307/full/quantum-pharm-pachet-eudigest-30cps-plus30cps-349871.png",
     "categories": [
       "promotii"
     ],
@@ -2545,7 +2595,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:46.385627+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-fa9e06ea",
@@ -2555,7 +2607,7 @@
     "pret_original": 54.99,
     "pret_redus": 27.49,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160310/full/quantum-pharm-pachet-garlicaps-capsule-cu-extract-de-usturoi-30cps-plus30cps-349874.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160310-pachet-garlicaps-capsule-cu-extract-de-usturoi-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160310-pachet-garlicaps-capsule-cu-extract-de-usturoi-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2568,7 +2620,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160310-pachet-garlicaps-capsule-cu-extract-de-usturoi-30cps-plus30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160310-pachet-garlicaps-capsule-cu-extract-de-usturoi-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160310/full/quantum-pharm-pachet-garlicaps-capsule-cu-extract-de-usturoi-30cps-plus30cps-349874.png",
     "categories": [
       "promotii"
     ],
@@ -2576,7 +2628,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:47.249693+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-0dfbdca8",
@@ -2586,7 +2640,7 @@
     "pret_original": 67.8,
     "pret_redus": 33.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160313/full/quantum-pharm-pachet-guarana-plus-mate-30cps-plus-30cps-349877.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160313-pachet-guarana-plus-mate-30cps-plus30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160313-pachet-guarana-plus-mate-30cps-plus30cps/",
     "categorie": "promotii",
@@ -2599,7 +2653,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160313-pachet-guarana-plus-mate-30cps-plus30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160313-pachet-guarana-plus-mate-30cps-plus30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160313/full/quantum-pharm-pachet-guarana-plus-mate-30cps-plus-30cps-349877.png",
     "categories": [
       "promotii"
     ],
@@ -2607,7 +2661,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:47.957061+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-4ec4fe65",
@@ -2617,7 +2673,7 @@
     "pret_original": 71.0,
     "pret_redus": 35.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160316/full/quantum-pharm-pachet-pepon-capsule-cu-ulei-de-dovleac-30cps-moi-plus-30cps-moi-349883.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160316-pachet-pepon-capsule-cu-ulei-de-dovleac-30cps-moi-plus-30cps-moi/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160316-pachet-pepon-capsule-cu-ulei-de-dovleac-30cps-moi-plus-30cps-moi/",
     "categorie": "promotii",
@@ -2630,7 +2686,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160316-pachet-pepon-capsule-cu-ulei-de-dovleac-30cps-moi-plus-30cps-moi/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160316-pachet-pepon-capsule-cu-ulei-de-dovleac-30cps-moi-plus-30cps-moi/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160316/full/quantum-pharm-pachet-pepon-capsule-cu-ulei-de-dovleac-30cps-moi-plus-30cps-moi-349883.png",
     "categories": [
       "promotii"
     ],
@@ -2638,7 +2694,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:48.764913+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-0afe1fe9",
@@ -2648,7 +2706,7 @@
     "pret_original": 96.58,
     "pret_redus": 48.29,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160898/full/quantum-pharm-pachet-evening-primrose-30cps-plus-30cps-354554.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160898-pachet-evening-primrose-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160898-pachet-evening-primrose-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2661,7 +2719,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160898-pachet-evening-primrose-30cps-plus-30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160898-pachet-evening-primrose-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160898/full/quantum-pharm-pachet-evening-primrose-30cps-plus-30cps-354554.png",
     "categories": [
       "promotii"
     ],
@@ -2669,7 +2727,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:49.448627+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-1155d6d4",
@@ -2679,7 +2739,7 @@
     "pret_original": 125.8,
     "pret_redus": 62.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/160955/full/quantum-pharm-pachet-silimarina-plus-8000-30cps-plus-30cps-354581.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160955-pachet-silimarina-plus-8000-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160955-pachet-silimarina-plus-8000-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2692,7 +2752,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160955-pachet-silimarina-plus-8000-30cps-plus-30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/160955-pachet-silimarina-plus-8000-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/160955/full/quantum-pharm-pachet-silimarina-plus-8000-30cps-plus-30cps-354581.png",
     "categories": [
       "promotii"
     ],
@@ -2700,7 +2760,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:50.150165+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-ee8cd8a3",
@@ -2710,7 +2772,7 @@
     "pret_original": 97.01,
     "pret_redus": 48.51,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/161033/full/quantum-pharm-pachet-lipostop-cu-extract-de-cafea-verde-30cps-plus-30cps-354572.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161033-pachet-lipostop-cu-extract-de-cafea-verde-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161033-pachet-lipostop-cu-extract-de-cafea-verde-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2723,7 +2785,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161033-pachet-lipostop-cu-extract-de-cafea-verde-30cps-plus-30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161033-pachet-lipostop-cu-extract-de-cafea-verde-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/161033/full/quantum-pharm-pachet-lipostop-cu-extract-de-cafea-verde-30cps-plus-30cps-354572.png",
     "categories": [
       "promotii"
     ],
@@ -2731,7 +2793,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:50.954675+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-b1b8f64e",
@@ -2741,7 +2805,7 @@
     "pret_original": 83.8,
     "pret_redus": 41.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/161039/full/quantum-pharm-pachet-parazitolit-30cps-plus-30cps-354575.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161039-pachet-parazitolit-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161039-pachet-parazitolit-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2754,7 +2818,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161039-pachet-parazitolit-30cps-plus-30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161039-pachet-parazitolit-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/161039/full/quantum-pharm-pachet-parazitolit-30cps-plus-30cps-354575.png",
     "categories": [
       "promotii"
     ],
@@ -2762,7 +2826,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:51.642687+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-1b1a989c",
@@ -2772,7 +2838,7 @@
     "pret_original": 67.8,
     "pret_redus": 33.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/161042/full/quantum-pharm-pachet-gingko-plus-ginkgo-biloba-30cps-plus-30cps-354560.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161042-pachet-gingko-plus-ginkgo-biloba-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161042-pachet-gingko-plus-ginkgo-biloba-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2785,7 +2851,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161042-pachet-gingko-plus-ginkgo-biloba-30cps-plus-30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161042-pachet-gingko-plus-ginkgo-biloba-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/161042/full/quantum-pharm-pachet-gingko-plus-ginkgo-biloba-30cps-plus-30cps-354560.png",
     "categories": [
       "promotii"
     ],
@@ -2793,7 +2859,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:52.394265+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-79655cab",
@@ -2803,7 +2871,7 @@
     "pret_original": 75.0,
     "pret_redus": 37.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/161045/full/quantum-pharm-pachet-glucofer-plus-30cps-plus-30cps-354569.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161045-pachet-glucofer-plus-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161045-pachet-glucofer-plus-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2816,7 +2884,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161045-pachet-glucofer-plus-30cps-plus-30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161045-pachet-glucofer-plus-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/161045/full/quantum-pharm-pachet-glucofer-plus-30cps-plus-30cps-354569.png",
     "categories": [
       "promotii"
     ],
@@ -2824,7 +2892,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:53.048655+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-ba85255a",
@@ -2834,7 +2904,7 @@
     "pret_original": 81.0,
     "pret_redus": 40.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/161048/full/quantum-pharm-pachet-ulei-de-chimen-plus-ghimbir-30cps-plus-30cps-354548.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161048-pachet-ulei-de-chimen-plus-ghimbir-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161048-pachet-ulei-de-chimen-plus-ghimbir-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2847,7 +2917,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161048-pachet-ulei-de-chimen-plus-ghimbir-30cps-plus-30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161048-pachet-ulei-de-chimen-plus-ghimbir-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/161048/full/quantum-pharm-pachet-ulei-de-chimen-plus-ghimbir-30cps-plus-30cps-354548.png",
     "categories": [
       "promotii"
     ],
@@ -2855,7 +2925,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:53.776314+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-a59eb9ac",
@@ -2865,7 +2937,7 @@
     "pret_original": 99.8,
     "pret_redus": 49.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/161051/full/quantum-pharm-pachet-ulei-de-chimen-negru-30cps-plus-30cps-354584.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161051-pachet-ulei-de-chimen-negru-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161051-pachet-ulei-de-chimen-negru-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2878,7 +2950,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161051-pachet-ulei-de-chimen-negru-30cps-plus-30cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/quantum-pharm/161051-pachet-ulei-de-chimen-negru-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/161051/full/quantum-pharm-pachet-ulei-de-chimen-negru-30cps-plus-30cps-354584.png",
     "categories": [
       "promotii"
     ],
@@ -2886,7 +2958,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:54.435560+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-fb19b61e",
@@ -2896,7 +2970,7 @@
     "pret_original": 65.0,
     "pret_redus": 32.5,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/161054/full/quantum-pharm-pachet-vitamina-a-10000ui-30cps-plus-30cps-354587.png",
     "product_url": "https://vegis.ro/vitamine-si-minerale/quantum-pharm/161054-pachet-vitamina-a-10000ui-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/vitamine-si-minerale/quantum-pharm/161054-pachet-vitamina-a-10000ui-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2909,7 +2983,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/vitamine-si-minerale/quantum-pharm/161054-pachet-vitamina-a-10000ui-30cps-plus-30cps/",
     "url": "https://vegis.ro/vitamine-si-minerale/quantum-pharm/161054-pachet-vitamina-a-10000ui-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/161054/full/quantum-pharm-pachet-vitamina-a-10000ui-30cps-plus-30cps-354587.png",
     "categories": [
       "promotii"
     ],
@@ -2917,7 +2991,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:55.077969+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-385b2110",
@@ -2927,7 +3003,7 @@
     "pret_original": 67.8,
     "pret_redus": 33.9,
     "procent_reducere": 50,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/161057/full/quantum-pharm-pachet-vitamina-d-2400-30cps-plus-30cps-354551.png",
     "product_url": "https://vegis.ro/vitamine-si-minerale/quantum-pharm/161057-pachet-vitamina-d-2400-30cps-plus-30cps/",
     "link_afiliat": "https://vegis.ro/vitamine-si-minerale/quantum-pharm/161057-pachet-vitamina-d-2400-30cps-plus-30cps/",
     "categorie": "promotii",
@@ -2940,7 +3016,7 @@
     "discount_percent": 50,
     "affiliate_url": "https://vegis.ro/vitamine-si-minerale/quantum-pharm/161057-pachet-vitamina-d-2400-30cps-plus-30cps/",
     "url": "https://vegis.ro/vitamine-si-minerale/quantum-pharm/161057-pachet-vitamina-d-2400-30cps-plus-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/161057/full/quantum-pharm-pachet-vitamina-d-2400-30cps-plus-30cps-354551.png",
     "categories": [
       "promotii"
     ],
@@ -2948,7 +3024,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:55.762185+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "ps-alecoair-resigilat-umidificator-alecoair-u40-towe-0TOWER-W",
@@ -4506,7 +4584,7 @@
     "pret_original": 6.5,
     "pret_redus": 3.9,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/34761/full/bispol-set-lumanari-tip-pastila-aroma-fructe-de-padure-6-buc-61707.jpeg",
     "product_url": "https://vegis.ro/lumanari-parfumate/bispol/34761-set-lumanari-tip-pastila-aroma-fructe-de-padure-6-buc/",
     "link_afiliat": "https://vegis.ro/lumanari-parfumate/bispol/34761-set-lumanari-tip-pastila-aroma-fructe-de-padure-6-buc/",
     "categorie": "promotii",
@@ -4519,7 +4597,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/lumanari-parfumate/bispol/34761-set-lumanari-tip-pastila-aroma-fructe-de-padure-6-buc/",
     "url": "https://vegis.ro/lumanari-parfumate/bispol/34761-set-lumanari-tip-pastila-aroma-fructe-de-padure-6-buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/34761/full/bispol-set-lumanari-tip-pastila-aroma-fructe-de-padure-6-buc-61707.jpeg",
     "categories": [
       "promotii"
     ],
@@ -4527,7 +4605,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:56.393590+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-b7d09b05",
@@ -4537,7 +4617,7 @@
     "pret_original": 26.0,
     "pret_redus": 15.6,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/46015/full/saimara-ulei-esential-de-portocale-ecologic-bio-10ml-96913.png",
     "product_url": "https://vegis.ro/uleiuri-esentiale/saimara/46015-ulei-esential-de-portocale-10ml/",
     "link_afiliat": "https://vegis.ro/uleiuri-esentiale/saimara/46015-ulei-esential-de-portocale-10ml/",
     "categorie": "promotii",
@@ -4550,7 +4630,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/uleiuri-esentiale/saimara/46015-ulei-esential-de-portocale-10ml/",
     "url": "https://vegis.ro/uleiuri-esentiale/saimara/46015-ulei-esential-de-portocale-10ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/46015/full/saimara-ulei-esential-de-portocale-ecologic-bio-10ml-96913.png",
     "categories": [
       "promotii"
     ],
@@ -4558,7 +4638,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:57.064584+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-51fcd1aa",
@@ -4568,7 +4650,7 @@
     "pret_original": 36.0,
     "pret_redus": 21.6,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/46099/full/saimara-ulei-esential-de-lamaie-ecologic-bio-10ml-97087.png",
     "product_url": "https://vegis.ro/uleiuri-esentiale/saimara/46099-ulei-esential-de-lamaie-10ml/",
     "link_afiliat": "https://vegis.ro/uleiuri-esentiale/saimara/46099-ulei-esential-de-lamaie-10ml/",
     "categorie": "promotii",
@@ -4581,7 +4663,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/uleiuri-esentiale/saimara/46099-ulei-esential-de-lamaie-10ml/",
     "url": "https://vegis.ro/uleiuri-esentiale/saimara/46099-ulei-esential-de-lamaie-10ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/46099/full/saimara-ulei-esential-de-lamaie-ecologic-bio-10ml-97087.png",
     "categories": [
       "promotii"
     ],
@@ -4589,7 +4671,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:57.769939+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-61d0a733",
@@ -4599,7 +4683,7 @@
     "pret_original": 25.63,
     "pret_redus": 15.38,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/70869/full/ecomil-bautura-vegetala-bio-din-alune-fara-zahar-nature-1-l-ecomil-152979.jpg",
     "product_url": "https://vegis.ro/alimentare-sucuri-siropuri/ecomil/70869-bautura-vegetala-din-alune-natur-fara-zahar-ecologic-bio-1l/",
     "link_afiliat": "https://vegis.ro/alimentare-sucuri-siropuri/ecomil/70869-bautura-vegetala-din-alune-natur-fara-zahar-ecologic-bio-1l/",
     "categorie": "promotii",
@@ -4612,7 +4696,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/alimentare-sucuri-siropuri/ecomil/70869-bautura-vegetala-din-alune-natur-fara-zahar-ecologic-bio-1l/",
     "url": "https://vegis.ro/alimentare-sucuri-siropuri/ecomil/70869-bautura-vegetala-din-alune-natur-fara-zahar-ecologic-bio-1l/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/70869/full/ecomil-bautura-vegetala-bio-din-alune-fara-zahar-nature-1-l-ecomil-152979.jpg",
     "categories": [
       "promotii"
     ],
@@ -4620,7 +4704,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:58.640043+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-0ecf14d8",
@@ -4630,7 +4716,7 @@
     "pret_original": 60.09,
     "pret_redus": 36.05,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/87451/full/birkengold-gelifiant-cu-zahar-de-mesteacan-3-1-500-g-birkengold-190086.jpg",
     "product_url": "https://vegis.ro/indulcitori-naturali/birkengold/87451-gelifiant-cu-zahar-de-mesteacan-3-1-500g/",
     "link_afiliat": "https://vegis.ro/indulcitori-naturali/birkengold/87451-gelifiant-cu-zahar-de-mesteacan-3-1-500g/",
     "categorie": "promotii",
@@ -4643,7 +4729,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/indulcitori-naturali/birkengold/87451-gelifiant-cu-zahar-de-mesteacan-3-1-500g/",
     "url": "https://vegis.ro/indulcitori-naturali/birkengold/87451-gelifiant-cu-zahar-de-mesteacan-3-1-500g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/87451/full/birkengold-gelifiant-cu-zahar-de-mesteacan-3-1-500-g-birkengold-190086.jpg",
     "categories": [
       "promotii"
     ],
@@ -4651,7 +4737,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:10:59.424152+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-8c5f067c",
@@ -4661,7 +4749,7 @@
     "pret_original": 55.07,
     "pret_redus": 33.04,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/91409/full/hammer-muhle-inlocuitor-de-ou-fara-gluten-250g-hammer-muhle-201573.jpg",
     "product_url": "https://vegis.ro/produse-vegane/hammer-muhle/91409-inlocuitor-de-ou-fara-gluten-250g/",
     "link_afiliat": "https://vegis.ro/produse-vegane/hammer-muhle/91409-inlocuitor-de-ou-fara-gluten-250g/",
     "categorie": "promotii",
@@ -4674,7 +4762,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-vegane/hammer-muhle/91409-inlocuitor-de-ou-fara-gluten-250g/",
     "url": "https://vegis.ro/produse-vegane/hammer-muhle/91409-inlocuitor-de-ou-fara-gluten-250g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/91409/full/hammer-muhle-inlocuitor-de-ou-fara-gluten-250g-hammer-muhle-201573.jpg",
     "categories": [
       "promotii"
     ],
@@ -4682,7 +4770,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:00.089290+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-c5bdd8c0",
@@ -4692,7 +4782,7 @@
     "pret_original": 47.92,
     "pret_redus": 28.75,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/136545/full/urtekram-gel-de-curatarea-fetei-pentru-barbati-300979.jpg",
     "product_url": "https://vegis.ro/cosmetice-barbati/urtekram/136545-gel-pentru-curatarea-tenului-pentru-barbati-bio-150ml/",
     "link_afiliat": "https://vegis.ro/cosmetice-barbati/urtekram/136545-gel-pentru-curatarea-tenului-pentru-barbati-bio-150ml/",
     "categorie": "promotii",
@@ -4705,7 +4795,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/cosmetice-barbati/urtekram/136545-gel-pentru-curatarea-tenului-pentru-barbati-bio-150ml/",
     "url": "https://vegis.ro/cosmetice-barbati/urtekram/136545-gel-pentru-curatarea-tenului-pentru-barbati-bio-150ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/136545/full/urtekram-gel-de-curatarea-fetei-pentru-barbati-300979.jpg",
     "categories": [
       "promotii"
     ],
@@ -4713,7 +4803,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:00.935480+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-aa26c2ae",
@@ -4723,7 +4815,7 @@
     "pret_original": 34.9,
     "pret_redus": 20.94,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/140095/full/niavis-ulei-de-luminita-noptii-presat-la-rece-bio-50ml-307881.png",
     "product_url": "https://vegis.ro/cosmetice-par/niavis/140095-ulei-de-luminita-noptii-presat-la-rece-bio-50ml/",
     "link_afiliat": "https://vegis.ro/cosmetice-par/niavis/140095-ulei-de-luminita-noptii-presat-la-rece-bio-50ml/",
     "categorie": "promotii",
@@ -4736,7 +4828,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/cosmetice-par/niavis/140095-ulei-de-luminita-noptii-presat-la-rece-bio-50ml/",
     "url": "https://vegis.ro/cosmetice-par/niavis/140095-ulei-de-luminita-noptii-presat-la-rece-bio-50ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/140095/full/niavis-ulei-de-luminita-noptii-presat-la-rece-bio-50ml-307881.png",
     "categories": [
       "promotii"
     ],
@@ -4744,7 +4836,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:01.830928+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-a44afe00",
@@ -4754,7 +4848,7 @@
     "pret_original": 20.5,
     "pret_redus": 12.3,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/141093/full/niavis-apa-de-menta-100ml-310327.png",
     "product_url": "https://vegis.ro/cosmetice-ten/niavis/141093-apa-de-menta-100ml/",
     "link_afiliat": "https://vegis.ro/cosmetice-ten/niavis/141093-apa-de-menta-100ml/",
     "categorie": "promotii",
@@ -4767,7 +4861,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/cosmetice-ten/niavis/141093-apa-de-menta-100ml/",
     "url": "https://vegis.ro/cosmetice-ten/niavis/141093-apa-de-menta-100ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/141093/full/niavis-apa-de-menta-100ml-310327.png",
     "categories": [
       "promotii"
     ],
@@ -4775,7 +4869,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:02.515252+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-fc0a2487",
@@ -4785,7 +4881,7 @@
     "pret_original": 53.89,
     "pret_redus": 32.33,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153866/full/carryboo-ulei-de-corp-bio-pentru-bebelusi-fara-parfum-cu-ulei-de-masline-carryboo-335534.jpg",
     "product_url": "https://vegis.ro/cosmetice-copii/carryboo/153866-ulei-de-corp-pentru-bebelusi-cu-ulei-de-masline-bio-450ml/",
     "link_afiliat": "https://vegis.ro/cosmetice-copii/carryboo/153866-ulei-de-corp-pentru-bebelusi-cu-ulei-de-masline-bio-450ml/",
     "categorie": "promotii",
@@ -4798,7 +4894,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/cosmetice-copii/carryboo/153866-ulei-de-corp-pentru-bebelusi-cu-ulei-de-masline-bio-450ml/",
     "url": "https://vegis.ro/cosmetice-copii/carryboo/153866-ulei-de-corp-pentru-bebelusi-cu-ulei-de-masline-bio-450ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153866/full/carryboo-ulei-de-corp-bio-pentru-bebelusi-fara-parfum-cu-ulei-de-masline-carryboo-335534.jpg",
     "categories": [
       "promotii"
     ],
@@ -4806,7 +4902,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:03.059732+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-33146575",
@@ -4816,7 +4914,7 @@
     "pret_original": 56.34,
     "pret_redus": 33.81,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153869/full/carryboo-sampon-si-gel-dus-bio-delicat-pentru-bebelusi-fara-parfum-cu-extract-de-caise-carryboo-335537.jpg",
     "product_url": "https://vegis.ro/cosmetice-copii/carryboo/153869-sampon-si-gel-de-dus-delicat-pentru-bebelusi-cu-extract-de-caise-fara-parfum-bio-500ml/",
     "link_afiliat": "https://vegis.ro/cosmetice-copii/carryboo/153869-sampon-si-gel-de-dus-delicat-pentru-bebelusi-cu-extract-de-caise-fara-parfum-bio-500ml/",
     "categorie": "promotii",
@@ -4829,7 +4927,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/cosmetice-copii/carryboo/153869-sampon-si-gel-de-dus-delicat-pentru-bebelusi-cu-extract-de-caise-fara-parfum-bio-500ml/",
     "url": "https://vegis.ro/cosmetice-copii/carryboo/153869-sampon-si-gel-de-dus-delicat-pentru-bebelusi-cu-extract-de-caise-fara-parfum-bio-500ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153869/full/carryboo-sampon-si-gel-dus-bio-delicat-pentru-bebelusi-fara-parfum-cu-extract-de-caise-carryboo-335537.jpg",
     "categories": [
       "promotii"
     ],
@@ -4837,7 +4935,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:03.606311+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-f2f04837",
@@ -4847,7 +4947,7 @@
     "pret_original": 56.34,
     "pret_redus": 33.81,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153872/full/carryboo-lapte-de-corp-bio-pentru-bebelusi-fara-parfum-cu-unt-de-shea-carryboo-335540.jpg",
     "product_url": "https://vegis.ro/cosmetice-copii/carryboo/153872-lapte-de-corp-pentru-bebelusi-cu-unt-de-shea-fara-parfum-bio-500ml/",
     "link_afiliat": "https://vegis.ro/cosmetice-copii/carryboo/153872-lapte-de-corp-pentru-bebelusi-cu-unt-de-shea-fara-parfum-bio-500ml/",
     "categorie": "promotii",
@@ -4860,7 +4960,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/cosmetice-copii/carryboo/153872-lapte-de-corp-pentru-bebelusi-cu-unt-de-shea-fara-parfum-bio-500ml/",
     "url": "https://vegis.ro/cosmetice-copii/carryboo/153872-lapte-de-corp-pentru-bebelusi-cu-unt-de-shea-fara-parfum-bio-500ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153872/full/carryboo-lapte-de-corp-bio-pentru-bebelusi-fara-parfum-cu-unt-de-shea-carryboo-335540.jpg",
     "categories": [
       "promotii"
     ],
@@ -4868,7 +4968,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:04.123903+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-92ec3ac5",
@@ -4878,7 +4980,7 @@
     "pret_original": 24.53,
     "pret_redus": 14.72,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153875/full/carryboo-servetele-umede-hipoalergenice-fara-parfum-cu-extract-de-bumbac-carryboo-335543.jpg",
     "product_url": "https://vegis.ro/cosmetice-copii/carryboo/153875-servetele-umede-hipoalergenice-pentru-bebelusi-cu-extract-de-bumbac-fara-parfum-58buc/",
     "link_afiliat": "https://vegis.ro/cosmetice-copii/carryboo/153875-servetele-umede-hipoalergenice-pentru-bebelusi-cu-extract-de-bumbac-fara-parfum-58buc/",
     "categorie": "promotii",
@@ -4891,7 +4993,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/cosmetice-copii/carryboo/153875-servetele-umede-hipoalergenice-pentru-bebelusi-cu-extract-de-bumbac-fara-parfum-58buc/",
     "url": "https://vegis.ro/cosmetice-copii/carryboo/153875-servetele-umede-hipoalergenice-pentru-bebelusi-cu-extract-de-bumbac-fara-parfum-58buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153875/full/carryboo-servetele-umede-hipoalergenice-fara-parfum-cu-extract-de-bumbac-carryboo-335543.jpg",
     "categories": [
       "promotii"
     ],
@@ -4899,7 +5001,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:04.679119+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-94680747",
@@ -4909,7 +5013,7 @@
     "pret_original": 24.53,
     "pret_redus": 14.72,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153878/full/carryboo-servetele-de-apa-umede-hipoalergenice-fara-parfum-cu-extract-bio-de-musetel-carryboo-335546.jpg",
     "product_url": "https://vegis.ro/cosmetice-copii/carryboo/153878-servetele-de-apa-umede-hipoalergenice-pentru-bebelusi-cu-extract-de-musetel-fara-parfum-58buc/",
     "link_afiliat": "https://vegis.ro/cosmetice-copii/carryboo/153878-servetele-de-apa-umede-hipoalergenice-pentru-bebelusi-cu-extract-de-musetel-fara-parfum-58buc/",
     "categorie": "promotii",
@@ -4922,7 +5026,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/cosmetice-copii/carryboo/153878-servetele-de-apa-umede-hipoalergenice-pentru-bebelusi-cu-extract-de-musetel-fara-parfum-58buc/",
     "url": "https://vegis.ro/cosmetice-copii/carryboo/153878-servetele-de-apa-umede-hipoalergenice-pentru-bebelusi-cu-extract-de-musetel-fara-parfum-58buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153878/full/carryboo-servetele-de-apa-umede-hipoalergenice-fara-parfum-cu-extract-bio-de-musetel-carryboo-335546.jpg",
     "categories": [
       "promotii"
     ],
@@ -4930,7 +5034,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:05.227240+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-8b4b7eeb",
@@ -4940,7 +5046,7 @@
     "pret_original": 27.88,
     "pret_redus": 16.73,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153881/full/carryboo-dischete-din-bumbac-bio-dreptunghiulare-carryboo-335549.jpg",
     "product_url": "https://vegis.ro/cosmetice-copii/carryboo/153881-dischete-din-bumbac-dreptunghiulare-pentru-bebelusi-bio-70buc/",
     "link_afiliat": "https://vegis.ro/cosmetice-copii/carryboo/153881-dischete-din-bumbac-dreptunghiulare-pentru-bebelusi-bio-70buc/",
     "categorie": "promotii",
@@ -4953,7 +5059,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/cosmetice-copii/carryboo/153881-dischete-din-bumbac-dreptunghiulare-pentru-bebelusi-bio-70buc/",
     "url": "https://vegis.ro/cosmetice-copii/carryboo/153881-dischete-din-bumbac-dreptunghiulare-pentru-bebelusi-bio-70buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153881/full/carryboo-dischete-din-bumbac-bio-dreptunghiulare-carryboo-335549.jpg",
     "categories": [
       "promotii"
     ],
@@ -4961,7 +5067,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:05.778373+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-07980ec4",
@@ -4971,7 +5079,7 @@
     "pret_original": 11.87,
     "pret_redus": 7.12,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153884/full/carryboo-betisoare-cu-bumbac-bio-securizate-pentru-bebelusi-carryboo-335552.jpg",
     "product_url": "https://vegis.ro/cosmetice-copii/carryboo/153884-betisoare-din-bumbac-securizate-pentru-bebelusi-bio-50buc/",
     "link_afiliat": "https://vegis.ro/cosmetice-copii/carryboo/153884-betisoare-din-bumbac-securizate-pentru-bebelusi-bio-50buc/",
     "categorie": "promotii",
@@ -4984,7 +5092,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/cosmetice-copii/carryboo/153884-betisoare-din-bumbac-securizate-pentru-bebelusi-bio-50buc/",
     "url": "https://vegis.ro/cosmetice-copii/carryboo/153884-betisoare-din-bumbac-securizate-pentru-bebelusi-bio-50buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153884/full/carryboo-betisoare-cu-bumbac-bio-securizate-pentru-bebelusi-carryboo-335552.jpg",
     "categories": [
       "promotii"
     ],
@@ -4992,7 +5100,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:06.331353+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-985b1aaf",
@@ -5002,7 +5112,7 @@
     "pret_original": 117.16,
     "pret_redus": 70.29,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153887/full/carryboo-scutece-chilotel-c4-8-15kg-eco-marimea-4-carryboo-nature-335555.jpg",
     "product_url": "https://vegis.ro/produse-pentru-copii/carryboo/153887-scutece-chilotel-c4-8-15kg-marimea-4-bio-30buc/",
     "link_afiliat": "https://vegis.ro/produse-pentru-copii/carryboo/153887-scutece-chilotel-c4-8-15kg-marimea-4-bio-30buc/",
     "categorie": "promotii",
@@ -5015,7 +5125,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-pentru-copii/carryboo/153887-scutece-chilotel-c4-8-15kg-marimea-4-bio-30buc/",
     "url": "https://vegis.ro/produse-pentru-copii/carryboo/153887-scutece-chilotel-c4-8-15kg-marimea-4-bio-30buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153887/full/carryboo-scutece-chilotel-c4-8-15kg-eco-marimea-4-carryboo-nature-335555.jpg",
     "categories": [
       "promotii"
     ],
@@ -5023,7 +5133,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:06.902091+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-033a2d76",
@@ -5033,7 +5145,7 @@
     "pret_original": 117.16,
     "pret_redus": 70.29,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153890/full/carryboo-scutece-chilotel-c5-12-18kg-eco-marimea-5-carryboo-nature-335564.jpg",
     "product_url": "https://vegis.ro/produse-pentru-copii/carryboo/153890-scutece-chilotel-c5-12-18kg-marimea-5-bio-28buc/",
     "link_afiliat": "https://vegis.ro/produse-pentru-copii/carryboo/153890-scutece-chilotel-c5-12-18kg-marimea-5-bio-28buc/",
     "categorie": "promotii",
@@ -5046,7 +5158,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-pentru-copii/carryboo/153890-scutece-chilotel-c5-12-18kg-marimea-5-bio-28buc/",
     "url": "https://vegis.ro/produse-pentru-copii/carryboo/153890-scutece-chilotel-c5-12-18kg-marimea-5-bio-28buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153890/full/carryboo-scutece-chilotel-c5-12-18kg-eco-marimea-5-carryboo-nature-335564.jpg",
     "categories": [
       "promotii"
     ],
@@ -5054,7 +5166,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:07.412106+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-7258f877",
@@ -5064,7 +5178,7 @@
     "pret_original": 117.16,
     "pret_redus": 70.29,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153893/full/carryboo-scutece-chilotel-c6-16-30kg-eco-marimea-6-carryboo-nature-335573.jpg",
     "product_url": "https://vegis.ro/produse-pentru-copii/carryboo/153893-scutece-chilotel-c6-16-30kg-marimea-6-bio-26buc/",
     "link_afiliat": "https://vegis.ro/produse-pentru-copii/carryboo/153893-scutece-chilotel-c6-16-30kg-marimea-6-bio-26buc/",
     "categorie": "promotii",
@@ -5077,7 +5191,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-pentru-copii/carryboo/153893-scutece-chilotel-c6-16-30kg-marimea-6-bio-26buc/",
     "url": "https://vegis.ro/produse-pentru-copii/carryboo/153893-scutece-chilotel-c6-16-30kg-marimea-6-bio-26buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153893/full/carryboo-scutece-chilotel-c6-16-30kg-eco-marimea-6-carryboo-nature-335573.jpg",
     "categories": [
       "promotii"
     ],
@@ -5085,7 +5199,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:07.963264+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-06bd0fa7",
@@ -5095,7 +5211,7 @@
     "pret_original": 118.56,
     "pret_redus": 71.14,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153896/full/carryboo-scutece-c2-3-6kg-fara-parfum-nou-nascuti-marimea-2-carryboo-335582.jpg",
     "product_url": "https://vegis.ro/produse-pentru-copii/carryboo/153896-scutece-c2-3-6kg-marimea-2-pentru-nou-nascuti-fara-parfum-50buc/",
     "link_afiliat": "https://vegis.ro/produse-pentru-copii/carryboo/153896-scutece-c2-3-6kg-marimea-2-pentru-nou-nascuti-fara-parfum-50buc/",
     "categorie": "promotii",
@@ -5108,7 +5224,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-pentru-copii/carryboo/153896-scutece-c2-3-6kg-marimea-2-pentru-nou-nascuti-fara-parfum-50buc/",
     "url": "https://vegis.ro/produse-pentru-copii/carryboo/153896-scutece-c2-3-6kg-marimea-2-pentru-nou-nascuti-fara-parfum-50buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153896/full/carryboo-scutece-c2-3-6kg-fara-parfum-nou-nascuti-marimea-2-carryboo-335582.jpg",
     "categories": [
       "promotii"
     ],
@@ -5116,7 +5232,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:08.522951+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-3872a2a4",
@@ -5126,7 +5244,7 @@
     "pret_original": 118.56,
     "pret_redus": 71.14,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153899/full/carryboo-scutece-c3-4-9kg-fara-parfum-marimea-3-carryboo-335585.jpg",
     "product_url": "https://vegis.ro/produse-pentru-copii/carryboo/153899-scutece-c3-4-9kg-marimea-3-fara-parfum-50buc/",
     "link_afiliat": "https://vegis.ro/produse-pentru-copii/carryboo/153899-scutece-c3-4-9kg-marimea-3-fara-parfum-50buc/",
     "categorie": "promotii",
@@ -5139,7 +5257,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-pentru-copii/carryboo/153899-scutece-c3-4-9kg-marimea-3-fara-parfum-50buc/",
     "url": "https://vegis.ro/produse-pentru-copii/carryboo/153899-scutece-c3-4-9kg-marimea-3-fara-parfum-50buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153899/full/carryboo-scutece-c3-4-9kg-fara-parfum-marimea-3-carryboo-335585.jpg",
     "categories": [
       "promotii"
     ],
@@ -5147,7 +5265,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:09.078458+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-6d2ec3ad",
@@ -5157,7 +5277,7 @@
     "pret_original": 118.56,
     "pret_redus": 71.14,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153902/full/carryboo-scutece-c4-7-18kg-fara-parfum-marimea-4-carryboo-335588.jpg",
     "product_url": "https://vegis.ro/produse-pentru-copii/carryboo/153902-scutece-c4-7-18kg-marimea-4-fara-parfum-44buc/",
     "link_afiliat": "https://vegis.ro/produse-pentru-copii/carryboo/153902-scutece-c4-7-18kg-marimea-4-fara-parfum-44buc/",
     "categorie": "promotii",
@@ -5170,7 +5290,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-pentru-copii/carryboo/153902-scutece-c4-7-18kg-marimea-4-fara-parfum-44buc/",
     "url": "https://vegis.ro/produse-pentru-copii/carryboo/153902-scutece-c4-7-18kg-marimea-4-fara-parfum-44buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153902/full/carryboo-scutece-c4-7-18kg-fara-parfum-marimea-4-carryboo-335588.jpg",
     "categories": [
       "promotii"
     ],
@@ -5178,7 +5298,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:09.662028+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-293fae7e",
@@ -5188,7 +5310,7 @@
     "pret_original": 118.56,
     "pret_redus": 71.14,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153905/full/carryboo-scutece-c4-plus-9-20kg-fara-parfum-marimea-4-plus-carryboo-335591.jpg",
     "product_url": "https://vegis.ro/produse-pentru-copii/carryboo/153905-scutece-c4-plus-9-20kg-marimea-4-plus-fara-parfum-42buc/",
     "link_afiliat": "https://vegis.ro/produse-pentru-copii/carryboo/153905-scutece-c4-plus-9-20kg-marimea-4-plus-fara-parfum-42buc/",
     "categorie": "promotii",
@@ -5201,7 +5323,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-pentru-copii/carryboo/153905-scutece-c4-plus-9-20kg-marimea-4-plus-fara-parfum-42buc/",
     "url": "https://vegis.ro/produse-pentru-copii/carryboo/153905-scutece-c4-plus-9-20kg-marimea-4-plus-fara-parfum-42buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153905/full/carryboo-scutece-c4-plus-9-20kg-fara-parfum-marimea-4-plus-carryboo-335591.jpg",
     "categories": [
       "promotii"
     ],
@@ -5209,7 +5331,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:10.250845+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-b646c85e",
@@ -5219,7 +5343,7 @@
     "pret_original": 118.56,
     "pret_redus": 71.14,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/153908/full/carryboo-scutece-c5-12-25kg-fara-parfum-marimea-5-carryboo-335594.jpg",
     "product_url": "https://vegis.ro/produse-pentru-copii/carryboo/153908-scutece-c5-12-25kg-marimea-5-fara-parfum-40buc/",
     "link_afiliat": "https://vegis.ro/produse-pentru-copii/carryboo/153908-scutece-c5-12-25kg-marimea-5-fara-parfum-40buc/",
     "categorie": "promotii",
@@ -5232,7 +5356,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-pentru-copii/carryboo/153908-scutece-c5-12-25kg-marimea-5-fara-parfum-40buc/",
     "url": "https://vegis.ro/produse-pentru-copii/carryboo/153908-scutece-c5-12-25kg-marimea-5-fara-parfum-40buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/153908/full/carryboo-scutece-c5-12-25kg-fara-parfum-marimea-5-carryboo-335594.jpg",
     "categories": [
       "promotii"
     ],
@@ -5240,7 +5364,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:10.779506+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-557f0135",
@@ -5250,7 +5376,7 @@
     "pret_original": 46.97,
     "pret_redus": 28.18,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/162170/full/carryboo-scutece-c1-2-5kg-fara-parfum-nou-nascuti-marimea-1-carryboo-356345.jpg",
     "product_url": "https://vegis.ro/produse-pentru-copii/carryboo/162170-scutece-c1-2-5kg-nou-nascuti-marimea-1-fara-parfum-24buc/",
     "link_afiliat": "https://vegis.ro/produse-pentru-copii/carryboo/162170-scutece-c1-2-5kg-nou-nascuti-marimea-1-fara-parfum-24buc/",
     "categorie": "promotii",
@@ -5263,7 +5389,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-pentru-copii/carryboo/162170-scutece-c1-2-5kg-nou-nascuti-marimea-1-fara-parfum-24buc/",
     "url": "https://vegis.ro/produse-pentru-copii/carryboo/162170-scutece-c1-2-5kg-nou-nascuti-marimea-1-fara-parfum-24buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/162170/full/carryboo-scutece-c1-2-5kg-fara-parfum-nou-nascuti-marimea-1-carryboo-356345.jpg",
     "categories": [
       "promotii"
     ],
@@ -5271,7 +5397,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:11.445231+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-7a69a7b8",
@@ -5281,7 +5409,7 @@
     "pret_original": 34.17,
     "pret_redus": 20.5,
     "procent_reducere": 40,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/162200/full/carryboo-dischete-din-bumbac-bio-dreptunghiulare-format-mare-carryboo-356378.jpg",
     "product_url": "https://vegis.ro/produse-auxiliare/carryboo/162200-dischete-din-bumbac-bio-dreptunghiulare-format-mare-150buc/",
     "link_afiliat": "https://vegis.ro/produse-auxiliare/carryboo/162200-dischete-din-bumbac-bio-dreptunghiulare-format-mare-150buc/",
     "categorie": "promotii",
@@ -5294,7 +5422,7 @@
     "discount_percent": 40,
     "affiliate_url": "https://vegis.ro/produse-auxiliare/carryboo/162200-dischete-din-bumbac-bio-dreptunghiulare-format-mare-150buc/",
     "url": "https://vegis.ro/produse-auxiliare/carryboo/162200-dischete-din-bumbac-bio-dreptunghiulare-format-mare-150buc/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/162200/full/carryboo-dischete-din-bumbac-bio-dreptunghiulare-format-mare-carryboo-356378.jpg",
     "categories": [
       "promotii"
     ],
@@ -5302,7 +5430,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:12.397101+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "ps-mathaus-set-masina-de-gaurit-si-insurubat-cu-per-11195522",
@@ -7037,7 +7167,7 @@
     "pret_original": 9.51,
     "pret_redus": 6.18,
     "procent_reducere": 35,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/33313/full/rapunzel-baton-proteic-power-mix-ecologic-bio-40g-58837.jpeg",
     "product_url": "https://vegis.ro/dulciuri/rapunzel/33313-baton-proteic-power-mix-ecologic-bio-40g/",
     "link_afiliat": "https://vegis.ro/dulciuri/rapunzel/33313-baton-proteic-power-mix-ecologic-bio-40g/",
     "categorie": "promotii",
@@ -7050,7 +7180,7 @@
     "discount_percent": 35,
     "affiliate_url": "https://vegis.ro/dulciuri/rapunzel/33313-baton-proteic-power-mix-ecologic-bio-40g/",
     "url": "https://vegis.ro/dulciuri/rapunzel/33313-baton-proteic-power-mix-ecologic-bio-40g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/33313/full/rapunzel-baton-proteic-power-mix-ecologic-bio-40g-58837.jpeg",
     "categories": [
       "promotii"
     ],
@@ -7058,7 +7188,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:13.206703+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-6aabd914",
@@ -7068,7 +7200,7 @@
     "pret_original": 21.5,
     "pret_redus": 13.97,
     "procent_reducere": 35,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/37967/full/rapunzel-curmale-cu-samburi-delegt-nour-ecologice-bio-250g-322773.png",
     "product_url": "https://vegis.ro/alimentare-fructe-uscate/rapunzel/37967-curmale-cu-samburi-delegt-nour-ecologice-bio-250g/",
     "link_afiliat": "https://vegis.ro/alimentare-fructe-uscate/rapunzel/37967-curmale-cu-samburi-delegt-nour-ecologice-bio-250g/",
     "categorie": "promotii",
@@ -7081,7 +7213,7 @@
     "discount_percent": 35,
     "affiliate_url": "https://vegis.ro/alimentare-fructe-uscate/rapunzel/37967-curmale-cu-samburi-delegt-nour-ecologice-bio-250g/",
     "url": "https://vegis.ro/alimentare-fructe-uscate/rapunzel/37967-curmale-cu-samburi-delegt-nour-ecologice-bio-250g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/37967/full/rapunzel-curmale-cu-samburi-delegt-nour-ecologice-bio-250g-322773.png",
     "categories": [
       "promotii"
     ],
@@ -7089,7 +7221,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:14.120042+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-c7f4702c",
@@ -7099,7 +7233,7 @@
     "pret_original": 55.9,
     "pret_redus": 36.33,
     "procent_reducere": 35,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/84616/full/alevia-quercetin-cu-zn-si-d3-30cps-184476.jpg",
     "product_url": "https://vegis.ro/suplimente-capsule-comprimate/alevia/84616-quercetin-cu-zn-si-d3-30cps/",
     "link_afiliat": "https://vegis.ro/suplimente-capsule-comprimate/alevia/84616-quercetin-cu-zn-si-d3-30cps/",
     "categorie": "promotii",
@@ -7112,7 +7246,7 @@
     "discount_percent": 35,
     "affiliate_url": "https://vegis.ro/suplimente-capsule-comprimate/alevia/84616-quercetin-cu-zn-si-d3-30cps/",
     "url": "https://vegis.ro/suplimente-capsule-comprimate/alevia/84616-quercetin-cu-zn-si-d3-30cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/84616/full/alevia-quercetin-cu-zn-si-d3-30cps-184476.jpg",
     "categories": [
       "promotii"
     ],
@@ -7120,7 +7254,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:14.991967+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-9fb7ed12",
@@ -7130,7 +7266,7 @@
     "pret_original": 25.13,
     "pret_redus": 16.33,
     "procent_reducere": 35,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/96637/full/choice-ceai-alb-bio-cu-flori-de-soc-20-pliculete-a-1-8-g-36-0-g-choicea-213709.jpg",
     "product_url": "https://vegis.ro/ceaiuri-ceaiuri-doze/CHOICE/96637-ceai-alb-cu-flori-de-soc-ecologic-bio-20dz/",
     "link_afiliat": "https://vegis.ro/ceaiuri-ceaiuri-doze/CHOICE/96637-ceai-alb-cu-flori-de-soc-ecologic-bio-20dz/",
     "categorie": "promotii",
@@ -7143,7 +7279,7 @@
     "discount_percent": 35,
     "affiliate_url": "https://vegis.ro/ceaiuri-ceaiuri-doze/CHOICE/96637-ceai-alb-cu-flori-de-soc-ecologic-bio-20dz/",
     "url": "https://vegis.ro/ceaiuri-ceaiuri-doze/CHOICE/96637-ceai-alb-cu-flori-de-soc-ecologic-bio-20dz/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/96637/full/choice-ceai-alb-bio-cu-flori-de-soc-20-pliculete-a-1-8-g-36-0-g-choicea-213709.jpg",
     "categories": [
       "promotii"
     ],
@@ -7151,7 +7287,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:16.251863+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-c7b3501f",
@@ -7161,7 +7299,7 @@
     "pret_original": 28.37,
     "pret_redus": 18.44,
     "procent_reducere": 35,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/101649/full/dennree-goji-bio-uscate-222085.jpg",
     "product_url": "https://vegis.ro/alimentare-fructe-uscate/dennree/101649-goji-fructe-uscate-ecologice-bio-100g/",
     "link_afiliat": "https://vegis.ro/alimentare-fructe-uscate/dennree/101649-goji-fructe-uscate-ecologice-bio-100g/",
     "categorie": "promotii",
@@ -7174,7 +7312,7 @@
     "discount_percent": 35,
     "affiliate_url": "https://vegis.ro/alimentare-fructe-uscate/dennree/101649-goji-fructe-uscate-ecologice-bio-100g/",
     "url": "https://vegis.ro/alimentare-fructe-uscate/dennree/101649-goji-fructe-uscate-ecologice-bio-100g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/101649/full/dennree-goji-bio-uscate-222085.jpg",
     "categories": [
       "promotii"
     ],
@@ -7182,7 +7320,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:16.999649+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-59068e20",
@@ -7192,7 +7332,7 @@
     "pret_original": 32.24,
     "pret_redus": 20.95,
     "procent_reducere": 35,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/121493/full/bauckhof-mix-pentru-muffins-bio-cu-mere-fara-gluten-271169.jpg",
     "product_url": "https://vegis.ro/alimente-bio/bauckhof/121493-mix-pentru-briose-cu-mere-fara-gluten-ecologic-bio-400g/",
     "link_afiliat": "https://vegis.ro/alimente-bio/bauckhof/121493-mix-pentru-briose-cu-mere-fara-gluten-ecologic-bio-400g/",
     "categorie": "promotii",
@@ -7205,7 +7345,7 @@
     "discount_percent": 35,
     "affiliate_url": "https://vegis.ro/alimente-bio/bauckhof/121493-mix-pentru-briose-cu-mere-fara-gluten-ecologic-bio-400g/",
     "url": "https://vegis.ro/alimente-bio/bauckhof/121493-mix-pentru-briose-cu-mere-fara-gluten-ecologic-bio-400g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/121493/full/bauckhof-mix-pentru-muffins-bio-cu-mere-fara-gluten-271169.jpg",
     "categories": [
       "promotii"
     ],
@@ -7213,7 +7353,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:17.960072+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-30cf5afe",
@@ -7223,7 +7365,7 @@
     "pret_original": 29.9,
     "pret_redus": 19.44,
     "procent_reducere": 35,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/137387/full/elidor-sirop-lizotusin-200ml-303019.jpg",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/137387-sirop-lizotusin-expectorant-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/137387-sirop-lizotusin-expectorant-200ml/",
     "categorie": "promotii",
@@ -7236,7 +7378,7 @@
     "discount_percent": 35,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/137387-sirop-lizotusin-expectorant-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/137387-sirop-lizotusin-expectorant-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/137387/full/elidor-sirop-lizotusin-200ml-303019.jpg",
     "categories": [
       "promotii"
     ],
@@ -7244,7 +7386,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:18.621775+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-99c1a2bf",
@@ -7254,7 +7398,7 @@
     "pret_original": 29.9,
     "pret_redus": 19.44,
     "procent_reducere": 35,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/137533/full/elidor-sirop-pulmoalpin-200ml-303013.jpg",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/137533-sirop-pulmoalpin-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/137533-sirop-pulmoalpin-200ml/",
     "categorie": "promotii",
@@ -7267,7 +7411,7 @@
     "discount_percent": 35,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/137533-sirop-pulmoalpin-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/137533-sirop-pulmoalpin-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/137533/full/elidor-sirop-pulmoalpin-200ml-303013.jpg",
     "categories": [
       "promotii"
     ],
@@ -7275,7 +7419,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:19.292386+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-9f82d7fd",
@@ -7285,7 +7431,7 @@
     "pret_original": 31.53,
     "pret_redus": 20.5,
     "procent_reducere": 35,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/137547/full/elidor-sirop-sinomax-200ml-303025.jpg",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/137547-sirop-sinomax-sustine-respiratia-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/137547-sirop-sinomax-sustine-respiratia-200ml/",
     "categorie": "promotii",
@@ -7298,7 +7444,7 @@
     "discount_percent": 35,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/137547-sirop-sinomax-sustine-respiratia-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/137547-sirop-sinomax-sustine-respiratia-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/137547/full/elidor-sirop-sinomax-200ml-303025.jpg",
     "categories": [
       "promotii"
     ],
@@ -7306,7 +7452,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:19.924956+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "watch24-5266ac44",
@@ -9640,7 +9788,7 @@
     "pret_original": 27.81,
     "pret_redus": 18.91,
     "procent_reducere": 32,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/141827/full/niavis-pachet-naut-in-doza-ecologic-bio-400g-plus400g-312533.png",
     "product_url": "https://vegis.ro/conserve/niavis/141827-pachet-naut-in-doza-ecologic-bio-400g-plus400g/",
     "link_afiliat": "https://vegis.ro/conserve/niavis/141827-pachet-naut-in-doza-ecologic-bio-400g-plus400g/",
     "categorie": "promotii",
@@ -9653,7 +9801,7 @@
     "discount_percent": 32,
     "affiliate_url": "https://vegis.ro/conserve/niavis/141827-pachet-naut-in-doza-ecologic-bio-400g-plus400g/",
     "url": "https://vegis.ro/conserve/niavis/141827-pachet-naut-in-doza-ecologic-bio-400g-plus400g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/141827/full/niavis-pachet-naut-in-doza-ecologic-bio-400g-plus400g-312533.png",
     "categories": [
       "promotii"
     ],
@@ -9661,7 +9809,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:20.905117+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "forit-7806629a",
@@ -10348,7 +10498,7 @@
     "pret_original": 31.5,
     "pret_redus": 22.05,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/4167/full/solaris-drojdie-de-bere-uscata-100g-260017.png",
     "product_url": "https://vegis.ro/alimentare-condimente-sare/solaris/4167-drojdie-de-bere-uscata-100g/",
     "link_afiliat": "https://vegis.ro/alimentare-condimente-sare/solaris/4167-drojdie-de-bere-uscata-100g/",
     "categorie": "promotii",
@@ -10361,7 +10511,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/alimentare-condimente-sare/solaris/4167-drojdie-de-bere-uscata-100g/",
     "url": "https://vegis.ro/alimentare-condimente-sare/solaris/4167-drojdie-de-bere-uscata-100g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/4167/full/solaris-drojdie-de-bere-uscata-100g-260017.png",
     "categories": [
       "promotii"
     ],
@@ -10369,7 +10519,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:21.618455+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-54d77310",
@@ -10379,7 +10531,7 @@
     "pret_original": 17.9,
     "pret_redus": 12.53,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/17930/full/solaris-macinis-pentru-laptic-cu-mei-si-orez-integral-250g-275045.png",
     "product_url": "https://vegis.ro/alimentare-fulgi-musli/solaris/17930-macinis-pentru-laptic-cu-mei-si-orez-integral-250g/",
     "link_afiliat": "https://vegis.ro/alimentare-fulgi-musli/solaris/17930-macinis-pentru-laptic-cu-mei-si-orez-integral-250g/",
     "categorie": "promotii",
@@ -10392,7 +10544,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/alimentare-fulgi-musli/solaris/17930-macinis-pentru-laptic-cu-mei-si-orez-integral-250g/",
     "url": "https://vegis.ro/alimentare-fulgi-musli/solaris/17930-macinis-pentru-laptic-cu-mei-si-orez-integral-250g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/17930/full/solaris-macinis-pentru-laptic-cu-mei-si-orez-integral-250g-275045.png",
     "categories": [
       "promotii"
     ],
@@ -10400,7 +10552,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:22.552892+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-25033da3",
@@ -10410,7 +10564,7 @@
     "pret_original": 201.9,
     "pret_redus": 141.33,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/40501/full/sonnentor-ulei-esential-de-manuka-40-in-alcool-10ml-87609.png",
     "product_url": "https://vegis.ro/uleiuri-esentiale/sonnentor/40501-ulei-esential-de-manuka-40-in-alcool-10ml/",
     "link_afiliat": "https://vegis.ro/uleiuri-esentiale/sonnentor/40501-ulei-esential-de-manuka-40-in-alcool-10ml/",
     "categorie": "promotii",
@@ -10423,7 +10577,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/uleiuri-esentiale/sonnentor/40501-ulei-esential-de-manuka-40-in-alcool-10ml/",
     "url": "https://vegis.ro/uleiuri-esentiale/sonnentor/40501-ulei-esential-de-manuka-40-in-alcool-10ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/40501/full/sonnentor-ulei-esential-de-manuka-40-in-alcool-10ml-87609.png",
     "categories": [
       "promotii"
     ],
@@ -10431,7 +10585,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:23.216827+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-3215990c",
@@ -10441,7 +10597,7 @@
     "pret_original": 17.5,
     "pret_redus": 12.25,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/44083/full/niavis-apa-de-trandafiri-50ml-92341.png",
     "product_url": "https://vegis.ro/cosmetice-ten/niavis/44083-apa-de-trandafiri-50ml/",
     "link_afiliat": "https://vegis.ro/cosmetice-ten/niavis/44083-apa-de-trandafiri-50ml/",
     "categorie": "promotii",
@@ -10454,7 +10610,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/cosmetice-ten/niavis/44083-apa-de-trandafiri-50ml/",
     "url": "https://vegis.ro/cosmetice-ten/niavis/44083-apa-de-trandafiri-50ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/44083/full/niavis-apa-de-trandafiri-50ml-92341.png",
     "categories": [
       "promotii"
     ],
@@ -10462,7 +10618,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:24.024304+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-a1b6f870",
@@ -10472,7 +10630,7 @@
     "pret_original": 12.04,
     "pret_redus": 8.43,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/54328/full/steaua-divina-crema-cu-echinacea-20g-115186.jpg",
     "product_url": "https://vegis.ro/remedii-unguente-geluri-solutii/steaua-divina/54328-crema-cu-echinacea-20g/",
     "link_afiliat": "https://vegis.ro/remedii-unguente-geluri-solutii/steaua-divina/54328-crema-cu-echinacea-20g/",
     "categorie": "promotii",
@@ -10485,7 +10643,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-unguente-geluri-solutii/steaua-divina/54328-crema-cu-echinacea-20g/",
     "url": "https://vegis.ro/remedii-unguente-geluri-solutii/steaua-divina/54328-crema-cu-echinacea-20g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/54328/full/steaua-divina-crema-cu-echinacea-20g-115186.jpg",
     "categories": [
       "promotii"
     ],
@@ -10493,7 +10651,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:24.841939+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-2d75b759",
@@ -10503,7 +10663,7 @@
     "pret_original": 135.9,
     "pret_redus": 95.13,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/57641/full/sonnentor-ulei-esential-scortisoara-ecologic-bio-10ml-140846.jpg",
     "product_url": "https://vegis.ro/uleiuri-esentiale/sonnentor/57641-ulei-esential-de-scortisoara-ecologic-bio-10ml/",
     "link_afiliat": "https://vegis.ro/uleiuri-esentiale/sonnentor/57641-ulei-esential-de-scortisoara-ecologic-bio-10ml/",
     "categorie": "promotii",
@@ -10516,7 +10676,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/uleiuri-esentiale/sonnentor/57641-ulei-esential-de-scortisoara-ecologic-bio-10ml/",
     "url": "https://vegis.ro/uleiuri-esentiale/sonnentor/57641-ulei-esential-de-scortisoara-ecologic-bio-10ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/57641/full/sonnentor-ulei-esential-scortisoara-ecologic-bio-10ml-140846.jpg",
     "categories": [
       "promotii"
     ],
@@ -10524,7 +10684,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:25.771776+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-54221a08",
@@ -10534,7 +10696,7 @@
     "pret_original": 27.05,
     "pret_redus": 18.93,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/64626/full/primeal-fulgi-de-mei-500g-135506.jpg",
     "product_url": "https://vegis.ro/alimentare-fulgi-musli/primeal/64626-fulgi-de-mei-ecologici-bio-500g/",
     "link_afiliat": "https://vegis.ro/alimentare-fulgi-musli/primeal/64626-fulgi-de-mei-ecologici-bio-500g/",
     "categorie": "promotii",
@@ -10547,7 +10709,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/alimentare-fulgi-musli/primeal/64626-fulgi-de-mei-ecologici-bio-500g/",
     "url": "https://vegis.ro/alimentare-fulgi-musli/primeal/64626-fulgi-de-mei-ecologici-bio-500g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/64626/full/primeal-fulgi-de-mei-500g-135506.jpg",
     "categories": [
       "promotii"
     ],
@@ -10555,7 +10717,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:26.546605+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-e73ca159",
@@ -10565,7 +10729,7 @@
     "pret_original": 103.86,
     "pret_redus": 72.7,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/76336/full/aprolis-oligopropol-propolis-laptisor-de-matca-si-vitamine-20-fiole-a-10-ml-200ml-aprolis-166476.jpg",
     "product_url": "https://vegis.ro/suplimente-fiole/aprolis/76336-propolis-laptisor-de-matca-si-vitamine-oligopropol-20-fiole-x-10ml/",
     "link_afiliat": "https://vegis.ro/suplimente-fiole/aprolis/76336-propolis-laptisor-de-matca-si-vitamine-oligopropol-20-fiole-x-10ml/",
     "categorie": "promotii",
@@ -10578,7 +10742,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/suplimente-fiole/aprolis/76336-propolis-laptisor-de-matca-si-vitamine-oligopropol-20-fiole-x-10ml/",
     "url": "https://vegis.ro/suplimente-fiole/aprolis/76336-propolis-laptisor-de-matca-si-vitamine-oligopropol-20-fiole-x-10ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/76336/full/aprolis-oligopropol-propolis-laptisor-de-matca-si-vitamine-20-fiole-a-10-ml-200ml-aprolis-166476.jpg",
     "categories": [
       "promotii"
     ],
@@ -10586,7 +10750,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:27.328202+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-4334a715",
@@ -10596,7 +10762,7 @@
     "pret_original": 28.39,
     "pret_redus": 19.87,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/106213/full/ma-vie-sans-gluten-biscuiti-fara-gluten-cu-ciocolata-neagra-150g-233381.jpg",
     "product_url": "https://vegis.ro/alimentare-dulciuri-indulcitori/ma-vie-sans-gluten/106213-biscuiti-cu-ciocolata-neagra-fara-gluten-ecologici-bio-150g/",
     "link_afiliat": "https://vegis.ro/alimentare-dulciuri-indulcitori/ma-vie-sans-gluten/106213-biscuiti-cu-ciocolata-neagra-fara-gluten-ecologici-bio-150g/",
     "categorie": "promotii",
@@ -10609,7 +10775,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/alimentare-dulciuri-indulcitori/ma-vie-sans-gluten/106213-biscuiti-cu-ciocolata-neagra-fara-gluten-ecologici-bio-150g/",
     "url": "https://vegis.ro/alimentare-dulciuri-indulcitori/ma-vie-sans-gluten/106213-biscuiti-cu-ciocolata-neagra-fara-gluten-ecologici-bio-150g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/106213/full/ma-vie-sans-gluten-biscuiti-fara-gluten-cu-ciocolata-neagra-150g-233381.jpg",
     "categories": [
       "promotii"
     ],
@@ -10617,7 +10783,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:28.227528+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-4f49f91c",
@@ -10627,7 +10795,7 @@
     "pret_original": 97.0,
     "pret_redus": 67.9,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/122333/full/shakeup-cosmetics-gel-de-curatare-amp-masca-cu-argila-pentru-ten-gras-pentru-barbati-let-s-be-clear-shakeup-cosmetics-125-ml-273221.jpg",
     "product_url": "https://vegis.ro/cosmetice-barbati/shakeup-cosmetics/122333-gel-de-curatare-si-masca-cu-argila-pentru-ten-gras-pentru-barbati-let-s-be-clear-125ml/",
     "link_afiliat": "https://vegis.ro/cosmetice-barbati/shakeup-cosmetics/122333-gel-de-curatare-si-masca-cu-argila-pentru-ten-gras-pentru-barbati-let-s-be-clear-125ml/",
     "categorie": "promotii",
@@ -10640,7 +10808,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/cosmetice-barbati/shakeup-cosmetics/122333-gel-de-curatare-si-masca-cu-argila-pentru-ten-gras-pentru-barbati-let-s-be-clear-125ml/",
     "url": "https://vegis.ro/cosmetice-barbati/shakeup-cosmetics/122333-gel-de-curatare-si-masca-cu-argila-pentru-ten-gras-pentru-barbati-let-s-be-clear-125ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/122333/full/shakeup-cosmetics-gel-de-curatare-amp-masca-cu-argila-pentru-ten-gras-pentru-barbati-let-s-be-clear-shakeup-cosmetics-125-ml-273221.jpg",
     "categories": [
       "promotii"
     ],
@@ -10648,7 +10816,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:29.948515+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-8ecd9224",
@@ -10658,7 +10828,7 @@
     "pret_original": 52.44,
     "pret_redus": 36.71,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/126117/full/niavis-pasta-de-arahide-cremoasa-ecologica-bio-500g-280681.png",
     "product_url": "https://vegis.ro/creme-tartinabile/niavis/126117-pasta-de-arahide-cremoasa-fara-gluten-ecologica-bio-500g/",
     "link_afiliat": "https://vegis.ro/creme-tartinabile/niavis/126117-pasta-de-arahide-cremoasa-fara-gluten-ecologica-bio-500g/",
     "categorie": "promotii",
@@ -10671,7 +10841,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/creme-tartinabile/niavis/126117-pasta-de-arahide-cremoasa-fara-gluten-ecologica-bio-500g/",
     "url": "https://vegis.ro/creme-tartinabile/niavis/126117-pasta-de-arahide-cremoasa-fara-gluten-ecologica-bio-500g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/126117/full/niavis-pasta-de-arahide-cremoasa-ecologica-bio-500g-280681.png",
     "categories": [
       "promotii"
     ],
@@ -10679,7 +10849,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:30.841965+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-29ca4638",
@@ -10689,7 +10861,7 @@
     "pret_original": 13.9,
     "pret_redus": 9.73,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/136599/full/niavis-naut-ecologic-bio-400g-301059.png",
     "product_url": "https://vegis.ro/alimentare-leguminoase/niavis/136599-naut-in-doza-ecologic-bio-400g/",
     "link_afiliat": "https://vegis.ro/alimentare-leguminoase/niavis/136599-naut-in-doza-ecologic-bio-400g/",
     "categorie": "promotii",
@@ -10702,7 +10874,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/alimentare-leguminoase/niavis/136599-naut-in-doza-ecologic-bio-400g/",
     "url": "https://vegis.ro/alimentare-leguminoase/niavis/136599-naut-in-doza-ecologic-bio-400g/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/136599/full/niavis-naut-ecologic-bio-400g-301059.png",
     "categories": [
       "promotii"
     ],
@@ -10710,7 +10882,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:31.629869+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-fee9f0d2",
@@ -10720,7 +10894,7 @@
     "pret_original": 29.9,
     "pret_redus": 20.93,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/136761/full/elidor-sirop-de-coji-de-nuca-si-radacina-de-nalba-mare-200ml-303049.jpg",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/136761-sirop-de-coji-de-nuca-si-radacina-de-nalba-mare-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/136761-sirop-de-coji-de-nuca-si-radacina-de-nalba-mare-200ml/",
     "categorie": "promotii",
@@ -10733,7 +10907,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/136761-sirop-de-coji-de-nuca-si-radacina-de-nalba-mare-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/136761-sirop-de-coji-de-nuca-si-radacina-de-nalba-mare-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/136761/full/elidor-sirop-de-coji-de-nuca-si-radacina-de-nalba-mare-200ml-303049.jpg",
     "categories": [
       "promotii"
     ],
@@ -10741,7 +10915,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:32.330244+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-b3bec49e",
@@ -10751,7 +10927,7 @@
     "pret_original": 29.9,
     "pret_redus": 20.93,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/136767/full/elidor-sirop-de-coji-de-nuca-si-jneapan-200ml-303047.jpg",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/136767-sirop-de-coji-de-nuca-si-jneapan-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/136767-sirop-de-coji-de-nuca-si-jneapan-200ml/",
     "categorie": "promotii",
@@ -10764,7 +10940,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/136767-sirop-de-coji-de-nuca-si-jneapan-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/136767-sirop-de-coji-de-nuca-si-jneapan-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/136767/full/elidor-sirop-de-coji-de-nuca-si-jneapan-200ml-303047.jpg",
     "categories": [
       "promotii"
     ],
@@ -10772,7 +10948,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:33.057370+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-9ffcfba6",
@@ -10782,7 +10960,7 @@
     "pret_original": 43.5,
     "pret_redus": 30.45,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/136773/full/elidor-ghimbir-40cpr-302199.png",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/elidor/136773-ghimbir-40cpr/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/elidor/136773-ghimbir-40cpr/",
     "categorie": "promotii",
@@ -10795,7 +10973,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/elidor/136773-ghimbir-40cpr/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/elidor/136773-ghimbir-40cpr/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/136773/full/elidor-ghimbir-40cpr-302199.png",
     "categories": [
       "promotii"
     ],
@@ -10803,7 +10981,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:33.643158+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-be7b15f9",
@@ -10813,7 +10993,7 @@
     "pret_original": 29.9,
     "pret_redus": 20.93,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/136987/full/elidor-sirop-de-coji-de-nuca-pin-si-ridiche-neagra-200ml-302957.jpg",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/136987-sirop-de-coji-de-nuca-pin-si-ridiche-neagra-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/136987-sirop-de-coji-de-nuca-pin-si-ridiche-neagra-200ml/",
     "categorie": "promotii",
@@ -10826,7 +11006,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/136987-sirop-de-coji-de-nuca-pin-si-ridiche-neagra-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/136987-sirop-de-coji-de-nuca-pin-si-ridiche-neagra-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/136987/full/elidor-sirop-de-coji-de-nuca-pin-si-ridiche-neagra-200ml-302957.jpg",
     "categories": [
       "promotii"
     ],
@@ -10834,7 +11014,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:34.351975+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-a45527ed",
@@ -10844,7 +11026,7 @@
     "pret_original": 31.53,
     "pret_redus": 22.07,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/137405/full/elidor-sirop-patlagina-si-propolis-200ml-302901.jpg",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/137405-sirop-patlagina-si-propolis-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/137405-sirop-patlagina-si-propolis-200ml/",
     "categorie": "promotii",
@@ -10857,7 +11039,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/137405-sirop-patlagina-si-propolis-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/137405-sirop-patlagina-si-propolis-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/137405/full/elidor-sirop-patlagina-si-propolis-200ml-302901.jpg",
     "categories": [
       "promotii"
     ],
@@ -10865,7 +11047,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:35.144214+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-3d3c00ff",
@@ -10875,7 +11059,7 @@
     "pret_original": 29.9,
     "pret_redus": 20.93,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/137525/full/elidor-sirop-din-muguri-de-pin-muguri-de-plop-si-propolis-200ml-303123.jpg",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/137525-sirop-din-muguri-de-pin-muguri-de-plop-si-propolis-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/137525-sirop-din-muguri-de-pin-muguri-de-plop-si-propolis-200ml/",
     "categorie": "promotii",
@@ -10888,7 +11072,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/137525-sirop-din-muguri-de-pin-muguri-de-plop-si-propolis-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/137525-sirop-din-muguri-de-pin-muguri-de-plop-si-propolis-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/137525/full/elidor-sirop-din-muguri-de-pin-muguri-de-plop-si-propolis-200ml-303123.jpg",
     "categories": [
       "promotii"
     ],
@@ -10896,7 +11080,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:35.913003+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-e1fadef2",
@@ -10906,7 +11092,7 @@
     "pret_original": 29.9,
     "pret_redus": 20.93,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/137541/full/elidor-sirop-pulmoexpres-pentru-diabetici-200ml-303139.png",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/137541-sirop-pulmoexpres-pentru-diabetici-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/137541-sirop-pulmoexpres-pentru-diabetici-200ml/",
     "categorie": "promotii",
@@ -10919,7 +11105,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/137541-sirop-pulmoexpres-pentru-diabetici-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/137541-sirop-pulmoexpres-pentru-diabetici-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/137541/full/elidor-sirop-pulmoexpres-pentru-diabetici-200ml-303139.png",
     "categories": [
       "promotii"
     ],
@@ -10927,7 +11113,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:36.658382+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-cd4ea5f8",
@@ -10937,7 +11125,7 @@
     "pret_original": 29.9,
     "pret_redus": 20.93,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/137667/full/elidor-sirop-primospectin-200ml-302981.png",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/137667-sirop-primospectin-antiinflamator-antitusiv-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/137667-sirop-primospectin-antiinflamator-antitusiv-200ml/",
     "categorie": "promotii",
@@ -10950,7 +11138,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/137667-sirop-primospectin-antiinflamator-antitusiv-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/137667-sirop-primospectin-antiinflamator-antitusiv-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/137667/full/elidor-sirop-primospectin-200ml-302981.png",
     "categories": [
       "promotii"
     ],
@@ -10958,7 +11146,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:37.292523+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-37cfc778",
@@ -10968,7 +11158,7 @@
     "pret_original": 31.53,
     "pret_redus": 22.07,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/137687/full/elidor-sirop-de-patlagina-muguri-de-plop-si-propolis-200ml-302761.jpg",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/137687-sirop-de-patlagina-muguri-de-plop-si-propolis-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/137687-sirop-de-patlagina-muguri-de-plop-si-propolis-200ml/",
     "categorie": "promotii",
@@ -10981,7 +11171,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/137687-sirop-de-patlagina-muguri-de-plop-si-propolis-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/137687-sirop-de-patlagina-muguri-de-plop-si-propolis-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/137687/full/elidor-sirop-de-patlagina-muguri-de-plop-si-propolis-200ml-302761.jpg",
     "categories": [
       "promotii"
     ],
@@ -10989,7 +11179,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:37.966727+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-1446e147",
@@ -10999,7 +11191,7 @@
     "pret_original": 29.9,
     "pret_redus": 20.93,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/137691/full/elidor-sirop-muguri-de-brad-muguri-de-plop-si-propolis-200ml-302801.jpg",
     "product_url": "https://vegis.ro/remedii-siropuri/elidor/137691-sirop-muguri-de-brad-muguri-de-plop-si-propolis-200ml/",
     "link_afiliat": "https://vegis.ro/remedii-siropuri/elidor/137691-sirop-muguri-de-brad-muguri-de-plop-si-propolis-200ml/",
     "categorie": "promotii",
@@ -11012,7 +11204,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-siropuri/elidor/137691-sirop-muguri-de-brad-muguri-de-plop-si-propolis-200ml/",
     "url": "https://vegis.ro/remedii-siropuri/elidor/137691-sirop-muguri-de-brad-muguri-de-plop-si-propolis-200ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/137691/full/elidor-sirop-muguri-de-brad-muguri-de-plop-si-propolis-200ml-302801.jpg",
     "categories": [
       "promotii"
     ],
@@ -11020,7 +11212,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:38.661188+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-9af37322",
@@ -11030,7 +11224,7 @@
     "pret_original": 29.9,
     "pret_redus": 20.93,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/141439/full/niavis-propolis-esenta-fara-alcool-30ml-311293.png",
     "product_url": "https://vegis.ro/produse-apicole/niavis/141439-propolis-esenta-fara-alcool-30ml/",
     "link_afiliat": "https://vegis.ro/produse-apicole/niavis/141439-propolis-esenta-fara-alcool-30ml/",
     "categorie": "promotii",
@@ -11043,7 +11237,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/produse-apicole/niavis/141439-propolis-esenta-fara-alcool-30ml/",
     "url": "https://vegis.ro/produse-apicole/niavis/141439-propolis-esenta-fara-alcool-30ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/141439/full/niavis-propolis-esenta-fara-alcool-30ml-311293.png",
     "categories": [
       "promotii"
     ],
@@ -11051,7 +11245,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:39.620420+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-456dd8cc",
@@ -11061,7 +11257,7 @@
     "pret_original": 61.0,
     "pret_redus": 42.7,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/141463/full/laboratoires-superdiet-digiaflore-carbune-activ-si-drojdie-45-capsule-superdiet-311319.jpg",
     "product_url": "https://vegis.ro/remedii-comprimate-capsule/laboratoires-superdiet/141463-digiaflore-carbune-activ-si-drojdie-45cps/",
     "link_afiliat": "https://vegis.ro/remedii-comprimate-capsule/laboratoires-superdiet/141463-digiaflore-carbune-activ-si-drojdie-45cps/",
     "categorie": "promotii",
@@ -11074,7 +11270,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/remedii-comprimate-capsule/laboratoires-superdiet/141463-digiaflore-carbune-activ-si-drojdie-45cps/",
     "url": "https://vegis.ro/remedii-comprimate-capsule/laboratoires-superdiet/141463-digiaflore-carbune-activ-si-drojdie-45cps/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/141463/full/laboratoires-superdiet-digiaflore-carbune-activ-si-drojdie-45-capsule-superdiet-311319.jpg",
     "categories": [
       "promotii"
     ],
@@ -11082,7 +11278,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:40.331080+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-4355a693",
@@ -11092,7 +11290,7 @@
     "pret_original": 128.0,
     "pret_redus": 89.6,
     "procent_reducere": 30,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/141469/full/laboratoires-superdiet-fier-natural-plus-acerola-20-fiole-din-pp-x-15ml-superdiet-311325.jpg",
     "product_url": "https://vegis.ro/suplimente-fiole/laboratoires-superdiet/141469-fier-natural-plus-acerola-ecologic-bio-20-fiole-reciclabile-x-15ml/",
     "link_afiliat": "https://vegis.ro/suplimente-fiole/laboratoires-superdiet/141469-fier-natural-plus-acerola-ecologic-bio-20-fiole-reciclabile-x-15ml/",
     "categorie": "promotii",
@@ -11105,7 +11303,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://vegis.ro/suplimente-fiole/laboratoires-superdiet/141469-fier-natural-plus-acerola-ecologic-bio-20-fiole-reciclabile-x-15ml/",
     "url": "https://vegis.ro/suplimente-fiole/laboratoires-superdiet/141469-fier-natural-plus-acerola-ecologic-bio-20-fiole-reciclabile-x-15ml/",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/141469/full/laboratoires-superdiet-fier-natural-plus-acerola-20-fiole-din-pp-x-15ml-superdiet-311325.jpg",
     "categories": [
       "promotii"
     ],
@@ -11113,7 +11311,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:41.144186+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "watch24-e184d9af",
@@ -15970,7 +16170,7 @@
     "pret_original": 17.65,
     "pret_redus": 14.12,
     "procent_reducere": 20,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202203141045/65816/full/pronat-faina-integrala-de-grau-spelta-ecologica-bio-1kg-141496.png",
     "product_url": "https://vegis.ro/faina-integrala/pronat/65816-faina-integrala-de-grau-spelta-ecologica-bio-1kg/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "link_afiliat": "https://vegis.ro/faina-integrala/pronat/65816-faina-integrala-de-grau-spelta-ecologica-bio-1kg/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "categorie": "promotii",
@@ -15983,7 +16183,7 @@
     "discount_percent": 20,
     "affiliate_url": "https://vegis.ro/faina-integrala/pronat/65816-faina-integrala-de-grau-spelta-ecologica-bio-1kg/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "url": "https://vegis.ro/faina-integrala/pronat/65816-faina-integrala-de-grau-spelta-ecologica-bio-1kg/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202203141045/65816/full/pronat-faina-integrala-de-grau-spelta-ecologica-bio-1kg-141496.png",
     "categories": [
       "promotii"
     ],
@@ -15991,7 +16191,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:42.057298+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "emag-19e783fe",
@@ -17085,7 +17287,7 @@
     "pret_original": 34.9,
     "pret_redus": 29.66,
     "procent_reducere": 15,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/18726/full/niavis-orz-verde-pulbere-ecologica-bio-125g-313275.png",
     "product_url": "https://vegis.ro/produse-vegane/niavis/18726-orz-verde-pulbere-ecologica-bio-125g/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "link_afiliat": "https://vegis.ro/produse-vegane/niavis/18726-orz-verde-pulbere-ecologica-bio-125g/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "categorie": "promotii",
@@ -17098,7 +17300,7 @@
     "discount_percent": 15,
     "affiliate_url": "https://vegis.ro/produse-vegane/niavis/18726-orz-verde-pulbere-ecologica-bio-125g/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "url": "https://vegis.ro/produse-vegane/niavis/18726-orz-verde-pulbere-ecologica-bio-125g/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/18726/full/niavis-orz-verde-pulbere-ecologica-bio-125g-313275.png",
     "categories": [
       "promotii"
     ],
@@ -17106,7 +17308,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:42.955837+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "vegis-231011fc",
@@ -17116,7 +17320,7 @@
     "pret_original": 27.5,
     "pret_redus": 23.38,
     "procent_reducere": 15,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_201611250935/44025/full/niavis-ulei-de-jojoba-presat-la-rece-50ml-92043.jpg",
     "product_url": "https://vegis.ro/ingrediente-cosmetice/niavis/44025-ulei-de-jojoba-presat-la-rece-50ml/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "link_afiliat": "https://vegis.ro/ingrediente-cosmetice/niavis/44025-ulei-de-jojoba-presat-la-rece-50ml/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "categorie": "promotii",
@@ -17129,7 +17333,7 @@
     "discount_percent": 15,
     "affiliate_url": "https://vegis.ro/ingrediente-cosmetice/niavis/44025-ulei-de-jojoba-presat-la-rece-50ml/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "url": "https://vegis.ro/ingrediente-cosmetice/niavis/44025-ulei-de-jojoba-presat-la-rece-50ml/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_201611250935/44025/full/niavis-ulei-de-jojoba-presat-la-rece-50ml-92043.jpg",
     "categories": [
       "promotii"
     ],
@@ -17137,7 +17341,9 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:43.800697+00:00",
+    "image_fix_source": "fix-lazy-loader"
   },
   {
     "id": "ps-streamstore-microsoft-office-2024-home-business-esd--88410392",
@@ -18787,7 +18993,7 @@
     "pret_original": 30.96,
     "pret_redus": 27.86,
     "procent_reducere": 10,
-    "imagine_url": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "imagine_url": "https://cdn.vegis.ro/images/products/img_202406171514/41605/full/charme-pachet-legume-deshidratate-300g-plus-condimente-vito-reform-200g-338507.png",
     "product_url": "https://vegis.ro/pachete-alimentare/charme/41605-pachet-legume-deshidratate-300g-plus-condimente-vito-reform-200g/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "link_afiliat": "https://vegis.ro/pachete-alimentare/charme/41605-pachet-legume-deshidratate-300g-plus-condimente-vito-reform-200g/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "categorie": "promotii",
@@ -18800,7 +19006,7 @@
     "discount_percent": 10,
     "affiliate_url": "https://vegis.ro/pachete-alimentare/charme/41605-pachet-legume-deshidratate-300g-plus-condimente-vito-reform-200g/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
     "url": "https://vegis.ro/pachete-alimentare/charme/41605-pachet-legume-deshidratate-300g-plus-condimente-vito-reform-200g/?utm_source=header_menu&utm_medium=header_menu&utm_campaign=header_menu",
-    "image": "https://cdn.vegis.ro/views/vegis/images/layout/lazy-loader.gif",
+    "image": "https://cdn.vegis.ro/images/products/img_202406171514/41605/full/charme-pachet-legume-deshidratate-300g-plus-condimente-vito-reform-200g-338507.png",
     "categories": [
       "promotii"
     ],
@@ -18808,6 +19014,8 @@
     "score": 5,
     "in_stock": true,
     "scraped_at": "2026-04-24",
-    "magazine_key": "vegis"
+    "magazine_key": "vegis",
+    "image_fixed_at": "2026-04-24T17:11:44.493624+00:00",
+    "image_fix_source": "fix-lazy-loader"
   }
 ]

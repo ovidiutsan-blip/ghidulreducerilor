@@ -61,7 +61,7 @@ def main():
 
         og = fetch_og_image(url)
         if og and 'lazy' not in og.lower() and og.startswith('http'):
-            print(f'  [{i+1}/{len(bad)}] {deal["id"]} ✓ {og[:80]}')
+            print(f'  [{i+1}/{len(bad)}] {deal["id"]} OK {og[:80]}')
             if not dry_run:
                 # Actualizează în lista principală
                 for d in data:
@@ -73,16 +73,16 @@ def main():
                         break
             fixed += 1
         else:
-            print(f'  [{i+1}/{len(bad)}] {deal["id"]} ✗ og={og!r:.60}')
+            print(f'  [{i+1}/{len(bad)}] {deal["id"]} FAIL og={og!r:.60}')
             failed += 1
 
         time.sleep(0.3)  # politicos cu serverul
 
     if not dry_run and fixed > 0:
         DEALS.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
-        print(f'\nSalvat deals.json — {fixed} fixate, {failed} eșuate.')
+        print(f'\nSalvat deals.json -- {fixed} fixate, {failed} esuate.')
     else:
-        print(f'\n[DRY RUN] {fixed} ar fi fixate, {failed} ar eșua.')
+        print(f'\n[DRY RUN] {fixed} ar fi fixate, {failed} ar esua.')
 
 
 if __name__ == '__main__':
