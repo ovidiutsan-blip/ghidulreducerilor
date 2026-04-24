@@ -99,16 +99,16 @@ export default function ThemeHubPage({ params }: Props) {
         ]} />
 
         {/* Hero */}
-        <header className="mb-10 mt-4">
-          <div className="flex items-center gap-4 mb-4">
+        <header className="mb-8 sm:mb-10 mt-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4">
             <div
-              className="w-16 h-16 rounded-2xl flex items-center justify-center text-4xl shrink-0"
+              className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center text-3xl sm:text-4xl shrink-0"
               style={{ backgroundColor: hub.color + '20' }}
             >
               {hub.emoji}
             </div>
             <div>
-              <h1 className="font-display font-bold text-2xl sm:text-4xl text-neutral-900 leading-tight">
+              <h1 className="font-display font-bold text-xl sm:text-3xl md:text-4xl text-neutral-900 leading-tight">
                 {hub.title}
               </h1>
               <p className="text-sm text-neutral-500 mt-1">
@@ -116,7 +116,7 @@ export default function ThemeHubPage({ params }: Props) {
               </p>
             </div>
           </div>
-          <p className="text-lg text-neutral-700 leading-relaxed max-w-3xl">
+          <p className="text-base sm:text-lg text-neutral-700 leading-relaxed max-w-3xl">
             {hub.description}
           </p>
         </header>
@@ -143,7 +143,7 @@ export default function ThemeHubPage({ params }: Props) {
               <p className="text-sm text-neutral-500">Parteneri verificați cu oferte active</p>
             </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
             {stores.map(store => (
               <StoreCard key={store.id} store={store} />
             ))}

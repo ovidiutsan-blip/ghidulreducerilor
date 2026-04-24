@@ -13,7 +13,7 @@ export default function DealOfTheDay({ deal }: { deal: Deal }) {
 
   return (
     <section className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
@@ -28,7 +28,7 @@ export default function DealOfTheDay({ deal }: { deal: Deal }) {
         {/* Deal content */}
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
           {/* Image */}
-          <div className="relative w-full md:w-1/3 aspect-square max-w-xs bg-white rounded-2xl overflow-hidden shrink-0">
+          <div className="relative w-full md:w-1/3 aspect-square max-w-[200px] sm:max-w-xs mx-auto md:mx-0 bg-white rounded-2xl overflow-hidden shrink-0">
             {imgError ? (
               <div className="absolute inset-0 bg-neutral-100 flex items-center justify-center">
                 <ImageOff className="w-12 h-12 text-neutral-300" />
@@ -52,13 +52,13 @@ export default function DealOfTheDay({ deal }: { deal: Deal }) {
           {/* Info */}
           <div className="flex-1 text-center md:text-left">
             <p className="text-sm text-neutral-400 uppercase tracking-wider mb-2">{deal.magazin}</p>
-            <h3 className="font-display font-bold text-2xl sm:text-3xl leading-tight mb-4">
+            <h3 className="font-display font-bold text-xl sm:text-3xl leading-tight mb-4">
               {deal.titlu}
             </h3>
 
             <div className="flex items-baseline gap-3 justify-center md:justify-start mb-2">
-              <span className="text-4xl sm:text-5xl font-bold text-white">{formatPrice(deal.pret_redus)}</span>
-              <span className="text-xl text-neutral-500 line-through">{formatPrice(deal.pret_original)}</span>
+              <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">{formatPrice(deal.pret_redus)}</span>
+              <span className="text-lg sm:text-xl text-neutral-500 line-through">{formatPrice(deal.pret_original)}</span>
             </div>
 
             <p className="text-emerald-400 font-medium text-lg mb-6">

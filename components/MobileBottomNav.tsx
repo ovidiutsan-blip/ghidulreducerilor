@@ -6,8 +6,8 @@ import { Home, Grid3X3, Tag, Bell } from 'lucide-react'
 
 const TABS = [
   { href: '/', label: 'Acasa', icon: Home },
-  { href: '/categorie/electronice', label: 'Categorii', icon: Grid3X3 },
-  { href: '#reduceri', label: 'Oferte', icon: Tag },
+  { href: '/categorii', label: 'Categorii', icon: Grid3X3 },
+  { href: '/#reduceri', label: 'Oferte', icon: Tag },
   { href: '/abonare-alerte', label: 'Alerte', icon: Bell },
 ]
 

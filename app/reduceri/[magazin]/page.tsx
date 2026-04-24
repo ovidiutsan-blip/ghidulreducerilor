@@ -48,18 +48,18 @@ export default function StorePage({ params }: Props) {
       ]} />
 
       {/* Header magazin */}
-      <div className="flex items-center gap-4 mb-8">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
         <div
-          className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shrink-0"
+          className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center text-3xl shrink-0"
           style={{ backgroundColor: store.culoare + '20' }}
         >
           {store.logo_emoji}
         </div>
         <div>
-          <h1 className="font-display font-extrabold text-3xl sm:text-4xl text-neutral-900">
+          <h1 className="font-display font-extrabold text-xl sm:text-3xl md:text-4xl text-neutral-900 leading-tight">
             Reduceri {store.nume} – Oferte și Promoții {monthYear}
           </h1>
-          <p className="text-neutral-500 mt-1">
+          <p className="text-neutral-500 mt-1 text-sm">
             {deals.length} oferte active · Actualizat zilnic
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function StorePage({ params }: Props) {
 
       {/* Grid produse */}
       {deals.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6 mb-16">
           {deals.map(deal => (
             <DealCard key={deal.id} deal={deal} />
           ))}
@@ -79,7 +79,7 @@ export default function StorePage({ params }: Props) {
       )}
 
       {/* Despre Magazin — SEO content */}
-      <section className="bg-neutral-50 rounded-2xl p-8 mt-8">
+      <section className="bg-neutral-50 rounded-2xl p-4 sm:p-8 mt-8">
         <h2 className="font-display font-bold text-xl text-neutral-900 mb-4">
           Despre {store.nume}
         </h2>

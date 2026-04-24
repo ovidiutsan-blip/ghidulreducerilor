@@ -80,17 +80,17 @@ export default function HomePage() {
 
       {/* Magazine Partenere */}
       <section id="magazine" className="bg-neutral-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="flex items-center gap-3 mb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14">
+          <div className="flex items-center gap-3 mb-6 sm:mb-8">
             <div className="w-10 h-10 bg-brand-red/10 rounded-xl flex items-center justify-center">
               <Tag className="w-5 h-5 text-brand-red" />
             </div>
             <div>
-              <h2 className="font-display font-bold text-2xl text-neutral-900">Magazine Partenere</h2>
+              <h2 className="font-display font-bold text-xl sm:text-2xl text-neutral-900">Magazine Partenere</h2>
               <p className="text-sm text-neutral-500">Reduceri de la {stores.length} magazine verificate</p>
             </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
             {stores.map(store => (
               <StoreCard key={store.id} store={store} />
             ))}
@@ -99,15 +99,15 @@ export default function HomePage() {
       </section>
 
       {/* Abonare Email */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="bg-gradient-to-br from-brand-red to-brand-red-dark rounded-3xl p-8 sm:p-12 text-center text-white">
-          <h2 className="font-display font-bold text-2xl sm:text-3xl mb-3">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14">
+        <div className="bg-gradient-to-br from-brand-red to-brand-red-dark rounded-3xl p-6 sm:p-12 text-center text-white">
+          <h2 className="font-display font-bold text-xl sm:text-3xl mb-3">
             Nu rata nicio reducere importanta
           </h2>
-          <p className="text-white/80 mb-8 max-w-lg mx-auto">
+          <p className="text-white/80 mb-6 sm:mb-8 max-w-lg mx-auto text-sm sm:text-base">
             Primesti alerta pe email cand apare o reducere mare la magazinul tau preferat. Gratuit, fara spam.
           </p>
-          <div className="bg-white rounded-2xl p-6 sm:p-8 text-left max-w-md mx-auto">
+          <div className="bg-white rounded-2xl p-4 sm:p-8 text-left max-w-md mx-auto">
             <EmailForm />
           </div>
         </div>

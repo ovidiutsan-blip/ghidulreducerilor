@@ -28,7 +28,7 @@
 
   /* Preț nou evidențiat */
   .price-new {
-    @apply text-brand-red font-bold text-xl;
+    @apply text-brand-red font-bold text-base sm:text-xl;
   }
 
   /* Buton CTA principal */
