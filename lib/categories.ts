@@ -7,6 +7,7 @@ import {
   Cpu,
   Clock,
   Tv,
+  Heart,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -22,6 +23,7 @@ export const CATEGORIES: Category[] = [
   { slug: 'smartwatch', label: 'Smartwatch', icon: Watch, emoji: '⌚' },
   { slug: 'tablete', label: 'Tablete', icon: Tablet, emoji: '📱' },
   { slug: 'casti', label: 'Casti', icon: Headphones, emoji: '🎧' },
+  { slug: 'farmacie-sanatate', label: 'Sanatate', icon: Heart, emoji: '💊' },
   { slug: 'casa-gradina', label: 'Casa & Gradina', icon: Home, emoji: '🏠' },
   { slug: 'electronice', label: 'Electronice', icon: Cpu, emoji: '🔌' },
   { slug: 'ceasuri', label: 'Ceasuri', icon: Clock, emoji: '⏰' },
