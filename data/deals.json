@@ -1515,7 +1515,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:26.699435+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.107999+00:00"
   },
   {
     "id": "watch24-97823547",
@@ -1805,7 +1807,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:27.591337+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.108295+00:00"
   },
   {
     "id": "vegis-abc302d5",
@@ -1838,7 +1842,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:28.166094+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.108507+00:00"
   },
   {
     "id": "vegis-cb92fc62",
@@ -1871,7 +1877,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:28.876863+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.108858+00:00"
   },
   {
     "id": "vegis-64a44bd6",
@@ -1904,7 +1912,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:29.621348+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.109340+00:00"
   },
   {
     "id": "vegis-a1d05ce5",
@@ -1937,7 +1947,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:30.528606+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.109540+00:00"
   },
   {
     "id": "vegis-bf3b7674",
@@ -1970,7 +1982,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:31.339723+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.111286+00:00"
   },
   {
     "id": "vegis-1c7d5f42",
@@ -2003,7 +2017,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:32.143154+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.113302+00:00"
   },
   {
     "id": "vegis-8296c3d7",
@@ -2036,7 +2052,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:32.780745+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.116090+00:00"
   },
   {
     "id": "vegis-141dcf3b",
@@ -2069,7 +2087,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:33.372012+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.118870+00:00"
   },
   {
     "id": "vegis-9548e394",
@@ -2102,7 +2122,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:34.134064+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.864680+00:00"
   },
   {
     "id": "vegis-6f4365ce",
@@ -2135,7 +2157,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:34.906843+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:50.912143+00:00"
   },
   {
     "id": "vegis-3c3d2a67",
@@ -2168,7 +2192,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:35.461864+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.022114+00:00"
   },
   {
     "id": "vegis-dee1100c",
@@ -2201,7 +2227,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:36.180872+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.194567+00:00"
   },
   {
     "id": "vegis-462ae136",
@@ -2234,7 +2262,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:36.896837+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.253740+00:00"
   },
   {
     "id": "vegis-4cb98872",
@@ -2267,7 +2297,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:37.581330+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.279031+00:00"
   },
   {
     "id": "vegis-f4e9e1c1",
@@ -2300,7 +2332,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:38.401659+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.295406+00:00"
   },
   {
     "id": "vegis-0fafb3a2",
@@ -2333,7 +2367,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:39.101496+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.363759+00:00"
   },
   {
     "id": "vegis-9dc4f684",
@@ -2366,7 +2402,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:39.832802+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.389581+00:00"
   },
   {
     "id": "vegis-fb327186",
@@ -2399,7 +2437,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:40.616638+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.407113+00:00"
   },
   {
     "id": "vegis-510fc300",
@@ -2432,7 +2472,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:41.298102+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.447300+00:00"
   },
   {
     "id": "vegis-d72eaca2",
@@ -2465,7 +2507,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:41.990851+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.526904+00:00"
   },
   {
     "id": "vegis-9ea90055",
@@ -2498,7 +2542,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:42.532806+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.617322+00:00"
   },
   {
     "id": "vegis-73172725",
@@ -2531,7 +2577,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:43.381371+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.634751+00:00"
   },
   {
     "id": "vegis-f0dd29ab",
@@ -2564,7 +2612,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:44.094685+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.649704+00:00"
   },
   {
     "id": "vegis-d5ce6ecb",
@@ -2597,7 +2647,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:46.385627+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.766010+00:00"
   },
   {
     "id": "vegis-fa9e06ea",
@@ -2630,7 +2682,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:47.249693+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.803241+00:00"
   },
   {
     "id": "vegis-0dfbdca8",
@@ -2663,7 +2717,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:47.957061+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.823126+00:00"
   },
   {
     "id": "vegis-4ec4fe65",
@@ -2696,7 +2752,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:48.764913+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.842652+00:00"
   },
   {
     "id": "vegis-0afe1fe9",
@@ -2729,7 +2787,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:49.448627+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.903862+00:00"
   },
   {
     "id": "vegis-1155d6d4",
@@ -2762,7 +2822,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:50.150165+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.991490+00:00"
   },
   {
     "id": "vegis-ee8cd8a3",
@@ -2795,7 +2857,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:50.954675+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:51.994332+00:00"
   },
   {
     "id": "vegis-b1b8f64e",
@@ -2828,7 +2892,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:51.642687+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.037730+00:00"
   },
   {
     "id": "vegis-1b1a989c",
@@ -2861,7 +2927,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:52.394265+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.048851+00:00"
   },
   {
     "id": "vegis-79655cab",
@@ -2894,7 +2962,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:53.048655+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.151024+00:00"
   },
   {
     "id": "vegis-ba85255a",
@@ -2927,7 +2997,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:53.776314+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.181733+00:00"
   },
   {
     "id": "vegis-a59eb9ac",
@@ -2960,7 +3032,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:54.435560+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.187322+00:00"
   },
   {
     "id": "vegis-fb19b61e",
@@ -2993,7 +3067,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:55.077969+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.270693+00:00"
   },
   {
     "id": "vegis-385b2110",
@@ -3026,7 +3102,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:55.762185+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.328193+00:00"
   },
   {
     "id": "ps-alecoair-resigilat-umidificator-alecoair-u40-towe-0TOWER-W",
@@ -4607,7 +4685,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:56.393590+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.347399+00:00"
   },
   {
     "id": "vegis-b7d09b05",
@@ -4640,7 +4720,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:57.064584+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.367123+00:00"
   },
   {
     "id": "vegis-51fcd1aa",
@@ -4673,7 +4755,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:57.769939+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.385592+00:00"
   },
   {
     "id": "vegis-61d0a733",
@@ -4706,7 +4790,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:58.640043+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.416241+00:00"
   },
   {
     "id": "vegis-0ecf14d8",
@@ -4739,7 +4825,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:10:59.424152+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.489536+00:00"
   },
   {
     "id": "vegis-8c5f067c",
@@ -4772,7 +4860,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:11:00.089290+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.563852+00:00"
   },
   {
     "id": "vegis-c5bdd8c0",
@@ -4805,7 +4895,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:11:00.935480+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.564732+00:00"
   },
   {
     "id": "vegis-aa26c2ae",
@@ -4838,7 +4930,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:11:01.830928+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.629091+00:00"
   },
   {
     "id": "vegis-a44afe00",
@@ -4871,7 +4965,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:11:02.515252+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.652524+00:00"
   },
   {
     "id": "vegis-fc0a2487",
@@ -4904,7 +5000,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:11:03.059732+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.667691+00:00"
   },
   {
     "id": "vegis-33146575",
@@ -4937,7 +5035,9 @@
     "scraped_at": "2026-04-24",
     "magazine_key": "vegis",
     "image_fixed_at": "2026-04-24T17:11:03.606311+00:00",
-    "image_fix_source": "fix-lazy-loader"
+    "image_fix_source": "fix-lazy-loader",
+    "link_status": "ok",
+    "link_checked_at": "2026-04-24T22:26:52.735661+00:00"
   },
   {
     "id": "vegis-f2f04837",
