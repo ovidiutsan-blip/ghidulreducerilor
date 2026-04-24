@@ -1,5 +1,18 @@
 [
   {
+    "id": "springfarma",
+    "nume": "SpringFarma",
+    "slug": "springfarma",
+    "descriere": "SpringFarma.ro este o farmacie online cu o gama larga de suplimente alimentare, produse naturiste, cosmetice dermato si medicamente fara prescriptie. Partenerul principal pentru branduri precum Luna, Parapharm si alte linii naturiste premium.",
+    "logo_emoji": "💊",
+    "culoare": "#00897B",
+    "categorie_principala": "farmacie-sanatate",
+    "url_site": "https://www.springfarma.com",
+    "comision_mediu": "3-7%",
+    "retea": "2performant",
+    "logo_url": "/logos/springfarma.png"
+  },
+  {
     "id": "alecoair",
     "nume": "AlecoAir",
     "slug": "alecoair",
