@@ -347,57 +347,81 @@ def setup():
 # ─── Login interactiv (prima dată) ───────────────────────────────────────────
 
 def _auto_accept_cookies(page):
-    """Acceptă automat dialogul de cookies Facebook.
-    Scrollează dialogul la capăt (unde sunt butoanele) și dă click pe Accept."""
+    """Acceptă automat dialogul de cookies Facebook cu metode multiple.
+    Printează butoanele vizibile la fiecare attempt pentru debugging."""
+    import re as _re
 
-    # Încearcă de mai multe ori — dialogul se poate încărca lent
-    for attempt in range(6):
-        time.sleep(1.5)
+    KEYWORDS = ["Permite toate", "Allow all", "Accept all", "Acceptă tot", "Acceptă toate"]
+
+    for attempt in range(8):
+        time.sleep(2)
         try:
-            # Varianta 1: Playwright locator direct pe text
-            for txt in ["Permite toate modulele cookie", "Permite toate cookie-urile", "Allow all cookies"]:
+            # Debug: afișează toate butoanele vizibile
+            try:
+                visible_btns = page.evaluate("""
+                    () => Array.from(document.querySelectorAll('button, [role="button"]'))
+                              .filter(b => b.offsetParent !== null)
+                              .map(b => b.textContent.trim().substring(0, 60))
+                              .filter(t => t.length > 0)
+                """)
+                if visible_btns:
+                    print(f"[cookies] attempt {attempt} — butoane: {visible_btns[:8]}")
+            except Exception:
+                pass
+
+            # Varianta 1: JS — scroll toate containerele + click după keyword
+            result = page.evaluate("""
+                (keywords) => {
+                    // Scroll ORICE element care poate fi scrollat
+                    document.querySelectorAll('*').forEach(el => {
+                        try {
+                            if (el.scrollHeight > el.clientHeight + 5) {
+                                el.scrollTop = el.scrollHeight;
+                            }
+                        } catch(e) {}
+                    });
+
+                    const btns = Array.from(document.querySelectorAll(
+                        'button, [role="button"], a'
+                    ));
+                    for (const kw of keywords) {
+                        const btn = btns.find(b =>
+                            b.textContent &&
+                            b.textContent.toLowerCase().includes(kw.toLowerCase()) &&
+                            b.offsetParent !== null
+                        );
+                        if (btn) {
+                            btn.scrollIntoView({block: 'center'});
+                            btn.click();
+                            return 'js:' + btn.textContent.trim().substring(0, 50);
+                        }
+                    }
+                    return null;
+                }
+            """, KEYWORDS)
+
+            if result:
+                print(f"[poster] ✅ Cookie acceptat: {result}")
+                time.sleep(1.5)
+                return
+
+            # Varianta 2: Playwright get_by_role cu regex
+            for kw in KEYWORDS:
                 try:
-                    btn = page.get_by_text(txt, exact=True).first
-                    if btn.count() > 0:
-                        btn.scroll_into_view_if_needed(timeout=2000)
-                        btn.click(timeout=2000)
-                        print(f"[poster] ✅ Cookie acceptat: '{txt}'")
+                    loc = page.get_by_role("button", name=_re.compile(kw, _re.IGNORECASE))
+                    if loc.count() > 0:
+                        loc.last.scroll_into_view_if_needed(timeout=2000)
+                        loc.last.click(timeout=3000)
+                        print(f"[poster] ✅ Cookie acceptat via locator: '{kw}'")
+                        time.sleep(1.5)
                         return
                 except Exception:
                     pass
 
-            # Varianta 2: scroll dialog la capăt + JS click
-            result = page.evaluate("""
-                (function() {
-                    // Scroll toate containerele scrollabile la capăt
-                    document.querySelectorAll('[role="dialog"]').forEach(d => {
-                        d.scrollTop = d.scrollHeight;
-                        d.querySelectorAll('*').forEach(el => {
-                            if (el.scrollHeight > el.clientHeight) el.scrollTop = el.scrollHeight;
-                        });
-                    });
+        except Exception as e:
+            print(f"[cookies] attempt {attempt} error: {e}")
 
-                    const keywords = ['Permite toate modulele cookie', 'Permite toate cookie', 'Allow all', 'Accept all'];
-                    const allEls = Array.from(document.querySelectorAll('button, [role="button"], a'));
-                    for (const kw of keywords) {
-                        const el = allEls.find(e => e.innerText && e.innerText.trim().includes(kw));
-                        if (el) {
-                            el.scrollIntoView({block:'center'});
-                            el.click();
-                            return 'js_clicked:' + kw;
-                        }
-                    }
-                    return 'not_found_attempt_' + arguments[0];
-                })(""" + str(attempt) + """)
-            """)
-
-            if result and "js_clicked" in str(result):
-                print(f"[poster] ✅ Cookie acceptat via JS: {result}")
-                return
-        except Exception:
-            pass
-
-    print("[poster] ⚠️  Cookie dialog nerezolvat după 6 încercări — continuăm oricum")
+    print("[poster] ⚠️  Cookie dialog nerezolvat după 8 încercări — continuăm oricum")
 
 
 def login_interactive():
@@ -434,13 +458,17 @@ def login_interactive():
             Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
         """)
 
-        # Navighează direct la login
-        page.goto("https://www.facebook.com/login", wait_until="domcontentloaded")
-        human_delay(2, 3)
-
-        # Acceptă cookies automat
+        # Pasul 1: Homepage — gestionează dialogul de cookies în izolare
+        print("[poster] Pasul 1: homepage (cookies)...")
+        page.goto("https://www.facebook.com", wait_until="domcontentloaded")
+        human_delay(3, 4)
         _auto_accept_cookies(page)
         human_delay(1, 2)
+
+        # Pasul 2: Navighează la login după ce cookies sunt acceptate
+        print("[poster] Pasul 2: pagina de login...")
+        page.goto("https://www.facebook.com/login", wait_until="domcontentloaded")
+        human_delay(2, 3)
 
         # Completează login
         try:
