@@ -83,6 +83,17 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 
+  // Redirects: /coduri-promo → /cod-reducere (canonical URL change)
+  async redirects() {
+    return [
+      {
+        source: '/coduri-promo/:magazin',
+        destination: '/cod-reducere/:magazin',
+        permanent: true, // 301 — transferă PageRank
+      },
+    ]
+  },
+
   // Security headers
   async headers() {
     return [

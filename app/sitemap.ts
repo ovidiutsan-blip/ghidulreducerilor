@@ -48,7 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Include doar paginile cu conținut — pagini goale au noindex și nu aparțin în sitemap
   const storePages = stores.flatMap(slug => {
     const hasDeals = getDealsByStore(slug).length > 0
-    const hasCodes = getCodesByStore(slug).length > 0
     const entries: MetadataRoute.Sitemap = []
 
     if (hasDeals) {
@@ -59,16 +58,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
       })
     }
-    if (hasCodes) {
-      entries.push({
-        url: `${BASE_URL}/coduri-promo/${slug}`,
-        lastModified: now,
-        changeFrequency: 'daily' as const,
-        priority: 0.8,
-      })
-    }
+
+    // /cod-reducere — întotdeauna în sitemap (au conținut chiar și fără coduri active)
+    entries.push({
+      url: `${BASE_URL}/cod-reducere/${slug}`,
+      lastModified: now,
+      changeFrequency: 'daily' as const,
+      priority: 0.8,
+    })
+
     return entries
   })
 
-  return [...staticPages, ...blogPages, ...themeHubPages, ...storeGuidePages, ...storePages]
+  // Pagina index /cod-reducere
+  const codReducereIndex: MetadataRoute.Sitemap = [{
+    url: `${BASE_URL}/cod-reducere`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }]
+
+  return [...staticPages, ...blogPages, ...themeHubPages, ...storeGuidePages, ...storePages, ...codReducereIndex]
 }
