@@ -568,8 +568,8 @@
     "product_url": "https://www.scule365.ro/cumpara/wow-invertor-sudura-495a-masca-sudura-automata-reglaj-digital-1-6-4-29806",
     "categorie": "casa-gradina",
     "data_adaugare": "2026-04-25",
-    "activ": true,
-    "is_active": true,
+    "activ": false,
+    "is_active": false,
     "sursa": "2performant",
     "title": "*WOW* Invertor sudura 495A + Masca sudura automata, reglaj digital, 1.6-4.0mm, anti-stick, URAL MASH PROFESSIONAL",
     "store": "scule365",
@@ -588,7 +588,9 @@
     "omnibus_checked_at": "2026-04-25T19:01:10.729068+00:00",
     "pret_minim_30z": 199.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "expired_at": "2026-04-25",
+    "expired_reason": "2p_link_invalid"
   },
   {
     "id": "watch24-0b09613d",
