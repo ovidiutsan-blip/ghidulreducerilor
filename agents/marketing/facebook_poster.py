@@ -470,28 +470,47 @@ def login_interactive():
         page.goto("https://www.facebook.com/login", wait_until="domcontentloaded")
         human_delay(2, 3)
 
-        # Completează login
-        try:
-            page.fill("#email", email)
-            human_delay(0.5, 1)
-            page.fill("#pass", password)
-            human_delay(0.5, 1)
-            page.click('[name="login"]')
-            page.wait_for_url("**/facebook.com/**", timeout=20000)
-            human_delay(2, 3)
+        current_url = page.url
+        print(f"[poster] URL curent: {current_url}")
 
-            if "login" in page.url or "checkpoint" in page.url:
-                print("[poster] ⚠️  Login eșuat sau checkpoint de securitate!")
-                print("         Verifică manual browserul și apasă ENTER când ești logat.")
-                take_screenshot(page, "login_failed")
-                input(">>> Apasă ENTER după ce te-ai logat manual: ")
-            else:
-                print("[poster] ✅ Login reușit automat!")
-                take_screenshot(page, "login_interactive_ok")
-        except Exception as e:
-            print(f"[poster] Eroare login: {e}")
-            print("         Loghează-te manual în browser și apasă ENTER.")
-            input(">>> Apasă ENTER după ce te-ai logat: ")
+        # Dacă nu suntem pe pagina de login (redirecționat la feed/2FA/checkpoint)
+        if "/login" not in current_url:
+            print("[poster] ⚠️  Nu suntem pe login — FB a redirectat!")
+            if "two_step" in current_url or "checkpoint" in current_url:
+                print("         >>> 2FA detectat! Completează codul în browser, apoi apasă ENTER.")
+            elif "facebook.com" in current_url:
+                print("         >>> Pare deja logat! Verifică browserul, apoi apasă ENTER.")
+            take_screenshot(page, "login_redirected")
+            input(">>> Apasă ENTER dupa ce esti logat: ")
+        else:
+            # Suntem pe pagina de login — completează credențialele
+            try:
+                page.fill("#email", email)
+                human_delay(0.5, 1)
+                page.fill("#pass", password)
+                human_delay(0.5, 1)
+                page.click('[name="login"]')
+                page.wait_for_url("**/facebook.com/**", timeout=20000)
+                human_delay(2, 3)
+
+                current_url = page.url
+                print(f"[poster] URL dupa login: {current_url}")
+
+                if "two_step" in current_url or "checkpoint" in current_url:
+                    print("[poster] ⚠️  2FA sau checkpoint! Completeaza in browser si apasa ENTER.")
+                    take_screenshot(page, "login_2fa")
+                    input(">>> Apasă ENTER dupa ce esti logat: ")
+                elif "login" in current_url:
+                    print("[poster] ⚠️  Login esuat! Verifica credentialele in browser si apasa ENTER.")
+                    take_screenshot(page, "login_failed")
+                    input(">>> Apasă ENTER dupa ce esti logat: ")
+                else:
+                    print("[poster] Login reusit automat!")
+                    take_screenshot(page, "login_interactive_ok")
+            except Exception as e:
+                print(f"[poster] Eroare login: {e}")
+                print("         Logheaza-te manual in browser si apasa ENTER.")
+                input(">>> Apasă ENTER dupa ce esti logat: ")
 
         # Verifică final
         if "facebook.com" in page.url and "login" not in page.url:
