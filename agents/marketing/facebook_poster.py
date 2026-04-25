@@ -465,10 +465,12 @@ def login_interactive():
         _auto_accept_cookies(page)
         human_delay(1, 2)
 
-        # Pasul 2: Navighează la login după ce cookies sunt acceptate
+        # Pasul 2: Navighează la login și acceptă cookies dacă apar din nou
         print("[poster] Pasul 2: pagina de login...")
         page.goto("https://www.facebook.com/login", wait_until="domcontentloaded")
         human_delay(2, 3)
+        _auto_accept_cookies(page)  # cookie dialog poate apărea și pe /login
+        human_delay(1, 2)
 
         current_url = page.url
         print(f"[poster] URL curent: {current_url}")
@@ -483,32 +485,52 @@ def login_interactive():
             take_screenshot(page, "login_redirected")
             input(">>> Apasă ENTER dupa ce esti logat: ")
         else:
-            # Suntem pe pagina de login — completează credențialele
+            # Suntem pe pagina de login — completează credențialele direct via JS
+            # (funcționează chiar dacă dialogul cookie e deasupra formularului)
+            take_screenshot(page, "login_before_fill")
             try:
-                page.fill("#email", email)
-                human_delay(0.5, 1)
-                page.fill("#pass", password)
-                human_delay(0.5, 1)
-                page.click('[name="login"]')
-                page.wait_for_url("**/facebook.com/**", timeout=20000)
+                safe_email = email.replace("'", "\\'")
+                safe_pass = password.replace("'", "\\'")
+                filled = page.evaluate(f"""
+                    () => {{
+                        const ef = document.querySelector('#email');
+                        const pf = document.querySelector('#pass');
+                        const lb = document.querySelector('[name="login"]');
+                        if (!ef || !pf || !lb) return 'MISSING:' + [!!ef,!!pf,!!lb].join(',');
+                        ef.value = '{safe_email}';
+                        ef.dispatchEvent(new Event('input', {{bubbles:true}}));
+                        ef.dispatchEvent(new Event('change', {{bubbles:true}}));
+                        pf.value = '{safe_pass}';
+                        pf.dispatchEvent(new Event('input', {{bubbles:true}}));
+                        pf.dispatchEvent(new Event('change', {{bubbles:true}}));
+                        lb.click();
+                        return 'OK';
+                    }}
+                """)
+                print(f"[poster] JS fill: {filled}")
+
+                if filled and filled.startswith("MISSING"):
+                    raise Exception(f"Campuri lipsa in DOM: {filled}")
+
+                page.wait_for_url("**/facebook.com/**", timeout=30000)
                 human_delay(2, 3)
 
                 current_url = page.url
                 print(f"[poster] URL dupa login: {current_url}")
 
                 if "two_step" in current_url or "checkpoint" in current_url:
-                    print("[poster] ⚠️  2FA sau checkpoint! Completeaza in browser si apasa ENTER.")
+                    print("[poster] 2FA detectat! Completeaza codul in browser si apasa ENTER.")
                     take_screenshot(page, "login_2fa")
                     input(">>> Apasă ENTER dupa ce esti logat: ")
                 elif "login" in current_url:
-                    print("[poster] ⚠️  Login esuat! Verifica credentialele in browser si apasa ENTER.")
+                    print("[poster] Login esuat! Logheaza-te manual si apasa ENTER.")
                     take_screenshot(page, "login_failed")
                     input(">>> Apasă ENTER dupa ce esti logat: ")
                 else:
                     print("[poster] Login reusit automat!")
                     take_screenshot(page, "login_interactive_ok")
             except Exception as e:
-                print(f"[poster] Eroare login: {e}")
+                print(f"[poster] Eroare: {e}")
                 print("         Logheaza-te manual in browser si apasa ENTER.")
                 input(">>> Apasă ENTER dupa ce esti logat: ")
 
