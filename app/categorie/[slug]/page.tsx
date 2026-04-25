@@ -7,6 +7,7 @@ import DealsFilter from '@/components/DealsFilter'
 import { getDealsByCategory, getAllCategories, getUniqueMagazine } from '@/lib/data'
 import { getCategoryBySlug, CATEGORIES } from '@/lib/categories'
 import { getCurrentMonthYear } from '@/lib/utils'
+import { buildItemListSchema, buildBreadcrumbSchema } from '@/lib/schema'
 
 type Props = { params: { slug: string } }
 
@@ -35,25 +36,21 @@ export default function CategoryPage({ params }: Props) {
   const magazines = Array.from(new Set(deals.map(d => d.magazin))).sort()
   const Icon = cat.icon
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: `Reduceri ${cat.label}`,
-    numberOfItems: deals.length,
-    itemListElement: deals.slice(0, 10).map((deal, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: deal.titlu,
-      url: `https://ghidulreducerilor.ro/out/${deal.id}`,
-    })),
-  }
+  const itemListSchema = buildItemListSchema(
+    `Reduceri ${cat.label} — Oferte ${getCurrentMonthYear()}`,
+    deals,
+    `/categorie/${slug}`
+  )
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Acasă', href: '/' },
+    { name: 'Categorii', href: '/categorii' },
+    { name: cat.label },
+  ])
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb items={[

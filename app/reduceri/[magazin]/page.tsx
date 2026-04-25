@@ -4,6 +4,7 @@ import DealCard from '@/components/DealCard'
 import Breadcrumb from '@/components/Breadcrumb'
 import { getDealsByStore, getStoreBySlug, getAllStoreSlugs } from '@/lib/data'
 import { getCurrentMonthYear } from '@/lib/utils'
+import { buildItemListSchema, buildBreadcrumbSchema } from '@/lib/schema'
 
 type Props = { params: { magazin: string } }
 
@@ -40,7 +41,22 @@ export default function StorePage({ params }: Props) {
   const deals = getDealsByStore(params.magazin)
   const monthYear = getCurrentMonthYear()
 
+  const itemListSchema = buildItemListSchema(
+    `Reduceri ${store.nume} — Oferte ${monthYear}`,
+    deals,
+    `/reduceri/${params.magazin}`
+  )
+
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Acasă', href: '/' },
+    { name: 'Reduceri', href: '/deals' },
+    { name: store.nume },
+  ])
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[
         { label: 'Reduceri', href: '/#reduceri' },
@@ -101,5 +117,6 @@ export default function StorePage({ params }: Props) {
         </div>
       </section>
     </div>
+    </>
   )
 }
