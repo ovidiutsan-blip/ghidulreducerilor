@@ -558,7 +558,9 @@ def main():
     all_seen_urls: set[str]   = set()
     successful_slugs: set[str] = set()
 
-    for magazin, unique_code, categorie, max_pages, min_pct, allowed_cats in TARGETS:
+    for i, (magazin, unique_code, categorie, max_pages, min_pct, allowed_cats) in enumerate(TARGETS):
+        if i > 0:
+            time.sleep(5)  # Pauza intre marchanti pentru a evita rate limiting 429
         deals, valid_urls, success = fetch_merchant(
             magazin, unique_code, categorie, max_pages, min_pct, allowed_cats)
         all_new_deals.extend(deals)

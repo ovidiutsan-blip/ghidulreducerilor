@@ -48,9 +48,15 @@ def save_deals(deals: list):
         json.dump(deals, f, ensure_ascii=False, indent=2)
 
 
+def _safe_id(deal_id: str) -> str:
+    """Sanitizează deal_id pentru utilizare ca nume de fișier (elimină / și caractere invalide)."""
+    import re
+    return re.sub(r'[/\\:*?"<>|]', '_', deal_id)
+
+
 def load_price_history(deal_id: str) -> list:
     """Încarcă istoricul de prețuri pentru un deal."""
-    history_file = PRICE_HISTORY_DIR / f"{deal_id}.json"
+    history_file = PRICE_HISTORY_DIR / f"{_safe_id(deal_id)}.json"
     if history_file.exists():
         with open(history_file, 'r', encoding='utf-8') as f:
             return json.load(f)
@@ -59,7 +65,8 @@ def load_price_history(deal_id: str) -> list:
 
 def save_price_history(deal_id: str, history: list):
     """Salvează istoricul de prețuri pentru un deal."""
-    history_file = PRICE_HISTORY_DIR / f"{deal_id}.json"
+    history_file = PRICE_HISTORY_DIR / f"{_safe_id(deal_id)}.json"
+    history_file.parent.mkdir(parents=True, exist_ok=True)
     with open(history_file, 'w', encoding='utf-8') as f:
         json.dump(history, f, ensure_ascii=False, indent=2)
 
