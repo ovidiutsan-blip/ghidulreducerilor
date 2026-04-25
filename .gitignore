@@ -52,3 +52,7 @@ _*.txt
 
 # Allow python packages__init__.py
 !__init__.py
+
+# Facebook poster — credentials locale (NU pe GitHub)
+agents/marketing/fb_config_local.json
+agents/marketing/fb_session.json
