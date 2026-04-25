@@ -56,3 +56,5 @@ _*.txt
 # Facebook poster — credentials locale (NU pe GitHub)
 agents/marketing/fb_config_local.json
 agents/marketing/fb_session.json
+agents/marketing/fb_browser_profile/
+agents/marketing/fb_session.json

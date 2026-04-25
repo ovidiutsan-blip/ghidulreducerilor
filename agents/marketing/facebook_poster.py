@@ -22,11 +22,12 @@ import os
 from pathlib import Path
 from datetime import datetime
 
-BASE      = Path(__file__).parent.parent.parent
-POSTS_DIR = BASE / "data" / "marketing"
-LOG_DIR   = BASE / "logs" / "fb_poster"
-CONFIG    = Path(__file__).parent / "fb_config_local.json"
-SESSION   = Path(__file__).parent / "fb_session.json"  # cookie session salvat
+BASE        = Path(__file__).parent.parent.parent
+POSTS_DIR   = BASE / "data" / "marketing"
+LOG_DIR     = BASE / "logs" / "fb_poster"
+CONFIG      = Path(__file__).parent / "fb_config_local.json"
+SESSION     = Path(__file__).parent / "fb_session.json"       # cookie session (legacy)
+PROFILE_DIR = Path(__file__).parent / "fb_browser_profile"    # profil persistent Playwright
 
 # ─── Grupuri Facebook țintă (URL-uri) ────────────────────────────────────────
 DEFAULT_GROUPS = [
@@ -118,16 +119,53 @@ def login_facebook(page, email: str, password: str) -> bool:
     page.goto("https://www.facebook.com/", wait_until="networkidle")
     human_delay(2, 4)
 
-    # Acceptă cookies dacă apare
+    # Acceptă cookies dacă apare (multiple variante de dialog)
+    cookie_texts = [
+        "Permite toate modulele cookie",   # varianta noua 2024+
+        "Permite toate cookie-urile",
+        "Allow all cookies",
+        "Accept all",
+        "Acceptă tot",
+    ]
+    cookie_accepted = False
     try:
         page.locator('[data-testid="cookie-policy-manage-dialog-accept-button"]').click(timeout=3000)
+        cookie_accepted = True
         human_delay()
     except Exception:
+        pass
+    if not cookie_accepted:
+        for txt in cookie_texts:
+            try:
+                page.get_by_text(txt, exact=True).first.click(timeout=2000)
+                cookie_accepted = True
+                human_delay()
+                break
+            except Exception:
+                continue
+    if not cookie_accepted:
+        # Fallback: primul buton din dialog (de obicei "Permite toate")
         try:
-            page.get_by_text("Permite toate cookie-urile").click(timeout=3000)
+            page.locator('div[role="dialog"] button').first.click(timeout=2000)
             human_delay()
+            cookie_accepted = True
         except Exception:
             pass
+
+    # Dacă am aterizat pe pagina de management cookie (click greșit), ieșim
+    human_delay(1, 2)
+    if "cookie" in page.url.lower() or page.locator('text="Module cookie de la alte companii"').count() > 0:
+        print("[poster] ⚠️  Am nimerit pe pagina de setări cookie — navighez înapoi")
+        page.goto("https://www.facebook.com/", wait_until="networkidle")
+        human_delay(2, 3)
+        # Încearcă din nou cu data-testid direct
+        for txt in ["Permite toate modulele cookie", "Permite toate cookie-urile", "Allow all cookies"]:
+            try:
+                page.get_by_text(txt, exact=True).first.click(timeout=3000)
+                human_delay()
+                break
+            except Exception:
+                continue
 
     try:
         page.fill("#email", email)
@@ -306,10 +344,213 @@ def setup():
         run_poster(dry_run=True, test_login_only=True)
 
 
+# ─── Login interactiv (prima dată) ───────────────────────────────────────────
+
+def _auto_accept_cookies(page):
+    """Acceptă automat dialogul de cookies Facebook cu metode multiple.
+    Printează butoanele vizibile la fiecare attempt pentru debugging."""
+    import re as _re
+
+    KEYWORDS = ["Permite toate", "Allow all", "Accept all", "Acceptă tot", "Acceptă toate"]
+
+    for attempt in range(8):
+        time.sleep(2)
+        try:
+            # Debug: afișează toate butoanele vizibile
+            try:
+                visible_btns = page.evaluate("""
+                    () => Array.from(document.querySelectorAll('button, [role="button"]'))
+                              .filter(b => b.offsetParent !== null)
+                              .map(b => b.textContent.trim().substring(0, 60))
+                              .filter(t => t.length > 0)
+                """)
+                if visible_btns:
+                    print(f"[cookies] attempt {attempt} — butoane: {visible_btns[:8]}")
+            except Exception:
+                pass
+
+            # Varianta 1: JS — scroll toate containerele + click după keyword
+            result = page.evaluate("""
+                (keywords) => {
+                    // Scroll ORICE element care poate fi scrollat
+                    document.querySelectorAll('*').forEach(el => {
+                        try {
+                            if (el.scrollHeight > el.clientHeight + 5) {
+                                el.scrollTop = el.scrollHeight;
+                            }
+                        } catch(e) {}
+                    });
+
+                    const btns = Array.from(document.querySelectorAll(
+                        'button, [role="button"], a'
+                    ));
+                    for (const kw of keywords) {
+                        const btn = btns.find(b =>
+                            b.textContent &&
+                            b.textContent.toLowerCase().includes(kw.toLowerCase()) &&
+                            b.offsetParent !== null
+                        );
+                        if (btn) {
+                            btn.scrollIntoView({block: 'center'});
+                            btn.click();
+                            return 'js:' + btn.textContent.trim().substring(0, 50);
+                        }
+                    }
+                    return null;
+                }
+            """, KEYWORDS)
+
+            if result:
+                print(f"[poster] ✅ Cookie acceptat: {result}")
+                time.sleep(1.5)
+                return
+
+            # Varianta 2: Playwright get_by_role cu regex
+            for kw in KEYWORDS:
+                try:
+                    loc = page.get_by_role("button", name=_re.compile(kw, _re.IGNORECASE))
+                    if loc.count() > 0:
+                        loc.last.scroll_into_view_if_needed(timeout=2000)
+                        loc.last.click(timeout=3000)
+                        print(f"[poster] ✅ Cookie acceptat via locator: '{kw}'")
+                        time.sleep(1.5)
+                        return
+                except Exception:
+                    pass
+
+        except Exception as e:
+            print(f"[cookies] attempt {attempt} error: {e}")
+
+    print("[poster] ⚠️  Cookie dialog nerezolvat după 8 încercări — continuăm oricum")
+
+
+def login_interactive():
+    """Deschide browserul cu login automat Facebook.
+    Acceptă cookies automat via JS, completează email/parolă din config,
+    salvează profilul pe disc — rulările ulterioare nu mai cer nimic."""
+    from playwright.sync_api import sync_playwright
+
+    cfg = load_config()
+    email    = cfg.get("email", "") if cfg else ""
+    password = cfg.get("password", "") if cfg else ""
+
+    if not email or not password:
+        print("[poster] ⚠️  Email/parolă lipsă. Rulează mai întâi: --setup")
+        sys.exit(1)
+
+    PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+    print("\n=== LOGIN AUTOMAT ===")
+    print(f"Email: {email}")
+    print("Browserul se deschide și se loghează automat...\n")
+
+    with sync_playwright() as p:
+        context = p.chromium.launch_persistent_context(
+            user_data_dir=str(PROFILE_DIR),
+            headless=False,
+            args=["--disable-blink-features=AutomationControlled"],
+            viewport={"width": 1280, "height": 900},
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            locale="ro-RO",
+        )
+        page = context.new_page()
+        page.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+            Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
+        """)
+
+        # Pasul 1: Homepage — gestionează dialogul de cookies în izolare
+        print("[poster] Pasul 1: homepage (cookies)...")
+        page.goto("https://www.facebook.com", wait_until="domcontentloaded")
+        human_delay(3, 4)
+        _auto_accept_cookies(page)
+        human_delay(1, 2)
+
+        # Pasul 2: Navighează la login și acceptă cookies dacă apar din nou
+        print("[poster] Pasul 2: pagina de login...")
+        page.goto("https://www.facebook.com/login", wait_until="domcontentloaded")
+        human_delay(2, 3)
+        _auto_accept_cookies(page)  # cookie dialog poate apărea și pe /login
+        human_delay(1, 2)
+
+        current_url = page.url
+        print(f"[poster] URL curent: {current_url}")
+
+        # Dacă nu suntem pe pagina de login (redirecționat la feed/2FA/checkpoint)
+        if "/login" not in current_url:
+            print("[poster] ⚠️  Nu suntem pe login — FB a redirectat!")
+            if "two_step" in current_url or "checkpoint" in current_url:
+                print("         >>> 2FA detectat! Completează codul în browser, apoi apasă ENTER.")
+            elif "facebook.com" in current_url:
+                print("         >>> Pare deja logat! Verifică browserul, apoi apasă ENTER.")
+            take_screenshot(page, "login_redirected")
+            input(">>> Apasă ENTER dupa ce esti logat: ")
+        else:
+            # Suntem pe pagina de login — completează credențialele direct via JS
+            # (funcționează chiar dacă dialogul cookie e deasupra formularului)
+            take_screenshot(page, "login_before_fill")
+            try:
+                # Debug: listează toate input-urile din pagină
+                inputs_debug = page.evaluate("""
+                    () => Array.from(document.querySelectorAll('input')).map(i =>
+                        ({id:i.id, name:i.name, type:i.type, placeholder:i.placeholder})
+                    )
+                """)
+                print(f"[poster] Inputs gasiti: {inputs_debug}")
+
+                # Folosim Playwright fill() cu selectori corecti (nu #email vechi)
+                EMAIL_SEL = 'input[name="email"]'
+                PASS_SEL  = 'input[name="pass"]'
+
+                page.fill(EMAIL_SEL, email, timeout=10000)
+                human_delay(0.5, 1)
+                page.fill(PASS_SEL, password, timeout=10000)
+                human_delay(0.5, 1)
+                # Submit via Enter pe campul parola (mai natural decat click buton)
+                page.locator(PASS_SEL).press("Enter")
+                print("[poster] Credentiale trimise via Playwright fill + Enter")
+
+                # Asteapta navigarea dupa login (2FA poate fi lent - 90s)
+                try:
+                    page.wait_for_url("**/facebook.com/**", timeout=90000,
+                                      wait_until="domcontentloaded")
+                except Exception:
+                    pass  # Verificam URL-ul manual oricum
+
+                human_delay(2, 3)
+                current_url = page.url
+                print(f"[poster] URL dupa login: {current_url}")
+
+                if "two_step" in current_url or "checkpoint" in current_url:
+                    print("[poster] >>> 2FA DETECTAT!")
+                    print("         Gaseste fereastra Chromium si completeaza codul.")
+                    print("         Dupa ce esti pe feed, apasa ENTER.")
+                    take_screenshot(page, "login_2fa")
+                    input(">>> Apasă ENTER dupa ce esti logat complet: ")
+                elif "login" in current_url:
+                    print("[poster] Login esuat! Verifica parola si apasa ENTER.")
+                    take_screenshot(page, "login_failed")
+                    input(">>> Apasă ENTER dupa ce esti logat: ")
+                else:
+                    print("[poster] Login reusit automat!")
+                    take_screenshot(page, "login_interactive_ok")
+            except Exception as e:
+                print(f"[poster] Eroare: {e}")
+                print("         Logheaza-te manual in browser si apasa ENTER.")
+                input(">>> Apasă ENTER dupa ce esti logat: ")
+
+        # Verifică final
+        if "facebook.com" in page.url and "login" not in page.url:
+            print(f"[poster] ✅ Profil salvat în: {PROFILE_DIR}")
+        else:
+            print("[poster] ⚠️  Nu s-a detectat login. Verifică credențialele.")
+
+        context.close()
+
+
 # ─── Runner principal ─────────────────────────────────────────────────────────
 
 def run_poster(dry_run: bool = False, test_login_only: bool = False):
-    """Rulare principală."""
+    """Rulare principală cu profil browser persistent (fără re-login / cookie dialogs)."""
     from playwright.sync_api import sync_playwright
 
     cfg = load_config()
@@ -317,13 +558,13 @@ def run_poster(dry_run: bool = False, test_login_only: bool = False):
         print("[poster] Config lipsă. Rulează: python facebook_poster.py --setup")
         sys.exit(1)
 
-    email    = cfg.get("email", "")
-    password = cfg.get("password", "")
-    groups   = cfg.get("groups", DEFAULT_GROUPS[:2])
+    groups     = cfg.get("groups", DEFAULT_GROUPS[:2])
     max_groups = cfg.get("max_groups_per_run", 3)
 
-    if not email or not password:
-        print("[poster] Email/parolă lipsă în config. Rulează --setup din nou.")
+    # Verifică că există profilul browser (login interactiv făcut)
+    if not PROFILE_DIR.exists() or not any(PROFILE_DIR.iterdir()):
+        print("[poster] ⚠️  Profilul browser lipsă. Rulează mai întâi:")
+        print("         python facebook_poster.py --login")
         sys.exit(1)
 
     # Verifică ora (nu postăm noaptea)
@@ -334,55 +575,52 @@ def run_poster(dry_run: bool = False, test_login_only: bool = False):
         print(f"[poster] Ora {hour} e în afara ferestrei de postare ({start_h}-{end_h}). Skip.")
         return
 
-    posts_data = load_today_posts()
-    if not posts_data or not posts_data.get("posts"):
-        print("[poster] Nu există posturi generate pentru azi. Rulează orchestrator.py mai întâi.")
-        return
-
-    # Alege posturile potrivite per grup (fără duplicate)
-    all_posts = {p["tip"]: p for p in posts_data["posts"]}
+    if not dry_run and not test_login_only:
+        posts_data = load_today_posts()
+        if not posts_data or not posts_data.get("posts"):
+            print("[poster] Nu există posturi generate pentru azi. Rulează orchestrator.py mai întâi.")
+            return
+        all_posts = {p["tip"]: p for p in posts_data["posts"]}
+    else:
+        all_posts = {}
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=False,  # vizibil — mai greu de detectat ca bot
+        # Profil persistent — nu mai apar cookie dialogs sau login
+        context = p.chromium.launch_persistent_context(
+            user_data_dir=str(PROFILE_DIR),
+            headless=False,
             args=["--disable-blink-features=AutomationControlled"],
-        )
-        context = browser.new_context(
             viewport={"width": 1280, "height": 900},
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
             locale="ro-RO",
         )
-
         page = context.new_page()
-        # Anti-bot: ascunde că suntem Playwright
         page.add_init_script("""
             Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
             Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
         """)
 
-        # Login sau restaurare sesiune
-        session_ok = restore_session(context)
-        if session_ok:
-            page.goto("https://www.facebook.com/", wait_until="domcontentloaded")
-            human_delay(2, 3)
-            if "login" in page.url:
-                session_ok = False
+        # Verifică că suntem logați
+        page.goto("https://www.facebook.com/", wait_until="domcontentloaded")
+        human_delay(2, 3)
 
-        if not session_ok:
-            ok = login_facebook(page, email, password)
-            if not ok:
-                browser.close()
-                return
+        if "login" in page.url:
+            print("[poster] ⚠️  Sesiunea a expirat. Rulează: python facebook_poster.py --login")
+            take_screenshot(page, "session_expired")
+            context.close()
+            return
+
+        print("[poster] ✅ Logat pe Facebook (profil persistent)")
 
         if test_login_only:
-            print("[poster] Test login OK!")
             take_screenshot(page, "login_test_ok")
-            browser.close()
+            print("[poster] Test login OK!")
+            context.close()
             return
 
         if dry_run:
             print("[poster] DRY-RUN — nu se postează")
-            browser.close()
+            context.close()
             return
 
         # Postare în grupuri
@@ -421,7 +659,7 @@ def run_poster(dry_run: bool = False, test_login_only: bool = False):
                 print(f"[poster] Aștept {delay:.0f}s până la următorul grup...")
                 time.sleep(delay)
 
-        browser.close()
+        context.close()
 
         # Salvare log
         LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -439,13 +677,16 @@ def run_poster(dry_run: bool = False, test_login_only: bool = False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Facebook Auto-Poster pentru ghidulreducerilor.ro")
-    parser.add_argument("--setup",    action="store_true", help="Configurare inițială")
+    parser.add_argument("--setup",    action="store_true", help="Configurare inițială (email/parolă/grupuri)")
+    parser.add_argument("--login",    action="store_true", help="Login interactiv — loghează-te manual în browser (prima dată)")
     parser.add_argument("--run",      action="store_true", help="Rulare postare")
-    parser.add_argument("--dry-run",  action="store_true", help="Test fără postare")
+    parser.add_argument("--dry-run",  action="store_true", help="Test fără postare (verifică login)")
     args = parser.parse_args()
 
     if args.setup:
         setup()
+    elif args.login:
+        login_interactive()
     elif args.run:
         run_poster(dry_run=False)
     elif args.dry_run:
