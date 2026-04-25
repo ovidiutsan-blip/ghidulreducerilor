@@ -50,15 +50,24 @@ def score_deal(d: dict) -> float:
     """Scor de promovabilitate (mai mare = mai bun de promovat)."""
     score = 0.0
     pct = d.get("procent_reducere") or d.get("discount_percent") or 0
+    pret = d.get("pret_redus") or d.get("price") or 9999
     score += pct * 1.5                              # reducere mare = prioritate
-    if d.get("pret_redus", 9999) < 200:
+    if pret < 200:
         score += 20                                 # produse ieftine → conversii mai ușoare
+    elif pret < 500:
+        score += 10                                 # preț mediu — ok
     if d.get("imagine_url") or d.get("image"):
         score += 10                                 # imagine = post mai atrăgător
     if d.get("omnibus_validated"):
         score += 15                                 # reducere verificată Omnibus
     if pct >= 70:
         score += 25                                 # bonus pentru reduceri wow (70%+)
+    elif pct >= 50:
+        score += 12                                 # bonus pentru 50%+
+    # Penalizare deals resigilate (mai greu de vândut în grupuri)
+    titlu = (d.get("titlu") or d.get("title") or "").lower()
+    if "resigilat" in titlu or "refurbished" in titlu:
+        score -= 10
     return score
 
 

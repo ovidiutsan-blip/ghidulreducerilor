@@ -24,6 +24,15 @@ BASE       = Path(__file__).parent.parent.parent
 SITE_BASE  = "https://ghidulreducerilor.ro"
 OUTPUT_DIR = BASE / "data" / "marketing"
 
+
+def _deal_link(d: dict) -> str:
+    """Link corect pentru un deal: /out/{id} (redirect tracker intern)."""
+    deal_id = d.get("id", "")
+    if deal_id:
+        return f"{SITE_BASE}/out/{deal_id}"
+    # fallback: link afiliat direct
+    return d.get("link_afiliat") or d.get("affiliate_url") or SITE_BASE
+
 # ─── Template-uri posturi FB ─────────────────────────────────────────────────
 
 def post_simplu(d: dict) -> str:
@@ -32,7 +41,7 @@ def post_simplu(d: dict) -> str:
     pret  = d.get("pret_redus") or d.get("price") or 0
     orig  = d.get("pret_original") or d.get("originalPrice") or 0
     store = (d.get("magazin") or d.get("store", "")).capitalize()
-    link  = f"{SITE_BASE}/deals/{d.get('slug', '')}" if d.get("slug") else d.get("link_afiliat") or d.get("affiliate_url", "")
+    link  = _deal_link(d)
     return (
         f"🔥 REDUCERE -{pct}% la {store}!\n\n"
         f"📦 {titlu}\n"
@@ -49,7 +58,7 @@ def post_comparatie(d: dict) -> str:
     orig  = d.get("pret_original") or d.get("originalPrice") or 0
     economie = orig - pret
     store = (d.get("magazin") or d.get("store", "")).capitalize()
-    link  = f"{SITE_BASE}/deals/{d.get('slug', '')}" if d.get("slug") else d.get("link_afiliat") or d.get("affiliate_url", "")
+    link  = _deal_link(d)
     return (
         f"💡 Economisești {economie:.0f} lei cu această ofertă!\n\n"
         f"🏷️ {titlu}\n\n"
@@ -66,7 +75,7 @@ def post_urgenta(d: dict) -> str:
     pct   = d.get("procent_reducere") or d.get("discount_percent") or 0
     pret  = d.get("pret_redus") or d.get("price") or 0
     store = (d.get("magazin") or d.get("store", "")).capitalize()
-    link  = f"{SITE_BASE}/deals/{d.get('slug', '')}" if d.get("slug") else d.get("link_afiliat") or d.get("affiliate_url", "")
+    link  = _deal_link(d)
     return (
         f"⏰ OFERTĂ LIMITATĂ — fii primul!\n\n"
         f"➡️ {titlu}\n"
@@ -85,7 +94,7 @@ def post_lista(deals: list[dict]) -> str:
         pct   = d.get("procent_reducere") or d.get("discount_percent") or 0
         pret  = d.get("pret_redus") or d.get("price") or 0
         store = (d.get("magazin") or d.get("store", "")).capitalize()
-        link  = f"{SITE_BASE}/deals/{d.get('slug', '')}" if d.get("slug") else d.get("link_afiliat") or d.get("affiliate_url", "")
+        link  = _deal_link(d)
         linii.append(f"{i}. {titlu} — -{pct}% → {pret} lei ({store})\n   👉 {link}")
     linii.append(f"\nToate ofertele: {SITE_BASE}\n\n#reduceri #oferte #ghidulreducerilor")
     return "\n".join(linii)
@@ -98,7 +107,7 @@ def post_story(d: dict) -> str:
     pret  = d.get("pret_redus") or d.get("price") or 0
     orig  = d.get("pret_original") or d.get("originalPrice") or 0
     store = (d.get("magazin") or d.get("store", "")).capitalize()
-    link  = f"{SITE_BASE}/deals/{d.get('slug', '')}" if d.get("slug") else d.get("link_afiliat") or d.get("affiliate_url", "")
+    link  = _deal_link(d)
     return (
         f"Azi dimineață am găsit asta și nu m-am putut abține să nu o împart cu voi 😅\n\n"
         f"{titlu} la -{pct}% pe {store}.\n\n"
