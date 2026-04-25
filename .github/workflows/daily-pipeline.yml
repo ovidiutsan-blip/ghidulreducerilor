@@ -62,7 +62,7 @@ jobs:
         if: github.event.inputs.mode != 'cleanup'
         continue-on-error: true
         env:
-          PROFITSHARE_API_USER: ${{ vars.PROFITSHARE_API_USER }}
+          PROFITSHARE_API_USER: ${{ secrets.PROFITSHARE_API_USER }}
           PROFITSHARE_API_KEY: ${{ secrets.PROFITSHARE_API_KEY }}
         run: python agents/agent_altemagazine.py
 
