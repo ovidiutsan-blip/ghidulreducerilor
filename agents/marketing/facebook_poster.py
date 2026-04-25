@@ -143,12 +143,28 @@ def login_facebook(page, email: str, password: str) -> bool:
             except Exception:
                 continue
     if not cookie_accepted:
-        # Fallback: orice buton din dialogul de cookies
+        # Fallback: primul buton din dialog (de obicei "Permite toate")
         try:
-            page.locator('div[role="dialog"] button').last.click(timeout=2000)
+            page.locator('div[role="dialog"] button').first.click(timeout=2000)
             human_delay()
+            cookie_accepted = True
         except Exception:
             pass
+
+    # Dacă am aterizat pe pagina de management cookie (click greșit), ieșim
+    human_delay(1, 2)
+    if "cookie" in page.url.lower() or page.locator('text="Module cookie de la alte companii"').count() > 0:
+        print("[poster] ⚠️  Am nimerit pe pagina de setări cookie — navighez înapoi")
+        page.goto("https://www.facebook.com/", wait_until="networkidle")
+        human_delay(2, 3)
+        # Încearcă din nou cu data-testid direct
+        for txt in ["Permite toate modulele cookie", "Permite toate cookie-urile", "Allow all cookies"]:
+            try:
+                page.get_by_text(txt, exact=True).first.click(timeout=3000)
+                human_delay()
+                break
+            except Exception:
+                continue
 
     try:
         page.fill("#email", email)
