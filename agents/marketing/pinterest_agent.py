@@ -29,6 +29,7 @@ from pathlib import Path
 from datetime import datetime, date
 from typing import Optional
 import requests
+import pyperclip
 
 BASE         = Path(__file__).parent.parent.parent
 DEALS_PATH   = BASE / "data" / "deals.json"
@@ -89,6 +90,18 @@ def save_promo_log(log: dict):
 
 def human_delay(min_s: float = 1.5, max_s: float = 4.0):
     time.sleep(random.uniform(min_s, max_s))
+
+
+def clipboard_fill(page, el, text: str):
+    """
+    Completează un câmp folosind clipboard — rezolvă caracterele românești (ț, ș, ă).
+    keyboard.type() pe Windows nu trimite corect Unicode non-ASCII.
+    """
+    pyperclip.copy(text)
+    el.click()
+    time.sleep(0.2)
+    page.keyboard.press("Control+a")
+    page.keyboard.press("Control+v")
 
 
 def take_screenshot(page, name: str) -> Path:
@@ -370,10 +383,7 @@ def post_pin(page, deal: dict, dry_run: bool = False) -> bool:
             try:
                 el = page.locator(sel).first
                 if el.is_visible(timeout=2000):
-                    el.click()
-                    human_delay(0.3, 0.5)
-                    page.keyboard.press("Control+a")
-                    page.keyboard.type(title[:100], delay=30)
+                    clipboard_fill(page, el, title[:100])
                     title_filled = True
                     print(f"[pinterest] ✅ Titlu setat")
                     break
@@ -398,10 +408,7 @@ def post_pin(page, deal: dict, dry_run: bool = False) -> bool:
             try:
                 el = page.locator(sel).first
                 if el.is_visible(timeout=2000):
-                    el.click()
-                    human_delay(0.3, 0.5)
-                    page.keyboard.press("Control+a")
-                    page.keyboard.type(desc[:500], delay=20)
+                    clipboard_fill(page, el, desc[:500])
                     desc_filled = True
                     print(f"[pinterest] ✅ Descriere setată")
                     break
@@ -424,10 +431,7 @@ def post_pin(page, deal: dict, dry_run: bool = False) -> bool:
             try:
                 el = page.locator(sel).first
                 if el.is_visible(timeout=2000):
-                    el.click()
-                    human_delay(0.3, 0.5)
-                    page.keyboard.press("Control+a")
-                    page.keyboard.type(link, delay=20)
+                    clipboard_fill(page, el, link)
                     link_filled = True
                     print(f"[pinterest] ✅ Link setat")
                     break

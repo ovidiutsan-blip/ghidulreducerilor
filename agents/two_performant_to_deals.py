@@ -30,6 +30,18 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
+
+def fix_mojibake(s: str) -> str:
+    """Fix text encodat greșit (UTF-8 bytes interpretate ca cp1252).
+    Unele API-uri returnează mojibake: 'Äƒ' în loc de 'ă', 'È›' în loc de 'ț' etc.
+    """
+    if not s:
+        return s
+    try:
+        return s.encode('cp1252').decode('utf-8')
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return s
+
 load_dotenv()
 
 API_BASE     = "https://api.2performant.com"
@@ -205,7 +217,7 @@ def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
         if feed_cat not in allowed_cats:
             return None
 
-    name    = (p.get("title") or p.get("name") or "").strip()
+    name    = fix_mojibake((p.get("title") or p.get("name") or "").strip())
     url     = p.get("url") or p.get("product_url") or p.get("link") or ""
 
     # structured_image_urls poate fi lista de stringuri sau lista de dict-uri

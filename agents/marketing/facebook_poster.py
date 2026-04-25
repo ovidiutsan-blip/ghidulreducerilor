@@ -255,8 +255,10 @@ def post_to_group(page, group: dict, post_text: str) -> bool:
 
         human_delay(1, 2)
 
-        # Tastează textul
-        page.keyboard.type(post_text, delay=random.randint(30, 80))
+        # Tastează textul (clipboard — rezolvă caracterele românești ț/ș/ă pe Windows)
+        import pyperclip
+        pyperclip.copy(post_text)
+        page.keyboard.press("Control+v")
         human_delay(2, 4)
 
         # Captează screenshot înainte de post

@@ -276,8 +276,10 @@ def post_to_page(page, page_url: str, post_text: str, deal_image_url: str | None
             take_screenshot(page, "no_create_post_box")
             return False
 
-        # Tastează textul
-        page.keyboard.type(post_text, delay=random.randint(30, 80))
+        # Tastează textul (clipboard — rezolvă caracterele românești ț/ș/ă pe Windows)
+        import pyperclip
+        pyperclip.copy(post_text)
+        page.keyboard.press("Control+v")
         human_delay(2, 3)
 
         # Screenshot înainte de publicare

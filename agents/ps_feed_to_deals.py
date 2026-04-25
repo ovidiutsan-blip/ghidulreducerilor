@@ -9,6 +9,18 @@ import requests
 from dotenv import load_dotenv
 load_dotenv()
 
+
+def fix_mojibake(s: str) -> str:
+    """Fix text encodat greșit (UTF-8 bytes interpretate ca cp1252).
+    Profitshare API returnează uneori text cu mojibake: 'Äƒ' în loc de 'ă', 'È›' în loc de 'ț' etc.
+    """
+    if not s:
+        return s
+    try:
+        return s.encode('cp1252').decode('utf-8')
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return s
+
 API_URL = "https://api.profitshare.ro"
 API_USER = os.getenv("PROFITSHARE_API_USER", "")
 API_KEY = os.getenv("PROFITSHARE_API_KEY", "")
@@ -69,7 +81,7 @@ def product_to_deal(p: dict, magazin: str, categorie: str, allowed_cats: list | 
     if price_disc is None or price_vat <= 0 or price_disc >= price_vat:
         return None
     pct = round((1 - price_disc / price_vat) * 100)
-    name = p.get("name", "").strip()
+    name = fix_mojibake(p.get("name", "").strip())
     link = p.get("link", "")
     aff_link = fix_affiliate_link(p.get("affiliate_link", ""))
     img = p.get("image_original") or p.get("image") or ""
