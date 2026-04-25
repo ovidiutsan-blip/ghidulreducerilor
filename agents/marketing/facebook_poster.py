@@ -509,18 +509,25 @@ def login_interactive():
                 page.locator(PASS_SEL).press("Enter")
                 print("[poster] Credentiale trimise via Playwright fill + Enter")
 
-                page.wait_for_url("**/facebook.com/**", timeout=30000)
-                human_delay(2, 3)
+                # Asteapta navigarea dupa login (2FA poate fi lent - 90s)
+                try:
+                    page.wait_for_url("**/facebook.com/**", timeout=90000,
+                                      wait_until="domcontentloaded")
+                except Exception:
+                    pass  # Verificam URL-ul manual oricum
 
+                human_delay(2, 3)
                 current_url = page.url
                 print(f"[poster] URL dupa login: {current_url}")
 
                 if "two_step" in current_url or "checkpoint" in current_url:
-                    print("[poster] 2FA detectat! Completeaza codul in browser si apasa ENTER.")
+                    print("[poster] >>> 2FA DETECTAT!")
+                    print("         Gaseste fereastra Chromium si completeaza codul.")
+                    print("         Dupa ce esti pe feed, apasa ENTER.")
                     take_screenshot(page, "login_2fa")
-                    input(">>> Apasă ENTER dupa ce esti logat: ")
+                    input(">>> Apasă ENTER dupa ce esti logat complet: ")
                 elif "login" in current_url:
-                    print("[poster] Login esuat! Logheaza-te manual si apasa ENTER.")
+                    print("[poster] Login esuat! Verifica parola si apasa ENTER.")
                     take_screenshot(page, "login_failed")
                     input(">>> Apasă ENTER dupa ce esti logat: ")
                 else:
