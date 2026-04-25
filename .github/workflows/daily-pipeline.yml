@@ -77,9 +77,19 @@ jobs:
         if: github.event.inputs.mode != 'cleanup'
         continue-on-error: true
         env:
-          PROFITSHARE_API_USER: ${{ vars.PROFITSHARE_API_USER }}
+          PROFITSHARE_API_USER: ${{ secrets.PROFITSHARE_API_USER }}
           PROFITSHARE_API_KEY: ${{ secrets.PROFITSHARE_API_KEY }}
         run: python agents/ps_feed_to_deals.py
+
+      - name: 🏷️ 2Performant feed import (answear, drmax, springfarma, scule365)
+        id: two_p_feed
+        if: github.event.inputs.mode != 'cleanup'
+        continue-on-error: true
+        env:
+          TWO_PERFORMANT_EMAIL: ${{ secrets.TWO_PERFORMANT_EMAIL }}
+          TWO_PERFORMANT_PASSWORD: ${{ secrets.TWO_PERFORMANT_PASSWORD }}
+          TWO_PERFORMANT_MARKETER_CODE: ${{ secrets.TWO_PERFORMANT_MARKETER_CODE }}
+        run: python agents/two_performant_to_deals.py
 
       - name: 🖼️ Reparare automata imagini invalide
         id: image_repair
@@ -111,7 +121,7 @@ jobs:
         run: git push
 
       - name: 🚨 Creare issue la eșec pipeline
-        if: failure() || steps.main_pipeline.outcome == 'failure' || steps.scrape_altemagazine.outcome == 'failure' || steps.merge_altemagazine.outcome == 'failure' || steps.ps_feed.outcome == 'failure' || steps.price_validator.outcome == 'failure' || steps.sync_hubs.outcome == 'failure'
+        if: failure() || steps.main_pipeline.outcome == 'failure' || steps.scrape_altemagazine.outcome == 'failure' || steps.merge_altemagazine.outcome == 'failure' || steps.ps_feed.outcome == 'failure' || steps.two_p_feed.outcome == 'failure' || steps.price_validator.outcome == 'failure' || steps.sync_hubs.outcome == 'failure'
         uses: actions/github-script@v7
         with:
           script: |
@@ -120,6 +130,7 @@ jobs:
               'Scrape altemagazine (agent_altemagazine.py)': '${{ steps.scrape_altemagazine.outcome }}',
               'Merge altemagazine': '${{ steps.merge_altemagazine.outcome }}',
               'Profitshare feed (ps_feed_to_deals.py)': '${{ steps.ps_feed.outcome }}',
+              '2Performant feed (two_performant_to_deals.py)': '${{ steps.two_p_feed.outcome }}',
               'Price validator': '${{ steps.price_validator.outcome }}',
               'Sync theme hubs': '${{ steps.sync_hubs.outcome }}'
             };
