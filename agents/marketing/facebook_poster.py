@@ -118,13 +118,34 @@ def login_facebook(page, email: str, password: str) -> bool:
     page.goto("https://www.facebook.com/", wait_until="networkidle")
     human_delay(2, 4)
 
-    # Acceptă cookies dacă apare
+    # Acceptă cookies dacă apare (multiple variante de dialog)
+    cookie_texts = [
+        "Permite toate modulele cookie",   # varianta noua 2024+
+        "Permite toate cookie-urile",
+        "Allow all cookies",
+        "Accept all",
+        "Acceptă tot",
+    ]
+    cookie_accepted = False
     try:
         page.locator('[data-testid="cookie-policy-manage-dialog-accept-button"]').click(timeout=3000)
+        cookie_accepted = True
         human_delay()
     except Exception:
+        pass
+    if not cookie_accepted:
+        for txt in cookie_texts:
+            try:
+                page.get_by_text(txt, exact=True).first.click(timeout=2000)
+                cookie_accepted = True
+                human_delay()
+                break
+            except Exception:
+                continue
+    if not cookie_accepted:
+        # Fallback: orice buton din dialogul de cookies
         try:
-            page.get_by_text("Permite toate cookie-urile").click(timeout=3000)
+            page.locator('div[role="dialog"] button').last.click(timeout=2000)
             human_delay()
         except Exception:
             pass
