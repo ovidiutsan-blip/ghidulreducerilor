@@ -22,11 +22,12 @@ import os
 from pathlib import Path
 from datetime import datetime
 
-BASE      = Path(__file__).parent.parent.parent
-POSTS_DIR = BASE / "data" / "marketing"
-LOG_DIR   = BASE / "logs" / "fb_poster"
-CONFIG    = Path(__file__).parent / "fb_config_local.json"
-SESSION   = Path(__file__).parent / "fb_session.json"  # cookie session salvat
+BASE        = Path(__file__).parent.parent.parent
+POSTS_DIR   = BASE / "data" / "marketing"
+LOG_DIR     = BASE / "logs" / "fb_poster"
+CONFIG      = Path(__file__).parent / "fb_config_local.json"
+SESSION     = Path(__file__).parent / "fb_session.json"       # cookie session (legacy)
+PROFILE_DIR = Path(__file__).parent / "fb_browser_profile"    # profil persistent Playwright
 
 # ─── Grupuri Facebook țintă (URL-uri) ────────────────────────────────────────
 DEFAULT_GROUPS = [
@@ -343,10 +344,51 @@ def setup():
         run_poster(dry_run=True, test_login_only=True)
 
 
+# ─── Login interactiv (prima dată) ───────────────────────────────────────────
+
+def login_interactive():
+    """Deschide browserul, navighează la Facebook și AŞTEAPTĂ ca utilizatorul
+    să se logheze manual. Salvează profilul browser pe disc — rulările
+    ulterioare nu mai cer login sau cookie consent."""
+    from playwright.sync_api import sync_playwright
+
+    PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+    print("\n=== LOGIN INTERACTIV ===")
+    print("Browserul se va deschide. Loghează-te manual pe Facebook,")
+    print("acceptă cookie-urile, apoi apasă ENTER în terminal.\n")
+
+    with sync_playwright() as p:
+        context = p.chromium.launch_persistent_context(
+            user_data_dir=str(PROFILE_DIR),
+            headless=False,
+            args=["--disable-blink-features=AutomationControlled"],
+            viewport={"width": 1280, "height": 900},
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            locale="ro-RO",
+        )
+        page = context.new_page()
+        page.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+            Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
+        """)
+        page.goto("https://www.facebook.com/", wait_until="domcontentloaded")
+
+        input("\n>>> Loghează-te pe Facebook în browser, acceptă cookies, apoi apasă ENTER aici: ")
+
+        # Verifică login
+        if "facebook.com" in page.url and "login" not in page.url:
+            print("[poster] ✅ Login detectat! Profilul salvat în:", PROFILE_DIR)
+            take_screenshot(page, "login_interactive_ok")
+        else:
+            print("[poster] ⚠️  Browserul nu pare logat. Încearcă din nou.")
+
+        context.close()
+
+
 # ─── Runner principal ─────────────────────────────────────────────────────────
 
 def run_poster(dry_run: bool = False, test_login_only: bool = False):
-    """Rulare principală."""
+    """Rulare principală cu profil browser persistent (fără re-login / cookie dialogs)."""
     from playwright.sync_api import sync_playwright
 
     cfg = load_config()
@@ -354,13 +396,13 @@ def run_poster(dry_run: bool = False, test_login_only: bool = False):
         print("[poster] Config lipsă. Rulează: python facebook_poster.py --setup")
         sys.exit(1)
 
-    email    = cfg.get("email", "")
-    password = cfg.get("password", "")
-    groups   = cfg.get("groups", DEFAULT_GROUPS[:2])
+    groups     = cfg.get("groups", DEFAULT_GROUPS[:2])
     max_groups = cfg.get("max_groups_per_run", 3)
 
-    if not email or not password:
-        print("[poster] Email/parolă lipsă în config. Rulează --setup din nou.")
+    # Verifică că există profilul browser (login interactiv făcut)
+    if not PROFILE_DIR.exists() or not any(PROFILE_DIR.iterdir()):
+        print("[poster] ⚠️  Profilul browser lipsă. Rulează mai întâi:")
+        print("         python facebook_poster.py --login")
         sys.exit(1)
 
     # Verifică ora (nu postăm noaptea)
@@ -371,55 +413,52 @@ def run_poster(dry_run: bool = False, test_login_only: bool = False):
         print(f"[poster] Ora {hour} e în afara ferestrei de postare ({start_h}-{end_h}). Skip.")
         return
 
-    posts_data = load_today_posts()
-    if not posts_data or not posts_data.get("posts"):
-        print("[poster] Nu există posturi generate pentru azi. Rulează orchestrator.py mai întâi.")
-        return
-
-    # Alege posturile potrivite per grup (fără duplicate)
-    all_posts = {p["tip"]: p for p in posts_data["posts"]}
+    if not dry_run and not test_login_only:
+        posts_data = load_today_posts()
+        if not posts_data or not posts_data.get("posts"):
+            print("[poster] Nu există posturi generate pentru azi. Rulează orchestrator.py mai întâi.")
+            return
+        all_posts = {p["tip"]: p for p in posts_data["posts"]}
+    else:
+        all_posts = {}
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=False,  # vizibil — mai greu de detectat ca bot
+        # Profil persistent — nu mai apar cookie dialogs sau login
+        context = p.chromium.launch_persistent_context(
+            user_data_dir=str(PROFILE_DIR),
+            headless=False,
             args=["--disable-blink-features=AutomationControlled"],
-        )
-        context = browser.new_context(
             viewport={"width": 1280, "height": 900},
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
             locale="ro-RO",
         )
-
         page = context.new_page()
-        # Anti-bot: ascunde că suntem Playwright
         page.add_init_script("""
             Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
             Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
         """)
 
-        # Login sau restaurare sesiune
-        session_ok = restore_session(context)
-        if session_ok:
-            page.goto("https://www.facebook.com/", wait_until="domcontentloaded")
-            human_delay(2, 3)
-            if "login" in page.url:
-                session_ok = False
+        # Verifică că suntem logați
+        page.goto("https://www.facebook.com/", wait_until="domcontentloaded")
+        human_delay(2, 3)
 
-        if not session_ok:
-            ok = login_facebook(page, email, password)
-            if not ok:
-                browser.close()
-                return
+        if "login" in page.url:
+            print("[poster] ⚠️  Sesiunea a expirat. Rulează: python facebook_poster.py --login")
+            take_screenshot(page, "session_expired")
+            context.close()
+            return
+
+        print("[poster] ✅ Logat pe Facebook (profil persistent)")
 
         if test_login_only:
-            print("[poster] Test login OK!")
             take_screenshot(page, "login_test_ok")
-            browser.close()
+            print("[poster] Test login OK!")
+            context.close()
             return
 
         if dry_run:
             print("[poster] DRY-RUN — nu se postează")
-            browser.close()
+            context.close()
             return
 
         # Postare în grupuri
@@ -458,7 +497,7 @@ def run_poster(dry_run: bool = False, test_login_only: bool = False):
                 print(f"[poster] Aștept {delay:.0f}s până la următorul grup...")
                 time.sleep(delay)
 
-        browser.close()
+        context.close()
 
         # Salvare log
         LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -476,13 +515,16 @@ def run_poster(dry_run: bool = False, test_login_only: bool = False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Facebook Auto-Poster pentru ghidulreducerilor.ro")
-    parser.add_argument("--setup",    action="store_true", help="Configurare inițială")
+    parser.add_argument("--setup",    action="store_true", help="Configurare inițială (email/parolă/grupuri)")
+    parser.add_argument("--login",    action="store_true", help="Login interactiv — loghează-te manual în browser (prima dată)")
     parser.add_argument("--run",      action="store_true", help="Rulare postare")
-    parser.add_argument("--dry-run",  action="store_true", help="Test fără postare")
+    parser.add_argument("--dry-run",  action="store_true", help="Test fără postare (verifică login)")
     args = parser.parse_args()
 
     if args.setup:
         setup()
+    elif args.login:
+        login_interactive()
     elif args.run:
         run_poster(dry_run=False)
     elif args.dry_run:
