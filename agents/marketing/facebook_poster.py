@@ -347,41 +347,57 @@ def setup():
 # ─── Login interactiv (prima dată) ───────────────────────────────────────────
 
 def _auto_accept_cookies(page):
-    """Acceptă automat dialogul de cookies Facebook via JavaScript."""
-    time.sleep(2)
-    try:
-        page.evaluate("""
-            (function() {
-                // Caută buton cu text de acceptare
-                const texts = [
-                    'Permite toate modulele cookie',
-                    'Permite toate cookie-urile',
-                    'Allow all cookies',
-                    'Accept all',
-                    'Acceptă tot',
-                ];
-                const allButtons = Array.from(document.querySelectorAll('button, [role="button"]'));
-                for (const text of texts) {
-                    const btn = allButtons.find(b => b.textContent.trim().includes(text));
-                    if (btn) { btn.click(); return 'clicked: ' + text; }
-                }
-                // Fallback: ultimul buton din dialog care nu e "Gestionează"
-                const dialog = document.querySelector('[role="dialog"]');
-                if (dialog) {
-                    const btns = Array.from(dialog.querySelectorAll('button'));
-                    const accept = btns.find(b =>
-                        !b.textContent.includes('Gestion') &&
-                        !b.textContent.includes('Manage') &&
-                        !b.textContent.includes('Refuz') &&
-                        b.textContent.trim().length > 3
-                    );
-                    if (accept) { accept.click(); return 'fallback clicked'; }
-                }
-                return 'no button found';
-            })()
-        """)
-    except Exception:
-        pass
+    """Acceptă automat dialogul de cookies Facebook.
+    Scrollează dialogul la capăt (unde sunt butoanele) și dă click pe Accept."""
+
+    # Încearcă de mai multe ori — dialogul se poate încărca lent
+    for attempt in range(6):
+        time.sleep(1.5)
+        try:
+            # Varianta 1: Playwright locator direct pe text
+            for txt in ["Permite toate modulele cookie", "Permite toate cookie-urile", "Allow all cookies"]:
+                try:
+                    btn = page.get_by_text(txt, exact=True).first
+                    if btn.count() > 0:
+                        btn.scroll_into_view_if_needed(timeout=2000)
+                        btn.click(timeout=2000)
+                        print(f"[poster] ✅ Cookie acceptat: '{txt}'")
+                        return
+                except Exception:
+                    pass
+
+            # Varianta 2: scroll dialog la capăt + JS click
+            result = page.evaluate("""
+                (function() {
+                    // Scroll toate containerele scrollabile la capăt
+                    document.querySelectorAll('[role="dialog"]').forEach(d => {
+                        d.scrollTop = d.scrollHeight;
+                        d.querySelectorAll('*').forEach(el => {
+                            if (el.scrollHeight > el.clientHeight) el.scrollTop = el.scrollHeight;
+                        });
+                    });
+
+                    const keywords = ['Permite toate modulele cookie', 'Permite toate cookie', 'Allow all', 'Accept all'];
+                    const allEls = Array.from(document.querySelectorAll('button, [role="button"], a'));
+                    for (const kw of keywords) {
+                        const el = allEls.find(e => e.innerText && e.innerText.trim().includes(kw));
+                        if (el) {
+                            el.scrollIntoView({block:'center'});
+                            el.click();
+                            return 'js_clicked:' + kw;
+                        }
+                    }
+                    return 'not_found_attempt_' + arguments[0];
+                })(""" + str(attempt) + """)
+            """)
+
+            if result and "js_clicked" in str(result):
+                print(f"[poster] ✅ Cookie acceptat via JS: {result}")
+                return
+        except Exception:
+            pass
+
+    print("[poster] ⚠️  Cookie dialog nerezolvat după 6 încercări — continuăm oricum")
 
 
 def login_interactive():
