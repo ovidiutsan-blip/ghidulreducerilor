@@ -497,42 +497,17 @@ def login_interactive():
                 """)
                 print(f"[poster] Inputs gasiti: {inputs_debug}")
 
-                safe_email = email.replace("'", "\\'")
-                safe_pass = password.replace("'", "\\'")
-                filled = page.evaluate(f"""
-                    () => {{
-                        // Incearca mai multi selectori pentru email
-                        const ef = document.querySelector('#email')
-                                || document.querySelector('input[name="email"]')
-                                || document.querySelector('input[type="email"]')
-                                || document.querySelector('input[autocomplete="email"]')
-                                || document.querySelector('input[placeholder*="mail"]')
-                                || document.querySelector('input[placeholder*="mobil"]');
-                        // Incearca mai multi selectori pentru parola
-                        const pf = document.querySelector('#pass')
-                                || document.querySelector('input[name="pass"]')
-                                || document.querySelector('input[type="password"]');
-                        // Incearca mai multi selectori pentru butonul de login
-                        const lb = document.querySelector('[name="login"]')
-                                || document.querySelector('button[type="submit"]')
-                                || document.querySelector('input[type="submit"]')
-                                || Array.from(document.querySelectorAll('button')).find(b =>
-                                    b.textContent && b.textContent.toLowerCase().includes('conectare'));
-                        if (!ef || !pf || !lb) return 'MISSING:' + [!!ef,!!pf,!!lb].join(',');
-                        ef.value = '{safe_email}';
-                        ef.dispatchEvent(new Event('input', {{bubbles:true}}));
-                        ef.dispatchEvent(new Event('change', {{bubbles:true}}));
-                        pf.value = '{safe_pass}';
-                        pf.dispatchEvent(new Event('input', {{bubbles:true}}));
-                        pf.dispatchEvent(new Event('change', {{bubbles:true}}));
-                        lb.click();
-                        return 'OK';
-                    }}
-                """)
-                print(f"[poster] JS fill: {filled}")
+                # Folosim Playwright fill() cu selectori corecti (nu #email vechi)
+                EMAIL_SEL = 'input[name="email"]'
+                PASS_SEL  = 'input[name="pass"]'
 
-                if filled and filled.startswith("MISSING"):
-                    raise Exception(f"Campuri lipsa in DOM: {filled}")
+                page.fill(EMAIL_SEL, email, timeout=10000)
+                human_delay(0.5, 1)
+                page.fill(PASS_SEL, password, timeout=10000)
+                human_delay(0.5, 1)
+                # Submit via Enter pe campul parola (mai natural decat click buton)
+                page.locator(PASS_SEL).press("Return")
+                print("[poster] Credentiale trimise via Playwright fill + Enter")
 
                 page.wait_for_url("**/facebook.com/**", timeout=30000)
                 human_delay(2, 3)
