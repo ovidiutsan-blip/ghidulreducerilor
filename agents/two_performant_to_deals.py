@@ -364,17 +364,46 @@ def merge_deals(new_deals: list[dict], dry_run: bool = False,
         if expired:
             log(f"  Expired: {expired} 2P deals no longer in feed (reducere incheiata)")
 
-    # Only block re-import on ACTIVE deals — expired deals allow re-import from another source.
-    existing_urls = {d.get("product_url") or d.get("link_afiliat") for d in existing if d.get("activ", True)}
-    existing_ids  = {d.get("id") for d in existing}
+    # Index existing deals by product_url and id for O(1) lookup.
+    existing_by_url: dict[str, dict] = {}
+    existing_by_id:  dict[str, dict] = {}
+    for d in existing:
+        if d.get("product_url"):
+            existing_by_url[d["product_url"]] = d
+        if d.get("id"):
+            existing_by_id[d["id"]] = d
+
     added = 0
+    updated_links = 0
     for d in new_deals:
-        if d["product_url"] in existing_urls or d["id"] in existing_ids:
+        # Daca dealul exista deja (by product_url sau by id), actualizam link_afiliat
+        # si pretul (link-ul 2P contine un unique code care expira la fiecare feed refresh).
+        existing_deal = existing_by_url.get(d["product_url"]) or existing_by_id.get(d["id"])
+        if existing_deal:
+            old_link = existing_deal.get("link_afiliat", "")
+            new_link = d.get("link_afiliat", "")
+            if new_link and new_link != old_link:
+                existing_deal["link_afiliat"] = new_link
+                existing_deal["affiliate_url"] = new_link
+                # Re-activam dacă fusese marcat inactiv din cauza lipsei din feed anterior
+                if not existing_deal.get("activ", True):
+                    existing_deal["activ"] = True
+                    existing_deal["is_active"] = True
+                    existing_deal.pop("expired_at", None)
+                # Actualizăm și prețul (pot apărea promoții noi)
+                existing_deal["pret_redus"] = d["pret_redus"]
+                existing_deal["pret_original"] = d["pret_original"]
+                existing_deal["procent_reducere"] = d["procent_reducere"]
+                updated_links += 1
             continue
+        # Deal nou — adaugam
         existing.append(d)
-        existing_urls.add(d["product_url"])
-        existing_ids.add(d["id"])
+        existing_by_url[d["product_url"]] = d
+        existing_by_id[d["id"]] = d
         added += 1
+
+    if updated_links:
+        log(f"  Updated: {updated_links} link_afiliat-uri 2P reimprospatate (anti-expired)")
 
     existing.sort(key=lambda x: (not x.get("activ", True), -x.get("procent_reducere", 0)))
 
@@ -382,7 +411,7 @@ def merge_deals(new_deals: list[dict], dry_run: bool = False,
         with open(DEALS_PATH, "w", encoding="utf-8") as f:
             json.dump(existing, f, indent=2, ensure_ascii=False)
 
-    return {"added": added, "expired": expired, "total": len(existing)}
+    return {"added": added, "expired": expired, "updated_links": updated_links, "total": len(existing)}
 
 
 # ─── Probe mode ──────────────────────────────────────────────────────────────
