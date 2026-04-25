@@ -275,13 +275,49 @@ def login_interactive():
 
 # ─── Postare pin ──────────────────────────────────────────────────────────────
 
+def download_image_temp(url: str) -> Optional[str]:
+    """Descarcă imaginea în temp, o redimensionează la min 800x1200px și returnează calea."""
+    import tempfile, urllib.request, os
+    try:
+        suffix = ".jpg"
+        tmp = tempfile.NamedTemporaryFile(delete=False, suffix=suffix)
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as r, open(tmp.name, "wb") as f:
+            f.write(r.read())
+
+        # Redimensionează la min 800x1200 (format Pinterest 2:3)
+        try:
+            from PIL import Image
+            img = Image.open(tmp.name).convert("RGB")
+            w, h = img.size
+            MIN_W, MIN_H = 800, 1200
+            if w < MIN_W or h < MIN_H:
+                # Upscale la dimensiunea minimă Pinterest
+                scale = max(MIN_W / w, MIN_H / h)
+                new_w = max(int(w * scale), MIN_W)
+                new_h = max(int(h * scale), MIN_H)
+                img = img.resize((new_w, new_h), Image.LANCZOS)
+                print(f"[pinterest] Imagine redimensionată: {w}x{h} → {new_w}x{new_h}")
+            img.save(tmp.name, "JPEG", quality=90)
+        except ImportError:
+            print("[pinterest] Pillow nu e instalat — imagine fără resize")
+        except Exception as re:
+            print(f"[pinterest] Resize: {re}")
+
+        return tmp.name
+    except Exception as e:
+        print(f"[pinterest] Download imagine eșuat: {e}")
+        return None
+
+
 def post_pin(page, deal: dict, dry_run: bool = False) -> bool:
-    """Postează un pin pe Pinterest."""
+    """Postează un pin pe Pinterest — UI românesc, upload fișier."""
     board = board_for_deal(deal)
     title = pin_title(deal)
     desc  = pin_description(deal)
     link  = deal_link(deal)
-    image = deal.get("imagine_url") or deal.get("image") or ""
+    image_url = deal.get("imagine_url") or deal.get("image") or ""
     titlu_short = (deal.get("titlu") or deal.get("title") or "")[:30]
 
     print(f"\n[pinterest] → Pin: {titlu_short}...")
@@ -292,116 +328,120 @@ def post_pin(page, deal: dict, dry_run: bool = False) -> bool:
         print(f"[pinterest] DRY-RUN — skip postare")
         return True
 
+    import tempfile, os
+    tmp_image = None
+
     try:
         # Navighează la creator
         page.goto("https://www.pinterest.com/pin-creation-tool/", wait_until="domcontentloaded")
         human_delay(3, 5)
 
         if "login" in page.url:
-            print("[pinterest] ⚠️  Sesiunea a expirat. Rulează --login")
+            print("[pinterest] ⚠️  Sesiunea a expirat. Rulează --login-auto")
             return False
 
-        # ── Upload imagine (via URL) sau din imagine_url ──────────────────────
-        # Pinterest permite upload via URL din interfață
-        # Așteptăm să apară câmpul de upload
-        try:
-            # Încearcă să găsească câmpul "URL imagine" sau "pin from website"
-            page.wait_for_selector('[data-test-id="pin-draft-image-upload"]', timeout=8000)
-        except Exception:
-            pass
+        # ── Upload imagine ─────────────────────────────────────────────────────
+        if image_url:
+            tmp_image = download_image_temp(image_url)
 
-        # Fallback: "Salvează de pe site" — introduce URL-ul direct
-        save_btn_selectors = [
-            'button:has-text("Salvează dintr-un site")',
-            'button:has-text("Save from site")',
-            '[data-test-id="storybook-pin-creation-save-from-url"]',
-        ]
-        for sel in save_btn_selectors:
+        if tmp_image and os.path.exists(tmp_image):
+            # Caută input[type="file"] (poate fi ascuns)
             try:
-                if page.locator(sel).is_visible(timeout=2000):
-                    page.locator(sel).click()
-                    human_delay(1, 2)
-                    break
-            except Exception:
-                continue
-
-        # Introduce URL-ul de imagine în câmpul de URL
-        url_input_selectors = [
-            'input[placeholder*="imagine"]',
-            'input[placeholder*="image"]',
-            'input[placeholder*="URL"]',
-            '[data-test-id="pin-draft-image-url-input"] input',
-        ]
-        image_url_entered = False
-        if image:
-            for sel in url_input_selectors:
-                try:
-                    inp = page.locator(sel).first
-                    if inp.is_visible(timeout=2000):
-                        inp.fill(image, timeout=3000)
-                        human_delay(0.5, 1)
-                        image_url_entered = True
-                        break
-                except Exception:
-                    continue
+                file_input = page.locator('input[type="file"]').first
+                file_input.set_input_files(tmp_image)
+                print(f"[pinterest] ✅ Imagine uploadată: {os.path.basename(tmp_image)}")
+                human_delay(3, 5)  # așteptare procesare imagine
+            except Exception as e:
+                print(f"[pinterest] Upload imagine: {e}")
+        else:
+            print(f"[pinterest] ⚠️  Nicio imagine disponibilă pentru upload")
 
         # ── Titlu ──────────────────────────────────────────────────────────────
+        title_filled = False
         title_selectors = [
+            '[placeholder="Adaugă un titlu"]',
             '[placeholder="Adaugă titlu"]',
             '[placeholder="Add a title"]',
             '[data-test-id="pin-draft-title"] input',
+            '[data-test-id="pin-draft-title"] [contenteditable]',
             'input[name="title"]',
         ]
         for sel in title_selectors:
             try:
                 el = page.locator(sel).first
-                if el.is_visible(timeout=3000):
+                if el.is_visible(timeout=2000):
                     el.click()
-                    el.fill(title[:100])
+                    human_delay(0.3, 0.5)
+                    page.keyboard.press("Control+a")
+                    page.keyboard.type(title[:100], delay=30)
+                    title_filled = True
+                    print(f"[pinterest] ✅ Titlu setat")
                     break
             except Exception:
                 continue
+        if not title_filled:
+            print(f"[pinterest] ⚠️  Titlu negăsit")
         human_delay(0.5, 1)
 
         # ── Descriere ──────────────────────────────────────────────────────────
+        desc_filled = False
         desc_selectors = [
+            '[placeholder="Adaugă o descriere detaliată"]',
             '[placeholder="Spune mai multe despre Pin-ul tău"]',
             '[placeholder="Tell everyone what your Pin is about"]',
             '[data-test-id="pin-draft-description"] textarea',
+            '[data-test-id="pin-draft-description"] [contenteditable]',
             'textarea[name="description"]',
+            'div[data-test-id="pin-draft-description"] [contenteditable]',
         ]
         for sel in desc_selectors:
             try:
                 el = page.locator(sel).first
-                if el.is_visible(timeout=3000):
+                if el.is_visible(timeout=2000):
                     el.click()
-                    el.fill(desc[:500])
+                    human_delay(0.3, 0.5)
+                    page.keyboard.press("Control+a")
+                    page.keyboard.type(desc[:500], delay=20)
+                    desc_filled = True
+                    print(f"[pinterest] ✅ Descriere setată")
                     break
             except Exception:
                 continue
+        if not desc_filled:
+            print(f"[pinterest] ⚠️  Descriere negăsită")
         human_delay(0.5, 1)
 
         # ── Link destinație ────────────────────────────────────────────────────
+        link_filled = False
         link_selectors = [
             '[placeholder="Adaugă un link"]',
             '[placeholder="Add a link"]',
             '[data-test-id="pin-draft-link"] input',
             'input[name="link"]',
+            'input[placeholder*="link" i]',
         ]
         for sel in link_selectors:
             try:
                 el = page.locator(sel).first
-                if el.is_visible(timeout=3000):
+                if el.is_visible(timeout=2000):
                     el.click()
-                    el.fill(link)
+                    human_delay(0.3, 0.5)
+                    page.keyboard.press("Control+a")
+                    page.keyboard.type(link, delay=20)
+                    link_filled = True
+                    print(f"[pinterest] ✅ Link setat")
                     break
             except Exception:
                 continue
+        if not link_filled:
+            print(f"[pinterest] ⚠️  Link negăsit")
         human_delay(0.5, 1)
 
-        # ── Selectare board ────────────────────────────────────────────────────
+        # ── Selectare / Creare board ───────────────────────────────────────────
         board_selectors = [
+            'div[data-test-id="board-dropdown-select-button"]',
             '[data-test-id="board-dropdown-select-button"]',
+            'button:has-text("Alege un panou")',
             'button:has-text("Alege un board")',
             'button:has-text("Choose a board")',
         ]
@@ -411,51 +451,104 @@ def post_pin(page, deal: dict, dry_run: bool = False) -> bool:
                 el = page.locator(sel).first
                 if el.is_visible(timeout=3000):
                     el.click()
-                    human_delay(1, 2)
+                    human_delay(2, 3)
                     board_opened = True
+                    print(f"[pinterest] Board dropdown deschis")
                     break
             except Exception:
                 continue
 
         if board_opened:
-            # Caută board-ul după nume
-            try:
-                page.get_by_text(board, exact=False).first.click(timeout=5000)
-                human_delay(1, 2)
-            except Exception:
-                # Fallback: primul board disponibil
+            board_found = False
+
+            # Caută board-ul specific
+            for board_name in [board, "Reduceri România — GhidulReducerilor", "Reduceri"]:
                 try:
-                    page.locator('[data-test-id="board-row"]').first.click(timeout=3000)
-                    human_delay(1, 2)
+                    board_el = page.get_by_text(board_name, exact=False).first
+                    if board_el.is_visible(timeout=2000):
+                        board_el.click()
+                        board_found = True
+                        human_delay(1, 2)
+                        print(f"[pinterest] ✅ Board selectat: {board_name}")
+                        break
+                except Exception:
+                    continue
+
+            if not board_found:
+                # Încearcă primul board disponibil
+                try:
+                    first_board = page.locator(
+                        '[data-test-id="board-row"], [data-test-id="boardWithoutSection"], '
+                        '[data-test-id="board-list-item"]'
+                    ).first
+                    if first_board.is_visible(timeout=3000):
+                        first_board.click()
+                        board_found = True
+                        human_delay(1, 2)
+                        print(f"[pinterest] ✅ Primul board selectat")
                 except Exception:
                     pass
 
+            if not board_found:
+                # Creează un board nou: "Reduceri România"
+                print(f"[pinterest] Niciun board găsit — creez 'Reduceri România'...")
+                try:
+                    create_btn = page.locator('button:has-text("Creează panou"), button:has-text("Create board")').first
+                    if create_btn.is_visible(timeout=3000):
+                        create_btn.click()
+                        human_delay(2, 3)
+                        # Completează numele board-ului
+                        name_input = page.locator('input[placeholder*="panou" i], input[placeholder*="board" i], input[name="boardName"]').first
+                        if name_input.is_visible(timeout=3000):
+                            name_input.fill("Reduceri România — GhidulReducerilor")
+                            human_delay(1, 2)
+                            # Click Create / Crează
+                            confirm_btn = page.locator('button:has-text("Creează"), button:has-text("Create"), button[type="submit"]').last
+                            confirm_btn.click()
+                            human_delay(2, 3)
+                            print(f"[pinterest] ✅ Board 'Reduceri România' creat")
+                except Exception as be:
+                    print(f"[pinterest] Create board: {be}")
+        else:
+            print(f"[pinterest] ⚠️  Board dropdown negăsit — continuăm fără board")
+
+        human_delay(1, 2)
         # Screenshot înainte de publicare
         take_screenshot(page, f"before_pin_{titlu_short.replace(' ', '_')[:20]}")
 
         # ── Publică ────────────────────────────────────────────────────────────
         publish_selectors = [
-            'button:has-text("Publică")',
-            'button:has-text("Publish")',
             '[data-test-id="board-dropdown-save-button"]',
+            '[data-test-id="pin-draft-save-button"]',
+            'button:has-text("Publică")',
+            'button:has-text("Salvează")',
+            'button:has-text("Publish")',
+            'button:has-text("Save")',
         ]
         published = False
         for sel in publish_selectors:
             try:
                 btn = page.locator(sel).last
                 if btn.is_visible(timeout=3000):
+                    # Verifică dacă e disabled
+                    disabled = btn.get_attribute("disabled")
+                    aria_disabled = btn.get_attribute("aria-disabled")
+                    if disabled is not None or aria_disabled == "true":
+                        print(f"[pinterest] Buton '{sel}' e disabled — skip")
+                        continue
                     btn.click()
                     published = True
+                    print(f"[pinterest] ✅ Buton Publică apăsat")
                     break
             except Exception:
                 continue
 
         if not published:
-            print(f"[pinterest] ⚠️  Butonul Publică negăsit")
+            print(f"[pinterest] ⚠️  Butonul Publică negăsit sau disabled")
             take_screenshot(page, f"no_publish_btn_{titlu_short[:15]}")
             return False
 
-        human_delay(3, 5)
+        human_delay(4, 6)
         take_screenshot(page, f"pin_posted_{titlu_short.replace(' ', '_')[:20]}")
         print(f"[pinterest] ✅ Pin publicat în board '{board}'")
         return True
@@ -467,6 +560,150 @@ def post_pin(page, deal: dict, dry_run: bool = False) -> bool:
         except Exception:
             pass
         return False
+    finally:
+        if tmp_image:
+            try:
+                os.unlink(tmp_image)
+            except Exception:
+                pass
+
+
+# ─── Login automat (fără Enter manual) ───────────────────────────────────────
+
+def login_auto():
+    """
+    Login complet automat Pinterest folosind Chrome real (nu Chromium).
+    Completează email+parolă, apasă Conectează-te, salvează sesiunea automat.
+    Dacă contul e Google-only, încearcă și Google OAuth flow.
+    """
+    from playwright.sync_api import sync_playwright
+
+    cfg = load_config()
+    email    = cfg.get("email", "")
+    password = cfg.get("password", "")
+
+    # Șterge profilul vechi (sesiune invalidă)
+    import shutil
+    if PROFILE_DIR.exists():
+        shutil.rmtree(PROFILE_DIR, ignore_errors=True)
+    PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+
+    print("\n=== LOGIN PINTEREST (AUTO, Chrome real) ===")
+    print(f"Email: {email}")
+
+    with sync_playwright() as p:
+        # Folosim Chrome-ul real instalat — Google nu îl blochează ca bot
+        try:
+            ctx = p.chromium.launch_persistent_context(
+                user_data_dir=str(PROFILE_DIR),
+                headless=False,
+                channel="chrome",          # Chrome real, nu Chromium
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-first-run",
+                    "--no-default-browser-check",
+                ],
+                viewport={"width": 1280, "height": 900},
+                locale="ro-RO",
+            )
+        except Exception:
+            # Fallback la Chromium dacă Chrome nu e găsit
+            print("[pinterest] Chrome real negăsit, folosesc Chromium...")
+            ctx = p.chromium.launch_persistent_context(
+                user_data_dir=str(PROFILE_DIR),
+                headless=False,
+                args=["--disable-blink-features=AutomationControlled"],
+                viewport={"width": 1280, "height": 900},
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                locale="ro-RO",
+            )
+
+        page = ctx.new_page()
+        page.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+            window.chrome = { runtime: {} };
+        """)
+
+        # 1. Navighează la login
+        print("[pinterest] Navighează la login...")
+        page.goto("https://www.pinterest.com/login/", wait_until="domcontentloaded")
+        human_delay(3, 5)
+
+        # 2. Completează email
+        try:
+            page.wait_for_selector('input[name="id"]', timeout=10000)
+            page.fill('input[name="id"]', email)
+            human_delay(1, 2)
+            page.fill('input[name="password"]', password)
+            human_delay(1, 2)
+            # Click Conectează-te
+            page.locator('button[type="submit"]').click()
+            print("[pinterest] Apăsat Conectează-te, aștept redirect...")
+            human_delay(4, 6)
+        except Exception as e:
+            print(f"[pinterest] Auto-fill: {e}")
+
+        # 3. Dacă tot pe login, încearcă Google OAuth
+        if "login" in page.url or "/login" in page.url:
+            print("[pinterest] Email/parolă nu a funcționat. Încerc Google OAuth...")
+            try:
+                google_btn = page.locator('button:has-text("Google"), [data-test-id*="google"], div[role="button"]:has-text("Google")')
+                if google_btn.first.is_visible(timeout=3000):
+                    google_btn.first.click()
+                    print("[pinterest] Apăsat Continuă cu Google...")
+                    human_delay(3, 5)
+                    # Google OAuth: completează email pe pagina Google
+                    if "google.com" in page.url or "accounts.google" in page.url:
+                        try:
+                            page.fill('input[type="email"]', email, timeout=8000)
+                            page.keyboard.press("Enter")
+                            human_delay(2, 3)
+                            page.fill('input[type="password"]', password, timeout=8000)
+                            page.keyboard.press("Enter")
+                            human_delay(4, 6)
+                        except Exception as ge:
+                            print(f"[pinterest] Google form: {ge}")
+            except Exception as e:
+                print(f"[pinterest] Google OAuth: {e}")
+
+        # 4. Așteptare confirmare login (max 2 minute)
+        # Verifică TOATE paginile/tab-urile din context (Google OAuth deschide tab nou)
+        print("[pinterest] Verific sesiunea pe toate tab-urile...")
+        logged_in = False
+        for i in range(60):
+            time.sleep(2)
+            try:
+                all_pages = ctx.pages
+                for pg in all_pages:
+                    url = pg.url
+                    if not url or url in ("about:blank", "chrome://newtab/"):
+                        continue
+                    if "login" in url or "/login" in url:
+                        continue
+                    if "google.com" in url or "accounts.google" in url:
+                        continue
+                    # E o pagină Pinterest, nu login
+                    if "pinterest.com" in url:
+                        logged_in = True
+                        print(f"\n[pinterest] ✅ LOGIN REUȘIT! URL: {url}")
+                        break
+                if logged_in:
+                    break
+                if i % 10 == 0 and i > 0:
+                    urls = [pg.url for pg in ctx.pages]
+                    print(f"[pinterest] Aștept... ({i*2}s) tab-uri: {urls}")
+            except Exception:
+                pass
+
+        if logged_in:
+            human_delay(3, 4)
+            take_screenshot(page, "login_auto_ok")
+            print(f"[pinterest] ✅ Sesiune salvată în: {PROFILE_DIR}")
+        else:
+            take_screenshot(page, "login_auto_failed")
+            print(f"[pinterest] ⚠️  Login nereușit. Screenshot salvat în logs/pinterest/")
+
+        ctx.close()
 
 
 # ─── Setup ────────────────────────────────────────────────────────────────────
@@ -539,22 +776,43 @@ def run(dry_run: bool = False):
 
     results = []
     with sync_playwright() as p:
-        ctx = p.chromium.launch_persistent_context(
-            user_data_dir=str(PROFILE_DIR),
-            headless=False,
-            args=["--disable-blink-features=AutomationControlled"],
-            viewport={"width": 1280, "height": 900},
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-            locale="ro-RO",
-        )
+        # Folosim Chrome real (același cu login_auto) pentru compatibilitate profil
+        try:
+            ctx = p.chromium.launch_persistent_context(
+                user_data_dir=str(PROFILE_DIR),
+                headless=False,
+                channel="chrome",
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-first-run",
+                    "--no-default-browser-check",
+                ],
+                viewport={"width": 1280, "height": 900},
+                locale="ro-RO",
+            )
+        except Exception:
+            ctx = p.chromium.launch_persistent_context(
+                user_data_dir=str(PROFILE_DIR),
+                headless=False,
+                args=["--disable-blink-features=AutomationControlled"],
+                viewport={"width": 1280, "height": 900},
+                locale="ro-RO",
+            )
         page = ctx.new_page()
         page.add_init_script("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });")
 
         # Verifică sesiunea
         page.goto("https://www.pinterest.com/", wait_until="domcontentloaded")
         human_delay(2, 3)
-        if "login" in page.url:
-            print("[pinterest] ⚠️  Sesiunea Pinterest a expirat. Rulează: --login")
+        content = page.content()
+        # Detectează pagina de landing (nelogat) după elemente specifice
+        not_logged_in = any(kw in content for kw in [
+            "Conectează-te", "Log in", "Sign up", "Înregistrează-te",
+            "Găsește-ți", "Find your next", "create-account",
+        ])
+        if not_logged_in or "login" in page.url or "/login" in page.url:
+            print("[pinterest] ⚠️  Sesiunea Pinterest a expirat sau nu ești logat.")
+            print("[pinterest]    Rulează: python agents/marketing/pinterest_agent.py --login")
             ctx.close()
             return
 
@@ -600,16 +858,19 @@ def run(dry_run: bool = False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Pinterest Auto-Poster — ghidulreducerilor.ro")
-    parser.add_argument("--setup",   action="store_true", help="Configurare inițială")
-    parser.add_argument("--login",   action="store_true", help="Login interactiv (prima dată)")
-    parser.add_argument("--run",     action="store_true", help="Postare pin-uri")
-    parser.add_argument("--dry-run", action="store_true", help="Test fără postare (arată deals selectate)")
+    parser.add_argument("--setup",      action="store_true", help="Configurare inițială")
+    parser.add_argument("--login",      action="store_true", help="Login interactiv (cu Enter manual)")
+    parser.add_argument("--login-auto", action="store_true", help="Login cu auto-save când detectează sesiune")
+    parser.add_argument("--run",        action="store_true", help="Postare pin-uri")
+    parser.add_argument("--dry-run",    action="store_true", help="Test fără postare (arată deals selectate)")
     args = parser.parse_args()
 
     if args.setup:
         setup()
     elif args.login:
         login_interactive()
+    elif args.login_auto:
+        login_auto()
     elif args.run:
         run(dry_run=False)
     elif args.dry_run:
