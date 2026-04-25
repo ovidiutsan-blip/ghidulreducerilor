@@ -124,11 +124,18 @@ def check_link(session: requests.Session, deal: dict) -> dict:
         result['final_url'] = response.url
 
         if response.status_code == 200:
-            result['status'] = 'ok'
-            # Verifică dacă e pagina produsului (URL final conține cuvinte cheie produse)
             final_url_lower = response.url.lower()
-            product_indicators = ['product', 'p/', '/produs/', 'item', 'pd/', 'detail']
-            result['is_product_page'] = any(ind in final_url_lower for ind in product_indicators)
+
+            # Detectează link-uri 2Performant expirate (redirect spre businessleague)
+            if 'notoolerror' in final_url_lower or 'businessleague.2performant' in final_url_lower:
+                result['status'] = 'expired'
+                result['final_url'] = response.url
+                logger.warning(f"Link 2Performant expirat: {deal_id} → {response.url}")
+            else:
+                result['status'] = 'ok'
+                # Verifică dacă e pagina produsului (URL final conține cuvinte cheie produse)
+                product_indicators = ['product', 'p/', '/produs/', 'item', 'pd/', 'detail']
+                result['is_product_page'] = any(ind in final_url_lower for ind in product_indicators)
 
         elif response.status_code == 404:
             result['status'] = 'not_found'
@@ -187,7 +194,7 @@ def update_deal_link_status(deal: dict, check_result: dict) -> dict:
     deal['link_status'] = check_result['status']
     deal['link_checked_at'] = check_result['checked_at']
 
-    if check_result['status'] in ['not_found', 'server_error', 'connection_error']:
+    if check_result['status'] in ['not_found', 'server_error', 'connection_error', 'expired']:
         # Marchează deal ca inactiv dacă link-ul nu mai funcționează (EN + RO sync)
         deal['is_active'] = False
         deal['activ'] = False  # sync frontend
@@ -248,12 +255,13 @@ def run_checks(deals: list, mode: str = 'full', deal_id: Optional[str] = None) -
 
                 if result['status'] == 'ok':
                     ok_count += 1
-                elif result['status'] in ['not_found', 'server_error', 'connection_error', 'too_many_redirects']:
+                elif result['status'] in ['not_found', 'server_error', 'connection_error', 'too_many_redirects', 'expired']:
                     broken_deals.append({
                         'id': deal.get('id'),
                         'title': deal.get('title', ''),
                         'url': result['url'],
-                        'status': result['status']
+                        'status': result['status'],
+                        'final_url': result.get('final_url', '')
                     })
                     logger.warning(f"Link mort: {deal.get('id')} [{result['status']}]")
 
