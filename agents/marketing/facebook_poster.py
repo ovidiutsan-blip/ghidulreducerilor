@@ -489,13 +489,35 @@ def login_interactive():
             # (funcționează chiar dacă dialogul cookie e deasupra formularului)
             take_screenshot(page, "login_before_fill")
             try:
+                # Debug: listează toate input-urile din pagină
+                inputs_debug = page.evaluate("""
+                    () => Array.from(document.querySelectorAll('input')).map(i =>
+                        ({id:i.id, name:i.name, type:i.type, placeholder:i.placeholder})
+                    )
+                """)
+                print(f"[poster] Inputs gasiti: {inputs_debug}")
+
                 safe_email = email.replace("'", "\\'")
                 safe_pass = password.replace("'", "\\'")
                 filled = page.evaluate(f"""
                     () => {{
-                        const ef = document.querySelector('#email');
-                        const pf = document.querySelector('#pass');
-                        const lb = document.querySelector('[name="login"]');
+                        // Incearca mai multi selectori pentru email
+                        const ef = document.querySelector('#email')
+                                || document.querySelector('input[name="email"]')
+                                || document.querySelector('input[type="email"]')
+                                || document.querySelector('input[autocomplete="email"]')
+                                || document.querySelector('input[placeholder*="mail"]')
+                                || document.querySelector('input[placeholder*="mobil"]');
+                        // Incearca mai multi selectori pentru parola
+                        const pf = document.querySelector('#pass')
+                                || document.querySelector('input[name="pass"]')
+                                || document.querySelector('input[type="password"]');
+                        // Incearca mai multi selectori pentru butonul de login
+                        const lb = document.querySelector('[name="login"]')
+                                || document.querySelector('button[type="submit"]')
+                                || document.querySelector('input[type="submit"]')
+                                || Array.from(document.querySelectorAll('button')).find(b =>
+                                    b.textContent && b.textContent.toLowerCase().includes('conectare'));
                         if (!ef || !pf || !lb) return 'MISSING:' + [!!ef,!!pf,!!lb].join(',');
                         ef.value = '{safe_email}';
                         ef.dispatchEvent(new Event('input', {{bubbles:true}}));
