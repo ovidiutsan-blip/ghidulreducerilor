@@ -16,9 +16,13 @@ import sys
 import requests
 from pathlib import Path
 from datetime import datetime
+from dotenv import load_dotenv
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
+
+# Încarcă .env din rădăcina repo-ului
+load_dotenv(Path(__file__).parent.parent.parent / ".env")
 
 BASE       = Path(__file__).parent.parent.parent
 DEALS_PATH = BASE / "data" / "deals.json"
