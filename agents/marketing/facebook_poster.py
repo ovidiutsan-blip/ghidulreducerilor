@@ -506,7 +506,7 @@ def login_interactive():
                 page.fill(PASS_SEL, password, timeout=10000)
                 human_delay(0.5, 1)
                 # Submit via Enter pe campul parola (mai natural decat click buton)
-                page.locator(PASS_SEL).press("Return")
+                page.locator(PASS_SEL).press("Enter")
                 print("[poster] Credentiale trimise via Playwright fill + Enter")
 
                 page.wait_for_url("**/facebook.com/**", timeout=30000)
