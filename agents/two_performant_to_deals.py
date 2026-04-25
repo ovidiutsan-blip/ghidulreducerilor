@@ -4,17 +4,18 @@ Pentru fiecare program aprobat, fetch paginated /affiliate/programs/{unique_code
 filtreaza produsele cu reducere reala (sale_price < price), mapeaza la Deal schema,
 merge in deals.json (dedupe by product_url + id).
 
-Auth: DeviseTokenAuth (access-token / client / uid headers).
-Credentials (din env / .env):
-  TWO_PERFORMANT_ACCESS_TOKEN  = access-token din cookie auth_headers
-  TWO_PERFORMANT_CLIENT_ID     = client din cookie auth_headers
-  TWO_PERFORMANT_UID           = uid (email) din cookie auth_headers
+Auth: DeviseTokenAuth — auto-login cu email+parola sau token static.
+Credentials (din env / GitHub Secrets):
+  TWO_PERFORMANT_EMAIL         = email cont (stabil, nu expira) — RECOMANDAT
+  TWO_PERFORMANT_PASSWORD      = parola cont (stabila, nu expira) — RECOMANDAT
+  --- SAU ---
+  TWO_PERFORMANT_ACCESS_TOKEN  = token temporar (expira ~14 zile)
+  TWO_PERFORMANT_CLIENT_ID     = client id temporar
+  TWO_PERFORMANT_UID           = uid (email)
   TWO_PERFORMANT_MARKETER_CODE = aff_code pentru quicklinks (d8b71657a)
 
-Reimprospatare credentials: expira dupa ~14 zile. Extrage din browser:
-  1. Mergi la businessleague.2performant.com (logat)
-  2. DevTools > Application > Cookies > auth_headers
-  3. Actualizeaza secretele GitHub: TWO_PERFORMANT_ACCESS_TOKEN, TWO_PERFORMANT_CLIENT_ID
+Daca sunt setati EMAIL+PASSWORD, scriptul se auto-logheaza la fiecare run.
+Nu mai e nevoie sa reimprospatezi manual tokenul.
 
 Rulare:
   python agents/two_performant_to_deals.py           # full import
@@ -36,10 +37,17 @@ def _clean_env(key: str, default: str = "") -> str:
     """Get env var, stripping BOM and whitespace (gh secret set via echo can prepend BOM)."""
     return os.getenv(key, default).lstrip("\ufeff").strip()
 
+EMAIL        = _clean_env("TWO_PERFORMANT_EMAIL")
+PASSWORD     = _clean_env("TWO_PERFORMANT_PASSWORD")
 ACCESS_TOKEN = _clean_env("TWO_PERFORMANT_ACCESS_TOKEN")
 CLIENT_ID    = _clean_env("TWO_PERFORMANT_CLIENT_ID")
 UID          = _clean_env("TWO_PERFORMANT_UID", "ovidiutsan@yahoo.com")
 AFF_CODE     = _clean_env("TWO_PERFORMANT_MARKETER_CODE", "d8b71657a")
+
+# Sesiune auth — populata la primul apel auth_headers()
+_session_token: str = ACCESS_TOKEN
+_session_client: str = CLIENT_ID
+_session_uid: str = UID
 
 BASE            = Path(__file__).resolve().parent.parent
 DEALS_PATH      = BASE / "data" / "deals.json"
@@ -69,18 +77,41 @@ TARGETS = _load_targets()
 # ]
 
 # ─── Auth (DeviseTokenAuth) ───────────────────────────────────────────────────
-def auth_headers() -> dict:
-    if not ACCESS_TOKEN or not CLIENT_ID:
+def _login() -> None:
+    """Auto-login cu email+parola. Populeaza sesiunea globala."""
+    global _session_token, _session_client, _session_uid
+    if not EMAIL or not PASSWORD:
         raise ValueError(
-            "TWO_PERFORMANT_ACCESS_TOKEN / TWO_PERFORMANT_CLIENT_ID nu sunt setate. "
-            "Extrage din cookie auth_headers pe businessleague.2performant.com si "
-            "seteaza ca GitHub Secrets."
+            "Lipsesc credentials 2Performant. Seteaza GitHub Secrets:\n"
+            "  TWO_PERFORMANT_EMAIL + TWO_PERFORMANT_PASSWORD  (recomandat, stabile)\n"
+            "  sau TWO_PERFORMANT_ACCESS_TOKEN + TWO_PERFORMANT_CLIENT_ID (expira ~14 zile)"
         )
+    print("[auth] Auto-login cu TWO_PERFORMANT_EMAIL...")
+    resp = requests.post(
+        f"{API_BASE}/users/sign_in",
+        json={"user": {"email": EMAIL, "password": PASSWORD}},
+        headers={"Accept": "application/json", "Content-Type": "application/json"},
+        timeout=20,
+    )
+    resp.raise_for_status()
+    _session_token  = resp.headers.get("access-token", "")
+    _session_client = resp.headers.get("client", "")
+    _session_uid    = resp.headers.get("uid", EMAIL)
+    if not _session_token:
+        raise ValueError(f"Login reusit (HTTP {resp.status_code}) dar access-token absent din headers.")
+    print(f"[auth] Login OK — uid={_session_uid}, token={_session_token[:8]}...")
+
+
+def auth_headers() -> dict:
+    global _session_token, _session_client, _session_uid
+    # Daca nu avem token valid, incercam auto-login cu email+parola
+    if not _session_token or not _session_client:
+        _login()
     return {
-        "access-token": ACCESS_TOKEN,
+        "access-token": _session_token,
         "token-type":   "Bearer",
-        "client":       CLIENT_ID,
-        "uid":          UID,
+        "client":       _session_client,
+        "uid":          _session_uid,
         "Accept":       "application/json",
         "Content-Type": "application/json",
     }
@@ -506,15 +537,14 @@ def main():
 
     mode_str = "[LIST-PROGRAMS]" if list_mode else "[PROBE]" if probe_mode else "[DRY-RUN]" if dry_run else ""
     log(f"=== 2Performant Import {mode_str} ===")
-    log(f"ACCESS_TOKEN: {'set (' + str(len(ACCESS_TOKEN)) + ' chars)' if ACCESS_TOKEN else 'NOT SET ⚠️'}")
-    log(f"CLIENT_ID:    {'set (' + str(len(CLIENT_ID)) + ' chars)' if CLIENT_ID else 'NOT SET ⚠️'}")
-    log(f"UID:          {UID}")
-    log(f"AFF_CODE:     {AFF_CODE}")
-
-    if not ACCESS_TOKEN or not CLIENT_ID:
-        log("ABORT: Seteaza TWO_PERFORMANT_ACCESS_TOKEN si TWO_PERFORMANT_CLIENT_ID.")
-        log("Extrage din: businessleague.2performant.com > DevTools > Cookies > auth_headers")
+    if EMAIL and PASSWORD:
+        log(f"AUTH:         auto-login cu EMAIL ({EMAIL})")
+    elif ACCESS_TOKEN and CLIENT_ID:
+        log(f"AUTH:         token static (access-token set, {len(ACCESS_TOKEN)} chars)")
+    else:
+        log("ABORT: Seteaza TWO_PERFORMANT_EMAIL + TWO_PERFORMANT_PASSWORD in GitHub Secrets.")
         sys.exit(1)
+    log(f"AFF_CODE:     {AFF_CODE}")
 
     if list_mode:
         list_programs()
