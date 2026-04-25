@@ -193,7 +193,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#F57C00',
     heroIntro:
       'Renovarea casei sau amenajarea grădinii pot costa un salariu întreg — sau pot costa cu 30% mai puțin dacă știi când și de unde să cumperi. MatHaus (specializat în materiale de construcții și amenajări DIY), Fornello (instalații termice, sanitare, calorifere, centrale, panouri solare) și eMAG (mobilier, unelte, electrocasnice) acoperă împreună toată gama de nevoi.\n\nLa GhidulReducerilor.ro urmărim campaniile sezoniere (primăvară-vară pentru grădină, toamnă-iarnă pentru instalații termice) și identificăm ofertele cu discount real. MatHaus are reduceri cumulate la cantități mari (ex. -10% la comenzi peste 2.000 lei pe lânga reducerile individuale), iar Fornello oferă adesea pachete centrală + calorifere + montaj cu discount de 15-20%. Livrarea e gratuită la multe produse voluminoase (centrale termice, panouri solare) și toate produsele au garanție legală + garanție de producător.',
-    storeSlugs: ['alecoair', 'case-smart', 'fornello', 'hotpick', 'mathaus', 'novodoors', 'scule365', 'techstar'],
+    storeSlugs: ['alecoair', 'case-smart', 'fornello', 'hotpick', 'mathaus', 'novodoors', 'techstar'],
     dealCategories: ['casa-gradina'],
     faq: [
       {
