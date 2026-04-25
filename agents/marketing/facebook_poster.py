@@ -346,16 +346,62 @@ def setup():
 
 # ─── Login interactiv (prima dată) ───────────────────────────────────────────
 
+def _auto_accept_cookies(page):
+    """Acceptă automat dialogul de cookies Facebook via JavaScript."""
+    time.sleep(2)
+    try:
+        page.evaluate("""
+            (function() {
+                // Caută buton cu text de acceptare
+                const texts = [
+                    'Permite toate modulele cookie',
+                    'Permite toate cookie-urile',
+                    'Allow all cookies',
+                    'Accept all',
+                    'Acceptă tot',
+                ];
+                const allButtons = Array.from(document.querySelectorAll('button, [role="button"]'));
+                for (const text of texts) {
+                    const btn = allButtons.find(b => b.textContent.trim().includes(text));
+                    if (btn) { btn.click(); return 'clicked: ' + text; }
+                }
+                // Fallback: ultimul buton din dialog care nu e "Gestionează"
+                const dialog = document.querySelector('[role="dialog"]');
+                if (dialog) {
+                    const btns = Array.from(dialog.querySelectorAll('button'));
+                    const accept = btns.find(b =>
+                        !b.textContent.includes('Gestion') &&
+                        !b.textContent.includes('Manage') &&
+                        !b.textContent.includes('Refuz') &&
+                        b.textContent.trim().length > 3
+                    );
+                    if (accept) { accept.click(); return 'fallback clicked'; }
+                }
+                return 'no button found';
+            })()
+        """)
+    except Exception:
+        pass
+
+
 def login_interactive():
-    """Deschide browserul, navighează la Facebook și AŞTEAPTĂ ca utilizatorul
-    să se logheze manual. Salvează profilul browser pe disc — rulările
-    ulterioare nu mai cer login sau cookie consent."""
+    """Deschide browserul cu login automat Facebook.
+    Acceptă cookies automat via JS, completează email/parolă din config,
+    salvează profilul pe disc — rulările ulterioare nu mai cer nimic."""
     from playwright.sync_api import sync_playwright
 
+    cfg = load_config()
+    email    = cfg.get("email", "") if cfg else ""
+    password = cfg.get("password", "") if cfg else ""
+
+    if not email or not password:
+        print("[poster] ⚠️  Email/parolă lipsă. Rulează mai întâi: --setup")
+        sys.exit(1)
+
     PROFILE_DIR.mkdir(parents=True, exist_ok=True)
-    print("\n=== LOGIN INTERACTIV ===")
-    print("Browserul se va deschide. Loghează-te manual pe Facebook,")
-    print("acceptă cookie-urile, apoi apasă ENTER în terminal.\n")
+    print("\n=== LOGIN AUTOMAT ===")
+    print(f"Email: {email}")
+    print("Browserul se deschide și se loghează automat...\n")
 
     with sync_playwright() as p:
         context = p.chromium.launch_persistent_context(
@@ -371,16 +417,43 @@ def login_interactive():
             Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
             Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
         """)
-        page.goto("https://www.facebook.com/", wait_until="domcontentloaded")
 
-        input("\n>>> Loghează-te pe Facebook în browser, acceptă cookies, apoi apasă ENTER aici: ")
+        # Navighează direct la login
+        page.goto("https://www.facebook.com/login", wait_until="domcontentloaded")
+        human_delay(2, 3)
 
-        # Verifică login
+        # Acceptă cookies automat
+        _auto_accept_cookies(page)
+        human_delay(1, 2)
+
+        # Completează login
+        try:
+            page.fill("#email", email)
+            human_delay(0.5, 1)
+            page.fill("#pass", password)
+            human_delay(0.5, 1)
+            page.click('[name="login"]')
+            page.wait_for_url("**/facebook.com/**", timeout=20000)
+            human_delay(2, 3)
+
+            if "login" in page.url or "checkpoint" in page.url:
+                print("[poster] ⚠️  Login eșuat sau checkpoint de securitate!")
+                print("         Verifică manual browserul și apasă ENTER când ești logat.")
+                take_screenshot(page, "login_failed")
+                input(">>> Apasă ENTER după ce te-ai logat manual: ")
+            else:
+                print("[poster] ✅ Login reușit automat!")
+                take_screenshot(page, "login_interactive_ok")
+        except Exception as e:
+            print(f"[poster] Eroare login: {e}")
+            print("         Loghează-te manual în browser și apasă ENTER.")
+            input(">>> Apasă ENTER după ce te-ai logat: ")
+
+        # Verifică final
         if "facebook.com" in page.url and "login" not in page.url:
-            print("[poster] ✅ Login detectat! Profilul salvat în:", PROFILE_DIR)
-            take_screenshot(page, "login_interactive_ok")
+            print(f"[poster] ✅ Profil salvat în: {PROFILE_DIR}")
         else:
-            print("[poster] ⚠️  Browserul nu pare logat. Încearcă din nou.")
+            print("[poster] ⚠️  Nu s-a detectat login. Verifică credențialele.")
 
         context.close()
 
