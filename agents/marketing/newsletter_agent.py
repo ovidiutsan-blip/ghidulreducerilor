@@ -27,7 +27,7 @@ CODES_PATH = BASE / "data" / "codes.json"
 BREVO_API_KEY      = os.environ.get("BREVO_API_KEY", "")
 BREVO_LIST_ID      = int(os.environ.get("BREVO_LIST_NEWSLETTER", os.environ.get("BREVO_LIST_ID", "3")))
 BREVO_SENDER_EMAIL = os.environ.get("BREVO_SENDER_REDUCERI", "reduceri@ghidulreducerilor.ro")
-BREVO_TEST_EMAIL   = os.environ.get("BREVO_TEST_EMAIL", os.environ.get("USER_EMAIL", "ovidiutsan085@gmail.com"))
+BREVO_TEST_EMAIL   = os.environ.get("BREVO_TEST_EMAIL", os.environ.get("USER_EMAIL", "ovidiutsan@gmail.com"))
 
 SITE_BASE = "https://ghidulreducerilor.ro"
 UTM       = "?utm_source=email&utm_medium=newsletter&utm_campaign=weekly"

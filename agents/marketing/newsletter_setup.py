@@ -23,7 +23,7 @@ load_dotenv()
 
 BREVO_API_KEY   = os.getenv("BREVO_API_KEY", "")
 BREVO_LIST_ID   = int(os.getenv("BREVO_LIST_NEWSLETTER", os.getenv("BREVO_LIST_ID", "3")))
-TEST_EMAIL      = os.getenv("BREVO_TEST_EMAIL", os.getenv("USER_EMAIL", "ovidiutsan085@gmail.com"))
+TEST_EMAIL      = os.getenv("BREVO_TEST_EMAIL", os.getenv("USER_EMAIL", "ovidiutsan@gmail.com"))
 SENDER_EMAIL    = os.getenv("BREVO_SENDER_REDUCERI", "reduceri@ghidulreducerilor.ro")
 SITE_BASE       = "https://ghidulreducerilor.ro"
 
