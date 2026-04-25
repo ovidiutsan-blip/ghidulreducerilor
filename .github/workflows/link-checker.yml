@@ -14,6 +14,14 @@ on:
         options:
           - quick
           - full
+      remove_dead:
+        description: 'Sterge deal-urile moarte din deals.json'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
 
 permissions:
   contents: write
@@ -45,14 +53,17 @@ jobs:
       - name: 🔍 Verificare linkuri
         run: |
           MODE="${{ github.event.inputs.mode || 'quick' }}"
-          python scripts/link_checker.py --mode $MODE
+          REMOVE="${{ github.event.inputs.remove_dead || 'true' }}"
+          ARGS="--mode $MODE"
+          if [ "$REMOVE" = "true" ]; then ARGS="$ARGS --remove-dead"; fi
+          python scripts/link_checker.py $ARGS
 
-      - name: 💾 Commit deals actualizate (link status)
+      - name: 💾 Commit deals actualizate
         run: |
           git config user.name "GhidulReducerilor Bot"
           git config user.email "bot@ghidulreducerilor.ro"
-          git add data/deals.json
-          git diff --staged --quiet || git commit -m "🔗 Link check $(date +%Y-%m-%d)"
+          git add data/deals.json logs/
+          git diff --staged --quiet || git commit -m "🔗 Link check $(date +%Y-%m-%d) — dead links removed"
 
       - name: 📤 Push
         run: git push
