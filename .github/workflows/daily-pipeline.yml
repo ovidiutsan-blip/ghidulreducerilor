@@ -110,6 +110,16 @@ jobs:
         continue-on-error: true
         run: python scripts/sync_theme_hubs.py
 
+      - name: 📣 Marketing orchestrator (selecție deals + posturi FB + raport)
+        id: marketing
+        if: github.event.inputs.mode != 'cleanup'
+        continue-on-error: true
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ vars.BREVO_LIST_ID }}
+          MARKETING_EMAIL: ${{ vars.MARKETING_EMAIL }}
+        run: python agents/marketing/orchestrator.py
+
       - name: 💾 Commit modificări deals + codes + theme-hubs
         run: |
           git config user.name "GhidulReducerilor Bot"
