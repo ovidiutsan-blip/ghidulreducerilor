@@ -1,0 +1,9 @@
+{
+  "page_url": "https://www.facebook.com/profile.php?id=61588697699732",
+  "page_id": "61588697699732",
+  "posts_per_day": 3,
+  "slots": ["morning", "midday", "evening"],
+  "post_hour_start": 8,
+  "post_hour_end": 21,
+  "min_discount": 30
+}
