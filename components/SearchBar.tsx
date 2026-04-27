@@ -73,10 +73,11 @@ export default function SearchBar() {
             onChange={e => setQuery(e.target.value)}
             onFocus={handleFocus}
             placeholder="Cauta reduceri..."
+            aria-label="Caută reduceri"
             className="w-full pl-10 pr-4 py-2 text-sm border border-neutral-200 rounded-xl bg-neutral-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all"
           />
           {query && (
-            <button onClick={() => { setQuery(''); setOpen(false) }} className="absolute right-3 top-1/2 -translate-y-1/2">
+            <button onClick={() => { setQuery(''); setOpen(false) }} aria-label="Șterge căutarea" className="absolute right-3 top-1/2 -translate-y-1/2">
               <X className="w-4 h-4 text-neutral-400 hover:text-neutral-600" />
             </button>
           )}
@@ -135,9 +136,10 @@ export default function SearchBar() {
               value={query}
               onChange={e => setQuery(e.target.value)}
               placeholder="Cauta reduceri..."
+              aria-label="Caută reduceri"
               className="flex-1 text-base outline-none"
             />
-            <button onClick={() => { setMobileOpen(false); setQuery('') }}>
+            <button onClick={() => { setMobileOpen(false); setQuery('') }} aria-label="Închide căutarea">
               <X className="w-5 h-5 text-neutral-600" />
             </button>
           </div>

@@ -22,11 +22,27 @@ export const metadata: Metadata = {
   },
 }
 
+// Câte deal-uri trimitem în prop la HomepageDeals (RSC payload + SSR HTML).
+// Mai sus de atât = HTML hits 7+ MB; categoriile cu peste atâtea deals au
+// pagină dedicată /categorie/[slug] cu paginare proprie.
+const HOMEPAGE_DEALS_LIMIT = 100
+
 export default function HomePage() {
-  const deals = getActiveDeals()
+  const allActiveDeals = getActiveDeals()
   const stores = getAllStores()
   const dealOfTheDay = getDealOfTheDay()
   const flashDeals = getFlashDeals(8)
+
+  // Counts per categorie calculate pe TOATE deals (chips trebuie să arate totalul real).
+  const categoryCounts: Record<string, number> = {}
+  for (const d of allActiveDeals) {
+    categoryCounts[d.categorie] = (categoryCounts[d.categorie] || 0) + 1
+  }
+
+  // Subset trimis la HomepageDeals: cele mai mari discount-uri primele.
+  const homepageDeals = [...allActiveDeals]
+    .sort((a, b) => (b.procent_reducere ?? 0) - (a.procent_reducere ?? 0))
+    .slice(0, HOMEPAGE_DEALS_LIMIT)
 
   // Schema WebSite cu SearchAction
   const websiteSchema = {
@@ -43,9 +59,7 @@ export default function HomePage() {
   }
 
   // ItemList cu Product+Offer complet (top 15 deals sortate după reducere)
-  const topDeals = [...deals]
-    .sort((a, b) => (b.procent_reducere ?? 0) - (a.procent_reducere ?? 0))
-    .slice(0, 15)
+  const topDeals = homepageDeals.slice(0, 15)
   const itemListSchema = buildItemListSchema('Cele Mai Bune Reduceri Azi', topDeals, '/')
 
   // Breadcrumb homepage
@@ -74,7 +88,7 @@ export default function HomePage() {
       </h1>
 
       {/* Trust Bar */}
-      <TrustBar totalDeals={deals.length} />
+      <TrustBar totalDeals={allActiveDeals.length} />
 
       {/* Deal of the Day */}
       <DealOfTheDay deal={dealOfTheDay} />
@@ -83,10 +97,14 @@ export default function HomePage() {
       <FlashDeals deals={flashDeals} />
 
       {/* All Deals with Category Chips */}
-      <HomepageDeals deals={deals} />
+      <HomepageDeals
+        deals={homepageDeals}
+        totalCount={allActiveDeals.length}
+        categoryCounts={categoryCounts}
+      />
 
       {/* Recently Viewed */}
-      <RecentlyViewed allDeals={deals} />
+      <RecentlyViewed allDeals={homepageDeals} />
 
       {/* Magazine Partenere */}
       <section id="magazine" className="bg-neutral-50">
