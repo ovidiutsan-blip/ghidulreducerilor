@@ -40,9 +40,9 @@ function safeRedirect(req: Request, target: string, ctx: { id: string; type: str
 
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = params
+  const { id } = await params
 
   // ID numeric = link Profitshare direct (l.profitshare.ro/l/NNNNN)
   if (/^\d+$/.test(id)) {

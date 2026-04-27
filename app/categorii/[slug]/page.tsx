@@ -9,14 +9,15 @@ import { getThemeHubBySlug, getAllThemeHubSlugs, THEME_HUBS } from '@/lib/theme-
 import { getStoreBySlug, getDealsByStore } from '@/lib/data'
 import { dealToProductSchema } from '@/lib/schema'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
   return getAllThemeHubSlugs().map(slug => ({ slug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const hub = getThemeHubBySlug(params.slug)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const hub = getThemeHubBySlug(slug)
   if (!hub) return {}
   return {
     title: hub.title,
@@ -31,8 +32,9 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function ThemeHubPage({ params }: Props) {
-  const hub = getThemeHubBySlug(params.slug)
+export default async function ThemeHubPage({ params }: Props) {
+  const { slug } = await params
+  const hub = getThemeHubBySlug(slug)
   if (!hub) notFound()
 
   // Resolve stores from hub storeSlugs

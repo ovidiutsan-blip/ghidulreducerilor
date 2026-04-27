@@ -12,14 +12,15 @@ import {
 } from '@/lib/data'
 import { getCurrentMonthYear } from '@/lib/utils'
 
-type Props = { params: { magazin: string } }
+type Props = { params: Promise<{ magazin: string }> }
 
 export function generateStaticParams() {
   return getAllStoreSlugs().map(slug => ({ magazin: slug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const store = getStoreBySlug(params.magazin)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { magazin } = await params
+  const store = getStoreBySlug(magazin)
   if (!store) return {}
   const monthYear = getCurrentMonthYear()
 
@@ -35,12 +36,13 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function CodReducerePage({ params }: Props) {
-  const store = getStoreBySlug(params.magazin)
+export default async function CodReducerePage({ params }: Props) {
+  const { magazin } = await params
+  const store = getStoreBySlug(magazin)
   if (!store) notFound()
 
-  const codes = getCodesByStore(params.magazin)
-  const deals = getDealsByStore(params.magazin).slice(0, 8)
+  const codes = getCodesByStore(magazin)
+  const deals = getDealsByStore(magazin).slice(0, 8)
   const monthYear = getCurrentMonthYear()
   const hasCodes = codes.length > 0
   const hasDeals = deals.length > 0

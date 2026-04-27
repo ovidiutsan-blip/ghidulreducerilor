@@ -6,14 +6,15 @@ import Breadcrumb from '@/components/Breadcrumb'
 import { getStoreGuideBySlug, getAllStoreGuideSlugs, STORE_GUIDES } from '@/lib/store-guides'
 import { getStoreBySlug, getDealsByStore } from '@/lib/data'
 
-type Props = { params: { magazin: string } }
+type Props = { params: Promise<{ magazin: string }> }
 
 export function generateStaticParams() {
   return getAllStoreGuideSlugs().map(magazin => ({ magazin }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const guide = getStoreGuideBySlug(params.magazin)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { magazin } = await params
+  const guide = getStoreGuideBySlug(magazin)
   if (!guide) return {}
   return {
     title: guide.metaTitle,
@@ -28,8 +29,9 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function StoreGuidePage({ params }: Props) {
-  const guide = getStoreGuideBySlug(params.magazin)
+export default async function StoreGuidePage({ params }: Props) {
+  const { magazin } = await params
+  const guide = getStoreGuideBySlug(magazin)
   if (!guide) notFound()
 
   const store = getStoreBySlug(guide.storeSlug)
