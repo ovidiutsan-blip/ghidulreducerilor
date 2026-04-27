@@ -9,6 +9,7 @@ import EmailForm from '@/components/EmailForm'
 import TrustBar from '@/components/TrustBar'
 import ExitIntentPopup from '@/components/ExitIntentPopup'
 import { getActiveDeals, getAllStores, getDealOfTheDay, getFlashDeals } from '@/lib/data'
+import { buildItemListSchema, buildBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'GhidulReducerilor.ro — Cele Mai Bune Reduceri și Coduri Promo România 2026',
@@ -27,32 +28,36 @@ export default function HomePage() {
   const dealOfTheDay = getDealOfTheDay()
   const flashDeals = getFlashDeals(8)
 
+  // Schema WebSite cu SearchAction
+  const websiteSchema = {
+    '@type': 'WebSite',
+    name: 'GhidulReducerilor.ro',
+    url: 'https://ghidulreducerilor.ro',
+    description: 'Cele mai bune reduceri și coduri promoționale din România',
+    inLanguage: 'ro',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://ghidulreducerilor.ro/reduceri/{search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
+  // ItemList cu Product+Offer complet (top 15 deals sortate după reducere)
+  const topDeals = [...deals]
+    .sort((a, b) => (b.procent_reducere ?? 0) - (a.procent_reducere ?? 0))
+    .slice(0, 15)
+  const itemListSchema = buildItemListSchema('Cele Mai Bune Reduceri Azi', topDeals, '/')
+
+  // Breadcrumb homepage
+  const breadcrumbSchema = buildBreadcrumbSchema([{ name: 'Acasă', href: '/' }])
+
+  // Combina totul intr-un singur @graph
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'WebSite',
-        name: 'GhidulReducerilor.ro',
-        url: 'https://ghidulreducerilor.ro',
-        description: 'Cele mai bune reduceri și coduri promoționale din România',
-        inLanguage: 'ro',
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: 'https://ghidulreducerilor.ro/reduceri/{search_term_string}',
-          'query-input': 'required name=search_term_string',
-        },
-      },
-      {
-        '@type': 'ItemList',
-        name: 'Reducerile Zilei',
-        numberOfItems: deals.length,
-        itemListElement: deals.slice(0, 10).map((deal, i) => ({
-          '@type': 'ListItem',
-          position: i + 1,
-          name: deal.titlu,
-          url: `https://ghidulreducerilor.ro/out/${deal.id}`,
-        })),
-      },
+      websiteSchema,
+      { ...itemListSchema, '@context': undefined },
+      { ...breadcrumbSchema, '@context': undefined },
     ],
   }
 

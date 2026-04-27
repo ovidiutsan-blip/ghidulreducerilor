@@ -46,7 +46,12 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   description: 'Site de reduceri și coduri promoționale din România',
-  sameAs: ['https://www.tiktok.com/@catalinovidiu'],
+  sameAs: [
+    'https://www.facebook.com/ghidulreducerilor',
+    'https://www.pinterest.com/ghidulreducerilor',
+    'https://t.me/ghidulreducerilor',
+    'https://www.tiktok.com/@ghidulreducerilor',
+  ],
   contactPoint: { '@type': 'ContactPoint', email: 'hello@ghidulreducerilor.ro', contactType: 'customer support' },
 }
 

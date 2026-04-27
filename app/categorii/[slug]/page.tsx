@@ -7,6 +7,7 @@ import StoreCard from '@/components/StoreCard'
 import DealCard from '@/components/DealCard'
 import { getThemeHubBySlug, getAllThemeHubSlugs, THEME_HUBS } from '@/lib/theme-hubs'
 import { getStoreBySlug, getDealsByStore } from '@/lib/data'
+import { dealToProductSchema } from '@/lib/schema'
 
 type Props = { params: { slug: string } }
 
@@ -60,6 +61,7 @@ export default function ThemeHubPage({ params }: Props) {
         url: `https://ghidulreducerilor.ro/categorii/${hub.slug}`,
         inLanguage: 'ro',
       },
+      // Magazine din categorie
       {
         '@type': 'ItemList',
         name: `Magazine ${hub.label}`,
@@ -71,6 +73,13 @@ export default function ThemeHubPage({ params }: Props) {
           url: `https://ghidulreducerilor.ro/reduceri/${store.slug}`,
         })),
       },
+      // Top deals din categorie cu Product+Offer schema
+      ...(topDeals.length > 0 ? [{
+        '@type': 'ItemList',
+        name: `Top Reduceri ${hub.label}`,
+        numberOfItems: topDeals.length,
+        itemListElement: topDeals.map((deal, i) => dealToProductSchema(deal, i)),
+      }] : []),
       {
         '@type': 'FAQPage',
         mainEntity: hub.faq.map(item => ({
