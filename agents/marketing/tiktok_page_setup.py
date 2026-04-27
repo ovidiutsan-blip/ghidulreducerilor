@@ -119,6 +119,7 @@ def setup_tiktok_profile():
     browser = p.chromium.launch_persistent_context(
         str(PROFILE_DIR),
         headless=False,
+        channel="msedge",  # Edge — separat de Chrome (evită singleton conflict)
         viewport={"width": 1280, "height": 800},
         args=["--disable-blink-features=AutomationControlled"],
         user_agent=(

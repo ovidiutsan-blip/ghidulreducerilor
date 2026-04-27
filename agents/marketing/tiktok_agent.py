@@ -429,16 +429,11 @@ def generate_deal_card(d: dict, output_path: Path) -> Optional[Path]:
 def _get_browser():
     from playwright.sync_api import sync_playwright
     p = sync_playwright().start()
-    browser = p.chromium.launch_persistent_context(
+    # Firefox — nu are singleton conflict cu Chrome/Edge, nu e blocat de ZoneAlarm
+    browser = p.firefox.launch_persistent_context(
         str(PROFILE_DIR),
         headless=False,
-        args=["--disable-blink-features=AutomationControlled"],
         viewport={"width": 1280, "height": 800},
-        user_agent=(
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/124.0.0.0 Safari/537.36"
-        ),
     )
     return p, browser
 
