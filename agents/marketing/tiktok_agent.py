@@ -429,26 +429,67 @@ def generate_deal_card(d: dict, output_path: Path) -> Optional[Path]:
 def _get_browser():
     from playwright.sync_api import sync_playwright
     p = sync_playwright().start()
-    # Firefox — nu are singleton conflict cu Chrome/Edge, nu e blocat de ZoneAlarm
-    browser = p.firefox.launch_persistent_context(
+    # Playwright Chromium bundled — fara singleton conflict, fara ZoneAlarm block
+    browser = p.chromium.launch_persistent_context(
         str(PROFILE_DIR),
         headless=False,
         viewport={"width": 1280, "height": 800},
+        args=["--disable-blink-features=AutomationControlled", "--no-sandbox"],
     )
     return p, browser
 
 
 def login_tiktok():
-    """Deschide browserul pentru login manual — sesiunea se salvează în profile."""
-    log("Deschid browser pentru login TikTok (manual)...")
+    """
+    Login TikTok via cod QR — scanezi cu aplicația TikTok de pe telefon.
+    Sesiunea se salvează automat în tiktok_browser_profile/.
+    """
+    log("Deschid browser pentru login TikTok via QR Code...")
     PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
     p, browser = _get_browser()
     page = browser.new_page()
-    page.goto("https://www.tiktok.com/login")
-    log("Loghează-te manual în browser. Apasă ENTER când ai terminat...")
+
+    # 1. Mergi la pagina de login
+    page.goto("https://www.tiktok.com/login", wait_until="domcontentloaded")
+    time.sleep(2)
+
+    # 2. Click pe "Folosește codul QR"
+    try:
+        qr_btn = page.locator("text=Folosește codul QR").first
+        if qr_btn.is_visible():
+            qr_btn.click()
+            log("✅ Click pe 'Folosește codul QR'")
+        else:
+            # Încearcă engleza
+            qr_btn2 = page.locator("text=Use QR code").first
+            if qr_btn2.is_visible():
+                qr_btn2.click()
+                log("✅ Click pe 'Use QR code'")
+    except Exception as e:
+        log(f"  QR button not found: {e} — continuă oricum")
+
+    time.sleep(2)
+
+    # 3. Fă screenshot cu QR-ul
+    qr_screenshot = str(LOG_DIR / "tiktok_qr.png")
+    page.screenshot(path=qr_screenshot)
+    log(f"📸 Screenshot QR salvat în: {qr_screenshot}")
+    log("=" * 60)
+    log("INSTRUCȚIUNI LOGIN:")
+    log("1. Deschide aplicația TikTok pe telefon")
+    log("2. Mergi la Profil → Setări → Scanează cod QR")
+    log(f"3. Scanează QR-ul din fișierul: {qr_screenshot}")
+    log("   SAU scanează direct din fereastra browserului deschis")
+    log("4. Apasă ENTER după ce te-ai logat cu succes în browser")
+    log("=" * 60)
+
+    # 4. Așteaptă confirmare utilizator
     input()
+
+    # 5. Salvează screenshot final
     page.screenshot(path=str(LOG_DIR / "login_done.png"))
-    log("Sesiune salvată. Browser închis.")
+    log("✅ Sesiune salvată. Browser închis.")
     browser.close()
     p.stop()
 
