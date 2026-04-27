@@ -19,6 +19,7 @@ Task Scheduler: zilnic 04:30 (după import 2P, înainte de audit 07:30)
 """
 from __future__ import annotations
 import os, sys, json, re, time
+from enum import Enum
 from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -110,30 +111,58 @@ def fix_mojibake(s: str) -> str:
 
 
 # ─── Verificare link ──────────────────────────────────────────────────────────
-def is_link_expired(url: str) -> bool:
-    """Returnează True dacă link-ul afiliat duce la pagina de eroare 2P."""
+class LinkStatus(Enum):
+    OK = "ok"
+    EXPIRED = "expired"
+    UNKNOWN = "unknown"  # timeout / network error — incert dacă link-ul e mort sau API-ul e jos
+
+
+def check_link_status(url: str) -> LinkStatus:
+    """Determină dacă un link afiliat 2P duce la pagina de eroare."""
     if not url or not url.startswith("http"):
-        return True
+        return LinkStatus.EXPIRED
     try:
         r = requests.get(
             url, timeout=CHECK_TIMEOUT, allow_redirects=True,
             headers={"User-Agent": "Mozilla/5.0 (compatible; GhidulReducerilor/1.0)"}
         )
         final_url = r.url.lower()
-        return any(ind in final_url for ind in NOTOOLERROR_INDICATORS)
+        if any(ind in final_url for ind in NOTOOLERROR_INDICATORS):
+            return LinkStatus.EXPIRED
+        return LinkStatus.OK
     except Exception:
-        return False  # timeout = assume OK, nu dezactivam la incertitudine
+        return LinkStatus.UNKNOWN
 
 
 def check_deals_batch(deals_2p: list[dict]) -> list[dict]:
-    """Verifică paralel o listă de dealuri. Returnează cele cu link expirat."""
-    expired = []
+    """
+    Verifică paralel o listă de dealuri. Returnează cele cu link CONFIRMAT expirat.
+
+    Safety: dacă mai mult de 50% din verificări se întorc UNKNOWN (timeout / network),
+    presupunem că 2P API e down și abandonăm — altfel un outage parțial al rețelei
+    afiliate ar marca toate dealurile ca dead și le-ar dezactiva.
+    """
+    expired: list[dict] = []
+    unknown_count = 0
+    total = len(deals_2p)
+    if total == 0:
+        return expired
+
     with ThreadPoolExecutor(max_workers=CHECK_WORKERS) as pool:
-        futures = {pool.submit(is_link_expired, d.get("link_afiliat", "")): d for d in deals_2p}
+        futures = {pool.submit(check_link_status, d.get("link_afiliat", "")): d for d in deals_2p}
         for fut in as_completed(futures):
             deal = futures[fut]
-            if fut.result():
+            status = fut.result()
+            if status == LinkStatus.EXPIRED:
                 expired.append(deal)
+            elif status == LinkStatus.UNKNOWN:
+                unknown_count += 1
+
+    if unknown_count * 2 > total:
+        log(f"⚠️  {unknown_count}/{total} verificări UNKNOWN (timeout/network) — "
+            f"presupun că 2P API e jos, abandon batch-ul fără a marca nimic ca expirat.")
+        return []
+
     return expired
 
 
@@ -207,8 +236,9 @@ def find_replacement(magazin: str, unique_code_program: str,
                     prod_unique = p.get("unique_code") or ""
                     aff_link = p.get("affiliate_url") or build_affiliate_link(prod_unique or unique_code_program, prod_id)
 
-                    # Verificăm rapid că noul link nu e și el expirat
-                    if is_link_expired(aff_link):
+                    # Verificăm rapid că noul link nu e și el expirat (UNKNOWN tratat ca OK
+                    # pentru replacement check — preferăm să încercăm decât să sărim peste).
+                    if check_link_status(aff_link) == LinkStatus.EXPIRED:
                         continue
 
                     deal_id = f"2p-{magazin}-{slugify(name)[:40]}-{str(prod_id)[-8:]}"

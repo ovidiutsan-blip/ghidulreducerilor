@@ -142,6 +142,36 @@ jobs:
           MARKETING_EMAIL: ${{ vars.MARKETING_EMAIL }}
         run: python agents/marketing/orchestrator.py
 
+      - name: ✅ Verifică integritate deals.json (fail-fast înainte de publicare)
+        id: verify_deals
+        run: |
+          python - <<'PY'
+          import json, sys
+          with open('data/deals.json', encoding='utf-8') as f:
+              deals = json.load(f)
+          if not isinstance(deals, list):
+              sys.exit(f'❌ deals.json must be a JSON array, got {type(deals).__name__}')
+          if len(deals) < 100:
+              sys.exit(f'❌ deals.json has only {len(deals)} entries — refusing to publish (probable corruption)')
+          active = [d for d in deals if d.get('activ')]
+          if len(active) < 50:
+              sys.exit(f'❌ deals.json has only {len(active)} active entries — refusing to publish')
+          required = {'id', 'magazin', 'titlu', 'pret_redus', 'pret_original', 'link_afiliat'}
+          for d in deals[:20]:
+              missing = required - set(d.keys())
+              if missing:
+                  sys.exit(f'❌ Deal {d.get("id","?")} missing required fields: {missing}')
+          # codes.json sanity (existence + valid JSON, no minimum count)
+          try:
+              with open('data/codes.json', encoding='utf-8') as f:
+                  codes = json.load(f)
+              if not isinstance(codes, list):
+                  sys.exit('❌ codes.json must be a JSON array')
+          except FileNotFoundError:
+              pass  # codes.json optional
+          print(f'✅ deals.json OK: {len(deals)} total, {len(active)} active')
+          PY
+
       - name: 💾 Commit modificări deals + codes + theme-hubs
         run: |
           git config user.name "GhidulReducerilor Bot"
