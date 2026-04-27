@@ -37,14 +37,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Ghiduri magazine */}
+          {/* Magazine top reduceri */}
           <div>
-            <h3 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-4">Ghiduri magazine</h3>
+            <h3 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-4">Magazine top</h3>
             <ul className="space-y-2">
-              <li><Link href="/ghiduri/notino" className="text-sm hover:text-white transition-colors">Ghid Notino</Link></li>
-              <li><Link href="/ghiduri/answear" className="text-sm hover:text-white transition-colors">Ghid Answear</Link></li>
-              <li><Link href="/ghiduri/drmax" className="text-sm hover:text-white transition-colors">Ghid Dr.Max</Link></li>
-              <li><Link href="/ghiduri/fashiondays" className="text-sm hover:text-white transition-colors">Ghid Fashion Days</Link></li>
+              <li><Link href="/reduceri/scule365" className="text-sm hover:text-white transition-colors">Reduceri Scule365</Link></li>
+              <li><Link href="/reduceri/vegis" className="text-sm hover:text-white transition-colors">Reduceri Vegis</Link></li>
+              <li><Link href="/reduceri/watch24" className="text-sm hover:text-white transition-colors">Reduceri Watch24</Link></li>
+              <li><Link href="/reduceri/emag" className="text-sm hover:text-white transition-colors">Reduceri eMAG</Link></li>
               <li><Link href="/ghiduri" className="text-sm hover:text-white transition-colors font-semibold">Toate ghidurile →</Link></li>
             </ul>
           </div>

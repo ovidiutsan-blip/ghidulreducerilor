@@ -2,8 +2,9 @@ import { NextResponse } from 'next/server'
 import { getActiveDeals, getStoreForDeal } from '@/lib/data'
 import { getAllArticles } from '@/lib/blog'
 
-export const dynamic = 'force-static'
-export const revalidate = 3600 // regenerate la fiecare oră
+// ISR: pre-render la build, regenerate cel mult la fiecare oră.
+// Nu folosi `dynamic = 'force-static'` — ar suprascrie header-urile Cache-Control de mai jos.
+export const revalidate = 3600
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ghidulreducerilor.ro'
 const SITE_TITLE = 'Ghidul Reducerilor — Reduceri și Coduri Promoționale România'

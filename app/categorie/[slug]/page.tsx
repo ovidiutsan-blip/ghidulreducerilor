@@ -6,6 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import DealsFilter from '@/components/DealsFilter'
 import { getDealsByCategory, getAllCategories, getUniqueMagazine } from '@/lib/data'
 import { getCategoryBySlug, CATEGORIES } from '@/lib/categories'
+import { getThemeHubBySlug } from '@/lib/theme-hubs'
 import { getCurrentMonthYear } from '@/lib/utils'
 import { buildItemListSchema, buildBreadcrumbSchema } from '@/lib/schema'
 
@@ -20,10 +21,14 @@ export function generateMetadata({ params }: Props): Metadata {
   const cat = getCategoryBySlug(params.slug)
   if (!cat) return {}
   const month = getCurrentMonthYear()
+  // Dacă există un theme hub cu același slug (beauty, farmacie-sanatate, casa-gradina,
+  // electronice), îl tratăm ca pagina canonică — are conținut editorial mai bogat.
+  const hub = getThemeHubBySlug(params.slug)
+  const canonical = hub ? `/categorii/${params.slug}` : `/categorie/${params.slug}`
   return {
     title: `Reduceri ${cat.label} — Oferte ${month}`,
     description: `Cele mai bune reduceri la ${cat.label.toLowerCase()} din Romania. Oferte verificate zilnic cu discount-uri reale.`,
-    alternates: { canonical: `/categorie/${params.slug}` },
+    alternates: { canonical },
   }
 }
 

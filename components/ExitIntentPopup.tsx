@@ -10,6 +10,7 @@ export default function ExitIntentPopup() {
   const [gdpr, setGdpr] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [website, setWebsite] = useState('') // honeypot
   const shown = useRef(false)
 
   useEffect(() => {
@@ -57,7 +58,7 @@ export default function ExitIntentPopup() {
       await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, nume: nume || 'Abonat', magazin: 'toate', gdpr_consent: true, consented_at: new Date().toISOString(), source: 'exit_popup' }),
+        body: JSON.stringify({ email, nume: nume || 'Abonat', magazin: 'toate', website, gdpr_consent: true, consented_at: new Date().toISOString(), source: 'exit_popup' }),
       })
       setSubmitted(true)
     } finally {
@@ -118,6 +119,16 @@ export default function ExitIntentPopup() {
             </ul>
 
             <form onSubmit={handleSubmit} className="space-y-3">
+              {/* Honeypot — invisible to humans, filled by bots */}
+              <input
+                type="text"
+                value={website}
+                onChange={e => setWebsite(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="absolute -left-[9999px] opacity-0 pointer-events-none"
+              />
               <input
                 type="text"
                 value={nume}

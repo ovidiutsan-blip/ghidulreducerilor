@@ -25,9 +25,9 @@ export function checkRateLimit(
   bucket.count++
 
   if (buckets.size > 1000) {
-    for (const [k, b] of buckets) {
+    buckets.forEach((b, k) => {
       if (b.resetAt <= now) buckets.delete(k)
-    }
+    })
   }
 
   if (bucket.count > limit) {
