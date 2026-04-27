@@ -109,7 +109,7 @@ export default function StorePage({ params }: Props) {
         </p>
         <div className="mt-4">
           <a
-            href={`/coduri-promo/${store.slug}`}
+            href={`/cod-reducere/${store.slug}`}
             className="btn-cta-outline text-sm"
           >
             Vezi codurile promoționale {store.nume} →

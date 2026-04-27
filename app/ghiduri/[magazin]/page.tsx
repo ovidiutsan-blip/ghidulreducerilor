@@ -133,7 +133,7 @@ export default function StoreGuidePage({ params }: Props) {
               <ArrowRight className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href={`/coduri-promo/${guide.storeSlug}`}
+              href={`/cod-reducere/${guide.storeSlug}`}
               className="flex items-center justify-between bg-amber-50 hover:bg-amber-100 border-2 border-amber-200 rounded-xl p-4 transition-colors group"
             >
               <div className="flex items-center gap-3">

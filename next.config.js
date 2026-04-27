@@ -76,13 +76,6 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.shopify.com' },
     ],
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
   // Redirects: /coduri-promo → /cod-reducere (canonical URL change)
   async redirects() {
     return [

@@ -1,25 +1,47 @@
 'use client'
 
-import { useState, useRef, useEffect, useMemo } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
-import { Search, X, ImageOff } from 'lucide-react'
+import { Search, X } from 'lucide-react'
 import { formatPrice } from '@/lib/utils'
-import type { Deal } from '@/lib/data'
+import type { SearchResult } from '@/app/api/search/route'
 
-export default function SearchBar({ deals }: { deals: Deal[] }) {
+const DEBOUNCE_MS = 250
+
+export default function SearchBar() {
   const [query, setQuery] = useState('')
+  const [results, setResults] = useState<SearchResult[]>([])
   const [open, setOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const results = useMemo(() => {
-    if (query.length < 2) return []
-    const q = query.toLowerCase()
-    return deals
-      .filter(d => d.titlu.toLowerCase().includes(q) || d.categorie.toLowerCase().includes(q))
-      .slice(0, 5)
-  }, [query, deals])
+  useEffect(() => {
+    const q = query.trim()
+    if (q.length < 2) {
+      setResults([])
+      return
+    }
+
+    const ctrl = new AbortController()
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`, {
+          signal: ctrl.signal,
+        })
+        if (!res.ok) return
+        const data = (await res.json()) as { results: SearchResult[] }
+        setResults(data.results)
+      } catch {
+        // AbortError sau retea — ignoră
+      }
+    }, DEBOUNCE_MS)
+
+    return () => {
+      clearTimeout(timer)
+      ctrl.abort()
+    }
+  }, [query])
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
@@ -31,13 +53,13 @@ export default function SearchBar({ deals }: { deals: Deal[] }) {
     return () => document.removeEventListener('mousedown', handleClick)
   }, [])
 
-  function handleFocus() {
-    if (query.length >= 2) setOpen(true)
-  }
-
   useEffect(() => {
     setOpen(results.length > 0)
   }, [results])
+
+  function handleFocus() {
+    if (query.length >= 2 && results.length > 0) setOpen(true)
+  }
 
   return (
     <>
