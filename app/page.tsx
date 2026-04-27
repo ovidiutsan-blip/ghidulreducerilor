@@ -68,6 +68,11 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
+      {/* SEO H1 — vizibil pentru screen readers + crawlere; nu schimbă layout-ul */}
+      <h1 className="sr-only">
+        Ghidul Reducerilor — reduceri verificate zilnic și coduri promoționale din România
+      </h1>
+
       {/* Trust Bar */}
       <TrustBar totalDeals={deals.length} />
 
