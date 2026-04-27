@@ -15,8 +15,8 @@ export default function FlashDeals({ deals }: { deals: Deal[] }) {
         <span className="text-sm text-neutral-400 ml-2">Top {deals.length} reduceri</span>
       </div>
       <div className="flex gap-3 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2">
-        {deals.map(deal => (
-          <FlashDealCard key={deal.id} deal={deal} />
+        {deals.map((deal, i) => (
+          <FlashDealCard key={deal.id} deal={deal} priority={i < 3} />
         ))}
       </div>
     </section>

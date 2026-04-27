@@ -61,27 +61,6 @@ function KpiCard({ label, value, sub, color }: {
   )
 }
 
-function ActionButton({ icon, label, onClick, primary, loading }: {
-  icon: string; label: string; onClick: () => void; primary?: boolean; loading?: boolean
-}) {
-  return (
-    <button
-      onClick={onClick}
-      disabled={loading}
-      className={`rounded-xl p-4 text-center transition-all text-sm font-semibold border cursor-pointer
-        ${primary
-          ? 'bg-[#E63946] border-[#E63946] text-white hover:bg-[#c53030]'
-          : 'bg-[#1A2635] border-[#2A3A50] text-[#E8F0FE] hover:border-[#E63946] hover:bg-[rgba(230,57,70,0.1)]'
-        }
-        ${loading ? 'opacity-50 cursor-wait' : 'hover:-translate-y-0.5'}
-      `}
-    >
-      <span className="text-2xl block mb-1">{icon}</span>
-      {loading ? 'Se ruleaza...' : label}
-    </button>
-  )
-}
-
 function StatusBadge({ status }: { status: string }) {
   const styles: Record<string, string> = {
     pass: 'bg-[rgba(42,157,143,0.2)] text-[#2A9D8F]',
@@ -108,7 +87,6 @@ export default function AdminDashboard() {
   const [systemStatus, setSystemStatus] = useState<SystemStatus | null>(null)
   const [auditReport, setAuditReport] = useState<AuditReport | null>(null)
   const [updateStatus, setUpdateStatus] = useState<UpdateStatus | null>(null)
-  const [loading, setLoading] = useState<Record<string, boolean>>({})
   const [logMessages, setLogMessages] = useState<Array<{ type: string; msg: string; time: string }>>([])
 
   const log = useCallback((type: string, msg: string) => {
@@ -151,14 +129,6 @@ export default function AdminDashboard() {
     const interval = setInterval(loadData, 60000)
     return () => clearInterval(interval)
   }, [loadData])
-
-  // Action handlers — these just show what to run since Python can't exec on Vercel
-  function triggerAction(name: string, command: string) {
-    setLoading(prev => ({ ...prev, [name]: true }))
-    log('info', `${name}: rulati manual — ${command}`)
-    log('info', 'Sau triggeri workflow-ul din GitHub Actions')
-    setTimeout(() => setLoading(prev => ({ ...prev, [name]: false })), 2000)
-  }
 
   async function handleLogout() {
     await fetch('/api/admin/auth', { method: 'DELETE' })
@@ -215,38 +185,16 @@ export default function AdminDashboard() {
           />
         </div>
 
-        {/* ACTIONS */}
-        <div className="bg-[#1A2635] border border-[#2A3A50] rounded-xl mb-6">
-          <div className="px-5 py-4 border-b border-[#2A3A50] font-bold text-sm">
-            Actiuni Rapide
-          </div>
-          <div className="p-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <ActionButton
-              icon="&#128269;"
-              label="Audit Complet"
-              primary
-              loading={loading['audit']}
-              onClick={() => triggerAction('audit', 'python scripts/audit_full.py')}
-            />
-            <ActionButton
-              icon="&#128260;"
-              label="Auto-Update"
-              loading={loading['update']}
-              onClick={() => triggerAction('update', 'python scripts/auto_update.py')}
-            />
-            <ActionButton
-              icon="&#128279;"
-              label="Verifica Linkuri"
-              loading={loading['links']}
-              onClick={() => triggerAction('links', 'python scripts/link_checker.py --mode full')}
-            />
-            <ActionButton
-              icon="&#128736;"
-              label="Auto-Repair"
-              loading={loading['repair']}
-              onClick={() => triggerAction('repair', 'python scripts/auto_repair.py --apply')}
-            />
-          </div>
+        {/* ACTIONS — runs in GitHub Actions, not from this dashboard */}
+        <div className="bg-[#1A2635] border border-[#2A3A50] rounded-xl mb-6 p-5 text-sm text-[#7B92B2]">
+          <p className="mb-2">
+            <span className="text-[#E8F0FE] font-semibold">Pipeline-ul rulează în GitHub Actions.</span>
+          </p>
+          <p>
+            Audit-ul, auto-update, link-check și auto-repair sunt declanșate din workflow-ul{' '}
+            <code className="text-[#4A9EFF]">.github/workflows/daily-pipeline.yml</code> (zilnic, 06:00 RO).
+            Vezi rezultatele în GitHub → tab Actions.
+          </p>
         </div>
 
         {/* TWO-COLUMN PANELS */}
