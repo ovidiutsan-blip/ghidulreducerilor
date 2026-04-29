@@ -35,7 +35,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 sys.path.insert(0, str(ROOT / 'agents'))
 
 from utils import normalize_deal, is_profitshare_direct  # noqa: E402
-from link_checker import create_session, load_deals, check_link, check_profitshare_link  # noqa: E402
+from link_checker import create_session, load_deals, check_link  # noqa: E402
 
 try:
     from monitor_agent import check_site_pages  # noqa: E402
