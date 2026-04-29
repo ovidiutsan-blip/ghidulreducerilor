@@ -91,6 +91,8 @@ def analyze_deals(deals: list, date_str: str) -> dict:
         if scraped:
             try:
                 scraped_dt = datetime.fromisoformat(scraped.replace('Z', '+00:00'))
+                if scraped_dt.tzinfo is None:
+                    scraped_dt = scraped_dt.replace(tzinfo=timezone.utc)
                 if today <= scraped_dt < tomorrow:
                     deals_today.append(d)
             except (ValueError, AttributeError):

@@ -45,7 +45,7 @@ from utils import normalize_deal  # noqa: E402
 # Brevo API
 BREVO_API_KEY = os.environ.get('BREVO_API_KEY', '')
 BREVO_API_URL = 'https://api.brevo.com/v3'
-BREVO_LIST_ID = int(os.environ.get('BREVO_LIST_ID', '2'))
+BREVO_LIST_ID = int(os.environ.get('BREVO_LIST_ID') or '2')
 
 
 def load_deals() -> list:
