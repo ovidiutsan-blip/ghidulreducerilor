@@ -70,13 +70,6 @@ export default function Navbar() {
               🛒 eMAG Reduceri
             </Link>
             <Link
-              href="/cod-reducere/emag"
-              className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-red py-1"
-              onClick={() => setMenuOpen(false)}
-            >
-              🏷️ Coduri Promo
-            </Link>
-            <Link
               href="/categorii"
               className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-red py-1"
               onClick={() => setMenuOpen(false)}

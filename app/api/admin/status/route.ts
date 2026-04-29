@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { isApiAuthorized } from '@/lib/admin-auth'
-import type { Deal, PromoCode } from '@/lib/data'
+import type { Deal } from '@/lib/data'
 import path from 'path'
 import fs from 'fs/promises'
 
@@ -41,28 +41,6 @@ export async function GET(req: NextRequest) {
     }
   } catch {
     status.deals = { error: 'Nu s-a putut citi deals.json' }
-  }
-
-  // ===== Codes Stats =====
-  try {
-    const codesPath = path.join(ROOT, 'data', 'codes.json')
-    const codes = JSON.parse(await fs.readFile(codesPath, 'utf-8')) as PromoCode[]
-    const now = new Date()
-    const activeCodes = codes.filter(c => {
-      if (c.verificat === false) return false
-      if (c.data_expirare) {
-        const exp = new Date(c.data_expirare)
-        if (!isNaN(exp.getTime()) && exp < now) return false
-      }
-      return true
-    })
-
-    status.codes = {
-      total: codes.length,
-      active: activeCodes.length
-    }
-  } catch {
-    status.codes = { error: 'Nu s-a putut citi codes.json' }
   }
 
   // ===== Logs Status =====

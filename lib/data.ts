@@ -1,5 +1,4 @@
 import deals from '@/data/deals.json'
-import codes from '@/data/codes.json'
 import stores from '@/data/stores.json'
 
 export type Deal = {
@@ -16,18 +15,6 @@ export type Deal = {
   categorie: string
   data_adaugare: string
   activ: boolean
-}
-
-export type PromoCode = {
-  id: string
-  magazin: string
-  cod: string
-  descriere: string
-  valoare: string
-  tip: string
-  data_expirare: string
-  link_afiliat: string
-  verificat: boolean
 }
 
 export type Store = {
@@ -52,11 +39,6 @@ export function getActiveDeals(): Deal[] {
 // Returnează ofertele pentru un magazin specific
 export function getDealsByStore(storeSlug: string): Deal[] {
   return (deals as Deal[]).filter(d => d.magazin === storeSlug && d.activ)
-}
-
-// Returnează codurile promoționale pentru un magazin
-export function getCodesByStore(storeSlug: string): PromoCode[] {
-  return (codes as PromoCode[]).filter(c => c.magazin === storeSlug)
 }
 
 // Returnează toate magazinele

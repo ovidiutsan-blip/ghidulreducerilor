@@ -76,13 +76,24 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.shopify.com' },
     ],
   },
-  // Redirects: /coduri-promo → /cod-reducere (canonical URL change)
+  // Redirects: pivot către /reduceri/[m] (codes.json deprecated 2026-04-29)
+  // /coduri-promo + /cod-reducere → /reduceri (canonical URL change, 308 permanent)
   async redirects() {
     return [
       {
         source: '/coduri-promo/:magazin',
-        destination: '/cod-reducere/:magazin',
-        permanent: true, // 301 — transferă PageRank
+        destination: '/reduceri/:magazin',
+        permanent: true,
+      },
+      {
+        source: '/cod-reducere/:magazin',
+        destination: '/reduceri/:magazin',
+        permanent: true,
+      },
+      {
+        source: '/cod-reducere',
+        destination: '/deals',
+        permanent: true,
       },
     ]
   },

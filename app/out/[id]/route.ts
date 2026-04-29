@@ -1,10 +1,8 @@
 import { NextResponse } from 'next/server'
 import dealsData from '@/data/deals.json'
-import codesData from '@/data/codes.json'
-import type { Deal, PromoCode } from '@/lib/data'
+import type { Deal } from '@/lib/data'
 
 const deals = dealsData as Deal[]
-const codes = codesData as PromoCode[]
 
 // Hostnames permise pentru redirect afiliat. Match exact sau sufix DNS (`.host`).
 const ALLOWED_AFFILIATE_HOSTS = [
@@ -59,16 +57,6 @@ export async function GET(
       ? `https://l.profitshare.ro/l/${selfRef[1]}`
       : deal.link_afiliat
     return safeRedirect(req, target, { id, type: 'deal', magazin: deal.magazin, label: deal.titlu })
-  }
-
-  // Caută în coduri promo
-  const code = codes.find(c => c.id === id)
-  if (code?.link_afiliat) {
-    const selfRef = code.link_afiliat.match(/\/out\/(\d+)/)
-    const target = selfRef
-      ? `https://l.profitshare.ro/l/${selfRef[1]}`
-      : code.link_afiliat
-    return safeRedirect(req, target, { id, type: 'code', magazin: code.magazin, label: code.cod })
   }
 
   // Fallback la homepage

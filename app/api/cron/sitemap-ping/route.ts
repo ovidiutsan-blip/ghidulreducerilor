@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getActiveDeals, getAllStoreSlugs, getDealsByStore, getCodesByStore } from '@/lib/data'
+import { getActiveDeals, getAllStoreSlugs, getDealsByStore } from '@/lib/data'
 import { getAllArticles } from '@/lib/blog'
 import { getAllThemeHubSlugs } from '@/lib/theme-hubs'
 import { getAllStoreGuideSlugs } from '@/lib/store-guides'
@@ -47,13 +47,10 @@ function buildUrlList(): string[] {
     urls.push(`${BASE_URL}/ghiduri/${slug}`)
   }
 
-  // Pagini de magazin cu deal-uri sau coduri active
+  // Pagini de magazin cu deal-uri active
   for (const slug of getAllStoreSlugs()) {
     if (getDealsByStore(slug).length > 0) {
       urls.push(`${BASE_URL}/reduceri/${slug}`)
-    }
-    if (getCodesByStore(slug).length > 0) {
-      urls.push(`${BASE_URL}/cod-reducere/${slug}`)
     }
   }
 
