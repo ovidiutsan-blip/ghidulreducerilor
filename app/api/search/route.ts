@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import dealsData from '@/data/deals.json'
-import type { Deal } from '@/lib/data'
+import { getActiveDeals } from '@/lib/data'
 
-const allDeals = (dealsData as Deal[]).filter(d => d.activ)
+const allDeals = getActiveDeals()
 
 export type SearchResult = {
   id: string

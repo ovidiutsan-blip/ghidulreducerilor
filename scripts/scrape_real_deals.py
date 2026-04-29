@@ -517,10 +517,18 @@ def scrape_evomag(max_pages: int = 2) -> list:
                         img_el = card.select_one("img[src*='http']")
                         img_url = img_el.get("src", "") if img_el else ""
 
+                        # evoMAG foloseste <sup>XX</sup> pentru bani (ex: 432<sup>99</sup>).
+                        # Inserez virgula inainte ca get_text() sa lipeasca cifrele
+                        # (altfel 432<sup>99</sup> -> "43299" -> 43299 lei in loc de 432.99).
+                        for sup in card.find_all("sup"):
+                            sup_text = sup.get_text(strip=True)
+                            if sup_text.isdigit() and len(sup_text) <= 2:
+                                sup.string = "," + sup_text
+
                         prices = []
                         for p_el in card.select("[class*='price'], .money, .pret"):
                             val = extract_price(p_el.get_text(strip=True))
-                            if val > 0:
+                            if val >= 1:  # ignor fragmente sub 1 leu
                                 prices.append(val)
 
                         if len(prices) < 2:
@@ -528,6 +536,10 @@ def scrape_evomag(max_pages: int = 2) -> list:
 
                         price_new = min(prices)
                         price_old = max(prices)
+                        # Sanity: daca price_new e sub 1/5 din price_old, skip (parsing gresit
+                        # — placeholder "Stoc epuizat" cu pret 99 lei alaturi de pretul real).
+                        if price_new * 5 < price_old:
+                            continue
                         disc = discount_pct(price_old, price_new)
 
                         if disc < 15 or price_new <= 0:

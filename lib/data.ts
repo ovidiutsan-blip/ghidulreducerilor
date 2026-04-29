@@ -31,14 +31,27 @@ export type Store = {
   retea?: 'profitshare' | '2performant'
 }
 
+// Defensiv: filtrează deal-uri "garbage" cu prețuri parsate greșit.
+// Pattern observat: scraperul evomag pune pret_redus=99 (placeholder)
+// + pret_original scalat x100 (ex: 63999 = ar trebui 639.99) când există <sup>
+// pentru bani fără separator. Reduce procent_reducere la 99-100% suspect.
+function isLegitDeal(d: Deal): boolean {
+  // pret_redus < 5 RON e clearly garbage (sub minimul realist pentru orice produs reduceri)
+  if (d.pret_redus < 5) return false
+  // pret_redus exact 99 + reducere mare = placeholder evomag "Stoc epuizat"
+  // (pretul original e parsat gresit din <sup>XX</sup>, scaled x100)
+  if (d.pret_redus <= 99 && d.procent_reducere >= 95) return false
+  return true
+}
+
 // Returnează toate ofertele active
 export function getActiveDeals(): Deal[] {
-  return (deals as Deal[]).filter(d => d.activ)
+  return (deals as Deal[]).filter(d => d.activ && isLegitDeal(d))
 }
 
 // Returnează ofertele pentru un magazin specific
 export function getDealsByStore(storeSlug: string): Deal[] {
-  return (deals as Deal[]).filter(d => d.magazin === storeSlug && d.activ)
+  return (deals as Deal[]).filter(d => d.magazin === storeSlug && d.activ && isLegitDeal(d))
 }
 
 // Returnează toate magazinele

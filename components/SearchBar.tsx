@@ -2,11 +2,32 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
-import { Search, X } from 'lucide-react'
+import { Search, X, ImageOff } from 'lucide-react'
 import { formatPrice } from '@/lib/utils'
 import type { SearchResult } from '@/app/api/search/route'
 
 const DEBOUNCE_MS = 250
+
+function DealThumb({ src, alt, sizes }: { src: string; alt: string; sizes: string }) {
+  const [failed, setFailed] = useState(false)
+  if (!src || failed) {
+    return (
+      <div className="w-full h-full flex items-center justify-center text-neutral-300">
+        <ImageOff className="w-4 h-4" />
+      </div>
+    )
+  }
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      className="object-cover"
+      sizes={sizes}
+      onError={() => setFailed(true)}
+    />
+  )
+}
 
 export default function SearchBar() {
   const [query, setQuery] = useState('')
@@ -95,13 +116,7 @@ export default function SearchBar() {
                 onClick={() => setOpen(false)}
               >
                 <div className="w-10 h-10 rounded-lg bg-neutral-100 overflow-hidden shrink-0 relative">
-                  <Image
-                    src={deal.imagine_url}
-                    alt={deal.titlu}
-                    fill
-                    className="object-cover"
-                    sizes="40px"
-                  />
+                  <DealThumb src={deal.imagine_url} alt={deal.titlu} sizes="40px" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-neutral-900 truncate">{deal.titlu}</p>
@@ -154,13 +169,7 @@ export default function SearchBar() {
                 onClick={() => setMobileOpen(false)}
               >
                 <div className="w-12 h-12 rounded-lg bg-neutral-100 overflow-hidden shrink-0 relative">
-                  <Image
-                    src={deal.imagine_url}
-                    alt={deal.titlu}
-                    fill
-                    className="object-cover"
-                    sizes="48px"
-                  />
+                  <DealThumb src={deal.imagine_url} alt={deal.titlu} sizes="48px" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-neutral-900 line-clamp-1">{deal.titlu}</p>
