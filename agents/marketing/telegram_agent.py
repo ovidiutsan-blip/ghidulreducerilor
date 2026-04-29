@@ -66,12 +66,24 @@ def send_media_group(chat_id: str, media: list) -> dict:
 
 # ─── Selecție deals ─────────────────────────────────────────────────────────
 
+def is_legit_deal(d: dict) -> bool:
+    """Filtru defensiv pentru deals "garbage" cu pret parsat gresit.
+    Sincronizat cu lib/data.ts:isLegitDeal — exclude placeholder evomag."""
+    pret_redus = d.get("pret_redus", 0) or 0
+    pct = d.get("procent_reducere", 0) or 0
+    if pret_redus < 5:
+        return False
+    if pret_redus <= 99 and pct >= 95:
+        return False
+    return True
+
+
 def load_top_deals(n: int = 5) -> list:
     """Returnează top N deals active, sortate după reducere %."""
     with open(DEALS_PATH, encoding="utf-8") as f:
         deals = json.load(f)
 
-    activi = [d for d in deals if d.get("activ") and d.get("imagine_url")]
+    activi = [d for d in deals if d.get("activ") and d.get("imagine_url") and is_legit_deal(d)]
     # Sortare: reducere % descrescătoare
     activi.sort(key=lambda d: -(d.get("procent_reducere") or 0))
     return activi[:n]
