@@ -47,7 +47,7 @@ jobs:
       - name: 📁 Creare directoare
         run: mkdir -p logs data
 
-      - name: 📱 Postare social media
+      - name: 📱 Postare Facebook + Instagram + script TikTok
         env:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
@@ -73,3 +73,16 @@ jobs:
 
           echo "Sesiune: $SESSION"
           python scripts/social_media_poster.py --session $SESSION $DRY_RUN_FLAG
+
+      - name: 💬 Postare Telegram (top 5 deals)
+        # Rulează doar la sesiunea de dimineață (07:00 UTC = 09:00 RO) ca să evită spam.
+        if: github.event.schedule == '0 7 * * *' || github.event_name == 'workflow_dispatch'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ vars.TELEGRAM_CHANNEL_ID }}
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ]; then
+            echo "⚠️  TELEGRAM_BOT_TOKEN lipsește — skip Telegram. Setează secret-ul în repo settings."
+            exit 0
+          fi
+          python agents/marketing/telegram_agent.py
