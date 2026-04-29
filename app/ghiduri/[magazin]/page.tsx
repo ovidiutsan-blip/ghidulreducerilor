@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, ShoppingBag, Tag, BookOpen } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Sparkles, HelpCircle, ShoppingBag, BookOpen } from 'lucide-react'
 import Breadcrumb from '@/components/Breadcrumb'
 import { getStoreGuideBySlug, getAllStoreGuideSlugs, STORE_GUIDES } from '@/lib/store-guides'
 import { getStoreBySlug, getDealsByStore } from '@/lib/data'
@@ -119,8 +119,8 @@ export default async function StoreGuidePage({ params }: Props) {
             </div>
           </div>
 
-          {/* CTA bar — direct links to store pages */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-12">
+          {/* CTA bar — direct link to store deals */}
+          <div className="mb-12">
             <Link
               href={`/reduceri/${guide.storeSlug}`}
               className="flex items-center justify-between bg-blue-50 hover:bg-blue-100 border-2 border-blue-200 rounded-xl p-4 transition-colors group"
@@ -133,19 +133,6 @@ export default async function StoreGuidePage({ params }: Props) {
                 </div>
               </div>
               <ArrowRight className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              href={`/cod-reducere/${guide.storeSlug}`}
-              className="flex items-center justify-between bg-amber-50 hover:bg-amber-100 border-2 border-amber-200 rounded-xl p-4 transition-colors group"
-            >
-              <div className="flex items-center gap-3">
-                <Tag className="w-5 h-5 text-amber-600" />
-                <div>
-                  <div className="font-semibold text-gray-900">Coduri promo</div>
-                  <div className="text-sm text-gray-600">Cupoane active pe {store?.nume || guide.slug}</div>
-                </div>
-              </div>
-              <ArrowRight className="w-5 h-5 text-amber-600 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 

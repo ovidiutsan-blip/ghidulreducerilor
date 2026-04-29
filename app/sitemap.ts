@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { getAllStoreSlugs, getDealsByStore, getCodesByStore, getAllCategories } from '@/lib/data'
+import { getAllStoreSlugs, getDealsByStore, getAllCategories } from '@/lib/data'
 import { getAllArticles } from '@/lib/blog'
 import { getAllThemeHubSlugs, getThemeHubBySlug } from '@/lib/theme-hubs'
 import { getAllStoreGuideSlugs } from '@/lib/store-guides'
@@ -57,38 +57,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Include doar paginile cu conținut — pagini goale au noindex și nu aparțin în sitemap
-  const storePages = stores.flatMap(slug => {
-    const hasDeals = getDealsByStore(slug).length > 0
-    const entries: MetadataRoute.Sitemap = []
-
-    if (hasDeals) {
-      entries.push({
-        url: `${BASE_URL}/reduceri/${slug}`,
-        lastModified: now,
-        changeFrequency: 'daily' as const,
-        priority: 0.9,
-      })
-    }
-
-    // /cod-reducere — întotdeauna în sitemap (au conținut chiar și fără coduri active)
-    entries.push({
-      url: `${BASE_URL}/cod-reducere/${slug}`,
+  // Pagini magazin — doar cele cu deal-uri active (paginile goale au noindex automat)
+  const storePages: MetadataRoute.Sitemap = stores
+    .filter(slug => getDealsByStore(slug).length > 0)
+    .map(slug => ({
+      url: `${BASE_URL}/reduceri/${slug}`,
       lastModified: now,
       changeFrequency: 'daily' as const,
-      priority: 0.8,
-    })
+      priority: 0.9,
+    }))
 
-    return entries
-  })
-
-  // Pagina index /cod-reducere
-  const codReducereIndex: MetadataRoute.Sitemap = [{
-    url: `${BASE_URL}/cod-reducere`,
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }]
-
-  return [...staticPages, ...blogPages, ...themeHubPages, ...categoryPages, ...storeGuidePages, ...storePages, ...codReducereIndex]
+  return [...staticPages, ...blogPages, ...themeHubPages, ...categoryPages, ...storeGuidePages, ...storePages]
 }
