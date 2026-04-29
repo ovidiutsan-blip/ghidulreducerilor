@@ -40,29 +40,6 @@ export async function GET(req: NextRequest) {
     status.deals = { error: 'Nu s-a putut citi deals.json' }
   }
 
-  // ===== Codes Stats =====
-  try {
-    const codesPath = path.join(ROOT, 'data', 'codes.json')
-    const codes = JSON.parse(await fs.readFile(codesPath, 'utf-8'))
-    const now = new Date()
-    const activeCodes = codes.filter((c: any) => {
-      if (!c.active && c.active !== undefined) return false
-      if (c.validUntil) {
-        try {
-          return new Date(c.validUntil) > now
-        } catch { return true }
-      }
-      return true
-    })
-
-    status.codes = {
-      total: codes.length,
-      active: activeCodes.length
-    }
-  } catch {
-    status.codes = { error: 'Nu s-a putut citi codes.json' }
-  }
-
   // ===== Logs Status =====
   try {
     const logsDir = path.join(ROOT, 'logs')

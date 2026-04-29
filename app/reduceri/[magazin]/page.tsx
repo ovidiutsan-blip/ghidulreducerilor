@@ -107,14 +107,6 @@ export default function StorePage({ params }: Props) {
           Toate link-urile sunt de afiliere prin Profitshare.ro — când cumperi prin ele, noi primim un
           comision mic fără costuri suplimentare pentru tine.
         </p>
-        <div className="mt-4">
-          <a
-            href={`/coduri-promo/${store.slug}`}
-            className="btn-cta-outline text-sm"
-          >
-            Vezi codurile promoționale {store.nume} →
-          </a>
-        </div>
       </section>
     </div>
     </>

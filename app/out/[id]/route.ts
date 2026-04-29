@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
 import deals from '@/data/deals.json'
-import codes from '@/data/codes.json'
 
 export async function GET(
   req: Request,
@@ -26,19 +25,6 @@ export async function GET(
 
     logClick(req, id, 'deal', deal.magazin, deal.titlu)
     return NextResponse.redirect(deal.link_afiliat, { status: 302 })
-  }
-
-  // Cauta in coduri promo
-  const code = (codes as any[]).find((c) => c.id === id)
-  if (code?.link_afiliat) {
-    const selfRef = code.link_afiliat.match(/\/out\/(\d+)/)
-    if (selfRef) {
-      logClick(req, id, 'code', code.magazin, code.cod)
-      return NextResponse.redirect(`https://l.profitshare.ro/l/${selfRef[1]}`, { status: 302 })
-    }
-
-    logClick(req, id, 'code', code.magazin, code.cod)
-    return NextResponse.redirect(code.link_afiliat, { status: 302 })
   }
 
   // Fallback la homepage

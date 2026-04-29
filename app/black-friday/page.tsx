@@ -545,10 +545,10 @@ export default function BlackFridayPage() {
               📝 Blog & articole
             </Link>
             <Link
-              href="/coduri-promo/emag"
+              href="/reduceri/emag"
               className="inline-flex items-center gap-2 bg-white border border-neutral-200 hover:border-brand-red hover:text-brand-red text-sm font-medium text-neutral-700 px-4 py-2 rounded-full transition-colors"
             >
-              🏷️ Coduri eMAG
+              🛒 Reduceri eMAG
             </Link>
           </div>
           <p className="text-xs text-neutral-500 mt-6">
