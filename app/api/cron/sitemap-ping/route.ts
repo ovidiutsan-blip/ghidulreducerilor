@@ -53,7 +53,7 @@ function buildUrlList(): string[] {
       urls.push(`${BASE_URL}/reduceri/${slug}`)
     }
     if (getCodesByStore(slug).length > 0) {
-      urls.push(`${BASE_URL}/coduri-promo/${slug}`)
+      urls.push(`${BASE_URL}/cod-reducere/${slug}`)
     }
   }
 

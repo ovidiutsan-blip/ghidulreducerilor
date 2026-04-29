@@ -81,26 +81,69 @@ def is_expired(data_expirare: Optional[str]) -> bool:
         return False
 
 
+# Cuvinte comune EN/RO care nu sunt niciodată coduri promoționale
+# (extins față de versiunea inițială ca să elimine false positives masive)
+_CODE_BLACKLIST = {
+    # Internet / generic
+    "HTTP", "HTTPS", "WWW", "COM", "RO", "NET", "ORG", "PHP", "HTML", "JSON",
+    "URL", "API", "PDF", "JPG", "PNG", "GIF", "SVG", "MP3", "MP4",
+    # English filler
+    "AND", "THE", "FOR", "NEW", "ALL", "OFF", "GET", "BUY", "SHOP", "FREE",
+    "SALE", "DEAL", "BEST", "TOP", "HOT", "BIG", "MAX", "MIN", "PRO", "PLUS",
+    # RO marketing filler ("PROMO" e text generic, nu cod)
+    "PROMO", "OFERTA", "OFERTE", "REDUCERE", "REDUS", "CADOU", "GRATIS",
+    "GRATUIT", "CUPON", "CUPOANE", "VOUCHER", "COD", "CODURI", "NOU",
+    "NOUA", "NOUL", "PRET", "PRETURI", "STOC", "LIVRARE", "RAMBURS",
+    # Brand-uri populare în RO (nu sunt coduri promo)
+    "EMAG", "ALTEX", "NIKE", "APPLE", "SAMSUNG", "XIAOMI", "HUAWEI", "LENOVO",
+    "ASUS", "ACER", "DELL", "HP", "MSI", "INTEL", "AMD", "SONY", "LG", "BOSCH",
+    "PHILIPS", "WHIRLPOOL", "BEKO", "ARCTIC", "ELECTROLUX", "ZARA", "ADIDAS",
+    "PUMA", "REEBOK", "NIVEA", "LOREAL", "GARNIER", "MAYBELLINE", "AVON",
+    "ORIFLAME", "FARMEC", "DACIA", "RENAULT",
+}
+
+# "Cod-shape" definit strict: măcar o cifră (un cod marketing real are aproape mereu cifre,
+# ex: SUMMER20, BLACK10, VARA25) SAU caractere mixte alfanumerice care nu formează un cuvânt
+_CODE_SHAPE_RE = re.compile(r'^(?=.*\d)[A-Z0-9]{3,20}$|^[A-Z]{6,20}\d+[A-Z0-9]*$')
+
+
+def _is_plausible_code(candidate: str) -> bool:
+    candidate = candidate.upper().strip("-_")
+    if len(candidate) < 4 or len(candidate) > 20:
+        return False
+    if candidate in _CODE_BLACKLIST:
+        return False
+    # Trebuie să aibă măcar o cifră — altfel e probabil un cuvânt
+    if not any(c.isdigit() for c in candidate):
+        return False
+    return True
+
+
 def detect_code_in_text(text: str) -> Optional[str]:
-    """Caută un cod promoțional în text (ex: 'PROMO10', 'SUMMER20OFF')."""
+    """Caută un cod promoțional într-un text (ex: 'foloseste codul VARA25')."""
     if not text:
         return None
-    # Pattern: șir de 4-20 caractere alfanumerice cu majuscule, cifre, cratime
-    patterns = [
-        r'\b([A-Z0-9]{4,20})\b',             # cod simplu
-        r'cod[ul\s:]+([A-Z0-9\-]{3,20})',     # "codul XYZ"
-        r'voucher[:\s]+([A-Z0-9\-]{3,20})',   # "voucher XYZ"
-        r'cupon[:\s]+([A-Z0-9\-]{3,20})',     # "cupon XYZ"
+    # Pattern-uri context-aware (text RO normal, mixed case)
+    contextual_patterns = [
+        r'cod(?:ul)?[\s:]+([A-Za-z0-9\-]{3,20})',        # "codul VARA25"
+        r'voucher(?:ul)?[\s:]+([A-Za-z0-9\-]{3,20})',    # "voucher BF50"
+        r'cupon(?:ul)?[\s:]+([A-Za-z0-9\-]{3,20})',      # "cupon NEW10"
+        r'promo[\s:]+([A-Za-z0-9\-]{3,20})',             # "promo XMAS"
+        r'discount[\s:]+([A-Za-z0-9\-]{3,20})',          # "discount SAVE15"
     ]
-    for pat in patterns:
+    for pat in contextual_patterns:
         m = re.search(pat, text, re.IGNORECASE)
         if m:
             candidate = m.group(1).upper()
-            # Filtrează cuvinte comune care nu sunt coduri
-            skip = {"HTTP", "HTTPS", "WWW", "COM", "RO", "NET", "ORG",
-                    "AND", "THE", "FOR", "NEW", "ALL", "OFF", "GET"}
-            if candidate not in skip and len(candidate) >= 4:
+            if _is_plausible_code(candidate):
                 return candidate
+
+    # Fallback: orice șir alfanumeric all-caps cu cifră (PROMO10, BLACK20OFF)
+    for m in re.finditer(r'\b([A-Z][A-Z0-9]{2,19})\b', text):
+        candidate = m.group(1).upper()
+        if _is_plausible_code(candidate):
+            return candidate
+
     return None
 
 

@@ -6,17 +6,18 @@ import { getDealsByStore, getStoreBySlug, getAllStoreSlugs } from '@/lib/data'
 import { getCurrentMonthYear } from '@/lib/utils'
 import { buildItemListSchema, buildBreadcrumbSchema } from '@/lib/schema'
 
-type Props = { params: { magazin: string } }
+type Props = { params: Promise<{ magazin: string }> }
 
 export function generateStaticParams() {
   return getAllStoreSlugs().map(slug => ({ magazin: slug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const store = getStoreBySlug(params.magazin)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { magazin } = await params
+  const store = getStoreBySlug(magazin)
   if (!store) return {}
   const monthYear = getCurrentMonthYear()
-  const deals = getDealsByStore(params.magazin)
+  const deals = getDealsByStore(magazin)
   const isEmpty = deals.length === 0
 
   return {
@@ -34,17 +35,18 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function StorePage({ params }: Props) {
-  const store = getStoreBySlug(params.magazin)
+export default async function StorePage({ params }: Props) {
+  const { magazin } = await params
+  const store = getStoreBySlug(magazin)
   if (!store) notFound()
 
-  const deals = getDealsByStore(params.magazin)
+  const deals = getDealsByStore(magazin)
   const monthYear = getCurrentMonthYear()
 
   const itemListSchema = buildItemListSchema(
     `Reduceri ${store.nume} — Oferte ${monthYear}`,
     deals,
-    `/reduceri/${params.magazin}`
+    `/reduceri/${magazin}`
   )
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -109,7 +111,7 @@ export default function StorePage({ params }: Props) {
         </p>
         <div className="mt-4">
           <a
-            href={`/coduri-promo/${store.slug}`}
+            href={`/cod-reducere/${store.slug}`}
             className="btn-cta-outline text-sm"
           >
             Vezi codurile promoționale {store.nume} →

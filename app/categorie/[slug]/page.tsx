@@ -6,29 +6,35 @@ import Breadcrumb from '@/components/Breadcrumb'
 import DealsFilter from '@/components/DealsFilter'
 import { getDealsByCategory, getAllCategories, getUniqueMagazine } from '@/lib/data'
 import { getCategoryBySlug, CATEGORIES } from '@/lib/categories'
+import { getThemeHubBySlug } from '@/lib/theme-hubs'
 import { getCurrentMonthYear } from '@/lib/utils'
 import { buildItemListSchema, buildBreadcrumbSchema } from '@/lib/schema'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
   const categories = getAllCategories()
   return categories.map(slug => ({ slug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const cat = getCategoryBySlug(params.slug)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const cat = getCategoryBySlug(slug)
   if (!cat) return {}
   const month = getCurrentMonthYear()
+  // Dacă există un theme hub cu același slug (beauty, farmacie-sanatate, casa-gradina,
+  // electronice), îl tratăm ca pagina canonică — are conținut editorial mai bogat.
+  const hub = getThemeHubBySlug(slug)
+  const canonical = hub ? `/categorii/${slug}` : `/categorie/${slug}`
   return {
     title: `Reduceri ${cat.label} — Oferte ${month}`,
     description: `Cele mai bune reduceri la ${cat.label.toLowerCase()} din Romania. Oferte verificate zilnic cu discount-uri reale.`,
-    alternates: { canonical: `/categorie/${params.slug}` },
+    alternates: { canonical },
   }
 }
 
-export default function CategoryPage({ params }: Props) {
-  const slug = params.slug
+export default async function CategoryPage({ params }: Props) {
+  const { slug } = await params
   const cat = getCategoryBySlug(slug)
   if (!cat) notFound()
 

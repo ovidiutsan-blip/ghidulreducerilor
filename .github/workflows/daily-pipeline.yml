@@ -114,6 +114,12 @@ jobs:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: python scripts/price_validator.py --mode update
 
+      - name: 🧹 Dedup cross-platform (Profitshare + 2Performant overlap)
+        id: dedup
+        if: github.event.inputs.mode != 'cleanup'
+        continue-on-error: true
+        run: python scripts/dedup_cross_platform.py
+
       - name: 🎯 Sync theme hubs (auto-populare storeSlugs din deal categories)
         id: sync_hubs
         if: github.event.inputs.mode != 'cleanup'
@@ -142,6 +148,36 @@ jobs:
           MARKETING_EMAIL: ${{ vars.MARKETING_EMAIL }}
         run: python agents/marketing/orchestrator.py
 
+      - name: ✅ Verifică integritate deals.json (fail-fast înainte de publicare)
+        id: verify_deals
+        run: |
+          python - <<'PY'
+          import json, sys
+          with open('data/deals.json', encoding='utf-8') as f:
+              deals = json.load(f)
+          if not isinstance(deals, list):
+              sys.exit(f'❌ deals.json must be a JSON array, got {type(deals).__name__}')
+          if len(deals) < 100:
+              sys.exit(f'❌ deals.json has only {len(deals)} entries — refusing to publish (probable corruption)')
+          active = [d for d in deals if d.get('activ')]
+          if len(active) < 50:
+              sys.exit(f'❌ deals.json has only {len(active)} active entries — refusing to publish')
+          required = {'id', 'magazin', 'titlu', 'pret_redus', 'pret_original', 'link_afiliat'}
+          for d in deals[:20]:
+              missing = required - set(d.keys())
+              if missing:
+                  sys.exit(f'❌ Deal {d.get("id","?")} missing required fields: {missing}')
+          # codes.json sanity (existence + valid JSON, no minimum count)
+          try:
+              with open('data/codes.json', encoding='utf-8') as f:
+                  codes = json.load(f)
+              if not isinstance(codes, list):
+                  sys.exit('❌ codes.json must be a JSON array')
+          except FileNotFoundError:
+              pass  # codes.json optional
+          print(f'✅ deals.json OK: {len(deals)} total, {len(active)} active')
+          PY
+
       - name: 💾 Commit modificări deals + codes + theme-hubs
         run: |
           git config user.name "GhidulReducerilor Bot"
@@ -153,7 +189,7 @@ jobs:
         run: git push
 
       - name: 🚨 Creare issue la eșec pipeline
-        if: failure() || steps.main_pipeline.outcome == 'failure' || steps.scrape_altemagazine.outcome == 'failure' || steps.merge_altemagazine.outcome == 'failure' || steps.ps_feed.outcome == 'failure' || steps.two_p_feed.outcome == 'failure' || steps.link_validator.outcome == 'failure' || steps.codes_scraper.outcome == 'failure' || steps.price_validator.outcome == 'failure' || steps.sync_hubs.outcome == 'failure'
+        if: failure() || steps.main_pipeline.outcome == 'failure' || steps.scrape_altemagazine.outcome == 'failure' || steps.merge_altemagazine.outcome == 'failure' || steps.ps_feed.outcome == 'failure' || steps.two_p_feed.outcome == 'failure' || steps.link_validator.outcome == 'failure' || steps.codes_scraper.outcome == 'failure' || steps.price_validator.outcome == 'failure' || steps.sync_hubs.outcome == 'failure' || steps.dedup.outcome == 'failure'
         uses: actions/github-script@v7
         with:
           script: |
@@ -166,6 +202,7 @@ jobs:
               'Link Validator 2P (link_validator_agent.py)': '${{ steps.link_validator.outcome }}',
               'Codes scraper (codes_scraper.py)': '${{ steps.codes_scraper.outcome }}',
               'Price validator': '${{ steps.price_validator.outcome }}',
+              'Dedup cross-platform': '${{ steps.dedup.outcome }}',
               'Sync theme hubs': '${{ steps.sync_hubs.outcome }}'
             };
             const failed = Object.entries(outcomes)

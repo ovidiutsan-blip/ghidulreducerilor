@@ -170,6 +170,11 @@ export async function GET() {
     {
       width: 1200,
       height: 630,
+      // Imaginea e statică (nu primește query params), deci poate fi cache-uită agresiv
+      // pe CDN pentru un an. Se invalidează automat la următorul deploy.
+      headers: {
+        'Cache-Control': 'public, max-age=31536000, s-maxage=31536000, immutable',
+      },
     }
   )
 }

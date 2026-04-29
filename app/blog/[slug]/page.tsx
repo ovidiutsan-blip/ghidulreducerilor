@@ -4,14 +4,15 @@ import { notFound } from 'next/navigation'
 import Breadcrumb from '@/components/Breadcrumb'
 import { getAllArticleSlugs, getArticleBySlug, getRelatedArticles } from '@/lib/blog'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
   return getAllArticleSlugs().map(slug => ({ slug }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const article = getArticleBySlug(params.slug)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const article = getArticleBySlug(slug)
   if (!article) {
     return { title: 'Articol inexistent' }
   }
@@ -38,11 +39,12 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function BlogArticlePage({ params }: Props) {
-  const article = getArticleBySlug(params.slug)
+export default async function BlogArticlePage({ params }: Props) {
+  const { slug } = await params
+  const article = getArticleBySlug(slug)
   if (!article) notFound()
   const { meta, Body } = article
-  const related = getRelatedArticles(params.slug, 2)
+  const related = getRelatedArticles(slug, 2)
 
   const articleSchema = {
     '@context': 'https://schema.org',

@@ -1,10 +1,3 @@
-import { clsx, type ClassValue } from 'clsx'
-import { twMerge } from 'tailwind-merge'
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
-}
-
 // Formatează prețul în lei românești
 export function formatPrice(price: number): string {
   return new Intl.NumberFormat('ro-RO', {

@@ -24,6 +24,7 @@ export default function EmailForm() {
           nume: formData.get('nume'),
           email: formData.get('email'),
           magazin: formData.get('magazin'),
+          website: formData.get('website'),
           gdpr_consent: true,
           consented_at: new Date().toISOString(),
         }),
@@ -58,6 +59,15 @@ export default function EmailForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
+      {/* Honeypot — invisible to humans, filled by bots */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute -left-[9999px] opacity-0 pointer-events-none"
+      />
       <div>
         <label htmlFor="nume" className="block text-sm font-medium text-neutral-700 mb-1">Nume</label>
         <input

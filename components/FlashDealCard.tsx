@@ -11,7 +11,7 @@ function isBadImageUrl(url: string | null | undefined): boolean {
   return url.includes('lazy-loader') || url.endsWith('.gif')
 }
 
-export default function FlashDealCard({ deal }: { deal: Deal }) {
+export default function FlashDealCard({ deal, priority = false }: { deal: Deal; priority?: boolean }) {
   const [imgError, setImgError] = useState(() => isBadImageUrl(deal.imagine_url))
 
   return (
@@ -34,6 +34,7 @@ export default function FlashDealCard({ deal }: { deal: Deal }) {
               fill
               className="object-contain group-hover:scale-105 transition-transform duration-300"
               sizes="192px"
+              priority={priority}
               onError={() => setImgError(true)}
             />
           </div>

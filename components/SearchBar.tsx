@@ -1,25 +1,47 @@
 'use client'
 
-import { useState, useRef, useEffect, useMemo } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
-import { Search, X, ImageOff } from 'lucide-react'
+import { Search, X } from 'lucide-react'
 import { formatPrice } from '@/lib/utils'
-import type { Deal } from '@/lib/data'
+import type { SearchResult } from '@/app/api/search/route'
 
-export default function SearchBar({ deals }: { deals: Deal[] }) {
+const DEBOUNCE_MS = 250
+
+export default function SearchBar() {
   const [query, setQuery] = useState('')
+  const [results, setResults] = useState<SearchResult[]>([])
   const [open, setOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const results = useMemo(() => {
-    if (query.length < 2) return []
-    const q = query.toLowerCase()
-    return deals
-      .filter(d => d.titlu.toLowerCase().includes(q) || d.categorie.toLowerCase().includes(q))
-      .slice(0, 5)
-  }, [query, deals])
+  useEffect(() => {
+    const q = query.trim()
+    if (q.length < 2) {
+      setResults([])
+      return
+    }
+
+    const ctrl = new AbortController()
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`, {
+          signal: ctrl.signal,
+        })
+        if (!res.ok) return
+        const data = (await res.json()) as { results: SearchResult[] }
+        setResults(data.results)
+      } catch {
+        // AbortError sau retea — ignoră
+      }
+    }, DEBOUNCE_MS)
+
+    return () => {
+      clearTimeout(timer)
+      ctrl.abort()
+    }
+  }, [query])
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
@@ -31,13 +53,13 @@ export default function SearchBar({ deals }: { deals: Deal[] }) {
     return () => document.removeEventListener('mousedown', handleClick)
   }, [])
 
-  function handleFocus() {
-    if (query.length >= 2) setOpen(true)
-  }
-
   useEffect(() => {
     setOpen(results.length > 0)
   }, [results])
+
+  function handleFocus() {
+    if (query.length >= 2 && results.length > 0) setOpen(true)
+  }
 
   return (
     <>
@@ -51,10 +73,11 @@ export default function SearchBar({ deals }: { deals: Deal[] }) {
             onChange={e => setQuery(e.target.value)}
             onFocus={handleFocus}
             placeholder="Cauta reduceri..."
+            aria-label="Caută reduceri"
             className="w-full pl-10 pr-4 py-2 text-sm border border-neutral-200 rounded-xl bg-neutral-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all"
           />
           {query && (
-            <button onClick={() => { setQuery(''); setOpen(false) }} className="absolute right-3 top-1/2 -translate-y-1/2">
+            <button onClick={() => { setQuery(''); setOpen(false) }} aria-label="Șterge căutarea" className="absolute right-3 top-1/2 -translate-y-1/2">
               <X className="w-4 h-4 text-neutral-400 hover:text-neutral-600" />
             </button>
           )}
@@ -113,9 +136,10 @@ export default function SearchBar({ deals }: { deals: Deal[] }) {
               value={query}
               onChange={e => setQuery(e.target.value)}
               placeholder="Cauta reduceri..."
+              aria-label="Caută reduceri"
               className="flex-1 text-base outline-none"
             />
-            <button onClick={() => { setMobileOpen(false); setQuery('') }}>
+            <button onClick={() => { setMobileOpen(false); setQuery('') }} aria-label="Închide căutarea">
               <X className="w-5 h-5 text-neutral-600" />
             </button>
           </div>

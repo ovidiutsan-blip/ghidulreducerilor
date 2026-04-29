@@ -4,10 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Tag, Menu, X, Bell } from 'lucide-react'
 import SearchBar from '@/components/SearchBar'
-import dealsData from '@/data/deals.json'
-import type { Deal } from '@/lib/data'
-
-const allDeals = (dealsData as Deal[]).filter(d => d.activ)
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -27,7 +23,7 @@ export default function Navbar() {
           </Link>
 
           {/* Search bar - desktop */}
-          <SearchBar deals={allDeals} />
+          <SearchBar />
 
           {/* CTA + Mobile menu */}
           <div className="flex items-center gap-2">
@@ -74,7 +70,7 @@ export default function Navbar() {
               🛒 eMAG Reduceri
             </Link>
             <Link
-              href="/coduri-promo/emag"
+              href="/cod-reducere/emag"
               className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-red py-1"
               onClick={() => setMenuOpen(false)}
             >

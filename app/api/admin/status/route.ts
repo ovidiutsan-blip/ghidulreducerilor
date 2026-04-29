@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { isApiAuthorized } from '@/lib/admin-auth'
+import type { Deal, PromoCode } from '@/lib/data'
 import path from 'path'
 import fs from 'fs/promises'
 
 const ROOT = path.join(process.cwd())
+
+type DealWithLinkStatus = Deal & { link_status?: string }
 
 /**
  * GET /api/admin/status
@@ -22,17 +25,17 @@ export async function GET(req: NextRequest) {
   // ===== Deals Stats =====
   try {
     const dealsPath = path.join(ROOT, 'data', 'deals.json')
-    const deals = JSON.parse(await fs.readFile(dealsPath, 'utf-8'))
-    const active = deals.filter((d: any) => d.is_active !== false)
-    const discounts = active.map((d: any) => d.discount_percent || 0).filter((d: number) => d > 0)
-    const brokenLinks = deals.filter((d: any) => d.link_status === 'not_found' || d.link_status === 'server_error')
+    const deals = JSON.parse(await fs.readFile(dealsPath, 'utf-8')) as DealWithLinkStatus[]
+    const active = deals.filter(d => d.activ)
+    const discounts = active.map(d => d.procent_reducere || 0).filter(n => n > 0)
+    const brokenLinks = deals.filter(d => d.link_status && d.link_status !== 'ok')
 
     status.deals = {
       total: deals.length,
       active: active.length,
       broken_links: brokenLinks.length,
       avg_discount: discounts.length > 0
-        ? Math.round(discounts.reduce((a: number, b: number) => a + b, 0) / discounts.length * 10) / 10
+        ? Math.round(discounts.reduce((a, b) => a + b, 0) / discounts.length * 10) / 10
         : 0,
       max_discount: Math.max(...discounts, 0)
     }
@@ -43,14 +46,13 @@ export async function GET(req: NextRequest) {
   // ===== Codes Stats =====
   try {
     const codesPath = path.join(ROOT, 'data', 'codes.json')
-    const codes = JSON.parse(await fs.readFile(codesPath, 'utf-8'))
+    const codes = JSON.parse(await fs.readFile(codesPath, 'utf-8')) as PromoCode[]
     const now = new Date()
-    const activeCodes = codes.filter((c: any) => {
-      if (!c.active && c.active !== undefined) return false
-      if (c.validUntil) {
-        try {
-          return new Date(c.validUntil) > now
-        } catch { return true }
+    const activeCodes = codes.filter(c => {
+      if (c.verificat === false) return false
+      if (c.data_expirare) {
+        const exp = new Date(c.data_expirare)
+        if (!isNaN(exp.getTime()) && exp < now) return false
       }
       return true
     })

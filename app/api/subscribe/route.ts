@@ -1,51 +1,28 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { checkRateLimit, clientIp } from '@/lib/rate-limit'
 
-// Rate limiter simplu in-memory (per IP, 5 cereri/minut)
-const rateLimit = new Map<string, { count: number; resetAt: number }>()
-const RATE_LIMIT = 5
-const RATE_WINDOW = 60 * 1000 // 1 minut
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now()
-  const entry = rateLimit.get(ip)
-
-  if (!entry || now > entry.resetAt) {
-    rateLimit.set(ip, { count: 1, resetAt: now + RATE_WINDOW })
-    return false
-  }
-
-  entry.count++
-  if (entry.count > RATE_LIMIT) return true
-  return false
-}
-
-// Cleanup periodic (la fiecare 100 cereri, sterge intrari expirate)
-let requestCount = 0
-function cleanupRateLimit() {
-  requestCount++
-  if (requestCount % 100 !== 0) return
-  const now = Date.now()
-  rateLimit.forEach((entry, ip) => {
-    if (now > entry.resetAt) rateLimit.delete(ip)
-  })
-}
+const SUBSCRIBE_LIMIT = 5
+const SUBSCRIBE_WINDOW_MS = 15 * 60 * 1000
 
 // POST /api/subscribe — adaugă contact în Brevo (Sendinblue)
 export async function POST(request: NextRequest) {
   try {
-    cleanupRateLimit()
-
-    // Rate limiting
-    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
-    if (isRateLimited(ip)) {
+    const ip = clientIp(request)
+    const rl = checkRateLimit(`subscribe:${ip}`, SUBSCRIBE_LIMIT, SUBSCRIBE_WINDOW_MS)
+    if (!rl.ok) {
       return NextResponse.json(
-        { error: 'Prea multe cereri. Încearcă din nou peste un minut.' },
-        { status: 429 }
+        { error: 'Prea multe cereri. Încearcă din nou mai târziu.' },
+        { status: 429, headers: { 'Retry-After': String(rl.retryAfterSec) } }
       )
     }
 
     const body = await request.json()
-    const { nume, email, magazin, gdpr_consent, consented_at } = body
+    const { nume, email, magazin, gdpr_consent, consented_at, website } = body
+
+    // Honeypot: clientul real nu vede acest câmp; botii îl completează → silent OK
+    if (typeof website === 'string' && website.trim().length > 0) {
+      return NextResponse.json({ success: true })
+    }
 
     if (!email || !nume) {
       return NextResponse.json(

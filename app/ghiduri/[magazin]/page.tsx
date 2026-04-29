@@ -6,14 +6,15 @@ import Breadcrumb from '@/components/Breadcrumb'
 import { getStoreGuideBySlug, getAllStoreGuideSlugs, STORE_GUIDES } from '@/lib/store-guides'
 import { getStoreBySlug, getDealsByStore } from '@/lib/data'
 
-type Props = { params: { magazin: string } }
+type Props = { params: Promise<{ magazin: string }> }
 
 export function generateStaticParams() {
   return getAllStoreGuideSlugs().map(magazin => ({ magazin }))
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const guide = getStoreGuideBySlug(params.magazin)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { magazin } = await params
+  const guide = getStoreGuideBySlug(magazin)
   if (!guide) return {}
   return {
     title: guide.metaTitle,
@@ -28,8 +29,9 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function StoreGuidePage({ params }: Props) {
-  const guide = getStoreGuideBySlug(params.magazin)
+export default async function StoreGuidePage({ params }: Props) {
+  const { magazin } = await params
+  const guide = getStoreGuideBySlug(magazin)
   if (!guide) notFound()
 
   const store = getStoreBySlug(guide.storeSlug)
@@ -133,7 +135,7 @@ export default function StoreGuidePage({ params }: Props) {
               <ArrowRight className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href={`/coduri-promo/${guide.storeSlug}`}
+              href={`/cod-reducere/${guide.storeSlug}`}
               className="flex items-center justify-between bg-amber-50 hover:bg-amber-100 border-2 border-amber-200 rounded-xl p-4 transition-colors group"
             >
               <div className="flex items-center gap-3">

@@ -35,12 +35,14 @@
   .btn-cta {
     @apply inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red-dark
            text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200
-           hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+           hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2;
   }
 
   .btn-cta-outline {
     @apply inline-flex items-center justify-center gap-2 border-2 border-brand-red text-brand-red
-           hover:bg-brand-red hover:text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200;
+           hover:bg-brand-red hover:text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-offset-2;
   }
 
   /* Card cu hover */

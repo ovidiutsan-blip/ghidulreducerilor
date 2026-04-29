@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
-import { getAllStoreSlugs, getDealsByStore, getCodesByStore } from '@/lib/data'
+import { getAllStoreSlugs, getDealsByStore, getCodesByStore, getAllCategories } from '@/lib/data'
 import { getAllArticles } from '@/lib/blog'
-import { getAllThemeHubSlugs } from '@/lib/theme-hubs'
+import { getAllThemeHubSlugs, getThemeHubBySlug } from '@/lib/theme-hubs'
 import { getAllStoreGuideSlugs } from '@/lib/store-guides'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ghidulreducerilor.ro'
@@ -29,13 +29,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  // Thematic category hubs
+  // Thematic category hubs (rich editorial content)
   const themeHubPages: MetadataRoute.Sitemap = getAllThemeHubSlugs().map(slug => ({
     url: `${BASE_URL}/categorii/${slug}`,
     lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }))
+
+  // /categorie/[slug] — only for slugs without an overlapping theme hub
+  // (overlapping ones already canonical-redirect to /categorii/* and shouldn't
+  // appear twice in the sitemap).
+  const categoryPages: MetadataRoute.Sitemap = getAllCategories()
+    .filter(slug => !getThemeHubBySlug(slug))
+    .map(slug => ({
+      url: `${BASE_URL}/categorie/${slug}`,
+      lastModified: now,
+      changeFrequency: 'daily' as const,
+      priority: 0.6,
+    }))
 
   // Store guides
   const storeGuidePages: MetadataRoute.Sitemap = getAllStoreGuideSlugs().map(slug => ({
@@ -78,5 +90,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }]
 
-  return [...staticPages, ...blogPages, ...themeHubPages, ...storeGuidePages, ...storePages, ...codReducereIndex]
+  return [...staticPages, ...blogPages, ...themeHubPages, ...categoryPages, ...storeGuidePages, ...storePages, ...codReducereIndex]
 }

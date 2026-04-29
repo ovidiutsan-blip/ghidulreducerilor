@@ -140,7 +140,7 @@ export const article: BlogArticle = {
       <p>
         Multe magazine permit ca un cod de reducere promoțional (ex. cod de bun venit, cod pentru
         membri) să se cumuleze cu reducerea de campanie. Verifică lista noastră de{' '}
-        <a href="/coduri-promo/emag">coduri active</a> în zilele apropiate de Black Friday.
+        <a href="/cod-reducere/emag">coduri active</a> în zilele apropiate de Black Friday.
       </p>
 
       <h2>Erori frecvente de evitat</h2>

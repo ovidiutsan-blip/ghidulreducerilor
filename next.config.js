@@ -76,13 +76,6 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.shopify.com' },
     ],
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
   // Redirects: /coduri-promo → /cod-reducere (canonical URL change)
   async redirects() {
     return [
@@ -96,6 +89,13 @@ const nextConfig = {
 
   // Security headers
   async headers() {
+    const isProd = process.env.NODE_ENV === 'production'
+    // React dev mode needs `'unsafe-eval'` (source maps, error overlay).
+    // In production React never calls eval — drop it.
+    const scriptSrc = isProd
+      ? "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com"
+      : "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com"
+
     return [
       {
         // Profitshare validation file - serve as text/plain
@@ -116,9 +116,9 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+              scriptSrc,
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "img-src 'self' data: blob: https: http:",
+              "img-src 'self' data: blob: https:",
               "font-src 'self' https://fonts.gstatic.com",
               "connect-src 'self' https://www.google-analytics.com https://api.brevo.com https://region1.google-analytics.com",
               "frame-ancestors 'none'",
