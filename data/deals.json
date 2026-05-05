@@ -4132,7 +4132,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.137405+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:12.775457+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-64a44bd6",
@@ -4169,7 +4173,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.137613+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:12.775713+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-a1d05ce5",
@@ -4206,7 +4214,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.137850+00:00",
     "pret_minim_30z": 22.76,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:12.775917+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-bf3b7674",
@@ -4243,7 +4255,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.138061+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:12.776546+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-1c7d5f42",
@@ -4280,7 +4296,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.138275+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:12.778212+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-8296c3d7",
@@ -4317,7 +4337,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.138483+00:00",
     "pret_minim_30z": 17.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:12.782349+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-141dcf3b",
@@ -4354,7 +4378,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.138688+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:12.783312+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-9548e394",
@@ -4391,7 +4419,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.138924+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:12.784472+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-6f4365ce",
@@ -4428,7 +4460,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.139132+00:00",
     "pret_minim_30z": 42.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:13.559245+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-3c3d2a67",
@@ -4465,7 +4501,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.139413+00:00",
     "pret_minim_30z": 37.17,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:13.664729+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-dee1100c",
@@ -4502,7 +4542,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.139621+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:13.815848+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-462ae136",
@@ -4539,7 +4583,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.139859+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:13.820687+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-4cb98872",
@@ -4576,7 +4624,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.140066+00:00",
     "pret_minim_30z": 54.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:13.839224+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-f4e9e1c1",
@@ -4613,7 +4665,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.140271+00:00",
     "pret_minim_30z": 35.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:13.843442+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-0fafb3a2",
@@ -4650,7 +4706,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.140478+00:00",
     "pret_minim_30z": 53.18,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:13.956723+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-9dc4f684",
@@ -4687,7 +4747,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.140693+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:14.088775+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-fb327186",
@@ -4724,7 +4788,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.140929+00:00",
     "pret_minim_30z": 35.52,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:14.253255+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-510fc300",
@@ -4761,7 +4829,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.141136+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.312563+00:00"
   },
   {
     "id": "vegis-d72eaca2",
@@ -4798,7 +4868,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.141346+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.315093+00:00"
   },
   {
     "id": "vegis-9ea90055",
@@ -4835,7 +4907,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.141559+00:00",
     "pret_minim_30z": 35.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.317568+00:00"
   },
   {
     "id": "vegis-73172725",
@@ -4872,7 +4946,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.141791+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.327229+00:00"
   },
   {
     "id": "vegis-f0dd29ab",
@@ -4909,7 +4985,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.142004+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.356514+00:00"
   },
   {
     "id": "vegis-d5ce6ecb",
@@ -4946,7 +5024,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.142215+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:14.585448+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-fa9e06ea",
@@ -4983,7 +5065,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.142423+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:14.597728+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-0dfbdca8",
@@ -5020,7 +5106,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.142631+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.601427+00:00"
   },
   {
     "id": "vegis-4ec4fe65",
@@ -5057,7 +5145,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.142872+00:00",
     "pret_minim_30z": 35.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.614156+00:00"
   },
   {
     "id": "vegis-0afe1fe9",
@@ -5094,7 +5184,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.143088+00:00",
     "pret_minim_30z": 48.29,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.644935+00:00"
   },
   {
     "id": "vegis-1155d6d4",
@@ -5131,7 +5223,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.143297+00:00",
     "pret_minim_30z": 62.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.654503+00:00"
   },
   {
     "id": "vegis-ee8cd8a3",
@@ -5168,7 +5262,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.143505+00:00",
     "pret_minim_30z": 48.51,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:14.804981+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-b1b8f64e",
@@ -5205,7 +5303,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.143713+00:00",
     "pret_minim_30z": 41.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.876706+00:00"
   },
   {
     "id": "vegis-1b1a989c",
@@ -5242,7 +5342,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.143948+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.883603+00:00"
   },
   {
     "id": "vegis-79655cab",
@@ -5279,7 +5381,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.144161+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.918521+00:00"
   },
   {
     "id": "vegis-ba85255a",
@@ -5316,7 +5420,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.144368+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.932759+00:00"
   },
   {
     "id": "vegis-a59eb9ac",
@@ -5353,7 +5459,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.144659+00:00",
     "pret_minim_30z": 49.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:14.941537+00:00"
   },
   {
     "id": "vegis-fb19b61e",
@@ -5390,7 +5498,11 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.144898+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-05T21:05:15.150005+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-385b2110",
@@ -5427,7 +5539,9 @@
     "omnibus_checked_at": "2026-05-05T06:20:44.145106+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-05T21:05:15.153628+00:00"
   },
   {
     "id": "ps-alecoair-resigilat-umidificator-alecoair-u40-towe-0TOWER-W",
@@ -5787,114 +5901,6 @@
     "omnibus_validated": true
   },
   {
-    "id": "2p-scule365-masina-tocat-carne-electrica-3500w-1-2kg-17214783",
-    "slug": "masina-tocat-carne-electrica-3500w-1-2kg-min-2-site-inox-functie-reverse-rosie-h",
-    "magazin": "scule365",
-    "titlu": "Masina tocat carne electrica 3500W, 1.2kg/min, 2 site inox, functie reverse, rosie, HOLZ Germany PROFESSIONAL CMP1796",
-    "image": "https://c.cdnmp.net/372758804/p/l/1/masina-tocat-carne-electrica-3500w-1-2kg-min-2-site-inox-functie~5279951.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/1/masina-tocat-carne-electrica-3500w-1-2kg-min-2-site-inox-functie~5279951.jpg",
-    "pret_original": 288.0,
-    "pret_redus": 156.0,
-    "procent_reducere": 46,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=p0284w2df9ai&aff_code=d8b71657a&product_id=7717214783",
-    "product_url": "https://www.scule365.ro/cumpara/masina-tocat-carne-electrica-3500w-1-2kg-min-2-site-inox-functie-30412",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Masina tocat carne electrica 3500W, 1.2kg/min, 2 site inox, functie reverse, rosie, HOLZ Germany PROFESSIONAL CMP1796",
-    "store": "scule365",
-    "price": 156.0,
-    "originalPrice": 288.0,
-    "discount_percent": 46,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=p0284w2df9ai&aff_code=d8b71657a&product_id=7717214783",
-    "url": "https://www.scule365.ro/cumpara/masina-tocat-carne-electrica-3500w-1-2kg-min-2-site-inox-functie-30412",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.147266+00:00",
-    "pret_minim_30z": 156.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-set-trusa-chei-216-piese-tubulare-1-4-3--38135915",
-    "slug": "set-trusa-chei-216-piese-tubulare-1-4-3-8-1-2-combinatii-si-biti-campion-cmp1646",
-    "magazin": "scule365",
-    "titlu": "Set trusa chei 216 piese, tubulare 1/4\", 3/8\", 1/2\", combinatii si biti, Campion CMP1646",
-    "image": "https://c.cdnmp.net/372758804/p/l/9/set-trusa-chei-216-piese-tubulare-1-4-3-8-1-2-combinatii-si-biti~2827329.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/9/set-trusa-chei-216-piese-tubulare-1-4-3-8-1-2-combinatii-si-biti~2827329.jpg",
-    "pret_original": 489.0,
-    "pret_redus": 265.0,
-    "procent_reducere": 46,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=VYi0QdoSYgFS&aff_code=d8b71657a&product_id=5838135915",
-    "product_url": "https://www.scule365.ro/cumpara/set-trusa-chei-216-piese-tubulare-1-4-3-8-1-2-combinatii-si-biti-30324",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Set trusa chei 216 piese, tubulare 1/4\", 3/8\", 1/2\", combinatii si biti, Campion CMP1646",
-    "store": "scule365",
-    "price": 265.0,
-    "originalPrice": 489.0,
-    "discount_percent": 46,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=VYi0QdoSYgFS&aff_code=d8b71657a&product_id=5838135915",
-    "url": "https://www.scule365.ro/cumpara/set-trusa-chei-216-piese-tubulare-1-4-3-8-1-2-combinatii-si-biti-30324",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.147474+00:00",
-    "pret_minim_30z": 265.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-pompa-apa-submersibila-pe-vibratie-tip-v-38654933",
-    "slug": "pompa-apa-submersibila-pe-vibratie-tip-vmp60-1000w-debit-35l-min-2860rpm-70m-cmp",
-    "magazin": "scule365",
-    "titlu": "Pompa apa submersibila, pe vibratie tip VMP60,, 1000W, Debit 35L min., 2860RPM, 70m, CMP1558",
-    "image": "https://c.cdnmp.net/372758804/p/l/4/pompa-apa-submersibila-pe-vibratie-tip-vmp60-1000w-debit-35l-min~2788134.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/4/pompa-apa-submersibila-pe-vibratie-tip-vmp60-1000w-debit-35l-min~2788134.jpg",
-    "pret_original": 166.0,
-    "pret_redus": 89.0,
-    "procent_reducere": 46,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=WgysCt8rhjlr&aff_code=d8b71657a&product_id=5738654933",
-    "product_url": "https://www.scule365.ro/cumpara/pompa-apa-submersibila-pe-vibratie-tip-vmp60-1000w-debit-35l-min-30314",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pompa apa submersibila, pe vibratie tip VMP60,, 1000W, Debit 35L min., 2860RPM, 70m, CMP1558",
-    "store": "scule365",
-    "price": 89.0,
-    "originalPrice": 166.0,
-    "discount_percent": 46,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=WgysCt8rhjlr&aff_code=d8b71657a&product_id=5738654933",
-    "url": "https://www.scule365.ro/cumpara/pompa-apa-submersibila-pe-vibratie-tip-vmp60-1000w-debit-35l-min-30314",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.147688+00:00",
-    "pret_minim_30z": 89.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
     "id": "watch24-1c57e9bf",
     "slug": "cort-plaja-pentru-copii-cu-bazin-integrat-pop-up-protectie-uv-si-vant-albastru-g",
     "magazin": "watch24",
@@ -6006,42 +6012,6 @@
     "image_fix_source": "agent:alecoair",
     "omnibus_checked_at": "2026-05-05T06:20:44.148344+00:00",
     "pret_minim_30z": 65.29,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-set-cu-4-acumulatori-48v-mini-drujba-ele-90904222",
-    "slug": "set-cu-4-acumulatori-48v-mini-drujba-electrica-300mm-foarfeca-gradina-cu-acumula",
-    "magazin": "scule365",
-    "titlu": "Set cu 4 acumulatori 48v, Mini Drujba electrica 300mm + Foarfeca gradina cu acumulator 27mm diametru Campion PROFESSIONAL",
-    "image": "https://c.cdnmp.net/372758804/p/l/1/set-cu-4-acumulatori-48v-mini-drujba-electrica-300mm-foarfeca-gradina~5884031.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/1/set-cu-4-acumulatori-48v-mini-drujba-electrica-300mm-foarfeca-gradina~5884031.jpg",
-    "pret_original": 721.0,
-    "pret_redus": 399.0,
-    "procent_reducere": 45,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=iwyc64COBNsD&aff_code=d8b71657a&product_id=10090904222",
-    "product_url": "https://www.scule365.ro/cumpara/set-cu-4-acumulatori-48v-mini-drujba-electrica-300mm-foarfeca-gradina-30798",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Set cu 4 acumulatori 48v, Mini Drujba electrica 300mm + Foarfeca gradina cu acumulator 27mm diametru Campion PROFESSIONAL",
-    "store": "scule365",
-    "price": 399.0,
-    "originalPrice": 721.0,
-    "discount_percent": 45,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=iwyc64COBNsD&aff_code=d8b71657a&product_id=10090904222",
-    "url": "https://www.scule365.ro/cumpara/set-cu-4-acumulatori-48v-mini-drujba-electrica-300mm-foarfeca-gradina-30798",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.148552+00:00",
-    "pret_minim_30z": 399.0,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
@@ -6165,186 +6135,6 @@
     "omnibus_validated": true
   },
   {
-    "id": "2p-scule365-tambur-mosor-motocoasa-cu-alimentare-rap-67685059",
-    "slug": "tambur-mosor-motocoasa-cu-alimentare-rapida-autocut-garden-cmp0841",
-    "magazin": "scule365",
-    "titlu": "Tambur mosor Motocoasa cu alimentare rapida, autocut, Garden, CMP0841",
-    "image": "https://c.cdnmp.net/372758804/p/l/6/tambur-mosor-motocoasa-cu-alimentare-rapida-autocut-garden-cmp0841~6345656.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/6/tambur-mosor-motocoasa-cu-alimentare-rapida-autocut-garden-cmp0841~6345656.jpg",
-    "pret_original": 27.0,
-    "pret_redus": 14.99,
-    "procent_reducere": 44,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=MzwWiHbxFQWJ&aff_code=d8b71657a&product_id=9767685059",
-    "product_url": "https://www.scule365.ro/cumpara/tambur-mosor-motocoasa-cu-alimentare-rapida-autocut-garden-cmp0841-30585",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Tambur mosor Motocoasa cu alimentare rapida, autocut, Garden, CMP0841",
-    "store": "scule365",
-    "price": 14.99,
-    "originalPrice": 27.0,
-    "discount_percent": 44,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=MzwWiHbxFQWJ&aff_code=d8b71657a&product_id=9767685059",
-    "url": "https://www.scule365.ro/cumpara/tambur-mosor-motocoasa-cu-alimentare-rapida-autocut-garden-cmp0841-30585",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.149436+00:00",
-    "pret_minim_30z": 14.99,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-mosor-tambur-pentru-motocoasa-cu-autocut-67685057",
-    "slug": "mosor-tambur-pentru-motocoasa-cu-autocut-fir-nylon-cmp1591",
-    "magazin": "scule365",
-    "titlu": "Mosor Tambur pentru motocoasa cu Autocut, fir nylon CMP1591",
-    "image": "https://c.cdnmp.net/372758804/p/l/2/mosor-tambur-pentru-motocoasa-cu-autocut-fir-nylon-cmp1591~6345662.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/2/mosor-tambur-pentru-motocoasa-cu-autocut-fir-nylon-cmp1591~6345662.jpg",
-    "pret_original": 18.0,
-    "pret_redus": 9.99,
-    "procent_reducere": 44,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=RXfKtDITQyPN&aff_code=d8b71657a&product_id=9767685057",
-    "product_url": "https://www.scule365.ro/cumpara/mosor-tambur-pentru-motocoasa-cu-autocut-fir-nylon-cmp1591-30583",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Mosor Tambur pentru motocoasa cu Autocut, fir nylon CMP1591",
-    "store": "scule365",
-    "price": 9.99,
-    "originalPrice": 18.0,
-    "discount_percent": 44,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=RXfKtDITQyPN&aff_code=d8b71657a&product_id=9767685057",
-    "url": "https://www.scule365.ro/cumpara/mosor-tambur-pentru-motocoasa-cu-autocut-fir-nylon-cmp1591-30583",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.149652+00:00",
-    "pret_minim_30z": 9.99,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-panou-comanda-pompa-1100-1500w-cmp1466-67685021",
-    "slug": "panou-comanda-pompa-1100-1500w-cmp1466",
-    "magazin": "scule365",
-    "titlu": "Panou Comanda Pompa 1100-1500W – CMP1466",
-    "image": "https://c.cdnmp.net/372758804/p/l/3/panou-comanda-pompa-1100-1500w-%E2%80%93-cmp1466~5806583.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/3/panou-comanda-pompa-1100-1500w-%E2%80%93-cmp1466~5806583.jpg",
-    "pret_original": 105.0,
-    "pret_redus": 59.0,
-    "procent_reducere": 44,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=Ov3BbWXgCG8L&aff_code=d8b71657a&product_id=9767685021",
-    "product_url": "https://www.scule365.ro/cumpara/panou-comanda-pompa-1100-1500w-%E2%80%93-cmp1466-30417",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Panou Comanda Pompa 1100-1500W – CMP1466",
-    "store": "scule365",
-    "price": 59.0,
-    "originalPrice": 105.0,
-    "discount_percent": 44,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=Ov3BbWXgCG8L&aff_code=d8b71657a&product_id=9767685021",
-    "url": "https://www.scule365.ro/cumpara/panou-comanda-pompa-1100-1500w-%E2%80%93-cmp1466-30417",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.149970+00:00",
-    "pret_minim_30z": 59.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-masina-de-insurubat-cheie-cu-impact-350n-60501726",
-    "slug": "masina-de-insurubat-cheie-cu-impact-350nm-cu-2-acumulatori-48v-3000rpm-3200bpm-c",
-    "magazin": "scule365",
-    "titlu": "Masina de insurubat Cheie cu impact 350nM, cu 2 acumulatori 48v,, 3000rpm, 3200bpm Campion PROFESSIONAL CMP1685",
-    "image": "https://c.cdnmp.net/372758804/p/l/9/masina-de-insurubat-cheie-cu-impact-350nm-cu-2-acumulatori-48v-3000rpm~5797739.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/9/masina-de-insurubat-cheie-cu-impact-350nm-cu-2-acumulatori-48v-3000rpm~5797739.jpg",
-    "pret_original": 369.0,
-    "pret_redus": 208.0,
-    "procent_reducere": 44,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=Ra-Hffx7ez43&aff_code=d8b71657a&product_id=9660501726",
-    "product_url": "https://www.scule365.ro/cumpara/masina-de-insurubat-cheie-cu-impact-350nm-cu-2-acumulatori-48v-3000rpm-30617",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Masina de insurubat Cheie cu impact 350nM, cu 2 acumulatori 48v,, 3000rpm, 3200bpm Campion PROFESSIONAL CMP1685",
-    "store": "scule365",
-    "price": 208.0,
-    "originalPrice": 369.0,
-    "discount_percent": 44,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=Ra-Hffx7ez43&aff_code=d8b71657a&product_id=9660501726",
-    "url": "https://www.scule365.ro/cumpara/masina-de-insurubat-cheie-cu-impact-350nm-cu-2-acumulatori-48v-3000rpm-30617",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.150192+00:00",
-    "pret_minim_30z": 208.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-drujba-motofierastrau-pe-benzina-8-5cp-c-07198524",
-    "slug": "drujba-motofierastrau-pe-benzina-8-5cp-campion-cmp1312-52-cmc-lama-40cm-cmp1312",
-    "magazin": "scule365",
-    "titlu": "Drujba Motofierastrau pe Benzina 8.5CP Campion CMP1312, 52 CMC, Lama 40CM – CMP1312",
-    "image": "https://c.cdnmp.net/372758804/p/l/6/drujba-motofierastrau-pe-benzina-8-5cp-campion-cmp1312-52-cmc-lama~5135226.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/6/drujba-motofierastrau-pe-benzina-8-5cp-campion-cmp1312-52-cmc-lama~5135226.jpg",
-    "pret_original": 358.0,
-    "pret_redus": 199.98,
-    "procent_reducere": 44,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=_CTOyk1TFIId&aff_code=d8b71657a&product_id=7307198524",
-    "product_url": "https://www.scule365.ro/cumpara/drujba-motofierastrau-pe-benzina-8-5cp-campion-cmp1312-52-cmc-lama-30388",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Drujba Motofierastrau pe Benzina 8.5CP Campion CMP1312, 52 CMC, Lama 40CM – CMP1312",
-    "store": "scule365",
-    "price": 199.98,
-    "originalPrice": 358.0,
-    "discount_percent": 44,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=_CTOyk1TFIId&aff_code=d8b71657a&product_id=7307198524",
-    "url": "https://www.scule365.ro/cumpara/drujba-motofierastrau-pe-benzina-8-5cp-campion-cmp1312-52-cmc-lama-30388",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.150403+00:00",
-    "pret_minim_30z": 199.98,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
     "id": "ps-alecoair-resigilat-sistem-de-ventilatie-alecoair--40REVIVE",
     "slug": "resigilat-sistem-de-ventilatie-alecoair-e40-revive-cu-recuperare-de-caldura-si-p",
     "magazin": "alecoair",
@@ -6380,42 +6170,6 @@
     "image_fix_source": "agent:alecoair",
     "omnibus_checked_at": "2026-05-05T06:20:44.150615+00:00",
     "pret_minim_30z": 1652.07,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-foarfeca-gradina-electrica-cu-2-acumulat-60501719",
-    "slug": "foarfeca-gradina-electrica-cu-2-acumulatori-48v-pentru-gradina-diametru-taiere-2",
-    "magazin": "scule365",
-    "titlu": "Foarfeca gradina electrica cu 2 acumulatori 48V, pentru gradina, diametru taiere 27mm, Valiza, Campion PROFESSIONAL CMP1810",
-    "image": "https://c.cdnmp.net/372758804/p/l/1/foarfeca-gradina-electrica-cu-2-acumulatori-48v-pentru-gradina~5797271.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/1/foarfeca-gradina-electrica-cu-2-acumulatori-48v-pentru-gradina~5797271.jpg",
-    "pret_original": 261.0,
-    "pret_redus": 149.0,
-    "procent_reducere": 43,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=La3MKII7zL6y&aff_code=d8b71657a&product_id=9660501719",
-    "product_url": "https://www.scule365.ro/cumpara/foarfeca-gradina-electrica-cu-2-acumulatori-48v-pentru-gradina-30594",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Foarfeca gradina electrica cu 2 acumulatori 48V, pentru gradina, diametru taiere 27mm, Valiza, Campion PROFESSIONAL CMP1810",
-    "store": "scule365",
-    "price": 149.0,
-    "originalPrice": 261.0,
-    "discount_percent": 43,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=La3MKII7zL6y&aff_code=d8b71657a&product_id=9660501719",
-    "url": "https://www.scule365.ro/cumpara/foarfeca-gradina-electrica-cu-2-acumulatori-48v-pentru-gradina-30594",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.150863+00:00",
-    "pret_minim_30z": 149.0,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
@@ -6645,150 +6399,6 @@
     "image_fix_source": "generic-extract",
     "omnibus_checked_at": "2026-05-05T06:20:44.152188+00:00",
     "pret_minim_30z": 150.41,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-pachet-8-8cp-58cmc-drujba-benzina-3-lant-11490470",
-    "slug": "pachet-8-8cp-58cmc-drujba-benzina-3-lanturi-2-lame-x2-ulei-ungere-lant-1l-x2-ule",
-    "magazin": "scule365",
-    "titlu": "*PACHET* 8.8cp 58cmc Drujba benzina + 3 lanturi + 2 lame + x2 ulei ungere lant 1L + x2 ulei amestec 0.5L + x2 bujii + accesorii + manusi protectie CRAFT-TEC GERMANY, Super Power Plus *RED edition",
-    "image": "https://c.cdnmp.net/372758804/p/l/4/pachet-8-8cp-58cmc-drujba-benzina-3-lanturi-2-lame-x2-ulei-ungere-lant~5169144.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/4/pachet-8-8cp-58cmc-drujba-benzina-3-lanturi-2-lame-x2-ulei-ungere-lant~5169144.jpg",
-    "pret_original": 599.0,
-    "pret_redus": 349.0,
-    "procent_reducere": 42,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=l9T5PSYu-hHV&aff_code=d8b71657a&product_id=7411490470",
-    "product_url": "https://www.scule365.ro/cumpara/pachet-8-8cp-58cmc-drujba-benzina-3-lanturi-2-lame-x2-ulei-ungere-lant-30411",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-04",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "*PACHET* 8.8cp 58cmc Drujba benzina + 3 lanturi + 2 lame + x2 ulei ungere lant 1L + x2 ulei amestec 0.5L + x2 bujii + accesorii + manusi protectie CRAFT-TEC GERMANY, Super Power Plus *RED edition",
-    "store": "scule365",
-    "price": 349.0,
-    "originalPrice": 599.0,
-    "discount_percent": 42,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=l9T5PSYu-hHV&aff_code=d8b71657a&product_id=7411490470",
-    "url": "https://www.scule365.ro/cumpara/pachet-8-8cp-58cmc-drujba-benzina-3-lanturi-2-lame-x2-ulei-ungere-lant-30411",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-04",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.152402+00:00",
-    "pret_minim_30z": 349.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-adaptor-tip-prasitoare-pentru-motocoasa--36282936",
-    "slug": "adaptor-tip-prasitoare-pentru-motocoasa-28mm-9t-br-1295",
-    "magazin": "scule365",
-    "titlu": "Adaptor tip prasitoare pentru motocoasa 28mm*9T BR-1295",
-    "image": "https://c.cdnmp.net/372758804/p/l/6/adaptor-tip-prasitoare-pentru-motocoasa-28mm-9t-br-1295~6433616.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/6/adaptor-tip-prasitoare-pentru-motocoasa-28mm-9t-br-1295~6433616.jpg",
-    "pret_original": 221.0,
-    "pret_redus": 128.0,
-    "procent_reducere": 42,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=rwAGpv7S1Cmz&aff_code=d8b71657a&product_id=11136282936",
-    "product_url": "https://www.scule365.ro/cumpara/adaptor-tip-prasitoare-pentru-motocoasa-28mm-9t-br-1295-30951",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Adaptor tip prasitoare pentru motocoasa 28mm*9T BR-1295",
-    "store": "scule365",
-    "price": 128.0,
-    "originalPrice": 221.0,
-    "discount_percent": 42,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=rwAGpv7S1Cmz&aff_code=d8b71657a&product_id=11136282936",
-    "url": "https://www.scule365.ro/cumpara/adaptor-tip-prasitoare-pentru-motocoasa-28mm-9t-br-1295-30951",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.152615+00:00",
-    "pret_minim_30z": 128.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-masina-de-tuns-oi-cu-2-acumulatori-6ah-4-08553237",
-    "slug": "masina-de-tuns-oi-cu-2-acumulatori-6ah-48v-power-sheep-accesorii-incluse-cutie-d",
-    "magazin": "scule365",
-    "titlu": "Masina de tuns oi cu 2 acumulatori 6AH, 48V Power SHEEP, accesorii incluse, cutie de transport si depozitare Campion CMP1556",
-    "image": "https://c.cdnmp.net/372758804/p/l/6/masina-de-tuns-oi-cu-2-acumulatori-6ah-48v-power-sheep-accesorii~16696.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/6/masina-de-tuns-oi-cu-2-acumulatori-6ah-48v-power-sheep-accesorii~16696.jpg",
-    "pret_original": 666.01,
-    "pret_redus": 389.0,
-    "procent_reducere": 42,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=5zuT112d-OlN&aff_code=d8b71657a&product_id=10608553237",
-    "product_url": "https://www.scule365.ro/cumpara/masina-de-tuns-oi-cu-2-acumulatori-6ah-48v-power-sheep-accesorii-29661",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Masina de tuns oi cu 2 acumulatori 6AH, 48V Power SHEEP, accesorii incluse, cutie de transport si depozitare Campion CMP1556",
-    "store": "scule365",
-    "price": 389.0,
-    "originalPrice": 666.01,
-    "discount_percent": 42,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=5zuT112d-OlN&aff_code=d8b71657a&product_id=10608553237",
-    "url": "https://www.scule365.ro/cumpara/masina-de-tuns-oi-cu-2-acumulatori-6ah-48v-power-sheep-accesorii-29661",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.152902+00:00",
-    "pret_minim_30z": 389.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-pompa-de-stropit-electrica-cu-acumulator-67685035",
-    "slug": "pompa-de-stropit-electrica-cu-acumulator-cmp1759-16l-12v-8ah-presiune-reglabila-",
-    "magazin": "scule365",
-    "titlu": "Pompa de Stropit Electrica cu Acumulator CMP1759, 16L, 12V 8Ah, Presiune Reglabila pana la 4 Bar, Autonomie 3-5 Ore, Lance Telescopica Inox, Duze Interschimbabile, Incarcator Inclus",
-    "image": "https://c.cdnmp.net/372758804/p/l/7/pompa-de-stropit-electrica-cu-acumulator-cmp1759-16l-12v-8ah-presiune~5806277.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/7/pompa-de-stropit-electrica-cu-acumulator-cmp1759-16l-12v-8ah-presiune~5806277.jpg",
-    "pret_original": 221.0,
-    "pret_redus": 128.0,
-    "procent_reducere": 42,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=FGRW2eaE7cdq&aff_code=d8b71657a&product_id=9767685035",
-    "product_url": "https://www.scule365.ro/cumpara/pompa-de-stropit-electrica-cu-acumulator-cmp1759-16l-12v-8ah-presiune-30478",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-05",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pompa de Stropit Electrica cu Acumulator CMP1759, 16L, 12V 8Ah, Presiune Reglabila pana la 4 Bar, Autonomie 3-5 Ore, Lance Telescopica Inox, Duze Interschimbabile, Incarcator Inclus",
-    "store": "scule365",
-    "price": 128.0,
-    "originalPrice": 221.0,
-    "discount_percent": 42,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=FGRW2eaE7cdq&aff_code=d8b71657a&product_id=9767685035",
-    "url": "https://www.scule365.ro/cumpara/pompa-de-stropit-electrica-cu-acumulator-cmp1759-16l-12v-8ah-presiune-30478",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-05",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-05T06:20:44.153120+00:00",
-    "pret_minim_30z": 128.0,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
