@@ -3863,7 +3863,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.537314+00:00",
     "pret_minim_30z": 44.64,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:56.532914+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "watch24-97823547",
@@ -4169,7 +4173,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.538502+00:00",
     "pret_minim_30z": 23.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:56.533205+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-cb92fc62",
@@ -4206,7 +4214,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.538652+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:56.533701+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-64a44bd6",
@@ -4243,7 +4255,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.538792+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:56.534017+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-a1d05ce5",
@@ -4280,7 +4296,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.538932+00:00",
     "pret_minim_30z": 22.76,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:56.534237+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-bf3b7674",
@@ -4317,7 +4337,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.539073+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:56.536774+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-1c7d5f42",
@@ -4354,7 +4378,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.539211+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:56.540821+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-8296c3d7",
@@ -4391,7 +4419,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.539378+00:00",
     "pret_minim_30z": 17.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:56.541919+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-141dcf3b",
@@ -4428,7 +4460,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.539517+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:57.238664+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-9548e394",
@@ -4465,7 +4501,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.539732+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:57.252992+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-6f4365ce",
@@ -4502,7 +4542,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.539875+00:00",
     "pret_minim_30z": 42.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:57.277923+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-3c3d2a67",
@@ -4539,7 +4583,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.540017+00:00",
     "pret_minim_30z": 37.17,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:57.362588+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-d1c9a2d1",
@@ -4576,7 +4624,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.540156+00:00",
     "pret_minim_30z": 19.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:57.420952+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-dee1100c",
@@ -4613,7 +4665,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.540312+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:57.552789+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-462ae136",
@@ -4650,7 +4706,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.540455+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:57.710767+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-4cb98872",
@@ -4687,7 +4747,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.540594+00:00",
     "pret_minim_30z": 54.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:57.775614+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-0fafb3a2",
@@ -4724,7 +4788,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.540736+00:00",
     "pret_minim_30z": 53.18,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:57.803220+00:00"
   },
   {
     "id": "vegis-9dc4f684",
@@ -4761,7 +4827,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.540876+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:57.865788+00:00"
   },
   {
     "id": "vegis-fb327186",
@@ -4798,7 +4866,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.541016+00:00",
     "pret_minim_30z": 35.52,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:57.902600+00:00"
   },
   {
     "id": "vegis-510fc300",
@@ -4835,7 +4905,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.541158+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:57.921265+00:00"
   },
   {
     "id": "vegis-d72eaca2",
@@ -4872,7 +4944,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.541314+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:58.080826+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-9ea90055",
@@ -4909,7 +4985,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.541456+00:00",
     "pret_minim_30z": 35.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.114067+00:00"
   },
   {
     "id": "vegis-73172725",
@@ -4946,7 +5024,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.541597+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.134276+00:00"
   },
   {
     "id": "vegis-f0dd29ab",
@@ -4983,7 +5063,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.541737+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:58.180328+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-d5ce6ecb",
@@ -5020,7 +5104,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.541878+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.196911+00:00"
   },
   {
     "id": "vegis-fa9e06ea",
@@ -5057,7 +5143,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.542017+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.264854+00:00"
   },
   {
     "id": "vegis-0dfbdca8",
@@ -5094,7 +5182,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.542158+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.294025+00:00"
   },
   {
     "id": "vegis-4ec4fe65",
@@ -5131,7 +5221,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.542316+00:00",
     "pret_minim_30z": 35.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.297782+00:00"
   },
   {
     "id": "vegis-0afe1fe9",
@@ -5168,7 +5260,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.542459+00:00",
     "pret_minim_30z": 48.29,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:58.389059+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-1155d6d4",
@@ -5205,7 +5301,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.542597+00:00",
     "pret_minim_30z": 62.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.400927+00:00"
   },
   {
     "id": "vegis-ee8cd8a3",
@@ -5242,7 +5340,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.542735+00:00",
     "pret_minim_30z": 48.51,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.467384+00:00"
   },
   {
     "id": "vegis-b1b8f64e",
@@ -5279,7 +5379,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.542882+00:00",
     "pret_minim_30z": 41.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.532912+00:00"
   },
   {
     "id": "vegis-1b1a989c",
@@ -5316,7 +5418,11 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.543023+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-10T20:51:58.561678+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-79655cab",
@@ -5353,7 +5459,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.543248+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.564196+00:00"
   },
   {
     "id": "vegis-ba85255a",
@@ -5390,7 +5498,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.543399+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.665304+00:00"
   },
   {
     "id": "vegis-a59eb9ac",
@@ -5427,7 +5537,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.543543+00:00",
     "pret_minim_30z": 49.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.667565+00:00"
   },
   {
     "id": "vegis-fb19b61e",
@@ -5464,7 +5576,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.543688+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.719906+00:00"
   },
   {
     "id": "vegis-385b2110",
@@ -5501,7 +5615,9 @@
     "omnibus_checked_at": "2026-05-10T06:39:29.543828+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-10T20:51:58.734573+00:00"
   },
   {
     "id": "ps-alecoair-resigilat-umidificator-alecoair-u40-towe-0TOWER-W",
@@ -5543,78 +5659,6 @@
     "omnibus_validated": true
   },
   {
-    "id": "2p-scule365-fierastrau-sabie-48v-cu-2-acumulatori-li-06490303",
-    "slug": "fierastrau-sabie-48v-cu-2-acumulatori-li-ion-sistem-quick-release-valiza-transpo",
-    "magazin": "scule365",
-    "titlu": "Fierastrau sabie 48v cu 2 acumulatori Li-Ion, sistem quick release, valiza transport, Campion CMP1725F",
-    "image": "https://c.cdnmp.net/372758804/p/l/7/fierastrau-sabie-48v-cu-2-acumulatori-li-ion-sistem-quick-release~5494187.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/7/fierastrau-sabie-48v-cu-2-acumulatori-li-ion-sistem-quick-release~5494187.jpg",
-    "pret_original": 252.0,
-    "pret_redus": 129.0,
-    "procent_reducere": 49,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=47z2ZRCQVq0R&aff_code=d8b71657a&product_id=8506490303",
-    "product_url": "https://www.scule365.ro/cumpara/fierastrau-sabie-48v-cu-2-acumulatori-li-ion-sistem-quick-release-30430",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Fierastrau sabie 48v cu 2 acumulatori Li-Ion, sistem quick release, valiza transport, Campion CMP1725F",
-    "store": "scule365",
-    "price": 129.0,
-    "originalPrice": 252.0,
-    "discount_percent": 49,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=47z2ZRCQVq0R&aff_code=d8b71657a&product_id=8506490303",
-    "url": "https://www.scule365.ro/cumpara/fierastrau-sabie-48v-cu-2-acumulatori-li-ion-sistem-quick-release-30430",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.544113+00:00",
-    "pret_minim_30z": 129.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-masina-de-tocat-carne-electrica-3500w-3--17202283",
-    "slug": "masina-de-tocat-carne-electrica-3500w-3-site-adaptor-suc-rosii-4-in-1-corp-alumi",
-    "magazin": "scule365",
-    "titlu": "Masina de tocat carne electrica 3500w, 3 site, adaptor suc rosii, 4 in 1 CORP ALUMINIU, Campion CMP1672",
-    "image": "https://c.cdnmp.net/372758804/p/l/3/masina-de-tocat-carne-electrica-3500w-3-site-adaptor-suc-rosii-4-in-1~16913.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/3/masina-de-tocat-carne-electrica-3500w-3-site-adaptor-suc-rosii-4-in-1~16913.jpg",
-    "pret_original": 388.0,
-    "pret_redus": 199.0,
-    "procent_reducere": 49,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=KLBqLnUGkTsx&aff_code=d8b71657a&product_id=7717202283",
-    "product_url": "https://www.scule365.ro/cumpara/masina-de-tocat-carne-electrica-3500w-3-site-adaptor-suc-rosii-4-in-1-29727",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Masina de tocat carne electrica 3500w, 3 site, adaptor suc rosii, 4 in 1 CORP ALUMINIU, Campion CMP1672",
-    "store": "scule365",
-    "price": 199.0,
-    "originalPrice": 388.0,
-    "discount_percent": 49,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=KLBqLnUGkTsx&aff_code=d8b71657a&product_id=7717202283",
-    "url": "https://www.scule365.ro/cumpara/masina-de-tocat-carne-electrica-3500w-3-site-adaptor-suc-rosii-4-in-1-29727",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.544268+00:00",
-    "pret_minim_30z": 199.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
     "id": "ps-alecoair-resigilat-dezumidificator-si-purificator-G1-TTK27",
     "slug": "resigilat-dezumidificator-si-purificator-de-aer-trotec-ttk27-hepa-12-l-zi-90-m3-",
     "magazin": "alecoair",
@@ -5650,222 +5694,6 @@
     "image_fix_source": "agent:alecoair",
     "omnibus_checked_at": "2026-05-10T06:39:29.544416+00:00",
     "pret_minim_30z": 536.36,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-trusa-sudura-plita-tevi-ppr-2000w-6-bacu-06368453",
-    "slug": "trusa-sudura-plita-tevi-ppr-2000w-6-bacuri-rezerva-manusi-ruleta-putere-variabil",
-    "magazin": "scule365",
-    "titlu": "Trusa sudura plita tevi PPR 2000w, 6 bacuri rezerva, manusi, ruleta, putere variabila KRAFTNER KF-6519",
-    "image": "https://c.cdnmp.net/372758804/p/l/8/trusa-sudura-plita-tevi-ppr-2000w-6-bacuri-rezerva-manusi-ruleta~6538718.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/8/trusa-sudura-plita-tevi-ppr-2000w-6-bacuri-rezerva-manusi-ruleta~6538718.jpg",
-    "pret_original": 322.0,
-    "pret_redus": 169.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=LQU3oTZI1wM0&aff_code=d8b71657a&product_id=11306368453",
-    "product_url": "https://www.scule365.ro/cumpara/trusa-sudura-plita-tevi-ppr-2000w-6-bacuri-rezerva-manusi-ruleta-30968",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Trusa sudura plita tevi PPR 2000w, 6 bacuri rezerva, manusi, ruleta, putere variabila KRAFTNER KF-6519",
-    "store": "scule365",
-    "price": 169.0,
-    "originalPrice": 322.0,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=LQU3oTZI1wM0&aff_code=d8b71657a&product_id=11306368453",
-    "url": "https://www.scule365.ro/cumpara/trusa-sudura-plita-tevi-ppr-2000w-6-bacuri-rezerva-manusi-ruleta-30968",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.544561+00:00",
-    "pret_minim_30z": 169.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-aparat-de-sudura-invertor-mma-kraftner-4-97611147",
-    "slug": "aparat-de-sudura-invertor-mma-kraftner-495a-afisaj-digital-accesorii-incluse-man",
-    "magazin": "scule365",
-    "titlu": "Aparat de sudura invertor MMA, KRAFTNER, 495a, afisaj digital, accesorii incluse, manusi bonus, cablu 1,8m KF-2759",
-    "image": "https://c.cdnmp.net/372758804/p/l/0/aparat-de-sudura-invertor-mma-kraftner-495a-afisaj-digital-accesorii~6538550.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/0/aparat-de-sudura-invertor-mma-kraftner-495a-afisaj-digital-accesorii~6538550.jpg",
-    "pret_original": 288.0,
-    "pret_redus": 149.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=8Ux-3wqOkoch&aff_code=d8b71657a&product_id=11297611147",
-    "product_url": "https://www.scule365.ro/cumpara/aparat-de-sudura-invertor-mma-kraftner-495a-afisaj-digital-accesorii-30963",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Aparat de sudura invertor MMA, KRAFTNER, 495a, afisaj digital, accesorii incluse, manusi bonus, cablu 1,8m KF-2759",
-    "store": "scule365",
-    "price": 149.0,
-    "originalPrice": 288.0,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=8Ux-3wqOkoch&aff_code=d8b71657a&product_id=11297611147",
-    "url": "https://www.scule365.ro/cumpara/aparat-de-sudura-invertor-mma-kraftner-495a-afisaj-digital-accesorii-30963",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.544705+00:00",
-    "pret_minim_30z": 149.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-furtun-apa-refulare-2-toli-inch-50m-lung-86914389",
-    "slug": "furtun-apa-refulare-2-toli-inch-50m-lungime-plat-din-polietilena-cmp0597",
-    "magazin": "scule365",
-    "titlu": "Furtun Apa refulare 2'' toli/inch, 50m lungime, plat din polietilena CMP0597",
-    "image": "https://c.cdnmp.net/372758804/p/l/0/furtun-apa-refulare-2-toli-inch-50m-lungime-plat-din-polietilena~5759990.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/0/furtun-apa-refulare-2-toli-inch-50m-lungime-plat-din-polietilena~5759990.jpg",
-    "pret_original": 231.0,
-    "pret_redus": 119.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=ybNfO0BbfCns&aff_code=d8b71657a&product_id=9586914389",
-    "product_url": "https://www.scule365.ro/cumpara/furtun-apa-refulare-2-toli-inch-50m-lungime-plat-din-polietilena-30572",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Furtun Apa refulare 2'' toli/inch, 50m lungime, plat din polietilena CMP0597",
-    "store": "scule365",
-    "price": 119.0,
-    "originalPrice": 231.0,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=ybNfO0BbfCns&aff_code=d8b71657a&product_id=9586914389",
-    "url": "https://www.scule365.ro/cumpara/furtun-apa-refulare-2-toli-inch-50m-lungime-plat-din-polietilena-30572",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.544847+00:00",
-    "pret_minim_30z": 119.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-bormasina-ciocan-rotopercutor-3000w-cu-p-54387474",
-    "slug": "bormasina-ciocan-rotopercutor-3000w-cu-percutie-trusa-mandrina-automata-3j-1200r",
-    "magazin": "scule365",
-    "titlu": "Bormasina Ciocan rotopercutor 3000W CU PERCUTIE, trusa, mandrina automata, 3J, 1200RPM, CAMPION PROFFESIONAL CMP1565",
-    "image": "https://c.cdnmp.net/372758804/p/l/3/bormasina-ciocan-rotopercutor-3000w-cu-percutie-trusa-mandrina~16853.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/3/bormasina-ciocan-rotopercutor-3000w-cu-percutie-trusa-mandrina~16853.jpg",
-    "pret_original": 405.71,
-    "pret_redus": 209.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=q5GzPL-HYo7_&aff_code=d8b71657a&product_id=8654387474",
-    "product_url": "https://www.scule365.ro/cumpara/bormasina-ciocan-rotopercutor-3000w-cu-percutie-trusa-mandrina-29749",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Bormasina Ciocan rotopercutor 3000W CU PERCUTIE, trusa, mandrina automata, 3J, 1200RPM, CAMPION PROFFESIONAL CMP1565",
-    "store": "scule365",
-    "price": 209.0,
-    "originalPrice": 405.71,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=q5GzPL-HYo7_&aff_code=d8b71657a&product_id=8654387474",
-    "url": "https://www.scule365.ro/cumpara/bormasina-ciocan-rotopercutor-3000w-cu-percutie-trusa-mandrina-29749",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.544989+00:00",
-    "pret_minim_30z": 209.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-super-pachet-aparat-de-sudura-tip-invert-54485647",
-    "slug": "super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet-electrozi-1kg",
-    "magazin": "scule365",
-    "titlu": "*SUPER PACHET* Aparat de sudura tip Invertor cu sarma 495A, + x2 pachet electrozi 1kg, x1 sarma sudura 1kg, magnet sudura, MMA/MIG/MAG afisaj digital, ventilat, URAL MASH IGBT TEHNOLOGY ULTRA HYBRID P",
-    "image": "https://c.cdnmp.net/372758804/p/l/5/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet~5506295.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/5/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet~5506295.jpg",
-    "pret_original": 667.03,
-    "pret_redus": 349.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=-dhoTMrsym-i&aff_code=d8b71657a&product_id=8554485647",
-    "product_url": "https://www.scule365.ro/cumpara/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet-30451",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "*SUPER PACHET* Aparat de sudura tip Invertor cu sarma 495A, + x2 pachet electrozi 1kg, x1 sarma sudura 1kg, magnet sudura, MMA/MIG/MAG afisaj digital, ventilat, URAL MASH IGBT TEHNOLOGY ULTRA HYBRID P",
-    "store": "scule365",
-    "price": 349.0,
-    "originalPrice": 667.03,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=-dhoTMrsym-i&aff_code=d8b71657a&product_id=8554485647",
-    "url": "https://www.scule365.ro/cumpara/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet-30451",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.545129+00:00",
-    "pret_minim_30z": 349.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-flex-polizor-unghiular-125mm-3000w-10-ac-38135907",
-    "slug": "flex-polizor-unghiular-125mm-3000w-10-accesorii-variator-turatie-11000rpm-ural-c",
-    "magazin": "scule365",
-    "titlu": "Flex Polizor unghiular 125mm, 3000w, 10 accesorii, variator turatie, 11000rpm, Ural Campion CMP1161",
-    "image": "https://c.cdnmp.net/372758804/p/l/6/flex-polizor-unghiular-125mm-3000w-10-accesorii-variator-turatie~16706.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/6/flex-polizor-unghiular-125mm-3000w-10-accesorii-variator-turatie~16706.jpg",
-    "pret_original": 256.24,
-    "pret_redus": 132.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=o59W4JuZ55vR&aff_code=d8b71657a&product_id=5838135907",
-    "product_url": "https://www.scule365.ro/cumpara/flex-polizor-unghiular-125mm-3000w-10-accesorii-variator-turatie-29672",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Flex Polizor unghiular 125mm, 3000w, 10 accesorii, variator turatie, 11000rpm, Ural Campion CMP1161",
-    "store": "scule365",
-    "price": 132.0,
-    "originalPrice": 256.24,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=o59W4JuZ55vR&aff_code=d8b71657a&product_id=5838135907",
-    "url": "https://www.scule365.ro/cumpara/flex-polizor-unghiular-125mm-3000w-10-accesorii-variator-turatie-29672",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.545283+00:00",
-    "pret_minim_30z": 132.0,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
@@ -5948,42 +5776,6 @@
     "image_fix_source": "agent:alecoair",
     "omnibus_checked_at": "2026-05-10T06:39:29.545577+00:00",
     "pret_minim_30z": 685.12,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-rindea-electrica-900w-16000rpm-adancime--48470422",
-    "slug": "rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime-kraftner-kf-",
-    "magazin": "scule365",
-    "titlu": "Rindea electrica 900w, 16000rpm, adancime reglabila 1 - 2mm, 82mm latime KRAFTNER KF-9021",
-    "image": "https://c.cdnmp.net/372758804/p/l/5/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime~6722285.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/5/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime~6722285.jpg",
-    "pret_original": 261.0,
-    "pret_redus": 139.6,
-    "procent_reducere": 47,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=1guT-tD8kCd6&aff_code=d8b71657a&product_id=11548470422",
-    "product_url": "https://www.scule365.ro/cumpara/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime-30982",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Rindea electrica 900w, 16000rpm, adancime reglabila 1 - 2mm, 82mm latime KRAFTNER KF-9021",
-    "store": "scule365",
-    "price": 139.6,
-    "originalPrice": 261.0,
-    "discount_percent": 47,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=1guT-tD8kCd6&aff_code=d8b71657a&product_id=11548470422",
-    "url": "https://www.scule365.ro/cumpara/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime-30982",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.545720+00:00",
-    "pret_minim_30z": 139.6,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
@@ -6181,114 +5973,6 @@
     "image_fix_source": "og-image-retry",
     "omnibus_checked_at": "2026-05-10T06:39:29.546443+00:00",
     "pret_minim_30z": 189.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-drujba-pe-benzina-8-3cp-58cc-11-000rpm-4-48470410",
-    "slug": "drujba-pe-benzina-8-3cp-58cc-11-000rpm-400mm-ungere-automata-maner-anti-vibratii",
-    "magazin": "scule365",
-    "titlu": "Drujba pe benzina 8.3cp, 58cc, 11.000rpm, 400mm, ungere automata, maner anti-vibratii, pornire easy-start, KRAFTNER KF-8800",
-    "image": "https://c.cdnmp.net/372758804/p/l/3/drujba-pe-benzina-8-3cp-58cc-11-000rpm-400mm-ungere-automata-maner~6722423.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/3/drujba-pe-benzina-8-3cp-58cc-11-000rpm-400mm-ungere-automata-maner~6722423.jpg",
-    "pret_original": 399.0,
-    "pret_redus": 214.0,
-    "procent_reducere": 46,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=Q_5KIePSqUR-&aff_code=d8b71657a&product_id=11548470410",
-    "product_url": "https://www.scule365.ro/cumpara/drujba-pe-benzina-8-3cp-58cc-11-000rpm-400mm-ungere-automata-maner-30969",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Drujba pe benzina 8.3cp, 58cc, 11.000rpm, 400mm, ungere automata, maner anti-vibratii, pornire easy-start, KRAFTNER KF-8800",
-    "store": "scule365",
-    "price": 214.0,
-    "originalPrice": 399.0,
-    "discount_percent": 46,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=Q_5KIePSqUR-&aff_code=d8b71657a&product_id=11548470410",
-    "url": "https://www.scule365.ro/cumpara/drujba-pe-benzina-8-3cp-58cc-11-000rpm-400mm-ungere-automata-maner-30969",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.546583+00:00",
-    "pret_minim_30z": 214.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-lichidare-set-8-lanturi-si-2-lame-400mm--29842231",
-    "slug": "lichidare-set-8-lanturi-si-2-lame-400mm-32-dinti-pas-0-325-universale-pentru-mot",
-    "magazin": "scule365",
-    "titlu": "*LICHIDARE* Set 8 Lanturi si 2 Lame 400mm, 32 dinti, pas 0.325, universale pentru motofierastrau ( drujba )",
-    "image": "https://c.cdnmp.net/372758804/p/l/4/lichidare-set-8-lanturi-si-2-lame-400mm-32-dinti-pas-0-325-universale~6345704.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/4/lichidare-set-8-lanturi-si-2-lame-400mm-32-dinti-pas-0-325-universale~6345704.jpg",
-    "pret_original": 231.0,
-    "pret_redus": 125.0,
-    "procent_reducere": 46,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=PX_qa-j_R2Ve&aff_code=d8b71657a&product_id=10929842231",
-    "product_url": "https://www.scule365.ro/cumpara/lichidare-set-8-lanturi-si-2-lame-400mm-32-dinti-pas-0-325-universale-30958",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "*LICHIDARE* Set 8 Lanturi si 2 Lame 400mm, 32 dinti, pas 0.325, universale pentru motofierastrau ( drujba )",
-    "store": "scule365",
-    "price": 125.0,
-    "originalPrice": 231.0,
-    "discount_percent": 46,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=PX_qa-j_R2Ve&aff_code=d8b71657a&product_id=10929842231",
-    "url": "https://www.scule365.ro/cumpara/lichidare-set-8-lanturi-si-2-lame-400mm-32-dinti-pas-0-325-universale-30958",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.546795+00:00",
-    "pret_minim_30z": 125.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-masina-tocat-carne-electrica-3500w-1-2kg-17214783",
-    "slug": "masina-tocat-carne-electrica-3500w-1-2kg-min-2-site-inox-functie-reverse-rosie-h",
-    "magazin": "scule365",
-    "titlu": "Masina tocat carne electrica 3500W, 1.2kg/min, 2 site inox, functie reverse, rosie, HOLZ Germany PROFESSIONAL CMP1796",
-    "image": "https://c.cdnmp.net/372758804/p/l/1/masina-tocat-carne-electrica-3500w-1-2kg-min-2-site-inox-functie~5279951.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/1/masina-tocat-carne-electrica-3500w-1-2kg-min-2-site-inox-functie~5279951.jpg",
-    "pret_original": 288.0,
-    "pret_redus": 156.0,
-    "procent_reducere": 46,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=p0284w2df9ai&aff_code=d8b71657a&product_id=7717214783",
-    "product_url": "https://www.scule365.ro/cumpara/masina-tocat-carne-electrica-3500w-1-2kg-min-2-site-inox-functie-30412",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-10",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Masina tocat carne electrica 3500W, 1.2kg/min, 2 site inox, functie reverse, rosie, HOLZ Germany PROFESSIONAL CMP1796",
-    "store": "scule365",
-    "price": 156.0,
-    "originalPrice": 288.0,
-    "discount_percent": 46,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=p0284w2df9ai&aff_code=d8b71657a&product_id=7717214783",
-    "url": "https://www.scule365.ro/cumpara/masina-tocat-carne-electrica-3500w-1-2kg-min-2-site-inox-functie-30412",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-10",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-10T06:39:29.546942+00:00",
-    "pret_minim_30z": 156.0,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
