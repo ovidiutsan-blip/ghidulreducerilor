@@ -24,6 +24,7 @@ import { article as calendarBlackFriday2026 } from '@/app/blog/articles/calendar
 import { article as topReduceriSaptamana2026W17 } from '@/app/blog/articles/top-reduceri-saptamana-2026-w17'
 import { article as topReduceriSaptamana2026W18 } from '@/app/blog/articles/top-reduceri-saptamana-2026-w18'
 import { article as topReduceriSaptamana2026W19 } from '@/app/blog/articles/top-reduceri-saptamana-2026-w19'
+import { article as topReduceriSaptamana2026W20 } from '@/app/blog/articles/top-reduceri-saptamana-2026-w20'
 
 const REGISTRY: BlogArticle[] = [
   ceEsteUnCodReducere,
@@ -32,6 +33,7 @@ const REGISTRY: BlogArticle[] = [
   topReduceriSaptamana2026W17,
   topReduceriSaptamana2026W18,
   topReduceriSaptamana2026W19,
+  topReduceriSaptamana2026W20,
 ]
 
 export function getAllArticles(): BlogArticle[] {
