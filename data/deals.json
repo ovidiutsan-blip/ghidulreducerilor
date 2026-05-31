@@ -3341,7 +3341,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.121763+00:00",
     "pret_minim_30z": 44.64,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:48.798874+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "watch24-97823547",
@@ -3647,7 +3651,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.122985+00:00",
     "pret_minim_30z": 23.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:48.799185+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-cb92fc62",
@@ -3684,7 +3692,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.123121+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:48.799380+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-64a44bd6",
@@ -3721,7 +3733,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.123258+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:48.799606+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-a1d05ce5",
@@ -3758,7 +3774,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.123393+00:00",
     "pret_minim_30z": 22.76,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:48.800083+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-bf3b7674",
@@ -3795,7 +3815,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.123547+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:48.800555+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-1c7d5f42",
@@ -3832,7 +3856,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.123688+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:48.800781+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-8296c3d7",
@@ -3869,7 +3897,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.123826+00:00",
     "pret_minim_30z": 17.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:48.802799+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-141dcf3b",
@@ -3906,7 +3938,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.123962+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:49.725117+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-9548e394",
@@ -3943,7 +3979,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.124099+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:49.786101+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-6f4365ce",
@@ -3980,7 +4020,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.124234+00:00",
     "pret_minim_30z": 42.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:49.952098+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-3c3d2a67",
@@ -4017,7 +4061,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.124389+00:00",
     "pret_minim_30z": 37.17,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:49.960725+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-dee1100c",
@@ -4054,7 +4102,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.124598+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:50.008561+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-462ae136",
@@ -4091,7 +4143,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.124743+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:50.013634+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-4cb98872",
@@ -4128,7 +4184,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.124884+00:00",
     "pret_minim_30z": 54.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:50.065277+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-f4e9e1c1",
@@ -4165,7 +4225,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.125023+00:00",
     "pret_minim_30z": 35.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:50.067707+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-0fafb3a2",
@@ -4202,7 +4266,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.125162+00:00",
     "pret_minim_30z": 53.18,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:50.436186+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-9dc4f684",
@@ -4239,7 +4307,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.125299+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:50.456833+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-fb327186",
@@ -4276,7 +4348,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.125436+00:00",
     "pret_minim_30z": 35.52,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.589873+00:00"
   },
   {
     "id": "vegis-510fc300",
@@ -4313,7 +4387,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.125591+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.597812+00:00"
   },
   {
     "id": "vegis-d72eaca2",
@@ -4350,7 +4426,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.125732+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.613582+00:00"
   },
   {
     "id": "vegis-9ea90055",
@@ -4387,7 +4465,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.125871+00:00",
     "pret_minim_30z": 35.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.617142+00:00"
   },
   {
     "id": "vegis-73172725",
@@ -4424,7 +4504,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.126007+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.618802+00:00"
   },
   {
     "id": "vegis-f0dd29ab",
@@ -4461,7 +4543,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.126219+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.626100+00:00"
   },
   {
     "id": "vegis-d5ce6ecb",
@@ -4498,7 +4582,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.126365+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:50.928020+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-fa9e06ea",
@@ -4535,7 +4623,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.126517+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:50.933310+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-0dfbdca8",
@@ -4572,7 +4664,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.126661+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.946902+00:00"
   },
   {
     "id": "vegis-4ec4fe65",
@@ -4609,7 +4703,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.126805+00:00",
     "pret_minim_30z": 35.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.955906+00:00"
   },
   {
     "id": "vegis-0afe1fe9",
@@ -4646,7 +4742,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.126944+00:00",
     "pret_minim_30z": 48.29,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.960925+00:00"
   },
   {
     "id": "vegis-1155d6d4",
@@ -4683,7 +4781,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.127080+00:00",
     "pret_minim_30z": 62.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.964858+00:00"
   },
   {
     "id": "vegis-ee8cd8a3",
@@ -4720,7 +4820,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.127217+00:00",
     "pret_minim_30z": 48.51,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:50.971122+00:00"
   },
   {
     "id": "vegis-b1b8f64e",
@@ -4757,7 +4859,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.127352+00:00",
     "pret_minim_30z": 41.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:51.096767+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-1b1a989c",
@@ -4794,7 +4900,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.127501+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:51.263727+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-79655cab",
@@ -4831,7 +4941,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.127649+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:51.265241+00:00"
   },
   {
     "id": "vegis-ba85255a",
@@ -4868,7 +4980,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.127790+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:51.281981+00:00"
   },
   {
     "id": "vegis-a59eb9ac",
@@ -4905,7 +5019,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.127930+00:00",
     "pret_minim_30z": 49.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:51.390229+00:00"
   },
   {
     "id": "vegis-fb19b61e",
@@ -4942,7 +5058,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.128068+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:51.514795+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-385b2110",
@@ -4979,7 +5099,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.128204+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:51.581807+00:00"
   },
   {
     "id": "ps-alecoair-resigilat-umidificator-alecoair-u40-towe-0TOWER-W",
@@ -5573,78 +5695,6 @@
     "omnibus_validated": true
   },
   {
-    "id": "2p-scule365-masina-de-insurubat-cheie-cu-impact-350n-60501726",
-    "slug": "masina-de-insurubat-cheie-cu-impact-350nm-cu-2-acumulatori-48v-3000rpm-3200bpm-c",
-    "magazin": "scule365",
-    "titlu": "Masina de insurubat Cheie cu impact 350nM, cu 2 acumulatori 48v,, 3000rpm, 3200bpm Campion PROFESSIONAL CMP1685",
-    "image": "https://c.cdnmp.net/372758804/p/l/9/masina-de-insurubat-cheie-cu-impact-350nm-cu-2-acumulatori-48v-3000rpm~5797739.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/9/masina-de-insurubat-cheie-cu-impact-350nm-cu-2-acumulatori-48v-3000rpm~5797739.jpg",
-    "pret_original": 369.0,
-    "pret_redus": 208.0,
-    "procent_reducere": 44,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=Ra-Hffx7ez43&aff_code=d8b71657a&product_id=9660501726",
-    "product_url": "https://www.scule365.ro/cumpara/masina-de-insurubat-cheie-cu-impact-350nm-cu-2-acumulatori-48v-3000rpm-30617",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-31",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Masina de insurubat Cheie cu impact 350nM, cu 2 acumulatori 48v,, 3000rpm, 3200bpm Campion PROFESSIONAL CMP1685",
-    "store": "scule365",
-    "price": 208.0,
-    "originalPrice": 369.0,
-    "discount_percent": 44,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=Ra-Hffx7ez43&aff_code=d8b71657a&product_id=9660501726",
-    "url": "https://www.scule365.ro/cumpara/masina-de-insurubat-cheie-cu-impact-350nm-cu-2-acumulatori-48v-3000rpm-30617",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-31",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-31T07:52:24.130599+00:00",
-    "pret_minim_30z": 208.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-drujba-motofierastrau-pe-benzina-8-5cp-c-07198524",
-    "slug": "drujba-motofierastrau-pe-benzina-8-5cp-campion-cmp1312-52-cmc-lama-40cm-cmp1312",
-    "magazin": "scule365",
-    "titlu": "Drujba Motofierastrau pe Benzina 8.5CP Campion CMP1312, 52 CMC, Lama 40CM – CMP1312",
-    "image": "https://c.cdnmp.net/372758804/p/l/6/drujba-motofierastrau-pe-benzina-8-5cp-campion-cmp1312-52-cmc-lama~5135226.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/6/drujba-motofierastrau-pe-benzina-8-5cp-campion-cmp1312-52-cmc-lama~5135226.jpg",
-    "pret_original": 358.0,
-    "pret_redus": 199.98,
-    "procent_reducere": 44,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=_CTOyk1TFIId&aff_code=d8b71657a&product_id=7307198524",
-    "product_url": "https://www.scule365.ro/cumpara/drujba-motofierastrau-pe-benzina-8-5cp-campion-cmp1312-52-cmc-lama-30388",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-31",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Drujba Motofierastrau pe Benzina 8.5CP Campion CMP1312, 52 CMC, Lama 40CM – CMP1312",
-    "store": "scule365",
-    "price": 199.98,
-    "originalPrice": 358.0,
-    "discount_percent": 44,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=_CTOyk1TFIId&aff_code=d8b71657a&product_id=7307198524",
-    "url": "https://www.scule365.ro/cumpara/drujba-motofierastrau-pe-benzina-8-5cp-campion-cmp1312-52-cmc-lama-30388",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-31",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-31T07:52:24.130742+00:00",
-    "pret_minim_30z": 199.98,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
     "id": "ps-alecoair-resigilat-sistem-de-ventilatie-alecoair--40REVIVE",
     "slug": "resigilat-sistem-de-ventilatie-alecoair-e40-revive-cu-recuperare-de-caldura-si-p",
     "magazin": "alecoair",
@@ -5909,78 +5959,6 @@
     "image_fix_source": "generic-extract",
     "omnibus_checked_at": "2026-05-31T07:52:24.131738+00:00",
     "pret_minim_30z": 150.41,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-pompa-apa-submersibila-apa-curata-sau-mu-54387475",
-    "slug": "pompa-apa-submersibila-apa-curata-sau-murdara-3200w-racord-1-1-1-4-12500-l-h-cu-",
-    "magazin": "scule365",
-    "titlu": "Pompa apa submersibila apa curata sau murdara, 3200w, racord 1'', 1 1/4'', 12500 l/h, cu plutitor, Campion CMP1785",
-    "image": "https://c.cdnmp.net/372758804/p/l/1/pompa-apa-submersibila-apa-curata-sau-murdara-3200w-racord-1-1-1-4~5515031.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/1/pompa-apa-submersibila-apa-curata-sau-murdara-3200w-racord-1-1-1-4~5515031.jpg",
-    "pret_original": 355.0,
-    "pret_redus": 206.0,
-    "procent_reducere": 42,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=12l-Jj7vff3D&aff_code=d8b71657a&product_id=8654387475",
-    "product_url": "https://www.scule365.ro/cumpara/pompa-apa-submersibila-apa-curata-sau-murdara-3200w-racord-1-1-1-4-30452",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-31",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pompa apa submersibila apa curata sau murdara, 3200w, racord 1'', 1 1/4'', 12500 l/h, cu plutitor, Campion CMP1785",
-    "store": "scule365",
-    "price": 206.0,
-    "originalPrice": 355.0,
-    "discount_percent": 42,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=12l-Jj7vff3D&aff_code=d8b71657a&product_id=8654387475",
-    "url": "https://www.scule365.ro/cumpara/pompa-apa-submersibila-apa-curata-sau-murdara-3200w-racord-1-1-1-4-30452",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-31",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-31T07:52:24.131877+00:00",
-    "pret_minim_30z": 206.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-pachet-8-8cp-58cmc-drujba-benzina-3-lant-11490470",
-    "slug": "pachet-8-8cp-58cmc-drujba-benzina-3-lanturi-2-lame-x2-ulei-ungere-lant-1l-x2-ule",
-    "magazin": "scule365",
-    "titlu": "*PACHET* 8.8cp 58cmc Drujba benzina + 3 lanturi + 2 lame + x2 ulei ungere lant 1L + x2 ulei amestec 0.5L + x2 bujii + accesorii + manusi protectie CRAFT-TEC GERMANY, Super Power Plus *RED edition",
-    "image": "https://c.cdnmp.net/372758804/p/l/4/pachet-8-8cp-58cmc-drujba-benzina-3-lanturi-2-lame-x2-ulei-ungere-lant~5169144.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/4/pachet-8-8cp-58cmc-drujba-benzina-3-lanturi-2-lame-x2-ulei-ungere-lant~5169144.jpg",
-    "pret_original": 599.0,
-    "pret_redus": 349.0,
-    "procent_reducere": 42,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=l9T5PSYu-hHV&aff_code=d8b71657a&product_id=7411490470",
-    "product_url": "https://www.scule365.ro/cumpara/pachet-8-8cp-58cmc-drujba-benzina-3-lanturi-2-lame-x2-ulei-ungere-lant-30411",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-31",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "*PACHET* 8.8cp 58cmc Drujba benzina + 3 lanturi + 2 lame + x2 ulei ungere lant 1L + x2 ulei amestec 0.5L + x2 bujii + accesorii + manusi protectie CRAFT-TEC GERMANY, Super Power Plus *RED edition",
-    "store": "scule365",
-    "price": 349.0,
-    "originalPrice": 599.0,
-    "discount_percent": 42,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=l9T5PSYu-hHV&aff_code=d8b71657a&product_id=7411490470",
-    "url": "https://www.scule365.ro/cumpara/pachet-8-8cp-58cmc-drujba-benzina-3-lanturi-2-lame-x2-ulei-ungere-lant-30411",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-31",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-31T07:52:24.132017+00:00",
-    "pret_minim_30z": 349.0,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
@@ -6256,114 +6234,6 @@
     "omnibus_validated": true
   },
   {
-    "id": "2p-scule365-nivela-laser-cu-trepied-16-linii-25m-dis-20093273",
-    "slug": "nivela-laser-cu-trepied-16-linii-25m-display-lcd-timp-de-nivelare-5s-0-2-mm-1m-p",
-    "magazin": "scule365",
-    "titlu": "Nivela Laser cu Trepied 16 Linii, 25m, Display LCD, Timp de Nivelare ≤ 5s, ±0.2 mm/1m, Profesional, CAMPION PROFESIONAL CMP1727",
-    "image": "https://c.cdnmp.net/372758804/p/l/0/nivela-laser-cu-trepied-16-linii-25m-display-lcd-timp-de-nivelare-%E2%89%A4-5s~5049240.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/0/nivela-laser-cu-trepied-16-linii-25m-display-lcd-timp-de-nivelare-%E2%89%A4-5s~5049240.jpg",
-    "pret_original": 387.87,
-    "pret_redus": 229.0,
-    "procent_reducere": 41,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=uoztK8P19k2W&aff_code=d8b71657a&product_id=7220093273",
-    "product_url": "https://www.scule365.ro/cumpara/nivela-laser-cu-trepied-16-linii-25m-display-lcd-timp-de-nivelare-%E2%89%A4-5s-30387",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-31",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Nivela Laser cu Trepied 16 Linii, 25m, Display LCD, Timp de Nivelare ≤ 5s, ±0.2 mm/1m, Profesional, CAMPION PROFESIONAL CMP1727",
-    "store": "scule365",
-    "price": 229.0,
-    "originalPrice": 387.87,
-    "discount_percent": 41,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=uoztK8P19k2W&aff_code=d8b71657a&product_id=7220093273",
-    "url": "https://www.scule365.ro/cumpara/nivela-laser-cu-trepied-16-linii-25m-display-lcd-timp-de-nivelare-%E2%89%A4-5s-30387",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-31",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-31T07:52:24.133240+00:00",
-    "pret_minim_30z": 229.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-aeroterma-electrica-de-perete-1000-2000w-77685536",
-    "slug": "aeroterma-electrica-de-perete-1000-2000w-timmer-telecomanda-25m-3-ani-garantie-b",
-    "magazin": "scule365",
-    "titlu": "Aeroterma electrica de perete 1000/2000W, timmer, telecomanda 25m², 3 ani Garantie BH2000 BÖHM",
-    "image": "https://c.cdnmp.net/372758804/p/l/7/aeroterma-electrica-de-perete-1000-2000w-timmer-telecomanda-25m2-3-ani~15157.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/7/aeroterma-electrica-de-perete-1000-2000w-timmer-telecomanda-25m2-3-ani~15157.jpg",
-    "pret_original": 304.03,
-    "pret_redus": 179.99,
-    "procent_reducere": 41,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=ka_TflYFygHI&aff_code=d8b71657a&product_id=6477685536",
-    "product_url": "https://www.scule365.ro/cumpara/aeroterma-electrica-de-perete-1000-2000w-timmer-telecomanda-25m2-3-ani-28803",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-31",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Aeroterma electrica de perete 1000/2000W, timmer, telecomanda 25m², 3 ani Garantie BH2000 BÖHM",
-    "store": "scule365",
-    "price": 179.99,
-    "originalPrice": 304.03,
-    "discount_percent": 41,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=ka_TflYFygHI&aff_code=d8b71657a&product_id=6477685536",
-    "url": "https://www.scule365.ro/cumpara/aeroterma-electrica-de-perete-1000-2000w-timmer-telecomanda-25m2-3-ani-28803",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-31",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-31T07:52:24.133386+00:00",
-    "pret_minim_30z": 179.99,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-tun-de-caldura-pe-gaz-gfa-22-37-kw-270m--34768926",
-    "slug": "tun-de-caldura-pe-gaz-gfa-22-37-kw-270m-aprindere-automata-evotools-681931",
-    "magazin": "scule365",
-    "titlu": "Tun de Caldura pe Gaz GFA 22-37 kW, 270m², aprindere automata Evotools 681931",
-    "image": "https://c.cdnmp.net/372758804/p/l/1/tun-de-caldura-pe-gaz-gfa-22-37-kw-270m2-aprindere-automata-evotools~15151.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/1/tun-de-caldura-pe-gaz-gfa-22-37-kw-270m2-aprindere-automata-evotools~15151.jpg",
-    "pret_original": 914.11,
-    "pret_redus": 539.0,
-    "procent_reducere": 41,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=PXGb9h9O7kXv&aff_code=d8b71657a&product_id=5934768926",
-    "product_url": "https://www.scule365.ro/cumpara/tun-de-caldura-pe-gaz-gfa-22-37-kw-270m2-aprindere-automata-evotools-28779",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-05-31",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Tun de Caldura pe Gaz GFA 22-37 kW, 270m², aprindere automata Evotools 681931",
-    "store": "scule365",
-    "price": 539.0,
-    "originalPrice": 914.11,
-    "discount_percent": 41,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=PXGb9h9O7kXv&aff_code=d8b71657a&product_id=5934768926",
-    "url": "https://www.scule365.ro/cumpara/tun-de-caldura-pe-gaz-gfa-22-37-kw-270m2-aprindere-automata-evotools-28779",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-05-31",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-05-31T07:52:24.133545+00:00",
-    "pret_minim_30z": 539.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
     "id": "watch24-221ca184",
     "slug": "smartwatch-cu-ekg-ritm-cardiac-temperatura-corporala-nivel-oxigen-hrv-tensiune-a",
     "magazin": "watch24",
@@ -6514,7 +6384,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.134119+00:00",
     "pret_minim_30z": 23.65,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:51.898651+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-f0d3650d",
@@ -6551,7 +6425,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.134260+00:00",
     "pret_minim_30z": 9.92,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:52.221994+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-aa26c2ae",
@@ -6588,7 +6466,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.134399+00:00",
     "pret_minim_30z": 20.94,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:52.403490+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-a44afe00",
@@ -6625,7 +6507,11 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.134553+00:00",
     "pret_minim_30z": 12.3,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-05-31T21:01:52.407761+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-f3d9877e",
@@ -6662,7 +6548,9 @@
     "omnibus_checked_at": "2026-05-31T07:52:24.134697+00:00",
     "pret_minim_30z": 27.85,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-05-31T21:01:52.410999+00:00"
   },
   {
     "id": "vegis-04c89295",
