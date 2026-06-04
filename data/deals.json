@@ -3341,7 +3341,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.678692+00:00",
     "pret_minim_30z": 44.64,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:36.477451+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "watch24-97823547",
@@ -3647,7 +3651,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.679960+00:00",
     "pret_minim_30z": 23.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:36.477784+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-cb92fc62",
@@ -3684,7 +3692,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.680102+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:36.478014+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-64a44bd6",
@@ -3721,7 +3733,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.680245+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:36.478466+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-a1d05ce5",
@@ -3758,7 +3774,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.680390+00:00",
     "pret_minim_30z": 22.76,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:36.478768+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-bf3b7674",
@@ -3795,7 +3815,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.680531+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:36.479162+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-1c7d5f42",
@@ -3832,7 +3856,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.680672+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:36.479778+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-8296c3d7",
@@ -3869,7 +3897,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.680814+00:00",
     "pret_minim_30z": 17.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:36.480038+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-141dcf3b",
@@ -3906,7 +3938,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.680974+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.143194+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-9548e394",
@@ -3943,7 +3979,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.681119+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.179325+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-6f4365ce",
@@ -3980,7 +4020,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.681263+00:00",
     "pret_minim_30z": 42.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.281796+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-3c3d2a67",
@@ -4017,7 +4061,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.681404+00:00",
     "pret_minim_30z": 37.17,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.297400+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-4ec4963f",
@@ -4054,7 +4102,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.681654+00:00",
     "pret_minim_30z": 12.45,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.318733+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-aa26c2ae",
@@ -4091,7 +4143,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.681818+00:00",
     "pret_minim_30z": 17.45,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.438396+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-a44afe00",
@@ -4128,7 +4184,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.682002+00:00",
     "pret_minim_30z": 10.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.487975+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-9af37322",
@@ -4165,7 +4225,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.682151+00:00",
     "pret_minim_30z": 14.95,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.597807+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-b269b304",
@@ -4202,7 +4266,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.682301+00:00",
     "pret_minim_30z": 14.75,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.706376+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-1398726b",
@@ -4239,7 +4307,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.682445+00:00",
     "pret_minim_30z": 18.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.750725+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-6986e23d",
@@ -4276,7 +4348,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.682588+00:00",
     "pret_minim_30z": 18.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:37.942603+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-b5ea6b59",
@@ -4313,7 +4389,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.682730+00:00",
     "pret_minim_30z": 18.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:38.287654+00:00"
   },
   {
     "id": "vegis-dee1100c",
@@ -4350,7 +4428,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.682914+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:39.802234+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-462ae136",
@@ -4387,7 +4469,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.683068+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:39.818740+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-4cb98872",
@@ -4424,7 +4510,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.683213+00:00",
     "pret_minim_30z": 54.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:39.831743+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-f4e9e1c1",
@@ -4461,7 +4551,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.683437+00:00",
     "pret_minim_30z": 35.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:39.834844+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-0fafb3a2",
@@ -4498,7 +4592,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.683585+00:00",
     "pret_minim_30z": 53.18,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:39.946704+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-9dc4f684",
@@ -4535,7 +4633,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.683730+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:39.951969+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-fb327186",
@@ -4572,7 +4674,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.683901+00:00",
     "pret_minim_30z": 35.52,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:39.960459+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-510fc300",
@@ -4609,7 +4715,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.684051+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:40.036627+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-d72eaca2",
@@ -4646,7 +4756,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.684195+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:40.133782+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-9ea90055",
@@ -4683,7 +4797,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.684336+00:00",
     "pret_minim_30z": 35.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.167688+00:00"
   },
   {
     "id": "vegis-73172725",
@@ -4720,7 +4836,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.684477+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:40.315086+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-f0dd29ab",
@@ -4757,7 +4877,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.684627+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.362004+00:00"
   },
   {
     "id": "vegis-d5ce6ecb",
@@ -4794,7 +4916,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.684772+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:40.441804+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-fa9e06ea",
@@ -4831,7 +4957,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.684934+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.486310+00:00"
   },
   {
     "id": "vegis-0dfbdca8",
@@ -4868,7 +4996,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.685081+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.499654+00:00"
   },
   {
     "id": "vegis-4ec4fe65",
@@ -4905,7 +5035,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.685225+00:00",
     "pret_minim_30z": 35.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.547769+00:00"
   },
   {
     "id": "vegis-0afe1fe9",
@@ -4942,7 +5074,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.685371+00:00",
     "pret_minim_30z": 48.29,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.549603+00:00"
   },
   {
     "id": "vegis-1155d6d4",
@@ -4979,7 +5113,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.685515+00:00",
     "pret_minim_30z": 62.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.567500+00:00"
   },
   {
     "id": "vegis-ee8cd8a3",
@@ -5016,7 +5152,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.685659+00:00",
     "pret_minim_30z": 48.51,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:40.686122+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-b1b8f64e",
@@ -5053,7 +5193,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.685802+00:00",
     "pret_minim_30z": 41.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.760720+00:00"
   },
   {
     "id": "vegis-1b1a989c",
@@ -5090,7 +5232,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.685980+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.768669+00:00"
   },
   {
     "id": "vegis-79655cab",
@@ -5127,7 +5271,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.686131+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.818398+00:00"
   },
   {
     "id": "vegis-ba85255a",
@@ -5164,7 +5310,11 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.686279+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-04T21:42:40.828379+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-a59eb9ac",
@@ -5201,7 +5351,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.686424+00:00",
     "pret_minim_30z": 49.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.840839+00:00"
   },
   {
     "id": "vegis-fb19b61e",
@@ -5238,7 +5390,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.686567+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.843182+00:00"
   },
   {
     "id": "vegis-385b2110",
@@ -5275,7 +5429,9 @@
     "omnibus_checked_at": "2026-06-04T08:27:34.686714+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-04T21:42:40.876099+00:00"
   },
   {
     "id": "ps-alecoair-resigilat-umidificator-alecoair-u40-towe-0TOWER-W",
@@ -5352,114 +5508,6 @@
     "image_fix_source": "agent:alecoair",
     "omnibus_checked_at": "2026-06-04T08:27:34.687127+00:00",
     "pret_minim_30z": 536.36,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-furtun-apa-refulare-2-toli-inch-50m-lung-86914389",
-    "slug": "furtun-apa-refulare-2-toli-inch-50m-lungime-plat-din-polietilena-cmp0597",
-    "magazin": "scule365",
-    "titlu": "Furtun Apa refulare 2'' toli/inch, 50m lungime, plat din polietilena CMP0597",
-    "image": "https://c.cdnmp.net/372758804/p/l/0/furtun-apa-refulare-2-toli-inch-50m-lungime-plat-din-polietilena~5759990.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/0/furtun-apa-refulare-2-toli-inch-50m-lungime-plat-din-polietilena~5759990.jpg",
-    "pret_original": 231.0,
-    "pret_redus": 119.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=ybNfO0BbfCns&aff_code=d8b71657a&product_id=9586914389",
-    "product_url": "https://www.scule365.ro/cumpara/furtun-apa-refulare-2-toli-inch-50m-lungime-plat-din-polietilena-30572",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-06-04",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Furtun Apa refulare 2'' toli/inch, 50m lungime, plat din polietilena CMP0597",
-    "store": "scule365",
-    "price": 119.0,
-    "originalPrice": 231.0,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=ybNfO0BbfCns&aff_code=d8b71657a&product_id=9586914389",
-    "url": "https://www.scule365.ro/cumpara/furtun-apa-refulare-2-toli-inch-50m-lungime-plat-din-polietilena-30572",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-06-04",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-06-04T08:27:34.687284+00:00",
-    "pret_minim_30z": 119.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-bormasina-ciocan-rotopercutor-3000w-cu-p-54387474",
-    "slug": "bormasina-ciocan-rotopercutor-3000w-cu-percutie-trusa-mandrina-automata-3j-1200r",
-    "magazin": "scule365",
-    "titlu": "Bormasina Ciocan rotopercutor 3000W CU PERCUTIE, trusa, mandrina automata, 3J, 1200RPM, CAMPION PROFFESIONAL CMP1565",
-    "image": "https://c.cdnmp.net/372758804/p/l/3/bormasina-ciocan-rotopercutor-3000w-cu-percutie-trusa-mandrina~16853.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/3/bormasina-ciocan-rotopercutor-3000w-cu-percutie-trusa-mandrina~16853.jpg",
-    "pret_original": 405.71,
-    "pret_redus": 209.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=q5GzPL-HYo7_&aff_code=d8b71657a&product_id=8654387474",
-    "product_url": "https://www.scule365.ro/cumpara/bormasina-ciocan-rotopercutor-3000w-cu-percutie-trusa-mandrina-29749",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-06-04",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Bormasina Ciocan rotopercutor 3000W CU PERCUTIE, trusa, mandrina automata, 3J, 1200RPM, CAMPION PROFFESIONAL CMP1565",
-    "store": "scule365",
-    "price": 209.0,
-    "originalPrice": 405.71,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=q5GzPL-HYo7_&aff_code=d8b71657a&product_id=8654387474",
-    "url": "https://www.scule365.ro/cumpara/bormasina-ciocan-rotopercutor-3000w-cu-percutie-trusa-mandrina-29749",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-06-04",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-06-04T08:27:34.687443+00:00",
-    "pret_minim_30z": 209.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-super-pachet-aparat-de-sudura-tip-invert-54485647",
-    "slug": "super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet-electrozi-1kg",
-    "magazin": "scule365",
-    "titlu": "*SUPER PACHET* Aparat de sudura tip Invertor cu sarma 495A, + x2 pachet electrozi 1kg, x1 sarma sudura 1kg, magnet sudura, MMA/MIG/MAG afisaj digital, ventilat, URAL MASH IGBT TEHNOLOGY ULTRA HYBRID P",
-    "image": "https://c.cdnmp.net/372758804/p/l/5/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet~5506295.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/5/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet~5506295.jpg",
-    "pret_original": 667.03,
-    "pret_redus": 349.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=-dhoTMrsym-i&aff_code=d8b71657a&product_id=8554485647",
-    "product_url": "https://www.scule365.ro/cumpara/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet-30451",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-06-04",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "*SUPER PACHET* Aparat de sudura tip Invertor cu sarma 495A, + x2 pachet electrozi 1kg, x1 sarma sudura 1kg, magnet sudura, MMA/MIG/MAG afisaj digital, ventilat, URAL MASH IGBT TEHNOLOGY ULTRA HYBRID P",
-    "store": "scule365",
-    "price": 349.0,
-    "originalPrice": 667.03,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=-dhoTMrsym-i&aff_code=d8b71657a&product_id=8554485647",
-    "url": "https://www.scule365.ro/cumpara/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet-30451",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-06-04",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-06-04T08:27:34.687591+00:00",
-    "pret_minim_30z": 349.0,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
@@ -5542,42 +5590,6 @@
     "image_fix_source": "agent:alecoair",
     "omnibus_checked_at": "2026-06-04T08:27:34.687907+00:00",
     "pret_minim_30z": 685.12,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-rindea-electrica-900w-16000rpm-adancime--48470422",
-    "slug": "rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime-kraftner-kf-",
-    "magazin": "scule365",
-    "titlu": "Rindea electrica 900w, 16000rpm, adancime reglabila 1 - 2mm, 82mm latime KRAFTNER KF-9021",
-    "image": "https://c.cdnmp.net/372758804/p/l/5/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime~6722285.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/5/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime~6722285.jpg",
-    "pret_original": 261.0,
-    "pret_redus": 139.6,
-    "procent_reducere": 47,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=1guT-tD8kCd6&aff_code=d8b71657a&product_id=11548470422",
-    "product_url": "https://www.scule365.ro/cumpara/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime-30982",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-06-04",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Rindea electrica 900w, 16000rpm, adancime reglabila 1 - 2mm, 82mm latime KRAFTNER KF-9021",
-    "store": "scule365",
-    "price": 139.6,
-    "originalPrice": 261.0,
-    "discount_percent": 47,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=1guT-tD8kCd6&aff_code=d8b71657a&product_id=11548470422",
-    "url": "https://www.scule365.ro/cumpara/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime-30982",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-06-04",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-06-04T08:27:34.688059+00:00",
-    "pret_minim_30z": 139.6,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
