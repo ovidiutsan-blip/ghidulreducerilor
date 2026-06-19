@@ -1886,7 +1886,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.592165+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:15.246935+00:00"
   },
   {
     "id": "evomag-e59a5586",
@@ -1921,7 +1923,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.592395+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:15.247164+00:00"
   },
   {
     "id": "evomag-64514768",
@@ -1956,7 +1960,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.592604+00:00",
     "pret_minim_30z": 44.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:15.247343+00:00"
   },
   {
     "id": "evomag-bd4eb111",
@@ -1991,7 +1997,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.592806+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:15.247573+00:00"
   },
   {
     "id": "evomag-63ffc547",
@@ -2026,7 +2034,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.593006+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:15.247875+00:00"
   },
   {
     "id": "evomag-999d891b",
@@ -2061,7 +2071,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.593208+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:15.248141+00:00"
   },
   {
     "id": "evomag-d17d00fb",
@@ -2096,7 +2108,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.593440+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:15.248477+00:00"
   },
   {
     "id": "evomag-e6a40b90",
@@ -2131,7 +2145,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.593645+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:15.250526+00:00"
   },
   {
     "id": "evomag-bd27a70a",
@@ -2166,7 +2182,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.593850+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:46.366310+00:00"
   },
   {
     "id": "evomag-c24f1d8a",
@@ -2201,7 +2219,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.594057+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:46.409127+00:00"
   },
   {
     "id": "evomag-3b4602c8",
@@ -2236,7 +2256,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.594260+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:46.410857+00:00"
   },
   {
     "id": "evomag-aa5b5104",
@@ -2271,7 +2293,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.594491+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:46.412287+00:00"
   },
   {
     "id": "evomag-2c1a5c37",
@@ -2306,7 +2330,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.594704+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:46.413906+00:00"
   },
   {
     "id": "watch24-6f8ca269",
@@ -3794,7 +3820,11 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.602954+00:00",
     "pret_minim_30z": 44.64,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-19T21:11:46.415465+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "watch24-97823547",
@@ -4100,7 +4130,11 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.604761+00:00",
     "pret_minim_30z": 23.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-19T21:11:46.420596+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-cb92fc62",
@@ -4137,7 +4171,11 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.604966+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-19T21:11:46.426445+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-64a44bd6",
@@ -4174,7 +4212,11 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.605179+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-19T21:11:47.336794+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-a1d05ce5",
@@ -4211,7 +4253,11 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.605422+00:00",
     "pret_minim_30z": 22.76,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-19T21:11:47.368046+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-bf3b7674",
@@ -4248,7 +4294,11 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.605637+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-19T21:11:47.580308+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-1c7d5f42",
@@ -4285,7 +4335,11 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.605843+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-19T21:11:47.877469+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-8296c3d7",
@@ -4322,7 +4376,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.606056+00:00",
     "pret_minim_30z": 17.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:47.981217+00:00"
   },
   {
     "id": "vegis-141dcf3b",
@@ -4359,7 +4415,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.606259+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:48.146955+00:00"
   },
   {
     "id": "vegis-9548e394",
@@ -4396,7 +4454,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.606492+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:48.252182+00:00"
   },
   {
     "id": "vegis-6f4365ce",
@@ -4433,7 +4493,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.606780+00:00",
     "pret_minim_30z": 42.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:48.427816+00:00"
   },
   {
     "id": "vegis-3c3d2a67",
@@ -4470,7 +4532,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.606986+00:00",
     "pret_minim_30z": 37.17,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:48.507499+00:00"
   },
   {
     "id": "vegis-4ec4963f",
@@ -4507,7 +4571,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.607208+00:00",
     "pret_minim_30z": 12.45,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:48.526497+00:00"
   },
   {
     "id": "vegis-aa26c2ae",
@@ -4544,7 +4610,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.607469+00:00",
     "pret_minim_30z": 17.45,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:48.702534+00:00"
   },
   {
     "id": "vegis-a44afe00",
@@ -4581,7 +4649,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.607679+00:00",
     "pret_minim_30z": 10.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:48.777886+00:00"
   },
   {
     "id": "vegis-9af37322",
@@ -4618,7 +4688,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.607886+00:00",
     "pret_minim_30z": 14.95,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:48.795789+00:00"
   },
   {
     "id": "vegis-99b06f7a",
@@ -4655,7 +4727,11 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.608091+00:00",
     "pret_minim_30z": 66.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-19T21:11:48.975866+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-456dd8cc",
@@ -4692,7 +4768,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.608299+00:00",
     "pret_minim_30z": 30.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.045557+00:00"
   },
   {
     "id": "vegis-95732126",
@@ -4729,7 +4807,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.608535+00:00",
     "pret_minim_30z": 24.95,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.052479+00:00"
   },
   {
     "id": "vegis-b269b304",
@@ -4766,7 +4846,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.608738+00:00",
     "pret_minim_30z": 14.75,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.066448+00:00"
   },
   {
     "id": "vegis-1398726b",
@@ -4803,7 +4885,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.608945+00:00",
     "pret_minim_30z": 18.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.074195+00:00"
   },
   {
     "id": "vegis-6986e23d",
@@ -4840,7 +4924,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.609150+00:00",
     "pret_minim_30z": 18.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.143532+00:00"
   },
   {
     "id": "vegis-b5ea6b59",
@@ -4877,7 +4963,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.609389+00:00",
     "pret_minim_30z": 18.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.146012+00:00"
   },
   {
     "id": "vegis-dee1100c",
@@ -4914,7 +5002,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.609607+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.314858+00:00"
   },
   {
     "id": "vegis-462ae136",
@@ -4951,7 +5041,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.609812+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.324475+00:00"
   },
   {
     "id": "vegis-4cb98872",
@@ -4988,7 +5080,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.610018+00:00",
     "pret_minim_30z": 54.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.403419+00:00"
   },
   {
     "id": "vegis-f4e9e1c1",
@@ -5025,7 +5119,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.610230+00:00",
     "pret_minim_30z": 35.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.406133+00:00"
   },
   {
     "id": "vegis-0fafb3a2",
@@ -5062,7 +5158,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.610467+00:00",
     "pret_minim_30z": 53.18,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.408290+00:00"
   },
   {
     "id": "vegis-9dc4f684",
@@ -5099,7 +5197,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.610677+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.415362+00:00"
   },
   {
     "id": "vegis-fb327186",
@@ -5136,7 +5236,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.610894+00:00",
     "pret_minim_30z": 35.52,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.564603+00:00"
   },
   {
     "id": "vegis-510fc300",
@@ -5173,7 +5275,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.611101+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.576809+00:00"
   },
   {
     "id": "vegis-d72eaca2",
@@ -5210,7 +5314,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.611308+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.579072+00:00"
   },
   {
     "id": "vegis-9ea90055",
@@ -5247,7 +5353,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.611539+00:00",
     "pret_minim_30z": 35.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.602164+00:00"
   },
   {
     "id": "vegis-73172725",
@@ -5284,7 +5392,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.611744+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.756930+00:00"
   },
   {
     "id": "vegis-f0dd29ab",
@@ -5321,7 +5431,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.612032+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.759352+00:00"
   },
   {
     "id": "vegis-d5ce6ecb",
@@ -5358,7 +5470,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.612239+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.768265+00:00"
   },
   {
     "id": "vegis-fa9e06ea",
@@ -5395,7 +5509,9 @@
     "omnibus_checked_at": "2026-06-19T09:09:06.612478+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-19T21:11:49.843292+00:00"
   },
   {
     "id": "vegis-0dfbdca8",
