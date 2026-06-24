@@ -3857,7 +3857,11 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.623016+00:00",
     "pret_minim_30z": 44.64,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-24T21:24:25.939036+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "watch24-97823547",
@@ -4163,7 +4167,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.624894+00:00",
     "pret_minim_30z": 23.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:25.939294+00:00"
   },
   {
     "id": "vegis-cb92fc62",
@@ -4200,7 +4206,11 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.625108+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-24T21:24:25.939516+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-64a44bd6",
@@ -4237,7 +4247,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.625320+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:25.939690+00:00"
   },
   {
     "id": "vegis-a1d05ce5",
@@ -4274,7 +4286,11 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.625562+00:00",
     "pret_minim_30z": 22.76,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-24T21:24:25.939881+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-bf3b7674",
@@ -4311,7 +4327,11 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.625777+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-24T21:24:25.940296+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-1c7d5f42",
@@ -4348,7 +4368,11 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.625986+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-24T21:24:25.940631+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-8296c3d7",
@@ -4385,7 +4409,11 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.626204+00:00",
     "pret_minim_30z": 17.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-24T21:24:25.940853+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-141dcf3b",
@@ -4422,7 +4450,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.626421+00:00",
     "pret_minim_30z": 22.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:26.891136+00:00"
   },
   {
     "id": "vegis-9548e394",
@@ -4459,7 +4489,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.626752+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.077146+00:00"
   },
   {
     "id": "vegis-6f4365ce",
@@ -4496,7 +4528,11 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.626973+00:00",
     "pret_minim_30z": 42.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-24T21:24:27.275387+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "vegis-3c3d2a67",
@@ -4533,7 +4569,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.627183+00:00",
     "pret_minim_30z": 37.17,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.341680+00:00"
   },
   {
     "id": "vegis-4ec4963f",
@@ -4570,7 +4608,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.627394+00:00",
     "pret_minim_30z": 12.45,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.429582+00:00"
   },
   {
     "id": "vegis-aa26c2ae",
@@ -4607,7 +4647,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.627628+00:00",
     "pret_minim_30z": 17.45,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.453288+00:00"
   },
   {
     "id": "vegis-456dd8cc",
@@ -4644,7 +4686,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.627837+00:00",
     "pret_minim_30z": 30.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.464108+00:00"
   },
   {
     "id": "vegis-95732126",
@@ -4681,7 +4725,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.628051+00:00",
     "pret_minim_30z": 24.95,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.465617+00:00"
   },
   {
     "id": "vegis-b269b304",
@@ -4718,7 +4764,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.628262+00:00",
     "pret_minim_30z": 14.75,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.616607+00:00"
   },
   {
     "id": "vegis-1398726b",
@@ -4755,7 +4803,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.628471+00:00",
     "pret_minim_30z": 18.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.666087+00:00"
   },
   {
     "id": "vegis-6986e23d",
@@ -4792,7 +4842,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.628711+00:00",
     "pret_minim_30z": 18.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.771178+00:00"
   },
   {
     "id": "vegis-b5ea6b59",
@@ -4829,7 +4881,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.628927+00:00",
     "pret_minim_30z": 18.25,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.799275+00:00"
   },
   {
     "id": "vegis-dee1100c",
@@ -4866,7 +4920,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.629140+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.853732+00:00"
   },
   {
     "id": "vegis-462ae136",
@@ -4903,7 +4959,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.629353+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:27.990005+00:00"
   },
   {
     "id": "vegis-4cb98872",
@@ -4940,7 +4998,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.629589+00:00",
     "pret_minim_30z": 54.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.104998+00:00"
   },
   {
     "id": "vegis-f4e9e1c1",
@@ -4977,7 +5037,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.629814+00:00",
     "pret_minim_30z": 35.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.119814+00:00"
   },
   {
     "id": "vegis-0fafb3a2",
@@ -5014,7 +5076,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.630026+00:00",
     "pret_minim_30z": 53.18,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.134131+00:00"
   },
   {
     "id": "vegis-9dc4f684",
@@ -5051,7 +5115,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.630237+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.147903+00:00"
   },
   {
     "id": "vegis-fb327186",
@@ -5088,7 +5154,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.630444+00:00",
     "pret_minim_30z": 35.52,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.179338+00:00"
   },
   {
     "id": "vegis-510fc300",
@@ -5125,7 +5193,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.630683+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.197200+00:00"
   },
   {
     "id": "vegis-d72eaca2",
@@ -5162,7 +5232,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.630894+00:00",
     "pret_minim_30z": 41.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.216903+00:00"
   },
   {
     "id": "vegis-9ea90055",
@@ -5199,7 +5271,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.631115+00:00",
     "pret_minim_30z": 35.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.296995+00:00"
   },
   {
     "id": "vegis-73172725",
@@ -5236,7 +5310,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.631326+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.306769+00:00"
   },
   {
     "id": "vegis-f0dd29ab",
@@ -5273,7 +5349,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.631571+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.311836+00:00"
   },
   {
     "id": "vegis-d5ce6ecb",
@@ -5310,7 +5388,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.631798+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.326590+00:00"
   },
   {
     "id": "vegis-fa9e06ea",
@@ -5347,7 +5427,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.632110+00:00",
     "pret_minim_30z": 27.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.329244+00:00"
   },
   {
     "id": "vegis-0dfbdca8",
@@ -5384,7 +5466,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.632338+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.437438+00:00"
   },
   {
     "id": "vegis-4ec4fe65",
@@ -5421,7 +5505,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.632612+00:00",
     "pret_minim_30z": 35.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.454760+00:00"
   },
   {
     "id": "vegis-0afe1fe9",
@@ -5458,7 +5544,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.632857+00:00",
     "pret_minim_30z": 48.29,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.481566+00:00"
   },
   {
     "id": "vegis-1155d6d4",
@@ -5495,7 +5583,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.633076+00:00",
     "pret_minim_30z": 62.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.501623+00:00"
   },
   {
     "id": "vegis-ee8cd8a3",
@@ -5532,7 +5622,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.633308+00:00",
     "pret_minim_30z": 48.51,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.533503+00:00"
   },
   {
     "id": "vegis-b1b8f64e",
@@ -5569,7 +5661,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.633577+00:00",
     "pret_minim_30z": 41.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.550259+00:00"
   },
   {
     "id": "vegis-1b1a989c",
@@ -5606,7 +5700,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.633796+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.576169+00:00"
   },
   {
     "id": "vegis-79655cab",
@@ -5643,7 +5739,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.634025+00:00",
     "pret_minim_30z": 37.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.578741+00:00"
   },
   {
     "id": "vegis-ba85255a",
@@ -5680,7 +5778,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.634244+00:00",
     "pret_minim_30z": 40.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.588063+00:00"
   },
   {
     "id": "vegis-a59eb9ac",
@@ -5717,7 +5817,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.634462+00:00",
     "pret_minim_30z": 49.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.598836+00:00"
   },
   {
     "id": "vegis-fb19b61e",
@@ -5754,7 +5856,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.634708+00:00",
     "pret_minim_30z": 32.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.602009+00:00"
   },
   {
     "id": "vegis-385b2110",
@@ -5791,7 +5895,9 @@
     "omnibus_checked_at": "2026-06-24T07:45:35.634935+00:00",
     "pret_minim_30z": 33.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-24T21:24:28.809665+00:00"
   },
   {
     "id": "ps-alecoair-resigilat-umidificator-alecoair-u40-towe-0TOWER-W",
@@ -5868,78 +5974,6 @@
     "image_fix_source": "agent:alecoair",
     "omnibus_checked_at": "2026-06-24T07:45:35.635379+00:00",
     "pret_minim_30z": 536.36,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-super-pachet-aparat-de-sudura-tip-invert-54485647",
-    "slug": "super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet-electrozi-1kg",
-    "magazin": "scule365",
-    "titlu": "*SUPER PACHET* Aparat de sudura tip Invertor cu sarma 495A, + x2 pachet electrozi 1kg, x1 sarma sudura 1kg, magnet sudura, MMA/MIG/MAG afisaj digital, ventilat, URAL MASH IGBT TEHNOLOGY ULTRA HYBRID P",
-    "image": "https://c.cdnmp.net/372758804/p/l/5/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet~5506295.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/5/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet~5506295.jpg",
-    "pret_original": 667.03,
-    "pret_redus": 349.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=-dhoTMrsym-i&aff_code=d8b71657a&product_id=8554485647",
-    "product_url": "https://www.scule365.ro/cumpara/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet-30451",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-06-22",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "*SUPER PACHET* Aparat de sudura tip Invertor cu sarma 495A, + x2 pachet electrozi 1kg, x1 sarma sudura 1kg, magnet sudura, MMA/MIG/MAG afisaj digital, ventilat, URAL MASH IGBT TEHNOLOGY ULTRA HYBRID P",
-    "store": "scule365",
-    "price": 349.0,
-    "originalPrice": 667.03,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=-dhoTMrsym-i&aff_code=d8b71657a&product_id=8554485647",
-    "url": "https://www.scule365.ro/cumpara/super-pachet-aparat-de-sudura-tip-invertor-cu-sarma-495a-x2-pachet-30451",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-06-22",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-06-24T07:45:35.635630+00:00",
-    "pret_minim_30z": 349.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-trusa-sudura-plita-tevi-ppr-2000w-6-bacu-06368453",
-    "slug": "trusa-sudura-plita-tevi-ppr-2000w-6-bacuri-rezerva-manusi-ruleta-putere-variabil",
-    "magazin": "scule365",
-    "titlu": "Trusa sudura plita tevi PPR 2000w, 6 bacuri rezerva, manusi, ruleta, putere variabila KRAFTNER KF-6519",
-    "image": "https://c.cdnmp.net/372758804/p/l/8/trusa-sudura-plita-tevi-ppr-2000w-6-bacuri-rezerva-manusi-ruleta~6538718.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/8/trusa-sudura-plita-tevi-ppr-2000w-6-bacuri-rezerva-manusi-ruleta~6538718.jpg",
-    "pret_original": 322.0,
-    "pret_redus": 169.0,
-    "procent_reducere": 48,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=LQU3oTZI1wM0&aff_code=d8b71657a&product_id=11306368453",
-    "product_url": "https://www.scule365.ro/cumpara/trusa-sudura-plita-tevi-ppr-2000w-6-bacuri-rezerva-manusi-ruleta-30968",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-06-23",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Trusa sudura plita tevi PPR 2000w, 6 bacuri rezerva, manusi, ruleta, putere variabila KRAFTNER KF-6519",
-    "store": "scule365",
-    "price": 169.0,
-    "originalPrice": 322.0,
-    "discount_percent": 48,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=LQU3oTZI1wM0&aff_code=d8b71657a&product_id=11306368453",
-    "url": "https://www.scule365.ro/cumpara/trusa-sudura-plita-tevi-ppr-2000w-6-bacuri-rezerva-manusi-ruleta-30968",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-06-23",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-06-24T07:45:35.635845+00:00",
-    "pret_minim_30z": 169.0,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
@@ -6022,78 +6056,6 @@
     "image_fix_source": "agent:alecoair",
     "omnibus_checked_at": "2026-06-24T07:45:35.636274+00:00",
     "pret_minim_30z": 685.12,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-rindea-electrica-900w-16000rpm-adancime--48470422",
-    "slug": "rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime-kraftner-kf-",
-    "magazin": "scule365",
-    "titlu": "Rindea electrica 900w, 16000rpm, adancime reglabila 1 - 2mm, 82mm latime KRAFTNER KF-9021",
-    "image": "https://c.cdnmp.net/372758804/p/l/5/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime~6722285.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/5/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime~6722285.jpg",
-    "pret_original": 261.0,
-    "pret_redus": 139.6,
-    "procent_reducere": 47,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=1guT-tD8kCd6&aff_code=d8b71657a&product_id=11548470422",
-    "product_url": "https://www.scule365.ro/cumpara/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime-30982",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-06-22",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Rindea electrica 900w, 16000rpm, adancime reglabila 1 - 2mm, 82mm latime KRAFTNER KF-9021",
-    "store": "scule365",
-    "price": 139.6,
-    "originalPrice": 261.0,
-    "discount_percent": 47,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=1guT-tD8kCd6&aff_code=d8b71657a&product_id=11548470422",
-    "url": "https://www.scule365.ro/cumpara/rindea-electrica-900w-16000rpm-adancime-reglabila-1-2mm-82mm-latime-30982",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-06-22",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-06-24T07:45:35.636498+00:00",
-    "pret_minim_30z": 139.6,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-scule365-set-trusa-chei-216-piese-tubulare-1-4-3--38135915",
-    "slug": "set-trusa-chei-216-piese-tubulare-1-4-3-8-1-2-combinatii-si-biti-campion-cmp1646",
-    "magazin": "scule365",
-    "titlu": "Set trusa chei 216 piese, tubulare 1/4\", 3/8\", 1/2\", combinatii si biti, Campion CMP1646",
-    "image": "https://c.cdnmp.net/372758804/p/l/5/set-trusa-chei-216-piese-tubulare-1-4-3-8-1-2-combinatii-si-biti~7997855.jpg",
-    "imagine_url": "https://c.cdnmp.net/372758804/p/l/5/set-trusa-chei-216-piese-tubulare-1-4-3-8-1-2-combinatii-si-biti~7997855.jpg",
-    "pret_original": 489.0,
-    "pret_redus": 259.0,
-    "procent_reducere": 47,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=product&unique=VYi0QdoSYgFS&aff_code=d8b71657a&product_id=5838135915",
-    "product_url": "https://www.scule365.ro/cumpara/set-trusa-chei-216-piese-tubulare-1-4-3-8-1-2-combinatii-si-biti-30324",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-06-23",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Set trusa chei 216 piese, tubulare 1/4\", 3/8\", 1/2\", combinatii si biti, Campion CMP1646",
-    "store": "scule365",
-    "price": 259.0,
-    "originalPrice": 489.0,
-    "discount_percent": 47,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=product&unique=VYi0QdoSYgFS&aff_code=d8b71657a&product_id=5838135915",
-    "url": "https://www.scule365.ro/cumpara/set-trusa-chei-216-piese-tubulare-1-4-3-8-1-2-combinatii-si-biti-30324",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-06-23",
-    "magazine_key": "scule365",
-    "omnibus_checked_at": "2026-06-24T07:45:35.636792+00:00",
-    "pret_minim_30z": 259.0,
     "is_fake_discount": false,
     "omnibus_validated": true
   },
