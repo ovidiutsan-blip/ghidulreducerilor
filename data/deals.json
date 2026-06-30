@@ -32,7 +32,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.235336+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:02.596988+00:00"
   },
   {
     "id": "evomag-fe92dc57",
@@ -67,7 +69,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.235593+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:02.597332+00:00"
   },
   {
     "id": "evomag-03974db8",
@@ -102,7 +106,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.235829+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:02.598104+00:00"
   },
   {
     "id": "evomag-a75c1f66",
@@ -137,7 +143,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.236094+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:02.598373+00:00"
   },
   {
     "id": "evomag-033917f2",
@@ -172,7 +180,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.236316+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:02.598779+00:00"
   },
   {
     "id": "evomag-6b6dc44f",
@@ -207,7 +217,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.236532+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:02.599141+00:00"
   },
   {
     "id": "evomag-dd014efc",
@@ -242,7 +254,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.236758+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:02.599813+00:00"
   },
   {
     "id": "evomag-bd4ea51f",
@@ -277,7 +291,11 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.237037+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-30T21:40:02.605115+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "evomag-28a63165",
@@ -312,7 +330,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.237259+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:33.892601+00:00"
   },
   {
     "id": "evomag-0625e59e",
@@ -347,7 +367,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.237468+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:33.936701+00:00"
   },
   {
     "id": "evomag-3508478e",
@@ -382,7 +404,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.237684+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:33.947751+00:00"
   },
   {
     "id": "evomag-718747cf",
@@ -417,7 +441,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.237892+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:33.955492+00:00"
   },
   {
     "id": "evomag-cdce1b72",
@@ -452,7 +478,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.238131+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:33.957895+00:00"
   },
   {
     "id": "evomag-299f222f",
@@ -487,7 +515,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.238333+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:33.962623+00:00"
   },
   {
     "id": "evomag-3a224874",
@@ -522,7 +552,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.238543+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:33.974154+00:00"
   },
   {
     "id": "evomag-42fe5031",
@@ -557,7 +589,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.238750+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:40:34.643073+00:00"
   },
   {
     "id": "evomag-c54c8c24",
@@ -592,7 +626,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.238983+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:04.204044+00:00"
   },
   {
     "id": "evomag-b71e8785",
@@ -627,7 +663,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.239188+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:04.237687+00:00"
   },
   {
     "id": "evomag-a4805530",
@@ -662,7 +700,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.239397+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:04.253515+00:00"
   },
   {
     "id": "evomag-b9b37bdc",
@@ -697,7 +737,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.239601+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:04.267673+00:00"
   },
   {
     "id": "evomag-adbeeaa5",
@@ -732,7 +774,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.239804+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:04.269431+00:00"
   },
   {
     "id": "evomag-804c4f37",
@@ -767,7 +811,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.240163+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:04.282037+00:00"
   },
   {
     "id": "evomag-36608ec6",
@@ -802,7 +848,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.240378+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:04.294859+00:00"
   },
   {
     "id": "evomag-37ca40b5",
@@ -837,7 +885,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.240582+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:04.973403+00:00"
   },
   {
     "id": "evomag-6481bc24",
@@ -872,7 +922,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.240784+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:34.517139+00:00"
   },
   {
     "id": "evomag-ab804796",
@@ -907,7 +959,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.241044+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:34.546678+00:00"
   },
   {
     "id": "evomag-0832bb3b",
@@ -942,7 +996,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.241267+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:34.562094+00:00"
   },
   {
     "id": "evomag-f7a409d8",
@@ -977,7 +1033,11 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.241473+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-30T21:41:34.584776+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "evomag-9af41366",
@@ -1012,7 +1072,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.241683+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:34.586453+00:00"
   },
   {
     "id": "evomag-639e0691",
@@ -1047,7 +1109,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.241885+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:34.603136+00:00"
   },
   {
     "id": "evomag-4e3d2136",
@@ -1082,7 +1146,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.242117+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:34.614831+00:00"
   },
   {
     "id": "evomag-b330bbe1",
@@ -1117,7 +1183,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.242323+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:35.289999+00:00"
   },
   {
     "id": "evomag-1fd1a08b",
@@ -1152,7 +1220,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.242529+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:41:35.436753+00:00"
   },
   {
     "id": "evomag-1c603ab4",
@@ -1187,7 +1257,11 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.242736+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-06-30T21:42:04.826106+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0
   },
   {
     "id": "evomag-fdf0e785",
@@ -1222,7 +1296,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.242965+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:04.874067+00:00"
   },
   {
     "id": "evomag-2e50ba9c",
@@ -1257,7 +1333,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.243174+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:04.875928+00:00"
   },
   {
     "id": "evomag-62ef66ed",
@@ -1292,7 +1370,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.243384+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:04.902260+00:00"
   },
   {
     "id": "evomag-601a8369",
@@ -1327,7 +1407,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.243603+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:04.914126+00:00"
   },
   {
     "id": "evomag-bcf9c5f8",
@@ -1362,7 +1444,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.243806+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:04.937282+00:00"
   },
   {
     "id": "evomag-9286fe63",
@@ -1397,7 +1481,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.244040+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:05.601133+00:00"
   },
   {
     "id": "evomag-f356b774",
@@ -1432,7 +1518,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.244245+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:05.736250+00:00"
   },
   {
     "id": "evomag-d9634987",
@@ -1467,7 +1555,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.244452+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:35.194762+00:00"
   },
   {
     "id": "evomag-37d85127",
@@ -1502,7 +1592,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.244668+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:35.196599+00:00"
   },
   {
     "id": "evomag-5677cfe3",
@@ -1537,7 +1629,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.244887+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:35.220308+00:00"
   },
   {
     "id": "evomag-7c45046d",
@@ -1572,7 +1666,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.245167+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:35.221796+00:00"
   },
   {
     "id": "evomag-13d0e1cd",
@@ -1607,7 +1703,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.245455+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:35.238070+00:00"
   },
   {
     "id": "evomag-407e0f9c",
@@ -1642,7 +1740,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.245675+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:35.815514+00:00"
   },
   {
     "id": "evomag-eac68247",
@@ -1677,7 +1777,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.245885+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:35.913907+00:00"
   },
   {
     "id": "evomag-c517e3ae",
@@ -1712,7 +1814,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.246126+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:42:36.050883+00:00"
   },
   {
     "id": "evomag-cf76bc8c",
@@ -1747,7 +1851,9 @@
     "omnibus_checked_at": "2026-06-30T07:54:32.246331+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-06-30T21:43:05.506833+00:00"
   },
   {
     "id": "evomag-66f30da3",
