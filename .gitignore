@@ -57,4 +57,14 @@ _*.txt
 agents/marketing/fb_config_local.json
 agents/marketing/fb_session.json
 agents/marketing/fb_browser_profile/
-agents/marketing/fb_session.json
+
+# Social media — sesiuni și profile browser locale (conțin credențiale)
+agents/marketing/*.session
+agents/marketing/tiktok_browser_profile/
+agents/marketing/pinterest_browser_profile/
+agents/marketing/tg_qr.png
+
+# Claude Code — local only
+.claude/worktrees/
+.claude/settings.local.json
+.mcp.json

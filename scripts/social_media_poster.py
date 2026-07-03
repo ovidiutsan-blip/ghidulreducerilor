@@ -40,7 +40,7 @@ CONFIG_DIR = ROOT / 'config'
 DATA_DIR = ROOT / 'data'
 
 sys.path.insert(0, str(Path(__file__).parent))
-from utils import normalize_deal  # noqa: E402
+from utils import normalize_deal, is_legit_deal  # noqa: E402
 
 # API Keys din env
 FB_PAGE_ID = os.environ.get('FB_PAGE_ID', '')
@@ -72,7 +72,7 @@ def load_social_config() -> dict:
 
 def get_top_deals(deals: list, n: int = 5) -> list:
     """Returnează cele mai bune n oferte."""
-    active = [d for d in deals if d.get('is_active', True)]
+    active = [d for d in deals if d.get('is_active', True) and is_legit_deal(d)]
     return sorted(active, key=lambda d: (
         d.get('score', 5),
         d.get('discount_percent', 0)

@@ -40,7 +40,7 @@ CONFIG_DIR = ROOT / 'config'
 DATA_DIR = ROOT / 'data'
 
 sys.path.insert(0, str(Path(__file__).parent))
-from utils import normalize_deal  # noqa: E402
+from utils import normalize_deal, is_legit_deal  # noqa: E402
 
 # Brevo API
 BREVO_API_KEY = os.environ.get('BREVO_API_KEY', '').lstrip('﻿').strip().strip('﻿').strip()
@@ -68,7 +68,7 @@ def load_templates() -> dict:
 
 def get_top_deals(deals: list, n: int = 10) -> list:
     """Returnează cele mai bune n oferte după scor."""
-    active = [d for d in deals if d.get('is_active', True)]
+    active = [d for d in deals if d.get('is_active', True) and is_legit_deal(d)]
     sorted_deals = sorted(active, key=lambda d: (
         d.get('score', 5),
         d.get('discount_percent', 0)
@@ -153,7 +153,8 @@ def generate_code_html(code: dict) -> str:
 def generate_newsletter_html(deals: list, codes: list, newsletter_type: str = 'daily') -> str:
     """Generează HTML complet pentru newsletter."""
     now = datetime.now()
-    data_ro = now.strftime('%-d %B %Y').replace(
+    # f-string pentru zi (fără zero inițial) — '%-d' nu e portabil pe Windows
+    data_ro = f"{now.day} {now.strftime('%B %Y')}".replace(
         'January', 'Ianuarie').replace('February', 'Februarie').replace(
         'March', 'Martie').replace('April', 'Aprilie').replace(
         'May', 'Mai').replace('June', 'Iunie').replace(
@@ -275,7 +276,9 @@ def send_newsletter_brevo(subject: str, html_content: str, list_id: int) -> bool
         "type": "classic",
         "htmlContent": html_content,
         "recipients": {"listIds": [list_id]},
-        "scheduledAt": datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
+        # Fără "scheduledAt": campania se trimite imediat via /sendNow mai jos.
+        # Brevo respinge scheduledAt <= now ("Scheduled date should not be less
+        # than current date") — exact ora curentă ajungea mereu în trecut.
     }
 
     try:

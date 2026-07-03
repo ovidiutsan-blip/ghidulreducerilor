@@ -24,7 +24,8 @@ BASE = Path(__file__).resolve().parent.parent.parent
 DEALS_PATH = BASE / "data" / "deals.json"
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID", "@ghidulreducerilor")
+# "or" (nu default-ul getenv): în CI variabila există dar poate fi string gol
+CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID") or "@ghidulreducerilor"
 API_BASE = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 UTM = "?utm_source=telegram&utm_medium=social&utm_campaign=daily_deals"
