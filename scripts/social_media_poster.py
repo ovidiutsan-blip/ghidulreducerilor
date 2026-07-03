@@ -45,8 +45,46 @@ from utils import normalize_deal, is_legit_deal  # noqa: E402
 # API Keys din env
 FB_PAGE_ID = os.environ.get('FB_PAGE_ID', '')
 FB_ACCESS_TOKEN = os.environ.get('FB_ACCESS_TOKEN', '')
+# IG folosește același Page Access Token ca Facebook (contul IG Business e legat de
+# pagina FB). Dacă IG_ACCESS_TOKEN nu e setat separat, refolosim FB_ACCESS_TOKEN.
+IG_ACCESS_TOKEN = os.environ.get('IG_ACCESS_TOKEN', '') or FB_ACCESS_TOKEN
+# IG_USER_ID poate fi setat explicit sau derivat automat din pagină (vezi resolve_ig_user_id).
 IG_USER_ID = os.environ.get('IG_USER_ID', '')
-IG_ACCESS_TOKEN = os.environ.get('IG_ACCESS_TOKEN', '')
+
+GRAPH_API = 'https://graph.facebook.com/v18.0'
+
+
+def resolve_ig_user_id() -> str:
+    """
+    Returnează Instagram Business Account ID.
+    Dacă IG_USER_ID nu e setat în env, îl derivă din pagina FB via Graph API
+    (contul IG Business trebuie să fie conectat la pagină în setările paginii).
+    """
+    global IG_USER_ID
+    if IG_USER_ID:
+        return IG_USER_ID
+    if not FB_ACCESS_TOKEN or not FB_PAGE_ID:
+        return ''
+    try:
+        resp = requests.get(
+            f"{GRAPH_API}/{FB_PAGE_ID}",
+            params={'fields': 'instagram_business_account{id,username}',
+                    'access_token': FB_ACCESS_TOKEN},
+            timeout=30,
+        )
+        if resp.status_code == 200:
+            iba = resp.json().get('instagram_business_account') or {}
+            IG_USER_ID = iba.get('id', '')
+            if IG_USER_ID:
+                logger.info(f"IG_USER_ID derivat din pagină: {IG_USER_ID} "
+                            f"(@{iba.get('username', '?')})")
+            else:
+                logger.warning("Pagina nu are instagram_business_account conectat.")
+        else:
+            logger.error(f"Eroare derivare IG_USER_ID: {resp.status_code} — {resp.text[:200]}")
+    except requests.RequestException as e:
+        logger.error(f"Eroare conexiune derivare IG_USER_ID: {e}")
+    return IG_USER_ID
 
 
 def load_deals() -> list:
@@ -227,12 +265,13 @@ def post_to_instagram(caption: str, image_url: str) -> bool:
     Postează pe Instagram Business via Graph API.
     Necesită imagine URL public accesibil.
     """
-    if not IG_ACCESS_TOKEN or not IG_USER_ID:
+    ig_user_id = resolve_ig_user_id()
+    if not IG_ACCESS_TOKEN or not ig_user_id:
         logger.error("IG_ACCESS_TOKEN sau IG_USER_ID lipsesc!")
         return False
 
     # Pas 1: Creează container media
-    container_url = f"https://graph.facebook.com/v18.0/{IG_USER_ID}/media"
+    container_url = f"https://graph.facebook.com/v18.0/{ig_user_id}/media"
     container_data = {
         'image_url': image_url,
         'caption': caption,
@@ -248,7 +287,7 @@ def post_to_instagram(caption: str, image_url: str) -> bool:
         container_id = container_response.json().get('id')
 
         # Pas 2: Publică media
-        publish_url = f"https://graph.facebook.com/v18.0/{IG_USER_ID}/media_publish"
+        publish_url = f"https://graph.facebook.com/v18.0/{ig_user_id}/media_publish"
         publish_data = {
             'creation_id': container_id,
             'access_token': IG_ACCESS_TOKEN
