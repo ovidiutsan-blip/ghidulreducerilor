@@ -22,3 +22,6 @@ These defaults are optimized for AI coding agents (and humans) working on apps t
   needed. Always curl https://ai-gateway.vercel.sh/v1/models first; never trust model IDs from memory
 - For durable agent loops or untrusted code: use Workflow (pause/resume/state) + Sandbox; use Vercel MCP for secure infra access
 <!-- VERCEL BEST PRACTICES END -->
+
+<!-- Adăugat 2026-06-27: proiect sub C:\dev (în afara home tree) — import memoria globală + structura _SHARED/hub-uri. Vezi ORGANIZARE.md. -->
+@C:/Users/ovidi/CLAUDE.md
