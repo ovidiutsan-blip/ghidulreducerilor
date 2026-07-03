@@ -71,6 +71,18 @@ def score_deal(d: dict) -> float:
     return score
 
 
+def is_legit_deal(d: dict) -> bool:
+    """Filtru defensiv pentru deals "garbage" cu preț parsat greșit.
+    Sincronizat cu lib/data.ts:isLegitDeal și scripts/utils.py:is_legit_deal."""
+    pret = d.get("pret_redus") or d.get("price") or 0
+    pct = d.get("procent_reducere") or d.get("discount_percent") or 0
+    if pret < 5:
+        return False
+    if pret <= 99 and pct >= 95:
+        return False
+    return True
+
+
 def select_top_deals(n: int = TOP_N) -> list[dict]:
     """Returnează top N deals de promovat azi, cu cooldown și diversitate."""
     deals = load_deals()
@@ -80,6 +92,8 @@ def select_top_deals(n: int = TOP_N) -> list[dict]:
     eligible = []
     for d in deals:
         if not d.get("activ", True):
+            continue
+        if not is_legit_deal(d):
             continue
         if d.get("link_status") not in ("ok", None, ""):
             # permite și deals fără link_status (neverificate încă)

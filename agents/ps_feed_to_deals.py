@@ -22,8 +22,10 @@ def fix_mojibake(s: str) -> str:
         return s
 
 API_URL = "https://api.profitshare.ro"
-API_USER = os.getenv("PROFITSHARE_API_USER", "")
-API_KEY = os.getenv("PROFITSHARE_API_KEY", "")
+# strip BOM (﻿) + whitespace: secretele pot fi paste-uite cu BOM, iar
+# requests crapă cu UnicodeEncodeError latin-1 la headere non-ASCII
+API_USER = os.getenv("PROFITSHARE_API_USER", "").lstrip("﻿").strip()
+API_KEY = os.getenv("PROFITSHARE_API_KEY", "").lstrip("﻿").strip()
 # Resolve repo root relative to this script (portable: works on Win local + Ubuntu CI)
 BASE = Path(__file__).resolve().parent.parent
 DEALS_PATH = BASE / "data" / "deals.json"

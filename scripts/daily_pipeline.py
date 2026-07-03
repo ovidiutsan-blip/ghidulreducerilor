@@ -36,7 +36,7 @@ BACKUP_DIR = ROOT / 'data' / 'backups'
 BACKUP_DIR.mkdir(parents=True, exist_ok=True)
 
 sys.path.insert(0, str(Path(__file__).parent))
-from utils import normalize_deal  # noqa: E402
+from utils import normalize_deal, is_legit_deal  # noqa: E402
 
 
 def load_deals() -> list:
@@ -113,6 +113,19 @@ def mark_expired_deals(deals: list) -> tuple[list, int]:
 
     logger.info(f"Oferte expirate și arhivate: {expired_count}")
     return active_deals, expired_count
+
+
+def drop_garbage_deals(deals: list) -> list:
+    """
+    Elimină deals cu preț parsat greșit (ex. placeholder evomag 99 lei / -100%).
+    Scraperul le poate re-adăuga corect la următoarea rulare dacă produsul
+    există cu preț valid.
+    """
+    kept = [d for d in deals if is_legit_deal(d)]
+    removed = len(deals) - len(kept)
+    if removed > 0:
+        logger.info(f"Deals garbage eliminate (preț invalid): {removed}")
+    return kept
 
 
 def deduplicate_deals(deals: list) -> list:
@@ -223,6 +236,7 @@ def run_full_pipeline():
     stats['deals_noi'] = len(new_deals)
 
     # Pas 4: Cleanup
+    all_deals = drop_garbage_deals(all_deals)
     all_deals = deduplicate_deals(all_deals)
     all_deals, expired = mark_expired_deals(all_deals)
     stats['deals_expirate'] = expired
@@ -260,8 +274,9 @@ def run_cleanup():
     # Backup
     backup_data()
 
-    # Arhivare expirate
+    # Arhivare expirate + eliminare garbage
     deals = load_deals()
+    deals = drop_garbage_deals(deals)
     active_deals, expired = mark_expired_deals(deals)
     save_deals(active_deals)
 

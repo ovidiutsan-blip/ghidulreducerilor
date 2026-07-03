@@ -63,6 +63,24 @@ def normalize_deal(deal: dict) -> dict:
     }
 
 
+def is_legit_deal(deal: dict) -> bool:
+    """
+    Filtru defensiv pentru deals "garbage" cu preț parsat greșit
+    (ex. placeholder evomag: pret_redus=99, procent_reducere=100).
+
+    Sincronizat cu lib/data.ts:isLegitDeal și
+    agents/marketing/telegram_agent.py:is_legit_deal.
+    Acceptă atât schema EN (price/discount_percent) cât și RO.
+    """
+    price = deal.get('price') or deal.get('pret_redus') or 0
+    discount = deal.get('discount_percent') or deal.get('procent_reducere') or 0
+    if price < 5:
+        return False
+    if price <= 99 and discount >= 95:
+        return False
+    return True
+
+
 def fix_profitshare_link(link: str) -> str:
     """
     Pastreaza linkurile Profitshare asa cum sunt in deals.json.
