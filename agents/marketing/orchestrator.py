@@ -31,7 +31,8 @@ from deal_selector   import select_top_deals, mark_as_promoted, format_deal_summ
 from facebook_agent  import generate_posts, save_posts
 from performance_agent import analyze, save_report, print_report
 
-BREVO_API_KEY   = os.environ.get("BREVO_API_KEY", "")
+# strip BOM (﻿): secretul poate fi paste-uit cu BOM → UnicodeEncodeError în headere
+BREVO_API_KEY   = os.environ.get("BREVO_API_KEY", "").lstrip("﻿").strip()
 MARKETING_EMAIL = os.environ.get("MARKETING_EMAIL", "contact@ghidulreducerilor.ro")
 SITE_BASE       = "https://ghidulreducerilor.ro"
 TODAY           = datetime.now()

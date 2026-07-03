@@ -42,7 +42,8 @@ LOGS_DIR = ROOT / 'logs'
 sys.path.insert(0, str(Path(__file__).parent))
 from utils import normalize_deal, is_legit_deal  # noqa: E402
 
-BREVO_API_KEY = os.environ.get('BREVO_API_KEY', '')
+# strip BOM (﻿): secretul poate fi paste-uit cu BOM → UnicodeEncodeError în headere
+BREVO_API_KEY = os.environ.get('BREVO_API_KEY', '').lstrip('﻿').strip()
 BREVO_API_URL = 'https://api.brevo.com/v3'
 REPORT_EMAIL = os.environ.get('REPORT_EMAIL', 'hello@ghidulreducerilor.ro')
 
