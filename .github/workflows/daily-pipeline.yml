@@ -167,6 +167,17 @@ jobs:
               missing = required - set(d.keys())
               if missing:
                   sys.exit(f'❌ Deal {d.get("id","?")} missing required fields: {missing}')
+          # Guard prospețime: dacă >60% din deals active au data_adaugare mai veche
+          # de 14 zile, feed-urile nu mai împrospătează — semnalăm (fără fail).
+          from datetime import datetime, timedelta
+          cutoff = (datetime.utcnow() - timedelta(days=14)).strftime('%Y-%m-%d')
+          stale = [d for d in active if str(d.get('data_adaugare') or '9999')[:10] < cutoff
+                   and str(d.get('scraped_at') or '')[:10] < cutoff]
+          ratio = 100 * len(stale) // max(len(active), 1)
+          if ratio > 60:
+              print(f'::warning::Stale ratio {ratio}% — {len(stale)}/{len(active)} deals fara refresh in 14 zile. Verifica feed-urile PS/2P!')
+          else:
+              print(f'✅ Prospetime OK: {ratio}% stale ({len(stale)}/{len(active)})')
           # codes.json sanity (existence + valid JSON, no minimum count)
           try:
               with open('data/codes.json', encoding='utf-8') as f:

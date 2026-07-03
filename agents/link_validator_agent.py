@@ -42,11 +42,6 @@ EMAIL    = _clean_env("TWO_PERFORMANT_EMAIL")
 PASSWORD = _clean_env("TWO_PERFORMANT_PASSWORD")
 AFF_CODE = _clean_env("TWO_PERFORMANT_MARKETER_CODE", "d8b71657a")
 
-# Sesiune auth (populata la nevoie)
-_session_token: str = _clean_env("TWO_PERFORMANT_ACCESS_TOKEN")
-_session_client: str = _clean_env("TWO_PERFORMANT_CLIENT_ID")
-_session_uid: str   = _clean_env("TWO_PERFORMANT_UID", "ovidiutsan@yahoo.com")
-
 CHECK_TIMEOUT  = 5    # secunde per HEAD request
 CHECK_WORKERS  = 15   # fire paralele pentru verificare
 MAX_REPLACEMENTS_PER_MAGAZIN = 5  # max înlocuiri per magazin per rulare
@@ -62,35 +57,9 @@ def log(msg: str):
         f.write(line + "\n")
 
 
-# ─── 2P Auth ─────────────────────────────────────────────────────────────────
-def _login():
-    global _session_token, _session_client, _session_uid
-    if not EMAIL or not PASSWORD:
-        raise ValueError("Lipsesc TWO_PERFORMANT_EMAIL + TWO_PERFORMANT_PASSWORD")
-    resp = requests.post(
-        f"{API_BASE}/users/sign_in",
-        json={"user": {"email": EMAIL, "password": PASSWORD}},
-        headers={"Accept": "application/json", "Content-Type": "application/json"},
-        timeout=20,
-    )
-    resp.raise_for_status()
-    _session_token  = resp.headers.get("access-token", "")
-    _session_client = resp.headers.get("client", "")
-    _session_uid    = resp.headers.get("uid", EMAIL)
-    log(f"[auth] Login OK — uid={_session_uid}")
-
-
-def auth_headers() -> dict:
-    if not _session_token or not _session_client:
-        _login()
-    return {
-        "access-token": _session_token,
-        "token-type":   "Bearer",
-        "client":       _session_client,
-        "uid":          _session_uid,
-        "Accept":       "application/json",
-        "Content-Type": "application/json",
-    }
+# ─── 2P Auth — sesiune partajată (throttle + backoff 429 + circuit breaker) ──
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from two_performant_session import api_get, TwoPerformantRateLimited  # noqa: E402
 
 
 def build_affiliate_link(unique_code: str, product_id) -> str:
@@ -167,20 +136,20 @@ def check_deals_batch(deals_2p: list[dict]) -> list[dict]:
 
 
 # ─── Fetch înlocuitor din 2P feed ────────────────────────────────────────────
+_feeds_cache: list[dict] | None = None  # un singur fetch de feeds per rulare
+
+
 def _get_feeds() -> list[dict]:
-    r = requests.get(f"{API_BASE}/affiliate/product_feeds",
-                     headers=auth_headers(), params={"per_page": 100}, timeout=30)
-    r.raise_for_status()
-    data = r.json()
-    return data.get("product_feeds") or (data if isinstance(data, list) else [])
+    global _feeds_cache
+    if _feeds_cache is None:
+        data = api_get("affiliate/product_feeds", params={"per_page": 100})
+        _feeds_cache = data.get("product_feeds") or (data if isinstance(data, list) else [])
+    return _feeds_cache
 
 
 def _get_feed_products(feed_id: int, page: int = 1, per_page: int = 50) -> list[dict]:
-    r = requests.get(f"{API_BASE}/affiliate/product_feeds/{feed_id}/products",
-                     headers=auth_headers(),
-                     params={"page": page, "per_page": per_page}, timeout=30)
-    r.raise_for_status()
-    data = r.json()
+    data = api_get(f"affiliate/product_feeds/{feed_id}/products",
+                   params={"page": page, "per_page": per_page})
     prods = (data.get("products") or data.get("items") or
              data.get("data") or (data if isinstance(data, list) else []))
     return prods
@@ -277,6 +246,8 @@ def find_replacement(magazin: str, unique_code_program: str,
 
                 time.sleep(0.3)
 
+    except TwoPerformantRateLimited:
+        raise  # propaga la run() — oprim căutarea de înlocuitori, nu spam-uim API-ul
     except Exception as e:
         log(f"  [{magazin}] Eroare la fetch inlocuitor: {e}")
 
@@ -342,6 +313,7 @@ def run(fix_mode: bool = False):
     now_date = datetime.utcnow().strftime("%Y-%m-%d")
     replaced = 0
     no_replacement = 0
+    api_rate_limited = False  # circuit breaker: după primul rate-limit nu mai căutăm înlocuitori
 
     for exp_deal in expired_deals:
         magazin = exp_deal.get("magazin", "")
@@ -358,19 +330,29 @@ def run(fix_mode: bool = False):
             no_replacement += 1
             continue
 
+        if api_rate_limited:
+            no_replacement += 1
+            continue
+
         if replacements_per_magazin.get(magazin, 0) >= MAX_REPLACEMENTS_PER_MAGAZIN:
             log(f"  [{magazin}] Atins limita de {MAX_REPLACEMENTS_PER_MAGAZIN} inlocuiri, skip")
             no_replacement += 1
             continue
 
         log(f"\n→ Caut inlocuitor pentru {magazin}...")
-        replacement = find_replacement(
-            magazin=magazin,
-            unique_code_program=merchant_info["unique_code"],
-            existing_product_urls=existing_urls,
-            existing_deal_ids=existing_ids,
-            categorie=merchant_info["categorie"],
-        )
+        try:
+            replacement = find_replacement(
+                magazin=magazin,
+                unique_code_program=merchant_info["unique_code"],
+                existing_product_urls=existing_urls,
+                existing_deal_ids=existing_ids,
+                categorie=merchant_info["categorie"],
+            )
+        except TwoPerformantRateLimited as e:
+            log(f"  ⛔ API 2P rate-limited ({e}) — opresc căutarea de înlocuitori pentru acest run.")
+            api_rate_limited = True
+            no_replacement += 1
+            continue
 
         if replacement:
             deals.append(replacement)

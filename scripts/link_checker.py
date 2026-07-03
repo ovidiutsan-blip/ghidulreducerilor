@@ -24,7 +24,7 @@ import time
 import logging
 import argparse
 import concurrent.futures
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Optional
 from urllib.parse import urlparse
@@ -55,7 +55,11 @@ sys.path.insert(0, str(Path(__file__).parent))
 from utils import normalize_deal  # noqa: E402
 
 REQUEST_TIMEOUT = 15
-MAX_WORKERS = 8
+MAX_WORKERS = 4          # >4 workers paraleli pe l.profitshare.ro/event.2performant.com => burst 429
+QUICK_LIMIT = 100        # câte deal-uri verifică quick mode per rulare
+RECHECK_AFTER_DAYS = 1   # statusurile tranzitorii (rate_limited etc.) se reverifică după N zile
+FLAKY_STATUSES = {'rate_limited', 'http_403', 'connection_error', 'server_error'}
+MAX_FLAKY = 5            # după N verificări consecutive flaky => dezactivare
 RETRY_COUNT = 1
 
 # ─── Patterns specifice per rețea de afiliere ────────────────────────────────
@@ -319,10 +323,22 @@ def update_deal_link_status(deal: dict, check_result: dict) -> dict:
             deal['activ'] = False
             logger.warning(f"Deal dezactivat după 3 timeout-uri: {deal.get('id')}")
 
+    elif check_result['status'] in FLAKY_STATUSES:
+        # Statusuri tranzitorii (429/403/erori de rețea) — nu dezactivăm imediat,
+        # dar nici nu lăsăm deal-ul activ la nesfârșit fără un check reușit.
+        deal['link_flaky_count'] = deal.get('link_flaky_count', 0) + 1
+        if deal['link_flaky_count'] >= MAX_FLAKY:
+            deal['is_active'] = False
+            deal['activ'] = False
+            logger.warning(
+                f"Deal dezactivat după {MAX_FLAKY} verificări flaky consecutive: {deal.get('id')}"
+            )
+
     elif check_result['status'] == 'ok':
         # Reset contoare dacă link-ul e din nou ok
         deal['link_dead_count'] = 0
         deal['link_timeout_count'] = 0
+        deal['link_flaky_count'] = 0
         deal.pop('link_dead_reason', None)
 
     return deal
@@ -353,15 +369,27 @@ def run_checks(
     Rulează verificările de linkuri.
     remove_dead=True → șterge fizic din deals lista deal-urile confirmate moarte.
     """
+    def _is_active(d: dict) -> bool:
+        # Frontend-ul filtrează pe 'activ'; 'is_active' e flag-ul istoric.
+        # Considerăm activ doar dacă ambele sunt true (sau lipsesc).
+        return bool(d.get('activ', True)) and bool(d.get('is_active', True))
+
     if deal_id:
         deals_to_check = [d for d in deals if d.get('id') == deal_id]
     elif mode == 'quick':
-        deals_to_check = [
-            d for d in deals
-            if d.get('is_active', True) and not d.get('link_checked_at')
-        ][:50]
+        active = [d for d in deals if _is_active(d)]
+        # 1) niciodată verificate; 2) statusuri tranzitorii mai vechi de RECHECK_AFTER_DAYS
+        never_checked = [d for d in active if not d.get('link_checked_at')]
+        recheck_cutoff = (datetime.now(timezone.utc) - timedelta(days=RECHECK_AFTER_DAYS)).isoformat()
+        flaky_recheck = [
+            d for d in active
+            if d.get('link_checked_at')
+            and d.get('link_status') in FLAKY_STATUSES | {'timeout'}
+            and str(d.get('link_checked_at')) < recheck_cutoff
+        ]
+        deals_to_check = (never_checked + flaky_recheck)[:QUICK_LIMIT]
     else:
-        deals_to_check = [d for d in deals if d.get('is_active', True)]
+        deals_to_check = [d for d in deals if _is_active(d)]
 
     logger.info(f"Verificare {len(deals_to_check)} linkuri (mod: {mode}, remove_dead: {remove_dead})")
 
@@ -458,7 +486,8 @@ Exemple:
         """
     )
     parser.add_argument('--mode', choices=['full', 'quick'], default='quick',
-                        help='full=toate deal-urile active, quick=max 50 neverificate')
+                        help=f'full=toate deal-urile active, quick=max {QUICK_LIMIT} '
+                             '(neverificate + statusuri tranzitorii de reverificat)')
     parser.add_argument('--deal-id', help='Verifică doar un deal specific')
     parser.add_argument('--remove-dead', action='store_true',
                         help='Șterge automat din deals.json deal-urile confirmate moarte')

@@ -88,51 +88,11 @@ TARGETS = _load_targets()
 #     ("scule365",     "8e59c17b0",  "casa-gradina",        20,  10, None),
 # ]
 
-# ─── Auth (DeviseTokenAuth) ───────────────────────────────────────────────────
-def _login() -> None:
-    """Auto-login cu email+parola. Populeaza sesiunea globala."""
-    global _session_token, _session_client, _session_uid
-    if not EMAIL or not PASSWORD:
-        raise ValueError(
-            "Lipsesc credentials 2Performant. Seteaza GitHub Secrets:\n"
-            "  TWO_PERFORMANT_EMAIL + TWO_PERFORMANT_PASSWORD  (recomandat, stabile)\n"
-            "  sau TWO_PERFORMANT_ACCESS_TOKEN + TWO_PERFORMANT_CLIENT_ID (expira ~14 zile)"
-        )
-    print("[auth] Auto-login cu TWO_PERFORMANT_EMAIL...")
-    resp = requests.post(
-        f"{API_BASE}/users/sign_in",
-        json={"user": {"email": EMAIL, "password": PASSWORD}},
-        headers={"Accept": "application/json", "Content-Type": "application/json"},
-        timeout=20,
-    )
-    resp.raise_for_status()
-    _session_token  = resp.headers.get("access-token", "")
-    _session_client = resp.headers.get("client", "")
-    _session_uid    = resp.headers.get("uid", EMAIL)
-    if not _session_token:
-        raise ValueError(f"Login reusit (HTTP {resp.status_code}) dar access-token absent din headers.")
-    print(f"[auth] Login OK — uid={_session_uid}, token={_session_token[:8]}...")
-
-
-def auth_headers() -> dict:
-    global _session_token, _session_client, _session_uid
-    # Daca nu avem token valid, incercam auto-login cu email+parola
-    if not _session_token or not _session_client:
-        _login()
-    return {
-        "access-token": _session_token,
-        "token-type":   "Bearer",
-        "client":       _session_client,
-        "uid":          _session_uid,
-        "Accept":       "application/json",
-        "Content-Type": "application/json",
-    }
-
-
-def _safe_json(r) -> any:
-    """Parse JSON response, stripping UTF-8 BOM if present."""
-    import json as _json
-    return _json.loads(r.content.decode("utf-8-sig"))
+# ─── Auth + API (sesiune partajată, throttle + backoff 429 + circuit breaker) ─
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from two_performant_session import (  # noqa: E402
+    api_get, auth_headers, _safe_json, TwoPerformantRateLimited,
+)
 
 
 def get_all_feeds() -> list[dict]:
@@ -140,10 +100,7 @@ def get_all_feeds() -> list[dict]:
     Endpoint: GET /affiliate/product_feeds (nu se filtreaza per program; returneaza toate).
     Fiecare feed are: id, name, products_count, updated_at, program:{id,name,unique_code}
     """
-    url = f"{API_BASE}/affiliate/product_feeds"
-    r = requests.get(url, headers=auth_headers(), timeout=30)
-    r.raise_for_status()
-    data = _safe_json(r)
+    data = api_get("affiliate/product_feeds")
     return data.get("product_feeds") or (data if isinstance(data, list) else [])
 
 
@@ -151,19 +108,13 @@ def get_feed_products_page(feed_id: int, page: int = 1, per_page: int = 50) -> d
     """Fetch o pagina de produse dintr-un feed specific.
     Endpoint: GET /affiliate/product_feeds/{feed_id}/products
     """
-    url = f"{API_BASE}/affiliate/product_feeds/{feed_id}/products"
-    params = {"page": page, "per_page": per_page}
-    r = requests.get(url, headers=auth_headers(), params=params, timeout=30)
-    r.raise_for_status()
-    return _safe_json(r)
+    return api_get(f"affiliate/product_feeds/{feed_id}/products",
+                   params={"page": page, "per_page": per_page})
 
 
 def get_programs() -> list:
     """Fetch lista de programe (state=accepted) — pentru diagnosticare."""
-    url = f"{API_BASE}/affiliate/programs"
-    r = requests.get(url, headers=auth_headers(), params={"per_page": 100}, timeout=30)
-    r.raise_for_status()
-    data = _safe_json(r)
+    data = api_get("affiliate/programs", params={"per_page": 100})
     return data.get("programs") or (data if isinstance(data, list) else [])
 
 
@@ -304,6 +255,8 @@ def fetch_merchant(magazin: str, unique_code: str, categorie: str,
         for page in range(1, max_pages + 1):
             try:
                 data = get_feed_products_page(feed_id, page=page)
+            except TwoPerformantRateLimited:
+                raise  # propaga la main() — circuit breaker
             except requests.HTTPError as e:
                 log(f"      HTTP error pagina {page}: {e}")
                 break
@@ -380,21 +333,26 @@ def merge_deals(new_deals: list[dict], dry_run: bool = False,
         # si pretul (link-ul 2P contine un unique code care expira la fiecare feed refresh).
         existing_deal = existing_by_url.get(d["product_url"]) or existing_by_id.get(d["id"])
         if existing_deal:
+            # Duplicatele dezactivate de dedup NU se reactualizează/reactivează.
+            if str(existing_deal.get("expired_reason", "")).startswith("dedup"):
+                continue
             old_link = existing_deal.get("link_afiliat", "")
             new_link = d.get("link_afiliat", "")
             if new_link and new_link != old_link:
                 existing_deal["link_afiliat"] = new_link
                 existing_deal["affiliate_url"] = new_link
-                # Re-activam dacă fusese marcat inactiv din cauza lipsei din feed anterior
-                if not existing_deal.get("activ", True):
-                    existing_deal["activ"] = True
-                    existing_deal["is_active"] = True
-                    existing_deal.pop("expired_at", None)
-                # Actualizăm și prețul (pot apărea promoții noi)
-                existing_deal["pret_redus"] = d["pret_redus"]
-                existing_deal["pret_original"] = d["pret_original"]
-                existing_deal["procent_reducere"] = d["procent_reducere"]
-                updated_links += 1
+            # Prețul se actualizează NECONDIȚIONAT la match — altfel deal-urile
+            # rămân cu prețul din ziua adăugării cât timp linkul nu se schimbă.
+            existing_deal["pret_redus"] = d["pret_redus"]
+            existing_deal["pret_original"] = d["pret_original"]
+            existing_deal["procent_reducere"] = d["procent_reducere"]
+            existing_deal["scraped_at"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+            # Re-activam dacă fusese marcat inactiv din cauza lipsei din feed anterior
+            if not existing_deal.get("activ", True):
+                existing_deal["activ"] = True
+                existing_deal["is_active"] = True
+                existing_deal.pop("expired_at", None)
+            updated_links += 1
             continue
         # Deal nou — adaugam
         existing.append(d)
@@ -602,8 +560,14 @@ def main():
     for i, (magazin, unique_code, categorie, max_pages, min_pct, allowed_cats) in enumerate(TARGETS):
         if i > 0:
             time.sleep(5)  # Pauza intre marchanti pentru a evita rate limiting 429
-        deals, valid_urls, success = fetch_merchant(
-            magazin, unique_code, categorie, max_pages, min_pct, allowed_cats)
+        try:
+            deals, valid_urls, success = fetch_merchant(
+                magazin, unique_code, categorie, max_pages, min_pct, allowed_cats)
+        except TwoPerformantRateLimited as e:
+            # Circuit breaker deschis — nu mai lovim API-ul pentru restul merchantilor.
+            # Fara expire pentru merchantii nefetch-uiti (successful_slugs ramane cum e).
+            log(f"  ABORT rate-limit: {e} — restul merchantilor sar peste acest run.")
+            break
         all_new_deals.extend(deals)
         if success:
             all_seen_urls |= valid_urls

@@ -106,6 +106,7 @@ def product_to_deal(p: dict, magazin: str, categorie: str, allowed_cats: list | 
         "product_url": link,
         "categorie": categorie,
         "data_adaugare": datetime.utcnow().strftime("%Y-%m-%d"),
+        "scraped_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
         "activ": True,
         "is_active": True,
         "sursa": "profitshare",
@@ -157,9 +158,16 @@ def main():
     # Load existing deals
     with open(DEALS_PATH, "r", encoding="utf-8") as f:
         existing = json.load(f)
-    # Only block re-import on ACTIVE deals — expired deals allow re-import from another source.
-    existing_urls = set(d.get("product_url") or d.get("link_afiliat") for d in existing if d.get("activ", True))
-    existing_ids = set(d.get("id") for d in existing)
+    # Index existing deals by product_url și id ca să putem ACTUALIZA prețurile
+    # (nu doar skip) — altfel deal-urile rămân cu prețul din ziua adăugării.
+    existing_by_url = {}
+    existing_by_id = {}
+    for d in existing:
+        url = d.get("product_url") or d.get("link_afiliat")
+        if url and url not in existing_by_url:
+            existing_by_url[url] = d
+        if d.get("id"):
+            existing_by_id[d["id"]] = d
     print(f"Existing deals: {len(existing)}")
 
     # Per-merchant targets: loaded from ps_merchants.json (mirrors 2p_merchants.json pattern)
@@ -176,6 +184,7 @@ def main():
     all_new = []
     all_seen_urls: set = set()   # valid product_urls across all merchants this run
     successful_slugs: set = set()  # merchants where API call returned data (not error)
+    now_iso = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     for magazin, adv_id, categorie, max_pages, min_pct, allowed_cats in targets:
         print(f"\n[{magazin}] fetching {max_pages}p (min {min_pct}% reducere), cat='{categorie}', whitelist={allowed_cats is not None}")
@@ -184,16 +193,36 @@ def main():
         if success:
             all_seen_urls |= valid_urls
             successful_slugs.add(magazin)
-        # Dedupe vs existing
+        # Merge vs existing: UPDATE preț/stoc dacă există (după product_url sau id),
+        # altfel adaugă ca deal nou. Update-ul reactivează și deal-urile expirate
+        # care au revenit în feed.
         added = 0
+        updated = 0
         for d in new_deals:
-            if d["product_url"] in existing_urls or d["id"] in existing_ids:
+            match = existing_by_url.get(d["product_url"]) or existing_by_id.get(d["id"])
+            if match is not None:
+                # Duplicatele dezactivate de dedup NU se reactivează (sunt încă în
+                # feed cu propriul URL, dar keeper-ul lor e deja activ pe site).
+                if str(match.get("expired_reason", "")).startswith("dedup"):
+                    continue
+                match["pret_original"] = d["pret_original"]
+                match["pret_redus"] = d["pret_redus"]
+                match["procent_reducere"] = d["procent_reducere"]
+                match["link_afiliat"] = d["link_afiliat"]
+                match["product_url"] = d["product_url"]
+                if d.get("imagine_url") and not match.get("imagine_url"):
+                    match["imagine_url"] = d["imagine_url"]
+                match["activ"] = True
+                match["is_active"] = True
+                match.pop("expired_at", None)
+                match["scraped_at"] = now_iso
+                updated += 1
                 continue
-            existing_urls.add(d["product_url"])
-            existing_ids.add(d["id"])
+            existing_by_url[d["product_url"]] = d
+            existing_by_id[d["id"]] = d
             all_new.append(d)
             added += 1
-        print(f"  after dedupe: +{added} new")
+        print(f"  after merge: +{added} new, ~{updated} updated")
 
     # ─── Expire PS deals no longer in feed ───────────────────────────────────
     # Only expire deals from merchants we successfully fetched (not API errors).

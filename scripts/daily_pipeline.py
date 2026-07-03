@@ -75,16 +75,43 @@ def backup_data():
             logger.info(f"Backup vechi șters: {backup_file.name}")
 
 
+STALE_DAYS = 14  # deal fără nicio actualizare (scrape/feed/link-check) în N zile => expirat
+
+
+def _last_touch(deal: dict) -> datetime | None:
+    """Cea mai recentă atingere a deal-ului: scraped_at, link_checked_at sau
+    data_adaugare. Intenționat FĂRĂ omnibus_checked_at — price_validator îl
+    setează zilnic pe toate deal-urile și ar anula regula de prospețime.
+    None dacă nu există nicio dată parsabilă."""
+    latest = None
+    for field in ('scraped_at', 'link_checked_at', 'data_adaugare'):
+        raw = deal.get(field)
+        if not raw:
+            continue
+        try:
+            dt = datetime.fromisoformat(str(raw).replace('Z', '+00:00'))
+        except (ValueError, AttributeError):
+            continue
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        if latest is None or dt > latest:
+            latest = dt
+    return latest
+
+
 def mark_expired_deals(deals: list) -> tuple[list, int]:
     """
     Marchează ofertele expirate.
     O ofertă este considerată expirată dacă:
     - Are data_expirare în trecut
     - Are is_active = false
-    - Sau are mai mult de 7 zile fără actualizare
+    - Sau are mai mult de STALE_DAYS zile fără nicio actualizare
+      (prețul nu mai e verificabil => risc Omnibus + utilizatori induși în eroare)
     """
     now = datetime.now(timezone.utc)
+    stale_cutoff = now - timedelta(days=STALE_DAYS)
     expired_count = 0
+    stale_count = 0
     active_deals = []
 
     for deal in deals:
@@ -104,12 +131,24 @@ def mark_expired_deals(deals: list) -> tuple[list, int]:
         if deal.get('is_active') is False:
             is_expired = True
 
+        # Regula de prospețime: fără nicio actualizare în STALE_DAYS zile => expirat.
+        # Feed-urile PS/2P refreshează scraped_at zilnic la produsele încă în ofertă,
+        # deci doar deal-urile fără sursă vie ajung aici.
+        if not is_expired:
+            touch = _last_touch(deal)
+            if touch is not None and touch < stale_cutoff:
+                is_expired = True
+                stale_count += 1
+
         if is_expired:
             expired_count += 1
             deal['archived_at'] = now.isoformat()
             logger.debug(f"Ofertă expirată: {deal.get('id', 'unknown')}")
         else:
             active_deals.append(deal)
+
+    if stale_count:
+        logger.info(f"Oferte stale (> {STALE_DAYS} zile fără actualizare): {stale_count}")
 
     logger.info(f"Oferte expirate și arhivate: {expired_count}")
     return active_deals, expired_count
@@ -155,22 +194,11 @@ def sort_deals_by_score(deals: list) -> list:
 
 
 def update_sitemap():
-    """Actualizează sitemap.xml și notifică Google."""
-    logger.info("Actualizare sitemap...")
-    # Next.js generează sitemap automat prin app/sitemap.ts
-    # Opțional: ping Google cu URL-ul sitemap
-    sitemap_url = "https://ghidulreducerilor.ro/sitemap.xml"
-    ping_url = f"https://www.google.com/ping?sitemap={sitemap_url}"
-
-    try:
-        import requests
-        response = requests.get(ping_url, timeout=10)
-        if response.status_code == 200:
-            logger.info("Google notificat despre sitemap")
-        else:
-            logger.warning(f"Ping Google sitemap: status {response.status_code}")
-    except Exception as e:
-        logger.warning(f"Nu s-a putut notifica Google: {e}")
+    """Sitemap-ul e generat automat de Next.js (app/sitemap.ts) la fiecare deploy.
+    Google a retras endpoint-ul de ping (google.com/ping → 404 din iunie 2023);
+    indexarea se face prin Search Console + crawl organic al sitemap-ului.
+    """
+    logger.info("Sitemap generat de Next.js la deploy — nimic de făcut aici.")
 
 
 def run_full_pipeline():

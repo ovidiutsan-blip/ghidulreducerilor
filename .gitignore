@@ -68,3 +68,4 @@ agents/marketing/tg_qr.png
 .claude/worktrees/
 .claude/settings.local.json
 .mcp.json
+data/.2p_session.json
