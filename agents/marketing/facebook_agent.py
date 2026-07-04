@@ -119,17 +119,27 @@ def post_story(d: dict) -> str:
 
 # ─── Verificare live ─────────────────────────────────────────────────────────
 
+# Pagini de eroare ale rețelelor de afiliere care răspund totuși cu HTTP 200
+_AFFILIATE_ERROR_URL_MARKERS = ('notoolerror', 'businessleague.2performant.com')
+
+
 def verify_link_live(url: str, timeout: int = 8) -> bool:
-    """Verifică rapid dacă un link funcționează (HTTP 200)."""
+    """Verifică rapid dacă un link funcționează (HTTP 200 și nu e pagină de eroare 2P)."""
+    def _ok(r) -> bool:
+        final = (r.url or '').lower()
+        if any(m in final for m in _AFFILIATE_ERROR_URL_MARKERS):
+            return False
+        return r.status_code < 400
+
     try:
         r = requests.head(url, timeout=timeout, allow_redirects=True,
                           headers={"User-Agent": "Mozilla/5.0"})
-        return r.status_code < 400
+        return _ok(r)
     except Exception:
         try:
             r = requests.get(url, timeout=timeout, allow_redirects=True,
                              headers={"User-Agent": "Mozilla/5.0"}, stream=True)
-            return r.status_code < 400
+            return _ok(r)
         except Exception:
             return False
 

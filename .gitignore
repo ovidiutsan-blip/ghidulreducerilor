@@ -69,3 +69,4 @@ agents/marketing/tg_qr.png
 .claude/settings.local.json
 .mcp.json
 data/.2p_session.json
+.playwright-mcp/

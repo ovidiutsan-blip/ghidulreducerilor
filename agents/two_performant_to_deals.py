@@ -141,7 +141,8 @@ def build_affiliate_link(program_unique_code: str, product_url: str) -> str:
 
 
 def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
-                    allowed_cats: list | None = None) -> dict | None:
+                    allowed_cats: list | None = None,
+                    reject_stats: dict | None = None) -> dict | None:
     """Mapeaza un product dict 2P la schema deals.json. Returneaza None daca nu e eligibil.
 
     Structura campuri in feed 2P:
@@ -166,6 +167,9 @@ def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
         price_orig = None
 
     if price_orig is None or price_orig <= 0 or price_sale <= 0 or price_sale >= price_orig:
+        if reject_stats is not None:
+            key = 'fara_old_price' if price_orig is None else 'fara_discount_real'
+            reject_stats[key] = reject_stats.get(key, 0) + 1
         return None
 
     pct = round((1 - price_sale / price_orig) * 100)
@@ -173,6 +177,8 @@ def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
     if allowed_cats is not None:
         feed_cat = (p.get("category") or p.get("category_name") or "").strip()
         if feed_cat not in allowed_cats:
+            if reject_stats is not None:
+                reject_stats['categorie_exclusa'] = reject_stats.get('categorie_exclusa', 0) + 1
             return None
 
     name    = fix_mojibake((p.get("title") or p.get("name") or "").strip())
@@ -246,6 +252,7 @@ def fetch_merchant(magazin: str, unique_code: str, categorie: str,
     deals = []
     valid_urls: set[str] = set()
     total_raw = 0
+    reject_stats: dict[str, int] = {}
     log(f"  Fetching {magazin} (unique_code={unique_code})...")
 
     feeds = _get_feeds_for_program(unique_code)
@@ -284,11 +291,14 @@ def fetch_merchant(magazin: str, unique_code: str, categorie: str,
             hits = 0
             total_raw += len(products)
             for p in products:
-                deal = product_to_deal(p, magazin, unique_code, categorie, allowed_cats)
+                deal = product_to_deal(p, magazin, unique_code, categorie, allowed_cats,
+                                       reject_stats=reject_stats)
                 if deal and deal["procent_reducere"] >= min_pct:
                     deals.append(deal)
                     valid_urls.add(deal["product_url"])
                     hits += 1
+                elif deal:
+                    reject_stats['sub_min_pct'] = reject_stats.get('sub_min_pct', 0) + 1
 
             log(f"      Pagina {page}/{total_pages}: {len(products)} produse, {hits} eligibile")
 
@@ -297,6 +307,10 @@ def fetch_merchant(magazin: str, unique_code: str, categorie: str,
             time.sleep(0.3)
 
     log(f"  {magazin}: {len(deals)} deals eligibile total")
+    if reject_stats:
+        # Diagnostic: de ce nu trec produsele filtrul (ex: feed fara old_price)
+        detail = ", ".join(f"{k}={v}" for k, v in sorted(reject_stats.items()))
+        log(f"  {magazin}: respinse din {total_raw} brute — {detail}")
     return deals, valid_urls, total_raw > 0
 
 

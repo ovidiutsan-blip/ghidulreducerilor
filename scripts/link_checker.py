@@ -64,7 +64,7 @@ MAX_FLAKY = 5            # după N verificări consecutive flaky => dezactivare
 RETRY_COUNT = 1
 BODY_READ_LIMIT = 65536  # max bytes cititi din body — ne trebuie doar începutul paginii
 PER_REQUEST_BUDGET = 45  # secunde cap dur per request (redirects + body incluse)
-GLOBAL_DEADLINE = 720    # secunde cap dur pentru toată verificarea (sub timeout-ul CI de 20 min)
+GLOBAL_DEADLINE = 960    # secunde cap dur pentru toată verificarea (sub timeout-ul CI de 25 min)
 
 # ─── Patterns specifice per rețea de afiliere ────────────────────────────────
 # Adaugă rețele noi aici fără să modifici altceva în cod.
@@ -456,6 +456,21 @@ def run_checks(
         deals_to_check = (never_checked + flaky_recheck)[:QUICK_LIMIT]
     else:
         deals_to_check = [d for d in deals if _is_active(d)]
+
+    # Interleave pe magazine (round-robin): 4 workeri paraleli pe același host
+    # înseamnă burst de 429 — alternând magazinele, fiecare host primește
+    # request-uri distanțate natural.
+    by_store: dict[str, list] = {}
+    for d in deals_to_check:
+        by_store.setdefault(d.get('store') or d.get('magazin') or '?', []).append(d)
+    interleaved = []
+    queues = list(by_store.values())
+    while queues:
+        for q in queues[:]:
+            interleaved.append(q.pop(0))
+            if not q:
+                queues.remove(q)
+    deals_to_check = interleaved
 
     logger.info(f"Verificare {len(deals_to_check)} linkuri (mod: {mode}, remove_dead: {remove_dead})")
 
