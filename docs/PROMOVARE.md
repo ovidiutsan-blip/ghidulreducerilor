@@ -36,9 +36,14 @@ Făcut pe 04.07: domeniul ghidulreducerilor.ro **revendicat** (meta `p:domain_ve
   5 categorii reale din `deals.json` (casa-gradina, promotii, farmacie-sanatate, electronice,
   suplimente-bio) mapează acum pe board-uri care EXISTĂ pe cont
 
-Pentru postare ZILNICĂ automată rămâne un pas local (agentul are browser profile propriu):
-1. `python agents/marketing/pinterest_agent.py --setup` apoi `--login` (o dată).
+Pentru postare ZILNICĂ automată rămâne un singur pas local (login MANUAL, **fără parolă
+stocată pe disc** — agentul a fost refactorizat să nu mai ceară/salveze parola):
+1. `python agents/marketing/pinterest_agent.py --login` — se deschide un browser; te loghezi
+   TU (email/parolă sau Google, cum vrei), sesiunea se salvează în `pinterest_browser_profile/`.
 2. Task Scheduler zilnic: `python agents/marketing/pinterest_agent.py --run` (3-5 pin-uri/zi).
+
+Note: `--setup` e opțional (doar preferințe: email pt. pre-completare, pin-uri/zi). `--dry-run`
+arată deal-urile selectate fără browser/login. Config-urile locale sunt în `.gitignore`.
 
 ## 4. TikTok — contul NU există (verificat 04.07.2026)
 
