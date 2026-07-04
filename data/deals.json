@@ -4562,7 +4562,11 @@
     "pret_minim_30z": 799.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:07.748897+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "vegis-5ccdba07",
@@ -5161,7 +5165,11 @@
     "pret_minim_30z": 464.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:09.578330+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-macara-1t-tone-3m-cu-lant-manuala-palan--30120650",
@@ -5239,7 +5247,11 @@
     "pret_minim_30z": 195.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:10.854194+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-motor-pe-benzina-17cp-190f-420cc-3600rpm-38135912",
@@ -5276,7 +5288,11 @@
     "pret_minim_30z": 1299.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:11.791726+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-microsoft-project-professional-2021-1-di-42857177",
@@ -5312,7 +5328,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.816639+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:07.749153+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-microsoft-windows-11-pro-64-bit-retail-e-42905953",
@@ -5348,7 +5369,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.816794+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:09.664593+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-topor-forjat-1-8kg-otel-calit-maner-lemn-81818012",
@@ -5385,7 +5411,11 @@
     "pret_minim_30z": 65.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:12.879822+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-100-cleme-clipsuri-plasa-umbrire-pro-17269863",
@@ -5422,7 +5452,10 @@
     "pret_minim_30z": 45.3,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:31:14.543978+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-sarma-de-sudura-flux-0-8mm-1kg-mig-mag-c-97611149",
@@ -5459,7 +5492,10 @@
     "pret_minim_30z": 23.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:31:16.660127+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-super-pachet-4timpi-8-5cp-motocoasa-pe-b-29842233",
@@ -5496,7 +5532,11 @@
     "pret_minim_30z": 459.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:15.331745+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-burghiu-pamant-300x800-mm-pentru-motobur-86910157",
@@ -5533,7 +5573,11 @@
     "pret_minim_30z": 117.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:16.647427+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-hotpick-resigilat-semineu-electric-compact-adler-R AD7754",
@@ -5569,7 +5613,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.817798+00:00",
     "pret_minim_30z": 199.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:07.749383+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-hotpick-aspirator-de-mana-vertical-2-in-1-fara-s-AD 7044",
@@ -5605,7 +5654,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.817954+00:00",
     "pret_minim_30z": 355.36,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:10.222206+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-pompa-apa-de-suprafata-1800w-jet-bobinaj-96816689",
@@ -5642,7 +5696,10 @@
     "pret_minim_30z": 237.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:32:17.754672+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-disc-vidia-230mm-concav-tip-farfurie-pen-96816688",
@@ -5679,7 +5736,11 @@
     "pret_minim_30z": 7.99,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:19.993877+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-8-5cp-wow-drujba-benzina-cu-topor-4-lant-40969414",
@@ -5716,7 +5777,11 @@
     "pret_minim_30z": 349.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:22.766708+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-hotpick-resigilat-blender-vertical-3-in-1-camry--R CR4630",
@@ -5752,7 +5817,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.818716+00:00",
     "pret_minim_30z": 94.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:11.052864+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-3ds-max-licenta-comerciala-1-ut-N0010",
@@ -5788,7 +5858,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.818875+00:00",
     "pret_minim_30z": 3553.72,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:10.992686+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-advance-steel-licenta-comercial-N005",
@@ -5824,7 +5899,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.819032+00:00",
     "pret_minim_30z": 3387.6,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:12.056617+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-inventor-professional-licenta-c-N004",
@@ -5860,7 +5940,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.819214+00:00",
     "pret_minim_30z": 3552.89,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:13.008137+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-bormasina-gaurit-si-insurubat-pistol-60501724",
@@ -5897,7 +5982,10 @@
     "pret_minim_30z": 249.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:32:26.013573+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-batoza-desfacator-porumb-2200w-800kg-h-3-24614471",
@@ -5934,7 +6022,11 @@
     "pret_minim_30z": 330.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:17.962679+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-perii-sarma-bormasina-26-63mm-otel-c-71510732",
@@ -5971,7 +6063,11 @@
     "pret_minim_30z": 13.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:19.261550+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-tun-de-caldura-pe-motorina-30kw-rezervor-19498322",
@@ -6008,7 +6104,11 @@
     "pret_minim_30z": 1150.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:20.838578+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-endometix-pro-60cps-vegetale-6295033F",
@@ -6044,7 +6144,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.820007+00:00",
     "pret_minim_30z": 146.94,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:07.749562+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-hotpick-resigilat-gratar-raclette-pentru-4-perso- DO9147G",
@@ -6080,7 +6185,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.820275+00:00",
     "pret_minim_30z": 103.3,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:12.150557+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-pachet-aparat-de-sudura-invertor-mma-kra-69170629",
@@ -6117,7 +6227,10 @@
     "pret_minim_30z": 199.99,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:33:21.752738+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-pompa-submersibila-3000w-apa-murdara-pro-08617964",
@@ -6154,7 +6267,10 @@
     "pret_minim_30z": 277.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:33:23.457341+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "vegis-f69a9a37",
@@ -7346,7 +7462,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.825504+00:00",
     "pret_minim_30z": 97.64,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:10.594552+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-ivatherm-sunlight-adulti-spf50-200ml-48504962",
@@ -7383,7 +7504,11 @@
     "pret_minim_30z": 69.93,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:08.981316+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-fluid-photoderm-nude-touch-mineral-spf50-48504961",
@@ -7420,7 +7545,11 @@
     "pret_minim_30z": 72.38,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:10.612828+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-reparatoare-piele-iritata-cicastel-84684707",
@@ -7457,7 +7586,11 @@
     "pret_minim_30z": 34.23,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:11.542851+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-lapte-pentru-copii-cu-protectie-solara-s-73408200",
@@ -7494,7 +7627,11 @@
     "pret_minim_30z": 69.93,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:12.652028+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-vopsea-de-par-fara-amoniac-fara-silicon--46732319",
@@ -7531,7 +7668,11 @@
     "pret_minim_30z": 35.07,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:14.419914+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-sterila-pentru-piele-sensibila-dif-16532460",
@@ -7568,7 +7709,11 @@
     "pret_minim_30z": 59.92,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:16.429655+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-set-pentru-ingrijirea-bebelusului-sch401-86000774",
@@ -7605,7 +7750,11 @@
     "pret_minim_30z": 135.03,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:15.186027+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-aparat-de-taiat-gresie-si-faianta-800mm--81794780",
@@ -7642,7 +7791,10 @@
     "pret_minim_30z": 373.99,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:33:27.037511+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-x20-set-disc-vidia-230mm-concav-tip-farf-96816691",
@@ -7679,7 +7831,11 @@
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:34:19.584372+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-macara-electrica-250kg-550w-12m-6m-roliu-48470420",
@@ -7716,7 +7872,11 @@
     "pret_minim_30z": 399.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:34:20.892555+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-8-5cp-cu-21accesorii-motocoasa-pe-benzin-21056791",
@@ -7753,7 +7913,11 @@
     "pret_minim_30z": 349.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:34:21.817315+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-scara-otel-6-trepte-5-1-123cm-120kg-6-4k-23423042",
@@ -7790,7 +7954,11 @@
     "pret_minim_30z": 150.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:34:22.776993+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-scara-otel-3-1-trepte-120-kg-model-11003-23423040",
@@ -7827,7 +7995,10 @@
     "pret_minim_30z": 112.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:34:23.882648+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "ps-streamstore-autodesk-autocad-electrical-licenta-come-006-2023",
@@ -7863,7 +8034,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.828094+00:00",
     "pret_minim_30z": 3222.31,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:14.656873+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-civil-3d-licenta-pentru-1-utili-876-9118",
@@ -7899,7 +8075,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.828910+00:00",
     "pret_minim_30z": 247.11,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:13.792345+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-inventor-professional-licenta-p-566-8615",
@@ -7935,7 +8116,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.829095+00:00",
     "pret_minim_30z": 247.11,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:15.447002+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-revit-licenta-pentru-1-utilizat-003-6639",
@@ -7971,7 +8157,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.829272+00:00",
     "pret_minim_30z": 247.11,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:16.719838+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-parallels-desktop-19-for-mac-1-dispoziti-29009424",
@@ -8007,7 +8198,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.829609+00:00",
     "pret_minim_30z": 519.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:18.028769+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-parallels-desktop-19-for-mac-1-dispoziti-29009524",
@@ -8043,7 +8239,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.829771+00:00",
     "pret_minim_30z": 449.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:20.655707+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-macara-electrica-1200kg-1600w-20m-10m-tr-86880374",
@@ -8080,7 +8281,10 @@
     "pret_minim_30z": 714.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:34:27.730991+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-furtun-apa-pompieri-3-toli-inch-75mm-20m-86914390",
@@ -8117,7 +8321,11 @@
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:35:23.362264+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-fierastrau-electric-tip-sabie-2000w-3000-90882334",
@@ -8154,7 +8362,11 @@
     "pret_minim_30z": 188.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:35:24.323323+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-cablu-electric-curent-toros-trs2x2-5-100-36932353",
@@ -8191,7 +8403,10 @@
     "pret_minim_30z": 211.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:35:25.115556+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-8-5cp-pachet-drujba-benzina-3-lanturi-1--34858308",
@@ -8228,7 +8443,10 @@
     "pret_minim_30z": 299.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:35:28.432718+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "ps-streamstore-autodesk-autocad-activare-in-cont-autode-008-2022",
@@ -8264,7 +8482,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.831290+00:00",
     "pret_minim_30z": 247.11,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:24.005584+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-sketchup-studio-1-dispozitiv-licenta-1-a-61453183",
@@ -8300,7 +8523,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.832127+00:00",
     "pret_minim_30z": 4199.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:16.640828+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-parallels-desktop-19-for-mac-1-dispoziti-29009624",
@@ -8336,7 +8564,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.832291+00:00",
     "pret_minim_30z": 498.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:18.568130+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-pompa-submersibila-de-adancime-multietaj-40295353",
@@ -8373,7 +8606,11 @@
     "pret_minim_30z": 359.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:36:25.176525+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-sarma-sudura-1mm-1kg-flux-fara-gaz-apara-07198526",
@@ -8410,7 +8647,11 @@
     "pret_minim_30z": 27.5,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:36:25.360088+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "vegis-e7af82c6",
@@ -8648,7 +8889,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.833623+00:00",
     "pret_minim_30z": 74.55,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:11.148168+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-bisglicinat-de-magneziu-forte-1500mg-90c-REM9665",
@@ -8684,7 +8930,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.833782+00:00",
     "pret_minim_30z": 97.82,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:12.450733+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-bisglicinat-de-magneziu-forte-1500mg-30c-REM9443",
@@ -8720,7 +8971,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.833980+00:00",
     "pret_minim_30z": 43.27,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:13.993444+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-vitamina-d3-4000u-i-k2-150mcg-40cpr-REM1227",
@@ -8756,7 +9012,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.834166+00:00",
     "pret_minim_30z": 26.11,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:15.861263+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-bruleur-4in1-morosil-400-arzator-de-gras-MOROBV",
@@ -8792,7 +9053,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.834329+00:00",
     "pret_minim_30z": 93.45,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:14.170211+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-infraworks-licenta-comerciala-1-N009-12C",
@@ -8828,7 +9094,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.834490+00:00",
     "pret_minim_30z": 3223.14,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:19.805487+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-robot-structural-analysis-profe-007-4994",
@@ -8864,7 +9135,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.834648+00:00",
     "pret_minim_30z": 3140.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:21.090091+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-trusa-scule-216-piese-kraftner-kf-6295-3-48470419",
@@ -8901,7 +9177,10 @@
     "pret_minim_30z": 285.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:36:26.489425+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-motocoasa-pe-benzina-4-timpi-t5600-8-5cp-29842230",
@@ -8938,7 +9217,11 @@
     "pret_minim_30z": 429.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:36:29.429022+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-trusa-autofiletanta-cu-percutie-si-f-60501725",
@@ -8975,7 +9258,10 @@
     "pret_minim_30z": 299.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:37:27.126446+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-arzator-pirostie-pentru-ceaun-cu-gaz-650-32946618",
@@ -9012,7 +9298,11 @@
     "pret_minim_30z": 85.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:37:27.191812+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-cablu-electric-curent-toros-trs3x2-5-100-11490467",
@@ -9049,7 +9339,11 @@
     "pret_minim_30z": 250.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:37:27.501496+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-trusa-chei-tubulare-216-piese-crom-vanad-34339990",
@@ -9086,7 +9380,11 @@
     "pret_minim_30z": 299.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:37:30.435801+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-masina-de-tocat-carne-nr-32-2500w-1400rp-58820458",
@@ -9123,7 +9421,11 @@
     "pret_minim_30z": 519.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:37:31.369548+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-plantur-39-sampon-color-brown-250ml-R190221",
@@ -9159,7 +9461,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.836085+00:00",
     "pret_minim_30z": 56.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:15.842243+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-plantur-39-balsam-pentru-par-fin-si-deli-R175892",
@@ -9195,7 +9502,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.836251+00:00",
     "pret_minim_30z": 36.37,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:17.088590+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-plantur-21-sampon-nutri-caffeine-200ml-R210060",
@@ -9231,7 +9543,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.836408+00:00",
     "pret_minim_30z": 40.83,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:19.325264+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-plantur-39-balsam-pentru-par-vopsit-si-d-R175893",
@@ -9267,7 +9584,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.836565+00:00",
     "pret_minim_30z": 36.37,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:21.938827+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-plantur-39-sampon-color-blonde-250ml-R1902022",
@@ -9303,7 +9625,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.836721+00:00",
     "pret_minim_30z": 54.67,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:25.348586+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-membrana-bituminoasa-rava-proof-vapor-di-10931619",
@@ -9339,7 +9666,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.836884+00:00",
     "pret_minim_30z": 189.54,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:09.079438+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-membrana-bituminoasa-rava-proof-sticky-a-10901836",
@@ -9375,7 +9707,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.837043+00:00",
     "pret_minim_30z": 331.29,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:10.717504+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-membrana-bituminoasa-rava-proof-sapphire-10931607",
@@ -9411,7 +9748,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.837226+00:00",
     "pret_minim_30z": 136.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:11.723749+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-techstar-tester-auto-jfind-jf700-pro-obd2-scanner-4298",
@@ -9447,7 +9789,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.837387+00:00",
     "pret_minim_30z": 140.47,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:09.262480+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-microsoft-office-2024-home-business-esd--88410392",
@@ -9483,7 +9830,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.837554+00:00",
     "pret_minim_30z": 850.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:22.295222+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-baterie-acumulator-20v-7-5ah-seria-p20s--08521768",
@@ -9520,7 +9872,11 @@
     "pret_minim_30z": 337.99,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:38:28.752164+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-motoburghiu-pe-benzina-campion-8-5cp-mot-01204429",
@@ -9557,7 +9913,11 @@
     "pret_minim_30z": 345.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:38:28.813508+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-drujba-electrica-3000w-4500rpm-300mm-15--60501721",
@@ -9594,7 +9954,11 @@
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:38:29.171896+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-masina-de-tuns-oi-campion-cmp1556-1000w--60501720",
@@ -9631,7 +9995,11 @@
     "pret_minim_30z": 289.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:38:32.447410+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-macara-3t-tone-3m-cu-lant-manuala-palan--30120652",
@@ -9668,7 +10036,10 @@
     "pret_minim_30z": 249.99,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:38:33.360611+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-drujba-de-mana-pentru-constructii-pe-ben-06490305",
@@ -9705,7 +10076,11 @@
     "pret_minim_30z": 286.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:39:30.358424+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-cablu-electric-curent-toros-trs3x1-5-100-36932354",
@@ -9742,7 +10117,11 @@
     "pret_minim_30z": 184.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:39:30.417870+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-masina-de-tocat-carne-electrica-inox-400-11490465",
@@ -9779,7 +10158,11 @@
     "pret_minim_30z": 259.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:39:30.421503+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-masina-tocat-carne-aluminiu-1500w-1400rp-33466410",
@@ -9816,7 +10199,10 @@
     "pret_minim_30z": 520.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T13:39:31.692055+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "vegis-20ca1967",
@@ -10305,7 +10691,11 @@
     "pret_minim_30z": 18.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:16.418311+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-gel-de-dus-arctic-still-for-men-400ml-ge-84684705",
@@ -10342,7 +10732,11 @@
     "pret_minim_30z": 18.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:17.514499+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-gel-de-dus-glow-go-400ml-gerovital-84684704",
@@ -10379,7 +10773,11 @@
     "pret_minim_30z": 15.75,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:19.757266+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-gel-de-dus-shine-vibe-400ml-gerovital-84684703",
@@ -10416,7 +10814,11 @@
     "pret_minim_30z": 15.98,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:22.511737+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-gel-de-dus-pentru-intreaga-familie-fresh-84684702",
@@ -10453,7 +10855,11 @@
     "pret_minim_30z": 22.88,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:32:25.776756+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-gel-de-dus-pentru-intreaga-familie-warm--84684701",
@@ -10490,7 +10896,11 @@
     "pret_minim_30z": 22.88,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:17.682243+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-hotpick-espressor-model-petra-pt5108vdeeu7-3-in--PT5108 ",
@@ -10526,7 +10936,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.842332+00:00",
     "pret_minim_30z": 825.62,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:31:13.505035+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-masca-serum-pentru-par-botanicals-200-ml-48592876",
@@ -10563,7 +10978,11 @@
     "pret_minim_30z": 23.25,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:18.982151+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-masca-pentru-par-cu-usturoi-si-proteine--48592875",
@@ -10600,7 +11019,11 @@
     "pret_minim_30z": 25.5,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T13:33:20.594889+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-sampon-anti-cadere-usturoi-si-proteine-b-48592874",
