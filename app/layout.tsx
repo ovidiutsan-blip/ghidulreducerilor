@@ -48,7 +48,7 @@ const organizationSchema = {
   description: 'Site de reduceri și coduri promoționale din România',
   sameAs: [
     'https://www.facebook.com/ghidulreducerilor',
-    'https://www.pinterest.com/ghidulreducerilor',
+    'https://www.pinterest.com/ovidiutsan/',
     'https://t.me/ghidulreducerilor',
     'https://www.tiktok.com/@ghidulreducerilor',
   ],
@@ -83,6 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#E8262A" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="profitshareid" content="2fbe74572bd296845e920501e42623f6" />
+        <meta name="p:domain_verify" content="0c7864db2d532c4961a090e8afd579c6" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
