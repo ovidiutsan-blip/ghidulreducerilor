@@ -8,9 +8,10 @@ Strategie:
   - Link direct la /out/{id} (tracker afiliat)
   - Profilul browser persistent — login o singură dată manual
 
-Setup prima dată:
-  python agents/marketing/pinterest_agent.py --setup
+Setup prima dată (login MANUAL, fără parolă stocată pe disc):
   python agents/marketing/pinterest_agent.py --login
+  (se deschide un browser; te loghezi tu — email/parolă sau Google — sesiunea se salvează)
+  Opțional: --setup salvează doar preferințe (email pt. pre-completare, pin-uri/zi).
 
 Rulare zilnică (Task Scheduler):
   python agents/marketing/pinterest_agent.py --run
@@ -233,20 +234,23 @@ def select_deals_for_pinterest(n: int = 5) -> list[dict]:
 # ─── Login interactiv ─────────────────────────────────────────────────────────
 
 def login_interactive():
-    """Deschide Pinterest, completează login automat, salvează profilul."""
+    """
+    Deschide Pinterest într-un browser persistent și așteaptă login MANUAL.
+
+    Nicio parolă nu e stocată sau completată de agent: te loghezi tu în fereastra
+    care se deschide (email/parolă sau Google — cum vrei), apoi apeși ENTER aici.
+    Sesiunea rămâne salvată în PROFILE_DIR și e refolosită de --run. Dacă în config
+    există un email, doar câmpul de email e pre-completat, ca simplă comoditate.
+    """
     from playwright.sync_api import sync_playwright
 
-    cfg = load_config()
-    email    = cfg.get("email", "")
-    password = cfg.get("password", "")
-
-    if not email or not password:
-        print("[pinterest] Email/parolă lipsă. Rulează mai întâi: --setup")
-        sys.exit(1)
+    cfg   = load_config()
+    email = cfg.get("email", "")
 
     PROFILE_DIR.mkdir(parents=True, exist_ok=True)
-    print("\n=== LOGIN PINTEREST ===")
-    print(f"Email: {email}")
+    print("\n=== LOGIN PINTEREST (manual, fără parolă stocată) ===")
+    if email:
+        print(f"Email pre-completat: {email}")
 
     with sync_playwright() as p:
         ctx = p.chromium.launch_persistent_context(
@@ -260,29 +264,24 @@ def login_interactive():
         page = ctx.new_page()
         page.add_init_script("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });")
 
-        print("[pinterest] Navighez la login...")
+        print("[pinterest] Se deschide login-ul — loghează-te MANUAL în fereastră.")
         page.goto("https://www.pinterest.com/login/", wait_until="domcontentloaded")
         human_delay(3, 5)
 
-        try:
-            page.fill('input[name="id"]', email, timeout=10000)
-            human_delay(0.5, 1)
-            page.fill('input[name="password"]', password, timeout=10000)
-            human_delay(0.5, 1)
-            page.locator('button[type="submit"]').click(timeout=5000)
-            human_delay(4, 6)
+        # Comoditate: pre-completează doar emailul, dacă e cunoscut. Parola o introduci tu.
+        if email:
+            try:
+                page.fill('input[name="id"]', email, timeout=8000)
+            except Exception:
+                pass
 
-            if "login" in page.url:
-                print("[pinterest] Login eșuat sau 2FA — completează manual în browser.")
-                take_screenshot(page, "login_failed")
-            else:
-                print(f"[pinterest] ✅ Login OK! URL: {page.url}")
-                take_screenshot(page, "login_ok")
-        except Exception as e:
-            print(f"[pinterest] Eroare: {e}")
-            print("         Loghează-te manual și apasă ENTER.")
-
-        input(">>> Apasă ENTER după ce ești logat pe Pinterest: ")
+        input(">>> Loghează-te în fereastră, apoi apasă ENTER aici: ")
+        if "login" in page.url:
+            print("[pinterest] ⚠️  Încă pari nelogat (URL conține 'login'). Verifică fereastra.")
+            take_screenshot(page, "login_check")
+        else:
+            print(f"[pinterest] ✅ Login OK! URL: {page.url}")
+            take_screenshot(page, "login_ok")
         print(f"[pinterest] ✅ Profil salvat: {PROFILE_DIR}")
         ctx.close()
 
@@ -577,15 +576,15 @@ def post_pin(page, deal: dict, dry_run: bool = False) -> bool:
 
 def login_auto():
     """
-    Login complet automat Pinterest folosind Chrome real (nu Chromium).
-    Completează email+parolă, apasă Conectează-te, salvează sesiunea automat.
-    Dacă contul e Google-only, încearcă și Google OAuth flow.
+    Deschide Pinterest în Chrome real și DETECTEAZĂ automat login-ul manual.
+    Te loghezi tu în fereastră (email/parolă sau Google — cum vrei); agentul
+    verifică la fiecare 2s dacă ai ajuns pe o pagină Pinterest logată și salvează
+    sesiunea singur, fără ENTER. Nicio parolă nu e stocată sau completată de agent.
     """
     from playwright.sync_api import sync_playwright
 
-    cfg = load_config()
-    email    = cfg.get("email", "")
-    password = cfg.get("password", "")
+    cfg   = load_config()
+    email = cfg.get("email", "")
 
     # Șterge profilul vechi (sesiune invalidă)
     import shutil
@@ -593,8 +592,9 @@ def login_auto():
         shutil.rmtree(PROFILE_DIR, ignore_errors=True)
     PROFILE_DIR.mkdir(parents=True, exist_ok=True)
 
-    print("\n=== LOGIN PINTEREST (AUTO, Chrome real) ===")
-    print(f"Email: {email}")
+    print("\n=== LOGIN PINTEREST (AUTO, Chrome real — login manual detectat automat) ===")
+    if email:
+        print(f"Email pre-completat: {email}")
 
     with sync_playwright() as p:
         # Folosim Chrome-ul real instalat — Google nu îl blochează ca bot
@@ -630,48 +630,19 @@ def login_auto():
         """)
 
         # 1. Navighează la login
-        print("[pinterest] Navighează la login...")
+        print("[pinterest] Se deschide login-ul — loghează-te MANUAL în fereastră.")
         page.goto("https://www.pinterest.com/login/", wait_until="domcontentloaded")
         human_delay(3, 5)
 
-        # 2. Completează email
-        try:
-            page.wait_for_selector('input[name="id"]', timeout=10000)
-            page.fill('input[name="id"]', email)
-            human_delay(1, 2)
-            page.fill('input[name="password"]', password)
-            human_delay(1, 2)
-            # Click Conectează-te
-            page.locator('button[type="submit"]').click()
-            print("[pinterest] Apăsat Conectează-te, aștept redirect...")
-            human_delay(4, 6)
-        except Exception as e:
-            print(f"[pinterest] Auto-fill: {e}")
-
-        # 3. Dacă tot pe login, încearcă Google OAuth
-        if "login" in page.url or "/login" in page.url:
-            print("[pinterest] Email/parolă nu a funcționat. Încerc Google OAuth...")
+        # 2. Comoditate: pre-completează doar emailul, dacă e cunoscut. Parola o introduci tu.
+        if email:
             try:
-                google_btn = page.locator('button:has-text("Google"), [data-test-id*="google"], div[role="button"]:has-text("Google")')
-                if google_btn.first.is_visible(timeout=3000):
-                    google_btn.first.click()
-                    print("[pinterest] Apăsat Continuă cu Google...")
-                    human_delay(3, 5)
-                    # Google OAuth: completează email pe pagina Google
-                    if "google.com" in page.url or "accounts.google" in page.url:
-                        try:
-                            page.fill('input[type="email"]', email, timeout=8000)
-                            page.keyboard.press("Enter")
-                            human_delay(2, 3)
-                            page.fill('input[type="password"]', password, timeout=8000)
-                            page.keyboard.press("Enter")
-                            human_delay(4, 6)
-                        except Exception as ge:
-                            print(f"[pinterest] Google form: {ge}")
-            except Exception as e:
-                print(f"[pinterest] Google OAuth: {e}")
+                page.wait_for_selector('input[name="id"]', timeout=8000)
+                page.fill('input[name="id"]', email)
+            except Exception:
+                pass
 
-        # 4. Așteptare confirmare login (max 2 minute)
+        # 3. Așteptare confirmare login (max 2 minute)
         # Verifică TOATE paginile/tab-urile din context (Google OAuth deschide tab nou)
         print("[pinterest] Verific sesiunea pe toate tab-urile...")
         logged_in = False
@@ -714,38 +685,30 @@ def login_auto():
 # ─── Setup ────────────────────────────────────────────────────────────────────
 
 def setup():
-    print("\n=== SETUP Pinterest Auto-Poster ===\n")
-    email    = input("Email Pinterest: ").strip()
-    password = input("Parolă Pinterest: ").strip()
+    """Pas OPȚIONAL: salvează doar preferințe (email pt. pre-completare, pin-uri/zi).
+    Parola NU se cere și NU se stochează — login-ul e manual (vezi --login)."""
+    print("\n=== SETUP Pinterest Auto-Poster (opțional, fără parolă) ===\n")
+    print("Login-ul e manual în browser — aici salvezi doar preferințe.\n")
+    email        = input("Email Pinterest (opțional, doar pre-completare): ").strip()
     pins_per_day = input("Câte pin-uri/zi (3-5, recomandat 3): ").strip() or "3"
 
-    print("\nBoard-uri care vor fi create pe Pinterest:")
-    for cat, board in BOARD_MAP.items():
-        print(f"  → {board}")
-
     cfg = {
-        "email":          email,
-        "password":       password,
-        "pins_per_day":   int(pins_per_day),
+        "email":           email,
+        "pins_per_day":    int(pins_per_day),
         "post_hour_start": 12,
         "post_hour_end":   22,
     }
     save_config(cfg)
     print(f"\n✅ Config salvat: {CONFIG}")
-    print("\nPasul următor:")
+    print("\nPasul următor (login manual, fără parolă stocată):")
     print("  python agents/marketing/pinterest_agent.py --login")
-    print("\nDupă login, creează manual board-urile pe pinterest.com:")
-    for board in set(BOARD_MAP.values()):
-        print(f"  → '{board}'")
 
 
 # ─── Runner principal ─────────────────────────────────────────────────────────
 
 def run(dry_run: bool = False):
+    # Config-ul e OPȚIONAL — merge și fără el (setup nu mai e obligatoriu).
     cfg = load_config()
-    if not cfg:
-        print("[pinterest] Config lipsă. Rulează: --setup")
-        sys.exit(1)
 
     # Verifică ora
     hour = datetime.now().hour
@@ -756,11 +719,6 @@ def run(dry_run: bool = False):
         return
 
     pins_per_day = cfg.get("pins_per_day", 3)
-
-    # Verifică profil browser
-    if not PROFILE_DIR.exists() or not any(PROFILE_DIR.iterdir()):
-        print("[pinterest] Profil browser lipsă. Rulează: --login")
-        sys.exit(1)
 
     deals = select_deals_for_pinterest(pins_per_day)
     if not deals:
@@ -776,6 +734,11 @@ def run(dry_run: bool = False):
     if dry_run:
         print("\n[pinterest] DRY-RUN — nu se deschide browserul")
         return
+
+    # Verifică profil browser (doar pentru postarea reală — dry-run nu are nevoie de login)
+    if not PROFILE_DIR.exists() or not any(PROFILE_DIR.iterdir()):
+        print("[pinterest] Profil browser lipsă. Rulează: --login")
+        sys.exit(1)
 
     from playwright.sync_api import sync_playwright
 
@@ -863,9 +826,9 @@ def run(dry_run: bool = False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Pinterest Auto-Poster — ghidulreducerilor.ro")
-    parser.add_argument("--setup",      action="store_true", help="Configurare inițială")
-    parser.add_argument("--login",      action="store_true", help="Login interactiv (cu Enter manual)")
-    parser.add_argument("--login-auto", action="store_true", help="Login cu auto-save când detectează sesiune")
+    parser.add_argument("--setup",      action="store_true", help="Opțional: salvează preferințe (fără parolă)")
+    parser.add_argument("--login",      action="store_true", help="Login MANUAL în browser + ENTER (fără parolă stocată)")
+    parser.add_argument("--login-auto", action="store_true", help="Login manual detectat automat (fără ENTER, fără parolă)")
     parser.add_argument("--run",        action="store_true", help="Postare pin-uri")
     parser.add_argument("--dry-run",    action="store_true", help="Test fără postare (arată deals selectate)")
     args = parser.parse_args()

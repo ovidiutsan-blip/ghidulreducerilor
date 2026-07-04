@@ -64,6 +64,12 @@ agents/marketing/tiktok_browser_profile/
 agents/marketing/pinterest_browser_profile/
 agents/marketing/tg_qr.png
 
+# Config-uri locale de agent — pot conține email/preferințe/credențiale, NU se commitează
+agents/marketing/pinterest_config.json
+agents/marketing/fb_page_config.json
+agents/marketing/fb_config_local.json
+agents/marketing/tiktok_config.json
+
 # Claude Code — local only
 .claude/worktrees/
 .claude/settings.local.json
