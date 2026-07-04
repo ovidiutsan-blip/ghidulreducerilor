@@ -48,6 +48,7 @@ BOARD_MAP = {
     "casa-gradina":      "Casă și Grădină — Reduceri",
     "beauty":            "Beauty & Cosmetice — Reduceri",
     "farmacie-sanatate": "Sănătate & Farmacie — Oferte",
+    "suplimente-bio":    "Sănătate & Farmacie — Oferte",
     "electronice":       "Electronice — Reduceri România",
     "smartwatch":        "Smartwatch & Gadgeturi",
     "ceasuri":           "Ceasuri — Reduceri",
