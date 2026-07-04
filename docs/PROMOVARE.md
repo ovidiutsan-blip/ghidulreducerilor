@@ -28,11 +28,13 @@
 
 Cont business existent: **GhidulReducerilor.ro / @ovidiutsan** (`pinterest.com/ovidiutsan`).
 Făcut pe 04.07: domeniul ghidulreducerilor.ro **revendicat** (meta `p:domain_verify` în
-`app/layout.tsx`), 3 board-uri create + 3 pin-uri seed publicate (carduri 2:3 din
-`public/pins/`, generate cu scriptul din sesiune — vezi și `agents/marketing/tiktok_agent.py`
-pentru generare carduri):
-- „Casă și Grădină — Reduceri", „Oferte Zilei — România", „Sănătate & Farmacie — Oferte"
-- numele corespund `BOARD_MAP` din `agents/marketing/pinterest_agent.py`
+`app/layout.tsx`), 4 board-uri create + 4 pin-uri seed publicate (carduri 2:3 din
+`public/pins/`):
+- „Casă și Grădină — Reduceri", „Oferte Zilei — România", „Sănătate & Farmacie — Oferte",
+  „Electronice — Reduceri România"
+- numele corespund exact `BOARD_MAP` din `agents/marketing/pinterest_agent.py`; toate cele
+  5 categorii reale din `deals.json` (casa-gradina, promotii, farmacie-sanatate, electronice,
+  suplimente-bio) mapează acum pe board-uri care EXISTĂ pe cont
 
 Pentru postare ZILNICĂ automată rămâne un pas local (agentul are browser profile propriu):
 1. `python agents/marketing/pinterest_agent.py --setup` apoi `--login` (o dată).
