@@ -14,8 +14,8 @@
 | **Blog SEO** | 🟢 LIVE | articol auto/săptămână | `weekly-blog.yml` → `scripts/generate_weekly_blog.py` |
 | **Google/Bing indexare** | 🟢 LIVE | zilnic după pipeline | sitemap + IndexNow (`scripts/indexnow_ping.py`) + GSC verificat |
 | **Grupuri Facebook** | 🟡 SEMI | zilnic pe email | orchestratorul trimite posturi gata de copiat (Brevo digest) |
-| **Pinterest** | 🔴 ADORMIT | — | agent gata scris, cere cont + login local (vezi §3) |
-| **TikTok** | 🔴 ADORMIT | — | agent gata scris (carduri 9:16 + upload), cere login local (vezi §4) |
+| **Pinterest** @ovidiutsan | 🟡 ACTIV manual | seed 04.07: 3 board-uri + 3 pin-uri | domeniu revendicat; pt. zilnic: agent local (vezi §3) |
+| **TikTok** | 🔴 INEXISTENT | — | contul @ghidulreducerilor NU există; scos din sameAs (vezi §4) |
 
 ## 2. Principii (nu le schimba fără motiv)
 
@@ -24,24 +24,27 @@
 - Cron-urile stau la minutul `:23` — la `:00` GitHub întârzie/sare rulările.
 - Sesiunea de postare se derivă din `github.event.schedule`, nu din ora curentă.
 
-## 3. Activare Pinterest (recomandat #1 — trafic evergreen pe nișa deals/casă)
+## 3. Pinterest — stare 04.07.2026 (setup făcut)
 
-Pinterest e cel mai potrivit canal faceless pentru acest site: pin-urile trăiesc luni de zile,
-nișa casă/grădină/beauty performează, iar `sameAs` din schema Organization deja declară contul.
+Cont business existent: **GhidulReducerilor.ro / @ovidiutsan** (`pinterest.com/ovidiutsan`).
+Făcut pe 04.07: domeniul ghidulreducerilor.ro **revendicat** (meta `p:domain_verify` în
+`app/layout.tsx`), 3 board-uri create + 3 pin-uri seed publicate (carduri 2:3 din
+`public/pins/`, generate cu scriptul din sesiune — vezi și `agents/marketing/tiktok_agent.py`
+pentru generare carduri):
+- „Casă și Grădină — Reduceri", „Oferte Zilei — România", „Sănătate & Farmacie — Oferte"
+- numele corespund `BOARD_MAP` din `agents/marketing/pinterest_agent.py`
 
-Pași (o singură dată, ~20 min, cere contul tău):
-1. Creează cont **business** `pinterest.com/ghidulreducerilor`.
-2. Revendică domeniul ghidulreducerilor.ro (Settings → Claimed accounts — meta tag în `app/layout.tsx`).
-3. Creează board-urile din `BOARD_MAP` (`agents/marketing/pinterest_agent.py`).
-4. Local: `python agents/marketing/pinterest_agent.py --setup` apoi `--login` (o dată).
-5. Programează zilnic în Task Scheduler: `python agents/marketing/pinterest_agent.py --run` (3-5 pin-uri/zi).
+Pentru postare ZILNICĂ automată rămâne un pas local (agentul are browser profile propriu):
+1. `python agents/marketing/pinterest_agent.py --setup` apoi `--login` (o dată).
+2. Task Scheduler zilnic: `python agents/marketing/pinterest_agent.py --run` (3-5 pin-uri/zi).
 
-## 4. Activare TikTok (recomandat #2 — reach organic, zero buget)
+## 4. TikTok — contul NU există (verificat 04.07.2026)
 
-Agentul generează carduri foto 9:16 (Pillow, branding site) și le urcă drept photo-post/carusel.
-1. Local: `python agents/marketing/tiktok_agent.py --login` (o dată, cont @ghidulreducerilor).
-2. Test: `--dry-run` (generează cardurile în `data/marketing/tiktok_cards/` fără upload).
-3. Programează zilnic: `--run` (max 3 posturi/zi, min 30% reducere).
+`tiktok.com/@ghidulreducerilor` returnează "Couldn't find this account" → scos din `sameAs`.
+Crearea contului cere acțiunea proprietarului (verificare email/telefon). Dacă îl creezi:
+1. Re-adaugă URL-ul în `sameAs` (`app/layout.tsx`).
+2. `python agents/marketing/tiktok_agent.py --login` o dată, apoi `--run` zilnic
+   (generează carduri 9:16 și le urcă drept photo-post; max 3/zi, min 30% reducere).
 
 ## 5. Idei următoare (neimplementate)
 
