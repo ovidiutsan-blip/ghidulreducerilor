@@ -2,12 +2,13 @@ name: 📱 Social Media Posts
 
 on:
   schedule:
-    # Dimineață: 07:00 UTC = 09:00 România
-    - cron: '0 7 * * *'
-    # Prânz (L-V): 13:00 UTC = 15:00 România
-    - cron: '0 13 * * 1-5'
-    # Seară: 18:00 UTC = 20:00 România
-    - cron: '0 18 * * *'
+    # Minutul :23 evită vârful de load GitHub de la :00 (întârzieri de ore / rulări sărite).
+    # Dimineață: 06:23 UTC = 09:23 România (vara)
+    - cron: '23 6 * * *'
+    # Prânz (L-V): 11:23 UTC = 14:23 România
+    - cron: '23 11 * * 1-5'
+    # Seară: 17:23 UTC = 20:23 România
+    - cron: '23 17 * * *'
   workflow_dispatch:
     inputs:
       session:
@@ -54,13 +55,14 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         run: |
-          # Determină sesiunea pe baza orei UTC
-          HOUR=$(date +%H)
+          # Sesiunea vine din cron-ul care a declanșat rularea, NU din ora curentă:
+          # GitHub întârzie cron-urile cu ore întregi, iar ora curentă ar mapa greșit sesiunea.
+          SCHEDULE="${{ github.event.schedule }}"
           if [ -n "${{ github.event.inputs.session }}" ]; then
             SESSION="${{ github.event.inputs.session }}"
-          elif [ "$HOUR" = "07" ]; then
+          elif [ "$SCHEDULE" = "23 6 * * *" ]; then
             SESSION="morning"
-          elif [ "$HOUR" = "13" ]; then
+          elif [ "$SCHEDULE" = "23 11 * * 1-5" ]; then
             SESSION="afternoon"
           else
             SESSION="evening"
@@ -76,7 +78,7 @@ jobs:
 
       - name: 💬 Postare Telegram (top 5 deals)
         # Rulează doar la sesiunea de dimineață (07:00 UTC = 09:00 RO) ca să evită spam.
-        if: github.event.schedule == '0 7 * * *' || github.event_name == 'workflow_dispatch'
+        if: github.event.schedule == '23 6 * * *' || github.event_name == 'workflow_dispatch'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL_ID: ${{ vars.TELEGRAM_CHANNEL_ID }}

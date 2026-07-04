@@ -15,6 +15,7 @@ import sys
 import logging
 import argparse
 import random
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
@@ -286,21 +287,49 @@ def post_to_instagram(caption: str, image_url: str) -> bool:
 
         container_id = container_response.json().get('id')
 
-        # Pas 2: Publică media
+        # Pas 2: Așteaptă procesarea containerului. IG descarcă imaginea asincron;
+        # publish înainte de status FINISHED dă eroarea 9007 "Media ID is not available".
+        status_url = f"https://graph.facebook.com/v18.0/{container_id}"
+        status = 'IN_PROGRESS'
+        for attempt in range(15):
+            status_response = requests.get(
+                status_url,
+                params={'fields': 'status_code', 'access_token': IG_ACCESS_TOKEN},
+                timeout=30,
+            )
+            if status_response.status_code == 200:
+                status = status_response.json().get('status_code', 'IN_PROGRESS')
+                if status == 'FINISHED':
+                    break
+                if status in ('ERROR', 'EXPIRED'):
+                    logger.error(f"Container Instagram {status} (imagine neprocesabilă?): {image_url}")
+                    return False
+            time.sleep(4)
+        if status != 'FINISHED':
+            logger.error(f"Container Instagram neprocesat după 60s (status={status}) — abandon")
+            return False
+
+        # Pas 3: Publică media (retry: 9007 poate apărea tranzitoriu chiar după FINISHED)
         publish_url = f"https://graph.facebook.com/v18.0/{ig_user_id}/media_publish"
         publish_data = {
             'creation_id': container_id,
             'access_token': IG_ACCESS_TOKEN
         }
 
-        publish_response = requests.post(publish_url, data=publish_data, timeout=30)
-        if publish_response.status_code == 200:
-            media_id = publish_response.json().get('id', 'unknown')
-            logger.info(f"Post Instagram publicat: {media_id}")
-            return True
-        else:
-            logger.error(f"Eroare publicare Instagram: {publish_response.text[:200]}")
+        for attempt in range(3):
+            publish_response = requests.post(publish_url, data=publish_data, timeout=30)
+            if publish_response.status_code == 200:
+                media_id = publish_response.json().get('id', 'unknown')
+                logger.info(f"Post Instagram publicat: {media_id}")
+                return True
+            body = publish_response.text[:200]
+            if '"code":9007' in publish_response.text and attempt < 2:
+                logger.warning(f"Publish 9007 (media neprocesat) — retry {attempt + 1}/2 în 8s")
+                time.sleep(8)
+                continue
+            logger.error(f"Eroare publicare Instagram: {body}")
             return False
+        return False
 
     except requests.RequestException as e:
         logger.error(f"Eroare conexiune Instagram: {e}")
