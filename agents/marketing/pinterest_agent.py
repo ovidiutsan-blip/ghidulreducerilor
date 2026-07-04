@@ -45,7 +45,7 @@ SITE_BASE    = "https://ghidulreducerilor.ro"
 # Valorile = numele board-ului pe Pinterest (creat manual o dată)
 
 BOARD_MAP = {
-    "casa-gradina":      "Casa și Grădină — Reduceri",
+    "casa-gradina":      "Casă și Grădină — Reduceri",
     "beauty":            "Beauty & Cosmetice — Reduceri",
     "farmacie-sanatate": "Sănătate & Farmacie — Oferte",
     "electronice":       "Electronice — Reduceri România",
