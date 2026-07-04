@@ -11060,7 +11060,11 @@
     "pret_minim_30z": 21.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:36.530371+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-sampon-reparator-calmant-botanicals-400--48592873",
@@ -11097,7 +11101,11 @@
     "pret_minim_30z": 21.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:37.723866+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-sampon-densitate-si-vitalitate-botanical-48592872",
@@ -11134,7 +11142,11 @@
     "pret_minim_30z": 21.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:38.727913+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-anti-imbatranire-cu-spf50-cellular-43412336",
@@ -11171,7 +11183,11 @@
     "pret_minim_30z": 123.68,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:39.319633+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-gel-aftersun-cellular-protect-125-ml-fil-43412335",
@@ -11208,7 +11224,11 @@
     "pret_minim_30z": 88.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:39.825710+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-anti-imbatranire-cu-spf50-cellular-43412334",
@@ -11245,7 +11265,11 @@
     "pret_minim_30z": 109.95,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:40.584920+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-creatina-monohidrata-cu-aroma-de-mar-ver-46724546",
@@ -11282,7 +11306,11 @@
     "pret_minim_30z": 36.3,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:41.229258+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-creatina-monohidrata-fara-aroma-300-g-os-46724545",
@@ -11319,7 +11347,11 @@
     "pret_minim_30z": 36.3,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:42.001946+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-creatina-monohidrata-cu-aroma-de-portoca-46724544",
@@ -11356,7 +11388,11 @@
     "pret_minim_30z": 36.3,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:40.198526+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-ser-fata-antirid-cu-0-3-retinol-si-squal-16532454",
@@ -11393,7 +11429,11 @@
     "pret_minim_30z": 36.68,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:41.321154+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-pompa-apa-murdara-1100w-profesionala-sub-67685074",
@@ -11430,7 +11470,11 @@
     "pret_minim_30z": 299.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:36.530616+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-mini-flex-polizor-unghiular-3ah-48v--60501723",
@@ -11467,7 +11511,11 @@
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:37.834796+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-compresor-de-aer-100l-3-0cp-3400rpm-206l-60501722",
@@ -11504,7 +11552,11 @@
     "pret_minim_30z": 1260.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:38.752910+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-masina-de-tocat-carne-mk22-profesionala--69002882",
@@ -11541,7 +11593,11 @@
     "pret_minim_30z": 799.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:39.402623+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-tun-de-caldura-pe-gaz-gfa-12-kw-170-m-h--34784913",
@@ -11578,7 +11634,11 @@
     "pret_minim_30z": 399.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:40.014892+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-motoburghiu-pe-benzina-8-5cp-motor-2-tim-01204428",
@@ -11615,7 +11675,11 @@
     "pret_minim_30z": 345.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:40.763866+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-fierastrau-sabie-vertical-20v-3200rpm-ta-19498324",
@@ -11652,7 +11716,10 @@
     "pret_minim_30z": 219.7,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T20:59:41.398161+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "ps-vegis-sampon-hidratant-cu-aloe-vera-250ml-747718",
@@ -11688,7 +11755,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.848781+00:00",
     "pret_minim_30z": 51.91,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:36.530992+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-ser-pentru-fata-regenerator-lifting-cove-08545120",
@@ -11724,7 +11796,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.849089+00:00",
     "pret_minim_30z": 173.63,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:37.915884+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-ser-pentru-fata-anti-age-cu-colagen-cove-08545090",
@@ -11760,7 +11837,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.849369+00:00",
     "pret_minim_30z": 173.63,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:38.899316+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-ser-pentru-fata-anti-age-cu-acid-hialuro-08545106",
@@ -11796,7 +11878,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.849641+00:00",
     "pret_minim_30z": 160.92,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:39.495107+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-rezervor-hidrofor-100l-butelie-vas-de-ex-96816690",
@@ -11833,7 +11920,10 @@
     "pret_minim_30z": 394.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T20:59:42.195883+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-sarma-sudura-0-8mm-1kg-flux-fara-gaz-apa-07198525",
@@ -11870,7 +11960,11 @@
     "pret_minim_30z": 26.8,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:40.378346+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-motor-pe-benzina-10cp-177f-25mm-ax-orizo-38135911",
@@ -11907,7 +12001,11 @@
     "pret_minim_30z": 999.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:41.498776+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-fierastrau-circular-de-masa-1800w-disc-2-19498323",
@@ -11944,7 +12042,10 @@
     "pret_minim_30z": 699.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T21:00:42.032221+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-masina-de-slefuit-pereti-telescopica-125-86914391",
@@ -11981,7 +12082,11 @@
     "pret_minim_30z": 415.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:42.389897+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-priza-tv-gewiss-chorus-gw12361-negru-1-m-10506990",
@@ -12017,7 +12122,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.851443+00:00",
     "pret_minim_30z": 42.06,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:36.531227+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-suport-moara-macina-porumb-67685047",
@@ -12054,7 +12164,11 @@
     "pret_minim_30z": 60.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:42.616422+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-biosil-generator-avansat-de-colagen-pica-BIOM4",
@@ -12090,7 +12204,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.852242+00:00",
     "pret_minim_30z": 105.38,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:40.153767+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-betoniera-150l-850w-26-6-rot-min-cuva-me-38454102",
@@ -12127,7 +12246,10 @@
     "pret_minim_30z": 879.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T21:00:43.059084+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-8-5cp-4timpi-motocoasa-pe-benzina-4-timp-67685048",
@@ -12164,7 +12286,11 @@
     "pret_minim_30z": 369.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:01:43.433852+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-flex-polizor-unghiular-230mm-3000w-6000r-86914393",
@@ -12201,7 +12327,11 @@
     "pret_minim_30z": 259.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:01:43.497838+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-pompa-apa-submersibila-1500w-cablu-20m-4-84533121",
@@ -12238,7 +12368,10 @@
     "pret_minim_30z": 235.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T21:01:43.857516+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-masina-de-tocat-carne-mk8-4500w-super-in-17214784",
@@ -12275,7 +12408,10 @@
     "pret_minim_30z": 439.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T21:01:44.190395+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-cablu-electric-curent-toros-trs2x1-5-100-36932352",
@@ -12312,7 +12448,11 @@
     "pret_minim_30z": 158.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:02:44.801231+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-drujba-benzina-afisaj-digital-3-2cp-58cc-71510731",
@@ -12349,7 +12489,11 @@
     "pret_minim_30z": 392.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:02:45.003851+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "vegis-b77597fe",
@@ -12386,7 +12530,10 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.854541+00:00",
     "pret_minim_30z": 11.92,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "http_403",
+    "link_checked_at": "2026-07-04T20:59:40.852898+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "ps-hotpick-resigilat-aeroterma-cu-quartz-techwood-t-TCG-826R",
@@ -12422,7 +12569,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.854723+00:00",
     "pret_minim_30z": 79.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:36.896626+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-licenta-autocad-lt-2025-comercial-1-util-24959332",
@@ -12458,7 +12610,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.854890+00:00",
     "pret_minim_30z": 1999.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:37.688876+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-decoloranta-pentru-parul-facial-si-16653305",
@@ -12495,7 +12652,11 @@
     "pret_minim_30z": 31.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:41.862245+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-benzi-depilatoare-faciale-hipoalergenice-16653304",
@@ -12532,7 +12693,11 @@
     "pret_minim_30z": 17.6,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:42.252666+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-kit-depilare-pentru-zona-intima-feminina-16653303",
@@ -12569,7 +12734,11 @@
     "pret_minim_30z": 31.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:42.437048+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-depilatoare-pentru-barbati-zona-in-16653302",
@@ -12606,7 +12775,11 @@
     "pret_minim_30z": 22.4,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:42.890327+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-depilatoare-4-in-1-barbati-pentru--16653301",
@@ -12643,7 +12816,11 @@
     "pret_minim_30z": 31.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:01:43.250861+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-benzi-depilatoare-pentru-corp-piele-sens-16653300",
@@ -12680,7 +12857,11 @@
     "pret_minim_30z": 20.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:01:43.493918+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-benzi-depilatoare-pentru-corp-16-benzi-2-16653299",
@@ -12717,7 +12898,11 @@
     "pret_minim_30z": 22.4,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:01:43.668856+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-benzi-depilatoare-pentru-zona-bikini-si--16653298",
@@ -12754,7 +12939,11 @@
     "pret_minim_30z": 17.6,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:01:44.015398+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-benzi-depilatoare-pentru-fata-12-benzi-2-16653297",
@@ -12791,7 +12980,11 @@
     "pret_minim_30z": 17.6,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:02:44.796761+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-ceara-depilatoare-profesionala-cu-galben-16653296",
@@ -12828,7 +13021,11 @@
     "pret_minim_30z": 31.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:02:45.000685+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-ceara-depilatoare-faciala-tip-click-pen--16653295",
@@ -12865,7 +13062,11 @@
     "pret_minim_30z": 35.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:02:45.249073+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-ceara-depilatoare-pentru-fata-bikini-si--16653294",
@@ -12902,7 +13103,11 @@
     "pret_minim_30z": 30.4,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:02:45.432273+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-depilatoare-pentru-utilizare-sub-d-16653293",
@@ -12939,7 +13144,11 @@
     "pret_minim_30z": 35.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:03:46.041498+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-ceara-depilatoare-pentru-corp-cu-parfum--16653292",
@@ -12976,7 +13185,11 @@
     "pret_minim_30z": 40.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:03:46.228069+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-depilatoare-pentru-fata-cu-aplicat-16653291",
@@ -13013,7 +13226,11 @@
     "pret_minim_30z": 20.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:03:46.265379+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-depilatoare-pentru-piele-sensibila-16653290",
@@ -13050,7 +13267,11 @@
     "pret_minim_30z": 31.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:03:46.471121+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-crema-depilatoare-pentru-piele-normala-2-16653289",
@@ -13087,7 +13308,11 @@
     "pret_minim_30z": 31.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:47.345568+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-unt-de-ras-cu-papaya-si-mango-200-ml-bod-16653288",
@@ -13124,7 +13349,11 @@
     "pret_minim_30z": 31.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:47.572439+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-unt-de-ras-cu-fructe-rosii-200-ml-body-n-16653287",
@@ -13161,7 +13390,11 @@
     "pret_minim_30z": 31.2,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:47.586161+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-calciu-500-mg-20-comprimate-efervescente-80952175",
@@ -13198,7 +13431,11 @@
     "pret_minim_30z": 11.92,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:47.744195+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-vitamina-c-60-mg-20-comprimate-beres-80952174",
@@ -13235,7 +13472,11 @@
     "pret_minim_30z": 11.92,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:47.764756+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-spirulina-organica-daily-health-100-caps-66693531",
@@ -13272,7 +13513,11 @@
     "pret_minim_30z": 35.92,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:47.848806+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-vitamina-c-lipozomala-daily-health-60-ca-66693529",
@@ -13309,7 +13554,11 @@
     "pret_minim_30z": 49.12,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:47.945288+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-glutation-lipozomal-daily-health-60-caps-66693528",
@@ -13346,7 +13595,11 @@
     "pret_minim_30z": 82.72,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:47.947824+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-ashwagandha-daily-health-60-capsule-pro--66693527",
@@ -13383,7 +13636,11 @@
     "pret_minim_30z": 28.32,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:48.023066+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-bila-de-baie-pentru-copii-summer-apple-1-76389372",
@@ -13420,7 +13677,11 @@
     "pret_minim_30z": 12.72,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:48.132495+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-omega-3-ultra-90-capsule-ostrovit-46724555",
@@ -13457,7 +13718,11 @@
     "pret_minim_30z": 46.32,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:48.134909+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-omega-3-6-9-90-capsule-ostrovit-46724554",
@@ -13494,7 +13759,11 @@
     "pret_minim_30z": 29.92,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:48.201288+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-n-acetil-l-cisteina-nac-natural-200-g-os-46724553",
@@ -13531,7 +13800,11 @@
     "pret_minim_30z": 77.92,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:48.316699+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-coenzima-q10-ubichinon-100-capsule-ostro-46724552",
@@ -13568,7 +13841,11 @@
     "pret_minim_30z": 45.52,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:48.321125+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-vitamina-b-complex-90-tablete-ostrovit-46724550",
@@ -13605,7 +13882,11 @@
     "pret_minim_30z": 19.52,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:48.373526+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-colagen-90-tablete-ostrovit-46724549",
@@ -13642,7 +13923,11 @@
     "pret_minim_30z": 23.12,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:48.498061+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-caffeine-200-mg-200-tablete-ostrovit-46724548",
@@ -13679,7 +13964,11 @@
     "pret_minim_30z": 26.72,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:48.501546+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-cla-1000mg-90-capsule-ostrovit-46724547",
@@ -13716,7 +14005,11 @@
     "pret_minim_30z": 30.72,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:48.550523+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-inositol-natural-200-g-ostrovit-46724543",
@@ -14086,7 +14379,10 @@
     "pret_minim_30z": 81.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T21:02:45.271032+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "ps-streamstore-microsoft-office-2019-professional-plus--47037445",
@@ -14122,7 +14418,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.862900+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:38.638240+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-3000w-generator-de-curent-3000w-rezervor-90882332",
@@ -14159,7 +14460,10 @@
     "pret_minim_30z": 799.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T21:02:45.607346+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-scara-pliabila-din-otel-3-3-trepte-64cm--23423044",
@@ -14196,7 +14500,11 @@
     "pret_minim_30z": 124.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:03:46.160985+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-moara-electrica-4500w-rosie-pentru-uruia-67685061",
@@ -14233,7 +14541,11 @@
     "pret_minim_30z": 244.99,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:03:46.258666+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-sistem-extractibil-pentru-dulap-de-colt--10217196",
@@ -14269,7 +14581,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.863645+00:00",
     "pret_minim_30z": 897.55,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:38.316394+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-sistem-extractibil-lemans-amortizat-aren-10219866",
@@ -14305,7 +14622,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.863886+00:00",
     "pret_minim_30z": 847.27,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:39.071975+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-profil-maner-laguna-multiomega-wide-alum-10222312",
@@ -14341,7 +14663,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.864075+00:00",
     "pret_minim_30z": 61.06,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:39.822169+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-glisiera-cu-role-grass-otel-alb-max-35-k-10213349",
@@ -14377,7 +14704,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.864248+00:00",
     "pret_minim_30z": 23.18,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:40.524103+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-priza-mobilier-spica-304-sistem-incorpor-10218552",
@@ -14413,7 +14745,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.864407+00:00",
     "pret_minim_30z": 99.94,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:40.900336+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-set-glisiere-cu-bile-fgv-otel-zincat-pus-10221598",
@@ -14449,7 +14786,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.864575+00:00",
     "pret_minim_30z": 16.77,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:41.671734+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-set-glisiere-cu-bile-fgv-otel-zincat-sof-10222237",
@@ -14485,7 +14827,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.864804+00:00",
     "pret_minim_30z": 11.59,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:40.188755+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-balama-aplicata-tiomos-grass-otel-nichel-10213236",
@@ -14521,7 +14868,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.865082+00:00",
     "pret_minim_30z": 35.59,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:41.230525+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mathaus-set-glisiera-cu-bile-fgv-otel-zincat-sof-10222235",
@@ -14557,7 +14909,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.865348+00:00",
     "pret_minim_30z": 16.44,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:00:41.544636+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-hotpick-convector-electric-smart-domo-do7355ch-2-DO7355CH",
@@ -14593,7 +14950,12 @@
     "omnibus_checked_at": "2026-07-04T06:55:07.865619+00:00",
     "pret_minim_30z": 329.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T20:59:38.344994+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-x20-buc-set-sarma-de-sudura-flux-1-0mm-1-17900211",
@@ -14630,7 +14992,10 @@
     "pret_minim_30z": 360.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T21:03:46.407251+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-pompa-submersibila-de-mare-adancime-mult-80086705",
@@ -14667,7 +15032,10 @@
     "pret_minim_30z": 639.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-04T21:03:46.639378+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-electrozi-de-sudura-supertit-5kg-2-5x350-06368451",
@@ -14704,7 +15072,11 @@
     "pret_minim_30z": 49.99,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-04T21:04:47.555092+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-pompa-submersibila-multietajata-apa-cura-67685034",
