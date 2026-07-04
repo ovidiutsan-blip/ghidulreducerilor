@@ -20,6 +20,7 @@ Task Scheduler: zilnic 04:30 (după import 2P, înainte de audit 07:30)
 from __future__ import annotations
 import os, sys, json, re, time
 from enum import Enum
+from urllib.parse import quote
 from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -62,9 +63,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from two_performant_session import api_get, TwoPerformantRateLimited  # noqa: E402
 
 
-def build_affiliate_link(unique_code: str, product_id) -> str:
+def build_affiliate_link(program_unique_code: str, product_url: str) -> str:
+    # Quicklink cu unique-ul programului — formatul ad_type=product da notoolerror.
     return (f"https://event.2performant.com/events/click"
-            f"?ad_type=product&unique={unique_code}&aff_code={AFF_CODE}&product_id={product_id}")
+            f"?ad_type=quicklink&unique={program_unique_code}&aff_code={AFF_CODE}"
+            f"&redirect_to={quote(product_url, safe='')}")
 
 
 def slugify(s: str) -> str:
@@ -202,8 +205,7 @@ def find_replacement(magazin: str, unique_code_program: str,
                         continue
 
                     prod_id = p.get("id") or p.get("prid") or ""
-                    prod_unique = p.get("unique_code") or ""
-                    aff_link = p.get("affiliate_url") or build_affiliate_link(prod_unique or unique_code_program, prod_id)
+                    aff_link = build_affiliate_link(unique_code_program, url)
 
                     # Verificăm rapid că noul link nu e și el expirat (UNKNOWN tratat ca OK
                     # pentru replacement check — preferăm să încercăm decât să sărim peste).

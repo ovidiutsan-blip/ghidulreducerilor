@@ -27,6 +27,7 @@ from __future__ import annotations
 import os, sys, json, re, time
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import quote
 import requests
 from dotenv import load_dotenv
 
@@ -125,11 +126,17 @@ def slugify(s: str) -> str:
     return s.strip("-")[:80]
 
 
-def build_affiliate_link(unique_code: str, product_id) -> str:
-    """Construieste link afiliat 2Performant pentru un produs."""
+def build_affiliate_link(program_unique_code: str, product_url: str) -> str:
+    """Construieste link afiliat 2Performant pentru un produs (format quicklink).
+
+    Formatul ad_type=product cu unique-ul produsului ajunge pe notoolerror.html
+    (tool nerecunoscut => click nemonetizat). Quicklink-ul cu unique-ul PROGRAMULUI
+    si redirect_to salveaza click-ul si trimite userul pe pagina produsului.
+    """
     return (
         f"https://event.2performant.com/events/click"
-        f"?ad_type=product&unique={unique_code}&aff_code={AFF_CODE}&product_id={product_id}"
+        f"?ad_type=quicklink&unique={program_unique_code}&aff_code={AFF_CODE}"
+        f"&redirect_to={quote(product_url, safe='')}"
     )
 
 
@@ -185,8 +192,6 @@ def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
 
     # ID numeric produs
     prod_id = p.get("id") or p.get("prid") or ""
-    # unique_code al produsului (diferit de unique_code al programului) — pentru link afiliat
-    prod_unique = p.get("unique_code") or ""
 
     if not name or not url:
         return None
@@ -194,8 +199,9 @@ def product_to_deal(p: dict, magazin: str, unique_code: str, categorie: str,
     if img.startswith("http://"):
         img = "https://" + img[7:]
 
-    # Link afiliat: folosim unique_code al produsului daca e disponibil
-    aff_link = p.get("affiliate_url") or build_affiliate_link(prod_unique or unique_code, prod_id)
+    # Link afiliat: quicklink cu unique-ul programului + redirect_to pagina produsului.
+    # NU folosim affiliate_url din feed / formatul ad_type=product — ambele dau notoolerror.
+    aff_link = build_affiliate_link(unique_code, url)
 
     return {
         "id": f"2p-{magazin}-{slugify(name)[:40]}-{str(prod_id)[-8:]}",

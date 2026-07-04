@@ -19,6 +19,7 @@ Utilizare:
 """
 
 import json
+import os
 import sys
 import time
 import logging
@@ -61,18 +62,24 @@ RECHECK_AFTER_DAYS = 1   # statusurile tranzitorii (rate_limited etc.) se reveri
 FLAKY_STATUSES = {'rate_limited', 'http_403', 'connection_error', 'server_error'}
 MAX_FLAKY = 5            # după N verificări consecutive flaky => dezactivare
 RETRY_COUNT = 1
+BODY_READ_LIMIT = 65536  # max bytes cititi din body — ne trebuie doar începutul paginii
+PER_REQUEST_BUDGET = 45  # secunde cap dur per request (redirects + body incluse)
+GLOBAL_DEADLINE = 720    # secunde cap dur pentru toată verificarea (sub timeout-ul CI de 20 min)
 
 # ─── Patterns specifice per rețea de afiliere ────────────────────────────────
 # Adaugă rețele noi aici fără să modifici altceva în cod.
 AFFILIATE_NETWORK_DEAD_PATTERNS = {
+    # ATENȚIE: ambele rețele fac redirect spre produs prin JavaScript, deci un link
+    # VALID rămâne pe domeniul rețelei la un GET simplu (fără JS). 'stayed_on_network'
+    # NU e semn de link mort — în acest caz verificăm product_url direct (fallback).
     '2performant': {
         'url_contains': ['notoolerror', 'businessleague.2performant.com'],
-        'stayed_on_network': True,   # dacă URL final e tot pe domeniul rețelei = expirat
+        'stayed_on_network': False,
         'network_domains': ['2performant.com', 'businessleague.2performant.com'],
     },
     'profitshare': {
         'url_contains': [],
-        'stayed_on_network': True,   # dacă URL final e tot pe profitshare = expirat
+        'stayed_on_network': False,
         'network_domains': ['profitshare.ro'],
     },
 }
@@ -168,6 +175,40 @@ def _check_network_expired(original_url: str, final_url: str, network: str) -> b
     return False
 
 
+def _stayed_on_network(final_url: str, network: str) -> bool:
+    """URL-ul final e tot pe domeniul rețelei de afiliere (redirect JS neurmăribil)."""
+    config = AFFILIATE_NETWORK_DEAD_PATTERNS.get(network, {})
+    final_lower = final_url.lower()
+    return any(domain in final_lower for domain in config.get('network_domains', []))
+
+
+def _bounded_get(session: requests.Session, url: str):
+    """GET cu citire de body plafonată în timp și dimensiune.
+
+    timeout-ul din requests limitează doar conectarea și pauza dintre bytes,
+    NU durata totală — un server care picură bytes ar ține threadul blocat
+    la nesfârșit (cauza hang-ului de 20 min din CI). Returnează (response, body).
+    """
+    start = time.time()
+    response = session.get(url, timeout=(5, REQUEST_TIMEOUT),
+                           allow_redirects=True, stream=True)
+    chunks = []
+    read = 0
+    try:
+        for chunk in response.iter_content(chunk_size=8192):
+            if chunk:
+                chunks.append(chunk)
+                read += len(chunk)
+            if read >= BODY_READ_LIMIT or time.time() - start > PER_REQUEST_BUDGET:
+                break
+    except requests.exceptions.RequestException:
+        pass  # body incomplet e acceptabil — analizăm ce am primit
+    finally:
+        response.close()
+    body = b''.join(chunks).decode(response.encoding or 'utf-8', errors='replace')
+    return response, body
+
+
 def _check_body_content(body: str) -> Optional[str]:
     """Caută fraze de 'produs indisponibil' în body-ul paginii."""
     body_lower = body.lower()
@@ -227,7 +268,7 @@ def check_link(session: requests.Session, deal: dict) -> dict:
     start_time = time.time()
 
     try:
-        response = session.get(link, timeout=REQUEST_TIMEOUT, allow_redirects=True)
+        response, body = _bounded_get(session, link)
 
         elapsed_ms = round((time.time() - start_time) * 1000)
         result['response_time_ms'] = elapsed_ms
@@ -268,16 +309,41 @@ def check_link(session: requests.Session, deal: dict) -> dict:
             return result
 
         # ── Strategie 4: Body content — fraze de produs indisponibil ─────────
-        try:
-            body = response.text[:8000]
-            dead_phrase = _check_body_content(body)
-            if dead_phrase:
-                result['status'] = 'dead'
-                result['dead_reason'] = f'body_phrase:{dead_phrase[:40]}'
-                logger.warning(f"[DEAD-CONTENT] {deal_id}: '{dead_phrase[:40]}'")
-                return result
-        except Exception:
-            pass  # body parse failure = nu blocăm
+        dead_phrase = _check_body_content(body[:8000])
+        if dead_phrase:
+            result['status'] = 'dead'
+            result['dead_reason'] = f'body_phrase:{dead_phrase[:40]}'
+            logger.warning(f"[DEAD-CONTENT] {deal_id}: '{dead_phrase[:40]}'")
+            return result
+
+        # ── Strategie 5: rămas pe domeniul rețelei (redirect JS neurmăribil) ──
+        # 2P quicklink și PS folosesc redirect JavaScript, deci un GET simplu
+        # rămâne pe rețea și pentru linkuri VALIDE. Verificăm produsul direct.
+        if network and _stayed_on_network(response.url, network):
+            product_url = deal.get('product_url') or ''
+            if product_url:
+                p_response, p_body = _bounded_get(session, product_url)
+                if p_response.status_code in (404, 410):
+                    result['status'] = 'dead'
+                    result['dead_reason'] = f'product_http_{p_response.status_code}'
+                    logger.warning(f"[DEAD-PRODUCT-{p_response.status_code}] {deal_id}")
+                    return result
+                if p_response.status_code == 429:
+                    result['status'] = 'rate_limited'
+                    return result
+                if p_response.status_code == 200:
+                    if _is_homepage_redirect(product_url, p_response.url):
+                        result['status'] = 'dead'
+                        result['dead_reason'] = 'product_redirect_to_homepage'
+                        logger.warning(f"[DEAD-PRODUCT-HOMEPAGE] {deal_id}")
+                        return result
+                    p_phrase = _check_body_content(p_body[:8000])
+                    if p_phrase:
+                        result['status'] = 'dead'
+                        result['dead_reason'] = f'product_body_phrase:{p_phrase[:40]}'
+                        logger.warning(f"[DEAD-PRODUCT-CONTENT] {deal_id}: '{p_phrase[:40]}'")
+                        return result
+                # alte statusuri (403, 5xx) = incert — nu declarăm mort
 
         # ── Toate verificările OK ─────────────────────────────────────────────
         result['status'] = 'ok'
@@ -403,13 +469,17 @@ def run_checks(
     ok_count = 0
     rate_limited_count = 0
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        future_to_deal = {
-            executor.submit(check_link, session, deal): deal
-            for deal in deals_to_check
-        }
+    stragglers = 0
+    executor = concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS)
+    future_to_deal = {
+        executor.submit(check_link, session, deal): deal
+        for deal in deals_to_check
+    }
 
-        for future in concurrent.futures.as_completed(future_to_deal):
+    try:
+        # Deadline global: fără el, un singur request blocat ține tot job-ul
+        # până la timeout-ul CI (job cancelled, nimic salvat).
+        for future in concurrent.futures.as_completed(future_to_deal, timeout=GLOBAL_DEADLINE):
             deal = future_to_deal[future]
             try:
                 result = future.result()
@@ -432,6 +502,14 @@ def run_checks(
 
             except Exception as e:
                 logger.error(f"Eroare la verificare {deal.get('id')}: {e}")
+    except concurrent.futures.TimeoutError:
+        stragglers = sum(1 for f in future_to_deal if not f.done())
+        logger.warning(
+            f"Deadline global {GLOBAL_DEADLINE}s atins — {stragglers} verificări abandonate; "
+            "salvăm rezultatele parțiale."
+        )
+    finally:
+        executor.shutdown(wait=False, cancel_futures=True)
 
     # Actualizează statusul în deals
     results_by_id = {r['id']: r for r in results}
@@ -454,6 +532,7 @@ def run_checks(
         'dead': len(dead_deals),
         'rate_limited': rate_limited_count,
         'removed': removed_count,
+        'stragglers': stragglers,
         'dead_deals': dead_deals,
         'checked_at': datetime.now(timezone.utc).isoformat(),
     }
@@ -524,6 +603,12 @@ Exemple:
         print(f"\nDeal-uri moarte ({len(stats['dead_deals'])}):")
         for d in stats['dead_deals']:
             print(f"  [{d['magazin']}] {d['title'][:45]} — {d['dead_reason']} ({d['network']})")
+
+    if stats.get('stragglers'):
+        # Threadurile abandonate (non-daemon) ar bloca exitul interpreterului
+        # până se termină singure — ieșim forțat după ce totul e salvat pe disc.
+        logging.shutdown()
+        os._exit(0)
 
     return stats
 
