@@ -199,6 +199,13 @@ jobs:
       - name: 📤 Push la GitHub (trigger Vercel redeploy)
         run: git push
 
+      - name: 📡 IndexNow ping (Bing/Yandex reindexează paginile actualizate)
+        continue-on-error: true
+        run: |
+          # Așteptăm redeploy-ul Vercel ca sitemap-ul live să reflecte datele noi
+          sleep 120
+          python scripts/indexnow_ping.py
+
       - name: 🚨 Creare issue la eșec pipeline
         if: failure() || steps.main_pipeline.outcome == 'failure' || steps.scrape_altemagazine.outcome == 'failure' || steps.merge_altemagazine.outcome == 'failure' || steps.ps_feed.outcome == 'failure' || steps.two_p_feed.outcome == 'failure' || steps.link_validator.outcome == 'failure' || steps.codes_scraper.outcome == 'failure' || steps.price_validator.outcome == 'failure' || steps.sync_hubs.outcome == 'failure' || steps.dedup.outcome == 'failure'
         uses: actions/github-script@v7

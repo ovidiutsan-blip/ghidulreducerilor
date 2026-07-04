@@ -13,11 +13,11 @@ import { buildItemListSchema, buildBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'GhidulReducerilor.ro — Cele Mai Bune Reduceri și Coduri Promo România 2026',
-  description: 'Descoperă cele mai bune reduceri si coduri promotionale eMAG din Romania. Oferte verificate zilnic, prețuri reale, economii garantate.',
+  description: 'Descoperă cele mai bune reduceri din magazinele online din România. Oferte verificate zilnic, prețuri reale conform legii (Omnibus), economii garantate.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'GhidulReducerilor.ro — Reduceri și Coduri Promoționale România 2026',
-    description: 'Cele mai bune reduceri eMAG din Romania verificate zilnic. Oferte reale, prețuri scăzute, economii garantate.',
+    description: 'Cele mai bune reduceri din România, verificate zilnic. Oferte reale, prețuri scăzute, economii garantate.',
     images: [{ url: 'https://ghidulreducerilor.ro/api/og', width: 1200, height: 630 }],
   },
 }

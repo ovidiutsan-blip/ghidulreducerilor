@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: 'GhidulReducerilor.ro — Reduceri și Coduri Promoționale România',
     template: '%s | GhidulReducerilor.ro',
   },
-  description: 'Cele mai bune reduceri si coduri promotionale eMAG din Romania. Oferte verificate zilnic, prețuri reale, economii garantate.',
+  description: 'Cele mai bune reduceri din magazinele online din România — scule, farmacie, bio, software și casă. Oferte verificate zilnic, prețuri reale, economii garantate.',
   openGraph: {
     type: 'website',
     locale: 'ro_RO',
