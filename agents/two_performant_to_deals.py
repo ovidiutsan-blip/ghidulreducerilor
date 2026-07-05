@@ -318,7 +318,7 @@ def fetch_merchant(magazin: str, unique_code: str, categorie: str,
         # Feed fara old_price pe toate produsele (ex: answear, drmax) — arata
         # campurile reale ca sa vedem daca exista o sursa alternativa de pret vechi.
         price_like = {k: str(v)[:60] for k, v in sample_raw.items()
-                      if any(t in k.lower() for t in ('price', 'discount', 'sale', 'promo'))}
+                      if any(t in k.lower() for t in ('price', 'discount', 'sale', 'promo', 'custom_field'))}
         log(f"  {magazin}: DIAGNOSTIC campuri produs: {sorted(sample_raw.keys())}")
         log(f"  {magazin}: DIAGNOSTIC valori pret: {price_like}")
     return deals, valid_urls, total_raw > 0
