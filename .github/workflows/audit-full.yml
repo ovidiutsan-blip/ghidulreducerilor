@@ -59,8 +59,13 @@ jobs:
         run: |
           git config user.name "GhidulReducerilor Bot"
           git config user.email "bot@ghidulreducerilor.ro"
-          git add logs/audit_full_latest.json AUDIT_LOG.md
+          # logs/ e gitignored: raportul audit e singura excepție versionată (-f).
+          git add -f logs/audit_full_latest.json || true
+          [ -f AUDIT_LOG.md ] && git add AUDIT_LOG.md || true
           git diff --staged --quiet || git commit -m "🔍 Audit report $(date +%Y-%m-%d)"
 
       - name: Push results
-        run: git push
+        run: |
+          # Rebase: main poate primi alte commit-uri în cele ~17 min de audit.
+          git pull --rebase origin main
+          git push
