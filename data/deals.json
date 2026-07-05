@@ -3874,7 +3874,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.263475+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:49.695456+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-2681ea9c",
@@ -3909,7 +3914,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.263571+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:02:51.122372+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-8b122fd3",
@@ -3944,7 +3952,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.263693+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:53.811881+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-eac68247",
@@ -3979,7 +3992,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.263798+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:03:22.144961+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-c45ef1ae",
@@ -4014,7 +4030,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.263901+00:00",
     "pret_minim_30z": 98.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:24.929089+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-538b2c1f",
@@ -4049,7 +4070,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.263999+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:55.250133+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-ee0d5526",
@@ -4084,7 +4110,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.264096+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:03:56.740673+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-f16e2776",
@@ -4119,7 +4148,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.264194+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:04:27.965896+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-88198654",
@@ -4154,7 +4186,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.264293+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:31.129619+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-094e2f0f",
@@ -4189,7 +4226,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.264390+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:04:34.307267+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-d882db6c",
@@ -4224,7 +4264,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.264485+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:04:57.852434+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-bd4eb111",
@@ -4259,7 +4302,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.264582+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:04:59.639198+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-fee414fe",
@@ -4294,7 +4340,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.264696+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:05:07.417809+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-aa46f9a8",
@@ -4329,7 +4378,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.264799+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:05:29.906813+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-393c48d3",
@@ -4364,7 +4416,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.264900+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:32.257072+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-0ab619d3",
@@ -4399,7 +4456,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.264997+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:35.051690+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-320b227a",
@@ -4434,7 +4496,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.265096+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:59.792556+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-a2348855",
@@ -4469,7 +4536,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.265284+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:06:01.517153+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-d17d00fb",
@@ -4504,7 +4574,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.265390+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:06:04.247125+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-603239a5",
@@ -4539,7 +4612,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.265493+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:33.826376+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-ec23974d",
@@ -4574,7 +4652,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.265594+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:06:35.404231+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-fe5affd8",
@@ -4609,7 +4690,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.265713+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:06:39.354699+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-dc4b03e7",
@@ -4644,7 +4728,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.265815+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:07.974250+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-8f3ef208",
@@ -4679,7 +4768,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.265918+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:10.380832+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-997e283a",
@@ -4714,7 +4808,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.266020+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:07:11.960483+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-c7d7b782",
@@ -4749,7 +4846,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.266118+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:07:12.998578+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-fb823732",
@@ -4784,7 +4884,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.266218+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:07:38.669099+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-f8db92f2",
@@ -4819,7 +4922,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.266320+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:42.230436+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-100-clipsuri-solar-1-2-inch-toli-cli-17269864",
@@ -4855,7 +4963,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.266433+00:00",
     "pret_minim_30z": 60.98,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:49.695690+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-aparat-de-sudura-tip-invertor-cu-sarma-4-06490302",
@@ -4891,7 +5004,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.266533+00:00",
     "pret_minim_30z": 264.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:51.918753+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-trusa-plita-ppr-1000w-aparat-sudura-tevi-69002883",
@@ -4927,7 +5045,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.266638+00:00",
     "pret_minim_30z": 69.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:53.888313+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-mini-drujba-electrica-4ah-48v-300mm-2-ac-32946619",
@@ -4963,7 +5086,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.266765+00:00",
     "pret_minim_30z": 191.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:22.320712+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-masina-de-tuns-oi-cu-2-acumulatori-6ah-4-08553237",
@@ -4999,7 +5127,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.266870+00:00",
     "pret_minim_30z": 288.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:52.413276+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-lant-drujba-400mm-16-32-dinti-64-pinteni-41156847",
@@ -5035,7 +5168,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.266972+00:00",
     "pret_minim_30z": 13.48,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:55.429982+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-100-clipsuri-solar-1-inch-toli-clips-17269866",
@@ -5071,7 +5209,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.267121+00:00",
     "pret_minim_30z": 133.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:03:56.874379+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-mini-drujba-electrica-cu-2-acumulatori-4-43490662",
@@ -5107,7 +5248,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.267220+00:00",
     "pret_minim_30z": 145.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:28.683122+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-blender-mixer-cu-baterie-5-in-1-60w-fara-19498326",
@@ -5143,7 +5289,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.267320+00:00",
     "pret_minim_30z": 99.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:31.769145+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-aragaz-2-arzatoare-1-5kw-50x36-cm-1-5kw--95917382",
@@ -5179,7 +5330,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.267418+00:00",
     "pret_minim_30z": 132.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:56.725397+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "vegis-24fbf972",
@@ -5254,7 +5410,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.267615+00:00",
     "pret_minim_30z": 142.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:58.241314+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-foarfeca-gradina-electrica-cu-2-acumulat-38654934",
@@ -5290,7 +5451,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.267744+00:00",
     "pret_minim_30z": 189.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:04.957518+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "vegis-abc302d5",
@@ -7060,7 +7226,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.272527+00:00",
     "pret_minim_30z": 13.02,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:28.124673+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-infraworks-licenta-pentru-1-uti-624-6868",
@@ -7139,7 +7310,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.272752+00:00",
     "pret_minim_30z": 118.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:30.355118+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-cutit-pentru-masina-de-tuns-oi-13-di-09206225",
@@ -7175,7 +7351,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.272854+00:00",
     "pret_minim_30z": 32.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:32.973620+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-pistol-de-vopsit-800w-1400ml-4-duze-3200-09206223",
@@ -7211,7 +7392,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.273378+00:00",
     "pret_minim_30z": 108.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:05:36.413277+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-aragaz-3-arzatoare-1-9kw-63x36-cm-maro-a-95917381",
@@ -7247,7 +7431,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.273529+00:00",
     "pret_minim_30z": 159.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:00.450939+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-ochelari-de-sudura-cu-intunecare-automat-90617698",
@@ -7283,7 +7472,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.273638+00:00",
     "pret_minim_30z": 29.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:02.124073+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-x3-pila-pentru-lant-drujba-5-2-x-200-55033942",
@@ -7319,7 +7513,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.273776+00:00",
     "pret_minim_30z": 5.89,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:31.809581+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-x3-pila-pentru-lant-drujba-4-0-x-200-55033941",
@@ -7355,7 +7554,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.273884+00:00",
     "pret_minim_30z": 5.89,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:34.476687+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-x3-pila-pentru-lant-drujba-3-5-x-200-55033940",
@@ -7391,7 +7595,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.273995+00:00",
     "pret_minim_30z": 5.89,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:36.472043+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-x3-pila-pentru-lant-drujba-4-5-x-200-55033939",
@@ -7427,7 +7636,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.274098+00:00",
     "pret_minim_30z": 5.89,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:05.702195+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-x3-pila-pentru-lant-drujba-4-8-x-200-55033938",
@@ -7463,7 +7677,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.274198+00:00",
     "pret_minim_30z": 5.89,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:08.226617+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-masina-de-tocat-carne-electrica-3500w-3--17202283",
@@ -7499,7 +7718,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.274302+00:00",
     "pret_minim_30z": 199.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:10.382975+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-nivela-laser-cu-trepied-16-linii-25m-dis-20093273",
@@ -7535,7 +7759,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.274403+00:00",
     "pret_minim_30z": 198.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:12.026924+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-aparat-de-sudura-tip-invertor-cu-sarma-5-20093272",
@@ -7571,7 +7800,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.274507+00:00",
     "pret_minim_30z": 299.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:37.541858+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-trusa-chei-216-piese-tubulare-1-4-3--38135915",
@@ -7607,7 +7841,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.274607+00:00",
     "pret_minim_30z": 249.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:38.908798+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-pompa-apa-submersibila-pe-vibratie-tip-v-38654933",
@@ -7643,7 +7882,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.274727+00:00",
     "pret_minim_30z": 85.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:43.284908+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-trusa-sudura-plita-tevi-ppr-2000w-6-bacu-06368453",
@@ -7761,7 +8005,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.275047+00:00",
     "pret_minim_30z": 209.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:43.832385+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-super-pachet-aparat-de-sudura-tip-invert-54485647",
@@ -7797,7 +8046,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.275158+00:00",
     "pret_minim_30z": 349.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:08:08.953993+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-rindea-electrica-900w-16000rpm-adancime--48470422",
@@ -8161,7 +8415,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.276222+00:00",
     "pret_minim_30z": 15.82,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:49.695932+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-gel-de-dus-cremos-cu-parfum-de-zmeura-1l-BLU3342",
@@ -8197,7 +8456,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.276330+00:00",
     "pret_minim_30z": 20.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:51.944605+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-gel-de-dus-cremos-cu-parfum-de-lapte-si--BLU3366",
@@ -8233,7 +8497,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.276428+00:00",
     "pret_minim_30z": 20.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:54.468949+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-gel-de-dus-cremos-cu-parfum-de-iris-viol-BLU3380",
@@ -8269,7 +8538,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.276526+00:00",
     "pret_minim_30z": 20.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:23.092222+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-mosor-tambur-pentru-motocoasa-cu-autocut-67685057",
@@ -9561,7 +9835,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.279929+00:00",
     "pret_minim_30z": 908.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:49.696129+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--GA88ORDR",
@@ -9597,7 +9876,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.280026+00:00",
     "pret_minim_30z": 908.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:52.301778+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-ser-tratament-pentru-indesirea-si-stimul-HR7017",
@@ -10247,7 +10531,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.281750+00:00",
     "pret_minim_30z": 1073.55,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:02:54.884087+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "ps-techstar-adaptor-wireless-carplay-android-auto-te-4360",
@@ -11631,7 +11918,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.285358+00:00",
     "pret_minim_30z": 1528.1,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:23.513003+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-dubla-de-exterior-cu-izolat-3DGAORDR",
@@ -11667,7 +11959,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.285460+00:00",
     "pret_minim_30z": 1528.1,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:53.788104+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--IWENORDR",
@@ -11703,7 +12000,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.285566+00:00",
     "pret_minim_30z": 908.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:55.717167+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--IWENORST",
@@ -11739,7 +12041,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.285680+00:00",
     "pret_minim_30z": 908.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:26.787979+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--43GAORDR",
@@ -11775,7 +12082,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.285786+00:00",
     "pret_minim_30z": 908.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:29.753467+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--43GAORST",
@@ -11811,7 +12123,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.285920+00:00",
     "pret_minim_30z": 908.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:32.919597+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--ASTDORDR",
@@ -11847,7 +12164,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.286027+00:00",
     "pret_minim_30z": 908.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:57.616586+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--45GAORDR",
@@ -11883,7 +12205,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.286254+00:00",
     "pret_minim_30z": 908.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:58.620584+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-dubla-de-exterior-cu-izolat-DGRIORDR",
@@ -11919,7 +12246,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.286427+00:00",
     "pret_minim_30z": 1734.71,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:06.390578+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--45GAORST",
@@ -11955,7 +12287,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.286532+00:00",
     "pret_minim_30z": 908.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:29.154658+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-dubla-de-exterior-cu-izolat-DGRIORST",
@@ -11991,7 +12328,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.286633+00:00",
     "pret_minim_30z": 1734.71,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:31.117291+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--03GAORDR",
@@ -12027,7 +12369,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.286757+00:00",
     "pret_minim_30z": 784.3,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:05:33.912863+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--03GAORST",
@@ -12063,7 +12410,10 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.286862+00:00",
     "pret_minim_30z": 784.3,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-05T21:05:38.428790+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "ps-hotpick-resigilat-semineu-electric-compact-adler-R AD7754",
@@ -12303,7 +12653,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.287478+00:00",
     "pret_minim_30z": 1073.55,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:00.913754+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-ndm03-lu-MPNMTR30",
@@ -12339,7 +12694,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.287581+00:00",
     "pret_minim_30z": 1238.84,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:03.068174+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-ndm03-lu-MPNMTR10",
@@ -12375,7 +12735,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.287701+00:00",
     "pret_minim_30z": 1156.2,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:32.805273+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-ndm03-lu-MPACTR10",
@@ -12411,7 +12776,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.287810+00:00",
     "pret_minim_30z": 1073.55,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:35.265490+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-ndm01-lu-MPNMTR30",
@@ -12447,7 +12817,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.288015+00:00",
     "pret_minim_30z": 1238.84,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:06:37.166544+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-ndm01-lu-MPACTR30",
@@ -12483,7 +12858,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.288114+00:00",
     "pret_minim_30z": 1156.2,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:06.749170+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-ndm01-lu-MPACTR10",
@@ -12519,7 +12899,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.288213+00:00",
     "pret_minim_30z": 1073.55,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:07:09.162188+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-hotpick-resigilat-blender-vertical-3-in-1-camry--R CR4630",
@@ -12969,7 +13354,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.289520+00:00",
     "pret_minim_30z": 115.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:08:10.045333+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "vegis-f69a9a37",
@@ -14735,7 +15125,12 @@
     "is_fake_discount": false,
     "omnibus_validated": true,
     "image_fixed_at": "2026-07-05T07:41:05Z",
-    "image_fix_source": "agent:streamstore"
+    "image_fix_source": "agent:streamstore",
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:50.770494+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-civil-3d-licenta-pentru-1-utili-876-9118",
@@ -15188,7 +15583,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.295938+00:00",
     "pret_minim_30z": 26.3,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:53.370877+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-autocad-activare-in-cont-autode-008-2023",
@@ -15226,7 +15626,12 @@
     "is_fake_discount": false,
     "omnibus_validated": true,
     "image_fixed_at": "2026-07-05T07:41:05Z",
-    "image_fix_source": "agent:streamstore"
+    "image_fix_source": "agent:streamstore",
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:53.187677+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-sketchup-studio-1-dispozitiv-licenta-1-a-61453183",
@@ -18342,7 +18747,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.304890+00:00",
     "pret_minim_30z": 39.3,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:50.876966+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-motoburghiu-pe-benzina-8-5cp-motor-2-tim-01204428",
@@ -18459,7 +18869,12 @@
     "omnibus_checked_at": "2026-07-05T07:31:21.305216+00:00",
     "pret_minim_30z": 499.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:08:11.185640+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-sampon-hidratant-cu-aloe-vera-250ml-747718",
@@ -20542,7 +20957,11 @@
     "pret_minim_30z": 62.32,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:02:53.632507+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-picolinat-de-zinc-150-tablete-ostrovit-46724540",
@@ -20579,7 +20998,11 @@
     "pret_minim_30z": 21.12,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:22.142776+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-vitamin-d3-k2-90-tablete-ostrovit-46724539",
@@ -20616,7 +21039,11 @@
     "pret_minim_30z": 22.72,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:24.757113+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-astaxanthin-forte-90-capsule-ostrovit-46724538",
@@ -20653,7 +21080,11 @@
     "pret_minim_30z": 81.92,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:55.083662+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-calmiderm-gel-crema-bio-40-g-tilman-46711373",
@@ -20690,7 +21121,11 @@
     "pret_minim_30z": 39.28,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:03:56.552651+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-omega-3-90-capsule-ostrovit-16532465",
@@ -20727,7 +21162,11 @@
     "pret_minim_30z": 25.12,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:27.798717+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-tratament-pre-spalare-pentru-curatarea-s-16532455",
@@ -20764,7 +21203,11 @@
     "pret_minim_30z": 39.12,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:30.965481+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-ser-pentru-cresterea-densitatii-parului--16532453",
@@ -20801,7 +21244,11 @@
     "pret_minim_30z": 39.12,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:34.141060+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-plasturi-hidrogel-pentru-ochi-biotics-60-16532452",
@@ -20838,7 +21285,11 @@
     "pret_minim_30z": 50.72,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_timeout_count": 0
+    "link_timeout_count": 0,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-05T21:04:57.685524+00:00",
+    "link_dead_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-burghiu-motoburghiu-200x800-mm-compatibi-17549165",
