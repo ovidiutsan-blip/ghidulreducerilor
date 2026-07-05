@@ -27,16 +27,16 @@
 
 ## Automated Audit Results
 
-**Last run:** 2026-04-23T19:23:54.825045+00:00
-**Score:** 90/100
-**Checks:** 5 pass, 0 fail, 2 warn, 1 skip
-**Total issues:** 130
+**Last run:** 2026-07-05T07:41:00.685733+00:00
+**Score:** 95/100
+**Checks:** 5 pass, 0 fail, 1 warn, 2 skip
+**Total issues:** 4
 
 | Check | Status | Issues |
 |-------|--------|--------|
 | homepage | PASS | 0 (—) |
-| affiliate_links | WARN | 126 (Direct Profitshare link (blocked on mobile): watch24-6f8ca26) |
-| store_coverage | WARN | 3 (Active store 'FashionDays' has 0 deals) |
+| affiliate_links | SKIP | 0 (—) |
+| store_coverage | WARN | 3 (Active store 'eMAG' has 0 deals) |
 | images | PASS | 0 (—) |
 | image_hosts | PASS | 0 (—) |
 | data_quality | PASS | 0 (—) |
