@@ -22,7 +22,9 @@ jobs:
   audit:
     name: Full Site Audit
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Deadline-ul intern al verificării de linkuri e 960s (link_checker.GLOBAL_DEADLINE);
+    # 25 min lasă loc pentru setup + restul check-urilor, ca la link-checker.yml.
+    timeout-minutes: 25
 
     steps:
       - name: Checkout repo

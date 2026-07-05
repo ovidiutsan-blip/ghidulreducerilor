@@ -35,7 +35,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 sys.path.insert(0, str(ROOT / 'agents'))
 
 from utils import normalize_deal, is_profitshare_direct  # noqa: E402
-from link_checker import create_session, load_deals, check_link  # noqa: E402
+from link_checker import create_session, load_deals, run_checks  # noqa: E402
 
 try:
     from monitor_agent import check_site_pages  # noqa: E402
@@ -137,8 +137,14 @@ def audit_homepage(session) -> dict:
 # CHECK 2: Affiliate Link Audit
 # ═══════════════════════════════════════════════════
 
-def audit_affiliate_links(deals: list, session) -> dict:
-    """Check all affiliate links for health and tracking."""
+def audit_affiliate_links(deals: list) -> dict:
+    """Check all affiliate links for health and tracking.
+
+    Delegă verificarea efectivă către link_checker.run_checks(): concurent,
+    interleave pe magazine (anti-429) și deadline global — un loop secvențial
+    fără deadline a agățat auditul până la timeout-ul CI (run 28729943112).
+    Nu salvează deals.json: auditul rămâne read-only.
+    """
     logger.info("=== CHECK 2: Affiliate Link Audit ===")
     result = {
         'check': 'affiliate_links',
@@ -149,8 +155,9 @@ def audit_affiliate_links(deals: list, session) -> dict:
             'active_deals': 0,
             'links_ok': 0,
             'links_broken': 0,
-            'links_timeout': 0,
+            'links_rate_limited': 0,
             'links_no_url': 0,
+            'links_stragglers': 0,
             'direct_profitshare': 0,
             'broken_list': []
         }
@@ -170,24 +177,31 @@ def audit_affiliate_links(deals: list, session) -> dict:
                 f"Direct Profitshare link (blocked on mobile): {deal_id} -> {link[:60]}"
             )
 
-        # Check link health
-        check = check_link(session, deal)
-
-        if check['status'] == 'ok':
-            result['details']['links_ok'] += 1
-        elif check['status'] == 'no_url':
+        if not link or link == '#':
             result['details']['links_no_url'] += 1
             result['issues'].append(f"No affiliate URL: {deal_id}")
-        elif check['status'] == 'timeout':
-            result['details']['links_timeout'] += 1
-        else:
-            result['details']['links_broken'] += 1
-            result['details']['broken_list'].append({
-                'id': deal_id,
-                'url': link[:80],
-                'status': check['status'],
-                'store': deal.get('store') or deal.get('magazin', '')
-            })
+
+    stats, _ = run_checks(deals, mode='full', remove_dead=False)
+
+    # .get(): early-return-ul din run_checks (zero deal-uri de verificat)
+    # nu include cheile rate_limited/stragglers.
+    result['details']['links_ok'] = stats.get('ok', 0)
+    result['details']['links_broken'] = stats.get('dead', 0)
+    result['details']['links_rate_limited'] = stats.get('rate_limited', 0)
+    result['details']['links_stragglers'] = stats.get('stragglers', 0)
+    result['details']['broken_list'] = [
+        {
+            'id': d['id'],
+            'url': (d.get('url') or '')[:80],
+            'status': d.get('dead_reason', 'dead'),
+            'store': d.get('magazin', '')
+        }
+        for d in stats.get('dead_deals', [])
+    ]
+    for d in stats.get('dead_deals', []):
+        result['issues'].append(
+            f"Dead affiliate link: {d['id']} ({d.get('dead_reason', '?')})"
+        )
 
     broken = result['details']['links_broken']
     no_url = result['details']['links_no_url']
@@ -195,14 +209,15 @@ def audit_affiliate_links(deals: list, session) -> dict:
 
     if broken > 0 or no_url > 0:
         result['status'] = 'fail'
-    elif direct_ps > 0:
+    elif direct_ps > 0 or stats.get('stragglers', 0) > 0:
         result['status'] = 'warn'
     else:
         result['status'] = 'pass'
 
     logger.info(
         f"  Links: {result['details']['links_ok']} OK, "
-        f"{broken} broken, {result['details']['links_timeout']} timeout, "
+        f"{broken} broken, {result['details']['links_rate_limited']} rate-limited, "
+        f"{result['details']['links_stragglers']} abandonate la deadline, "
         f"{direct_ps} direct Profitshare"
     )
     return result
@@ -604,7 +619,7 @@ def run_audit(skip_links: bool = False) -> dict:
 
     # 2. Affiliate links (optional skip for speed)
     if not skip_links:
-        checks.append(audit_affiliate_links(deals, session))
+        checks.append(audit_affiliate_links(deals))
     else:
         logger.info("=== CHECK 2: Affiliate Links — SKIPPED ===")
         checks.append({'check': 'affiliate_links', 'status': 'skip', 'issues': [], 'details': {}})
