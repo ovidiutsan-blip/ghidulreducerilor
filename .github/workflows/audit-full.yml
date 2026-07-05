@@ -15,6 +15,12 @@ on:
           - 'false'
           - 'true'
 
+# Toate workflow-urile care comit date impart grupul data-updates:
+# rulate in serie, nu se mai calca pe deals.json (conflict la rebase/push).
+concurrency:
+  group: data-updates
+  cancel-in-progress: false
+
 permissions:
   contents: write
 

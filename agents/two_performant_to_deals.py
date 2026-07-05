@@ -253,12 +253,13 @@ def fetch_merchant(magazin: str, unique_code: str, categorie: str,
     valid_urls: set[str] = set()
     total_raw = 0
     reject_stats: dict[str, int] = {}
+    sample_raw: dict | None = None  # primul produs brut — pentru diagnostic campuri
     log(f"  Fetching {magazin} (unique_code={unique_code})...")
 
     feeds = _get_feeds_for_program(unique_code)
     if not feeds:
         log(f"  {magazin}: niciun feed gasit pentru unique_code={unique_code}")
-        return deals
+        return deals, valid_urls, False
 
     for feed in feeds:
         feed_id = feed["id"]
@@ -290,6 +291,8 @@ def fetch_merchant(magazin: str, unique_code: str, categorie: str,
 
             hits = 0
             total_raw += len(products)
+            if sample_raw is None:
+                sample_raw = products[0]
             for p in products:
                 deal = product_to_deal(p, magazin, unique_code, categorie, allowed_cats,
                                        reject_stats=reject_stats)
@@ -311,6 +314,13 @@ def fetch_merchant(magazin: str, unique_code: str, categorie: str,
         # Diagnostic: de ce nu trec produsele filtrul (ex: feed fara old_price)
         detail = ", ".join(f"{k}={v}" for k, v in sorted(reject_stats.items()))
         log(f"  {magazin}: respinse din {total_raw} brute — {detail}")
+    if not deals and sample_raw is not None and reject_stats.get('fara_old_price'):
+        # Feed fara old_price pe toate produsele (ex: answear, drmax) — arata
+        # campurile reale ca sa vedem daca exista o sursa alternativa de pret vechi.
+        price_like = {k: str(v)[:60] for k, v in sample_raw.items()
+                      if any(t in k.lower() for t in ('price', 'discount', 'sale', 'promo'))}
+        log(f"  {magazin}: DIAGNOSTIC campuri produs: {sorted(sample_raw.keys())}")
+        log(f"  {magazin}: DIAGNOSTIC valori pret: {price_like}")
     return deals, valid_urls, total_raw > 0
 
 
