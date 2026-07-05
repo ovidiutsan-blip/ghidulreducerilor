@@ -1,0 +1,158 @@
+{
+  "timestamp": "2026-07-05T08:03:25.662892+00:00",
+  "site": "https://ghidulreducerilor.ro",
+  "duration_seconds": 0.9,
+  "score": 95,
+  "summary": {
+    "total_checks": 8,
+    "pass": 5,
+    "fail": 0,
+    "warn": 1,
+    "skip": 2,
+    "total_issues": 4
+  },
+  "checks": [
+    {
+      "check": "homepage",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "status_code": 200,
+        "response_time_ms": 830,
+        "content_length": 561361
+      }
+    },
+    {
+      "check": "affiliate_links",
+      "status": "skip",
+      "issues": [],
+      "details": {}
+    },
+    {
+      "check": "store_coverage",
+      "status": "warn",
+      "issues": [
+        "Active store 'eMAG' has 0 deals",
+        "Active store 'FashionDays' has 0 deals",
+        "Active store 'Elefant.ro' has 0 deals"
+      ],
+      "details": {
+        "configured_stores": 8,
+        "stores_with_deals": 9,
+        "stores_no_deals": [
+          "emag",
+          "fashiondays",
+          "elefant"
+        ],
+        "pending_stores": [
+          {
+            "slug": "notino",
+            "name": "Notino",
+            "network": "2performant",
+            "applied": "unknown"
+          },
+          {
+            "slug": "answear",
+            "name": "Answear",
+            "network": "2performant",
+            "applied": "unknown"
+          },
+          {
+            "slug": "decathlon",
+            "name": "Decathlon",
+            "network": "2performant",
+            "applied": "unknown"
+          },
+          {
+            "slug": "drmax",
+            "name": "Dr.Max",
+            "network": "2performant",
+            "applied": "unknown"
+          }
+        ],
+        "store_deal_counts": {
+          "evomag": 128,
+          "scule365": 172,
+          "vegis": 126,
+          "streamstore": 45,
+          "techstar": 4,
+          "novodoors": 26,
+          "hotpick": 10,
+          "springfarma": 86,
+          "mathaus": 13
+        }
+      }
+    },
+    {
+      "check": "images",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "total_deals": 610,
+        "placeholder_count": 0,
+        "missing_count": 0,
+        "real_count": 610,
+        "placeholder_domains": {}
+      }
+    },
+    {
+      "check": "image_hosts",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "hosts": {
+          "static2.evomag.ro": 128,
+          "c.cdnmp.net": 172,
+          "cdn.vegis.ro": 100,
+          "gomagcdn.ro": 45,
+          "profitsmart.ro": 78,
+          "www.springfarma.com": 86
+        },
+        "blocked": []
+      }
+    },
+    {
+      "check": "data_quality",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "total_deals": 610,
+        "total_codes": 0,
+        "missing_price": 0,
+        "zero_discount": 0,
+        "duplicate_ids": 0,
+        "expired_but_active": 0,
+        "missing_affiliate_url": 0,
+        "negative_discount": 0
+      }
+    },
+    {
+      "check": "security_headers",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "headers_present": {
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "DENY",
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+          "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.g",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-xss-protection": "1; mode=block"
+        },
+        "headers_missing": []
+      }
+    },
+    {
+      "check": "pages",
+      "status": "skip",
+      "issues": [
+        "monitor_agent not available, skipping page checks"
+      ],
+      "details": {
+        "pages_ok": 0,
+        "pages_down": 0,
+        "results": []
+      }
+    }
+  ]
+}
