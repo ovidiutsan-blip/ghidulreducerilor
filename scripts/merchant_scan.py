@@ -54,18 +54,16 @@ def ps_call(method: str, endpoint: str, query: str = ""):
 
 
 # ─── 2Performant Auth ─────────────────────────────────────────────────────────
-P2_API_BASE    = "https://api.2performant.com"
-P2_TOKEN       = (os.getenv("TWO_PERFORMANT_ACCESS_TOKEN") or "").lstrip("\ufeff").strip()
-P2_CLIENT_ID   = (os.getenv("TWO_PERFORMANT_CLIENT_ID") or "").lstrip("\ufeff").strip()
-P2_UID         = (os.getenv("TWO_PERFORMANT_UID") or "ovidiutsan@yahoo.com").lstrip("\ufeff").strip()
-
-
-def p2_headers() -> dict:
-    return {
-        "access-token": P2_TOKEN, "token-type": "Bearer",
-        "client": P2_CLIENT_ID,  "uid": P2_UID,
-        "Accept": "application/json",
-    }
+# Sesiunea partajată (agents/two_performant_session.py): auto-login cu
+# email+parolă (stabile), throttle + backoff 429, re-login automat la 401.
+# Token-ul static TWO_PERFORMANT_ACCESS_TOKEN expiră (~14 zile) — nu-l mai folosim.
+sys.path.insert(0, str(BASE / "agents"))
+from two_performant_session import (  # noqa: E402
+    api_get as p2_api_get,
+    TwoPerformantRateLimited,
+    EMAIL as P2_EMAIL,
+    PASSWORD as P2_PASSWORD,
+)
 
 
 def _safe_json(r):
@@ -162,8 +160,8 @@ def _ps_has_discount(p: dict) -> bool:
 # ─── 2Performant scan ─────────────────────────────────────────────────────────
 def scan_2p(probe: bool = True) -> list[dict]:
     """Returneaza lista de programe 2P noi (nu sunt in 2p_merchants.json)."""
-    if not P2_TOKEN or not P2_CLIENT_ID:
-        log("2P scan skip: credentiale lipsa")
+    if not P2_EMAIL or not P2_PASSWORD:
+        log("2P scan skip: TWO_PERFORMANT_EMAIL / TWO_PERFORMANT_PASSWORD lipsa")
         return []
 
     # Incarca unique_code-urile deja configurate
@@ -177,21 +175,20 @@ def scan_2p(probe: bool = True) -> list[dict]:
     # Fetch toate programele aprobate
     programs = []
     for page in range(1, 10):
-        r = requests.get(
-            f"{P2_API_BASE}/affiliate/programs",
-            headers=p2_headers(), params={"per_page": 100, "page": page}, timeout=30
-        )
-        if not r.ok:
-            log(f"  2P programs page {page}: {r.status_code} — stop")
+        try:
+            data = p2_api_get("affiliate/programs", params={"per_page": 100, "page": page})
+        except TwoPerformantRateLimited as e:
+            log(f"  2P programs page {page}: rate-limited ({e}) — stop")
             break
-        data = _safe_json(r)
+        except Exception as e:
+            log(f"  2P programs page {page}: {e} — stop")
+            break
         batch = data.get("programs") or (data if isinstance(data, list) else [])
         if not batch:
             break
         programs.extend(batch)
         if len(batch) < 100:
             break
-        time.sleep(0.3)
 
     log(f"2P: {len(programs)} programe totale")
 
@@ -199,15 +196,12 @@ def scan_2p(probe: bool = True) -> list[dict]:
     feeds_by_code: dict[str, list] = defaultdict(list)
     if probe:
         try:
-            r = requests.get(f"{P2_API_BASE}/affiliate/product_feeds",
-                             headers=p2_headers(), timeout=30)
-            if r.ok:
-                feeds = _safe_json(r).get("product_feeds") or []
-                for feed in feeds:
-                    prog_uc = (feed.get("program") or {}).get("unique_code") or ""
-                    if prog_uc:
-                        feeds_by_code[prog_uc].append(feed)
-                log(f"2P: {len(feeds)} feed-uri disponibile pentru {len(feeds_by_code)} programe")
+            feeds = p2_api_get("affiliate/product_feeds").get("product_feeds") or []
+            for feed in feeds:
+                prog_uc = (feed.get("program") or {}).get("unique_code") or ""
+                if prog_uc:
+                    feeds_by_code[prog_uc].append(feed)
+            log(f"2P: {len(feeds)} feed-uri disponibile pentru {len(feeds_by_code)} programe")
         except Exception as e:
             log(f"2P: eroare la fetch feeds: {e}")
 
@@ -242,21 +236,21 @@ def scan_2p(probe: bool = True) -> list[dict]:
             first_feed = feeds_by_code[uc][0]
             fid = first_feed["id"]
             try:
-                r = requests.get(
-                    f"{P2_API_BASE}/affiliate/product_feeds/{fid}/products",
-                    headers=p2_headers(), params={"page": 1, "per_page": 50}, timeout=30
+                data = p2_api_get(
+                    f"affiliate/product_feeds/{fid}/products",
+                    params={"page": 1, "per_page": 50},
                 )
-                if r.ok:
-                    data = _safe_json(r)
-                    prods = (data.get("products") or data.get("items") or
-                             data.get("data") or (data if isinstance(data, list) else []))
-                    candidate["total_products_probed"] = len(prods)
-                    discounted = sum(1 for p in prods if _2p_has_discount(p))
-                    candidate["discount_products"] = discounted
-                    if prods:
-                        candidate["hit_rate_pct"] = round(discounted / len(prods) * 100)
-                    log(f"  2P probe {name} ({uc}): {discounted}/{len(prods)} cu reducere")
-                time.sleep(0.3)
+                prods = (data.get("products") or data.get("items") or
+                         data.get("data") or (data if isinstance(data, list) else []))
+                candidate["total_products_probed"] = len(prods)
+                discounted = sum(1 for p in prods if _2p_has_discount(p))
+                candidate["discount_products"] = discounted
+                if prods:
+                    candidate["hit_rate_pct"] = round(discounted / len(prods) * 100)
+                log(f"  2P probe {name} ({uc}): {discounted}/{len(prods)} cu reducere")
+            except TwoPerformantRateLimited as e:
+                log(f"  2P probe {name}: rate-limited ({e}) — opresc probe-urile")
+                probe = False
             except Exception as e:
                 log(f"  2P probe {name}: eroare {e}")
 

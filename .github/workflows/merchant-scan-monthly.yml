@@ -31,9 +31,9 @@ jobs:
         env:
           PROFITSHARE_API_USER: ${{ secrets.PROFITSHARE_API_USER }}
           PROFITSHARE_API_KEY:  ${{ secrets.PROFITSHARE_API_KEY }}
-          TWO_PERFORMANT_ACCESS_TOKEN: ${{ secrets.TWO_PERFORMANT_ACCESS_TOKEN }}
-          TWO_PERFORMANT_CLIENT_ID:    ${{ secrets.TWO_PERFORMANT_CLIENT_ID }}
-          TWO_PERFORMANT_UID:          ${{ secrets.TWO_PERFORMANT_UID }}
+          # Auto-login cu email+parolă (stabile); token-ul static expiră ~14 zile.
+          TWO_PERFORMANT_EMAIL:    ${{ secrets.TWO_PERFORMANT_EMAIL }}
+          TWO_PERFORMANT_PASSWORD: ${{ secrets.TWO_PERFORMANT_PASSWORD }}
         run: |
           MODE="${{ github.event.inputs.mode || 'full' }}"
           if [ "$MODE" = "ps-only" ]; then

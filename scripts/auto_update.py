@@ -69,25 +69,35 @@ def run_auto_update(audit_only=False, dry_run=False):
     steps_results = {}
 
     # ═══ Step 0: 2Performant Token Pre-Flight Check ═══
-    try:
-        import subprocess, sys as _sys
-        rtoken = subprocess.run(
-            [_sys.executable, str(ROOT / 'scripts' / 'check_token_expiry.py'), '--quiet'],
-            capture_output=True, text=True, timeout=15
-        )
-        if rtoken.returncode != 0:
-            logger.warning("🔴 2P TOKEN CHECK FAILED — credentials may be expired!")
-            logger.warning(rtoken.stdout.strip() or rtoken.stderr.strip())
-            steps_results['token_check'] = {'success': False, 'note': '2P token expired/invalid'}
-        else:
-            steps_results['token_check'] = {'success': True}
-    except Exception as e:
-        logger.info(f"Token pre-flight skipped: {e}")
-        steps_results['token_check'] = {'success': True, 'skipped': True}
+    # Relevant doar când depindem de token-ul static; cu email+parolă agentul
+    # face auto-login (nu expiră), deci check-ul ar da alarme false.
+    if os.getenv('TWO_PERFORMANT_EMAIL') and os.getenv('TWO_PERFORMANT_PASSWORD'):
+        logger.info("2P token check sarit: auto-login cu email+parola configurat")
+        steps_results['token_check'] = {'success': True, 'skipped': True, 'reason': 'auto-login email/parola'}
+    else:
+        try:
+            import subprocess, sys as _sys
+            rtoken = subprocess.run(
+                [_sys.executable, str(ROOT / 'scripts' / 'check_token_expiry.py'), '--quiet'],
+                capture_output=True, text=True, timeout=15
+            )
+            if rtoken.returncode != 0:
+                logger.warning("🔴 2P TOKEN CHECK FAILED — credentials may be expired!")
+                logger.warning(rtoken.stdout.strip() or rtoken.stderr.strip())
+                steps_results['token_check'] = {'success': False, 'note': '2P token expired/invalid'}
+            else:
+                steps_results['token_check'] = {'success': True}
+        except Exception as e:
+            logger.info(f"Token pre-flight skipped: {e}")
+            steps_results['token_check'] = {'success': True, 'skipped': True}
 
     # ═══ Step 1: Full Audit ═══
+    # skip_links=True: verificarea de linkuri rulează deja zilnic (link-checker.yml)
+    # și săptămânal (audit-full.yml, cu o oră înainte); repetarea ei aici ar mânca
+    # ~16 min din timeout-ul de 30 min al auto-update-ului (run 28731621587 a fost
+    # anulat exact pe acest drum).
     from audit_full import run_audit
-    success, audit_report = run_step("Full Audit", run_audit, skip_links=False)
+    success, audit_report = run_step("Full Audit", run_audit, skip_links=True)
     steps_results['audit'] = {
         'success': success,
         'score': audit_report.get('score', 0) if success else 0,
@@ -154,7 +164,11 @@ def run_auto_update(audit_only=False, dry_run=False):
         steps_results['profitshare_import'] = {'success': True, 'skipped': True, 'reason': reason}
 
     # ═══ Step 3b: 2Performant Import (add new + expire stale) ═══
-    if not dry_run and os.getenv('TWO_PERFORMANT_ACCESS_TOKEN') and os.getenv('TWO_PERFORMANT_CLIENT_ID'):
+    _has_2p_auth = (
+        (os.getenv('TWO_PERFORMANT_EMAIL') and os.getenv('TWO_PERFORMANT_PASSWORD'))
+        or (os.getenv('TWO_PERFORMANT_ACCESS_TOKEN') and os.getenv('TWO_PERFORMANT_CLIENT_ID'))
+    )
+    if not dry_run and _has_2p_auth:
         try:
             import subprocess, sys as _sys
             script = str(ROOT / 'agents' / 'two_performant_to_deals.py')
@@ -172,7 +186,7 @@ def run_auto_update(audit_only=False, dry_run=False):
             logger.warning(f"2Performant import skipped: {e}")
             steps_results['two_performant_import'] = {'success': False, 'skipped': True, 'reason': str(e)}
     else:
-        reason = 'dry_run' if dry_run else 'TWO_PERFORMANT_ACCESS_TOKEN/CLIENT_ID not set'
+        reason = 'dry_run' if dry_run else 'auth 2P lipsa (EMAIL/PASSWORD sau ACCESS_TOKEN/CLIENT_ID)'
         logger.info(f"2Performant import skipped: {reason}")
         steps_results['two_performant_import'] = {'success': True, 'skipped': True, 'reason': reason}
 
