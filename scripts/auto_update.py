@@ -178,7 +178,8 @@ def run_auto_update(audit_only=False, dry_run=False):
                 capture_output=True, text=True, encoding='utf-8', errors='replace',
                 timeout=300, env=env2p
             )
-            logger.info(r2p.stdout[-3000:] if r2p.stdout else '(no output)')
+            # 15000: la 3000 se pierdea începutul (diagnosticul answear/drmax).
+            logger.info(r2p.stdout[-15000:] if r2p.stdout else '(no output)')
             if r2p.returncode != 0:
                 logger.warning(f"2Performant import exit {r2p.returncode}: {r2p.stderr[-500:]}")
             steps_results['two_performant_import'] = {'success': r2p.returncode == 0}
