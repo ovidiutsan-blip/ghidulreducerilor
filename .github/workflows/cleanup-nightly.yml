@@ -44,4 +44,7 @@ jobs:
           git diff --staged --quiet || git commit -m "🧹 Cleanup nocturn $(date +%Y-%m-%d)"
 
       - name: 📤 Push
-        run: git push
+        run: |
+          # Rebase: main poate avansa în timpul job-ului (câteva min).
+          git pull --rebase origin main
+          git push

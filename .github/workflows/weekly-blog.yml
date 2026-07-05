@@ -46,7 +46,10 @@ jobs:
 
       - name: 📤 Push la GitHub (trigger Vercel redeploy)
         if: steps.generate.outcome == 'success'
-        run: git push
+        run: |
+          # Rebase: main poate avansa în timpul job-ului (câteva min).
+          git pull --rebase origin main
+          git push
 
       - name: 🚨 Creare issue la eșec
         if: steps.generate.outcome == 'failure'

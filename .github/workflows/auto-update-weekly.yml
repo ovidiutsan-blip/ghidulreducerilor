@@ -85,4 +85,7 @@ jobs:
           git diff --staged --quiet || git commit -m "🔄 Weekly auto-update $(date +%Y-%m-%d)"
 
       - name: Push changes (triggers Vercel redeploy)
-        run: git push
+        run: |
+          # Rebase: main poate avansa în timpul job-ului (~15 min).
+          git pull --rebase origin main
+          git push

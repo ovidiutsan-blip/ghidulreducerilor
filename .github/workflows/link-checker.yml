@@ -66,4 +66,7 @@ jobs:
           git diff --staged --quiet || git commit -m "🔗 Link check $(date +%Y-%m-%d) — dead links removed"
 
       - name: 📤 Push
-        run: git push
+        run: |
+          # Rebase: main poate avansa în timpul job-ului (~16 min).
+          git pull --rebase origin main
+          git push

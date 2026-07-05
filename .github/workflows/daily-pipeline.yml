@@ -197,7 +197,10 @@ jobs:
           git diff --staged --quiet || git commit -m "🤖 Auto-update deals $(date +%Y-%m-%d)"
 
       - name: 📤 Push la GitHub (trigger Vercel redeploy)
-        run: git push
+        run: |
+          # Rebase: main poate avansa în timpul job-ului (~10 min).
+          git pull --rebase origin main
+          git push
 
       - name: 📡 IndexNow ping (Bing/Yandex reindexează paginile actualizate)
         continue-on-error: true
