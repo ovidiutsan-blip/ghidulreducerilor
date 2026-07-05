@@ -32,6 +32,12 @@ from typing import Optional
 import requests
 import pyperclip
 
+# Consola Windows e cp1252 by default — print-urile cu diacritice ar crăpa
+# cu UnicodeEncodeError (ex: sub Task Scheduler sau cmd simplu).
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+
 BASE         = Path(__file__).parent.parent.parent
 DEALS_PATH   = BASE / "data" / "deals.json"
 LOG_DIR      = BASE / "logs" / "pinterest"
@@ -642,11 +648,12 @@ def login_auto():
             except Exception:
                 pass
 
-        # 3. Așteptare confirmare login (max 2 minute)
+        # 3. Așteptare confirmare login (max 10 minute — 2 min erau prea puține
+        #    dacă fereastra se deschide în spatele altora și n-o vezi imediat)
         # Verifică TOATE paginile/tab-urile din context (Google OAuth deschide tab nou)
         print("[pinterest] Verific sesiunea pe toate tab-urile...")
         logged_in = False
-        for i in range(60):
+        for i in range(300):
             time.sleep(2)
             try:
                 all_pages = ctx.pages
@@ -654,15 +661,28 @@ def login_auto():
                     url = pg.url
                     if not url or url in ("about:blank", "chrome://newtab/"):
                         continue
-                    if "login" in url or "/login" in url:
-                        continue
                     if "google.com" in url or "accounts.google" in url:
                         continue
-                    # E o pagină Pinterest, nu login
-                    if "pinterest.com" in url:
-                        logged_in = True
-                        print(f"\n[pinterest] ✅ LOGIN REUȘIT! URL: {url}")
-                        break
+                    if "pinterest.com" not in url:
+                        continue
+                    # SPA-ul Pinterest poate rămâne pe /login/ DUPĂ autentificare,
+                    # deci URL-ul singur nu e suficient — verificăm și DOM-ul
+                    # (header-ul de profil / feed-ul apar doar logat).
+                    if "login" in url:
+                        try:
+                            has_feed = pg.evaluate(
+                                "!!document.querySelector("
+                                "'[data-test-id=\"header-profile\"],"
+                                "[data-test-id=\"homefeed-feed\"],"
+                                "[data-test-id=\"search-box-input\"]')"
+                            )
+                        except Exception:
+                            has_feed = False
+                        if not has_feed:
+                            continue
+                    logged_in = True
+                    print(f"\n[pinterest] ✅ LOGIN REUȘIT! URL: {url}")
+                    break
                 if logged_in:
                     break
                 if i % 10 == 0 and i > 0:
