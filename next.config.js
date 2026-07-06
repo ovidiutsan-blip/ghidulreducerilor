@@ -2,9 +2,7 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      // eMAG CDN
-      { protocol: 'https', hostname: 's13emagst.akamaized.net' },
-      { protocol: 'https', hostname: 's1emagst.akamaized.net' },
+      // eMAG CDN (**.akamaized.net acoperă s1emagst/s13emagst)
       { protocol: 'https', hostname: '**.emag.ro' },
       { protocol: 'https', hostname: '**.akamaized.net' },
       // Profitshare campaign images
@@ -30,19 +28,16 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.decathloncoach.com' },
       // Dr.Max (when approved)
       { protocol: 'https', hostname: '**.drmax.ro' },
-      // Watch24
+      // Watch24 (**.watch24.ro acoperă cdn.watch24.ro)
       { protocol: 'https', hostname: '**.watch24.ro' },
-      { protocol: 'https', hostname: 'cdn.watch24.ro' },
       // ForIT
       { protocol: 'https', hostname: '**.forit.ro' },
       // Fornello
       { protocol: 'https', hostname: '**.fornello.ro' },
       { protocol: 'https', hostname: 'cdn.contentspeed.ro' },
-      // Vegis (PS feed — cdn.vegis.ro + lazy-loader)
-      { protocol: 'https', hostname: 'cdn.vegis.ro' },
+      // Vegis (PS feed — **.vegis.ro acoperă cdn.vegis.ro)
       { protocol: 'https', hostname: '**.vegis.ro' },
-      // Hiris (CDN cdnmp.net — Gomag/Magento platform)
-      { protocol: 'https', hostname: 'c.cdnmp.net' },
+      // Hiris (CDN cdnmp.net — **.cdnmp.net acoperă c.cdnmp.net)
       { protocol: 'https', hostname: '**.cdnmp.net' },
       { protocol: 'https', hostname: '**.hiris.ro' },
       // Alecoair (direct)
@@ -68,9 +63,20 @@ const nextConfig = {
       { protocol: 'https', hostname: 'novodoors.ro' },
       { protocol: 'https', hostname: '**.techstar.ro' },
       { protocol: 'https', hostname: 'techstar.ro' },
-      // SpringFarma (2Performant feed — Magento CDN)
-      { protocol: 'https', hostname: 'www.springfarma.com' },
+      // SpringFarma (2Performant feed — **.springfarma.com acoperă www)
       { protocol: 'https', hostname: '**.springfarma.com' },
+      // Somnart (2Performant feed — WordPress/WooCommerce)
+      { protocol: 'https', hostname: 'somnart.ro' },
+      { protocol: 'https', hostname: '**.somnart.ro' },
+      // Casa New Concept (2Performant feed — OpenCart image/catalog)
+      { protocol: 'https', hostname: 'casanewconcept.ro' },
+      { protocol: 'https', hostname: '**.casanewconcept.ro' },
+      // Mobila Laguna (2Performant feed)
+      { protocol: 'https', hostname: 'mobilalaguna.ro' },
+      { protocol: 'https', hostname: '**.mobilalaguna.ro' },
+      // Mobiro (2Performant feed — WordPress)
+      { protocol: 'https', hostname: 'mobiro.ro' },
+      { protocol: 'https', hostname: '**.mobiro.ro' },
       // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.shopify.com' },
