@@ -38,5 +38,45 @@
     "cat_whitelist": null,
     "activ": true,
     "nota": "Aprobat 2026-04-23; 2Performant aff=accepted"
+  },
+  {
+    "slug": "somnart",
+    "unique_code": "1bf67dbe4",
+    "categorie": "casa-gradina",
+    "max_pages": 20,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Aprobat auto 2026-07-06; mobilier/saltele; comision 10%; cross-sell Pat+Saltea"
+  },
+  {
+    "slug": "mobilalaguna",
+    "unique_code": "bb24d9ce5",
+    "categorie": "casa-gradina",
+    "max_pages": 20,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Aprobat auto 2026-07-06; mobilier Maramures; comision 3%; cos mediu ~2000 lei; EPC 21 EUR"
+  },
+  {
+    "slug": "casanewconcept",
+    "unique_code": "90d2775e0",
+    "categorie": "casa-gradina",
+    "max_pages": 20,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Aprobat auto 2026-07-06; decor & interior design; comision 8%"
+  },
+  {
+    "slug": "mobiro",
+    "unique_code": "42ec8bef4",
+    "categorie": "casa-gradina",
+    "max_pages": 20,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Aprobat auto 2026-07-06; mobilier; comision 5.5%"
   }
 ]
