@@ -33,7 +33,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.215920+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:15.108834+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-3272-37675068",
@@ -69,7 +74,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.216159+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:15.109343+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-cearceaf-cu-e-16769175",
@@ -105,7 +115,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.216376+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:16.287217+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon181-16726633",
@@ -141,7 +156,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.216636+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:16.332930+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon21-16726632",
@@ -177,7 +197,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.216847+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:16.350839+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-3625-21611725",
@@ -213,7 +238,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.217042+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:16.532108+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-prosop-de-baie-50x90-cm-din-bumbac-100-b-16851463",
@@ -249,7 +279,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.217248+00:00",
     "pret_minim_30z": 23.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:17.150239+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-prosop-de-baie-50x90-cm-din-bumbac-100-c-16851462",
@@ -285,7 +320,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.217492+00:00",
     "pret_minim_30z": 23.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:17.157350+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-prosop-de-baie-50x90-cm-din-bumbac-100-r-16851461",
@@ -321,7 +361,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.217693+00:00",
     "pret_minim_30z": 23.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:17.579847+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-prosop-de-baie-50x90-cm-din-bumbac-100-m-16851460",
@@ -357,7 +402,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.217877+00:00",
     "pret_minim_30z": 23.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:17.626725+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-prosop-de-baie-50x90-cm-din-bumbac-100-a-16851459",
@@ -393,7 +443,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.218067+00:00",
     "pret_minim_30z": 23.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:18.013166+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-prosop-de-baie-50x90-cm-din-bumbac-100-t-16851458",
@@ -429,7 +484,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.218257+00:00",
     "pret_minim_30z": 23.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:18.028314+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-prosop-de-baie-50x90-cm-din-bumbac-100-v-16851457",
@@ -465,7 +525,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.218455+00:00",
     "pret_minim_30z": 23.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:18.475635+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-prosop-de-baie-50x90-cm-din-bumbac-100-p-16851456",
@@ -501,7 +566,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.218646+00:00",
     "pret_minim_30z": 23.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:18.651399+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-prosop-de-baie-50x90-cm-din-bumbac-100-c-16851455",
@@ -537,7 +607,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.218829+00:00",
     "pret_minim_30z": 23.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:18.842998+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-set-100-clipsuri-solar-1-2-inch-toli-cli-17269864",
@@ -614,7 +689,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.219212+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:19.121649+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-4-piese-cearceaf-cu-e-54143329",
@@ -650,7 +730,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.219397+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:19.299362+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-cu-6-piese-cu-cearcea-54143317",
@@ -5919,7 +6004,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.246368+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:15.109117+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-pilota-de-vara-premium-cu-tehnologie-coo-16851454",
@@ -7396,7 +7486,12 @@
     "omnibus_checked_at": "2026-07-06T18:56:50.259373+00:00",
     "pret_minim_30z": 469.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-06T21:38:15.109572+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-de-pat-dubl-4-piese-cu-imprimeu-52338635",
