@@ -495,10 +495,19 @@ def scrape_generic(store_slug: str, config: dict) -> list:
                         if img_el:
                             img_url = img_el.get("src") or img_el.get("data-src") or ""
 
+                        # Unele magazine (ex. evoMAG) folosesc <sup>XX</sup> pentru bani
+                        # (ex: 432<sup>99</sup>). Inserez virgula inainte ca get_text() sa
+                        # lipeasca cifrele (altfel 432<sup>99</sup> -> "43299" -> 43299 lei
+                        # in loc de 432.99, si "99" e citit separat ca pret propriu).
+                        for sup in card.find_all("sup"):
+                            sup_text = sup.get_text(strip=True)
+                            if sup_text.isdigit() and len(sup_text) <= 2:
+                                sup.string = "," + sup_text
+
                         prices = []
                         for p_el in card.select(selectors.get("price_elements", "[class*='price']")):
                             val = extract_price(p_el.get_text(strip=True))
-                            if val > 0:
+                            if val >= 1:  # ignor fragmente sub 1 leu (ex. zecimale orfane)
                                 prices.append(val)
 
                         if len(prices) < 2:
@@ -506,6 +515,10 @@ def scrape_generic(store_slug: str, config: dict) -> list:
 
                         price_new = min(prices)
                         price_old = max(prices)
+                        # Sanity: daca price_new e sub 1/5 din price_old, e aproape sigur
+                        # parsing gresit (fragment de pret citit ca pret intreg), nu reducere reala.
+                        if price_new * 5 < price_old:
+                            continue
                         disc = discount_pct(price_old, price_new)
 
                         if disc < min_discount or price_new <= 0:
