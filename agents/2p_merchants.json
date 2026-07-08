@@ -6,8 +6,8 @@
     "max_pages": 20,
     "min_pct": 10,
     "cat_whitelist": null,
-    "activ": true,
-    "nota": "Aprobat; 2Performant aff=accepted"
+    "activ": false,
+    "nota": "DEZACTIVAT 2026-07-08: feed fara old_price (1600/1600 produse fara pret vechi, custom_field2-5 goale) => 0 deal-uri pe site de reduceri. Reactiveaza daca 2P adauga old_price in feed."
   },
   {
     "slug": "drmax",
@@ -16,8 +16,8 @@
     "max_pages": 20,
     "min_pct": 10,
     "cat_whitelist": null,
-    "activ": true,
-    "nota": "Aprobat; 2Performant aff=accepted"
+    "activ": false,
+    "nota": "DEZACTIVAT 2026-07-08: feed fara old_price (1200/1200 produse fara pret vechi, custom_field2-5 goale) => 0 deal-uri. Reactiveaza daca 2P adauga old_price in feed."
   },
   {
     "slug": "springfarma",
@@ -56,8 +56,8 @@
     "max_pages": 20,
     "min_pct": 10,
     "cat_whitelist": null,
-    "activ": true,
-    "nota": "Aprobat auto 2026-07-06; mobilier Maramures; comision 3%; cos mediu ~2000 lei; EPC 21 EUR"
+    "activ": false,
+    "nota": "DEZACTIVAT 2026-07-08: feed catalog fara old_price (800/800 produse fara pret vechi) => 0 deal-uri. Mobilier Maramures, comision 3%. Reactiveaza daca 2P adauga old_price."
   },
   {
     "slug": "casanewconcept",
@@ -76,7 +76,7 @@
     "max_pages": 20,
     "min_pct": 10,
     "cat_whitelist": null,
-    "activ": true,
-    "nota": "Aprobat auto 2026-07-06; mobilier; comision 5.5%"
+    "activ": false,
+    "nota": "DEZACTIVAT 2026-07-08: feed catalog fara old_price (400/400 produse fara pret vechi) => 0 deal-uri. Mobilier, comision 5.5%. Reactiveaza daca 2P adauga old_price."
   }
 ]
