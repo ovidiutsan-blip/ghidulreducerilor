@@ -76,3 +76,8 @@ agents/marketing/tiktok_config.json
 .mcp.json
 data/.2p_session.json
 .playwright-mcp/
+
+# Runtime dedup state (local, ca pinterest_config)
+data/marketing/pinterest_promo_log.json
+data/marketing/fb_personal_log.json
+data/marketing/fb_personal_*.md
