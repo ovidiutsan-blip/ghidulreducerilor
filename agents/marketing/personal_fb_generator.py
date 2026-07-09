@@ -90,7 +90,8 @@ def clean_title(t: str) -> str:
     return t.strip().rstrip("(").strip()
 
 
-def pick_deals(count: int, max_price: float = 400.0) -> list[dict]:
+def pick_deals(count: int, max_price: float = 400.0,
+               min_price: float = 25.0) -> list[dict]:
     raw = load_json(DEALS, [])
     arr = raw if isinstance(raw, list) else raw.get("deals", [])
     log = load_json(LOG, {})
@@ -111,6 +112,8 @@ def pick_deals(count: int, max_price: float = 400.0) -> list[dict]:
         if pr <= 0 or po <= pr or proc < 30:
             continue
         if pr > max_price:  # produse de impuls pentru prieteni, nu software scump
+            continue
+        if pr < min_price:  # sub ~25 lei nu e "chilipir" de recomandat prietenilor
             continue
         if not earns_commission(d.get("link_afiliat", "")):
             continue
@@ -177,6 +180,8 @@ def main():
     ap.add_argument("--count", type=int, default=5)
     ap.add_argument("--max-price", type=float, default=400.0,
                     help="pret maxim (lei) — produse de impuls, implicit 400")
+    ap.add_argument("--min-price", type=float, default=25.0,
+                    help="pret minim (lei) — sub asta nu e chilipir de recomandat, implicit 25")
     ap.add_argument("--reset", action="store_true")
     args = ap.parse_args()
 
@@ -189,7 +194,7 @@ def main():
     if isinstance(stores, dict):
         stores = stores.get("stores", [])
 
-    deals = pick_deals(args.count, args.max_price)
+    deals = pick_deals(args.count, args.max_price, args.min_price)
     if not deals:
         print("Niciun deal nou eligibil (toate promovate deja sau fara comision). "
               "Ruleaza cu --reset ca sa reiei de la capat.")
