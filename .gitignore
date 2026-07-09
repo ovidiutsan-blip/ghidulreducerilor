@@ -81,3 +81,7 @@ data/.2p_session.json
 data/marketing/pinterest_promo_log.json
 data/marketing/fb_personal_log.json
 data/marketing/fb_personal_*.md
+
+# autoposter FB personal (runtime local)
+data/marketing/fb_autopost_state.json
+data/marketing/fb_autopost_config.json
