@@ -625,7 +625,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.462100+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:52.255154+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon01-28873723",
@@ -661,7 +666,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.462317+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:52.255722+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-4211-04534401",
@@ -697,7 +707,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.462535+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:53.683409+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-703-04534399",
@@ -733,7 +748,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.462752+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:53.774773+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-3430-04445237",
@@ -769,7 +789,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.463006+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:54.921561+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-3235-04445236",
@@ -805,7 +830,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.463224+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:54.990000+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-3204-04445235",
@@ -841,7 +871,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.463517+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:56.081217+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon114-04381642",
@@ -877,7 +912,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.463734+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:56.303767+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-4217-15280798",
@@ -913,7 +953,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.463992+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:57.037128+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-3429-15201271",
@@ -949,7 +994,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.464209+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:57.289983+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-3264-15201270",
@@ -985,7 +1035,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.464427+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:57.958380+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-abd1a01a",
@@ -2925,7 +2980,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.475458+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:58.544743+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-cu-6-piese-cu-cearcea-39639480",
@@ -2961,7 +3021,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.475682+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:58.939694+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-damasc-finetat-4-piese-cear-39550459",
@@ -2997,7 +3062,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.475933+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:59.442028+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-damasc-finetat-6-piese-cear-39499872",
@@ -3033,7 +3103,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.476155+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:59.775728+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio6171-39479555",
@@ -3069,7 +3144,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.476386+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:25:00.289880+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio3630-25305860",
@@ -4463,7 +4543,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.484697+00:00",
     "pret_minim_30z": 13.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:52.255506+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-83905c90",
@@ -8703,7 +8788,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.514428+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:52.256054+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-rindea-electrica-900w-16000rpm-adancime--48470422",
@@ -9932,7 +10022,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.521951+00:00",
     "pret_minim_30z": 211.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:53.721286+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-navisworks-manage-licenta-comer-N008-12C",
@@ -11969,7 +12064,12 @@
     "omnibus_checked_at": "2026-07-09T07:40:09.535310+00:00",
     "pret_minim_30z": 399.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-09T21:24:53.777804+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-revit-licenta-comerciala-pentru-N003",
