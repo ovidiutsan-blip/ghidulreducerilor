@@ -2898,7 +2898,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.730823+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:09.612837+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-cu-elastic-tr-04445234",
@@ -2934,7 +2939,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.731038+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:09.613997+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio3430-04445233",
@@ -2970,7 +2980,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.731253+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:11.086896+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio3235-04414641",
@@ -3006,7 +3021,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.731497+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:11.381174+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio4220-15280795",
@@ -3042,7 +3062,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.731717+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:11.480529+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio4218-15280794",
@@ -3078,7 +3103,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.731932+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:12.435089+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio4217-15280793",
@@ -3114,7 +3144,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.732147+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:12.546150+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio4216-15280792",
@@ -3150,7 +3185,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.732371+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:12.944045+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio4215-15280791",
@@ -3186,7 +3226,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.732616+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:13.484932+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio4211-15280788",
@@ -3222,7 +3267,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.732830+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:13.577009+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio3429-15201268",
@@ -3258,7 +3308,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.733052+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:14.038028+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-damasc-finetat-6-piese-cear-15168936",
@@ -3294,7 +3349,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.733274+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:14.496530+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-trio703-15142285",
@@ -3330,7 +3390,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.733517+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:14.638534+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-aparat-de-sudura-tip-invertor-cu-sarma-4-06490302",
@@ -7208,7 +7273,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.756368+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:15.241317+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-patura-pufoasa-cocolino-cu-blanita-pentr-84483045",
@@ -7244,7 +7314,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.756619+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:15.468314+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-patura-pufoasa-cocolino-cu-blanita-pentr-84483044",
@@ -7280,7 +7355,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.756838+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:15.618776+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-patura-pufoasa-cocolino-cu-blanita-pentr-84483042",
@@ -7316,7 +7396,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.757055+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:16.835039+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-nivela-laser-cu-trepied-16-linii-25m-dis-20093273",
@@ -8172,7 +8257,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.763987+00:00",
     "pret_minim_30z": 219.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:16.951591+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-pilota-de-vara-premium-cu-tehnologie-coo-16839448",
@@ -8208,7 +8298,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.764380+00:00",
     "pret_minim_30z": 219.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:16.972965+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-pilota-de-vara-premium-cu-tehnologie-coo-16839447",
@@ -11379,7 +11474,12 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.786644+00:00",
     "pret_minim_30z": 539.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-10T21:07:09.613111+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "vegis-95e4233f",
@@ -12517,7 +12617,10 @@
     "omnibus_checked_at": "2026-07-10T07:38:41.793648+00:00",
     "pret_minim_30z": 59.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-10T21:07:09.613351+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-4-piese-1-persoana-ce-15280787",
