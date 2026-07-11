@@ -2406,7 +2406,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.546936+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:02.633119+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-aparat-de-sudura-tip-invertor-cu-sarma-4-06490302",
@@ -7186,7 +7191,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.574611+00:00",
     "pret_minim_30z": 219.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:02.633647+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-pilota-de-vara-premium-cu-tehnologie-coo-16839446",
@@ -7222,7 +7232,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.574826+00:00",
     "pret_minim_30z": 219.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:04.016892+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-pilota-de-vara-premium-cu-tehnologie-coo-16839445",
@@ -7258,7 +7273,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.575042+00:00",
     "pret_minim_30z": 219.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:04.105707+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-pilota-de-vara-premium-cu-tehnologie-coo-16839444",
@@ -7294,7 +7314,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.575255+00:00",
     "pret_minim_30z": 219.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:04.332716+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-pilota-de-vara-premium-cu-tehnologie-coo-16839443",
@@ -7330,7 +7355,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.575495+00:00",
     "pret_minim_30z": 219.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:04.457209+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-pilota-de-vara-premium-cu-tehnologie-coo-16839438",
@@ -7366,7 +7396,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.575713+00:00",
     "pret_minim_30z": 219.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:04.931217+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-rindea-electrica-900w-16000rpm-adancime--48470422",
@@ -8094,7 +8129,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.579829+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:05.308952+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-o-persoana-din-finet-4-piese-ds-17768112",
@@ -8130,7 +8170,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.580044+00:00",
     "pret_minim_30z": 89.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:05.593489+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-civil-3d-licenta-comerciala-pen-N002",
@@ -8250,7 +8295,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.580743+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:05.748203+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-1-persoana-dsn16-17805661",
@@ -8286,7 +8336,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.580966+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:05.847387+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-1-persoana-dsn15-17805660",
@@ -8322,7 +8377,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.581184+00:00",
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:06.498171+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-880297ea",
@@ -8845,7 +8905,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.584238+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:06.607288+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89361310",
@@ -8881,7 +8946,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.584481+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:06.800193+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89318396",
@@ -8917,7 +8987,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.584706+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:06.812035+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89318395",
@@ -8953,7 +9028,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.584921+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:07.353366+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89318394",
@@ -8989,7 +9069,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.585138+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:07.818698+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89270148",
@@ -9025,7 +9110,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.585355+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:07.846423+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89270147",
@@ -9061,7 +9151,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.585599+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:08.008306+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89270146",
@@ -11880,7 +11975,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.603251+00:00",
     "pret_minim_30z": 42.15,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:02.633338+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-masina-de-tuns-oi-1500w-2800rpm-77mm-lat-48470415",
@@ -13108,7 +13208,12 @@
     "omnibus_checked_at": "2026-07-11T06:15:49.610952+00:00",
     "pret_minim_30z": 125.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-11T20:51:02.633487+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-techstar-adaptor-wireless-carplay-android-auto-te-4360",
