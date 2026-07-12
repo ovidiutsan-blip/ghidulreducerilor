@@ -32,7 +32,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.918122+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:00.899657+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-8f3ef208",
@@ -67,7 +72,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.918280+00:00",
     "pret_minim_30z": 19.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:52:00.900270+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-bd4ea51f",
@@ -102,7 +110,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.918395+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:52:02.997808+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-df72312f",
@@ -137,7 +148,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.918501+00:00",
     "pret_minim_30z": 19.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:52:04.925403+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-60448736",
@@ -172,7 +186,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.918610+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:52:34.395834+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-1cf34e8f",
@@ -207,7 +224,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.918714+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:52:35.316341+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-38473dc2",
@@ -242,7 +262,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.918823+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:37.240454+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-37d00ff7",
@@ -277,7 +302,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.918934+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:39.064502+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-a8fa228c",
@@ -312,7 +342,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.919034+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:53:05.585419+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-0a762983",
@@ -347,7 +380,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.919172+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:53:05.872579+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-bcafa9af",
@@ -382,7 +418,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.919279+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:53:08.039943+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-7fb9092e",
@@ -417,7 +456,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.919374+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:53:11.929406+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-970a3fcb",
@@ -452,7 +494,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.919467+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:53:36.236756+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-jon-3427-37675069",
@@ -774,7 +819,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.920280+00:00",
     "pret_minim_30z": 29.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:53:38.356401+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-8603a9e0",
@@ -809,7 +857,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.920544+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:53:39.664054+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-92f60517",
@@ -844,7 +895,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.920662+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:53:44.405466+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-prosop-de-baie-50x90-cm-din-bumbac-100-b-16851463",
@@ -1248,7 +1304,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.921628+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:53:46.287637+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-4a1fc6af",
@@ -1283,7 +1342,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.921727+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:07.620365+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-cf76bc8c",
@@ -1318,7 +1382,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.921821+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:09.805168+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-4919cfe7",
@@ -1353,7 +1422,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.921913+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:54:10.694962+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-7c45046d",
@@ -1388,7 +1460,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.922009+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:54:12.126312+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-827755a5",
@@ -1423,7 +1498,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.922116+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:54:18.686008+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-set-100-clipsuri-solar-1-2-inch-toli-cli-17269864",
@@ -2483,7 +2561,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.924914+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:54:39.649132+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-trusa-plita-ppr-1000w-aparat-sudura-tevi-69002883",
@@ -2641,7 +2722,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.925573+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:54:42.497744+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-lant-drujba-400mm-16-32-dinti-64-pinteni-41156847",
@@ -3207,7 +3291,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.927066+00:00",
     "pret_minim_30z": 59.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:54:43.628517+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-aragaz-2-arzatoare-1-5kw-50x36-cm-1-5kw--95917382",
@@ -3283,7 +3370,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.927292+00:00",
     "pret_minim_30z": 89.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:54:50.072053+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-a4805530",
@@ -3318,7 +3408,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.927391+00:00",
     "pret_minim_30z": 89.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:55:12.058382+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-e0096c7e",
@@ -3353,7 +3446,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.927489+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:55:13.899809+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "vegis-24fbf972",
@@ -4411,7 +4509,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.930202+00:00",
     "pret_minim_30z": 49.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:55:15.378950+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "vegis-abc302d5",
@@ -6221,7 +6322,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.934713+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:55:21.484597+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-25e4be3e",
@@ -6256,7 +6360,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.934803+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:55:43.576246+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-6ee95aba",
@@ -6291,7 +6398,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.934891+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:55:46.290637+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-a6ec1a38",
@@ -6326,7 +6436,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.934981+00:00",
     "pret_minim_30z": 49.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:55:47.816727+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "evomag-603239a5",
@@ -6361,7 +6474,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.935071+00:00",
     "pret_minim_30z": 49.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:55:52.950747+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-casanewconcept-patura-pufoasa-cocolino-cu-blanita-pentr-84483047",
@@ -6397,7 +6513,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.935190+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:00.899907+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-patura-pufoasa-cocolino-cu-blanita-pentr-84483045",
@@ -6433,7 +6554,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.935283+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:02.676604+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-nivela-laser-cu-trepied-16-linii-25m-dis-20093273",
@@ -7617,7 +7743,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.938827+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:00.900095+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-rindea-electrica-900w-16000rpm-adancime--48470422",
@@ -7855,7 +7986,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.939429+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:56:15.017427+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "ps-techstar-cheie-auto-programabila-techstar-compati-4383",
@@ -8180,7 +8314,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.940198+00:00",
     "pret_minim_30z": 117.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:02.741557+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-mosor-tambur-pentru-motocoasa-cu-autocut-67685057",
@@ -8871,7 +9010,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.941880+00:00",
     "pret_minim_30z": 155.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:03.972807+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-navisworks-manage-licenta-comer-N008-12C",
@@ -9398,7 +9542,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.943117+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:03.609742+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89270145",
@@ -9434,7 +9583,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.943278+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:32.286982+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89270144",
@@ -9470,7 +9624,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.943378+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:34.872757+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89270143",
@@ -9506,7 +9665,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.943474+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:36.166220+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-89270142",
@@ -9542,7 +9706,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.943572+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:37.972002+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16791168",
@@ -9578,7 +9747,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.943671+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:53:04.748765+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16791167",
@@ -9614,7 +9788,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.943770+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:53:05.687633+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16791166",
@@ -9650,7 +9829,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.943871+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:53:06.763588+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16791165",
@@ -9686,7 +9870,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.943970+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:53:10.856952+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16791164",
@@ -9722,7 +9911,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.944066+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:53:35.949734+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16791163",
@@ -9758,7 +9952,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.944187+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:53:37.056537+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16791162",
@@ -9794,7 +9993,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.944291+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:53:38.389521+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16791161",
@@ -9830,7 +10034,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.944391+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:53:43.308753+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16769173",
@@ -9866,7 +10075,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.944489+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:53:45.193398+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16769172",
@@ -9902,7 +10116,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.944587+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:06.603044+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16769171",
@@ -9938,7 +10157,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.944683+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:08.709113+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16769170",
@@ -9974,7 +10198,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.944805+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:10.029747+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750428",
@@ -10010,7 +10239,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.944907+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:11.041240+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750427",
@@ -10046,7 +10280,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.945008+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:17.637774+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750426",
@@ -10082,7 +10321,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.945123+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:38.557304+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750425",
@@ -10118,7 +10362,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.945235+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:41.570614+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750424",
@@ -10154,7 +10403,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.945336+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:42.627371+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750423",
@@ -10190,7 +10444,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.945436+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:54:49.046450+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750422",
@@ -10226,7 +10485,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.945532+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:55:11.025156+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750421",
@@ -10262,7 +10526,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.945625+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:55:12.845696+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750420",
@@ -10298,7 +10567,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.945788+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:55:13.966801+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750419",
@@ -10334,7 +10608,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.945887+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:55:20.423647+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750418",
@@ -10370,7 +10649,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.945984+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:55:42.448127+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750417",
@@ -10406,7 +10690,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.946076+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:55:44.910406+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750416",
@@ -10442,7 +10731,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.946190+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:55:46.746843+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750415",
@@ -10478,7 +10772,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.946286+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:55:51.857405+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16750414",
@@ -10514,7 +10813,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.946382+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:13.931394+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-bumbac-satinat-6-piese-casa-16703822",
@@ -10550,7 +10854,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.946476+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:16.642542+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-7d23aecd",
@@ -10585,7 +10894,10 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.946570+00:00",
     "pret_minim_30z": 99.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-12T20:56:17.816542+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "2p-scule365-cap-cu-8-fire-pentru-motocoasa-metalic-c-36306576",
@@ -10621,7 +10933,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.946663+00:00",
     "pret_minim_30z": 13.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:52:33.636290+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "vegis-95e4233f",
@@ -11179,7 +11496,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.948031+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:18.175004+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943330",
@@ -11215,7 +11537,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.948210+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:19.234443+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943329",
@@ -11251,7 +11578,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.948315+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:20.517302+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943328",
@@ -11287,7 +11619,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.948409+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:21.549875+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943327",
@@ -11323,7 +11660,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.948501+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:22.896724+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943326",
@@ -11359,7 +11701,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.948594+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:23.290626+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943325",
@@ -11395,7 +11742,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.948684+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:23.926473+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943324",
@@ -11431,7 +11783,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.948774+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:24.386990+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943323",
@@ -11467,7 +11824,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.948870+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:24.873016+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943322",
@@ -11503,7 +11865,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.948967+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:25.411091+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943321",
@@ -11539,7 +11906,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.949059+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:26.145529+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943320",
@@ -11575,7 +11947,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.949170+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:26.345562+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943319",
@@ -11611,7 +11988,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.949263+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:27.419120+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-set-2-prosoape-70x130-cm-greek-bumbac-10-23943318",
@@ -11647,7 +12029,12 @@
     "omnibus_checked_at": "2026-07-12T06:37:25.949357+00:00",
     "pret_minim_30z": 79.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-12T20:56:27.489304+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-4-piese-1-persoana-ce-17745162",
