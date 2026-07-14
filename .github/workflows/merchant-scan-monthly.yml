@@ -40,6 +40,8 @@ jobs:
             python scripts/merchant_scan.py --ps-only
           elif [ "$MODE" = "2p-only" ]; then
             python scripts/merchant_scan.py --2p-only
+          elif [ "$MODE" = "dump-2p" ]; then
+            python scripts/merchant_scan.py --dump-2p
           else
             python scripts/merchant_scan.py
           fi

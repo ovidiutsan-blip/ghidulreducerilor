@@ -323,13 +323,61 @@ def log(msg: str):
     print(f"[{ts}] {msg}")
 
 
+def dump_2p_raw():
+    """Diagnostic: afișează programele + feed-urile 2P în formă brută,
+    ca să vedem statusul real al afilierii și maparea feed→program."""
+    if not P2_EMAIL or not P2_PASSWORD:
+        log("dump 2P skip: credentiale lipsa")
+        return
+    programs = []
+    for page in range(1, 10):
+        data = p2_api_get("affiliate/programs", params={"per_page": 100, "page": page})
+        batch = data.get("programs") or (data if isinstance(data, list) else [])
+        if not batch:
+            break
+        programs.extend(batch)
+        if len(batch) < 100:
+            break
+    print(f"=== {len(programs)} programe ===")
+    for p in programs:
+        aff = p.get("affrequest") or {}
+        print(json.dumps({
+            "name": p.get("name"), "unique_code": p.get("unique_code"),
+            "slug": p.get("slug"), "status_program": p.get("status"),
+            "affrequest": {k: aff.get(k) for k in ("status", "suspended", "created_at")},
+            "commission": p.get("default_sale_commission_rate")
+                          or p.get("commission") or p.get("default_lead_commission_amount"),
+            "main_url": p.get("main_url"),
+        }, ensure_ascii=False))
+    try:
+        feeds = p2_api_get("affiliate/product_feeds").get("product_feeds") or []
+        print(f"=== {len(feeds)} feed-uri ===")
+        for f in feeds:
+            prog = f.get("program") or {}
+            print(json.dumps({
+                "feed_id": f.get("id"), "feed_name": f.get("name"),
+                "products_count": f.get("products_count"),
+                "program_name": prog.get("name"),
+                "program_unique_code": prog.get("unique_code"),
+                "program_keys": sorted(prog.keys()),
+            }, ensure_ascii=False))
+    except Exception as e:
+        log(f"dump feeds err: {e}")
+
+
 # ─── Main ─────────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(description="Merchant Discovery Scan — PS + 2P")
     parser.add_argument("--ps-only",  action="store_true", help="Doar ProfitShare")
     parser.add_argument("--2p-only",  action="store_true", help="Doar 2Performant")
     parser.add_argument("--no-probe", action="store_true", help="Fara probe (mai rapid)")
+    parser.add_argument("--dump-2p", action="store_true",
+                        help="Diagnostic: dump JSON brut programe + feed-uri 2P")
     args = parser.parse_args()
+
+    if args.dump_2p:
+        dump_2p_raw()
+        return
 
     probe = not args.no_probe
     ps_candidates: list = []
