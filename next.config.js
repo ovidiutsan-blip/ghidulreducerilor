@@ -79,6 +79,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'startdecor.ro' },
       { protocol: 'https', hostname: '**.emobili.ro' },
       { protocol: 'https', hostname: 'emobili.ro' },
+      { protocol: 'https', hostname: '**.otter.ro' },
       // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.shopify.com' },
