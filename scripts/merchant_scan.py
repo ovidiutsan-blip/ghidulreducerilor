@@ -96,9 +96,12 @@ def scan_ps(probe: bool = True) -> list[dict]:
             log(f"  PS advertisers page {page}: {resp.status_code} — stop")
             break
         data = resp.json().get("result", {})
-        # API-ul PS întoarce result fie ca listă direct, fie ca dict paginat.
+        # API-ul PS întoarce result ca DICT indexat pe id ({"35": {...}}),
+        # verificat 2026-07-14; păstrăm fallback pe listă/advertisers/items.
         if isinstance(data, list):
             batch = data
+        elif all(isinstance(v, dict) for v in data.values()) and data:
+            batch = list(data.values())
         else:
             batch = data.get("advertisers") or data.get("items") or []
         if not batch:
