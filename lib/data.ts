@@ -91,13 +91,23 @@ export function getAllCategories(): string[] {
   return Array.from(catSet).sort()
 }
 
+// Comparator: discount descrescător, dar deal-urile FĂRĂ imagine coboară
+// sub cele cu imagine — cardurile fallback (gri) nu trebuie să ocupe
+// sloturile de top ale site-ului (unele feed-uri livrează imagini moarte
+// pe care pipeline-ul nu le poate repara, ex. magazine cu bot-protection).
+export function byDiscountImageFirst(a: Deal, b: Deal): number {
+  const img = Number(Boolean(b.imagine_url)) - Number(Boolean(a.imagine_url))
+  if (img !== 0) return img
+  return (b.procent_reducere ?? 0) - (a.procent_reducere ?? 0)
+}
+
 // Returnează "deal of the day" — cel mai mare discount, rotatie zilnica
 export function getDealOfTheDay(): Deal {
   const active = getActiveDeals()
   const today = new Date()
   const dayIndex = today.getFullYear() * 366 + today.getMonth() * 31 + today.getDate()
   // Sorteaza dupa discount descrescator, apoi rotatie pe baza zilei
-  const sorted = [...active].sort((a, b) => b.procent_reducere - a.procent_reducere)
+  const sorted = [...active].sort(byDiscountImageFirst)
   const topDeals = sorted.slice(0, 10)
   return topDeals[dayIndex % topDeals.length]
 }
@@ -105,7 +115,7 @@ export function getDealOfTheDay(): Deal {
 // Returnează top N deals dupa discount (pt flash deals)
 export function getFlashDeals(count: number = 8): Deal[] {
   const active = getActiveDeals()
-  return [...active].sort((a, b) => b.procent_reducere - a.procent_reducere).slice(0, count)
+  return [...active].sort(byDiscountImageFirst).slice(0, count)
 }
 
 // Returnează info magazin pentru un deal

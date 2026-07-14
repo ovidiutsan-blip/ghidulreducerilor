@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import StoreCard from '@/components/StoreCard'
 import DealCard from '@/components/DealCard'
 import { getThemeHubBySlug, getAllThemeHubSlugs, THEME_HUBS } from '@/lib/theme-hubs'
-import { getStoreBySlug, getDealsByStore } from '@/lib/data'
+import { getStoreBySlug, getDealsByStore, byDiscountImageFirst } from '@/lib/data'
 import { dealToProductSchema } from '@/lib/schema'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -49,7 +49,7 @@ export default async function ThemeHubPage({ params }: Props) {
     ? storeDeals.filter(d => hub.dealCategories.includes(d.categorie))
     : []
   const topDeals = [...allDeals]
-    .sort((a, b) => b.procent_reducere - a.procent_reducere)
+    .sort(byDiscountImageFirst)
     .slice(0, 8)
 
   // JSON-LD structured data

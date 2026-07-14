@@ -8,7 +8,7 @@ import StoreCard from '@/components/StoreCard'
 import EmailForm from '@/components/EmailForm'
 import TrustBar from '@/components/TrustBar'
 import ExitIntentPopup from '@/components/ExitIntentPopup'
-import { getActiveDeals, getAllStores, getDealOfTheDay, getFlashDeals } from '@/lib/data'
+import { getActiveDeals, getAllStores, getDealOfTheDay, getFlashDeals, byDiscountImageFirst } from '@/lib/data'
 import { buildItemListSchema, buildBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
@@ -39,9 +39,10 @@ export default function HomePage() {
     categoryCounts[d.categorie] = (categoryCounts[d.categorie] || 0) + 1
   }
 
-  // Subset trimis la HomepageDeals: cele mai mari discount-uri primele.
+  // Subset trimis la HomepageDeals: cele mai mari discount-uri primele,
+  // deal-urile fără imagine (card fallback) coboară la coadă.
   const homepageDeals = [...allActiveDeals]
-    .sort((a, b) => (b.procent_reducere ?? 0) - (a.procent_reducere ?? 0))
+    .sort(byDiscountImageFirst)
     .slice(0, HOMEPAGE_DEALS_LIMIT)
 
   // Schema WebSite cu SearchAction

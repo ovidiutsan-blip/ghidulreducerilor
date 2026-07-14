@@ -290,44 +290,92 @@ def run_full_pipeline():
     return stats
 
 
-def clear_dead_images(deals: list, max_workers: int = 16) -> list:
+def repair_dead_images(deals: list, max_workers: int = 16) -> list:
     """
-    Golește imagine_url la ofertele ale căror imagini răspund 404/410.
-    Frontend-ul (DealCard.isBadImageUrl) tratează URL-ul gol și randează
-    fallback-ul server-side — altfel utilizatorii văd iconița de imagine
-    spartă a browserului (onError pe next/image nu prinde erorile
-    dinainte de hidratare).
+    Repară imaginile moarte, pe tot site-ul:
+    - ofertele cu imagine_url gol sau care răspunde 404/410 primesc og:image
+      de pe pagina produsului (feed-urile 2P livrează uneori URL-uri de
+      imagini expirate — ex. casanewconcept și-a mutat imaginile pe ImageKit,
+      dar feed-ul trimite în continuare căile vechi, moarte);
+    - dacă pagina nu oferă o imagine validă (200 + content-type imagine),
+      imagine_url rămâne gol → DealCard randează FallbackImage server-side,
+      nu iconița de imagine spartă a browserului (onError pe next/image nu
+      prinde erorile dinainte de hidratare).
     Doar 404/410 e considerat definitiv; erorile de rețea și 5xx sunt
-    tranzitorii și nu golesc URL-ul.
+    tranzitorii și nu ating URL-ul existent.
     """
     import requests
     from concurrent.futures import ThreadPoolExecutor
+    from urllib.parse import urljoin
 
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                              'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36'}
 
-    def is_dead(url: str) -> bool:
+    def status_of(url: str):
+        """Status HTTP sau None la eroare tranzitorie de rețea."""
         try:
             r = requests.get(url, headers=headers, timeout=10, stream=True)
             r.close()
-            return r.status_code in (404, 410)
+            return r.status_code
         except Exception:
-            return False
+            return None
 
-    candidates = [d for d in deals
-                  if (d.get('imagine_url') or '').startswith('http')]
+    def og_image(product_url: str) -> str:
+        """og:image / twitter:image / link[rel=image_src] de pe pagina
+        produsului, doar dacă răspunde 200. Altfel ''. """
+        try:
+            from bs4 import BeautifulSoup
+            r = requests.get(product_url, headers=headers, timeout=15)
+            if r.status_code != 200:
+                return ''
+            soup = BeautifulSoup(r.text, 'html.parser')
+            candidates = [
+                soup.find('meta', property='og:image'),
+                soup.find('meta', attrs={'name': 'twitter:image'}),
+                soup.find('link', rel='image_src'),
+            ]
+            for el in candidates:
+                if not el:
+                    continue
+                cand = (el.get('content') or el.get('href') or '').strip()
+                if not cand:
+                    continue
+                cand = urljoin(product_url, cand)
+                if status_of(cand) == 200:
+                    return cand
+            return ''
+        except Exception:
+            return ''
+
+    def process(d):
+        """Returnează (deal, imagine_noua|None). None = nu se schimbă nimic."""
+        img = d.get('imagine_url') or ''
+        if img.startswith('http'):
+            st = status_of(img)
+            if st not in (404, 410):
+                return (d, None)  # imagine ok sau eroare tranzitorie
+        # imagine goală, invalidă sau moartă definitiv → încearcă repararea
+        purl = d.get('product_url') or d.get('url') or ''
+        new_img = og_image(purl) if purl.startswith('http') else ''
+        return (d, new_img)
+
     with ThreadPoolExecutor(max_workers) as ex:
-        dead_flags = list(ex.map(lambda d: is_dead(d['imagine_url']), candidates))
+        results = list(ex.map(process, deals))
 
-    cleared = 0
-    for d, dead in zip(candidates, dead_flags):
-        if dead:
-            d['imagine_url'] = ''
-            if 'image_url' in d:
-                d['image_url'] = ''
+    repaired = cleared = 0
+    for d, new_img in results:
+        if new_img is None:
+            continue
+        old = d.get('imagine_url') or ''
+        if new_img:
+            repaired += 1
+        elif old:
             cleared += 1
-    if cleared:
-        logger.info(f"Imagini moarte golite (404/410): {cleared}")
+        d['imagine_url'] = new_img
+        if 'image_url' in d:
+            d['image_url'] = new_img
+    if repaired or cleared:
+        logger.info(f"Imagini reparate din og:image: {repaired} | golite (fără înlocuitor): {cleared}")
     return deals
 
 
@@ -336,7 +384,7 @@ def run_cleanup():
     Cleanup noapte:
     - Backup date
     - Arhivare oferte expirate
-    - Golire imagini moarte (fallback în frontend)
+    - Reparare imagini moarte (og:image de pe pagina produsului)
     - Curățare logs vechi
     """
     logger.info("=== CLEANUP NOAPTE ===")
@@ -347,7 +395,7 @@ def run_cleanup():
     # Arhivare expirate + eliminare garbage + imagini moarte
     deals = load_deals()
     deals = drop_garbage_deals(deals)
-    deals = clear_dead_images(deals)
+    deals = repair_dead_images(deals)
     active_deals, expired = mark_expired_deals(deals)
     save_deals(active_deals)
 
