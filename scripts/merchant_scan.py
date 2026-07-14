@@ -365,7 +365,6 @@ def dump_2p_raw():
         if P2_MERCHANTS_PATH.exists():
             with open(P2_MERCHANTS_PATH, encoding="utf-8") as fh:
                 known_codes = {m["unique_code"] for m in json.load(fh)}
-        probed_codes: set = set()
         for f in feeds:
             prog = f.get("program") or {}
             print(json.dumps({
@@ -374,28 +373,32 @@ def dump_2p_raw():
                 "program_name": prog.get("name"),
                 "program_unique_code": prog.get("unique_code"),
             }, ensure_ascii=False))
-        # Probe old_price pe feed-urile programelor NECONFIGURATE încă:
+        # Probe old_price pe TOATE feed-urile programelor NECONFIGURATE încă:
         # un feed fără old_price = 0 deal-uri structural (lecția answear/drmax).
+        # Se probează și o pagină din mijloc — pagina 1 (bestsellers) e adesea
+        # nedeductibilă (top-urile nu-s la reducere), mijlocul feed-ului da.
         print("=== probe old_price pe feed-uri neconfigurate ===")
         for f in feeds:
             prog = f.get("program") or {}
             uc = prog.get("unique_code") or ""
-            if not uc or uc in known_codes or uc in probed_codes:
+            if not uc or uc in known_codes:
                 continue
-            probed_codes.add(uc)
-            try:
-                data = p2_api_get(
-                    f"affiliate/product_feeds/{f['id']}/products",
-                    params={"page": 1, "per_page": 50},
-                )
-                prods = (data.get("products") or data.get("items") or
-                         data.get("data") or (data if isinstance(data, list) else []))
-                with_old = sum(1 for p in prods if _2p_has_discount(p))
-                print(f"PROBE {prog.get('name','?'):24} feed={f['id']:6} "
-                      f"cu_old_price={with_old}/{len(prods)}")
-                time.sleep(1.5)
-            except Exception as e:
-                print(f"PROBE {prog.get('name','?')}: eroare {e}")
+            per_page = 20
+            mid_page = max(2, (f.get("products_count") or 0) // (2 * per_page))
+            for page in {1, mid_page}:
+                try:
+                    data = p2_api_get(
+                        f"affiliate/product_feeds/{f['id']}/products",
+                        params={"page": page, "per_page": per_page},
+                    )
+                    prods = (data.get("products") or data.get("items") or
+                             data.get("data") or (data if isinstance(data, list) else []))
+                    with_old = sum(1 for p in prods if _2p_has_discount(p))
+                    print(f"PROBE {prog.get('name','?'):24} feed={f['id']:6} "
+                          f"page={page:4} cu_old_price={with_old}/{len(prods)}")
+                    time.sleep(1.5)
+                except Exception as e:
+                    print(f"PROBE {prog.get('name','?')} feed={f.get('id')} page={page}: eroare {e}")
     except Exception as e:
         log(f"dump feeds err: {e}")
 
