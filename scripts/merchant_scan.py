@@ -325,7 +325,13 @@ def log(msg: str):
 
 def dump_2p_raw():
     """Diagnostic: afișează programele + feed-urile 2P în formă brută,
-    ca să vedem statusul real al afilierii și maparea feed→program."""
+    ca să vedem statusul real al afilierii și maparea feed→program.
+    Include și răspunsul brut PS affiliate-advertisers."""
+    if PS_API_USER and PS_API_KEY:
+        for q in ("page=1", ""):
+            r = ps_call("GET", "affiliate-advertisers", q)
+            print(f"=== PS affiliate-advertisers?{q} -> {r.status_code} ===")
+            print(r.text[:3000])
     if not P2_EMAIL or not P2_PASSWORD:
         log("dump 2P skip: credentiale lipsa")
         return
