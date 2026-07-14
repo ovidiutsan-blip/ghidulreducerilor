@@ -517,16 +517,21 @@ def scrape_evomag(max_pages: int = 2) -> list:
                         img_el = card.select_one("img[src*='http']")
                         img_url = img_el.get("src", "") if img_el else ""
 
-                        # evoMAG foloseste <sup>XX</sup> pentru bani (ex: 432<sup>99</sup>).
-                        # Inserez virgula inainte ca get_text() sa lipeasca cifrele
-                        # (altfel 432<sup>99</sup> -> "43299" -> 43299 lei in loc de 432.99).
-                        for sup in card.find_all("sup"):
+                        # evoMAG foloseste <sup>XX</sup> / <sup class="price_sup">XX</sup>
+                        # pentru bani (ex: 432<sup>99</sup>). Inserez virgula inainte ca
+                        # get_text() sa lipeasca cifrele (altfel 432<sup>99</sup> ->
+                        # "43299" -> 43299 lei in loc de 432.99).
+                        for sup in card.find_all(_is_price_sup_fragment):
                             sup_text = sup.get_text(strip=True)
                             if sup_text.isdigit() and len(sup_text) <= 2:
                                 sup.string = "," + sup_text
 
                         prices = []
                         for p_el in card.select("[class*='price'], .money, .pret"):
+                            # Fragmentele de bani sunt prinse si standalone de
+                            # [class*='price'] -> ar deveni un pret fals de 99 lei.
+                            if _is_price_sup_fragment(p_el):
+                                continue
                             val = extract_price(p_el.get_text(strip=True))
                             if val >= 1:  # ignor fragmente sub 1 leu
                                 prices.append(val)
@@ -574,6 +579,16 @@ def scrape_evomag(max_pages: int = 2) -> list:
 
 
 # ─── Helpers ──────────────────────────────────────────────────────────
+def _is_price_sup_fragment(el) -> bool:
+    """True pentru elementele care poarta doar banii (zecimalele) unui pret:
+    <sup> clasic sau orice element cu clasa de tip 'price_sup' (evoMAG, iul-2026).
+    Citite standalone, textul lor ("99" / ",99") devine un pret fals de 99 lei."""
+    if el.name == "sup":
+        return True
+    return any(c == "sup" or c.endswith("_sup") or c.endswith("-sup")
+               for c in (el.get("class") or []))
+
+
 def extract_price(text: str) -> float:
     """Extrage preț numeric din text."""
     text = text.replace(".", "").replace(",", ".").replace("\xa0", "")

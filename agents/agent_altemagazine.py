@@ -448,6 +448,16 @@ def scrape_evomag(config: dict) -> list:
 
 
 # ─── Generic store scraper (for 2Performant stores when approved) ────
+def _is_price_sup_fragment(el) -> bool:
+    """True pentru elementele care poarta doar banii (zecimalele) unui pret:
+    <sup> clasic sau orice element cu clasa de tip 'price_sup' (evoMAG, iul-2026).
+    Citite standalone, textul lor ("99" / ",99") devine un pret fals de 99 lei."""
+    if el.name == "sup":
+        return True
+    return any(c == "sup" or c.endswith("_sup") or c.endswith("-sup")
+               for c in (el.get("class") or []))
+
+
 def scrape_generic(store_slug: str, config: dict) -> list:
     """Scraper generic — foloseste selectorii din config."""
     log.info(f"  === Scraping {config['name']} (generic) ===")
@@ -495,17 +505,21 @@ def scrape_generic(store_slug: str, config: dict) -> list:
                         if img_el:
                             img_url = img_el.get("src") or img_el.get("data-src") or ""
 
-                        # Unele magazine (ex. evoMAG) folosesc <sup>XX</sup> pentru bani
-                        # (ex: 432<sup>99</sup>). Inserez virgula inainte ca get_text() sa
-                        # lipeasca cifrele (altfel 432<sup>99</sup> -> "43299" -> 43299 lei
-                        # in loc de 432.99, si "99" e citit separat ca pret propriu).
-                        for sup in card.find_all("sup"):
+                        # Unele magazine (ex. evoMAG) folosesc <sup>XX</sup> sau
+                        # <sup class="price_sup">XX</sup> pentru bani (ex: 432<sup>99</sup>).
+                        # Inserez virgula inainte ca get_text() sa lipeasca cifrele
+                        # (altfel 432<sup>99</sup> -> "43299" -> 43299 lei in loc de 432.99).
+                        for sup in card.find_all(_is_price_sup_fragment):
                             sup_text = sup.get_text(strip=True)
                             if sup_text.isdigit() and len(sup_text) <= 2:
                                 sup.string = "," + sup_text
 
                         prices = []
                         for p_el in card.select(selectors.get("price_elements", "[class*='price']")):
+                            # Fragmentele de bani (ex. <sup class="price_sup">99</sup>) sunt
+                            # prinse si standalone de [class*='price'] -> ar deveni 99 lei fals.
+                            if _is_price_sup_fragment(p_el):
+                                continue
                             val = extract_price(p_el.get_text(strip=True))
                             if val >= 1:  # ignor fragmente sub 1 leu (ex. zecimale orfane)
                                 prices.append(val)

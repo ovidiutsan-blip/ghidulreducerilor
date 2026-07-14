@@ -290,11 +290,53 @@ def run_full_pipeline():
     return stats
 
 
+def clear_dead_images(deals: list, max_workers: int = 16) -> list:
+    """
+    Golește imagine_url la ofertele ale căror imagini răspund 404/410.
+    Frontend-ul (DealCard.isBadImageUrl) tratează URL-ul gol și randează
+    fallback-ul server-side — altfel utilizatorii văd iconița de imagine
+    spartă a browserului (onError pe next/image nu prinde erorile
+    dinainte de hidratare).
+    Doar 404/410 e considerat definitiv; erorile de rețea și 5xx sunt
+    tranzitorii și nu golesc URL-ul.
+    """
+    import requests
+    from concurrent.futures import ThreadPoolExecutor
+
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                             'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36'}
+
+    def is_dead(url: str) -> bool:
+        try:
+            r = requests.get(url, headers=headers, timeout=10, stream=True)
+            r.close()
+            return r.status_code in (404, 410)
+        except Exception:
+            return False
+
+    candidates = [d for d in deals
+                  if (d.get('imagine_url') or '').startswith('http')]
+    with ThreadPoolExecutor(max_workers) as ex:
+        dead_flags = list(ex.map(lambda d: is_dead(d['imagine_url']), candidates))
+
+    cleared = 0
+    for d, dead in zip(candidates, dead_flags):
+        if dead:
+            d['imagine_url'] = ''
+            if 'image_url' in d:
+                d['image_url'] = ''
+            cleared += 1
+    if cleared:
+        logger.info(f"Imagini moarte golite (404/410): {cleared}")
+    return deals
+
+
 def run_cleanup():
     """
     Cleanup noapte:
     - Backup date
     - Arhivare oferte expirate
+    - Golire imagini moarte (fallback în frontend)
     - Curățare logs vechi
     """
     logger.info("=== CLEANUP NOAPTE ===")
@@ -302,9 +344,10 @@ def run_cleanup():
     # Backup
     backup_data()
 
-    # Arhivare expirate + eliminare garbage
+    # Arhivare expirate + eliminare garbage + imagini moarte
     deals = load_deals()
     deals = drop_garbage_deals(deals)
+    deals = clear_dead_images(deals)
     active_deals, expired = mark_expired_deals(deals)
     save_deals(active_deals)
 

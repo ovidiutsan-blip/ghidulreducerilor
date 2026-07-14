@@ -98,7 +98,76 @@ def _run_scraper_with_fixture(html):
     return deals, calls
 
 
+# Fixture care reproduce markup-ul evomag din iulie 2026: zecimalele sunt in
+# <sup class="price_sup">99</sup>. Preprocesarea <sup> corecteaza parintii
+# (370,99 / 269,99), dar sup-ul STANDALONE e prins si el de selectorul de
+# productie [class*='price'] -> ",99" -> 99.0 lei citit ca pret intreg
+# (recidiva #3 a bug-ului ghost deals: 14 deal-uri "Resigilat!" la fix 99 lei).
+FIXTURE_PRICE_SUP_HTML = """
+<html><body>
+
+<div class="nice_product_container">
+  <div class="npi_image"><a href="/product/kit-interfon"><img src="https://static2.evomag.ro/img/kit.jpg"></a></div>
+  <div class="npi_name"><h2><a href="/product/kit-interfon" title="Resigilat!Kit videointerfon Hikvision">Resigilat!Kit videointerfon Hikvision</a></h2></div>
+  <div class="npi_price">
+    <div class="price_block_list">
+      <span>NOU: <span>370<sup class="price_sup">99</sup> lei</span></span>
+      <span class="real_price">269<sup class="price_sup">99</sup> lei</span>
+    </div>
+  </div>
+</div>
+
+</body></html>
+"""
+
+
+def _run_generic_with_fixture(html):
+    """Ruleaza scrape_generic cu selectorii de PRODUCTIE din config si fixture HTML."""
+    import json
+    with open(ROOT / "config" / "stores_config.json", encoding="utf-8") as f:
+        prod = json.load(f)["evomag"]
+    config = {
+        "name": "evoMAG",
+        "base_url": "https://www.evomag.ro",
+        "categories": [{"name": "test", "url": "https://www.evomag.ro/cat"}],
+        "max_pages": 1,
+        "min_discount": 10,
+        "rate_limit_seconds": 0,
+        "selectors": prod["selectors"],
+    }
+
+    def fake_get(url, timeout=None, **kwargs):
+        return _FakeResponse(html, status=200)
+
+    original_get = agm.session.get
+    agm.session.get = fake_get
+    try:
+        deals = agm.scrape_generic("evomag", config)
+    finally:
+        agm.session.get = original_get
+    return deals
+
+
 # ─── Tests ─────────────────────────────────────────────────────────
+
+def test_no_ghost_deal_from_price_sup_span():
+    """Regresie iul-2026: <span class="price_sup">99</span> NU trebuie citit ca pret 99 lei."""
+    deals = _run_generic_with_fixture(FIXTURE_PRICE_SUP_HTML)
+    for d in deals:
+        assert d["pret_redus"] != 99.0, (
+            f"Ghost deal 99 lei din span.price_sup: titlu={d['titlu']!r} "
+            f"pret_redus={d['pret_redus']} pret_original={d['pret_original']}"
+        )
+
+
+def test_price_sup_span_card_parsed_correctly():
+    """Cardul cu price_sup trebuie sa produca 269.99 vs 370.99 (-27%)."""
+    deals = _run_generic_with_fixture(FIXTURE_PRICE_SUP_HTML)
+    assert len(deals) == 1, f"Astept 1 deal, am gasit {len(deals)}: {[d['titlu'] for d in deals]}"
+    d = deals[0]
+    assert abs(d["pret_redus"] - 269.99) < 0.02, f"pret_redus={d['pret_redus']}"
+    assert abs(d["pret_original"] - 370.99) < 0.02, f"pret_original={d['pret_original']}"
+
 
 def test_no_ghost_deal_from_orphan_sup_99():
     """Regresie #46: orfani <sup>99</sup> NU trebuie sa produca deal -99%/-100%."""
@@ -185,6 +254,8 @@ def test_sup_preprocessing_normal_use():
 
 def _main():
     tests = [
+        ("test_no_ghost_deal_from_price_sup_span", test_no_ghost_deal_from_price_sup_span),
+        ("test_price_sup_span_card_parsed_correctly", test_price_sup_span_card_parsed_correctly),
         ("test_no_ghost_deal_from_orphan_sup_99", test_no_ghost_deal_from_orphan_sup_99),
         ("test_normal_evomag_card_parsed_correctly", test_normal_evomag_card_parsed_correctly),
         ("test_trap_card_with_orphan_sup_still_parses_real_prices",
