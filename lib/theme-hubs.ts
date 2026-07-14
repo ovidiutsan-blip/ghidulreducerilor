@@ -29,7 +29,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#EC407A',
     heroIntro:
       'Moda online din România este dominată de câteva platforme mari care lansează campanii de reduceri aproape săptămânal. Dacă știi unde să te uiți și când, poți găsi haine de firmă la jumătate de preț sau accesorii premium cu 60-70% discount, fără să cobori din calitate.\n\nPe GhidulReducerilor.ro adunăm cele mai bune oferte fashion de la magazinele partenere — Fashion Days (parte din grupul eMAG, peste 2.000 de branduri), Answear (peste 400 de branduri premium ca Tommy Hilfiger, Calvin Klein, Guess) și eMAG (colecții sezoniere și branduri proprii). Fiecare ofertă este verificată de echipă, are procentul real de reducere afișat clar și link afiliat direct către produs — așa că plătești exact prețul de pe site, fără comisioane ascunse.',
-    storeSlugs: [],
+    storeSlugs: ['perfectbijoux', 'watch24'],
     dealCategories: ['ceasuri', 'smartwatch'],
     faq: [
       {
@@ -70,7 +70,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#D81B60',
     heroIntro:
       'Piața de beauty și cosmetice din România a explodat în ultimii ani datorită magazinelor specializate care aduc parfumuri și produse premium la prețuri cu 30-50% sub cele din duty-free sau magazinele fizice de brand. Notino este liderul incontestabil — peste 85.000 de produse, inclusiv branduri de lux precum Chanel, Dior, Lancôme, YSL și Paco Rabanne, cu garanție de autenticitate 100%.\n\nPe GhidulReducerilor.ro monitorizăm zilnic campaniile Notino și alte surse de beauty, selectăm doar ofertele cu discount real (nu "reduceri" pe prețuri umflate artificial) și afișăm procentul exact de economisit. Majoritatea ofertelor vin însoțite și de coduri promoționale suplimentare care se aplică la checkout — uneori ajungi la -65% față de prețul de listă.',
-    storeSlugs: [],
+    storeSlugs: ['hiris'],
     dealCategories: ['beauty'],
     faq: [
       {
@@ -193,7 +193,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#F57C00',
     heroIntro:
       'Renovarea casei sau amenajarea grădinii pot costa un salariu întreg — sau pot costa cu 30% mai puțin dacă știi când și de unde să cumperi. MatHaus (specializat în materiale de construcții și amenajări DIY), Fornello (instalații termice, sanitare, calorifere, centrale, panouri solare) și eMAG (mobilier, unelte, electrocasnice) acoperă împreună toată gama de nevoi.\n\nLa GhidulReducerilor.ro urmărim campaniile sezoniere (primăvară-vară pentru grădină, toamnă-iarnă pentru instalații termice) și identificăm ofertele cu discount real. MatHaus are reduceri cumulate la cantități mari (ex. -10% la comenzi peste 2.000 lei pe lânga reducerile individuale), iar Fornello oferă adesea pachete centrală + calorifere + montaj cu discount de 15-20%. Livrarea e gratuită la multe produse voluminoase (centrale termice, panouri solare) și toate produsele au garanție legală + garanție de producător.',
-    storeSlugs: ['casanewconcept', 'hotpick', 'mathaus', 'novodoors', 'scule365', 'somnart', 'techstar'],
+    storeSlugs: ['casanewconcept', 'case-smart', 'emobili', 'hotpick', 'mathaus', 'novodoors', 'scule365', 'somnart', 'startdecor', 'techstar'],
     dealCategories: ['casa-gradina'],
     faq: [
       {
@@ -234,7 +234,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#512DA8',
     heroIntro:
       'Software-ul profesional e una dintre categoriile cele mai scumpe pentru freelanceri, arhitecți, designeri și studenți — o licență Adobe Creative Cloud poate costa 2.500+ lei/an la preț întreg, iar Autodesk AutoCAD trece de 7.000 lei. Dar există alternative legale la prețuri dramatic mai mici: reselleri autorizați precum StreamStore distribuie licențe originale (perpetue sau anuale) cu discount-uri structurale de 10-67% față de MSRP — nu oferte flash, ci prețuri permanente justificate prin volum de distribuție.\n\nPe GhidulReducerilor.ro selectăm doar reselleri verificați cu parteneriat oficial cu producătorii (Adobe, Autodesk, Microsoft, McNeel Rhino, V-Ray, Parallels). Fiecare licență vine cu cheie de activare directă de la producător, factură fiscală românească și suport oficial. Categoria include și electronice de consum (eMAG) pentru laptop-uri, periferice și componente IT cu reduceri în campanii.',
-    storeSlugs: ['streamstore'],
+    storeSlugs: ['citgrup', 'navigatiiandroid', 'streamstore'],
     dealCategories: ['electronice'],
     faq: [
       {
