@@ -68,6 +68,9 @@ const nextConfig = {
       // Somnart (2Performant feed — WordPress/WooCommerce)
       { protocol: 'https', hostname: 'somnart.ro' },
       { protocol: 'https', hostname: '**.somnart.ro' },
+      // ImageKit CDN (casanewconcept și-a mutat imaginile aici; og:image de pe
+      // paginile produs indică ik.imagekit.io/d3vpro/cnc/...)
+      { protocol: 'https', hostname: 'ik.imagekit.io' },
       // Casa New Concept (2Performant feed — OpenCart image/catalog)
       { protocol: 'https', hostname: 'casanewconcept.ro' },
       { protocol: 'https', hostname: '**.casanewconcept.ro' },
