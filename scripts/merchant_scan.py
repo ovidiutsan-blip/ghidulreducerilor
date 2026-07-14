@@ -37,8 +37,10 @@ P2_MERCHANTS_PATH = BASE / "agents" / "2p_merchants.json"
 
 # ─── ProfitShare Auth ──────────────────────────────────────────────────────────
 PS_API_URL  = "https://api.profitshare.ro"
-PS_API_USER = os.getenv("PROFITSHARE_API_USER", "")
-PS_API_KEY  = os.getenv("PROFITSHARE_API_KEY", "")
+# Secretele din GitHub au BOM (﻿) la început — fără strip, putheader()
+# crapă cu UnicodeEncodeError (la fel ca în ps_feed_to_deals.py).
+PS_API_USER = os.getenv("PROFITSHARE_API_USER", "").lstrip("﻿").strip()
+PS_API_KEY  = os.getenv("PROFITSHARE_API_KEY", "").lstrip("﻿").strip()
 
 
 def ps_call(method: str, endpoint: str, query: str = ""):
