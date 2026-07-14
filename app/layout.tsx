@@ -5,6 +5,7 @@ import MobileBottomNav from '@/components/MobileBottomNav'
 import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
 import SocialProofWidget from '@/components/SocialProofWidget'
+import { getAllCategories } from '@/lib/data'
 import './globals.css'
 
 const SITE_URL = 'https://ghidulreducerilor.ro'
@@ -91,7 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen flex flex-col">
         <Navbar />
-        <CategoryBar />
+        <CategoryBar availableSlugs={getAllCategories()} />
         <main className="flex-1 pb-16 md:pb-0">{children}</main>
         <Footer />
         <CookieConsent />

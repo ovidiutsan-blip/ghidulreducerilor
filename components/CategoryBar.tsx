@@ -3,12 +3,17 @@
 import Link from 'next/link'
 import { CATEGORIES } from '@/lib/categories'
 
-export default function CategoryBar() {
+// availableSlugs: categoriile care au deal-uri active (calculate server-side
+// în layout). Fără filtru, bara ducea la pagini de categorie goale.
+export default function CategoryBar({ availableSlugs }: { availableSlugs?: string[] }) {
+  const visible = availableSlugs
+    ? CATEGORIES.filter(c => availableSlugs.includes(c.slug))
+    : CATEGORIES
   return (
     <div className="sticky top-16 z-40 bg-white border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-1 py-2 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-          {CATEGORIES.map(cat => {
+          {visible.map(cat => {
             const Icon = cat.icon
             return (
               <Link

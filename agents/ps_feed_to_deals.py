@@ -123,14 +123,16 @@ def fetch_deals(magazin: str, adv_id: int, categorie: str, max_pages: int = 20, 
     total_raw = 0
     for page in range(1, max_pages + 1):
         resp = None
-        # Retry with exponential backoff on 429
-        for attempt in range(4):
+        # Retry with exponential backoff on 429. Fereastra totală ~63s:
+        # cu 4 încercări (max 8s) merchant-ii de la coada listei primeau 429
+        # zi de zi și rămâneau permanent cu 0 deal-uri (hiris/case-smart/alecoair).
+        for attempt in range(6):
             resp = call("GET", "affiliate-products", f"filters[advertiser]={adv_id}&page={page}")
             if resp.ok:
                 break
             if resp.status_code == 429:
-                wait = 2 ** attempt  # 1, 2, 4, 8 seconds
-                print(f"  {magazin} page {page}: 429 backoff {wait}s (attempt {attempt+1}/4)")
+                wait = 2 ** attempt  # 1, 2, 4, 8, 16, 32 seconds
+                print(f"  {magazin} page {page}: 429 backoff {wait}s (attempt {attempt+1}/6)")
                 time.sleep(wait)
                 continue
             # Non-429 error: stop
@@ -181,12 +183,21 @@ def main():
     ]
     print(f"Loaded {len(targets)} active merchants from ps_merchants.json")
 
+    # Rotim ordinea pe zile: dacă API-ul tot ne limitează, măcar nu suferă
+    # mereu aceiași merchants de la coada listei.
+    if targets:
+        shift = datetime.utcnow().timetuple().tm_yday % len(targets)
+        targets = targets[shift:] + targets[:shift]
+        print(f"Rotatie zilnica: incepem cu '{targets[0][0]}' (shift {shift})")
+
     all_new = []
     all_seen_urls: set = set()   # valid product_urls across all merchants this run
     successful_slugs: set = set()  # merchants where API call returned data (not error)
     now_iso = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    for magazin, adv_id, categorie, max_pages, min_pct, allowed_cats in targets:
+    for i, (magazin, adv_id, categorie, max_pages, min_pct, allowed_cats) in enumerate(targets):
+        if i:
+            time.sleep(5)  # cooldown între merchants ca să nu alimentăm 429-ul
         print(f"\n[{magazin}] fetching {max_pages}p (min {min_pct}% reducere), cat='{categorie}', whitelist={allowed_cats is not None}")
         new_deals, valid_urls, success = fetch_deals(magazin, adv_id, categorie, max_pages=max_pages, min_pct=min_pct, allowed_cats=allowed_cats)
         print(f"  extracted: {len(new_deals)} deals w/ real discount")
