@@ -10,12 +10,6 @@ const nextConfig = {
       // Profitshare product feed images
       { protocol: 'http', hostname: 'profitsmart.ro' },
       { protocol: 'https', hostname: 'profitsmart.ro' },
-      // FashionDays
-      { protocol: 'https', hostname: '**.fashiondays.ro' },
-      { protocol: 'https', hostname: '**.fashioncdn.ro' },
-      // Elefant.ro
-      { protocol: 'https', hostname: '**.elefant.ro' },
-      { protocol: 'https', hostname: '**.elefant.cdn' },
       // evoMAG
       { protocol: 'https', hostname: '**.evomag.ro' },
       // NB: Next.js acceptă MAX 50 de intrări în remotePatterns (build-ul pică
@@ -25,10 +19,6 @@ const nextConfig = {
       // tests/test_image_hosts_allowlisted.py.
       // Watch24 (**.watch24.ro acoperă cdn.watch24.ro)
       { protocol: 'https', hostname: '**.watch24.ro' },
-      // ForIT
-      { protocol: 'https', hostname: '**.forit.ro' },
-      // Fornello
-      { protocol: 'https', hostname: '**.fornello.ro' },
       { protocol: 'https', hostname: 'cdn.contentspeed.ro' },
       // Vegis (PS feed — **.vegis.ro acoperă cdn.vegis.ro)
       { protocol: 'https', hostname: '**.vegis.ro' },
@@ -75,6 +65,20 @@ const nextConfig = {
       // Mobiro (2Performant feed — WordPress)
       { protocol: 'https', hostname: 'mobiro.ro' },
       { protocol: 'https', hostname: '**.mobiro.ro' },
+      // Merchants PS noi (scan 2026-07-14): CITGrup, Navigatiiandroid,
+      // Perfectbijoux, Startdecor, eMobili (Watch24 era deja allowlisted).
+      // Host-urile sunt domeniile proprii; verifică guardrail-ul
+      // tests/test_image_hosts_allowlisted.py după primul feed-run.
+      { protocol: 'https', hostname: '**.citgrup.ro' },
+      { protocol: 'https', hostname: 'citgrup.ro' },
+      { protocol: 'https', hostname: '**.navigatiiandroid.ro' },
+      { protocol: 'https', hostname: 'navigatiiandroid.ro' },
+      { protocol: 'https', hostname: '**.perfectbijoux.ro' },
+      { protocol: 'https', hostname: 'perfectbijoux.ro' },
+      { protocol: 'https', hostname: '**.startdecor.ro' },
+      { protocol: 'https', hostname: 'startdecor.ro' },
+      { protocol: 'https', hostname: '**.emobili.ro' },
+      { protocol: 'https', hostname: 'emobili.ro' },
       // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.shopify.com' },
