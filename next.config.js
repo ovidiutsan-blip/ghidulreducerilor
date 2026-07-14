@@ -18,16 +18,11 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.elefant.cdn' },
       // evoMAG
       { protocol: 'https', hostname: '**.evomag.ro' },
-      // Notino (when approved)
-      { protocol: 'https', hostname: '**.notino.ro' },
-      { protocol: 'https', hostname: '**.notinoimg.com' },
-      // Answear (when approved)
-      { protocol: 'https', hostname: '**.answear.ro' },
-      // Decathlon (when approved)
-      { protocol: 'https', hostname: '**.decathlon.ro' },
-      { protocol: 'https', hostname: '**.decathloncoach.com' },
-      // Dr.Max (when approved)
-      { protocol: 'https', hostname: '**.drmax.ro' },
+      // NB: Next.js acceptă MAX 50 de intrări în remotePatterns (build-ul pică
+      // peste limită). Notino/Answear/Decathlon/Dr.Max au fost scoase (magazine
+      // neaprobate sau dezactivate, 0 imagini în deals.json) — re-adaugă doar
+      // la reactivarea magazinului și verifică totalul cu
+      // tests/test_image_hosts_allowlisted.py.
       // Watch24 (**.watch24.ro acoperă cdn.watch24.ro)
       { protocol: 'https', hostname: '**.watch24.ro' },
       // ForIT

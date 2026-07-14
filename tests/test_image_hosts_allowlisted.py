@@ -36,6 +36,17 @@ def _host_matches(host: str, pattern: str) -> bool:
     return host == pattern
 
 
+def test_remote_patterns_under_nextjs_limit():
+    """Next.js refuză build-ul peste 50 de intrări în images.remotePatterns
+    ("Array must contain at most 50 element(s)") — build ERROR pe Vercel,
+    site-ul rămâne pe deploy-ul vechi (pățit pe 14 iul 2026)."""
+    patterns = _allowlisted_patterns()
+    assert len(patterns) <= 50, (
+        f"images.remotePatterns are {len(patterns)} intrări (limita Next.js: 50) "
+        "— build-ul Vercel va pica. Scoate magazinele inactive."
+    )
+
+
 def test_all_image_hosts_allowlisted():
     deals = json.loads((ROOT / "data" / "deals.json").read_text(encoding="utf-8"))
     patterns = _allowlisted_patterns()
@@ -58,13 +69,15 @@ def test_all_image_hosts_allowlisted():
 
 
 def _main():
-    try:
-        test_all_image_hosts_allowlisted()
-        print("  [OK]   test_all_image_hosts_allowlisted")
-        return 0
-    except AssertionError as e:
-        print(f"  [FAIL] test_all_image_hosts_allowlisted: {e}")
-        return 1
+    failed = 0
+    for fn in (test_remote_patterns_under_nextjs_limit, test_all_image_hosts_allowlisted):
+        try:
+            fn()
+            print(f"  [OK]   {fn.__name__}")
+        except AssertionError as e:
+            print(f"  [FAIL] {fn.__name__}: {e}")
+            failed += 1
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":
