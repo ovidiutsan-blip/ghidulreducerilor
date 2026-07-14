@@ -360,7 +360,14 @@ def post_to_timeline(post: dict, publish: bool = True,
                     'div[role="button"]:has-text("Postează")',
                     'button:has-text("Postează")',
                 ], timeout=6000)
-            _human_delay(4, 6.5)
+            # Publicarea poate dura ("Se postează…" rămâne pe ecran la conexiuni
+            # lente) — aștept până la 30s să se închidă compozitorul înainte de a
+            # decide. Verificarea la delay fix (4-6.5s) dădea fals negativ: raporta
+            # eșec deși postarea ajungea pe timeline (14 iul 2026).
+            _human_delay(2, 3.5)
+            publish_deadline = time.time() + 30
+            while _composer_open(page) and time.time() < publish_deadline:
+                time.sleep(1.5)
 
             blk = _detect_block(page)
             if blk:
