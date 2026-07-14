@@ -96,7 +96,11 @@ def scan_ps(probe: bool = True) -> list[dict]:
             log(f"  PS advertisers page {page}: {resp.status_code} — stop")
             break
         data = resp.json().get("result", {})
-        batch = data.get("advertisers") or data.get("items") or []
+        # API-ul PS întoarce result fie ca listă direct, fie ca dict paginat.
+        if isinstance(data, list):
+            batch = data
+        else:
+            batch = data.get("advertisers") or data.get("items") or []
         if not batch:
             break
         advertisers.extend(batch)
