@@ -401,5 +401,17 @@
     "url_site": "https://www.otter.ro",
     "comision_mediu": "5%",
     "retea": "2performant"
+  },
+  {
+    "id": "gsmnet",
+    "nume": "GSMnet",
+    "slug": "gsmnet",
+    "descriere": "GSMnet.ro este un magazin specializat în accesorii GSM: huse, folii, încărcătoare, căști și gadgeturi pentru telefoane mobile, cu livrare rapidă și reduceri constante la accesoriile populare.",
+    "logo_emoji": "📱",
+    "culoare": "#1565c0",
+    "categorie_principala": "electronice",
+    "url_site": "https://www.gsmnet.ro",
+    "comision_mediu": "12%",
+    "retea": "2performant"
   }
 ]
