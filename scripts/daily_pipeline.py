@@ -409,9 +409,20 @@ def run_cleanup():
     logger.info(f"Cleanup finalizat. Oferte arhivate: {expired}")
 
 
+def run_repair_images():
+    """Doar repararea imaginilor moarte — rulată în pipeline-ul zilnic imediat
+    după importurile de feed-uri, ca deal-urile noi cu URL-uri moarte la sursă
+    să nu stea cu iconița spartă pe site toată ziua, până la cleanup-ul de 22:00
+    (cazul watch24, 15 iul 2026)."""
+    logger.info("=== REPAIR IMAGINI (post-import) ===")
+    deals = load_deals()
+    deals = repair_dead_images(deals)
+    save_deals(deals)
+
+
 def main():
     parser = argparse.ArgumentParser(description='GhidulReducerilor Daily Pipeline')
-    parser.add_argument('--mode', choices=['full', 'cleanup'], default='full')
+    parser.add_argument('--mode', choices=['full', 'cleanup', 'repair-images'], default='full')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
 
@@ -420,6 +431,8 @@ def main():
         print(json.dumps(stats, indent=2))
     elif args.mode == 'cleanup':
         run_cleanup()
+    elif args.mode == 'repair-images':
+        run_repair_images()
 
 
 if __name__ == '__main__':

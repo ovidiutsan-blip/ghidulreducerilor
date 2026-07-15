@@ -126,6 +126,12 @@ jobs:
         continue-on-error: true
         run: python scripts/dedup_cross_platform.py
 
+      - name: 🖼️ Repair imagini moarte (post-import — feed-urile livrează și URL-uri 404 la sursă)
+        id: repair_images
+        if: github.event.inputs.mode != 'cleanup'
+        continue-on-error: true
+        run: python scripts/daily_pipeline.py --mode repair-images
+
       - name: 🎯 Sync theme hubs (auto-populare storeSlugs din deal categories)
         id: sync_hubs
         if: github.event.inputs.mode != 'cleanup'
