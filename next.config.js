@@ -70,6 +70,9 @@ const nextConfig = {
       { protocol: 'https', hostname: '**.emobili.ro' },
       { protocol: 'https', hostname: 'emobili.ro' },
       { protocol: 'https', hostname: '**.otter.ro' },
+      // GSMnet (2Performant feed, activat 2026-07-15)
+      { protocol: 'https', hostname: '**.gsmnet.ro' },
+      { protocol: 'https', hostname: 'gsmnet.ro' },
       // Generic CDNs
       { protocol: 'https', hostname: '**.cloudfront.net' },
       { protocol: 'https', hostname: '**.shopify.com' },

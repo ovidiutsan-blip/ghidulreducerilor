@@ -80,6 +80,16 @@
     "nota": "Aprobat 2026-07-14; incaltaminte/marochinarie (Nike, Geox, Clarks), comision 5%, AOV 320 lei. Feed 7643: pagina 1 (bestsellers) FARA old_price, dar mijlocul feed-ului 20/20 CU old_price (probe dump-2p 53f001d)."
   },
   {
+    "slug": "gsmnet",
+    "unique_code": "3a3c2e10d",
+    "categorie": "electronice",
+    "max_pages": 20,
+    "min_pct": 10,
+    "cat_whitelist": null,
+    "activ": true,
+    "nota": "Aprobat 2026-07-15; accesorii GSM/telefoane. Proba 29430578544: feed 26k produse CU old_price, dar discounturi reale rare (1/60 in proba) — asteptari modeste, monitorizeaza yield-ul."
+  },
+  {
     "slug": "mobiro",
     "unique_code": "42ec8bef4",
     "categorie": "casa-gradina",
