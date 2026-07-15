@@ -234,7 +234,7 @@ export const THEME_HUBS: ThemeHub[] = [
     color: '#512DA8',
     heroIntro:
       'Software-ul profesional e una dintre categoriile cele mai scumpe pentru freelanceri, arhitecți, designeri și studenți — o licență Adobe Creative Cloud poate costa 2.500+ lei/an la preț întreg, iar Autodesk AutoCAD trece de 7.000 lei. Dar există alternative legale la prețuri dramatic mai mici: reselleri autorizați precum StreamStore distribuie licențe originale (perpetue sau anuale) cu discount-uri structurale de 10-67% față de MSRP — nu oferte flash, ci prețuri permanente justificate prin volum de distribuție.\n\nPe GhidulReducerilor.ro selectăm doar reselleri verificați cu parteneriat oficial cu producătorii (Adobe, Autodesk, Microsoft, McNeel Rhino, V-Ray, Parallels). Fiecare licență vine cu cheie de activare directă de la producător, factură fiscală românească și suport oficial. Categoria include și electronice de consum (eMAG) pentru laptop-uri, periferice și componente IT cu reduceri în campanii.',
-    storeSlugs: ['citgrup', 'navigatiiandroid', 'streamstore'],
+    storeSlugs: ['citgrup', 'gsmnet', 'navigatiiandroid', 'streamstore'],
     dealCategories: ['electronice'],
     faq: [
       {
