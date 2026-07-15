@@ -320,24 +320,54 @@ def repair_dead_images(deals: list, max_workers: int = 16) -> list:
         except Exception:
             return None
 
+    def jsonld_product_images(soup) -> list:
+        """URL-urile de imagine din blocurile JSON-LD cu @type Product
+        (unele magazine — ex. hotpick/OpenCart — nu au og:image deloc,
+        dar publică schema.org Product cu image)."""
+        urls = []
+
+        def collect(node):
+            if isinstance(node, list):
+                for item in node:
+                    collect(item)
+                return
+            if not isinstance(node, dict):
+                return
+            if node.get('@type') == 'Product':
+                img = node.get('image')
+                for cand in img if isinstance(img, list) else [img]:
+                    if isinstance(cand, dict):
+                        cand = cand.get('url') or cand.get('contentUrl')
+                    if isinstance(cand, str) and cand.strip():
+                        urls.append(cand.strip())
+            collect(node.get('@graph'))
+
+        for script in soup.find_all('script', type='application/ld+json'):
+            try:
+                collect(json.loads(script.string or ''))
+            except Exception:
+                continue
+        return urls
+
     def og_image(product_url: str) -> str:
-        """og:image / twitter:image / link[rel=image_src] de pe pagina
-        produsului, doar dacă răspunde 200. Altfel ''. """
+        """og:image / twitter:image / link[rel=image_src] / JSON-LD Product
+        de pe pagina produsului, doar dacă răspunde 200. Altfel ''. """
         try:
             from bs4 import BeautifulSoup
             r = requests.get(product_url, headers=headers, timeout=15)
             if r.status_code != 200:
                 return ''
             soup = BeautifulSoup(r.text, 'html.parser')
-            candidates = [
+            candidates = []
+            for el in [
                 soup.find('meta', property='og:image'),
                 soup.find('meta', attrs={'name': 'twitter:image'}),
                 soup.find('link', rel='image_src'),
-            ]
-            for el in candidates:
-                if not el:
-                    continue
-                cand = (el.get('content') or el.get('href') or '').strip()
+            ]:
+                if el:
+                    candidates.append((el.get('content') or el.get('href') or '').strip())
+            candidates.extend(jsonld_product_images(soup))
+            for cand in candidates:
                 if not cand:
                     continue
                 cand = urljoin(product_url, cand)
@@ -375,7 +405,7 @@ def repair_dead_images(deals: list, max_workers: int = 16) -> list:
         if 'image_url' in d:
             d['image_url'] = new_img
     if repaired or cleared:
-        logger.info(f"Imagini reparate din og:image: {repaired} | golite (fără înlocuitor): {cleared}")
+        logger.info(f"Imagini reparate de pe pagina produsului (og:image/JSON-LD): {repaired} | golite (fără înlocuitor): {cleared}")
     return deals
 
 
