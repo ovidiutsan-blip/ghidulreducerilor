@@ -1,0 +1,33 @@
+name: 2P Probe (old_price la merchants noi)
+
+# Probă manuală: verifică dacă feed-urile merchants-ilor 2P nou-aprobați au
+# old_price (pagina 1 + mijloc + final), ÎNAINTE de a-i activa în
+# agents/2p_merchants.json. Nu modifică deals.json.
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: 'Slugs separate prin spațiu (ex: gsmnet bonami petmart)'
+        required: true
+        default: 'gsmnet bonami ginissima lumaro petmart'
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Probe feeds
+        env:
+          TWO_PERFORMANT_EMAIL: ${{ secrets.TWO_PERFORMANT_EMAIL }}
+          TWO_PERFORMANT_PASSWORD: ${{ secrets.TWO_PERFORMANT_PASSWORD }}
+          TWO_PERFORMANT_MARKETER_CODE: ${{ secrets.TWO_PERFORMANT_MARKETER_CODE }}
+        run: python scripts/probe_2p_new_merchants.py ${{ github.event.inputs.slugs }}
