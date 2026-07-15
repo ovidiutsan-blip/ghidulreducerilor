@@ -49,21 +49,29 @@ def match_program(programs: list[dict], slug: str) -> dict | None:
 
 
 def probe_feed(feed: dict, slug: str) -> dict:
-    """Probează pagina 1 + mijloc + final; returnează statistici agregate."""
+    """Probează pagina 1 + mijloc + final; returnează statistici agregate.
+
+    total_pages vine din metadata răspunsului (API-ul ignoră per_page și
+    întoarce 20/pagină) — estimarea din products_count/PER_PAGE ar rata finalul.
+    """
     fid = feed["id"]
     count = int(feed.get("products_count") or 0)
-    total_pages = max(1, (count + PER_PAGE - 1) // PER_PAGE)
-    pages = sorted({1, max(1, total_pages // 2), total_pages})
+    total_pages = max(1, (count + PER_PAGE - 1) // PER_PAGE)  # estimare inițială
 
     stats = {"raw": 0, "eligibile": 0, "rejects": {}}
-    for page in pages:
+    page, visited = 1, set()
+    while page not in visited:
+        visited.add(page)
         try:
             data = get_feed_products_page(fid, page=page, per_page=PER_PAGE)
         except TwoPerformantRateLimited:
             raise
         except Exception as e:
             print(f"    pagina {page}: EROARE {e}")
-            continue
+            break
+        meta = data.get("metadata") or data.get("meta") or {}
+        total_pages = int(meta.get("total_pages") or meta.get("pages") or
+                          meta.get("last_page") or total_pages)
         products = (data.get("products") or data.get("items") or
                     data.get("data") or (data if isinstance(data, list) else []))
         rejects: dict[str, int] = {}
@@ -79,6 +87,8 @@ def probe_feed(feed: dict, slug: str) -> dict:
         detail = ", ".join(f"{k}={v}" for k, v in sorted(rejects.items())) or "—"
         print(f"    pagina {page}/{total_pages}: {len(products)} produse, "
               f"{hits} eligibile (>= {MIN_PCT}%), respinse: {detail}")
+        # 1 → mijloc → final (total_pages e acum cel real, din metadata)
+        page = max(2, total_pages // 2) if page == 1 else total_pages
     return stats
 
 
