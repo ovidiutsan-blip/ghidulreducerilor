@@ -59,7 +59,11 @@ export default function DealsFilter({
 
     switch (sortBy) {
       case 'discount':
-        result = [...result].sort((a, b) => b.procent_reducere - a.procent_reducere)
+        // fără imagine → la coadă (cardurile fallback gri nu ocupă topul)
+        result = [...result].sort((a, b) =>
+          (Number(Boolean(b.imagine_url)) - Number(Boolean(a.imagine_url))) ||
+          (b.procent_reducere - a.procent_reducere)
+        )
         break
       case 'pret_asc':
         result = [...result].sort((a, b) => a.pret_redus - b.pret_redus)

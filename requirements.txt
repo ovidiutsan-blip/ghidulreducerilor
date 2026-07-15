@@ -6,3 +6,4 @@ sib-api-v3-sdk>=7.6.0
 lxml>=5.0.0
 Jinja2>=3.1.2
 playwright>=1.40.0
+Pillow>=10.0

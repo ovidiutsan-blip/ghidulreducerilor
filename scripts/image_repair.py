@@ -60,6 +60,9 @@ BROWSER_UA = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 )
 
+# --headful: browser vizibil la Nivel 2/3 (trece Cloudflare; doar local)
+HEADFUL = False
+
 FETCH_HEADERS = {
     "User-Agent": BROWSER_UA,
     "Accept": "text/html,application/xhtml+xml,*/*;q=0.8",
@@ -252,10 +255,23 @@ def fix_via_playwright(deal: dict) -> str | None:
         except Exception:
             pass
 
+    def looks_like_product_image(b: bytes) -> bool:
+        """Dimensiuni reale minime — altfel «cea mai mare imagine» poate fi
+        o iconiță (watch24: singura captură era un logo de 36×91 px)."""
+        try:
+            from io import BytesIO
+            from PIL import Image
+            w, h = Image.open(BytesIO(b)).size
+            return w >= 200 and h >= 200
+        except ImportError:
+            return len(b) > 15000  # fallback fără Pillow: prag de bytes
+        except Exception:
+            return False
+
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch(
-                headless=True,
+                headless=not HEADFUL,
                 args=["--no-sandbox", "--disable-blink-features=AutomationControlled"],
             )
             # Context NOU per deal = fara cache intre requesturi
@@ -271,6 +287,17 @@ def fix_via_playwright(deal: dict) -> str | None:
 
             try:
                 page.goto(product_url, timeout=25000, wait_until="domcontentloaded")
+                # Challenge Cloudflare («Doar un moment...» / «Just a moment...»):
+                # în headful trece singur în ~15-20s, cu o navigare la final care
+                # poate distruge contextul — de aceea title() e în try/except.
+                for _ in range(10):
+                    try:
+                        title = page.title().lower()
+                    except Exception:
+                        title = ""
+                    if "moment" not in title:
+                        break
+                    page.wait_for_timeout(3000)
                 page.evaluate("window.scrollTo(0, 500)")
                 page.wait_for_timeout(2500)
             except PWTimeout:
@@ -278,10 +305,12 @@ def fix_via_playwright(deal: dict) -> str | None:
                 browser.close()
                 return None
 
-            # Nivel 2: alege cea mai mare imagine captata din flux
-            if captured:
-                best_url = max(captured, key=lambda u: len(captured[u]))
+            # Nivel 2: cea mai mare imagine captata care are dimensiuni de
+            # produs; daca niciuna nu trece, cadem pe Nivel 3 (canvas)
+            for best_url in sorted(captured, key=lambda u: len(captured[u]), reverse=True):
                 best_bytes = captured[best_url]
+                if not looks_like_product_image(best_bytes):
+                    continue
                 act_ext = ext_from_url(best_url)
                 fn = safe_filename(deal_id, act_ext)
                 dest = local_img_dir(magazin) / fn
@@ -302,7 +331,7 @@ def fix_via_playwright(deal: dict) -> str | None:
                 ];
                 for (const sel of selectors) {
                     const img = document.querySelector(sel);
-                    if (img && img.complete && img.naturalWidth > 50) {
+                    if (img && img.complete && img.naturalWidth >= 200 && img.naturalHeight >= 200) {
                         try {
                             const c = document.createElement('canvas');
                             c.width = img.naturalWidth;
@@ -380,7 +409,14 @@ def main():
         "--workers", type=int, default=1,
         help="Parallelism pentru Nivel 1 urllib (default 1 — Playwright e secvential)"
     )
+    parser.add_argument(
+        "--headful", action="store_true",
+        help="Browser vizibil la Nivel 2/3 — trece challenge-ul Cloudflare "
+             "(«Doar un moment...») care blochează headless; doar rulări locale"
+    )
     args = parser.parse_args()
+    global HEADFUL
+    HEADFUL = args.headful
 
     data = json.loads(DEALS_PATH.read_text(encoding="utf-8"))
     log.info("Deals totale: %d", len(data))

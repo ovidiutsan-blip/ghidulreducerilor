@@ -51,7 +51,9 @@ export function getActiveDeals(): Deal[] {
 
 // Returnează ofertele pentru un magazin specific
 export function getDealsByStore(storeSlug: string): Deal[] {
-  return (deals as Deal[]).filter(d => d.magazin === storeSlug && d.activ && isLegitDeal(d))
+  return (deals as Deal[])
+    .filter(d => d.magazin === storeSlug && d.activ && isLegitDeal(d))
+    .sort(byDiscountImageFirst)
 }
 
 // Returnează toate magazinele
