@@ -2,13 +2,9 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      // eMAG CDN (**.akamaized.net acoperă s1emagst/s13emagst)
-      { protocol: 'https', hostname: '**.emag.ro' },
-      { protocol: 'https', hostname: '**.akamaized.net' },
       // Profitshare campaign images
       { protocol: 'https', hostname: 'app.profitshare.ro' },
       // Profitshare product feed images
-      { protocol: 'http', hostname: 'profitsmart.ro' },
       { protocol: 'https', hostname: 'profitsmart.ro' },
       // evoMAG
       { protocol: 'https', hostname: '**.evomag.ro' },
@@ -25,9 +21,6 @@ const nextConfig = {
       // Hiris (CDN cdnmp.net — **.cdnmp.net acoperă c.cdnmp.net)
       { protocol: 'https', hostname: '**.cdnmp.net' },
       { protocol: 'https', hostname: '**.hiris.ro' },
-      // Alecoair (direct)
-      { protocol: 'https', hostname: '**.alecoair.ro' },
-      { protocol: 'https', hostname: 'alecoair.ro' },
       // Hotpick (direct)
       { protocol: 'https', hostname: '**.hotpick.ro' },
       { protocol: 'https', hostname: 'hotpick.ro' },
@@ -59,12 +52,9 @@ const nextConfig = {
       // Casa New Concept (2Performant feed — OpenCart image/catalog)
       { protocol: 'https', hostname: 'casanewconcept.ro' },
       { protocol: 'https', hostname: '**.casanewconcept.ro' },
-      // Mobila Laguna (2Performant feed)
-      { protocol: 'https', hostname: 'mobilalaguna.ro' },
-      { protocol: 'https', hostname: '**.mobilalaguna.ro' },
-      // Mobiro (2Performant feed — WordPress)
-      { protocol: 'https', hostname: 'mobiro.ro' },
-      { protocol: 'https', hostname: '**.mobiro.ro' },
+      // Curățenie 2026-07-15: eMAG/akamaized, alecoair, mobilalaguna, mobiro
+      // eliminate (0 deals în deals.json, magazine inactive/dezactivate) +
+      // http://profitsmart.ro (0 imagini http). Re-adaugă la reactivare.
       // Merchants PS noi (scan 2026-07-14): CITGrup, Navigatiiandroid,
       // Perfectbijoux, Startdecor, eMobili (Watch24 era deja allowlisted).
       // Host-urile sunt domeniile proprii; verifică guardrail-ul
