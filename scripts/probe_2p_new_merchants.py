@@ -27,15 +27,15 @@ MIN_PCT = 10
 
 
 def fetch_accepted_programs() -> list[dict]:
+    # API-ul ignoră uneori per_page (întoarce 20/pagină) — iterăm până la
+    # pagină goală, nu ne bazăm pe len(batch) < per_page.
     programs: list[dict] = []
-    for page in range(1, 6):
+    for page in range(1, 21):
         data = api_get("affiliate/programs", params={"per_page": 100, "page": page})
         batch = data.get("programs") or (data if isinstance(data, list) else [])
         if not batch:
             break
         programs.extend(batch)
-        if len(batch) < 100:
-            break
     return programs
 
 
