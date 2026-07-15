@@ -333,7 +333,8 @@ def repair_dead_images(deals: list, max_workers: int = 16) -> list:
                 return
             if not isinstance(node, dict):
                 return
-            if node.get('@type') == 'Product':
+            node_type = node.get('@type')
+            if node_type == 'Product' or (isinstance(node_type, list) and 'Product' in node_type):
                 img = node.get('image')
                 for cand in img if isinstance(img, list) else [img]:
                     if isinstance(cand, dict):
