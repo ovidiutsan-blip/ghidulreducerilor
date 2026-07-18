@@ -171,5 +171,15 @@
   "cat_whitelist": null,
   "activ": true,
   "nota": "Scan 2026-07-14: probe 3/20 (15% hit), mobilier — gap piata H&G"
+ },
+ {
+  "slug": "mindblower",
+  "adv_id": 74774,
+  "categorie": "casa-gradina",
+  "max_pages": 10,
+  "min_pct": 15,
+  "cat_whitelist": null,
+  "activ": true,
+  "nota": "Scan 2026-07-18: probe pag 1/2/5 confirma reduceri reale (15-20% hit rate, 30-60% off), comision 11% CPS, categorie PS Cadouri & Flori — organizatoare/gadget-uri casa"
  }
 ]

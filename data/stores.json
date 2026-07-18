@@ -413,5 +413,17 @@
     "url_site": "https://www.gsmnet.ro",
     "comision_mediu": "12%",
     "retea": "2performant"
+  },
+  {
+    "id": "mindblower",
+    "nume": "Mindblower.ro",
+    "slug": "mindblower",
+    "descriere": "Mindblower.ro este un magazin de cadouri și accesorii pentru casă: organizatoare, gadgeturi de bucătărie, seturi cadou și articole practice de organizare, cu reduceri frecvente.",
+    "logo_emoji": "🎁",
+    "culoare": "#f9a825",
+    "categorie_principala": "casa-gradina",
+    "url_site": "https://mindblower.ro",
+    "comision_mediu": "11%",
+    "retea": "profitshare"
   }
 ]

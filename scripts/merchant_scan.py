@@ -89,7 +89,10 @@ def scan_ps(probe: bool = True) -> list[dict]:
     log(f"PS: {len(known_ids)} merchantii configurati deja")
 
     # Fetch toti advertiserii disponibili
-    advertisers = []
+    # Dedupe pe id: API-ul PS pare sa ignore uneori paginarea (la fel ca la
+    # 2Performant, vezi capcana per_page din memorie) si intoarce acelasi set
+    # complet la fiecare pagina — fara dedupe, asta multiplica probele de N ori.
+    advertisers_by_id: dict[int, dict] = {}
     for page in range(1, 20):
         resp = ps_call("GET", "affiliate-advertisers", f"page={page}")
         if not resp.ok:
@@ -106,11 +109,20 @@ def scan_ps(probe: bool = True) -> list[dict]:
             batch = data.get("advertisers") or data.get("items") or []
         if not batch:
             break
-        advertisers.extend(batch)
+        new_ids = 0
+        for adv in batch:
+            aid = int(adv.get("id") or adv.get("advertiser_id") or 0)
+            if aid and aid not in advertisers_by_id:
+                advertisers_by_id[aid] = adv
+                new_ids += 1
+        if new_ids == 0:
+            log(f"  PS advertisers page {page}: 0 id-uri noi — paginarea nu avanseaza, stop")
+            break
         if len(batch) < 20:
             break
         time.sleep(0.3)
 
+    advertisers = list(advertisers_by_id.values())
     log(f"PS: {len(advertisers)} advertiseri totali in program")
 
     candidates = []
@@ -405,6 +417,8 @@ def dump_2p_raw():
 
 # ─── Main ─────────────────────────────────────────────────────────────────────
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(description="Merchant Discovery Scan — PS + 2P")
     parser.add_argument("--ps-only",  action="store_true", help="Doar ProfitShare")
     parser.add_argument("--2p-only",  action="store_true", help="Doar 2Performant")
@@ -429,9 +443,9 @@ def main():
     if not args.ps_only:
         p2_candidates = scan_2p(probe=probe)
 
-    print_report(ps_candidates, p2_candidates)
     report_path = save_report(ps_candidates, p2_candidates)
     log(f"Raport salvat: {report_path}")
+    print_report(ps_candidates, p2_candidates)
     log("=== MERCHANT SCAN END ===")
 
 
