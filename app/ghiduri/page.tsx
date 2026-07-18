@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     description: 'Ghiduri cu tips și coduri promo pentru Notino, Answear, Dr.Max, Fashion Days, Libris, Elefant, Vegis, MatHaus.',
     url: 'https://ghidulreducerilor.ro/ghiduri',
     type: 'website',
+    images: [{ url: '/api/og', width: 1200, height: 630, alt: 'GhidulReducerilor.ro' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/api/og'],
   },
 }
 

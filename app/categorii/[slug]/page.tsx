@@ -28,6 +28,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: hub.description,
       url: `https://ghidulreducerilor.ro/categorii/${hub.slug}`,
       type: 'website',
+      images: [{ url: '/api/og', width: 1200, height: 630, alt: 'GhidulReducerilor.ro' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['/api/og'],
     },
   }
 }

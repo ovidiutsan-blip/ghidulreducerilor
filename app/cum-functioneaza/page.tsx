@@ -14,6 +14,11 @@ export const metadata: Metadata = {
       'Ghid pas cu pas cum să folosești codurile de reducere și deal-urile noastre. Plus FAQ.',
     url: 'https://ghidulreducerilor.ro/cum-functioneaza',
     type: 'article',
+    images: [{ url: '/api/og', width: 1200, height: 630, alt: 'GhidulReducerilor.ro' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/api/og'],
   },
 }
 

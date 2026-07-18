@@ -56,14 +56,14 @@ REQUEST_TIMEOUT = 20
 
 PAGES_TO_AUDIT = [
     '/',
-    '/reduceri',
-    '/coduri-promotionale',
-    '/magazine',
-    '/reduceri/emag',
-    '/reduceri/fashiondays',
-    '/reduceri/notino',
-    '/reduceri/answear',
-    '/reduceri/decathlon',
+    '/categorii',
+    '/blog',
+    '/ghiduri',
+    '/reduceri/watch24',
+    '/reduceri/casanewconcept',
+    '/reduceri/citgrup',
+    '/reduceri/mindblower',
+    '/categorii/casa-gradina',
 ]
 
 TITLE_MIN_LEN = 30
@@ -402,6 +402,8 @@ def save_report(report: dict):
 
 
 def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(description='GhidulReducerilor SEO Audit')
     parser.add_argument('--mode', choices=['full', 'quick'], default='quick')
     parser.add_argument('--url', help='Auditează doar un URL specific')

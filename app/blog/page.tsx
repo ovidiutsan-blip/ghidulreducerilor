@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     description: 'Ghiduri, analize și calendare pentru cumpărători români în 2026.',
     url: '/blog',
     type: 'website',
+    images: [{ url: '/api/og', width: 1200, height: 630, alt: 'GhidulReducerilor.ro' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/api/og'],
   },
 }
 
