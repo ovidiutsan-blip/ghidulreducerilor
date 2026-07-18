@@ -239,23 +239,10 @@ def fetch_ps_codes() -> list[dict]:
 
 
 # ─── Sursa 2: 2Performant API ──────────────────────────────────────────────────
-
-def _2p_get_token() -> Optional[str]:
-    """Obține token JWT 2Performant."""
-    if not TWO_P_EMAIL or not TWO_P_PASS:
-        return None
-    try:
-        resp = requests.post(
-            "https://api.2performant.com/users/sign_in",
-            json={"email": TWO_P_EMAIL, "password": TWO_P_PASS},
-            headers={"Content-Type": "application/json"},
-            timeout=15,
-        )
-        if resp.status_code == 200:
-            return resp.json().get("user", {}).get("authentication_token")
-    except Exception as e:
-        print(f"[codes] 2P auth error: {e}")
-    return None
+# Auth prin sesiunea partajată (DeviseTokenAuth cu token în headers) — vechea
+# schemă X-User-Token/user.authentication_token nu mai e acceptată de API.
+sys.path.insert(0, str(BASE / "agents"))
+from two_performant_session import api_get, TwoPerformantRateLimited  # noqa: E402
 
 
 def fetch_2p_codes() -> list[dict]:
@@ -264,29 +251,20 @@ def fetch_2p_codes() -> list[dict]:
         print("[codes] 2P: credentiale lipsă — skip")
         return []
 
-    token = _2p_get_token()
-    if not token:
-        print("[codes] 2P: auth eșuată")
-        return []
-
     results = []
-    headers = {
-        "X-User-Email": TWO_P_EMAIL,
-        "X-User-Token": token,
-        "Content-Type": "application/json",
-    }
-
     try:
-        resp = requests.get(
-            "https://api.2performant.com/affiliate/programs?filter[affilated]=true&per_page=100",
-            headers=headers,
-            timeout=15,
-        )
-        if resp.status_code != 200:
-            print(f"[codes] 2P: HTTP {resp.status_code}")
-            return []
-
-        programs = resp.json().get("data", [])
+        # API-ul ignoră per_page (20/pagină) și răspunde cu cheia "programs" —
+        # iterăm până la pagină goală (același model ca probe_2p_new_merchants).
+        programs = []
+        for page in range(1, 21):
+            data = api_get("affiliate/programs",
+                           params={"filter[affilated]": "true",
+                                   "per_page": 100, "page": page})
+            batch = (data.get("programs") or data.get("data")
+                     or (data if isinstance(data, list) else []))
+            if not batch:
+                break
+            programs.extend(batch)
         print(f"[codes] 2P: {len(programs)} programe afiliate")
 
         for prog in programs:
@@ -328,6 +306,8 @@ def fetch_2p_codes() -> list[dict]:
             results.append(entry)
             print(f"[codes] 2P: găsit cod '{cod}' pentru '{slug}'")
 
+    except TwoPerformantRateLimited as e:
+        print(f"[codes] 2P rate-limited — skip run: {e}")
     except Exception as e:
         print(f"[codes] 2P eroare: {e}")
 
