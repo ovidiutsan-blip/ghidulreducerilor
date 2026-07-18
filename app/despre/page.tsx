@@ -69,6 +69,11 @@ export default function DesprePage() {
         <p>
           Pentru orice întrebări legate de datele tale personale sau funcționarea site-ului,
           ne poți contacta la adresa de email disponibilă în secțiunea de contact.
+          Cel mai rapid ne găsești pe canalul nostru de Telegram:{' '}
+          <a href="https://t.me/ghidulreducerilor" target="_blank" rel="noopener noreferrer">
+            t.me/ghidulreducerilor
+          </a>{' '}
+          — acolo publicăm ofertele în timp real.
         </p>
 
         <h2>Disclaimer</h2>

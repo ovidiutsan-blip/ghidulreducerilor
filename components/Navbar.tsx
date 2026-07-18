@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Tag, Menu, X, Bell } from 'lucide-react'
+import { Tag, Menu, X, Bell, Send } from 'lucide-react'
 import SearchBar from '@/components/SearchBar'
 
 export default function Navbar() {
@@ -27,6 +27,16 @@ export default function Navbar() {
 
           {/* CTA + Mobile menu */}
           <div className="flex items-center gap-2">
+            <a
+              href="https://t.me/ghidulreducerilor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center gap-1.5 border border-neutral-200 hover:border-sky-500 hover:text-sky-600 text-neutral-600 text-sm font-semibold px-3 py-2 rounded-xl transition-all"
+              title="Canal Telegram — oferte în timp real"
+            >
+              <Send className="w-4 h-4" />
+              Telegram
+            </a>
             <Link
               href="/black-friday"
               className="hidden md:inline-flex items-center gap-1.5 bg-neutral-900 hover:bg-black text-white text-sm font-semibold px-3 py-2 rounded-xl transition-all"

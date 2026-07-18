@@ -222,9 +222,18 @@ def generate_newsletter_html(deals: list, codes: list, newsletter_type: str = 'd
 
               <!-- CTA -->
               <tr>
-                <td style="padding:24px 0;text-align:center;">
+                <td style="padding:24px 0 8px;text-align:center;">
                   <a href="https://ghidulreducerilor.ro" style="background:#e53e3e;color:white;padding:14px 32px;border-radius:25px;text-decoration:none;font-size:16px;font-weight:700;display:inline-block;">
                     🔍 Vezi Toate Reducerile →
+                  </a>
+                </td>
+              </tr>
+
+              <!-- CTA Telegram -->
+              <tr>
+                <td style="padding:0 0 24px;text-align:center;">
+                  <a href="https://t.me/ghidulreducerilor" style="color:#0088cc;text-decoration:none;font-size:14px;font-weight:600;">
+                    📢 Prinde ofertele în timp real pe canalul nostru Telegram →
                   </a>
                 </td>
               </tr>

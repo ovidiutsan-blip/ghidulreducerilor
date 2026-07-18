@@ -17,6 +17,11 @@ export default function Footer() {
             <p className="text-sm text-neutral-400 leading-relaxed mb-4">
               Cele mai bune reduceri si coduri promotionale din Romania, verificate zilnic.
             </p>
+            <p className="text-xs text-neutral-500 mb-2">
+              <a href="https://t.me/ghidulreducerilor" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                📢 Canal Telegram: @ghidulreducerilor
+              </a>
+            </p>
             <p className="text-xs text-neutral-500">
               <a href="https://www.tiktok.com/@catalinovidiu" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                 📱 TikTok: @catalinovidiu

@@ -63,6 +63,7 @@ CTA_COMMENT = [
     "Link + alte reduceri la {magazin} 👉 {url}",
     "Aici il gasiti 👉 {url}",
     "Toate reducerile la {magazin} 👉 {url}",
+    "Link aici 👉 {url}\nPS: ofertele in timp real le pun pe Telegram 👉 https://t.me/ghidulreducerilor",
 ]
 
 

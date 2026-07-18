@@ -22,7 +22,16 @@ from datetime import datetime
 
 BASE       = Path(__file__).parent.parent.parent
 SITE_BASE  = "https://ghidulreducerilor.ro"
+TELEGRAM_URL = "https://t.me/ghidulreducerilor"
 OUTPUT_DIR = BASE / "data" / "marketing"
+
+
+def _tg_mention() -> str:
+    """Mențiune ocazională (~1/3 din posturi) a canalului Telegram — nu la
+    fiecare post, ca să nu pară spam."""
+    if random.random() < 0.33:
+        return f"\n📢 Ofertele în timp real pe Telegram: {TELEGRAM_URL}"
+    return ""
 
 
 def _deal_link(d: dict) -> str:
@@ -96,7 +105,7 @@ def post_lista(deals: list[dict]) -> str:
         store = (d.get("magazin") or d.get("store", "")).capitalize()
         link  = _deal_link(d)
         linii.append(f"{i}. {titlu} — -{pct}% → {pret} lei ({store})\n   👉 {link}")
-    linii.append(f"\nToate ofertele: {SITE_BASE}\n\n#reduceri #oferte #ghidulreducerilor")
+    linii.append(f"\nToate ofertele: {SITE_BASE}{_tg_mention()}\n\n#reduceri #oferte #ghidulreducerilor")
     return "\n".join(linii)
 
 
@@ -114,6 +123,7 @@ def post_story(d: dict) -> str:
         f"Normal costă {orig} lei, acum e {pret} lei. Economisești {orig-pret:.0f} lei.\n\n"
         f"Link direct (verificat, merge): {link}\n\n"
         f"P.S. Urmăriți ghidulreducerilor.ro — postăm cele mai bune oferte zilnic 🙏"
+        f"{_tg_mention()}"
     )
 
 
