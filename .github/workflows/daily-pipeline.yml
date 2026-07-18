@@ -78,21 +78,6 @@ jobs:
         continue-on-error: true
         run: python scripts/merge_altemagazine.py
 
-      - name: 📱 Scrape eMAG (HTML SSR + linkuri Profitshare — feed API indisponibil pentru acest advertiser)
-        id: scrape_emag
-        if: github.event.inputs.mode != 'cleanup'
-        continue-on-error: true
-        env:
-          PROFITSHARE_API_USER: ${{ secrets.PROFITSHARE_API_USER }}
-          PROFITSHARE_API_KEY: ${{ secrets.PROFITSHARE_API_KEY }}
-        run: python agents/agent_emag.py
-
-      - name: 🔀 Merge eMAG în deals.json
-        id: merge_emag
-        if: github.event.inputs.mode != 'cleanup'
-        continue-on-error: true
-        run: python scripts/merge_emag.py
-
       - name: 🛒 Profitshare feed import (9 merchanti — vegis, mathaus, hiris, case-smart, novodoors, techstar, hotpick, alecoair, streamstore)
         id: ps_feed
         if: github.event.inputs.mode != 'cleanup'
@@ -237,7 +222,7 @@ jobs:
           python scripts/indexnow_ping.py
 
       - name: 🚨 Creare issue la eșec pipeline
-        if: failure() || steps.main_pipeline.outcome == 'failure' || steps.scrape_altemagazine.outcome == 'failure' || steps.merge_altemagazine.outcome == 'failure' || steps.scrape_emag.outcome == 'failure' || steps.merge_emag.outcome == 'failure' || steps.ps_feed.outcome == 'failure' || steps.two_p_feed.outcome == 'failure' || steps.link_validator.outcome == 'failure' || steps.codes_scraper.outcome == 'failure' || steps.price_validator.outcome == 'failure' || steps.sync_hubs.outcome == 'failure' || steps.dedup.outcome == 'failure'
+        if: failure() || steps.main_pipeline.outcome == 'failure' || steps.scrape_altemagazine.outcome == 'failure' || steps.merge_altemagazine.outcome == 'failure' || steps.ps_feed.outcome == 'failure' || steps.two_p_feed.outcome == 'failure' || steps.link_validator.outcome == 'failure' || steps.codes_scraper.outcome == 'failure' || steps.price_validator.outcome == 'failure' || steps.sync_hubs.outcome == 'failure' || steps.dedup.outcome == 'failure'
         uses: actions/github-script@v7
         with:
           script: |
@@ -245,8 +230,6 @@ jobs:
               'Main pipeline (daily_pipeline.py)': '${{ steps.main_pipeline.outcome }}',
               'Scrape altemagazine (agent_altemagazine.py)': '${{ steps.scrape_altemagazine.outcome }}',
               'Merge altemagazine': '${{ steps.merge_altemagazine.outcome }}',
-              'Scrape eMAG (agent_emag.py)': '${{ steps.scrape_emag.outcome }}',
-              'Merge eMAG': '${{ steps.merge_emag.outcome }}',
               'Profitshare feed (ps_feed_to_deals.py)': '${{ steps.ps_feed.outcome }}',
               '2Performant feed (two_performant_to_deals.py)': '${{ steps.two_p_feed.outcome }}',
               'Link Validator 2P (link_validator_agent.py)': '${{ steps.link_validator.outcome }}',

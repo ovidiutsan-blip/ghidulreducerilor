@@ -8,8 +8,6 @@ const nextConfig = {
       { protocol: 'https', hostname: 'profitsmart.ro' },
       // evoMAG
       { protocol: 'https', hostname: '**.evomag.ro' },
-      // eMAG (Akamai CDN)
-      { protocol: 'https', hostname: '**.akamaized.net' },
       // NB: Next.js acceptă MAX 50 de intrări în remotePatterns (build-ul pică
       // peste limită). Notino/Answear/Decathlon/Dr.Max au fost scoase (magazine
       // neaprobate sau dezactivate, 0 imagini în deals.json) — re-adaugă doar
