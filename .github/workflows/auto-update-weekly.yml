@@ -29,7 +29,7 @@ jobs:
   auto-update:
     name: Weekly Auto-Update
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repo
@@ -78,14 +78,16 @@ jobs:
         run: |
           git config user.name "GhidulReducerilor Bot"
           git config user.email "bot@ghidulreducerilor.ro"
-          # Add files that exist (some may not be present in all modes)
-          for f in data/deals.json data/codes.json data/update_status.json AUDIT_LOG.md; do
-            [ -f "$f" ] && git add "$f" || true
-          done
+          # git add -A (nu o lista fixa de fisiere): scripturile de audit/repair
+          # ating uneori fisiere in afara whitelist-ului vechi, ceea ce lasa
+          # modificari unstaged si strica rebase-ul de mai jos (vezi 2026-07-19).
+          git add -A -- data/ AUDIT_LOG.md
           git diff --staged --quiet || git commit -m "🔄 Weekly auto-update $(date +%Y-%m-%d)"
 
       - name: Push changes (triggers Vercel redeploy)
         run: |
-          # Rebase: main poate avansa în timpul job-ului (~15 min).
-          git pull --rebase origin main
+          # Rebase: main poate avansa în timpul job-ului (~15-30 min).
+          # --autostash: apara impotriva oricarei modificari ramase unstaged
+          # (in loc sa esueze cu "cannot pull with rebase: you have unstaged changes").
+          git pull --rebase --autostash origin main
           git push
