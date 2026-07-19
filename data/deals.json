@@ -29377,7 +29377,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.738717+00:00",
     "pret_minim_30z": 2020.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:23.987375+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727822",
@@ -29413,7 +29418,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.738959+00:00",
     "pret_minim_30z": 1865.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:29.677209+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727824",
@@ -29449,7 +29459,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.739188+00:00",
     "pret_minim_30z": 1945.83,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:31.489442+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727818",
@@ -29485,7 +29500,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.739415+00:00",
     "pret_minim_30z": 1790.83,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:33.554475+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727820",
@@ -29521,7 +29541,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.739696+00:00",
     "pret_minim_30z": 1865.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:35.068256+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727816",
@@ -29557,7 +29582,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.739921+00:00",
     "pret_minim_30z": 1690.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:37.145509+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727814",
@@ -29593,7 +29623,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.740143+00:00",
     "pret_minim_30z": 1690.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:41.209555+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727812",
@@ -29629,7 +29664,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.740365+00:00",
     "pret_minim_30z": 1615.83,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:46.476675+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727810",
@@ -29665,7 +29705,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.740613+00:00",
     "pret_minim_30z": 1541.67,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:50.904718+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727808",
@@ -29701,7 +29746,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.740842+00:00",
     "pret_minim_30z": 1541.67,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:53.689320+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727800",
@@ -29737,7 +29787,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.741071+00:00",
     "pret_minim_30z": 1405.83,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:56.472051+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727806",
@@ -29773,7 +29828,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.741297+00:00",
     "pret_minim_30z": 1467.5,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:53:36.916995+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727804",
@@ -29809,7 +29869,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.741521+00:00",
     "pret_minim_30z": 1480.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:53:39.523452+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727802",
@@ -29845,7 +29910,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.741776+00:00",
     "pret_minim_30z": 1480.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:53:40.885632+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727798",
@@ -29953,7 +30023,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.742458+00:00",
     "pret_minim_30z": 1858.68,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:23.987616+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-opel-astra-15565",
@@ -29989,7 +30064,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.742722+00:00",
     "pret_minim_30z": 1610.74,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:29.828173+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-opel-astra-15563",
@@ -30025,7 +30105,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.742965+00:00",
     "pret_minim_30z": 2437.19,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:31.816066+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-opel-astra-15555",
@@ -30061,7 +30146,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.743209+00:00",
     "pret_minim_30z": 1238.84,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:33.604531+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-opel-astra-15551",
@@ -30097,7 +30187,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.743452+00:00",
     "pret_minim_30z": 619.01,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:35.237573+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-dacia-dust-13844",
@@ -30133,7 +30228,10 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.743828+00:00",
     "pret_minim_30z": 1404.13,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "rate_limited",
+    "link_checked_at": "2026-07-19T20:52:38.033592+00:00",
+    "link_flaky_count": 1
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-ford-fiest-13502",
@@ -30169,7 +30267,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.744083+00:00",
     "pret_minim_30z": 1032.23,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:42.898427+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-ford-fusio-13503",
@@ -30205,7 +30308,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.744330+00:00",
     "pret_minim_30z": 1032.23,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:48.153493+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-perfectbijoux-cercei-cu-perle-mira-7750304",
@@ -30241,7 +30349,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.744599+00:00",
     "pret_minim_30z": 59.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:23.987798+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-emobili-sca103-scaun-tapitat-alb-cu-trandafiri-m-142",
@@ -30277,7 +30390,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.744845+00:00",
     "pret_minim_30z": 412.4,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:23.988045+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-hiris-set-cadou-goddess-burberry-femei-apa-de--47262",
@@ -30313,115 +30431,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.745094+00:00",
     "pret_minim_30z": 536.36,
     "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-pachet-promo-saltea-silver-evolution-poc-92856706",
-    "slug": "pachet-promo-saltea-silver-evolution-pocket-spring-160x200x30-pilota-bumbac-stel",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: Saltea Silver Evolution Pocket Spring 160x200x30 + Pilota bumbac Stelute 200×220 + 2 Perne bumbac Stelute 50×70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Evolution_Pachet_2_Stelute.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Evolution_Pachet_2_Stelute.jpg",
-    "pret_original": 2158.53,
-    "pret_redus": 1500.0,
-    "procent_reducere": 31,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-silver-evolution-pocket-spring-160x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-promo-saltea-silver-evolution-pocket-spring-160x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-19T18:23:22Z",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: Saltea Silver Evolution Pocket Spring 160x200x30 + Pilota bumbac Stelute 200×220 + 2 Perne bumbac Stelute 50×70",
-    "store": "somnart",
-    "price": 1500.0,
-    "originalPrice": 2158.53,
-    "discount_percent": 31,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-silver-evolution-pocket-spring-160x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "url": "https://somnart.ro/produs/pachet-promo-saltea-silver-evolution-pocket-spring-160x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-19T18:23:22Z",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-19T06:37:22.745339+00:00",
-    "pret_minim_30z": 1500.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-pachet-promo-saltea-hypoallergenicmed-po-91957226",
-    "slug": "pachet-promo-saltea-hypoallergenicmed-polycotton-90x200x16-pilota-bumbac-stelute",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: Saltea HypoallergenicMed PolyCotton 90x200x16 + Pilota bumbac Stelute 150x200 + 1 Perna bumbac Stelute 50x70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Hypo_Pachet_Stelute_1.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Hypo_Pachet_Stelute_1.jpg",
-    "pret_original": 720.12,
-    "pret_redus": 499.99,
-    "procent_reducere": 31,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-hypoallergenicmed-polycotton-90x200x16-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-promo-saltea-hypoallergenicmed-polycotton-90x200x16-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-19T18:23:22Z",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: Saltea HypoallergenicMed PolyCotton 90x200x16 + Pilota bumbac Stelute 150x200 + 1 Perna bumbac Stelute 50x70",
-    "store": "somnart",
-    "price": 499.99,
-    "originalPrice": 720.12,
-    "discount_percent": 31,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-hypoallergenicmed-polycotton-90x200x16-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "url": "https://somnart.ro/produs/pachet-promo-saltea-hypoallergenicmed-polycotton-90x200x16-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-19T18:23:22Z",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-19T06:37:22.745599+00:00",
-    "pret_minim_30z": 499.99,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-pachet-promo-1-pilota-bumbac-stelute-180-91904565",
-    "slug": "pachet-promo-1-pilota-bumbac-stelute-180x200-2-perna-bumbac-stelute-50x70",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: 1 Pilota bumbac Stelute 180x200+ 2 Perna bumbac Stelute 50x70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Pachet_Stelute_2.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Pachet_Stelute_2.jpg",
-    "pret_original": 230.22,
-    "pret_redus": 160.0,
-    "procent_reducere": 31,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-student-1-pilota-bumbac-stelute-180x200-2-perna-bumbac-stelute-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-student-1-pilota-bumbac-stelute-180x200-2-perna-bumbac-stelute-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-19T18:23:22Z",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: 1 Pilota bumbac Stelute 180x200+ 2 Perna bumbac Stelute 50x70",
-    "store": "somnart",
-    "price": 160.0,
-    "originalPrice": 230.22,
-    "discount_percent": 31,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-student-1-pilota-bumbac-stelute-180x200-2-perna-bumbac-stelute-50x70",
-    "url": "https://somnart.ro/produs/pachet-student-1-pilota-bumbac-stelute-180x200-2-perna-bumbac-stelute-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-19T18:23:22Z",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-19T06:37:22.745828+00:00",
-    "pret_minim_30z": 160.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:26.840180+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-otter-pantofi-sport-bite-the-bullet-negri-g008-60446303",
@@ -30457,7 +30472,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.746052+00:00",
     "pret_minim_30z": 173.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:27.129029+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4728078",
@@ -30567,7 +30587,12 @@
     "is_fake_discount": false,
     "omnibus_validated": true,
     "image_fixed_at": "2026-07-19T18:14:27Z",
-    "image_fix_source": "agent:case-smart"
+    "image_fix_source": "agent:case-smart",
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:28.024306+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-magneziu-bisglicinat-liposomal-800mg-90c-63295",
@@ -30897,150 +30922,6 @@
     "link_flaky_count": 1
   },
   {
-    "id": "2p-somnart-pachet-promo-saltea-hypoallergenicmed-po-91957230",
-    "slug": "pachet-promo-saltea-hypoallergenicmed-polycotton-180x200x16-pilota-bumbac-stelut",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: Saltea HypoallergenicMed PolyCotton 180x200x16 + Pilota bumbac Stelute 200x220 + 2 Perne bumbac Stelute 50x70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Hypo_Pachet_Stelute_2.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Hypo_Pachet_Stelute_2.jpg",
-    "pret_original": 1149.73,
-    "pret_redus": 809.99,
-    "procent_reducere": 30,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-hypoallergenicmed-polycotton-180x200x16-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-promo-saltea-hypoallergenicmed-polycotton-180x200x16-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-19T18:23:22Z",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: Saltea HypoallergenicMed PolyCotton 180x200x16 + Pilota bumbac Stelute 200x220 + 2 Perne bumbac Stelute 50x70",
-    "store": "somnart",
-    "price": 809.99,
-    "originalPrice": 1149.73,
-    "discount_percent": 30,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-hypoallergenicmed-polycotton-180x200x16-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "url": "https://somnart.ro/produs/pachet-promo-saltea-hypoallergenicmed-polycotton-180x200x16-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-19T18:23:22Z",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-19T06:37:22.750054+00:00",
-    "pret_minim_30z": 809.99,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-pachet-promo-saltea-silver-evolution-poc-91938371",
-    "slug": "pachet-promo-saltea-silver-evolution-pocket-spring-140x200x30-pilota-bumbac-stel",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: Saltea Silver Evolution Pocket Spring 140x200x30 + Pilota bumbac Stelute 180×200 + 2 Perne bumbac Stelute 50×70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Evolution_Pachet_2_Stelute.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Evolution_Pachet_2_Stelute.jpg",
-    "pret_original": 1917.59,
-    "pret_redus": 1350.0,
-    "procent_reducere": 30,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-silver-evolution-pocket-spring-140x200x30-pilota-bumbac-stelute-180x200-2-perne-bumbac-stelute-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-promo-saltea-silver-evolution-pocket-spring-140x200x30-pilota-bumbac-stelute-180x200-2-perne-bumbac-stelute-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-19T18:23:22Z",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: Saltea Silver Evolution Pocket Spring 140x200x30 + Pilota bumbac Stelute 180×200 + 2 Perne bumbac Stelute 50×70",
-    "store": "somnart",
-    "price": 1350.0,
-    "originalPrice": 1917.59,
-    "discount_percent": 30,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-silver-evolution-pocket-spring-140x200x30-pilota-bumbac-stelute-180x200-2-perne-bumbac-stelute-50x70",
-    "url": "https://somnart.ro/produs/pachet-promo-saltea-silver-evolution-pocket-spring-140x200x30-pilota-bumbac-stelute-180x200-2-perne-bumbac-stelute-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-19T18:23:22Z",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-19T06:37:22.750287+00:00",
-    "pret_minim_30z": 1350.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-pachet-promo-1-pilota-bumbac-cosmos-150x-91921139",
-    "slug": "pachet-promo-1-pilota-bumbac-cosmos-150x200-1-perna-bumbac-cosmos-50x70",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: 1 Pilota bumbac Cosmos 150x200+ 1 Perna bumbac Cosmos 50x70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Pachet_Cosmos_1.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Pachet_Cosmos_1.jpg",
-    "pret_original": 171.29,
-    "pret_redus": 119.99,
-    "procent_reducere": 30,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-1-pilota-bumbac-cosmos-150x200-1-perna-bumbac-cosmos-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-promo-1-pilota-bumbac-cosmos-150x200-1-perna-bumbac-cosmos-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-19T18:23:22Z",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: 1 Pilota bumbac Cosmos 150x200+ 1 Perna bumbac Cosmos 50x70",
-    "store": "somnart",
-    "price": 119.99,
-    "originalPrice": 171.29,
-    "discount_percent": 30,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-1-pilota-bumbac-cosmos-150x200-1-perna-bumbac-cosmos-50x70",
-    "url": "https://somnart.ro/produs/pachet-promo-1-pilota-bumbac-cosmos-150x200-1-perna-bumbac-cosmos-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-19T18:23:22Z",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-19T06:37:22.750513+00:00",
-    "pret_minim_30z": 119.99,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-pachet-promo-1-pilota-bumbac-stelute-150-91904563",
-    "slug": "pachet-promo-1-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: 1 Pilota bumbac Stelute 150x200+ 1 Perna bumbac Stelute 50x70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Pachet_Stelute_1.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Pachet_Stelute_1.jpg",
-    "pret_original": 171.29,
-    "pret_redus": 119.99,
-    "procent_reducere": 30,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-student-1-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-student-1-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-19T18:23:22Z",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: 1 Pilota bumbac Stelute 150x200+ 1 Perna bumbac Stelute 50x70",
-    "store": "somnart",
-    "price": 119.99,
-    "originalPrice": 171.29,
-    "discount_percent": 30,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-student-1-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "url": "https://somnart.ro/produs/pachet-student-1-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-19T18:23:22Z",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-19T06:37:22.750765+00:00",
-    "pret_minim_30z": 119.99,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
     "id": "2p-casanewconcept-lenjerie-din-finet-5d-cu-6-piese-si-cear-54143323",
     "slug": "lenjerie-din-finet-5d-cu-6-piese-si-cearceaf-cu-elastic-nod-20",
     "magazin": "casanewconcept",
@@ -31074,7 +30955,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.750990+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:28.272499+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-5d-cu-6-piese-si-cear-54143322",
@@ -31110,7 +30996,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.751217+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:30.579541+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-5d-cu-6-piese-si-cear-54143321",
@@ -31146,7 +31037,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.751444+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:32.184784+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-5d-cu-6-piese-si-cear-54143320",
@@ -31182,7 +31078,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.751726+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:33.793759+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-5d-cu-6-piese-si-cear-54143319",
@@ -31218,7 +31119,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.751953+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:36.951331+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-5d-cu-6-piese-si-cear-54143318",
@@ -31254,7 +31160,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.752186+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:40.142231+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-husa-de-pat-din-finet-2-fete-de-perne-sa-68479590",
@@ -31290,7 +31201,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.752411+00:00",
     "pret_minim_30z": 69.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:45.397043+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-husa-de-pat-din-finet-2-fete-de-perne-sa-68479589",
@@ -31326,7 +31242,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.752664+00:00",
     "pret_minim_30z": 69.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:49.802709+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-husa-de-pat-din-finet-2-fete-de-perne-sa-68479588",
@@ -31362,7 +31283,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.752889+00:00",
     "pret_minim_30z": 69.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:52.652647+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-husa-de-pat-din-finet-2-fete-de-perne-sa-68479587",
@@ -31398,7 +31324,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.753113+00:00",
     "pret_minim_30z": 69.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:55.394146+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-husa-de-pat-din-finet-2-fete-de-perne-sa-68479585",
@@ -32334,7 +32265,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.759298+00:00",
     "pret_minim_30z": 744.62,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:28.561560+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-vopsea-de-par-fara-amoniac-fara-silicon--46732319",
@@ -32370,7 +32306,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.759566+00:00",
     "pret_minim_30z": 35.07,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:29.161378+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-butelie-hidrofor-inox-100l-vas-expansiun-36306577",
@@ -32406,7 +32347,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.759815+00:00",
     "pret_minim_30z": 699.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:29.164360+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-vegis-advanced-creatine-monohydrate-taurine-ci-756",
@@ -32442,7 +32388,12 @@
     "omnibus_checked_at": "2026-07-19T06:37:22.760060+00:00",
     "pret_minim_30z": 115.91,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-19T20:52:29.427591+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-husa-de-pat-din-finet-2-fete-de-perne-sa-59401029",
