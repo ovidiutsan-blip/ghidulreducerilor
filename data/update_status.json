@@ -1,9 +1,9 @@
 {
-  "ultima_actualizare": "2026-07-05T08:01:01.096484+00:00",
+  "ultima_actualizare": "2026-07-19T18:24:03.722625+00:00",
   "success": true,
-  "duration_s": 1201.4,
+  "duration_s": 594.6,
   "audit_score": 95,
   "repairs_applied": 0,
-  "links_ok": 21,
+  "links_ok": 63,
   "links_broken": 0
 }
