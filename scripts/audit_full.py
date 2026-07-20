@@ -780,12 +780,19 @@ def main():
     save_report(report, output_format=args.output)
     print_summary(report)
 
-    # Exit code based on score
+    # os._exit (nu sys.exit): thread-urile non-daemon ale ThreadPoolExecutor-ului
+    # din link_checker (verificări abandonate la GLOBAL_DEADLINE, încă în execuție —
+    # ex. redirect-uri lente neplafonate de PER_REQUEST_BUDGET) blochează la
+    # nesfârșit ieșirea procesului dacă folosim sys.exit; toate scrierile de
+    # fișiere (raport, AUDIT_LOG.md) sunt deja complete în acest punct.
+    # Același fix ca în link_checker.py:main() (linia cu "stragglers"), aplicat
+    # aici pentru că audit_full.py nu îl moștenea (cauza hang-ului din 2026-07-20).
+    logging.shutdown()
     if report['score'] < 50:
-        sys.exit(2)  # Critical
+        os._exit(2)  # Critical
     elif report['score'] < 80:
-        sys.exit(1)  # Warnings
-    sys.exit(0)
+        os._exit(1)  # Warnings
+    os._exit(0)
 
 
 if __name__ == '__main__':
