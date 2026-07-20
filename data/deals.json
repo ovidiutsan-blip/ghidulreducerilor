@@ -607,7 +607,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:53.903780+00:00",
     "pret_minim_30z": 2.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:16.884451+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-watch24-bratara-din-aliaj-cu-elemente-din-zircon-BIJOU1",
@@ -697,7 +702,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 50x90 cm din Bumbac 100%  - Bej",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Bej.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 69.0,
     "pret_redus": 23.0,
     "procent_reducere": 67,
@@ -738,7 +743,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 50x90 cm din Bumbac 100%  - Crem",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Crem.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 69.0,
     "pret_redus": 23.0,
     "procent_reducere": 67,
@@ -779,7 +784,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 50x90 cm din Bumbac 100%  - Rosu",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Rosu.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 69.0,
     "pret_redus": 23.0,
     "procent_reducere": 67,
@@ -820,7 +825,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 50x90 cm din Bumbac 100%  - Mov",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Mov.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 69.0,
     "pret_redus": 23.0,
     "procent_reducere": 67,
@@ -861,7 +866,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 50x90 cm din Bumbac 100%  - Albastru",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Albastru-Inchis.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 69.0,
     "pret_redus": 23.0,
     "procent_reducere": 67,
@@ -902,7 +907,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 50x90 cm din Bumbac 100%  - Turqoaz",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Turcoaz.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 69.0,
     "pret_redus": 23.0,
     "procent_reducere": 67,
@@ -943,7 +948,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 50x90 cm din Bumbac 100%  - Verde",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Verde.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 69.0,
     "pret_redus": 23.0,
     "procent_reducere": 67,
@@ -984,7 +989,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 50x90 cm din Bumbac 100%  - Papagal",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Verde-Papagal.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 69.0,
     "pret_redus": 23.0,
     "procent_reducere": 67,
@@ -1025,7 +1030,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 50x90 cm din Bumbac 100%  - Corai",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Corai.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 69.0,
     "pret_redus": 23.0,
     "procent_reducere": 67,
@@ -2500,7 +2505,7 @@
     "slug": "smartwatch-cu-apel-bluetooth-ritm-cardiac-tensiune-arteriala-nivel-oxigen-calori",
     "magazin": "watch24",
     "titlu": "SmartWatch cu Apel Bluetooth, Ritm Cardiac, Tensiune Arteriala, Nivel Oxigen, Calorii, Pasi, Distanta, Vreme, Somn, Calculator S814",
-    "imagine_url": "",
+    "imagine_url": "/images/watch24/ps-watch24-smartwatch-cu-apel-bluetooth-ritm-cardia-smart814.jpg",
     "pret_original": 500.0,
     "pret_redus": 189.26,
     "procent_reducere": 62,
@@ -3189,7 +3194,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 70x130 cm din Bumbac 100%  - Verde",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Verde.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 89.0,
     "pret_redus": 40.0,
     "procent_reducere": 55,
@@ -3230,7 +3235,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 70x130 cm din Bumbac 100%  - Turqoaz",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Turcoaz.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 89.0,
     "pret_redus": 40.0,
     "procent_reducere": 55,
@@ -3271,7 +3276,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 70x130 cm din Bumbac 100%  - Rosu",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Rosu.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 89.0,
     "pret_redus": 40.0,
     "procent_reducere": 55,
@@ -3312,7 +3317,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 70x130 cm din Bumbac 100%  - Papagal",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Verde-Papagal.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 89.0,
     "pret_redus": 40.0,
     "procent_reducere": 55,
@@ -3353,7 +3358,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 70x130 cm din Bumbac 100%  - Mov",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Mov.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 89.0,
     "pret_redus": 40.0,
     "procent_reducere": 55,
@@ -3394,7 +3399,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 70x130 cm din Bumbac 100%  - Crem",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Crem.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 89.0,
     "pret_redus": 40.0,
     "procent_reducere": 55,
@@ -3435,7 +3440,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 70x130 cm din Bumbac 100%  - Corai",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Corai.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 89.0,
     "pret_redus": 40.0,
     "procent_reducere": 55,
@@ -3476,7 +3481,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 70x130 cm din Bumbac 100%  - Bej",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Bej.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 89.0,
     "pret_redus": 40.0,
     "procent_reducere": 55,
@@ -3517,7 +3522,7 @@
     "magazin": "casanewconcept",
     "titlu": "Prosop de Baie 70x130 cm din Bumbac 100%  - Albastru",
     "image": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
-    "imagine_url": "https://ik.imagekit.io/d3vpro/cnc/image/catalog/products_2026/06/18/Prosop-Baie%2C-Bumbac-100_---Albastru-Inchis.jpg?tr=w-600,h-315",
+    "imagine_url": "https://casanewconcept.ro/image/catalog/products_2026/06/18/Prosop-Baie",
     "pret_original": 89.0,
     "pret_redus": 40.0,
     "procent_reducere": 55,
@@ -17687,7 +17692,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.013610+00:00",
     "pret_minim_30z": 129.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:16.884729+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-microsoft-project-professional-2021-1-di-42857177",
@@ -20677,150 +20687,6 @@
     "link_flaky_count": 1
   },
   {
-    "id": "2p-somnart-set-2-prosoape-maini-bumbac-100-600gsm-s-91660597",
-    "slug": "set-2-prosoape-maini-bumbac-100-600gsm-somnart-30x50cm-lila",
-    "magazin": "somnart",
-    "titlu": "Set 2 prosoape maini bumbac 100%, 600gsm, Somnart, 30x50cm, lila",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/SET.2PR.600.30X50.LILA_.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/SET.2PR.600.30X50.LILA_.jpg",
-    "pret_original": 20.74,
-    "pret_redus": 13.83,
-    "procent_reducere": 33,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fset-2-prosoape-maini-bumbac-100-600gsm-somnart-30x50cm-lila",
-    "product_url": "https://somnart.ro/produs/set-2-prosoape-maini-bumbac-100-600gsm-somnart-30x50cm-lila",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-20",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Set 2 prosoape maini bumbac 100%, 600gsm, Somnart, 30x50cm, lila",
-    "store": "somnart",
-    "price": 13.83,
-    "originalPrice": 20.74,
-    "discount_percent": 33,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fset-2-prosoape-maini-bumbac-100-600gsm-somnart-30x50cm-lila",
-    "url": "https://somnart.ro/produs/set-2-prosoape-maini-bumbac-100-600gsm-somnart-30x50cm-lila",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-20",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-20T06:46:54.030564+00:00",
-    "pret_minim_30z": 13.83,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-prosop-de-maini-bumbac-100-500gsm-somnar-91660591",
-    "slug": "prosop-de-maini-bumbac-100-500gsm-somnart-30x50cm-ivory",
-    "magazin": "somnart",
-    "titlu": "Prosop de maini bumbac 100%, 500gsm, Somnart, 30x50cm, ivory",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/PROSOP.M.500.IVOYRE.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/PROSOP.M.500.IVOYRE.jpg",
-    "pret_original": 8.5,
-    "pret_redus": 5.66,
-    "procent_reducere": 33,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fprosop-de-fata-bumbac-100-500gsm-somnart-30x50cm-ivory",
-    "product_url": "https://somnart.ro/produs/prosop-de-fata-bumbac-100-500gsm-somnart-30x50cm-ivory",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-20",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Prosop de maini bumbac 100%, 500gsm, Somnart, 30x50cm, ivory",
-    "store": "somnart",
-    "price": 5.66,
-    "originalPrice": 8.5,
-    "discount_percent": 33,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fprosop-de-fata-bumbac-100-500gsm-somnart-30x50cm-ivory",
-    "url": "https://somnart.ro/produs/prosop-de-fata-bumbac-100-500gsm-somnart-30x50cm-ivory",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-20",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-20T06:46:54.030892+00:00",
-    "pret_minim_30z": 5.66,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-prosop-de-maini-bumbac-100-500gsm-somnar-91660590",
-    "slug": "prosop-de-maini-bumbac-100-500gsm-somnart-30x50cm-turcoaz",
-    "magazin": "somnart",
-    "titlu": "Prosop de maini bumbac 100%, 500gsm, Somnart, 30x50cm, turcoaz",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/PROSOP.M.500.TURCOAZ.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/PROSOP.M.500.TURCOAZ.jpg",
-    "pret_original": 8.5,
-    "pret_redus": 5.66,
-    "procent_reducere": 33,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fprosop-de-fata-bumbac-100-500gsm-somnart-30x50cm-turcoaz",
-    "product_url": "https://somnart.ro/produs/prosop-de-fata-bumbac-100-500gsm-somnart-30x50cm-turcoaz",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-20",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Prosop de maini bumbac 100%, 500gsm, Somnart, 30x50cm, turcoaz",
-    "store": "somnart",
-    "price": 5.66,
-    "originalPrice": 8.5,
-    "discount_percent": 33,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fprosop-de-fata-bumbac-100-500gsm-somnart-30x50cm-turcoaz",
-    "url": "https://somnart.ro/produs/prosop-de-fata-bumbac-100-500gsm-somnart-30x50cm-turcoaz",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-20",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-20T06:46:54.031143+00:00",
-    "pret_minim_30z": 5.66,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-set-prosoape-3-piese-500-gsm-fata-maini--91614423",
-    "slug": "set-prosoape-3-piese-500-gsm-fata-maini-corp-ivory-somnart",
-    "magazin": "somnart",
-    "titlu": "Set prosoape 3 piese 500 gsm (fata, maini, corp) Ivory, SomnART",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/SET.3PROS.500G.IVORY_.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/SET.3PROS.500G.IVORY_.jpg",
-    "pret_original": 101.35,
-    "pret_redus": 67.57,
-    "procent_reducere": 33,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fset-prosoape-3-piese-500-gsm-fata-maini-corp-ivory-somnart",
-    "product_url": "https://somnart.ro/produs/set-prosoape-3-piese-500-gsm-fata-maini-corp-ivory-somnart",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-20",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Set prosoape 3 piese 500 gsm (fata, maini, corp) Ivory, SomnART",
-    "store": "somnart",
-    "price": 67.57,
-    "originalPrice": 101.35,
-    "discount_percent": 33,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fset-prosoape-3-piese-500-gsm-fata-maini-corp-ivory-somnart",
-    "url": "https://somnart.ro/produs/set-prosoape-3-piese-500-gsm-fata-maini-corp-ivory-somnart",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-20",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-20T06:46:54.031386+00:00",
-    "pret_minim_30z": 67.57,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
     "id": "ps-hotpick-resigilat-blender-vertical-3-in-1-camry--R CR4630",
     "slug": "resigilat-blender-vertical-3-in-1-camry-cr4630-500w",
     "magazin": "hotpick",
@@ -21927,42 +21793,6 @@
     "link_dead_count": 0,
     "link_timeout_count": 0,
     "link_flaky_count": 0
-  },
-  {
-    "id": "2p-somnart-pachet-promo-saltea-silver-evolution-poc-91942439",
-    "slug": "pachet-promo-saltea-silver-evolution-pocket-spring-180x200x30-pilota-bumbac-stel",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: Saltea Silver Evolution Pocket Spring 180x200x30 + Pilota bumbac Stelute 200×220 + 2 Perne bumbac Stelute 50×70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Evolution_Pachet_2_Stelute.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Evolution_Pachet_2_Stelute.jpg",
-    "pret_original": 2368.91,
-    "pret_redus": 1599.99,
-    "procent_reducere": 32,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-silver-evolution-pocket-spring-180x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-promo-saltea-silver-evolution-pocket-spring-180x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-20",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: Saltea Silver Evolution Pocket Spring 180x200x30 + Pilota bumbac Stelute 200×220 + 2 Perne bumbac Stelute 50×70",
-    "store": "somnart",
-    "price": 1599.99,
-    "originalPrice": 2368.91,
-    "discount_percent": 32,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-silver-evolution-pocket-spring-180x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "url": "https://somnart.ro/produs/pachet-promo-saltea-silver-evolution-pocket-spring-180x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-20",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-20T06:46:54.038816+00:00",
-    "pret_minim_30z": 1599.99,
-    "is_fake_discount": false,
-    "omnibus_validated": true
   },
   {
     "id": "2p-otter-sandale-flavia-passini-aurii-28382-din-p-77896445",
@@ -30175,7 +30005,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.091904+00:00",
     "pret_minim_30z": 2144.17,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:16.885306+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727796",
@@ -30211,7 +30046,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.092152+00:00",
     "pret_minim_30z": 2144.17,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:23.290111+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-opel-astra-15568",
@@ -30737,7 +30577,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.095530+00:00",
     "pret_minim_30z": 2450.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:27.903938+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727934",
@@ -30773,7 +30618,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.095778+00:00",
     "pret_minim_30z": 2031.67,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:32.309979+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-case-smart-modul-intrerupator-simplu-mecanic-2m-lux--008-2GY",
@@ -30817,114 +30667,6 @@
     "link_dead_count": 0,
     "link_timeout_count": 0,
     "link_flaky_count": 0
-  },
-  {
-    "id": "2p-somnart-pachet-promo-saltea-silver-evolution-poc-92856706",
-    "slug": "pachet-promo-saltea-silver-evolution-pocket-spring-160x200x30-pilota-bumbac-stel",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: Saltea Silver Evolution Pocket Spring 160x200x30 + Pilota bumbac Stelute 200×220 + 2 Perne bumbac Stelute 50×70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Evolution_Pachet_2_Stelute.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Evolution_Pachet_2_Stelute.jpg",
-    "pret_original": 2158.53,
-    "pret_redus": 1500.0,
-    "procent_reducere": 31,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-silver-evolution-pocket-spring-160x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-promo-saltea-silver-evolution-pocket-spring-160x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-20",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: Saltea Silver Evolution Pocket Spring 160x200x30 + Pilota bumbac Stelute 200×220 + 2 Perne bumbac Stelute 50×70",
-    "store": "somnart",
-    "price": 1500.0,
-    "originalPrice": 2158.53,
-    "discount_percent": 31,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-silver-evolution-pocket-spring-160x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "url": "https://somnart.ro/produs/pachet-promo-saltea-silver-evolution-pocket-spring-160x200x30-pilota-bumbac-stelute-200x220-2-perne-bumbac-stelute-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-20",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-20T06:46:54.096265+00:00",
-    "pret_minim_30z": 1500.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-pachet-promo-saltea-hypoallergenicmed-po-91957226",
-    "slug": "pachet-promo-saltea-hypoallergenicmed-polycotton-90x200x16-pilota-bumbac-stelute",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: Saltea HypoallergenicMed PolyCotton 90x200x16 + Pilota bumbac Stelute 150x200 + 1 Perna bumbac Stelute 50x70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Hypo_Pachet_Stelute_1.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Hypo_Pachet_Stelute_1.jpg",
-    "pret_original": 720.12,
-    "pret_redus": 499.99,
-    "procent_reducere": 31,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-hypoallergenicmed-polycotton-90x200x16-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-promo-saltea-hypoallergenicmed-polycotton-90x200x16-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-20",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: Saltea HypoallergenicMed PolyCotton 90x200x16 + Pilota bumbac Stelute 150x200 + 1 Perna bumbac Stelute 50x70",
-    "store": "somnart",
-    "price": 499.99,
-    "originalPrice": 720.12,
-    "discount_percent": 31,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-promo-saltea-hypoallergenicmed-polycotton-90x200x16-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "url": "https://somnart.ro/produs/pachet-promo-saltea-hypoallergenicmed-polycotton-90x200x16-pilota-bumbac-stelute-150x200-1-perna-bumbac-stelute-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-20",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-20T06:46:54.096535+00:00",
-    "pret_minim_30z": 499.99,
-    "is_fake_discount": false,
-    "omnibus_validated": true
-  },
-  {
-    "id": "2p-somnart-pachet-promo-1-pilota-bumbac-stelute-180-91904565",
-    "slug": "pachet-promo-1-pilota-bumbac-stelute-180x200-2-perna-bumbac-stelute-50x70",
-    "magazin": "somnart",
-    "titlu": "Pachet Promo: 1 Pilota bumbac Stelute 180x200+ 2 Perna bumbac Stelute 50x70",
-    "image": "https://somnart.ro/wp-content/uploads/2024/11/Pachet_Stelute_2.jpg",
-    "imagine_url": "https://somnart.ro/wp-content/uploads/2024/11/Pachet_Stelute_2.jpg",
-    "pret_original": 230.22,
-    "pret_redus": 160.0,
-    "procent_reducere": 31,
-    "link_afiliat": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-student-1-pilota-bumbac-stelute-180x200-2-perna-bumbac-stelute-50x70",
-    "product_url": "https://somnart.ro/produs/pachet-student-1-pilota-bumbac-stelute-180x200-2-perna-bumbac-stelute-50x70",
-    "categorie": "casa-gradina",
-    "data_adaugare": "2026-07-20",
-    "activ": true,
-    "is_active": true,
-    "sursa": "2performant",
-    "title": "Pachet Promo: 1 Pilota bumbac Stelute 180x200+ 2 Perna bumbac Stelute 50x70",
-    "store": "somnart",
-    "price": 160.0,
-    "originalPrice": 230.22,
-    "discount_percent": 31,
-    "affiliate_url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&aff_code=d8b71657a&redirect_to=https%3A%2F%2Fsomnart.ro%2Fprodus%2Fpachet-student-1-pilota-bumbac-stelute-180x200-2-perna-bumbac-stelute-50x70",
-    "url": "https://somnart.ro/produs/pachet-student-1-pilota-bumbac-stelute-180x200-2-perna-bumbac-stelute-50x70",
-    "categories": [
-      "casa-gradina"
-    ],
-    "score": 5,
-    "in_stock": true,
-    "scraped_at": "2026-07-20",
-    "magazine_key": "somnart",
-    "omnibus_checked_at": "2026-07-20T06:46:54.096787+00:00",
-    "pret_minim_30z": 160.0,
-    "is_fake_discount": false,
-    "omnibus_validated": true
   },
   {
     "id": "ps-vegis-magneziu-bisglicinat-liposomal-800mg-90c-63295",
@@ -31697,7 +31439,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.101739+00:00",
     "pret_minim_30z": 69.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:22.100420+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-husa-de-pat-din-finet-2-fete-de-perne-sa-68479584",
@@ -31733,7 +31480,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.101981+00:00",
     "pret_minim_30z": 69.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:26.324773+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-husa-de-pat-din-finet-2-fete-de-perne-sa-68479583",
@@ -31769,7 +31521,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.102230+00:00",
     "pret_minim_30z": 69.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:30.409044+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-si-cearceaf-c-61221477",
@@ -31805,7 +31562,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.102518+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:36.281065+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-si-cearceaf-c-61221476",
@@ -31841,7 +31603,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.102772+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:40.161428+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-si-cearceaf-c-61221475",
@@ -31877,7 +31644,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.103019+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:43.872950+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-si-cearceaf-c-61221474",
@@ -31913,7 +31685,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.103288+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:46.084681+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-si-cearceaf-c-61221472",
@@ -31949,7 +31726,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.103561+00:00",
     "pret_minim_30z": 139.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:48.835542+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-casanewconcept-lenjerie-din-finet-6-piese-si-cearceaf-c-61221471",
@@ -33805,7 +33587,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.116761+00:00",
     "pret_minim_30z": 2354.55,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:17.668330+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-kia-sporta-15430",
@@ -33841,7 +33628,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.117013+00:00",
     "pret_minim_30z": 660.33,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:23.577294+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-mercedes-m-14858",
@@ -33877,7 +33669,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.117264+00:00",
     "pret_minim_30z": 1817.36,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:28.614256+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-dacia-dust-13732",
@@ -33913,7 +33710,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.117545+00:00",
     "pret_minim_30z": 908.26,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:33.030140+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-dacia-dust-13674",
@@ -33949,7 +33751,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.117794+00:00",
     "pret_minim_30z": 1817.36,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:37.451455+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-perfectbijoux-cercei-eleganti-inspiratie-7750361",
@@ -33985,7 +33792,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.118044+00:00",
     "pret_minim_30z": 98.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:18.917113+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-perfectbijoux-cercei-dama-eleganti-miranda-7750367",
@@ -34021,7 +33833,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.118286+00:00",
     "pret_minim_30z": 87.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:24.628765+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-perfectbijoux-cercei-lungi-cu-perle-marlene-7750346",
@@ -34057,7 +33874,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.118559+00:00",
     "pret_minim_30z": 80.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:28.941838+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-perfectbijoux-inel-cu-piatra-albastra-ag925-elena-7750352",
@@ -34093,7 +33915,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.118819+00:00",
     "pret_minim_30z": 84.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:34.360338+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-perfectbijoux-cercei-colorati-lungi-artemis-7750306",
@@ -34129,7 +33956,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.119146+00:00",
     "pret_minim_30z": 84.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:38.532069+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-perfectbijoux-inel-tennis-luciana-7750291",
@@ -34165,7 +33997,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.119395+00:00",
     "pret_minim_30z": 42.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:42.154916+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-birou-stil-industrial-emro-nuc-5PUQ3826",
@@ -34201,7 +34038,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.119666+00:00",
     "pret_minim_30z": 912.68,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:19.063672+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-covor-lana-chulda-marine-200-x-300-A morski",
@@ -34237,7 +34079,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.119911+00:00",
     "pret_minim_30z": 1676.39,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:25.335545+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-covor-lana-torena-080-x-300-szmaragd",
@@ -34273,7 +34120,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.120155+00:00",
     "pret_minim_30z": 670.54,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:29.727512+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-covor-lana-nessa-black-080-x-120-A czarny",
@@ -34309,7 +34161,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.120401+00:00",
     "pret_minim_30z": 548.72,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:34.924021+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-traversa-lana-sefora-alabaster-080-x-360-bastrowy",
@@ -34345,7 +34202,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.120674+00:00",
     "pret_minim_30z": 949.31,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:39.520544+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-comoda-tv-180-x-30-x-50-luxe-alb-si-auri-8BLY1102",
@@ -34381,7 +34243,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.120925+00:00",
     "pret_minim_30z": 695.89,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:42.404294+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-scule365-aparat-de-taiat-gresie-si-faianta-800mm--81794780",
@@ -34417,7 +34284,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.121172+00:00",
     "pret_minim_30z": 373.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:20.092434+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-fotoliu-puf-bean-bag-pyramid-big-bed-pou-8FRN1197",
@@ -34453,7 +34325,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.121418+00:00",
     "pret_minim_30z": 215.9,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:45.244657+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-noptiera-pal-light-mocha-45-x-50-x-40-5DTE3515",
@@ -34489,7 +34366,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.121704+00:00",
     "pret_minim_30z": 296.91,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:48.028065+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-covor-lana-savana-200-x-300-ght-grey",
@@ -34525,7 +34407,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.121954+00:00",
     "pret_minim_30z": 1843.36,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:49.956484+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-covor-lana-vivida-200-x-300-vida-bez",
@@ -34561,7 +34448,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.122202+00:00",
     "pret_minim_30z": 1843.36,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:52.571968+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-covor-lana-aida-light-grey-133-x-190-ght-grey",
@@ -34597,7 +34489,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.122474+00:00",
     "pret_minim_30z": 1031.14,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:55.288079+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-covor-lana-ros-antracyt-133-x-190--proskat",
@@ -34633,7 +34530,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.122725+00:00",
     "pret_minim_30z": 1909.94,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:14:31.016375+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-startdecor-comoda-tv-mistico-180-walnut-black-180-x-5ZNA3058",
@@ -34741,7 +34643,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.123491+00:00",
     "pret_minim_30z": 476.85,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:20.393305+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "2p-springfarma-gel-arnica-si-galbenele-100ml-mustela-02461078",
@@ -34777,7 +34684,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.123740+00:00",
     "pret_minim_30z": 51.38,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:21.033059+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-6d99b026",
@@ -34812,7 +34724,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.123985+00:00",
     "pret_minim_30z": 599.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:21.108454+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "evomag-1415f555",
@@ -34847,7 +34764,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.124232+00:00",
     "pret_minim_30z": 1299.99,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:25.840839+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-emobili-sem222-set-masa-toaleta-90-cm-cosmetica--1807",
@@ -34883,7 +34805,12 @@
     "omnibus_checked_at": "2026-07-20T06:46:54.124503+00:00",
     "pret_minim_30z": 1280.17,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:21.335623+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-streamstore-autodesk-autocad-electrical-licenta-come-006-2022",
@@ -34921,7 +34848,12 @@
     "is_fake_discount": false,
     "omnibus_validated": true,
     "image_fixed_at": "2026-07-19T18:14:14Z",
-    "image_fix_source": "agent:streamstore"
+    "image_fix_source": "agent:streamstore",
+    "link_status": "ok",
+    "link_checked_at": "2026-07-20T21:13:21.430737+00:00",
+    "link_dead_count": 0,
+    "link_timeout_count": 0,
+    "link_flaky_count": 0
   },
   {
     "id": "ps-mindblower-set-cadou-decantor-mitraliera-si-2-pahar-4175",
