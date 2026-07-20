@@ -598,6 +598,13 @@ def main():
             # Fara expire pentru merchantii nefetch-uiti (successful_slugs ramane cum e).
             log(f"  ABORT rate-limit: {e} — restul merchantilor sar peste acest run.")
             break
+        except requests.exceptions.RequestException as e:
+            # Eroare de conexiune (DNS/timeout/etc) la api_get(), netratata inca de
+            # sesiune — spre deosebire de rate-limit, nu opreste restul merchantilor
+            # (acelasi fix ca in ps_feed_to_deals.py, 2026-07-20: o pana de retea la
+            # un singur merchant nu trebuie sa piarda actualizarea celorlalti).
+            log(f"  {magazin}: eroare conexiune, sar peste ({e})")
+            continue
         all_new_deals.extend(deals)
         if success:
             all_seen_urls |= valid_urls
