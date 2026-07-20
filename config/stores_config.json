@@ -5,7 +5,7 @@
     "name": "eMAG",
     "slug": "emag",
     "affiliate_network": "profitshare",
-    "status": "activ",
+    "status": "blocked_waf_captcha",
     "base_url": "https://www.emag.ro",
     "categories": [
       {"name": "electronice", "url": "https://www.emag.ro/telefoane-mobile/sort-discountdesc/c"},
