@@ -27,15 +27,15 @@
 
 ## Automated Audit Results
 
-**Last run:** 2026-07-19T18:14:10.147201+00:00
-**Score:** 95/100
-**Checks:** 5 pass, 0 fail, 1 warn, 2 skip
-**Total issues:** 4
+**Last run:** 2026-07-20T18:48:27.713418+00:00
+**Score:** 80/100
+**Checks:** 5 pass, 1 fail, 1 warn, 1 skip
+**Total issues:** 6
 
 | Check | Status | Issues |
 |-------|--------|--------|
 | homepage | PASS | 0 (—) |
-| affiliate_links | SKIP | 0 (—) |
+| affiliate_links | FAIL | 2 (Dead affiliate link: 2p-somnart-set-2-prosoape-maini-bumbac-) |
 | store_coverage | WARN | 3 (Active store 'eMAG' has 0 deals) |
 | images | PASS | 0 (—) |
 | image_hosts | PASS | 0 (—) |
