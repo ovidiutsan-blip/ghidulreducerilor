@@ -174,7 +174,7 @@ def generate_posts(deals: list[dict], verify_live: bool = True) -> dict:
         verified_deals.append(d)
 
     if not verified_deals:
-        return {"date": today, "posts": [], "deals_verified": 0}
+        return {"date": today, "posts": [], "deals_verified": 0, "deals_skipped": len(deals)}
 
     # Alegeăm deal-ul star pentru posturi individuale
     star = verified_deals[0]

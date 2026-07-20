@@ -29,8 +29,9 @@ jobs:
     name: Full Site Audit
     runs-on: ubuntu-latest
     # Deadline-ul intern al verificării de linkuri e 960s (link_checker.GLOBAL_DEADLINE);
-    # 25 min lasă loc pentru setup + restul check-urilor, ca la link-checker.yml.
-    timeout-minutes: 25
+    # 25 min s-a dovedit insuficient — 100% eșec pe schedule de luni de zile,
+    # mereu chiar la limită (20.3-25.3min observate; vezi 2026-07-20).
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repo
@@ -73,5 +74,7 @@ jobs:
       - name: Push results
         run: |
           # Rebase: main poate primi alte commit-uri în cele ~17 min de audit.
-          git pull --rebase origin main
+          # --autostash: apara impotriva oricarei modificari ramase unstaged
+          # (aceeasi reteta ca la auto-update-weekly.yml, 2026-07-19).
+          git pull --rebase --autostash origin main
           git push
