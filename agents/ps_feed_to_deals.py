@@ -199,7 +199,16 @@ def main():
         if i:
             time.sleep(5)  # cooldown între merchants ca să nu alimentăm 429-ul
         print(f"\n[{magazin}] fetching {max_pages}p (min {min_pct}% reducere), cat='{categorie}', whitelist={allowed_cats is not None}")
-        new_deals, valid_urls, success = fetch_deals(magazin, adv_id, categorie, max_pages=max_pages, min_pct=min_pct, allowed_cats=allowed_cats)
+        try:
+            new_deals, valid_urls, success = fetch_deals(magazin, adv_id, categorie, max_pages=max_pages, min_pct=min_pct, allowed_cats=allowed_cats)
+        except requests.exceptions.RequestException as e:
+            # O eroare de conexiune (DNS/timeout/etc, spre deosebire de un status HTTP
+            # gestionat deja de retry-ul din fetch_deals) nu trebuie sa opreasca toata
+            # rularea — altfel un singur merchant pica intreaga actualizare PS a zilei
+            # (nici salvarea finala nu se mai face, vezi 2026-07-20: DNS jos ~5 min a
+            # blocat toti cei 16 merchanti activi, nu doar cel afectat).
+            print(f"  {magazin}: eroare conexiune, sar peste ({e})")
+            continue
         print(f"  extracted: {len(new_deals)} deals w/ real discount")
         if success:
             all_seen_urls |= valid_urls
