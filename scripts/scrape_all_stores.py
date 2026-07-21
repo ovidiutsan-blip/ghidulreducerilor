@@ -64,6 +64,8 @@ def generate_ps_links(links_data):
                     ps_url = r.get("ps_url", "").replace("http://profitshare.ro", "https://profitshare.ro")
                     if ps_url:
                         all_results[r["name"]] = ps_url
+        except Exception as e:
+            print(f"  batch {i}: eroare conexiune la generarea linkurilor, sar peste ({e})")
         finally:
             conn.close()
         time.sleep(0.5)
