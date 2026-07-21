@@ -26,16 +26,25 @@ PER_PAGE = 50
 MIN_PCT = 10
 
 
+MAX_PROGRAM_PAGES = 60  # plafon de siguranta, nu limita reala asteptata
+
+
 def fetch_accepted_programs() -> list[dict]:
     # API-ul ignoră uneori per_page (întoarce 20/pagină) — iterăm până la
-    # pagină goală, nu ne bazăm pe len(batch) < per_page.
+    # pagină goală, nu ne bazăm pe len(batch) < per_page. Plafonul de 20 pagini
+    # folosit initial (=400 programe) s-a dovedit insuficient: Litera (acceptat
+    # cu 2 zile inainte) nu a fost gasit desi era acceptat, pentru ca API-ul
+    # pare sa intoarca programele intr-o ordine care il plaseaza dupa pagina 20.
     programs: list[dict] = []
-    for page in range(1, 21):
+    for page in range(1, MAX_PROGRAM_PAGES + 1):
         data = api_get("affiliate/programs", params={"per_page": 100, "page": page})
         batch = data.get("programs") or (data if isinstance(data, list) else [])
         if not batch:
             break
         programs.extend(batch)
+    else:
+        print(f"  ATENTIE: plafonul de {MAX_PROGRAM_PAGES} pagini atins "
+              f"({len(programs)} programe) — posibil trunchiat, ridica MAX_PROGRAM_PAGES.")
     return programs
 
 

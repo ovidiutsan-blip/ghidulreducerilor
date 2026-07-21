@@ -193,9 +193,11 @@ def scan_2p(probe: bool = True) -> list[dict]:
 
     log(f"2P: {len(known_codes)} merchantii configurati deja")
 
-    # Fetch toate programele aprobate
+    # Fetch toate programele aprobate. API-ul ignora per_page (intoarce 20/pagina
+    # indiferent de valoarea ceruta) — nu ne oprim la len(batch) < per_page,
+    # doar la pagina goala (plafon de siguranta generos, nu limita reala).
     programs = []
-    for page in range(1, 10):
+    for page in range(1, 60):
         try:
             data = p2_api_get("affiliate/programs", params={"per_page": 100, "page": page})
         except TwoPerformantRateLimited as e:
@@ -208,8 +210,6 @@ def scan_2p(probe: bool = True) -> list[dict]:
         if not batch:
             break
         programs.extend(batch)
-        if len(batch) < 100:
-            break
 
     log(f"2P: {len(programs)} programe totale")
 
@@ -351,14 +351,12 @@ def dump_2p_raw():
         log("dump 2P skip: credentiale lipsa")
         return
     programs = []
-    for page in range(1, 10):
+    for page in range(1, 60):
         data = p2_api_get("affiliate/programs", params={"per_page": 100, "page": page})
         batch = data.get("programs") or (data if isinstance(data, list) else [])
         if not batch:
             break
         programs.extend(batch)
-        if len(batch) < 100:
-            break
     print(f"=== {len(programs)} programe ===")
     for p in programs:
         aff = p.get("affrequest") or {}
