@@ -8506,7 +8506,7 @@
     "slug": "folie-sticla-securizata-hd-premium-9h-pentru-ecran-navigatie-2k-10-36-inch",
     "magazin": "navigatiiandroid",
     "titlu": "Folie sticla securizata HD Premium 9H pentru ecran navigatie 2K 10.36 inch",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/104096996/p/m/4/folie-sticla-securizata-hd-premium-9h-pentru-ecran-navigatie-2k-10-36~100193274.jpg",
     "pret_original": 99.0,
     "pret_redus": 57.02,
     "procent_reducere": 42,
@@ -8525,7 +8525,7 @@
     "discount_percent": 42,
     "affiliate_url": "https://app.profitshare.ro/lps/EhD/kd8/?redirect=https%3A%2F%2Fwww.navigatiiandroid.ro%2Faccesorii-diverse%2Ffolie-sticla-securizata-hd-premium-9h-pentru-ecran-navigatie-2k-10-36-inch",
     "url": "https://www.navigatiiandroid.ro/accesorii-diverse/folie-sticla-securizata-hd-premium-9h-pentru-ecran-navigatie-2k-10-36-inch",
-    "image": "https://profitsmart.ro/product_images/photos/50/02/80/50027523-55258419.jpg",
+    "image": "https://c.cdnmp.net/104096996/p/m/4/folie-sticla-securizata-hd-premium-9h-pentru-ecran-navigatie-2k-10-36~100193274.jpg",
     "categories": [
       "electronice"
     ],
@@ -8540,7 +8540,9 @@
     "link_checked_at": "2026-07-14T21:01:46.646407+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-navigatiiandroid-folie-sticla-securizata-hd-premium-9h-pe-15748",
@@ -8711,7 +8713,7 @@
     "slug": "sem224-set-masa-toaleta-80-cm-cosmetica-machiaj-cu-oglinda-masuta-vanity-maro-st",
     "magazin": "emobili",
     "titlu": "SEM224 - Set Masa toaleta, 80 cm, cosmetica machiaj cu oglinda, masuta vanity - Maro stil industrial",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/322284412/p/m/7/sem224-set-masa-toaleta-80-cm-cosmetica-machiaj-cu-oglinda-masuta~9967.jpg",
     "pret_original": 1625.87,
     "pret_redus": 949.59,
     "procent_reducere": 42,
@@ -8730,7 +8732,7 @@
     "discount_percent": 42,
     "affiliate_url": "https://app.profitshare.ro/lps/eo0/kd8/?redirect=https%3A%2F%2Fwww.emobili.ro%2Fcumpara%2Fsem224-set-masa-toaleta-80-cm-cosmetica-machiaj-cu-oglinda-masuta-1809",
     "url": "https://www.emobili.ro/cumpara/sem224-set-masa-toaleta-80-cm-cosmetica-machiaj-cu-oglinda-masuta-1809",
-    "image": "https://profitsmart.ro/product_images/photos/12/77/40/12773340-23991265.jpg",
+    "image": "https://c.cdnmp.net/322284412/p/m/7/sem224-set-masa-toaleta-80-cm-cosmetica-machiaj-cu-oglinda-masuta~9967.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -8745,7 +8747,9 @@
     "link_checked_at": "2026-07-18T20:52:16.355550+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-emobili-maa212-masa-toaleta-100-cm-consola-cosme-1524",
@@ -14331,7 +14335,7 @@
     "slug": "resigilat-aparat-de-sandwich-2-in-1-domo-do1106c-cu-placi-interschimbabile-pentr",
     "magazin": "hotpick",
     "titlu": "Resigilat!Aparat de sandwich 2 in 1 Domo DO1106C cu placi interschimbabile, pentru pregatire sandwich sau waffe, 750 W",
-    "imagine_url": "",
+    "imagine_url": "/images/hotpick/ps-hotpick-resigilat-aparat-de-sandwich-2-in-1-domo-do1106c.webp",
     "pret_original": 199.99,
     "pret_redus": 128.09,
     "procent_reducere": 36,
@@ -14350,7 +14354,7 @@
     "discount_percent": 36,
     "affiliate_url": "https://app.profitshare.ro/lps/RlB/kd8/?redirect=https%3A%2F%2Fhotpick.ro%2Faparat-de-sandwich-2-in-1-domo-do1106c-cu-placi-interschimbabile-pentru-pregatire-sandwich-sau-waffe-750-w-1",
     "url": "https://hotpick.ro/aparat-de-sandwich-2-in-1-domo-do1106c-cu-placi-interschimbabile-pentru-pregatire-sandwich-sau-waffe-750-w-1",
-    "image": "https://profitsmart.ro/product_images/photos/50/06/70/50066530-55296352.jpg",
+    "image": "/images/hotpick/ps-hotpick-resigilat-aparat-de-sandwich-2-in-1-domo-do1106c.webp",
     "categories": [
       "casa-gradina"
     ],
@@ -14365,7 +14369,9 @@
     "link_checked_at": "2026-07-04T08:23:15.593686+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "2p-scule365-fierastrau-gard-viu-20v-cu-tija-telescop-28076977",
@@ -15130,7 +15136,7 @@
     "slug": "resigilat-semineu-electric-adler-ad7755-2000w-sticla-securizata-efect-flacara-3d",
     "magazin": "hotpick",
     "titlu": "Resigilat!Semineu electric Adler AD7755, 2000W, sticla securizata, efect flacara 3D, 2 trepte",
-    "imagine_url": "",
+    "imagine_url": "/images/hotpick/ps-hotpick-resigilat-semineu-electric-adler-ad7755--rad7755.webp",
     "pret_original": 399.99,
     "pret_redus": 259.99,
     "procent_reducere": 35,
@@ -15149,7 +15155,7 @@
     "discount_percent": 35,
     "affiliate_url": "https://app.profitshare.ro/lps/RlB/kd8/?redirect=https%3A%2F%2Fhotpick.ro%2Fsemineu-electric-adler-ad7455-2000w-sticla-securizata-efect-flacara-3d-2-trepte-1",
     "url": "https://hotpick.ro/semineu-electric-adler-ad7455-2000w-sticla-securizata-efect-flacara-3d-2-trepte-1",
-    "image": "https://profitsmart.ro/product_images/photos/49/99/100/49999801-55229690.jpg",
+    "image": "/images/hotpick/ps-hotpick-resigilat-semineu-electric-adler-ad7755--rad7755.webp",
     "categories": [
       "casa-gradina"
     ],
@@ -15164,7 +15170,9 @@
     "link_checked_at": "2026-07-04T08:25:16.997719+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-streamstore-autodesk-infraworks-licenta-pentru-1-uti-12C-8624",
@@ -18162,7 +18170,7 @@
     "slug": "usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43d-deschidere-",
     "magazin": "novodoors",
     "titlu": "Usa metalica dubla de exterior cu izolatie si vizor Novo Doors ND43D, Deschidere Stanga Dreapta, Dimensiune 120x200 cm, Tabla 0.7 mm, pentru case, Gri antracit (Sens deschidere: Stanga)",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/2/usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43d~101788972.jpg",
     "pret_original": 2312.0,
     "pret_redus": 1528.1,
     "procent_reducere": 34,
@@ -18181,7 +18189,7 @@
     "discount_percent": 34,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43d-2205%3Fv%3D100002205",
     "url": "https://www.novodoors.ro/cumpara/usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43d-2205?v=100002205",
-    "image": "https://profitsmart.ro/product_images/photos/50/28/20/50281901-55517030.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/2/usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43d~101788972.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -18196,7 +18204,9 @@
     "link_checked_at": "2026-07-05T21:03:23.513003+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-metalica-dubla-de-exterior-cu-izolat-3DGAORDR",
@@ -18244,7 +18254,7 @@
     "slug": "usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd44-deschidere-stanga-",
     "magazin": "novodoors",
     "titlu": "Usa metalica de exterior cu izolatie si vizor Novo Doors ND44, Deschidere Stanga Dreapta, tabla 0.7 mm, balamale si clanta incluse, toc de 7 cm, pentru case, Gri Wenge (Sens deschidere: Dreapta)",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/5/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd44~101789095.jpg",
     "pret_original": 1374.0,
     "pret_redus": 908.26,
     "procent_reducere": 34,
@@ -18263,7 +18273,7 @@
     "discount_percent": 34,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd44-2211%3Fv%3D100002220",
     "url": "https://www.novodoors.ro/cumpara/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd44-2211?v=100002220",
-    "image": "https://profitsmart.ro/product_images/photos/50/28/20/50281897-55517028.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/5/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd44~101789095.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -18278,14 +18288,16 @@
     "link_checked_at": "2026-07-05T21:03:55.717167+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--IWENORST",
     "slug": "usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd44-deschidere-stanga-",
     "magazin": "novodoors",
     "titlu": "Usa metalica de exterior cu izolatie si vizor Novo Doors ND44, Deschidere Stanga Dreapta, tabla 0.7 mm, balamale si clanta incluse, toc de 7 cm, pentru case, Gri Wenge (Sens deschidere: Stanga)",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/8/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd44~101789098.jpg",
     "pret_original": 1374.0,
     "pret_redus": 908.26,
     "procent_reducere": 34,
@@ -18304,7 +18316,7 @@
     "discount_percent": 34,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd44-2211%3Fv%3D100002221",
     "url": "https://www.novodoors.ro/cumpara/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd44-2211?v=100002221",
-    "image": "https://profitsmart.ro/product_images/photos/50/28/20/50281898-55517027.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/8/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd44~101789098.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -18319,14 +18331,16 @@
     "link_checked_at": "2026-07-05T21:04:26.787979+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--43GAORDR",
     "slug": "usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43-deschidere-stanga-",
     "magazin": "novodoors",
     "titlu": "Usa metalica de exterior cu izolatie si vizor Novo Doors ND43, Deschidere Stanga Dreapta, tabla 0.7 mm, balamale si clanta incluse, toc de 7 cm, pentru case, Gri Antracit (Sens deschidere: Dreapta)",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/5/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43~101789035.jpg",
     "pret_original": 1374.0,
     "pret_redus": 908.26,
     "procent_reducere": 34,
@@ -18345,7 +18359,7 @@
     "discount_percent": 34,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43-2210%3Fv%3D100002218",
     "url": "https://www.novodoors.ro/cumpara/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43-2210?v=100002218",
-    "image": "https://profitsmart.ro/product_images/photos/50/28/20/50281899-55517026.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/5/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43~101789035.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -18360,14 +18374,16 @@
     "link_checked_at": "2026-07-05T21:04:29.753467+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--43GAORST",
     "slug": "usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43-deschidere-stanga-",
     "magazin": "novodoors",
     "titlu": "Usa metalica de exterior cu izolatie si vizor Novo Doors ND43, Deschidere Stanga Dreapta, tabla 0.7 mm, balamale si clanta incluse, toc de 7 cm, pentru case, Gri Antracit (Sens deschidere: Stanga)",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/8/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43~101789038.jpg",
     "pret_original": 1374.0,
     "pret_redus": 908.26,
     "procent_reducere": 34,
@@ -18386,7 +18402,7 @@
     "discount_percent": 34,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43-2210%3Fv%3D100002219",
     "url": "https://www.novodoors.ro/cumpara/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43-2210?v=100002219",
-    "image": "https://profitsmart.ro/product_images/photos/50/28/20/50281896-55517025.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/8/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd43~101789038.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -18401,7 +18417,9 @@
     "link_checked_at": "2026-07-05T21:04:32.919597+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--45GAORDR",
@@ -18449,7 +18467,7 @@
     "slug": "usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd50d-deschidere-",
     "magazin": "novodoors",
     "titlu": "Usa metalica dubla de exterior cu izolatie si vizor Novo Doors ND50D, Deschidere Stanga Dreapta, Dimensiune 120x200 cm, Tabla 0.7 mm, pentru case, Gri (Sens deschidere: Dreapta)",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/1/usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd50d~101788981.jpg",
     "pret_original": 2624.0,
     "pret_redus": 1734.71,
     "procent_reducere": 34,
@@ -18468,7 +18486,7 @@
     "discount_percent": 34,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd50d-2206%3Fv%3D100002206",
     "url": "https://www.novodoors.ro/cumpara/usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd50d-2206?v=100002206",
-    "image": "https://profitsmart.ro/product_images/photos/50/28/20/50281891-55517021.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/1/usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd50d~101788981.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -18483,14 +18501,16 @@
     "link_checked_at": "2026-07-05T21:05:06.390578+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--45GAORST",
     "slug": "usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd45-deschidere-stanga-",
     "magazin": "novodoors",
     "titlu": "Usa metalica de exterior cu izolatie si vizor Novo Doors ND45, Deschidere Stanga Dreapta, tabla 0.7 mm, balamale si clanta incluse, toc de 7 cm, pentru case (Culoare: Gri Antracit, Sens deschidere: St",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/5/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd45~101789005.jpg",
     "pret_original": 1374.0,
     "pret_redus": 908.26,
     "procent_reducere": 34,
@@ -18509,7 +18529,7 @@
     "discount_percent": 34,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd45-2208%3Fv%3D100002214",
     "url": "https://www.novodoors.ro/cumpara/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd45-2208?v=100002214",
-    "image": "https://profitsmart.ro/product_images/photos/50/28/20/50281892-55517020.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/5/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd45~101789005.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -18524,14 +18544,16 @@
     "link_checked_at": "2026-07-05T21:05:29.154658+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-metalica-dubla-de-exterior-cu-izolat-DGRIORST",
     "slug": "usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd50d-deschidere-",
     "magazin": "novodoors",
     "titlu": "Usa metalica dubla de exterior cu izolatie si vizor Novo Doors ND50D, Deschidere Stanga Dreapta, Dimensiune 120x200 cm, Tabla 0.7 mm, pentru case, Gri (Sens deschidere: Stanga)",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/4/usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd50d~101788984.jpg",
     "pret_original": 2624.0,
     "pret_redus": 1734.71,
     "procent_reducere": 34,
@@ -18550,7 +18572,7 @@
     "discount_percent": 34,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd50d-2206%3Fv%3D100002207",
     "url": "https://www.novodoors.ro/cumpara/usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd50d-2206?v=100002207",
-    "image": "https://profitsmart.ro/product_images/photos/50/28/20/50281890-55517019.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/4/usa-metalica-dubla-de-exterior-cu-izolatie-si-vizor-novo-doors-nd50d~101788984.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -18565,14 +18587,16 @@
     "link_checked_at": "2026-07-05T21:05:31.117291+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--03GAORDR",
     "slug": "usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd6003-tabla-0-5-mm-pra",
     "magazin": "novodoors",
     "titlu": "Usa metalica de exterior cu izolatie si vizor Novo Doors ND6003, tabla 0.5 mm, prag din inox, balamale si clanta incluse, pentru casa si apartament, Gri Antracit (Sens deschidere: Dreapta)",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/4/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd6003-tabla~101747704.jpg",
     "pret_original": 1187.0,
     "pret_redus": 784.3,
     "procent_reducere": 34,
@@ -18591,7 +18615,7 @@
     "discount_percent": 34,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd6003-tabla-2198%3Fv%3D100002128",
     "url": "https://www.novodoors.ro/cumpara/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd6003-tabla-2198?v=100002128",
-    "image": "https://profitsmart.ro/product_images/photos/50/22/30/50222289-55457815.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/4/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd6003-tabla~101747704.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -18606,14 +18630,16 @@
     "link_checked_at": "2026-07-05T21:05:33.912863+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-metalica-de-exterior-cu-izolatie-si--03GAORST",
     "slug": "usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd6003-tabla-0-5-mm-pra",
     "magazin": "novodoors",
     "titlu": "Usa metalica de exterior cu izolatie si vizor Novo Doors ND6003, tabla 0.5 mm, prag din inox, balamale si clanta incluse, pentru casa si apartament, Gri Antracit (Sens deschidere: Stanga)",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/7/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd6003-tabla~101747707.jpg",
     "pret_original": 1187.0,
     "pret_redus": 784.3,
     "procent_reducere": 34,
@@ -18632,7 +18658,7 @@
     "discount_percent": 34,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd6003-tabla-2198%3Fv%3D100002129",
     "url": "https://www.novodoors.ro/cumpara/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd6003-tabla-2198?v=100002129",
-    "image": "https://profitsmart.ro/product_images/photos/50/22/30/50222287-55457813.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/7/usa-metalica-de-exterior-cu-izolatie-si-vizor-novo-doors-nd6003-tabla~101747707.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -18645,7 +18671,9 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-05T21:05:38.428790+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "2p-somnart-pilota-matlasata-aloe-confort-somnart-14-77406477",
@@ -20191,7 +20219,7 @@
     "slug": "resigilat-semineu-electric-compact-adler-ad7754-1800w-sticla-securizata-ceramica",
     "magazin": "hotpick",
     "titlu": "Resigilat!Semineu electric compact Adler AD7754, 1800W, sticla securizata, ceramica, efect flacara 3D, 2 trepte",
-    "imagine_url": "",
+    "imagine_url": "/images/hotpick/ps-hotpick-resigilat-semineu-electric-compact-adler-rad7754.webp",
     "pret_original": 299.99,
     "pret_redus": 199.99,
     "procent_reducere": 33,
@@ -20210,7 +20238,7 @@
     "discount_percent": 33,
     "affiliate_url": "https://app.profitshare.ro/lps/RlB/kd8/?redirect=https%3A%2F%2Fhotpick.ro%2Fsemineu-electric-compact-adler-ad7754-1800w-sticla-securizata-ceramica-efect-flacara-3d-1",
     "url": "https://hotpick.ro/semineu-electric-compact-adler-ad7754-1800w-sticla-securizata-ceramica-efect-flacara-3d-1",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/100/50279818-55513480.jpg",
+    "image": "/images/hotpick/ps-hotpick-resigilat-semineu-electric-compact-adler-rad7754.webp",
     "categories": [
       "casa-gradina"
     ],
@@ -20225,14 +20253,16 @@
     "link_checked_at": "2026-07-04T13:31:07.749383+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-hotpick-aspirator-de-mana-vertical-2-in-1-fara-s-AD 7044",
     "slug": "aspirator-de-mana-vertical-2-in-1-fara-sac-ad-7044",
     "magazin": "hotpick",
     "titlu": "Aspirator de mana vertical 2 in 1 fara sac AD 7044",
-    "imagine_url": "",
+    "imagine_url": "/images/hotpick/ps-hotpick-aspirator-de-mana-vertical-2-in-1-fara-s-ad7044.webp",
     "pret_original": 529.99,
     "pret_redus": 355.36,
     "procent_reducere": 33,
@@ -20251,7 +20281,7 @@
     "discount_percent": 33,
     "affiliate_url": "https://app.profitshare.ro/lps/RlB/kd8/?redirect=https%3A%2F%2Fhotpick.ro%2Faspirator-de-mana-vertical-2-in-1-fara-sac-ad-7044",
     "url": "https://hotpick.ro/aspirator-de-mana-vertical-2-in-1-fara-sac-ad-7044",
-    "image": "https://profitsmart.ro/product_images/photos/50/14/10/50140548-55372144.jpg",
+    "image": "/images/hotpick/ps-hotpick-aspirator-de-mana-vertical-2-in-1-fara-s-ad7044.webp",
     "categories": [
       "casa-gradina"
     ],
@@ -20266,7 +20296,9 @@
     "link_checked_at": "2026-07-04T13:31:10.222206+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "2p-scule365-pompa-apa-de-suprafata-1800w-jet-bobinaj-96816689",
@@ -20436,7 +20468,7 @@
     "slug": "usa-interior-din-mdf-novo-doors-ndm03-lux-premium-cadru-din-lemn-masiv-insertii-",
     "magazin": "novodoors",
     "titlu": "Usa Interior din MDF Novo Doors NDM03 LUX PREMIUM, Cadru din Lemn Masiv, Insertii imitatie sticla, KIT COMPLET, Toc Reglabil de 10 CM INCLUS, Plinta pe Ambele Parti (Culoare: Alb mat, Dimensiune: 80 c",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/8/usa-interior-din-mdf-novo-doors-ndm03-lux-premium-cadru-din-lemn-masiv~101701288.jpg",
     "pret_original": 1849.0,
     "pret_redus": 1238.84,
     "procent_reducere": 33,
@@ -20455,7 +20487,7 @@
     "discount_percent": 33,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-interior-din-mdf-novo-doors-ndm03-lux-premium-cadru-din-lemn-masiv-2194%3Fv%3D100002113",
     "url": "https://www.novodoors.ro/cumpara/usa-interior-din-mdf-novo-doors-ndm03-lux-premium-cadru-din-lemn-masiv-2194?v=100002113",
-    "image": "https://profitsmart.ro/product_images/photos/50/13/40/50133932-55364237.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/8/usa-interior-din-mdf-novo-doors-ndm03-lux-premium-cadru-din-lemn-masiv~101701288.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -20470,14 +20502,16 @@
     "link_checked_at": "2026-07-05T21:06:03.068174+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-ndm03-lu-MPNMTR10",
     "slug": "usa-interior-din-mdf-novo-doors-ndm03-lux-premium-cadru-din-lemn-masiv-insertii-",
     "magazin": "novodoors",
     "titlu": "Usa Interior din MDF Novo Doors NDM03 LUX PREMIUM, Cadru din Lemn Masiv, Insertii imitatie sticla, KIT COMPLET, Toc Reglabil de 10 CM INCLUS, Plinta pe Ambele Parti (Culoare: Alb mat, Dimensiune: 80 c",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/8/usa-interior-din-mdf-novo-doors-ndm03-lux-premium-cadru-din-lemn-masiv~101701288.jpg",
     "pret_original": 1724.0,
     "pret_redus": 1156.2,
     "procent_reducere": 33,
@@ -20496,7 +20530,7 @@
     "discount_percent": 33,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-interior-din-mdf-novo-doors-ndm03-lux-premium-cadru-din-lemn-masiv-2194%3Fv%3D100002112",
     "url": "https://www.novodoors.ro/cumpara/usa-interior-din-mdf-novo-doors-ndm03-lux-premium-cadru-din-lemn-masiv-2194?v=100002112",
-    "image": "https://profitsmart.ro/product_images/photos/50/13/40/50133931-55364236.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/8/usa-interior-din-mdf-novo-doors-ndm03-lux-premium-cadru-din-lemn-masiv~101701288.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -20511,7 +20545,9 @@
     "link_checked_at": "2026-07-05T21:06:32.805273+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-ndm03-lu-MPACTR10",
@@ -20559,7 +20595,7 @@
     "slug": "usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv-insertii-",
     "magazin": "novodoors",
     "titlu": "Usa Interior din MDF Novo Doors NDM01 LUX PREMIUM, Cadru din Lemn Masiv, Insertii imitatie sticla, KIT COMPLET, Toc Reglabil de 10 CM INCLUS, Plinta pe Ambele Parti (Culoare: Alb mat, Dimensiune: 80 c",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/5/usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv~101877745.jpg",
     "pret_original": 1850.0,
     "pret_redus": 1238.84,
     "procent_reducere": 33,
@@ -20578,7 +20614,7 @@
     "discount_percent": 33,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv-2193%3Fv%3D100002073",
     "url": "https://www.novodoors.ro/cumpara/usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv-2193?v=100002073",
-    "image": "https://profitsmart.ro/product_images/photos/50/13/40/50133920-55364225.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/5/usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv~101877745.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -20593,14 +20629,16 @@
     "link_checked_at": "2026-07-05T21:06:37.166544+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-ndm01-lu-MPACTR30",
     "slug": "usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv-insertii-",
     "magazin": "novodoors",
     "titlu": "Usa Interior din MDF Novo Doors NDM01 LUX PREMIUM, Cadru din Lemn Masiv, Insertii imitatie sticla, KIT COMPLET, Toc Reglabil de 10 CM INCLUS, Plinta pe Ambele Parti (Culoare: Alb mat, Dimensiune: 80 c",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/5/usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv~101877745.jpg",
     "pret_original": 1724.0,
     "pret_redus": 1156.2,
     "procent_reducere": 33,
@@ -20619,7 +20657,7 @@
     "discount_percent": 33,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv-2193%3Fv%3D100002067",
     "url": "https://www.novodoors.ro/cumpara/usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv-2193?v=100002067",
-    "image": "https://profitsmart.ro/product_images/photos/50/13/40/50133919-55364224.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/5/usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv~101877745.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -20634,14 +20672,16 @@
     "link_checked_at": "2026-07-05T21:07:06.749170+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-novodoors-usa-interior-din-mdf-novo-doors-ndm01-lu-MPACTR10",
     "slug": "usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv-insertii-",
     "magazin": "novodoors",
     "titlu": "Usa Interior din MDF Novo Doors NDM01 LUX PREMIUM, Cadru din Lemn Masiv, Insertii imitatie sticla, KIT COMPLET, Toc Reglabil de 10 CM INCLUS, Plinta pe Ambele Parti (Culoare: Alb mat, Dimensiune: 80 c",
-    "imagine_url": "",
+    "imagine_url": "https://c.cdnmp.net/213453607/p/m/5/usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv~101877745.jpg",
     "pret_original": 1599.0,
     "pret_redus": 1073.55,
     "procent_reducere": 33,
@@ -20660,7 +20700,7 @@
     "discount_percent": 33,
     "affiliate_url": "https://app.profitshare.ro/lps/mpH/kd8/?redirect=https%3A%2F%2Fwww.novodoors.ro%2Fcumpara%2Fusa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv-2193%3Fv%3D100002066",
     "url": "https://www.novodoors.ro/cumpara/usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv-2193?v=100002066",
-    "image": "https://profitsmart.ro/product_images/photos/50/13/40/50133917-55364223.jpg",
+    "image": "https://c.cdnmp.net/213453607/p/m/5/usa-interior-din-mdf-novo-doors-ndm01-lux-premium-cadru-din-lemn-masiv~101877745.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -20675,7 +20715,9 @@
     "link_checked_at": "2026-07-05T21:07:09.162188+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "2p-casanewconcept-cuvertura-cu-3-piese-imprimata-digital-j-17836191",
@@ -21177,7 +21219,7 @@
     "slug": "resigilat-blender-vertical-3-in-1-camry-cr4630-500w",
     "magazin": "hotpick",
     "titlu": "Resigilat!Blender vertical 3 in 1 Camry CR4630, 500W",
-    "imagine_url": "",
+    "imagine_url": "/images/hotpick/ps-hotpick-resigilat-blender-vertical-3-in-1-camry--rcr4630.webp",
     "pret_original": 139.99,
     "pret_redus": 94.99,
     "procent_reducere": 32,
@@ -21196,7 +21238,7 @@
     "discount_percent": 32,
     "affiliate_url": "https://app.profitshare.ro/lps/RlB/kd8/?redirect=https%3A%2F%2Fhotpick.ro%2Fblender-vertical-3-in-1-camry-cr4630-500w-1",
     "url": "https://hotpick.ro/blender-vertical-3-in-1-camry-cr4630-500w-1",
-    "image": "https://profitsmart.ro/product_images/photos/49/99/100/49999799-55229689.jpg",
+    "image": "/images/hotpick/ps-hotpick-resigilat-blender-vertical-3-in-1-camry--rcr4630.webp",
     "categories": [
       "casa-gradina"
     ],
@@ -21211,7 +21253,9 @@
     "link_checked_at": "2026-07-04T13:31:11.052864+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-streamstore-autodesk-3ds-max-licenta-comerciala-1-ut-N0010",
@@ -21429,7 +21473,7 @@
     "slug": "pal-lacuit-egger-perfectsense-u732-tm-gri-praf-mat-antiamprenta-decor-uni-2800-x",
     "magazin": "mathaus",
     "titlu": "Pal lacuit Egger PerfectSense U732 TM Gri praf, mat, antiamprenta, decor uni, 2800 x 2070 x 19 mm",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-pal-lacuit-egger-perfectsense-u732-tm-gr-10110982.jpg",
     "pret_original": 1083.12,
     "pret_redus": 733.88,
     "procent_reducere": 32,
@@ -21448,7 +21492,7 @@
     "discount_percent": 32,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fpal-lacuit-egger-perfectsense-u732-tm-gri-praf-mat-antiamprenta-decor-uni-2800-x-2070-x-19-mm%2F000000000010110982",
     "url": "https://mathaus.ro/p/pal-lacuit-egger-perfectsense-u732-tm-gri-praf-mat-antiamprenta-decor-uni-2800-x-2070-x-19-mm/000000000010110982",
-    "image": "https://profitsmart.ro/product_images/photos/50/22/90/50228494-55465242.jpg",
+    "image": "/images/mathaus/ps-mathaus-pal-lacuit-egger-perfectsense-u732-tm-gr-10110982.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -21463,14 +21507,16 @@
     "link_checked_at": "2026-07-16T21:01:26.461249+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-mathaus-pal-lacuit-egger-perfectsense-u755-tm-gr-10110974",
     "slug": "pal-lacuit-egger-perfectsense-u755-tm-gri-havanna-mat-antiamprenta-decor-uni-280",
     "magazin": "mathaus",
     "titlu": "Pal lacuit Egger PerfectSense U755 TM Gri Havanna, mat, antiamprenta, decor uni, 2800 x 2070 x 19 mm",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-pal-lacuit-egger-perfectsense-u755-tm-gr-10110974.jpg",
     "pret_original": 824.46,
     "pret_redus": 558.67,
     "procent_reducere": 32,
@@ -21489,7 +21535,7 @@
     "discount_percent": 32,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fpal-lacuit-egger-perfectsense-u755-tm-gri-havanna-mat-antiamprenta-decor-uni-2800-x-2070-x-19-mm%2F000000000010110974",
     "url": "https://mathaus.ro/p/pal-lacuit-egger-perfectsense-u755-tm-gri-havanna-mat-antiamprenta-decor-uni-2800-x-2070-x-19-mm/000000000010110974",
-    "image": "https://profitsmart.ro/product_images/photos/50/22/90/50228493-55465241.jpg",
+    "image": "/images/mathaus/ps-mathaus-pal-lacuit-egger-perfectsense-u755-tm-gr-10110974.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -21504,7 +21550,9 @@
     "link_checked_at": "2026-07-16T21:01:29.979403+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-renault-tr-15580",
@@ -22316,7 +22364,7 @@
     "slug": "resigilat-gratar-raclette-pentru-4-persoane-do9147g-600-w",
     "magazin": "hotpick",
     "titlu": "Resigilat!Gratar raclette pentru 4 persoane DO9147G, 600 W",
-    "imagine_url": "",
+    "imagine_url": "/images/hotpick/ps-hotpick-resigilat-gratar-raclette-pentru-4-perso-do9147g.webp",
     "pret_original": 149.99,
     "pret_redus": 103.3,
     "procent_reducere": 31,
@@ -22335,7 +22383,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/RlB/kd8/?redirect=https%3A%2F%2Fhotpick.ro%2Fgratar-raclette-pentru-4-persoane-do9147g-600-w-1",
     "url": "https://hotpick.ro/gratar-raclette-pentru-4-persoane-do9147g-600-w-1",
-    "image": "https://profitsmart.ro/product_images/photos/49/99/100/49999797-55229686.jpg",
+    "image": "/images/hotpick/ps-hotpick-resigilat-gratar-raclette-pentru-4-perso-do9147g.webp",
     "categories": [
       "casa-gradina"
     ],
@@ -22350,7 +22398,9 @@
     "link_checked_at": "2026-07-04T13:31:12.150557+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "2p-scule365-pachet-aparat-de-sudura-invertor-mma-kra-69170629",
@@ -28261,7 +28311,7 @@
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080; Intel Core i5 8500 3.0 GHz up to 4.1 GHz; Fara Memorie Ram; Fara Hard Disk; Fara Windows; 3 A",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 2058.21,
     "pret_redus": 1417.5,
     "procent_reducere": 31,
@@ -28280,7 +28330,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727908",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727908",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274081-55507680.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28295,14 +28345,16 @@
     "link_checked_at": "2026-07-19T18:23:51.511330+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727906",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 1 TB SSD M.2 NVMe NOU, Windows 11 Pro, 3 Ani Garantie",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 4481.84,
     "pret_redus": 3086.67,
     "procent_reducere": 31,
@@ -28321,7 +28373,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727906",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727906",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274076-55507677.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28336,14 +28388,16 @@
     "link_checked_at": "2026-07-19T18:23:52.433259+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727904",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 1 TB SSD M.2 NVMe NOU, Windows 10 Pro, 3 Ani Garantie",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 4481.84,
     "pret_redus": 3086.67,
     "procent_reducere": 31,
@@ -28362,7 +28416,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727904",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727904",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274078-55507676.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28377,14 +28431,16 @@
     "link_checked_at": "2026-07-19T18:23:53.046317+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727902",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 1 TB SSD M.2 NVMe NOU, Fara Windows, 3 Ani Garantie, ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 4374.15,
     "pret_redus": 3012.5,
     "procent_reducere": 31,
@@ -28403,7 +28459,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727902",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727902",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274073-55507673.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28418,14 +28474,16 @@
     "link_checked_at": "2026-07-19T18:23:53.705204+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727900",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 512 GB SSD M.2 NVMe NOU, Windows 11 Pro, 3 Ani Garant",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3960.33,
     "pret_redus": 2727.5,
     "procent_reducere": 31,
@@ -28444,7 +28502,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727900",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727900",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274071-55507671.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28459,14 +28517,16 @@
     "link_checked_at": "2026-07-19T18:23:53.717923+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727898",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 512 GB SSD M.2 NVMe NOU, Windows 10 Pro, 3 Ani Garant",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3960.33,
     "pret_redus": 2727.5,
     "procent_reducere": 31,
@@ -28485,7 +28545,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727898",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727898",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274069-55507669.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28500,14 +28560,16 @@
     "link_checked_at": "2026-07-19T18:23:54.525747+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727894",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 512 GB SSD M.2 NVMe, Windows 11 Pro, 3 Ani Garantie, ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3735.27,
     "pret_redus": 2572.5,
     "procent_reducere": 31,
@@ -28526,7 +28588,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727894",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727894",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274068-55507668.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28541,14 +28603,16 @@
     "link_checked_at": "2026-07-19T18:23:55.096524+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727896",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 512 GB SSD M.2 NVMe NOU, Fara Windows, 3 Ani Garantie",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3852.64,
     "pret_redus": 2653.33,
     "procent_reducere": 31,
@@ -28567,7 +28631,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727896",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727896",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274067-55507667.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28582,14 +28646,16 @@
     "link_checked_at": "2026-07-19T18:23:55.837917+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727892",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 512 GB SSD M.2 NVMe, Windows 10 Pro, 3 Ani Garantie, ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3735.27,
     "pret_redus": 2572.5,
     "procent_reducere": 31,
@@ -28608,7 +28674,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727892",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727892",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274070-55507666.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28623,14 +28689,16 @@
     "link_checked_at": "2026-07-19T18:23:55.870244+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727890",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 512 GB SSD M.2 NVMe, Fara Windows, 3 Ani Garantie, Pr",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3627.58,
     "pret_redus": 2498.33,
     "procent_reducere": 31,
@@ -28649,7 +28717,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727890",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727890",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274064-55507662.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28662,14 +28730,16 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-19T18:23:56.583020+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727888",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 256 GB SSD M.2 NVMe, Windows 11 Pro, 3 Ani Garantie, ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3481.17,
     "pret_redus": 2397.5,
     "procent_reducere": 31,
@@ -28688,7 +28758,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727888",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727888",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274063-55507661.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28701,14 +28771,16 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-19T18:23:57.133207+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727882",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 128 GB SSD M.2 NVMe, Windows 11 Pro, 3 Ani Garantie, ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3265.79,
     "pret_redus": 2249.17,
     "procent_reducere": 31,
@@ -28727,7 +28799,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727882",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727882",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274061-55507659.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28740,14 +28812,16 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-19T18:23:57.295640+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727886",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 256 GB SSD M.2 NVMe, Windows 10 Pro, 3 Ani Garantie, ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3481.17,
     "pret_redus": 2397.5,
     "procent_reducere": 31,
@@ -28766,7 +28840,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727886",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727886",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274058-55507656.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28779,14 +28853,16 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-19T18:23:57.537541+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727884",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 256 GB SSD M.2 NVMe, Fara Windows, 3 Ani Garantie, Pr",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3373.48,
     "pret_redus": 2323.33,
     "procent_reducere": 31,
@@ -28805,7 +28881,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727884",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727884",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274056-55507655.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28818,14 +28894,16 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-19T18:23:57.838643+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727878",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 128 GB SSD M.2 NVMe, Fara Windows, 3 Ani Garantie, Pr",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3158.1,
     "pret_redus": 2175.0,
     "procent_reducere": 31,
@@ -28844,7 +28922,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727878",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727878",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274055-55507653.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28857,14 +28935,16 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-19T18:23:57.999748+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727880",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, 128 GB SSD M.2 NVMe, Windows 10 Pro, 3 Ani Garantie, ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3265.79,
     "pret_redus": 2249.17,
     "procent_reducere": 31,
@@ -28883,7 +28963,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727880",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727880",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274053-55507652.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28896,7 +28976,9 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-19T18:23:58.097799+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727876",
@@ -28942,7 +29024,7 @@
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, Fara Hard Disk, Windows 10 Pro, 3 Ani Garantie, Premi",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3176.25,
     "pret_redus": 2187.5,
     "procent_reducere": 31,
@@ -28961,7 +29043,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727874",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727874",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274047-55507646.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -28974,14 +29056,16 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-19T18:23:58.569323+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727872",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 32 GB DDR4, Fara Hard Disk, Fara Windows, 3 Ani Garantie, Premium",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3068.56,
     "pret_redus": 2113.33,
     "procent_reducere": 31,
@@ -29000,7 +29084,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727872",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727872",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274045-55507643.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -29013,14 +29097,16 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-19T18:23:58.692166+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727870",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i3 8100 3.6 GHz, 16 GB DDR4, 1 TB SSD M.2 NVMe NOU, Windows 11 Pro, 3 Ani Garantie",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3796.98,
     "pret_redus": 2615.0,
     "procent_reducere": 31,
@@ -29039,7 +29125,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727870",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727870",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/40/50274042-55507642.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -29052,7 +29138,9 @@
     "omnibus_validated": true,
     "link_status": "rate_limited",
     "link_checked_at": "2026-07-19T18:23:58.983891+00:00",
-    "link_flaky_count": 1
+    "link_flaky_count": 1,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727868",
@@ -31095,7 +31183,7 @@
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i7 8700 3.2 GHz up to 4.6 GHz, Fara Memorie Ram, 512 GB SSD M.2 NVMe NOU, Windows ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3557.4,
     "pret_redus": 2450.0,
     "procent_reducere": 31,
@@ -31114,7 +31202,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4728080",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4728080",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/50/50274251-55507851.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -31124,14 +31212,16 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.654805+00:00",
     "pret_minim_30z": 2450.0,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727936",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080; Intel Core i5 8500 3.0 GHz up to 4.1 GHz; Fara Memorie Ram; 512 GB SSD M.2 NVMe NOU; Windows ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 2949.98,
     "pret_redus": 2031.67,
     "procent_reducere": 31,
@@ -31150,7 +31240,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727936",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727936",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/50/50274107-55507707.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -31160,7 +31250,9 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.655046+00:00",
     "pret_minim_30z": 2031.67,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "2p-somnart-pachet-promo-saltea-silver-evolution-poc-92856706",
@@ -35211,7 +35303,7 @@
     "slug": "saltea-pat-ortopedica-primus-superlux-arcuri-bonell-material-jaquard-120-x-200-x",
     "magazin": "mathaus",
     "titlu": "Saltea pat ortopedica Primus SuperLux, arcuri Bonell, material Jaquard, 120 x 200 x 25 cm",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-saltea-pat-ortopedica-primus-superlux-ar-10110116.png",
     "pret_original": 678.81,
     "pret_redus": 476.85,
     "procent_reducere": 30,
@@ -35230,7 +35322,7 @@
     "discount_percent": 30,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fsaltea-pat-ortopedica-primus-superlux-arcuri-bonell-material-jaquard-120-x-200-x-25-cm%2F000000000010110116",
     "url": "https://mathaus.ro/p/saltea-pat-ortopedica-primus-superlux-arcuri-bonell-material-jaquard-120-x-200-x-25-cm/000000000010110116",
-    "image": "https://profitsmart.ro/product_images/photos/50/16/100/50169420-55400750.jpg",
+    "image": "/images/mathaus/ps-mathaus-saltea-pat-ortopedica-primus-superlux-ar-10110116.png",
     "categories": [
       "casa-gradina"
     ],
@@ -35245,7 +35337,9 @@
     "link_checked_at": "2026-07-20T21:13:20.393305+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "2p-springfarma-gel-arnica-si-galbenele-100ml-mustela-02461078",
@@ -36032,7 +36126,7 @@
     "slug": "ventil-lavoar-wirquin-black-touch-alama-quick-clac-negru-mat-diametru-1-1-4-toli",
     "magazin": "mathaus",
     "titlu": "Ventil lavoar Wirquin Black Touch, alama, Quick Clac, negru mat, diametru 1 1/4 toli",
-    "imagine_url": "",
+    "imagine_url": "https://cdn.mathaus.ro/medias/sys_master/images/hac/h82/h00/9799723876382.jpg",
     "pret_original": 84.13,
     "pret_redus": 59.49,
     "procent_reducere": 29,
@@ -36051,7 +36145,7 @@
     "discount_percent": 29,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fventil-lavoar-wirquin-black-touch-alama-quick-clac-negru-matdiametru-1-1-4-toli%2F000000000011192663",
     "url": "https://mathaus.ro/p/ventil-lavoar-wirquin-black-touch-alama-quick-clac-negru-matdiametru-1-1-4-toli/000000000011192663",
-    "image": "https://profitsmart.ro/product_images/photos/50/17/100/50179409-55410294.jpg",
+    "image": "https://cdn.mathaus.ro/medias/sys_master/images/hac/h82/h00/9799723876382.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -36061,7 +36155,9 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.691890+00:00",
     "pret_minim_30z": 59.49,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:33:16.286865+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "2p-somnart-pachet-promo-saltea-hypoallergenicmed-po-91957228",
@@ -37025,7 +37121,7 @@
     "slug": "baterie-de-dus-ferro-bis77-montaj-perete-monocomanda-crom-cartus-ceramic",
     "magazin": "mathaus",
     "titlu": "Baterie de dus Ferro BIS77, montaj perete, monocomanda, crom, cartus ceramic",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-baterie-de-dus-ferro-bis77-montaj-perete-10822046.png",
     "pret_original": 191.1,
     "pret_redus": 137.18,
     "procent_reducere": 28,
@@ -37044,7 +37140,7 @@
     "discount_percent": 28,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fbaterie-de-dus-ferro-bis77-montaj-perete-monocomanda-crom-cartus-ceramic%2F000000000010822046",
     "url": "https://mathaus.ro/p/baterie-de-dus-ferro-bis77-montaj-perete-monocomanda-crom-cartus-ceramic/000000000010822046",
-    "image": "https://profitsmart.ro/product_images/photos/50/26/20/50261452-55491892.png",
+    "image": "/images/mathaus/ps-mathaus-baterie-de-dus-ferro-bis77-montaj-perete-10822046.png",
     "categories": [
       "casa-gradina"
     ],
@@ -37054,7 +37150,9 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.700901+00:00",
     "pret_minim_30z": 137.18,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-navigatiiandroid-navigatie-dedicata-cu-android-opel-astra-15560",
@@ -38065,7 +38163,7 @@
     "slug": "ventil-cu-corp-de-scurgere-wirquin-universal-cu-surub-central-quick-clac-alama-a",
     "magazin": "mathaus",
     "titlu": "Ventil cu corp de scurgere Wirquin, universal, cu surub central, Quick-clac, alama, auriu periat Ø1''1/4 inchi x Ø 63mm",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-ventil-cu-corp-de-scurgere-wirquin-unive-11192661.jpg",
     "pret_original": 64.74,
     "pret_redus": 47.1,
     "procent_reducere": 27,
@@ -38084,7 +38182,7 @@
     "discount_percent": 27,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fventil-cu-corp-de-scurgere-wirquin-universal-cu-surub-central-quick-clac-alama-auriu-periat%25C3%25B811-4-inchi-x-%25C3%25B8-63mm%2F000000000011192661",
     "url": "https://mathaus.ro/p/ventil-cu-corp-de-scurgere-wirquin-universal-cu-surub-central-quick-clac-alama-auriu-periat%C3%B811-4-inchi-x-%C3%B8-63mm/000000000011192661",
-    "image": "https://profitsmart.ro/product_images/photos/50/17/100/50179408-55410293.jpg",
+    "image": "/images/mathaus/ps-mathaus-ventil-cu-corp-de-scurgere-wirquin-unive-11192661.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -38094,14 +38192,16 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.708093+00:00",
     "pret_minim_30z": 47.1,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-mathaus-ventil-cu-corp-de-scurgere-wirquin-unive-11192660",
     "slug": "ventil-cu-corp-de-scurgere-wirquin-universal-cu-surub-central-quick-clac-alama-a",
     "magazin": "mathaus",
     "titlu": "Ventil cu corp de scurgere Wirquin, universal, cu surub central, Quick-clac, alama, alb mat Ø1''1/4 inchi x Ø 63mm",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-ventil-cu-corp-de-scurgere-wirquin-unive-11192660.jpg",
     "pret_original": 64.74,
     "pret_redus": 47.1,
     "procent_reducere": 27,
@@ -38120,7 +38220,7 @@
     "discount_percent": 27,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fventil-cu-corp-de-scurgere-wirquin-universal-cu-surub-central-quick-clac-alama-alb-mat%25C3%25B811-4-inchi-x-%25C3%25B8-63mm%2F000000000011192660",
     "url": "https://mathaus.ro/p/ventil-cu-corp-de-scurgere-wirquin-universal-cu-surub-central-quick-clac-alama-alb-mat%C3%B811-4-inchi-x-%C3%B8-63mm/000000000011192660",
-    "image": "https://profitsmart.ro/product_images/photos/50/17/100/50179407-55410292.jpg",
+    "image": "/images/mathaus/ps-mathaus-ventil-cu-corp-de-scurgere-wirquin-unive-11192660.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -38130,7 +38230,9 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.708334+00:00",
     "pret_minim_30z": 47.1,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "2p-somnart-pachet-promo-1-pilota-bumbac-cosmos-200x-91921141",
@@ -38928,7 +39030,7 @@
     "slug": "conector-dilatatie-polipropilena-gri-d-110-mm",
     "magazin": "mathaus",
     "titlu": "Conector dilatatie, polipropilena, gri, D 110 mm",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-conector-dilatatie-polipropilena-gri-d-1-10808762.png",
     "pret_original": 16.63,
     "pret_redus": 12.06,
     "procent_reducere": 27,
@@ -38947,7 +39049,7 @@
     "discount_percent": 27,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fconector-dilatatie-polipropilena-gri-d-110-mm%2F000000000010808762",
     "url": "https://mathaus.ro/p/conector-dilatatie-polipropilena-gri-d-110-mm/000000000010808762",
-    "image": "https://profitsmart.ro/product_images/photos/50/11/50/50114499-55342559.png",
+    "image": "/images/mathaus/ps-mathaus-conector-dilatatie-polipropilena-gri-d-1-10808762.png",
     "categories": [
       "casa-gradina"
     ],
@@ -38957,14 +39059,16 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.714458+00:00",
     "pret_minim_30z": 12.06,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:33:16.286865+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-mathaus-panou-riflaj-acustic-alb-uni-suport-felt-11188578",
     "slug": "panou-riflaj-acustic-alb-uni-suport-feltru-8-mm-interior-2600-x-144-x-20-mm",
     "magazin": "mathaus",
     "titlu": "Panou riflaj acustic alb uni, suport feltru 8 mm, interior, 2600 x 144 x 20 mm",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-panou-riflaj-acustic-alb-uni-suport-felt-11188578.jpg",
     "pret_original": 68.58,
     "pret_redus": 50.4,
     "procent_reducere": 27,
@@ -38983,7 +39087,7 @@
     "discount_percent": 27,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fpanou-riflaj-acustic-alb-uni-suport-feltru-8-mm-interior-2600-x-144-x-20-mm%2F000000000011188578",
     "url": "https://mathaus.ro/p/panou-riflaj-acustic-alb-uni-suport-feltru-8-mm-interior-2600-x-144-x-20-mm/000000000011188578",
-    "image": "https://profitsmart.ro/product_images/photos/50/06/10/50060464-55288426.jpg",
+    "image": "/images/mathaus/ps-mathaus-panou-riflaj-acustic-alb-uni-suport-felt-11188578.jpg",
     "categories": [
       "casa-gradina"
     ],
@@ -38993,7 +39097,9 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.714728+00:00",
     "pret_minim_30z": 50.4,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:33:16.286865+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-case-smart-modul-intrerupator-simplu-cap-cruce-meca--010-2GY",
@@ -40672,7 +40778,7 @@
     "slug": "reductie-excentrica-pentru-scurgere-eurociere-polipropilena-gri-d-110-50-mm",
     "magazin": "mathaus",
     "titlu": "Reductie excentrica pentru scurgere Eurociere, polipropilena, gri, D 110 - 50 mm",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-reductie-excentrica-pentru-scurgere-euro-10829025.webp",
     "pret_original": 15.13,
     "pret_redus": 11.23,
     "procent_reducere": 26,
@@ -40691,7 +40797,7 @@
     "discount_percent": 26,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Freductie-excentrica-pentru-scurgere-eurociere-polipropilena-gri-d-110---50-mm%2F000000000010829025",
     "url": "https://mathaus.ro/p/reductie-excentrica-pentru-scurgere-eurociere-polipropilena-gri-d-110---50-mm/000000000010829025",
-    "image": "https://profitsmart.ro/product_images/photos/50/11/90/50118692-55347852.jpg",
+    "image": "/images/mathaus/ps-mathaus-reductie-excentrica-pentru-scurgere-euro-10829025.webp",
     "categories": [
       "casa-gradina"
     ],
@@ -40701,14 +40807,16 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.727352+00:00",
     "pret_minim_30z": 11.23,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:33:16.286865+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-mathaus-vas-wc-fayans-portelan-sanitar-alb-10808466",
     "slug": "vas-wc-fayans-portelan-sanitar-alb",
     "magazin": "mathaus",
     "titlu": "Vas WC Fayans, portelan sanitar, alb",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-vas-wc-fayans-portelan-sanitar-alb-10808466.png",
     "pret_original": 161.15,
     "pret_redus": 119.83,
     "procent_reducere": 26,
@@ -40727,7 +40835,7 @@
     "discount_percent": 26,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fvas-wc-fayans-portelan-sanitar-alb%2F000000000010808466",
     "url": "https://mathaus.ro/p/vas-wc-fayans-portelan-sanitar-alb/000000000010808466",
-    "image": "https://profitsmart.ro/product_images/photos/50/09/100/50099873-55325336.png",
+    "image": "/images/mathaus/ps-mathaus-vas-wc-fayans-portelan-sanitar-alb-10808466.png",
     "categories": [
       "casa-gradina"
     ],
@@ -40737,7 +40845,9 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.727629+00:00",
     "pret_minim_30z": 119.83,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-case-smart-modul-priza-fast-charge-20w-8211-usb-c-c-MP011UCB",
@@ -44887,7 +44997,7 @@
     "slug": "cabina-de-dus-sanotechnik-deco-black-2-dreptunghiulare-sticla-5-mm-easy-clean-pr",
     "magazin": "mathaus",
     "titlu": "Cabina de dus Sanotechnik Deco Black 2, dreptunghiulare, sticla 5 mm, Easy-Clean, profile aluminiu negre mate, cu hidromasaj, 120 x 80 x 215 cm",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-cabina-de-dus-sanotechnik-deco-black-2-d-11194810.png",
     "pret_original": 1829.0,
     "pret_redus": 1405.78,
     "procent_reducere": 23,
@@ -44906,7 +45016,7 @@
     "discount_percent": 23,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fcabina-de-dus-sanotechnik-deco-black-2-dreptunghiulare-sticla-5-mm-easy-clean-profile-aluminiu-negre-mate-cu-hidromasaj-120-x-80-x-215-cm%2F000000000011194810",
     "url": "https://mathaus.ro/p/cabina-de-dus-sanotechnik-deco-black-2-dreptunghiulare-sticla-5-mm-easy-clean-profile-aluminiu-negre-mate-cu-hidromasaj-120-x-80-x-215-cm/000000000011194810",
-    "image": "https://profitsmart.ro/product_images/photos/50/11/50/50114466-55342534.jpg",
+    "image": "/images/mathaus/ps-mathaus-cabina-de-dus-sanotechnik-deco-black-2-d-11194810.png",
     "categories": [
       "casa-gradina"
     ],
@@ -44916,7 +45026,9 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.763725+00:00",
     "pret_minim_30z": 1405.78,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-case-smart-panou-2-intrerupatoare-duble-cu-touch-si-2200G-FL",
@@ -48028,7 +48140,7 @@
     "slug": "priza-tv-gewiss-chorus-gw12361-negru-1-modul-44-x-22-x-31-5-mm",
     "magazin": "mathaus",
     "titlu": "Priza TV Gewiss Chorus GW12361, negru, 1 modul, 44 x 22 x 31.5 mm",
-    "imagine_url": "",
+    "imagine_url": "/images/mathaus/ps-mathaus-priza-tv-gewiss-chorus-gw12361-negru-1-m-10506990.png",
     "pret_original": 53.58,
     "pret_redus": 42.06,
     "procent_reducere": 22,
@@ -48047,7 +48159,7 @@
     "discount_percent": 22,
     "affiliate_url": "https://app.profitshare.ro/lps/x36/kd8/?redirect=https%3A%2F%2Fmathaus.ro%2Fp%2Fpriza-tv-gewiss-chorus-gw12361-negru-1-modul-44-x-22-x-315-mm%2F000000000010506990",
     "url": "https://mathaus.ro/p/priza-tv-gewiss-chorus-gw12361-negru-1-modul-44-x-22-x-315-mm/000000000010506990",
-    "image": "https://profitsmart.ro/product_images/photos/50/11/90/50118728-55347883.png",
+    "image": "/images/mathaus/ps-mathaus-priza-tv-gewiss-chorus-gw12361-negru-1-m-10506990.png",
     "categories": [
       "casa-gradina"
     ],
@@ -48057,7 +48169,9 @@
     "omnibus_checked_at": "2026-07-21T06:36:34.787299+00:00",
     "pret_minim_30z": 42.06,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "2p-scule365-suport-moara-macina-porumb-67685047",
@@ -48879,7 +48993,7 @@
     "slug": "resigilat-aeroterma-cu-quartz-techwood-tcg-826r-800w-2-trepte",
     "magazin": "hotpick",
     "titlu": "Resigilat!Aeroterma cu quartz Techwood TCG-826R, 800W, 2 trepte",
-    "imagine_url": "",
+    "imagine_url": "/images/hotpick/ps-hotpick-resigilat-aeroterma-cu-quartz-techwood-t-tcg-826r.webp",
     "pret_original": 99.99,
     "pret_redus": 79.99,
     "procent_reducere": 20,
@@ -48898,7 +49012,7 @@
     "discount_percent": 20,
     "affiliate_url": "https://app.profitshare.ro/lps/RlB/kd8/?redirect=https%3A%2F%2Fhotpick.ro%2Faeroterma-cu-quartz-techwood-tcg-826r-800w-2-trepte-1",
     "url": "https://hotpick.ro/aeroterma-cu-quartz-techwood-tcg-826r-800w-2-trepte-1",
-    "image": "https://profitsmart.ro/product_images/photos/50/06/70/50066528-55296350.jpg",
+    "image": "/images/hotpick/ps-hotpick-resigilat-aeroterma-cu-quartz-techwood-t-tcg-826r.webp",
     "categories": [
       "casa-gradina"
     ],
@@ -48913,7 +49027,9 @@
     "link_checked_at": "2026-07-04T20:59:36.896626+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
-    "link_flaky_count": 0
+    "link_flaky_count": 0,
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-streamstore-licenta-autocad-lt-2025-comercial-1-util-24959332",
@@ -58093,7 +58209,7 @@
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080, Intel Core i7 8700 3.2 GHz up to 4.6 GHz, Fara Memorie Ram, 512 GB SSD M.2 NVMe NOU, Windows ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 3557.4,
     "pret_redus": 2450.0,
     "procent_reducere": 31,
@@ -58112,7 +58228,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4728078",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4728078",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/50/50274250-55507850.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -58129,14 +58245,16 @@
     "link_timeout_count": 0,
     "link_flaky_count": 0,
     "expired_at": "2026-07-21",
-    "expired_reason": "dedup_intra_store"
+    "expired_reason": "dedup_intra_store",
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-citgrup-calculator-all-in-one-dell-optiplex-7060- 4727934",
     "slug": "calculator-all-in-one-dell-optiplex-7060-micro-monitor-24-inch-led-ips-dell-p242",
     "magazin": "citgrup",
     "titlu": "Calculator All in One, Dell OptiPlex 7060 Micro, Monitor 24 inch LED IPS Dell P2422H, Black, 1920 by 1080; Intel Core i5 8500 3.0 GHz up to 4.1 GHz; Fara Memorie Ram; 512 GB SSD M.2 NVMe NOU; Windows ",
-    "imagine_url": "",
+    "imagine_url": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "pret_original": 2949.98,
     "pret_redus": 2031.67,
     "procent_reducere": 31,
@@ -58155,7 +58273,7 @@
     "discount_percent": 31,
     "affiliate_url": "https://app.profitshare.ro/lps/ABr/kd8/?redirect=https%3A%2F%2Fcitgrup.ro%2Fcalculatoare%2Frefurbished%2Fcalculator-all-in-one-dell-optiplex-7060-micro-4727934",
     "url": "https://citgrup.ro/calculatoare/refurbished/calculator-all-in-one-dell-optiplex-7060-micro-4727934",
-    "image": "https://profitsmart.ro/product_images/photos/50/27/50/50274110-55507706.jpg",
+    "image": "https://api.citgrup.ro/storage/products/2025/04/dell_mfs_18_citgrup_1-3.jpg",
     "categories": [
       "electronice"
     ],
@@ -58172,7 +58290,9 @@
     "link_timeout_count": 0,
     "link_flaky_count": 0,
     "expired_at": "2026-07-21",
-    "expired_reason": "dedup_intra_store"
+    "expired_reason": "dedup_intra_store",
+    "image_fixed_at": "2026-07-21T19:23:10.479164+00:00",
+    "image_fix_source": "image_repair_v2"
   },
   {
     "id": "ps-case-smart-modul-intrerupator-simplu-mecanic-2m-lux--008-2GY",
