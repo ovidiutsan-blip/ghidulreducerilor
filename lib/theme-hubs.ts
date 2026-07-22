@@ -22,7 +22,7 @@ export const THEME_HUBS: ThemeHub[] = [
   {
     slug: 'fashion',
     label: 'Fashion',
-    title: 'Reduceri Fashion Online — Haine, Încălțăminte, Accesorii',
+    title: 'Reduceri Fashion — Haine și Încălțăminte',
     description:
       'Cele mai bune reduceri la haine, încălțăminte și accesorii din magazinele online din România. Colecții actualizate, branduri verificate, retur gratuit.',
     emoji: '👗',
@@ -63,7 +63,7 @@ export const THEME_HUBS: ThemeHub[] = [
   {
     slug: 'beauty',
     label: 'Beauty & Cosmetice',
-    title: 'Reduceri Cosmetice și Parfumuri — Branduri de Lux la Preț Real',
+    title: 'Reduceri Cosmetice și Parfumuri',
     description:
       'Reduceri verificate la parfumuri, cosmetice și produse de îngrijire de la Notino, eMAG și alte magazine de beauty din România. Autenticitate garantată.',
     emoji: '💄',

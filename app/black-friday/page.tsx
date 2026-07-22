@@ -21,7 +21,7 @@ import {
 } from '@/lib/black-friday'
 import { getStoreBySlug } from '@/lib/data'
 
-const PAGE_TITLE = `Black Friday ${BF_CURRENT.an} România — Când începe, magazine participante și strategii`
+const PAGE_TITLE = `Black Friday ${BF_CURRENT.an} România — Când începe`
 const PAGE_DESCRIPTION = `Ghid complet pentru Black Friday ${BF_CURRENT.an} în România: data exactă eMAG, Fashion Days, Notino și Answear, istoric 2023-2025, strategie de pregătire în 4 pași, sfaturi pentru reduceri reale.`
 const CANONICAL = 'https://ghidulreducerilor.ro/black-friday'
 

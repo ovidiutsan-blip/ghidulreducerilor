@@ -6,7 +6,7 @@ import { THEME_HUBS } from '@/lib/theme-hubs'
 import { getStoreBySlug, getDealsByStore } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'Categorii de reduceri — Fashion, Beauty, Farmacie, Cărți, Casă și Grădină',
+  title: 'Categorii de reduceri',
   description: 'Explorează reducerile grupate pe categorii: modă, cosmetice, suplimente, cărți și produse pentru casă. Toate verificate zilnic.',
   alternates: { canonical: '/categorii' },
   openGraph: {

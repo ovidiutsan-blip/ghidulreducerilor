@@ -26,10 +26,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // electronice), îl tratăm ca pagina canonică — are conținut editorial mai bogat.
   const hub = getThemeHubBySlug(slug)
   const canonical = hub ? `/categorii/${slug}` : `/categorie/${slug}`
+  const isEmpty = getDealsByCategory(slug).length === 0
   return {
     title: `Reduceri ${cat.label} — Oferte ${month}`,
     description: `Cele mai bune reduceri la ${cat.label.toLowerCase()} din Romania. Oferte verificate zilnic cu discount-uri reale.`,
     alternates: { canonical },
+    // Pagini fără oferte active = thin content → noindex (același pattern ca /reduceri/[magazin])
+    robots: isEmpty
+      ? { index: false, follow: true }
+      : { index: true, follow: true },
   }
 }
 
