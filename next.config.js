@@ -82,6 +82,15 @@ const nextConfig = {
   // /coduri-promo + /cod-reducere → /reduceri (canonical URL change, 308 permanent)
   async redirects() {
     return [
+      // www → apex (canonical host). Hostname-ul www e deocamdată revendicat
+      // de vechiul cont Vercel (repo-ul paralel dezactivat 2026-07-19); regula
+      // devine efectivă imediat ce www e atașat acestui proiect.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.ghidulreducerilor.ro' }],
+        destination: 'https://ghidulreducerilor.ro/:path*',
+        permanent: true,
+      },
       {
         source: '/coduri-promo/:magazin',
         destination: '/reduceri/:magazin',
