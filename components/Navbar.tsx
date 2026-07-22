@@ -73,11 +73,11 @@ export default function Navbar() {
               🔥 Black Friday 2026
             </Link>
             <Link
-              href="/reduceri/emag"
+              href="/deals"
               className="flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-brand-red py-1"
               onClick={() => setMenuOpen(false)}
             >
-              🛒 eMAG Reduceri
+              🛒 Toate ofertele
             </Link>
             <Link
               href="/categorii"

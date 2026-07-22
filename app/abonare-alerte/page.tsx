@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Bell } from 'lucide-react'
 import EmailForm from '@/components/EmailForm'
 import Breadcrumb from '@/components/Breadcrumb'
+import { getStoresWithDealCounts } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'Alerte Reduceri — Primește oferte pe email',
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 }
 
 export default function AlertePage() {
+  const stores = getStoresWithDealCounts().map(s => ({ id: s.id, nume: s.nume }))
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: 'Alerte Reduceri' }]} />
@@ -28,7 +30,7 @@ export default function AlertePage() {
       </div>
 
       <div className="card-hover p-8">
-        <EmailForm />
+        <EmailForm stores={stores} />
       </div>
 
       {/* Beneficii */}

@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import type { Store } from '@/lib/data'
 
-export default function StoreCard({ store }: { store: Store }) {
+export default function StoreCard({ store, dealCount }: { store: Store; dealCount?: number }) {
   const [imgError, setImgError] = useState(false)
   const showLogo = !!(store.logo_url && !imgError)
 
@@ -37,7 +37,7 @@ export default function StoreCard({ store }: { store: Store }) {
           {store.nume}
         </h3>
         <p className="text-sm text-neutral-500 truncate">
-          Reduceri și coduri promoționale
+          {dealCount ? `${dealCount} oferte active` : 'Reduceri și coduri promoționale'}
         </p>
       </div>
       <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-brand-red group-hover:translate-x-1 transition-all shrink-0" />

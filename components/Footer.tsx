@@ -1,7 +1,11 @@
 import Link from 'next/link'
 import { Tag } from 'lucide-react'
+import { getStoresWithDealCounts } from '@/lib/data'
 
 export default function Footer() {
+  // Top magazine după numărul de oferte active — lista statică promova
+  // magazine rămase fără feed (eMAG 0 oferte) în locul celor mari.
+  const topStores = getStoresWithDealCounts().slice(0, 4)
   return (
     <footer className="bg-neutral-900 text-neutral-300 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -56,10 +60,13 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-semibold text-white text-sm uppercase tracking-wider mb-4">Magazine top</h3>
             <ul className="space-y-2">
-              <li><Link href="/reduceri/scule365" className="text-sm hover:text-white transition-colors">Reduceri Scule365</Link></li>
-              <li><Link href="/reduceri/vegis" className="text-sm hover:text-white transition-colors">Reduceri Vegis</Link></li>
-              <li><Link href="/reduceri/watch24" className="text-sm hover:text-white transition-colors">Reduceri Watch24</Link></li>
-              <li><Link href="/reduceri/emag" className="text-sm hover:text-white transition-colors">Reduceri eMAG</Link></li>
+              {topStores.map(store => (
+                <li key={store.id}>
+                  <Link href={`/reduceri/${store.slug}`} className="text-sm hover:text-white transition-colors">
+                    Reduceri {store.nume}
+                  </Link>
+                </li>
+              ))}
               <li><Link href="/ghiduri" className="text-sm hover:text-white transition-colors font-semibold">Toate ghidurile →</Link></li>
             </ul>
           </div>

@@ -2,13 +2,15 @@
 
 import { useState } from 'react'
 import { Send, CheckCircle, Loader2 } from 'lucide-react'
-import { getAllStores } from '@/lib/data'
 import { trackNewsletterSubscribe } from '@/lib/analytics'
 
-export default function EmailForm() {
+// Lista vine de la părintele server-side, filtrată la magazine cu oferte
+// active — selectul nu trebuie să propună magazine goale (ex. feed dispărut).
+export type EmailFormStore = { id: string; nume: string }
+
+export default function EmailForm({ stores = [] }: { stores?: EmailFormStore[] }) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
-  const stores = getAllStores()
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -94,19 +96,21 @@ export default function EmailForm() {
         />
       </div>
 
-      <div>
-        <label htmlFor="magazin" className="block text-sm font-medium text-neutral-700 mb-1">Magazin preferat</label>
-        <select
-          id="magazin"
-          name="magazin"
-          className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none transition-all text-sm bg-white"
-        >
-          <option value="toate">Toate magazinele</option>
-          {stores.map(s => (
-            <option key={s.id} value={s.id}>{s.nume}</option>
-          ))}
-        </select>
-      </div>
+      {stores.length > 0 && (
+        <div>
+          <label htmlFor="magazin" className="block text-sm font-medium text-neutral-700 mb-1">Magazin preferat</label>
+          <select
+            id="magazin"
+            name="magazin"
+            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none transition-all text-sm bg-white"
+          >
+            <option value="toate">Toate magazinele</option>
+            {stores.map(s => (
+              <option key={s.id} value={s.id}>{s.nume}</option>
+            ))}
+          </select>
+        </div>
+      )}
 
       {/* GDPR Consent */}
       <div className="flex items-start gap-2">

@@ -8,7 +8,7 @@ import StoreCard from '@/components/StoreCard'
 import EmailForm from '@/components/EmailForm'
 import TrustBar from '@/components/TrustBar'
 import ExitIntentPopup from '@/components/ExitIntentPopup'
-import { getActiveDeals, getAllStores, getDealOfTheDay, getFlashDeals, byDiscountImageFirst } from '@/lib/data'
+import { getActiveDeals, getStoresWithDealCounts, getDealOfTheDay, getFlashDeals, byDiscountImageFirst, stripDealsForClient } from '@/lib/data'
 import { buildItemListSchema, buildBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
@@ -29,7 +29,9 @@ const HOMEPAGE_DEALS_LIMIT = 100
 
 export default function HomePage() {
   const allActiveDeals = getActiveDeals()
-  const stores = getAllStores()
+  // Doar magazine cu oferte active, cele mai bogate primele — homepage-ul nu
+  // trimite vizitatori spre pagini goale (ex. eMAG fără feed).
+  const stores = getStoresWithDealCounts()
   const dealOfTheDay = getDealOfTheDay()
   const flashDeals = getFlashDeals(8)
 
@@ -41,9 +43,9 @@ export default function HomePage() {
 
   // Subset trimis la HomepageDeals: cele mai mari discount-uri primele,
   // deal-urile fără imagine (card fallback) coboară la coadă.
-  const homepageDeals = [...allActiveDeals]
-    .sort(byDiscountImageFirst)
-    .slice(0, HOMEPAGE_DEALS_LIMIT)
+  const homepageDeals = stripDealsForClient(
+    [...allActiveDeals].sort(byDiscountImageFirst).slice(0, HOMEPAGE_DEALS_LIMIT)
+  )
 
   // Schema WebSite cu SearchAction
   const websiteSchema = {
@@ -121,7 +123,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
             {stores.map(store => (
-              <StoreCard key={store.id} store={store} />
+              <StoreCard key={store.id} store={store} dealCount={store.dealCount} />
             ))}
           </div>
         </div>
@@ -137,7 +139,7 @@ export default function HomePage() {
             Primesti alerta pe email cand apare o reducere mare la magazinul tau preferat. Gratuit, fara spam.
           </p>
           <div className="bg-white rounded-2xl p-4 sm:p-8 text-left max-w-md mx-auto">
-            <EmailForm />
+            <EmailForm stores={stores.map(s => ({ id: s.id, nume: s.nume }))} />
           </div>
         </div>
       </section>
