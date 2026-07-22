@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { X, Bell, CheckCircle } from 'lucide-react'
+import { trackNewsletterSubscribe } from '@/lib/analytics'
 
 export default function ExitIntentPopup() {
   const [visible, setVisible] = useState(false)
@@ -60,6 +61,7 @@ export default function ExitIntentPopup() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, nume: nume || 'Abonat', magazin: 'toate', website, gdpr_consent: true, consented_at: new Date().toISOString(), source: 'exit_popup' }),
       })
+      trackNewsletterSubscribe('exit_popup')
       setSubmitted(true)
     } finally {
       setLoading(false)

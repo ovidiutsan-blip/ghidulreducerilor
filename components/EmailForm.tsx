@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Send, CheckCircle, Loader2 } from 'lucide-react'
 import { getAllStores } from '@/lib/data'
+import { trackNewsletterSubscribe } from '@/lib/analytics'
 
 export default function EmailForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -36,6 +37,7 @@ export default function EmailForm() {
       }
 
       setStatus('success')
+      trackNewsletterSubscribe('form')
       form.reset()
     } catch (err) {
       setStatus('error')

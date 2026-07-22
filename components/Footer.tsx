@@ -22,9 +22,19 @@ export default function Footer() {
                 📢 Canal Telegram: @ghidulreducerilor
               </a>
             </p>
-            <p className="text-xs text-neutral-500">
+            <p className="text-xs text-neutral-500 mb-2">
               <a href="https://www.tiktok.com/@catalinovidiu" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                 📱 TikTok: @catalinovidiu
+              </a>
+            </p>
+            <p className="text-xs text-neutral-500 mb-2">
+              <a href="https://www.facebook.com/profile.php?id=61588697699732" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                👍 Facebook: GhidulReducerilor
+              </a>
+            </p>
+            <p className="text-xs text-neutral-500">
+              <a href="https://www.instagram.com/ghidulreducerilor.ro" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                📸 Instagram: @ghidulreducerilor.ro
               </a>
             </p>
           </div>
@@ -60,7 +70,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/blog" className="text-sm hover:text-white transition-colors">Blog & Articole</Link></li>
               <li><Link href="/categorii" className="text-sm hover:text-white transition-colors">Toate categoriile</Link></li>
-              <li><Link href="/reduceri/emag" className="text-sm hover:text-white transition-colors">Reduceri eMAG</Link></li>
+              <li><Link href="/deals" className="text-sm hover:text-white transition-colors">Toate ofertele</Link></li>
               <li><Link href="/cum-functioneaza" className="text-sm hover:text-white transition-colors">Cum funcționează</Link></li>
               <li><Link href="/despre" className="text-sm hover:text-white transition-colors">Despre noi</Link></li>
               <li><Link href="/abonare-alerte" className="text-sm hover:text-white transition-colors">Alerte Reduceri</Link></li>

@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { ExternalLink, ImageOff, Star, Truck } from 'lucide-react'
 import { formatPrice } from '@/lib/utils'
 import { addRecentlyViewed } from '@/lib/recently-viewed'
+import { trackOfferClick } from '@/lib/analytics'
 import { FAST_DELIVERY_STORES } from '@/lib/categories'
 import type { Deal } from '@/lib/data'
 
@@ -37,6 +38,7 @@ export default function DealCard({ deal }: { deal: Deal }) {
 
   function handleClick() {
     addRecentlyViewed(deal.id)
+    trackOfferClick(deal.id, deal.magazin, deal.titlu, deal.pret_redus, deal.procent_reducere)
   }
 
   return (
