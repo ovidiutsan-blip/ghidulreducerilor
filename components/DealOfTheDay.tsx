@@ -15,7 +15,9 @@ export default function DealOfTheDay({ deal }: { deal: Deal }) {
     <section className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        {/* flex-wrap: pe ecrane înguste timerul coboară pe rândul lui,
+            altfel titlu + timer depășesc ~390px și pagina capătă scroll orizontal */}
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3 mb-6">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-amber-500/20 rounded-lg flex items-center justify-center">
               <Crown className="w-4 h-4 text-amber-400" />
