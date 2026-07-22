@@ -16,7 +16,7 @@ Utilizare:
   python scripts/audit_full.py --skip-links     # Skip link checking (faster)
   python scripts/audit_full.py --output json     # JSON only, no markdown update
 
-Reuse: link_checker.py, utils.py, monitor_agent.py
+Reuse: link_checker.py, utils.py
 """
 
 import json
@@ -37,10 +37,13 @@ sys.path.insert(0, str(ROOT / 'agents'))
 from utils import normalize_deal, is_profitshare_direct  # noqa: E402
 from link_checker import create_session, load_deals, run_checks  # noqa: E402
 
-try:
-    from monitor_agent import check_site_pages  # noqa: E402
-except ImportError:
-    check_site_pages = None
+# Paginile principale verificate de CHECK 7. Verificarea e implementată local:
+# vechiul `from monitor_agent import check_site_pages` eșua mereu (modulul a
+# fost mutat în _archive/), deci CHECK 7 raporta silențios 0 pagini.
+SITE_PAGES = [
+    '/', '/deals', '/categorii', '/ghiduri', '/blog',
+    '/black-friday', '/abonare-alerte', '/cum-functioneaza', '/despre',
+]
 
 DATA_DIR = ROOT / 'data'
 CONFIG_DIR = ROOT / 'config'
@@ -558,7 +561,7 @@ def audit_security_headers(session) -> dict:
 # CHECK 7: Page Accessibility
 # ═══════════════════════════════════════════════════
 
-def audit_pages() -> dict:
+def audit_pages(session) -> dict:
     """Check all site pages return 200."""
     logger.info("=== CHECK 7: Page Accessibility ===")
     result = {
@@ -568,26 +571,23 @@ def audit_pages() -> dict:
         'details': {'pages_ok': 0, 'pages_down': 0, 'results': []}
     }
 
-    if check_site_pages:
-        page_results = check_site_pages()
-        for page in page_results:
-            result['details']['results'].append(page)
-            if page.get('ok'):
-                result['details']['pages_ok'] += 1
-            else:
-                result['details']['pages_down'] += 1
-                result['issues'].append(
-                    f"Page down: {page.get('page')} (status {page.get('status', 'N/A')})"
-                )
-    else:
-        result['issues'].append("monitor_agent not available, skipping page checks")
+    for path in SITE_PAGES:
+        url = SITE_URL + path
+        try:
+            resp = session.get(url, timeout=15)
+            ok = resp.status_code == 200
+            status = resp.status_code
+        except Exception as e:
+            ok = False
+            status = f'error: {e}'
+        result['details']['results'].append({'page': path, 'ok': ok, 'status': status})
+        if ok:
+            result['details']['pages_ok'] += 1
+        else:
+            result['details']['pages_down'] += 1
+            result['issues'].append(f"Page down: {path} (status {status})")
 
-    if result['details']['pages_down'] > 0:
-        result['status'] = 'fail'
-    elif not check_site_pages:
-        result['status'] = 'skip'
-    else:
-        result['status'] = 'pass'
+    result['status'] = 'fail' if result['details']['pages_down'] > 0 else 'pass'
 
     logger.info(
         f"  Pages: {result['details']['pages_ok']} OK, "
@@ -640,7 +640,7 @@ def run_audit(skip_links: bool = False) -> dict:
     checks.append(audit_security_headers(session))
 
     # 7. Page accessibility
-    checks.append(audit_pages())
+    checks.append(audit_pages(session))
 
     # ═══ Summary ═══
     elapsed_s = round(time.time() - start_time, 1)
