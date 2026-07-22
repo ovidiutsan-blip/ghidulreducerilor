@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-07-20T18:48:27.713418+00:00",
+  "timestamp": "2026-07-22T17:53:41.969010+00:00",
   "site": "https://ghidulreducerilor.ro",
-  "duration_seconds": 961.2,
-  "score": 80,
+  "duration_seconds": 0.9,
+  "score": 100,
   "summary": {
     "total_checks": 8,
-    "pass": 5,
-    "fail": 1,
-    "warn": 1,
-    "skip": 1,
-    "total_issues": 6
+    "pass": 6,
+    "fail": 0,
+    "warn": 0,
+    "skip": 2,
+    "total_issues": 2
   },
   "checks": [
     {
@@ -18,58 +18,24 @@
       "issues": [],
       "details": {
         "status_code": 200,
-        "response_time_ms": 592,
-        "content_length": 561426
+        "response_time_ms": 714,
+        "content_length": 553339
       }
     },
     {
       "check": "affiliate_links",
-      "status": "fail",
-      "issues": [
-        "Dead affiliate link: 2p-somnart-set-2-prosoape-maini-bumbac-100-600gsm-s-91660597 (product_http_404)",
-        "Dead affiliate link: 2p-somnart-prosop-de-maini-bumbac-100-500gsm-somnar-91660591 (product_http_404)"
-      ],
-      "details": {
-        "total_deals": 1448,
-        "active_deals": 1445,
-        "links_ok": 76,
-        "links_broken": 2,
-        "links_rate_limited": 1,
-        "links_no_url": 0,
-        "links_stragglers": 1366,
-        "direct_profitshare": 0,
-        "broken_list": [
-          {
-            "id": "2p-somnart-set-2-prosoape-maini-bumbac-100-600gsm-s-91660597",
-            "url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&af",
-            "status": "product_http_404",
-            "store": "somnart"
-          },
-          {
-            "id": "2p-somnart-prosop-de-maini-bumbac-100-500gsm-somnar-91660591",
-            "url": "https://event.2performant.com/events/click?ad_type=quicklink&unique=1bf67dbe4&af",
-            "status": "product_http_404",
-            "store": "somnart"
-          }
-        ]
-      }
+      "status": "skip",
+      "issues": [],
+      "details": {}
     },
     {
       "check": "store_coverage",
-      "status": "warn",
-      "issues": [
-        "Active store 'eMAG' has 0 deals",
-        "Active store 'FashionDays' has 0 deals",
-        "Active store 'Elefant.ro' has 0 deals"
-      ],
+      "status": "pass",
+      "issues": [],
       "details": {
         "configured_stores": 8,
         "stores_with_deals": 22,
-        "stores_no_deals": [
-          "emag",
-          "fashiondays",
-          "elefant"
-        ],
+        "stores_no_deals": [],
         "pending_stores": [
           {
             "slug": "notino",
@@ -99,25 +65,25 @@
         "store_deal_counts": {
           "watch24": 9,
           "casanewconcept": 389,
-          "gsmnet": 9,
-          "scule365": 149,
-          "mindblower": 13,
-          "evomag": 54,
+          "evomag": 53,
+          "gsmnet": 19,
+          "mindblower": 33,
+          "scule365": 157,
           "hiris": 20,
-          "otter": 59,
+          "otter": 75,
           "emobili": 36,
-          "streamstore": 40,
+          "streamstore": 49,
           "techstar": 3,
-          "vegis": 10,
           "navigatiiandroid": 189,
-          "case-smart": 19,
-          "novodoors": 24,
+          "case-smart": 60,
+          "novodoors": 26,
           "hotpick": 10,
-          "springfarma": 75,
-          "somnart": 75,
-          "mathaus": 9,
-          "citgrup": 198,
+          "springfarma": 76,
+          "somnart": 77,
+          "mathaus": 14,
+          "citgrup": 200,
           "perfectbijoux": 44,
+          "vegis": 10,
           "startdecor": 14
         }
       }
@@ -125,12 +91,14 @@
     {
       "check": "images",
       "status": "pass",
-      "issues": [],
+      "issues": [
+        "1 deals have no image at all"
+      ],
       "details": {
-        "total_deals": 1448,
+        "total_deals": 1563,
         "placeholder_count": 0,
-        "missing_count": 0,
-        "real_count": 1448,
+        "missing_count": 1,
+        "real_count": 1562,
         "placeholder_domains": {}
       }
     },
@@ -140,17 +108,17 @@
       "issues": [],
       "details": {
         "hosts": {
-          "profitsmart.ro": 482,
+          "profitsmart.ro": 501,
           "casanewconcept.ro": 389,
-          "img.gsmnet.ro": 9,
-          "c.cdnmp.net": 153,
-          "static2.evomag.ro": 54,
-          "cdn.otter.ro": 59,
+          "static2.evomag.ro": 53,
+          "img.gsmnet.ro": 19,
+          "c.cdnmp.net": 178,
+          "cdn.otter.ro": 75,
           "gomagcdn.ro": 40,
           "case-smart.ro": 19,
-          "www.springfarma.com": 75,
-          "somnart.ro": 75,
-          "api.citgrup.ro": 92
+          "www.springfarma.com": 76,
+          "somnart.ro": 77,
+          "api.citgrup.ro": 115
         },
         "blocked": []
       }
@@ -160,7 +128,7 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "total_deals": 1448,
+        "total_deals": 1563,
         "total_codes": 2,
         "missing_price": 0,
         "zero_discount": 0,
