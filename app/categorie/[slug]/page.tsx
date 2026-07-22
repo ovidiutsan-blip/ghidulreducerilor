@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import DealsFilter from '@/components/DealsFilter'
-import { getDealsByCategory, getAllCategories, getUniqueMagazine } from '@/lib/data'
+import { getDealsByCategory, getAllCategories, stripDealsForClient } from '@/lib/data'
 import { getCategoryBySlug, CATEGORIES } from '@/lib/categories'
 import { getThemeHubBySlug } from '@/lib/theme-hubs'
 import { getCurrentMonthYear } from '@/lib/utils'
@@ -81,7 +81,7 @@ export default async function CategoryPage({ params }: Props) {
           </div>
         </div>
 
-        <DealsFilter deals={deals} magazines={magazines} />
+        <DealsFilter deals={stripDealsForClient(deals)} magazines={magazines} />
       </div>
     </>
   )

@@ -1,12 +1,17 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import { Filter, ArrowUpDown, X } from 'lucide-react'
+import { useState, useMemo, useEffect } from 'react'
+import { Filter, ArrowUpDown, X, ChevronDown } from 'lucide-react'
 import DealCard from '@/components/DealCard'
 import { CATEGORIES } from '@/lib/categories'
 import type { Deal } from '@/lib/data'
 
 type SortOption = 'discount' | 'pret_asc' | 'pret_desc' | 'newest'
+
+// Câte carduri sunt randate inițial și adăugate la fiecare "Încarcă mai multe".
+// Randarea tuturor celor ~1400 dintr-o dată producea 14+ MB de HTML pe /deals
+// și zeci de mii de noduri DOM — inutilizabil pe mobil.
+const PAGE_SIZE = 48
 
 export default function DealsFilter({
   deals,
@@ -20,6 +25,14 @@ export default function DealsFilter({
   const [sortBy, setSortBy] = useState<SortOption>('discount')
   const [pretMin, setPretMin] = useState('')
   const [pretMax, setPretMax] = useState('')
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
+
+  // La orice schimbare de filtre/sortare revenim la prima "pagină".
+  // `deals` e inclus fiindcă la navigarea între două pagini de categorie
+  // componenta client își păstrează starea (App Router, același segment).
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE)
+  }, [deals, selectedMagazin, selectedCategorie, sortBy, pretMin, pretMax])
 
   const categories = useMemo(() => {
     const cats = Array.from(new Set(deals.map(d => d.categorie))).sort()
@@ -172,11 +185,24 @@ export default function DealsFilter({
 
       {/* Grid */}
       {filtered.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
-          {filtered.map(deal => (
-            <DealCard key={deal.id} deal={deal} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+            {filtered.slice(0, visibleCount).map(deal => (
+              <DealCard key={deal.id} deal={deal} />
+            ))}
+          </div>
+          {filtered.length > visibleCount && (
+            <div className="text-center mt-8">
+              <button
+                onClick={() => setVisibleCount(c => c + PAGE_SIZE)}
+                className="inline-flex items-center gap-2 border border-neutral-300 hover:border-brand-red hover:text-brand-red text-neutral-700 font-semibold text-sm px-6 py-3 rounded-xl transition-all"
+              >
+                <ChevronDown className="w-4 h-4" />
+                Încarcă mai multe oferte ({filtered.length - visibleCount} rămase)
+              </button>
+            </div>
+          )}
+        </>
       ) : (
         <div className="text-center py-16">
           <p className="text-neutral-400 text-lg">Nicio oferta gasita pentru filtrele selectate.</p>

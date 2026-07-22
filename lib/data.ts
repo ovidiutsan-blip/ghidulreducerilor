@@ -114,10 +114,44 @@ export function getDealOfTheDay(): Deal {
   return topDeals[dayIndex % topDeals.length]
 }
 
-// Returnează top N deals dupa discount (pt flash deals)
+// Returnează top N deals dupa discount (pt flash deals).
+// Max 2 per magazin — altfel un feed cu discounturi mari aproape identice
+// (ex. 7 lenjerii de la același magazin) monopolizează toată secțiunea.
 export function getFlashDeals(count: number = 8): Deal[] {
-  const active = getActiveDeals()
-  return [...active].sort(byDiscountImageFirst).slice(0, count)
+  const sorted = [...getActiveDeals()].sort(byDiscountImageFirst)
+  const perStore: Record<string, number> = {}
+  const picked: Deal[] = []
+  for (const d of sorted) {
+    if ((perStore[d.magazin] || 0) >= 2) continue
+    perStore[d.magazin] = (perStore[d.magazin] || 0) + 1
+    picked.push(d)
+    if (picked.length === count) break
+  }
+  return picked
+}
+
+// Magazine care au cel puțin un deal activ, cu numărul de oferte,
+// sortate descrescător — sursa pentru homepage/footer, ca listele să nu
+// mai promoveze magazine goale când un feed dispare.
+export function getStoresWithDealCounts(): Array<Store & { dealCount: number }> {
+  const counts: Record<string, number> = {}
+  for (const d of getActiveDeals()) {
+    counts[d.magazin] = (counts[d.magazin] || 0) + 1
+  }
+  return (stores as Store[])
+    .map(s => ({ ...s, dealCount: counts[s.slug] || 0 }))
+    .filter(s => s.dealCount > 0)
+    .sort((a, b) => b.dealCount - a.dealCount)
+}
+
+// Versiune pentru props către componente client: link_afiliat/product_url nu
+// sunt folosite în UI (click-ul trece prin /out/{id}), dar umflă payload-ul
+// RSC serializat în HTML cu sute de KB la liste mari.
+export function stripDealsForClient(list: Deal[]): Deal[] {
+  return list.map(({ link_afiliat: _l, product_url: _p, slug: _s, ...rest }) => ({
+    ...rest,
+    link_afiliat: '',
+  }))
 }
 
 // Returnează info magazin pentru un deal

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { Flame } from 'lucide-react'
 import DealsFilter from '@/components/DealsFilter'
-import { getActiveDeals, getUniqueMagazine } from '@/lib/data'
+import { getActiveDeals, getUniqueMagazine, stripDealsForClient } from '@/lib/data'
 import { buildItemListSchema, buildBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default function DealsPage() {
         </div>
       </div>
 
-      <DealsFilter deals={deals} magazines={magazines} />
+      <DealsFilter deals={stripDealsForClient(deals)} magazines={magazines} />
     </section>
     </>
   )
