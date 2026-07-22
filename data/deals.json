@@ -2706,7 +2706,7 @@
     "product_url": "https://casanewconcept.ro/lenjerie-din-damasc-finetat-6-piese-trio-3556",
     "categorie": "casa-gradina",
     "data_adaugare": "2026-07-22T06:35:34Z",
-    "activ": true,
+    "activ": false,
     "is_active": true,
     "sursa": "2performant",
     "title": "Lenjerie din  damasc finetat  6 piese  - TRIO 3556",
@@ -2727,7 +2727,7 @@
     "pret_minim_30z": 119.0,
     "is_fake_discount": false,
     "omnibus_validated": true,
-    "link_status": "ok",
+    "link_status": "product_http_404",
     "link_checked_at": "2026-07-21T21:11:31.956494+00:00",
     "link_dead_count": 0,
     "link_timeout_count": 0,
@@ -20847,7 +20847,7 @@
     "product_url": "https://somnart.ro/produs/set-2-prosoape-maini-bumbac-100-600gsm-somnart-30x50cm-lila",
     "categorie": "casa-gradina",
     "data_adaugare": "2026-07-22",
-    "activ": true,
+    "activ": false,
     "is_active": true,
     "sursa": "2performant",
     "title": "Set 2 prosoape maini bumbac 100%, 600gsm, Somnart, 30x50cm, lila",
@@ -20867,7 +20867,8 @@
     "omnibus_checked_at": "2026-07-22T06:36:28.618267+00:00",
     "pret_minim_30z": 13.83,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "product_http_404"
   },
   {
     "id": "2p-somnart-prosop-de-maini-bumbac-100-500gsm-somnar-91660591",
@@ -20883,7 +20884,7 @@
     "product_url": "https://somnart.ro/produs/prosop-de-fata-bumbac-100-500gsm-somnart-30x50cm-ivory",
     "categorie": "casa-gradina",
     "data_adaugare": "2026-07-22",
-    "activ": true,
+    "activ": false,
     "is_active": true,
     "sursa": "2performant",
     "title": "Prosop de maini bumbac 100%, 500gsm, Somnart, 30x50cm, ivory",
@@ -20903,7 +20904,8 @@
     "omnibus_checked_at": "2026-07-22T06:36:28.618468+00:00",
     "pret_minim_30z": 5.66,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "product_http_404"
   },
   {
     "id": "2p-somnart-prosop-de-maini-bumbac-100-500gsm-somnar-91660590",
@@ -20919,7 +20921,7 @@
     "product_url": "https://somnart.ro/produs/prosop-de-fata-bumbac-100-500gsm-somnart-30x50cm-turcoaz",
     "categorie": "casa-gradina",
     "data_adaugare": "2026-07-22",
-    "activ": true,
+    "activ": false,
     "is_active": true,
     "sursa": "2performant",
     "title": "Prosop de maini bumbac 100%, 500gsm, Somnart, 30x50cm, turcoaz",
@@ -20939,7 +20941,8 @@
     "omnibus_checked_at": "2026-07-22T06:36:28.618660+00:00",
     "pret_minim_30z": 5.66,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "product_http_404"
   },
   {
     "id": "2p-somnart-set-prosoape-3-piese-500-gsm-fata-maini--91614423",
@@ -20955,7 +20958,7 @@
     "product_url": "https://somnart.ro/produs/set-prosoape-3-piese-500-gsm-fata-maini-corp-ivory-somnart",
     "categorie": "casa-gradina",
     "data_adaugare": "2026-07-22",
-    "activ": true,
+    "activ": false,
     "is_active": true,
     "sursa": "2performant",
     "title": "Set prosoape 3 piese 500 gsm (fata, maini, corp) Ivory, SomnART",
@@ -20975,7 +20978,8 @@
     "omnibus_checked_at": "2026-07-22T06:36:28.618853+00:00",
     "pret_minim_30z": 67.57,
     "is_fake_discount": false,
-    "omnibus_validated": true
+    "omnibus_validated": true,
+    "link_status": "product_http_404"
   },
   {
     "id": "ps-hotpick-resigilat-blender-vertical-3-in-1-camry--R CR4630",
